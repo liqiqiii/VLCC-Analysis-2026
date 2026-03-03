@@ -519,6 +519,149 @@ Five AI models (Claude Opus 4.6, Claude Sonnet 4.6, GPT-5.2, GPT-5.1, Gemini 3 P
 
 Analysis methodology adapted from [tech-earnings-deepdive-openclaw-skill](https://github.com/webleon/tech-earnings-deepdive-openclaw-skill) by Ruby & Star (Day1Global). Applied modules: A (Revenue Quality), B (Profitability), C (Cash Flow), D (Forward Guidance), E (Competitive Landscape), K (Valuation Models), L (Ownership), O (Accounting Quality). 6 investment perspectives, anti-bias framework, pre-mortem analysis, and multi-model target price consensus applied.
 
+
+---
+
+## Module P: Charter Strategy & Rate Sensitivity Analysis (5-Model Consensus)
+
+> **The Question**: DHT runs ~54% spot / 46% TC (time charter). FRO runs ~83% spot / 17% TC.
+> How does this charter mix difference affect earnings sensitivity, dividend stability,
+> and investment positioning in a supply-driven super cycle?
+
+### P1. Charter Mix Overview
+
+| Metric | DHT Holdings | Frontline (FRO) |
+|--------|:---:|:---:|
+| **Fleet** | 24 VLCCs (pure play) | 42V + 21S + 18LR2 (81 ships) |
+| **Spot exposure** | 54% | ~83% fleet-wide |
+| **TC coverage** | 46% | ~17% (VLCC: 15%) |
+| **TC policy** | ~50/50 balanced target | "Golden rule": TC < 30% |
+| **TC rate (VLCC)** | $49,400/day avg | $85,000/day avg (recent) |
+| **Profit-sharing TC** | Yes — index-linked upside on long TCs | Some, less structural |
+| **FFA hedging** | None disclosed | Tactical derivatives (undisclosed) |
+| **D/E ratio** | 0.38x | 1.31x |
+
+**Key Insight**: DHT's profit-sharing TCs are NOT traditional hedges. They provide a $41-52K floor
+PLUS proportional upside participation — making DHT's effective spot exposure ~60-65% in bull markets.
+
+### P2. Earnings Sensitivity to VLCC Rates (Quantitative Model)
+
+| VLCC Rate | DHT Profit | DHT EPS | FRO Profit | FRO EPS | FRO/DHT | FRO EPS/DHT EPS |
+|-----------|-----------|---------|-----------|---------|---------|-----------------|
+| $25K (BE) | $98M | $0.61 | $116M | $0.52 | 1.18x | 0.85x |
+| $40K (Bear) | $169M | $1.05 | $427M | $1.91 | 2.52x | 1.82x |
+| $75K (Mid) | $335M | $2.08 | $1,154M | $5.17 | 3.44x | 2.49x |
+| **$107K (Q1 2026)** | **$487M** | **$3.02** | **$1,820M** | **$8.16** | **3.74x** | **2.70x** |
+| $120K | $548M | $3.40 | $2,090M | $9.37 | 3.81x | 2.75x |
+| $150K (Bull) | $690M | $4.29 | $2,710M | $12.15 | 3.93x | 2.83x |
+| $200K (Super) | $926M | $5.75 | $3,748M | $16.81 | 4.05x | 2.92x |
+
+**The Math**: For every $1K increase in VLCC rates:
+- DHT captures **$4.7M** additional profit → **$0.029/share**
+- FRO captures **$20.8M** additional profit → **$0.093/share** (3.2× more per share)
+
+### P3. Earnings Elasticity (+10% Rate → Profit Change)
+
+| Base VLCC Rate | DHT Profit Change | FRO Profit Change | Who Benefits More |
+|----------------|-------------------|-------------------|-------------------|
+| $50K | +10.9% | +16.4% | FRO |
+| $75K | +10.6% | +13.5% | FRO |
+| $100K | +10.4% | +12.4% | FRO |
+| $150K | +10.3% | +11.5% | FRO |
+| $200K | +10.2% | +11.1% | FRO |
+
+FRO always benefits more, with the elasticity gap widest at lower rates (where operating leverage
+is highest) and converging at very high rates.
+
+### P4. TC Earnings Floor & Downside Protection
+
+| Metric | DHT | FRO |
+|--------|-----|-----|
+| **TC floor (gross)** | $98M/yr ($0.61/sh) | $202M/yr ($0.90/sh) |
+| **Annual interest cost** | ~$20M | ~$155M |
+| **TC floor (net of interest)** | **$78M ($0.49/sh)** | **$47M ($0.21/sh)** |
+| **Minimum sustainable yield** | **2.5%** | **0.6%** |
+
+*This is the single most important downside metric.* Despite FRO's higher gross TC floor ($202M vs $98M),
+its 3.4× higher debt leverage consumes most of that cushion. At zero spot revenue:
+- **DHT can maintain a $0.49/share dividend** — a livable 2.5% floor yield
+- **FRO drops to $0.21/share** — likely triggering a dividend cut to zero
+
+### P5. Stability Scorecard (5-Model Consensus, 1-10 Scale)
+
+| Dimension | DHT (Avg) | FRO (Avg) | Range DHT | Range FRO |
+|-----------|:---------:|:---------:|:---------:|:---------:|
+| Revenue Predictability | **7.4** | **3.0** | 7-8 | 3 |
+| Dividend Stability | **7.8** | **4.0** | 7-9 | 4 |
+| Earnings Volatility (low=good) | **6.6** | **2.0** | 6-7 | 2-3 |
+| Downside Protection | **8.0** | **3.6** | 7-9 | 3-5 |
+| Upside Capture | **5.2** | **10.0** | 5-6 | 10 |
+| **Composite** | **7.0** | **4.5** | | |
+
+All 5 models unanimously rate FRO 10/10 on upside capture and DHT 7-9 on downside protection.
+
+### P6. FFA Impact Assessment
+
+FRO's "tactical derivatives" likely represent 5-10% effective hedge coverage:
+- **Stated physical TC coverage**: ~17% fleet-wide
+- **Estimated FFA overlay**: +5-10% synthetic coverage
+- **Effective total coverage**: ~22-27% (still well below DHT's 46%)
+
+The FFA program is a **tactical overlay, not a strategic hedge** — it provides quarter-to-quarter
+smoothing, not cycle-level protection. In a super-cycle, FFAs could actually *cost* FRO 3-5% of
+peak earnings via opportunity cost on hedged forward positions.
+
+### P7. Model Characterizations (How Each Model Described the Stocks)
+
+| Model | DHT Characterization | FRO Characterization |
+|-------|---------------------|---------------------|
+| **Opus 4.6** | "Bond with an equity kicker" | "Leveraged call option on tanker rates" |
+| **Sonnet 4.6** | "Balanced Fortress" / "Structured compounding" | "Pure Cycle Leverage, Maximum Asymmetry" |
+| **GPT-5.2** | "Volatility-managed spot name" | "High-beta instrument on freight" |
+| **GPT-5.1** | "Collared VLCC play — floor + partial upside" | "Levered call option on a supercycle" |
+| **Gemini 3 Pro** | "Hedged Yield strategy" | "Operating Leverage Monster" |
+
+### P8. Scenario Recommendation Matrix (5-Model Consensus)
+
+| Market Scenario | VLCC Rate | Winner | Consensus |
+|-----------------|-----------|--------|-----------|
+| Extended downcycle | $25-40K | **DHT** | 5/5 models |
+| Recovery | $40-65K | **DHT (slight)** | 4/5 models |
+| Normal market | $65-90K | **FRO (slight)** | 3/5 models |
+| Bull market | $90-120K | **FRO decisively** | 5/5 models |
+| Super cycle | $120-150K+ | **FRO overwhelmingly** | 5/5 models |
+| Demand shock spike | $200K+ | **FRO only choice** | 5/5 models |
+
+### P9. Key Valuation at Current Rates ($107K)
+
+| Metric | DHT | FRO | Advantage |
+|--------|-----|-----|-----------|
+| P/E | 6.4x | 4.7x | FRO (cheaper) |
+| EV/Profit | 7.2x | 6.2x | FRO (cheaper) |
+| Dividend yield (80% payout) | 12.4% | 17.1% | FRO (higher) |
+| EPS sensitivity per $10K rate | +$0.29 | +$0.93 | FRO (3.2× more) |
+
+**FRO is already cheaper than DHT at current rates** — the market is either discounting leverage risk
+or hasn't fully priced in the super-cycle thesis.
+
+### P10. Charter Strategy Conclusion
+
+**For the 2026-2028 supply-driven super cycle:**
+
+| Allocation | Rationale |
+|------------|-----------|
+| **FRO: 65-70%** | Maximum earnings leverage. At $150K sustained, FRO yields 25.5% dividend on current price. 4.4× upside capture per $1K rate move. |
+| **DHT: 30-35%** | Portfolio insurance + income anchor. TC floor protects against cycle disappointment. Profit-sharing TCs still capture 30-50% upside. |
+
+**Risk management rule**: If rates sustain below $50K for 2+ quarters, flip to 60% DHT / 40% FRO.
+
+**The charter mix reveals management's letter to shareholders:**
+- **DHT's letter says**: "Trust us to protect your capital while participating in the upside"
+- **FRO's letter says**: "Trust us to make you rich — if the market cooperates"
+
+*Charts available: See /charts/ folder for 6 visualization files (profit sensitivity, EPS curves, elasticity bars, profit ratio, charter mix pies, scenario comparison).*
+
+
 ---
 
 *Analysis date: March 2, 2026. Data: Q4 2025 earnings reports, Q1 2026 forward bookings. Target prices generated by 5 AI models independently. Not investment advice.*
