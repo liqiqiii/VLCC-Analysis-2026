@@ -18,6 +18,48 @@ Our "market cap / VLCC-equivalent" model had **5 critical flaws** that made FRO 
 
 ---
 
+## ⚠️ IMPORTANT UPDATE: Charter Strategy Correction (March 3, 2026)
+
+> This report was originally modeled with DHT's Q4 2025 charter mix (54% spot / 46% TC).
+> Cross-checking against actual company guidance revealed **two critical corrections**:
+
+### Correction 1: Booking Rate vs Charter Type — Two Different Metrics
+
+Our original analysis confused **charter type** (structural spot/TC split) with **booking rate** (% of days already contracted). These are fundamentally different:
+
+| Metric | What It Measures | DHT | FRO (VLCC) |
+|--------|-----------------|-----|-----------|
+| **Booking Rate** (Q1 2026) | Days already contracted for the quarter | **66% → 85%+** | **92%** |
+| **Charter Type** (structural) | Fleet on spot market vs time charter | **54% → 75%** | **83%** |
+
+FRO's 92% booking rate means **near-zero short-term revenue uncertainty** despite being 83% spot. "Spot" ≠ "unbooked." Spot vessels get fixed voyage-by-voyage BEFORE the quarter starts.
+
+### Correction 2: DHT Is Shifting to 75% Spot by Q2 2026
+
+DHT management announced on the Q4 2025 earnings call a **strategic pivot from ~50/50 balanced to 75% spot exposure** by Q2 2026. Our model used the stale 54% figure. The corrected numbers:
+
+| Metric | Old (54% spot) | Corrected (75% spot) | Change |
+|--------|:-:|:-:|:-:|
+| **EPS at $107K** | $3.02 | **$3.68** | **+22%** |
+| **P/E at $107K** | 6.4x | **5.3x** | More attractive |
+| **EPS per $1K rate increase** | $0.029 | **$0.041** | **+39%** |
+| **FRO/DHT sensitivity ratio** | 4.4x | **3.2x** | Gap narrows |
+| **TC earnings floor** | $98M/yr | **$54M/yr** | Less downside cushion |
+| **Stability score** | 7.0 | **5.6** | Closer to FRO (4.5) |
+| **Recommended allocation** | FRO 65-70% / DHT 30-35% | **FRO 55-60% / DHT 40-45%** | DHT weight ↑ |
+
+### What This Means
+
+**DHT is converging toward FRO's strategy.** Both companies are now ~75-83% spot-exposed, betting on the super cycle. The remaining differentiation is:
+- **FRO**: Scale advantage (81 vs 24 ships), multi-segment diversification, higher absolute earnings
+- **DHT**: Lower leverage (D/E 0.38 vs 1.31), cheaper on EV/Profit basis, lower financial risk
+
+All tables in **Module P** (at the end of this report) reflect the corrected 75% spot parameters.
+All charts in `/charts/` have been regenerated with corrected data.
+
+
+---
+
 ## Key Forces (决定性力量)
 
 | Force | Impact on DHT | Impact on FRO |
@@ -704,8 +746,8 @@ the critical differentiator. Shift to 65% DHT / 35% FRO.
 **The charter mix now tells us**: Both companies are betting on the super cycle.
 DHT just does it with a safety margin (0.38x D/E). FRO does it all-in (1.31x D/E).
 
-*Charts: See /charts/ folder for 6 visualization files. Note: charts reflect old 54% spot model;
-corrected 75% spot curves would show DHT's line steeper and closer to FRO.*
+*Charts: See /charts/ folder for 6 visualization files. Note: charts have been regenerated with corrected 75% spot parameters.
+Old vs new DHT curves shown DHT's line steeper and closer to FRO.*
 
 
 ---
