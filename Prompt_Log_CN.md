@@ -206,4 +206,15 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 
 ---
 
+
+## 提示词20：框架解耦（通用 vs 行业特定）
+**日期**：2026年3月4日
+
+将RULES.md和提示词日志解耦为通用（可复用于任何行业）和VLCC特定两部分。创建framework/文件夹：
+- UNIVERSAL_RULES (EN/CN) - 14条通用规则
+- REUSABLE_PROMPTS (EN/CN) - 10个提示词模板
+- 原有RULES.md和Prompt_Log保持不变
+
+---
+
 *本文件将随新提示词的增加而更新。最后更新：2026年3月4日。*

@@ -209,4 +209,15 @@ User noticed the Day1Global tech-earnings-deepdive framework (used in DHT/FRO re
 
 ---
 
+
+## Prompt 20: Framework Decoupling (Common vs Industry-Specific)
+**Date**: March 4, 2026
+
+Decouple RULES.md and prompt logs into universal (reusable for any industry) vs VLCC-specific. Create separate framework/ folder with:
+- UNIVERSAL_RULES (EN/CN) - 14 common rules (bilingual, multi-model, Day1Global, scenario consistency)
+- REUSABLE_PROMPTS (EN/CN) - 10 prompt templates with [PLACEHOLDER] syntax
+- Original RULES.md and Prompt_Log files remain unchanged (project-specific)
+
+---
+
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*
