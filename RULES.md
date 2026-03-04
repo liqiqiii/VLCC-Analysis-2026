@@ -101,6 +101,16 @@ Use Python scripts (not PowerShell heredocs) to write .md files containing `$` s
 ### Rule 13: Chart Updates
 When data changes, regenerate any affected charts. Don't leave stale visualizations.
 
+### Rule 14: Whole-File Scenario Consistency
+When adding a new scenario or assumption (e.g., $150K base vs $100K consensus), **update EVERY section of the report** that references the affected metrics — not just add a standalone section. Specifically:
+- TL;DR / executive summary must show all scenarios
+- All target price tables must show dual/triple scenario columns
+- Investment recommendation (Section 9) MUST include scenario-specific advice, target prices, and allocation
+- Cross-market comparisons must show forward PE under all scenarios
+- Any section with PE, NI, EPS, or target prices must reflect all modeled scenarios
+
+**Rationale**: A standalone "Section 4B" is insufficient if Section 9 still only references the old assumption. The reader of Section 9 (the most important section) must see the full picture without scrolling back.
+
 ---
 
 ## 📋 CHECKLIST (Copy-Paste Before Every Push)

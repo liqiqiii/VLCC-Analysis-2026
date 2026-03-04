@@ -17,12 +17,18 @@
 | **VLCC Fleet** | 52 (avg 7.2yr) | 45-53 (owned+leased) |
 | **2025 NI** | RMB 6.0-6.6B | RMB 4.4-5.0B |
 | **2026E NI (consensus $100K)** | ~RMB 10.0B | RMB 9-11B |
+| **2026E NI ($150K base — current spot)** | **RMB 14.7B** | **RMB 17.3B** |
 | **PE (TTM)** | 28.38x | ~28.7x |
+| **PE ($100K consensus)** | 14.3x | 13.5x |
+| **PE ($150K base)** | **9.7x** | **7.8x** |
 | **Consensus Rating** | ⭐⭐⭐⭐ STRONG BUY | ⭐⭐⭐⭐ STRONG BUY |
-| **12M Base Target** | RMB 18-22 (+2% to +24%) | RMB 31-37 (+30% to +55%) |
-| **Key Strength** | Higher VLCC leverage + 40% dividend | LNG defense + fleet growth |
+| **12M Target ($100K, PE 12x)** | RMB 15 (-15%) | RMB 21 (-12%) |
+| **12M Target ($150K, PE 12x)** | **RMB 22 (+24%)** | **RMB 37 (+55%)** |
+| **12M Bull ($150K, PE 15x)** | **RMB 27 (+54%)** | **RMB 46 (+92%)** |
+| **Key Strength** | Higher VLCC leverage + 40% div (4.1% at $150K) | LNG defense + diversified tanker upside |
 
-**All 5 models agree: Both stocks are significantly UNDERVALUED for a cycle peak.**
+**All 5 models agree: Both stocks are significantly UNDERVALUED for a cycle peak. At current spot rates ($150K+), sell-side consensus is 50-70% behind reality.**
+
 
 ---
 
@@ -272,14 +278,28 @@ Formula: Ships × $10K × 365 days × ~70% spot exposure × (1-25% tax) ÷ 7.3 C
 
 *GPT-5.2 used inflated sensitivity — targets overstated
 
-### Corrected Consensus Target Prices
+### Corrected Consensus Target Prices — Dual Scenario
+
+**Scenario A: $100K Consensus (Sell-Side Base)**
 
 | | CMES (601872) | COSCO Energy (600026) |
 |---|---|---|
-| **2026E NI (Base, $150K avg, full portfolio)** | RMB 14.7B | RMB 17.3B |
-| **12M Conservative TP (PE 10x)** | **RMB 18** (+2%) | **RMB 31** (+30%) |
-| **12M Base TP (PE 12x)** | **RMB 22** (+24%) | **RMB 37** (+55%) |
-| **12M Bull TP (PE 10x)** | **RMB 24** (+35%) | **RMB 41** (+72%) |
+| **2026E NI** | RMB 10.0B | RMB 10.0B |
+| **12M TP (PE 10x)** | RMB 12.4 (-30%) | RMB 17.6 (-26%) |
+| **12M TP (PE 12x)** | RMB 14.9 (-16%) | RMB 21.2 (-11%) |
+| **12M TP (PE 15x)** | RMB 18.6 (+5%) | RMB 26.5 (+11%) |
+
+**Scenario B: $150K Base (Current Spot Reality)**
+
+| | CMES (601872) | COSCO Energy (600026) |
+|---|---|---|
+| **2026E NI (full portfolio)** | RMB 14.7B | RMB 17.3B |
+| **12M TP (PE 10x)** | **RMB 18.2** (+3%) | **RMB 30.5** (+28%) |
+| **12M TP (PE 12x)** | **RMB 22** (+24%) | **RMB 37** (+55%) |
+| **12M TP (PE 15x, re-rate)** | **RMB 27** (+54%) | **RMB 46** (+92%) |
+
+> **The $50K consensus gap ($100K vs $150K) creates a 47-73% hidden earnings upside.** Target prices under Scenario A look unattractive; under Scenario B, massive upside remains. The key investment question: when will sell-side re-anchor to $150K?
+
 
 ---
 
@@ -330,31 +350,98 @@ Crisis:            PE 2-4x — Hormuz resolution, rate collapse
 
 ---
 
-## 9. Investment Recommendation — Multi-Model Consensus
+## 9. Investment Recommendation — Multi-Model Consensus (Dual Scenario)
 
-### Final Ratings
+### 9A. Target Prices: $100K Consensus vs $150K Base vs $200K Bull
+
+> The single biggest variable in valuing these stocks is the VLCC rate assumption. Sell-side consensus uses ~$100K/day; current spot is $150-210K/day. **Your target price depends entirely on which you believe.**
+
+| | $100K Consensus | $150K Base | $200K Bull |
+|---|---|---|---|
+| **CMES 2026E NI** | RMB 10.0B | **RMB 14.7B** | RMB 19.0B |
+| **COSCO 2026E NI** | RMB 10.0B | **RMB 17.3B** | RMB 23.2B |
+| | | | |
+| **CMES PE at 17.71** | 14.3x | **9.7x** | 7.5x |
+| **COSCO PE at 23.79** | 13.5x | **7.8x** | 5.8x |
+| | | | |
+| **CMES TP (PE 10x)** | RMB 12.4 (-30%) | **RMB 18.2 (+3%)** | RMB 23.5 (+33%) |
+| **CMES TP (PE 12x)** | RMB 14.9 (-16%) | **RMB 22 (+24%)** | RMB 28.2 (+59%) |
+| **CMES TP (PE 15x)** | RMB 18.6 (+5%) | **RMB 27 (+54%)** | RMB 35.3 (+99%) |
+| | | | |
+| **COSCO TP (PE 10x)** | RMB 17.6 (-26%) | **RMB 30.5 (+28%)** | RMB 40.9 (+72%) |
+| **COSCO TP (PE 12x)** | RMB 21.2 (-11%) | **RMB 37 (+55%)** | RMB 49.1 (+106%) |
+| **COSCO TP (PE 15x)** | RMB 26.5 (+11%) | **RMB 46 (+92%)** | RMB 61.4 (+158%) |
+| | | | |
+| **CMES Div Yield (40% payout)** | 2.8% | **4.1%** | 5.3% |
+| **COSCO Earnings Growth YoY** | +100% | **+268%** | +400%+ |
+
+### 9B. Investment Verdict by Scenario
+
+**If you believe $100K consensus (sell-side base):**
+- CMES is fairly valued to slightly expensive at 14.3x forward PE
+- COSCO has mild upside if PE re-rates to 10-12x, but limited
+- Allocation: Underweight both, wait for cheaper entry below RMB 15 / RMB 20
+- This scenario assumes rates halve from current spot — requires Hormuz de-escalation + demand collapse
+
+**If you believe $150K base (current spot supports this):**
+- CMES: 24-54% upside at PE 12-15x. 4.1% dividend yield provides income floor
+- COSCO: 55-92% upside at PE 12-15x. Diversified tanker fleet captures broad cycle
+- Allocation: Overweight both. CMES for safety, COSCO for growth
+- This is the **base case** — spot is already here, supply gap lasts until 2028
+
+**If you believe $200K bull (Hormuz escalation persists):**
+- CMES: 59-99% upside. Dividend yield 5.3%. Deep value territory
+- COSCO: 106-158% upside. PE could compress to 5.8x at peak — approaching COSCO Holdings 2021 territory
+- Allocation: Maximum overweight. Both become "must-own" positions
+- Requires: Hormuz crisis sustained + shadow fleet fully exits + rate momentum continues
+
+### 9C. Final Ratings
 
 | | CMES (601872) | COSCO Energy (600026) |
 |---|---|---|
 | **Consensus Rating** | **STRONG BUY** (5/5 models) | **STRONG BUY** (5/5 models) |
-| **12M Base Target (PE 12x)** | **RMB 22** (+24%) | **RMB 37** (+55%) |
-| **12M Bull Target (PE 10x)** | **RMB 24** (+35%) | **RMB 41** (+72%) |
+| **Scenario** | $100K / $150K / $200K | $100K / $150K / $200K |
+| **12M TP (PE 12x)** | 14.9 / **22** / 28.2 | 21.2 / **37** / 49.1 |
+| **12M TP (PE 15x)** | 18.6 / **27** / 35.3 | 26.5 / **46** / 61.4 |
+| **Upside (PE 12x)** | -16% / **+24%** / +59% | -11% / **+55%** / +106% |
 | **Downside Risk** | RMB 12-14 (-20% to -33%) | RMB 16-18 (-25% to -33%) |
+| **Our Base Case** | **$150K, PE 12x = RMB 22** | **$150K, PE 12x = RMB 37** |
 
-### Portfolio Allocation (Model Average)
+### 9D. Portfolio Allocation
 
-| Strategy | CMES | COSCO Energy | Rationale |
+| Strategy | CMES | COSCO | Rationale |
 |---|---|---|---|
-| **Conservative** | 60% | 40% | Dividend + low breakeven |
-| **Balanced** | 50% | 50% | Equal weight |
-| **Aggressive** | 40% | 60% | Fleet growth + LNG hedge |
-| **Tactical (Today)** | 70% | 30% | CMES limit-down entry |
+| **Conservative ($100K)** | 60% | 40% | Dividend safety, lower risk |
+| **Balanced ($150K base)** | 50% | 50% | Equal upside, hedged |
+| **Aggressive ($150K+)** | 40% | 60% | COSCO fleet growth + LNG + diversified tanker leverage |
+| **Max Bull ($200K)** | 35% | 65% | COSCO's 98 non-VLCC tankers amplify cycle |
+| **Tactical (Today)** | 70% | 30% | CMES limit-down = forced-selling entry point |
 
-### Key Conclusion
+### 9E. Key Triggers & Milestones to Watch
 
-> Both stocks are significantly undervalued for a VLCC super-cycle. At spot-adjusted earnings, PE is 8-10x — well above the 1x terminal compression seen in containers, with substantial runway remaining. The critical differentiator: **zero new VLCC supply until 2028** makes this cycle more persistent than containers.
+| Trigger | Impact on Thesis | Action |
+|---|---|---|
+| **Sell-side upgrades from $100K to $130-150K** | Mechanical PE compression, stock re-rate | Hold / add |
+| **Q1 2026 earnings (April)** | First quarter of $150K+ rates, massive beat | Buy ahead of earnings |
+| **Hormuz resolution** | $150K to $50-70K, thesis collapses | Stop-loss, exit 50%+ |
+| **New VLCC orders** | Long-dated, no impact until 2030 | Ignore short-term noise |
+| **Shadow fleet re-entry** | 5-8% supply return, rates -15-20% | Reduce if >10% capacity |
+| **COSCO LNG delivery schedule** | Cash flow certainty, PE re-rate | Positive for COSCO |
 
-> **Recommended action**: Accumulate both on dips. CMES for dividend floor, COSCO for growth optionality. Combined position: 15-20% of portfolio. Trailing stops at -20%.
+### 9F. Summary
+
+> **Our base case: VLCC $150K/day for 2026 (current spot supports this).**
+>
+> At $150K: CMES trades at 9.7x PE with 4.1% dividend yield — a classic mid-cycle value play. COSCO trades at 7.8x PE with 268% earnings growth — a cycle-peak compressor. Both are **STRONG BUYs**.
+>
+> Under the old $100K consensus, neither stock looks attractive (14x PE, limited upside). This is precisely the opportunity — **the market is still pricing $100K when reality is $150K+**. As analysts upgrade, expect 30-90% mechanical upside.
+>
+> **Key differentiation:**
+> - **CMES = "Dividend + Safety"**: 4.1% yield at $150K, younger VLCCs, dry bulk hedge. Best for income-oriented portfolios.
+> - **COSCO = "Growth + Optionality"**: 55-92% upside, 98 non-VLCC tankers capturing broad cycle, LNG defensive floor. Best for total-return portfolios.
+>
+> **Recommended action**: Accumulate both at current levels. CMES 50%, COSCO 50%. Combined: 15-20% of portfolio. Hard stop at -25%. Add on any dip below RMB 16 (CMES) / RMB 22 (COSCO).
+
 
 ---
 
@@ -412,14 +499,14 @@ To compare VLCC valuations fairly, we must strip out non-VLCC business value:
 
 ### Method 3: PE Comparison (Most Direct)
 
-| Company | PE (TTM) | Forward PE (at $150K VLCC) | Dividend Yield | PB |
-|---|---|---|---|---|
-| DHT | ~15x | ~6x | ~8-10% | ~1.8x |
-| FRO | ~12x | ~5x | ~6-8% | ~2.5x |
-| CMES | 28.4x | 10.5x | ~5% | 3.09x |
-| COSCO Energy | ~28.7x | 10.0x | ~3-4% | N/A |
+| Company | PE (TTM) | Fwd PE ($100K) | Fwd PE ($150K) | Fwd PE ($200K) | Div Yield | PB |
+|---|---|---|---|---|---|---|
+| DHT | ~15x | ~8x | ~6x | ~4x | ~8-10% | ~1.8x |
+| FRO | ~12x | ~7x | ~5x | ~3.5x | ~6-8% | ~2.5x |
+| CMES | 28.4x | 14.3x | **9.7x** | **7.5x** | 2.8-4.1% | 3.09x |
+| COSCO Energy | ~28.7x | 13.5x | **7.8x** | **5.8x** | ~3-4% | N/A |
 
-**A-share PE premium: ~1.7-2.0x vs US peers at forward earnings.** This is within the normal A-share premium range for cyclical SOEs and does NOT indicate overvaluation.
+**A-share PE premium: ~1.7-2.0x vs US peers at $150K forward earnings.** At $100K consensus the gap looks wider (14x vs 6-8x), but this overstates the "premium" because sell-side hasn't re-anchored to $150K yet. At $150K, the premium narrows to 1.3-1.6x — within normal A-share range for cyclical SOEs.
 
 ### Method 4: Non-VLCC "Hidden Value"
 

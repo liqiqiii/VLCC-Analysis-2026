@@ -173,4 +173,24 @@ Model an alternative scenario where the 2026 VLCC average rate baseline is $150K
 
 ---
 
+
+
+## Prompt 18: Full-Report Dual-Scenario Consistency
+**Date**: March 4, 2026
+
+Section 4B was added for the $150K scenario, but the rest of the report (TL;DR, Section 5, Section 9 especially) was NOT updated to include $100K/$150K/$200K comparison. Go through the WHOLE report and update every section with dual-scenario target prices, PE, and investment advice. Section 9 (investment recommendation) is the most important — must show scenario-specific targets, buy/sell triggers, and allocation advice.
+
+Also add this as a standing rule in RULES.md: whenever a new scenario or assumption is added, update ALL sections referencing affected metrics, not just a standalone section.
+
+**Key changes**:
+- TL;DR: Now shows $100K and $150K PE side-by-side, dual target prices
+- Section 5: Dual-scenario consensus targets (Scenario A vs B)
+- Section 9: Completely overhauled into 9A-9F with full $100K/$150K/$200K matrix
+- Section 9B: Scenario-specific investment verdict (what to do under each assumption)
+- Section 9E: Key triggers and milestones to watch
+- Appendix: Forward PE table now shows 3 scenarios across 4 companies
+- RULES.md: Added Rule 14 (whole-file scenario consistency)
+
+---
+
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*
