@@ -137,4 +137,27 @@ Using the same prompt framework, same report structure, and same skills (Day1Glo
 
 ---
 
+## Prompt 16: Full-Portfolio Earnings Recalculation
+**Date**: March 4, 2026
+
+The 2026 earnings model only accounted for VLCC segment uplift. Both CMES (~280 ships across 5 segments) and COSCO Energy (~185 ships including 18 Suezmax + 50 Aframax/LR2 + 30 MR/LR1) have major non-VLCC fleets that also benefit from the tanker super-cycle. Recalculate using:
+- Each tanker segment separately (VLCC, Suezmax, Aframax/LR2, MR/LR1) with current market rates
+- Dry bulk (Capesize $26K/day) and LNG (long-term contracts) for CMES
+- Same method as DHT/FRO analysis for product tanker segments
+
+**Key findings**:
+- COSCO Energy earnings 28-37% higher than VLCC-only model (non-VLCC tankers add RMB 1.5-4.5B)
+- COSCO base NI: RMB 17.3B (was 13.5B), PE 7.8x (was 10.0x)
+- CMES base NI: RMB 14.7B (was 13.7B), PE 9.7x (was 10.5x)
+- Full-portfolio model significantly favors COSCO Energy on pure earnings upside
+
+---
+
+## Prompt 16b: Cross-Market Comparison Fix
+**Date**: March 4, 2026
+
+The per-VLCC valuation comparison with US peers was misleading — divided total market cap by VLCC count ignoring 200+ non-VLCC ships. Fixed with 4 methods: per-total-vessel (CMES is cheapest at 0.54x DHT), SOTP segment isolation (1.2-1.6x premium, not 2.5-3x), PE comparison, and hidden value analysis.
+
+---
+
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*
