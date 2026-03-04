@@ -42,6 +42,23 @@ Key findings:
 
 ---
 
+### 🔩 A-Share: 中钨高新 (China Tungsten High-Tech, 000657.SZ)
+
+Cyclical metals deep dive on China's #2 tungsten producer — applying CRule 1–10 (Two-Cycle Backtrack, PE Compression, Operating Leverage) to the 2025–2026 tungsten super-cycle.
+
+**[📄 中钨高新 周期性金属深度研究（中文）→](tungsten)**
+
+Key findings:
+- **Consensus Rating: SELL / TAKE PROFIT** (5/5 models agree)
+- APT price at ALL-TIME HIGH: RMB 810K/ton (4x 2024 avg) — stock up 600% in 1 year
+- Even at current spot, forward PE 35x exceeds historical cycle-peak PE (13–25x)
+- Prob-weighted 12M return: -30% to -39%
+- Cycle position: Deep Phase 4 (Mania) — historical analog suggests peak within quarters
+
+📎 English version: [tungsten/report_en.md](tungsten/report_en)
+
+---
+
 ## 📁 All Reports
 
 | # | File | Language | Content |
@@ -54,6 +71,8 @@ Key findings:
 | 06 | [Deep Dive CN](06_Deep_Dive_Day1Global_Framework_CN) | 中文 | DHT vs FRO Day1Global框架 |
 | 07 | [A-Share Report EN](07_CN_AShare_VLCC_Report_EN) | English | CMES vs COSCO Energy |
 | 08 | [A-Share Report CN](08_CN_AShare_VLCC_Report_CN) | 中文 | 招商轮船 vs 中远海能 |
+| 09 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
+| 10 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
 
 ## 📝 Project Tracking
 
