@@ -233,3 +233,6 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 ---
 
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*
+### Prompt 22 (March 4, 2026) — Unified Copilot Instructions Skill File
+**Request**: Merge all rule files (Universal 14 rules + Cyclical 10 CRules + Project 5 P-Rules + 5 Prompt Templates) into a single .github/copilot-instructions.md that Copilot auto-reads. Add auto-detection logic: always apply universal rules, auto-activate cyclical rules if company is in a cyclical industry.
+**Result**: Created .github/copilot-instructions.md with 3-layer hierarchy (Universal > Cyclical > Project-Specific), auto-detection logic, combined checklists, and reusable prompt templates. Single file replaces the need to manually reference framework/ files.
