@@ -181,6 +181,83 @@ Formula: Ships × $10K × 365 days × ~70% spot exposure × (1-25% tax) ÷ 7.3 C
 
 ---
 
+## 4B. Alternative Baseline: What If $150K IS the New Consensus?
+
+> Current VLCC spot rates are $150-210K/day. Broker consensus still assumes $100K/day avg for 2026 — but what if the market has structurally shifted, and **$150K/day is the real baseline**? This section re-anchors the entire model.
+
+### Rationale for $150K as Baseline
+1. **Supply**: Zero new VLCCs until late 2028. 40%+ of fleet over 15 years old — retirements accelerating.
+2. **Demand**: Strait of Hormuz crisis deepening. Sanctions enforcement tightening. Ton-mile demand surging as routes lengthen.
+3. **Shadow fleet**: Exiting the market, removing 5-8% of effective supply.
+4. **Historical parallel**: In the 2008 super-cycle, rates averaged $120K+ for 18 months. Current supply constraints are TIGHTER than 2008.
+5. **Current spot**: $150-210K/day in March 2026 — already at or above this level.
+
+### Scenario Comparison: $100K Base vs $150K Base
+
+**CMES (招商轮船) — Full Portfolio**
+
+| | $100K Base (Old Consensus) | $150K Base (New Baseline) | Delta |
+|---|---|---|---|
+| **Consensus NI** | RMB 10.0B | **RMB 14.7B** | **+47%** |
+| Conservative ($120K / $170K) | RMB 12.0B | **RMB 16.2B** | +35% |
+| Base ($150K / $200K) | RMB 14.7B | **RMB 19.0B** | +29% |
+| Bull ($200K / $250K) | RMB 19.0B | **RMB 22.7B** | +19% |
+| **EPS (consensus)** | 1.24 | **1.82** | **+47%** |
+| **PE at 17.71 (consensus)** | 14.3x | **9.7x** | **-32%** |
+| **Dividend/share (40%)** | RMB 0.50 | **RMB 0.73** | **+46%** |
+| **Dividend yield** | 2.8% | **4.1%** | +130bps |
+
+*At $150K base, CMES scenarios shift up: Conservative=$170K, Base=$200K, Bull=$250K*
+
+**COSCO Energy (中远海能) — Full Portfolio**
+
+| | $100K Base (Old Consensus) | $150K Base (New Baseline) | Delta |
+|---|---|---|---|
+| **Consensus NI** | RMB 10.0B | **RMB 17.3B** | **+73%** |
+| Conservative ($120K / $170K) | RMB 13.3B | **RMB 20.5B** | +54% |
+| Base ($150K / $200K) | RMB 17.3B | **RMB 23.2B** | +34% |
+| Bull ($200K / $250K) | RMB 23.2B | **RMB 28.5B** | +23% |
+| **EPS (consensus)** | 1.76 | **3.05** | **+73%** |
+| **PE at 23.79 (consensus)** | 13.5x | **7.8x** | **-42%** |
+
+*COSCO benefits more because its 98 non-VLCC tankers also re-anchor higher (Suezmax $80K base, Afra/LR2 $55K base)*
+
+### Valuation Impact: $150K Base Completely Reframes Both Stocks
+
+| Metric | $100K Base | $150K Base | Implication |
+|---|---|---|---|
+| CMES PE (consensus) | 14.3x | **9.7x** | Already in mid-cycle range |
+| COSCO PE (consensus) | 13.5x | **7.8x** | Approaching cycle-peak territory |
+| CMES PE (base scenario) | 9.7x | **7.5x** | Deep value at elevated rates |
+| COSCO PE (base scenario) | 7.8x | **5.8x** | Near 中远海控 2021 levels (1.4x PE) |
+| CMES dividend yield | 2.8% | **4.1%** | Competitive with bank deposits |
+| COSCO earnings growth | +100% YoY | **+268% YoY** | Explosive |
+
+### Updated Target Prices ($150K Base)
+
+| | CMES (601872) | COSCO Energy (600026) |
+|---|---|---|
+| **2026E NI ($150K base, full portfolio)** | RMB 14.7B | RMB 17.3B |
+| **12M TP (PE 10x)** | **RMB 18.2** (+3%) | **RMB 30.5** (+28%) |
+| **12M TP (PE 12x)** | **RMB 21.9** (+24%) | **RMB 36.6** (+54%) |
+| **12M TP (PE 15x, re-rate)** | **RMB 27.3** (+54%) | **RMB 45.8** (+92%) |
+| **Bull ($200K, PE 10x)** | **RMB 23.5** (+33%) | **RMB 40.9** (+72%) |
+| **Bull ($250K, PE 10x)** | **RMB 28.1** (+59%) | **RMB 50.3** (+111%) |
+
+### Key Conclusion: $150K Base Changes Everything
+
+> With a $150K baseline, **both stocks are already trading at cycle-appropriate multiples** — COSCO at 7.8x and CMES at 9.7x forward PE. The old consensus ($100K) made them look expensive at 13-14x PE, masking the fact that rates have already broken out.
+>
+> If the market re-anchors consensus from $100K to $150K (which current spot rates justify), expect:
+> - **Sell-side earnings upgrades of 50-70%** → mechanical PE compression
+> - **COSCO Energy is the bigger winner** — its diversified tanker fleet benefits across the board ($150K VLCC + $80K Suezmax + $55K Aframax = all elevated)
+> - **CMES offers better safety** — 40% dividend at $150K base = 4.1% yield, plus dry bulk/LNG diversification as non-correlated hedge
+>
+> **The question is not IF rates stay at $150K — they already ARE there. The question is when analysts upgrade their models.**
+
+
+---
+
 ## 5. Multi-Model Analysis Summary
 
 ### Model Outputs Comparison

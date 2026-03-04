@@ -160,4 +160,17 @@ The per-VLCC valuation comparison with US peers was misleading — divided total
 
 ---
 
+## Prompt 17: $150K Base Scenario Modeling
+**Date**: March 4, 2026
+
+Model an alternative scenario where the 2026 VLCC average rate baseline is $150K/day instead of $100K/day. Add a new section (4B) comparing the two baselines side-by-side. Shows how sell-side consensus lag creates hidden value.
+
+**Key findings**:
+- At $150K base: CMES PE drops from 14.3x → 9.7x, COSCO from 13.5x → 7.8x
+- COSCO NI jumps +73% (vs +47% for CMES) — benefits more from diversified tanker fleet
+- CMES dividend yield rises to 4.1% (from 2.8%)
+- "The question is not IF rates stay at $150K — they already ARE there"
+
+---
+
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*
