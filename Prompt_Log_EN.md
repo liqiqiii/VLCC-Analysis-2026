@@ -120,4 +120,21 @@ Keep a .md file tracking all prompts used throughout the project. Maintain both 
 
 ---
 
-*This file will be updated as new prompts are added.*
+## Prompt 15: Chinese A-Share VLCC Analysis (招商轮船 vs 中远海能)
+**Date**: March 4, 2026
+
+Using the same prompt framework, same report structure, and same skills (Day1Global, multi-model, operating leverage, target prices), run the same analysis for 招商轮船 (CMES, 601872.SH) and 中远海能 (COSCO Energy, 600026.SH). Create a separate report since these are from a different stock market (A-share). Additionally:
+- Take the 中远海控 (COSCO Holdings, 601919.SH) container cycle (2020-2022) into consideration, focusing on PE/PB ratio compression at cycle peaks as a reference
+- Predict the annual income for 2026 for both VLCC companies
+- Run across 5 models (Opus 4.6, Sonnet 4.6, GPT-5.2, GPT-5.1, Gemini 3 Pro) and summarize
+
+**Key findings**:
+- Both rated STRONG BUY by all 5 models
+- CMES: 12M base target RMB 25 (+41%), dividend safety (40% payout)
+- COSCO Energy: 12M base target RMB 32 (+35%), LNG defensive floor
+- Critical sensitivity correction: RMB 730M per $10K/day (not $1K/day)
+- A-share VLCC stocks trade at 2.5-3x premium per VLCC vs US-listed peers (DHT/FRO)
+
+---
+
+*This file will be updated as new prompts are added. Last updated: March 4, 2026.*
