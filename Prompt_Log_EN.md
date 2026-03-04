@@ -191,6 +191,22 @@ Also add this as a standing rule in RULES.md: whenever a new scenario or assumpt
 - Appendix: Forward PE table now shows 3 scenarios across 4 companies
 - RULES.md: Added Rule 14 (whole-file scenario consistency)
 
+
+## Prompt 19: Day1Global Framework Retroactive Application
+**Date**: March 4, 2026
+
+User noticed the Day1Global tech-earnings-deepdive framework (used in DHT/FRO report) was not listed in RULES.md and was not applied to the A-share report. Decision: Add as mandatory rule AND retroactively apply to A-share report.
+
+**Added to A-share report (Sections 10-13):**
+- Module C: Cash Flow — CMES FCF yield 9.8-11.2% at $150K (Grade A-), COSCO flips FCF-positive (Grade B+)
+- Module L: Ownership — Both SOEs ~47-49% state-owned, COSCO has higher related-party risk
+- Module O: Accounting Quality — CMES cleaner (A-), COSCO watch related-party transactions (B)
+- 6 Investment Perspectives: Quality Compounder→CMES, Growth→COSCO, Long/Short→both longs (50-70% gap), Deep Value→CMES safer, Catalyst→Q1 earnings (April), Macro→overweight both
+- Anti-Bias Framework: 6 cognitive traps identified and mitigated
+- Pre-Mortem: 4 scenarios (Hormuz, capex trap, recession, A-share systemic), combined 40%+ drawdown probability 35-45%
+
+**RULES.md: Added Rule 15** — Day1Global framework is mandatory for all stock analysis reports.
+
 ---
 
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*

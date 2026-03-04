@@ -445,6 +445,215 @@ Crisis:            PE 2-4x — Hormuz resolution, rate collapse
 
 ---
 
+## 10. Day1Global Framework Deep Dive (Modules C, L, O)
+
+> Applying the [tech-earnings-deepdive](https://github.com/webleon/tech-earnings-deepdive-openclaw-skill) framework by Ruby & Star (Day1Global). Modules A (Revenue), B (Profitability), D (Guidance), E (Competition), and K (Valuation) are covered in Sections 1-9 above. Below: the remaining critical modules.
+
+### Module C: Cash Flow Analysis — "THE BIG ONE"
+
+**Why it matters**: In shipping, net income can be manipulated by D&A schedules and impairments. Free cash flow is the truth.
+
+**CMES (招商轮船) Cash Flow Profile**
+
+| Metric | 2024 | 2025E | 2026E ($150K) |
+|---|---|---|---|
+| Operating Cash Flow | ~RMB 8.5B | ~RMB 10B | **~RMB 20-22B** |
+| Capex (fleet maintenance + newbuilds) | ~RMB 4B | ~RMB 5B | ~RMB 6B |
+| **Free Cash Flow** | ~RMB 4.5B | ~RMB 5B | **~RMB 14-16B** |
+| FCF Yield (at RMB 143B mcap) | 3.1% | 3.5% | **9.8-11.2%** |
+| Dividend (40% of NI) | ~RMB 2.4B | ~RMB 2.6B | **~RMB 5.9B** |
+| FCF after Dividend | ~RMB 2.1B | ~RMB 2.4B | **~RMB 8-10B** |
+
+**Key insight**: At $150K, CMES generates ~RMB 14-16B FCF — enough to pay 40% dividend AND retain RMB 8-10B for fleet renewal or debt reduction. This is "SaaS economics" in action: above breakeven, incremental revenue flows almost entirely to FCF.
+
+**COSCO Energy (中远海能) Cash Flow Profile**
+
+| Metric | 2024 | 2025E | 2026E ($150K) |
+|---|---|---|---|
+| Operating Cash Flow | ~RMB 7B | ~RMB 8B | **~RMB 24-27B** |
+| Capex (heavy: 61 ships on order) | ~RMB 8B | ~RMB 10B | ~RMB 12B |
+| **Free Cash Flow** | ~RMB -1B | ~RMB -2B | **~RMB 12-15B** |
+| FCF Yield (at RMB 135B mcap) | -0.7% | -1.5% | **8.9-11.1%** |
+| LNG long-term contract cash flow | ~RMB 2.5B | ~RMB 3B | ~RMB 3.5B |
+
+**Critical difference**: COSCO was FCF-negative in 2024-25 due to massive capex (36 LNG + 6 VLCC + 19 MR/LR newbuilds). At $150K, it flips to strongly FCF-positive — a dramatic inflection. However, capex discipline is a key watch item.
+
+**Cash Flow Verdict**:
+- CMES: Consistent FCF generator. Conservative capex. 40% dividend well-covered. **Grade: A-**
+- COSCO: FCF inflection at $150K. Heavy capex creates optionality but also risk. LNG contracts provide stable floor. **Grade: B+**
+
+### Module L: Ownership & Management
+
+**CMES Ownership Structure**
+
+| Shareholder | Stake | Significance |
+|---|---|---|
+| China Merchants Group (央企) | ~47% | Central SOE; energy security mandate |
+| Hong Kong/Southbound Connect | ~8-10% | Institutional foreign interest |
+| Insurance/Fund institutions | ~15% | Long-term holders |
+| Retail | ~25-30% | Higher volatility driver |
+
+- **Management quality**: Conservative, SOE-style. Consistent 40% dividend policy. Fleet renewal disciplined (avg age 7.2yr).
+- **Alignment**: SOE mandate = energy security > profit maximization. However, dividend policy aligns with minority shareholders.
+- **Key person risk**: Low (SOE rotation system), but also means less entrepreneurial agility.
+
+**COSCO Energy Ownership Structure**
+
+| Shareholder | Stake | Significance |
+|---|---|---|
+| COSCO Shipping Group (央企) | ~49% | Central SOE; largest shipping conglomerate |
+| China Merchants Group | ~5% | Cross-holding |
+| Social security fund | ~2% | Policy holder |
+| Institutional | ~20% | Higher than CMES |
+| Retail | ~24% | Moderate volatility |
+
+- **Management quality**: More aggressive growth strategy (61 ships on order). Dual-engine vision (VLCC + LNG) is strategically sound.
+- **Related-party risk**: Significant fleet transactions within COSCO Group ecosystem. Watch for below-market charter-backs.
+- **Strategic advantage**: COSCO Group controls China's largest port network — potential for captive cargo arrangements.
+
+**Ownership Verdict**:
+- CMES: More conservative, better dividend alignment. **Grade: B+**
+- COSCO: Better strategic positioning (Group synergies), but higher related-party risk. **Grade: B**
+
+### Module O: Accounting Quality
+
+| Factor | CMES | COSCO Energy |
+|---|---|---|
+| Revenue recognition | Clean — spot/TC revenue straightforward | Clean — same |
+| D&A policy | 25-year useful life, standard | 25-year, standard |
+| Impairment risk | Low (young fleet, high asset values) | Moderate (some older VLCCs) |
+| Related-party transactions | Moderate (Merchants Group charters) | **High** (COSCO Group ecosystem) |
+| Off-balance-sheet leases | Some bareboat charters | Significant (VLCC + LNG leases) |
+| Hedge accounting (FFA) | Minimal | Minimal |
+| Pension/employee obligations | SOE standard | SOE standard |
+| Goodwill/intangibles | Negligible | Negligible |
+
+**Red flags to watch**:
+1. COSCO: Related-party fleet transactions — ensure arm's-length pricing
+2. Both: Operating lease obligations (IFRS 16) can mask true leverage
+3. Both: SOE "social responsibility" expenditures may reduce reported margins
+
+**Accounting Quality Verdict**:
+- CMES: Clean, transparent. Minimal red flags. **Grade: A-**
+- COSCO: Adequate but watch related-party transactions. **Grade: B**
+
+---
+
+## 11. Six Investment Philosophy Perspectives
+
+### 1. Quality Compounder (Buffett/Munger)
+
+> "What is the durable competitive advantage?"
+
+- **CMES**: Youngest VLCC fleet globally (7.2yr), lowest breakeven, 40% dividend — closest to a "quality" shipping name. But shipping has no true moat.
+- **COSCO**: LNG long-term contracts provide annuity-like income. COSCO Group ecosystem is an intangible moat in Chinese waters.
+- **Verdict**: Neither is a true compounder. **CMES is closer** due to dividend discipline and fleet quality. Hold for the cycle, not forever.
+
+### 2. Imaginative Growth (Baillie Gifford/ARK)
+
+> "What is the 10x optionality?"
+
+- **COSCO**: 36 LNG newbuilds create a future "LNG shipping giant" narrative. If LNG spot rates spike (like 2022 at $100-162K/day), COSCO's LNG fleet could be worth more than its entire current market cap.
+- **CMES**: Limited growth optionality beyond the cycle. Conservative fleet management.
+- **Verdict**: **COSCO wins** on growth narrative. But this is a cyclical trade, not a 10x bet.
+
+### 3. Fundamental Long/Short (Tiger Cubs)
+
+> "What is the market mispricing?"
+
+- The market is pricing both stocks at $100K VLCC consensus when spot is $150K+. This is a **50-70% earnings gap** that will close via Q1 earnings beats and sell-side upgrades.
+- **Short side**: Consider shorting downstream refiners who cannot pass through higher crude transport costs.
+- **Verdict**: **Both are longs.** The mispricing is identical in nature but COSCO has more magnitude (73% earnings gap vs 47% for CMES).
+
+### 4. Deep Value (Klarman/Marks)
+
+> "What is the margin of safety?"
+
+- **CMES at 9.7x PE ($150K)**: Dividend yield 4.1%, breakeven ~$25K/day. Even if rates halve to $75K, CMES earns RMB 6-7B (breakeven at current price). Margin of safety: **HIGH**.
+- **COSCO at 7.8x PE ($150K)**: LNG contracts worth ~RMB 3B/yr = 22% of market cap in stable income. But heavy capex reduces margin of safety. **MODERATE**.
+- **Verdict**: **CMES offers better margin of safety.** COSCO offers better upside.
+
+### 5. Catalyst Driven (Tepper/Ackman)
+
+> "What specific catalyst will unlock value?"
+
+| Catalyst | Timeline | Impact | Probability |
+|---|---|---|---|
+| Q1 2026 earnings report | April 2026 | First $150K quarter → massive beat | 90% |
+| Sell-side consensus upgrade to $130-150K | Q2 2026 | Mechanical PE compression | 80% |
+| MSCI/Index rebalancing | H2 2026 | Forced institutional buying | 50% |
+| Hormuz escalation phase 2 | Unknown | Rates to $250K+ | 30% |
+| Special dividend announcement | Post-Q1 | Share price floor | 40% (CMES) |
+
+- **Verdict**: **Q1 earnings (April) is the nearest high-probability catalyst for both.**
+
+### 6. Macro Tactical (Druckenmiller)
+
+> "Where are we in the cycle?"
+
+- We are in **Phase 2** of the VLCC super-cycle: rates have broken out, but sell-side hasn't caught up. PE compression from 28x → 10x is underway.
+- **Macro tailwinds**: Weakening USD (positive for commodity shipping), rising oil demand from Asia, sanctions enforcement tightening.
+- **Macro risks**: Global recession (15-20% probability), Hormuz resolution (15-25%).
+- **Position sizing**: This is a 15-20% portfolio bet, not a 5% allocation. The cycle conviction is high, but terminal risk exists.
+- **Verdict**: **Overweight both. Trim at PE 5-6x (Phase 4). Exit at first sign of Hormuz resolution.**
+
+---
+
+## 12. Anti-Bias Framework
+
+| Cognitive Trap | How It Applies Here | Mitigation |
+|---|---|---|
+| **Anchoring bias** | Anchoring to $100K consensus when spot is $150K+ | Use $150K as base; $100K as bear case |
+| **Simplification bias** | Treating both companies as "VLCC plays" — ignoring COSCO's 98 non-VLCC tankers and 65 LNG ships | Full-portfolio model (Section 4) |
+| **Recency bias** | Using 2020 floating storage as cycle template — 2026 is fundamentally different (supply-driven) | Compare to 2008 AND 2020; note structural differences |
+| **Confirmation bias** | Wanting both to be "strong buys" may cause us to dismiss risks | Pre-mortem analysis (Section 13) addresses this |
+| **Survivorship bias** | Comparing to 中远海控 container success ignores that some cyclical bets fail spectacularly | Risk matrix (Section 8) with explicit probabilities |
+| **Narrative bias** | "Hormuz crisis = rates stay high forever" — every crisis ends eventually | Include de-escalation scenario in Section 9B |
+
+---
+
+## 13. Pre-Mortem Analysis
+
+> **"It's March 2027. Your position in CMES and COSCO Energy has lost 40%. What went wrong?"**
+
+### Scenario 1: Hormuz De-Escalation (Most Likely Bear Case)
+- **What happened**: Diplomatic breakthrough in Q3 2026. Iran agrees to tanker safety guarantees. Insurance premiums normalize.
+- **Impact**: VLCC rates crash from $150K to $50-70K within 2 months. Market immediately prices "cycle over."
+- **Damage**: CMES to RMB 10-12 (-32% to -43%), COSCO to RMB 14-16 (-33% to -41%)
+- **Early warning signs**: US-Iran diplomatic channels opening, insurance premium drops, tanker rerouting back to Strait
+
+### Scenario 2: COSCO Capex Trap
+- **What happened**: COSCO's 61 newbuilds ($8-12B total) arrive just as rates normalize. Massive debt service with declining revenue.
+- **Impact**: COSCO FCF turns deeply negative again. Dividend cut or equity raise.
+- **Damage**: COSCO-specific — to RMB 12-15 (-37% to -50%). CMES relatively protected.
+- **Early warning signs**: LNG charter rate softening, newbuild delivery delays, COSCO Group funding stress
+
+### Scenario 3: Global Recession + OPEC Overproduction
+- **What happened**: Synchronized global recession in H2 2026. OPEC floods market to maintain revenue. Oil demand drops 3-5%.
+- **Impact**: VLCC rates to $40-60K. Both stocks de-rate to PE 5-8x on collapsed earnings.
+- **Damage**: CMES to RMB 8-10 (-43% to -55%), COSCO to RMB 10-12 (-50% to -58%)
+- **Early warning signs**: PMI contracting across Asia/Europe, oil inventory builds, OPEC compliance dropping
+
+### Scenario 4: A-Share Systemic Risk
+- **What happened**: China property crisis Phase 3, banking stress, capital flight. A-share index drops 30%.
+- **Impact**: Both stocks fall regardless of fundamentals. Foreign investors exit via Southbound Connect.
+- **Damage**: Both -30% to -40% even with strong underlying earnings.
+- **Early warning signs**: CNY depreciation >7.5, PBOC emergency measures, Shanghai Composite below 2,800
+
+### Pre-Mortem Verdict
+
+| Risk | Probability | Max Drawdown | Hedge |
+|---|---|---|---|
+| Hormuz de-escalation | 15-25% | -40% | Trailing stop at -25% |
+| COSCO capex trap | 20-30% | -50% (COSCO only) | Overweight CMES if capex concerns rise |
+| Global recession | 15-20% | -55% | Reduce position if PMI <48 for 3 months |
+| A-share systemic | 20-30% | -40% | Diversify with US-listed DHT/FRO as hedge |
+
+> **Combined probability of a 40%+ drawdown: ~35-45%.** This is NOT a risk-free trade. Position sizing (15-20% of portfolio) and hard stops (-25%) are essential. The asymmetry is favorable (upside 55-92% vs downside 25-40%) but not overwhelming.
+
+
+---
+
 ## Appendix: Cross-Market Comparison with US-Listed Peers (Corrected)
 
 > **⚠️ Previous version incorrectly divided total market cap by VLCC count alone.** CMES and COSCO Energy are diversified fleets — CMES has ~300 vessels across 5 segments; COSCO Energy has ~180 vessels including 65 LNG carriers. A per-VLCC comparison without adjusting for non-VLCC assets is fundamentally misleading. Below is the corrected multi-metric analysis.
@@ -535,4 +744,5 @@ The corrected analysis shows Chinese VLCC stocks are **reasonably valued** when 
 ---
 
 *Report compiled from 5 independent AI model analyses (Opus 4.6, Sonnet 4.6, GPT-5.2, GPT-5.1, Gemini 3 Pro).*
+*Analytical framework: [Day1Global tech-earnings-deepdive](https://github.com/webleon/tech-earnings-deepdive-openclaw-skill) — Modules A, B, C, D, E, K, L, O applied. 6 investment perspectives, anti-bias framework, and pre-mortem analysis included.*
 *Data as of March 4, 2026. This is for informational purposes only and does not constitute investment advice.*

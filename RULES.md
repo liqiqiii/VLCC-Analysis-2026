@@ -111,6 +111,32 @@ When adding a new scenario or assumption (e.g., $150K base vs $100K consensus), 
 
 **Rationale**: A standalone "Section 4B" is insufficient if Section 9 still only references the old assumption. The reader of Section 9 (the most important section) must see the full picture without scrolling back.
 
+
+### Rule 15: Day1Global Framework Application
+Every stock analysis report MUST apply the full [Day1Global tech-earnings-deepdive](https://github.com/webleon/tech-earnings-deepdive-openclaw-skill) framework:
+
+**Required modules:**
+- Module A: Revenue Quality
+- Module B: Profitability / Operating Leverage
+- Module C: Cash Flow ("THE BIG ONE") — FCF analysis, FCF yield, capex discipline
+- Module D: Forward Guidance / PE Compression Path
+- Module E: Competitive Landscape
+- Module K: Valuation Matrix (multi-scenario target prices)
+- Module L: Ownership & Management (shareholder structure, alignment, related-party risk)
+- Module O: Accounting Quality (D&A policy, impairment risk, off-balance-sheet items)
+
+**Required perspectives:**
+1. Quality Compounder (Buffett/Munger) — durable advantage?
+2. Imaginative Growth (Baillie Gifford/ARK) — 10x optionality?
+3. Fundamental Long/Short (Tiger Cubs) — what's mispriced?
+4. Deep Value (Klarman/Marks) — margin of safety?
+5. Catalyst Driven (Tepper/Ackman) — specific value-unlocking events?
+6. Macro Tactical (Druckenmiller) — cycle positioning?
+
+**Required frameworks:**
+- Anti-Bias Framework: Identify and mitigate anchoring, simplification, recency, confirmation, survivorship, and narrative biases
+- Pre-Mortem Analysis: "It's 1 year later and you lost 40%. What went wrong?" — enumerate 3-5 specific scenarios with probabilities and early warning signs
+
 ---
 
 ## 📋 CHECKLIST (Copy-Paste Before Every Push)
