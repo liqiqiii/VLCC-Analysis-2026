@@ -220,4 +220,16 @@ Decouple RULES.md and prompt logs into universal (reusable for any industry) vs 
 
 ---
 
+
+## Prompt 21: Cyclical Stock Rules (Two-Cycle Backtrack)
+**Date**: March 4, 2026
+
+Create cyclical-stock-specific rules in the framework/ folder. Key additions:
+- **CRule 1 (Two-Cycle Backtrack)**: For every cyclical stock, find the two most recent cycles, backtrack stock price vs commodity/rate correlation (R-squared, lead/lag), map current position to historical cycle anatomy, and predict where we are now.
+- CRule 2-10: PE compression patterns, supply-demand duration, operating leverage multiplier, contrarian timing indicators, cross-cycle reference, earnings sensitivity matrix, exit strategy framework, inflation-adjusted comparison, shadow/grey market monitoring.
+
+User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack of stock price vs raw material rate (e.g., tungsten price, VLCC rate). See the correlation, give basic analysis based on past cycles, predict where we are in the cycle now based on historical data."
+
+---
+
 *This file will be updated as new prompts are added. Last updated: March 4, 2026.*
