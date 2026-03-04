@@ -222,17 +222,92 @@ Crisis:            PE 2-4x — Hormuz resolution, rate collapse
 
 ---
 
-## Appendix: Comparison with US-Listed Peers
+## Appendix: Cross-Market Comparison with US-Listed Peers (Corrected)
 
-| Metric | CMES | COSCO Energy | DHT Holdings | Frontline (FRO) |
+> **⚠️ Previous version incorrectly divided total market cap by VLCC count alone.** CMES and COSCO Energy are diversified fleets — CMES has ~300 vessels across 5 segments; COSCO Energy has ~180 vessels including 65 LNG carriers. A per-VLCC comparison without adjusting for non-VLCC assets is fundamentally misleading. Below is the corrected multi-metric analysis.
+
+### Full Fleet Overview
+
+| Company | VLCCs | Suezmax | Aframax/LR | MR/LR1 | LNG | Dry Bulk | Container/Other | **Total Vessels** |
+|---|---|---|---|---|---|---|---|---|
+| **DHT** | 24 | — | — | — | — | — | — | **24** |
+| **FRO** | 42 | 21 | 18 | — | — | — | — | **81** |
+| **CMES** | 52 | — | — | — | ~40-60 | ~93 | ~30 | **~250-300** |
+| **COSCO Energy** | 55 | 18 | ~50 | ~30 | ~65 | — | — | **~180-195** |
+
+### Method 1: Market Cap per Total Vessel
+
+| Company | Market Cap | Total Vessels | **$/Vessel** | vs DHT |
 |---|---|---|---|---|
-| Market | A-share | A-share | NYSE | NYSE |
-| Market Cap | $19.7B | $18.6B | $3.13B | $8.50B |
-| VLCC Fleet | 52 | 45-53 | 24 | 42 VLCC-eq |
-| Valuation/VLCC | $379M | $350-413M | $130M | $202M |
-| **A-share Premium** | **2.9x vs DHT** | **2.7-3.2x vs DHT** | baseline | 1.6x |
+| DHT | $3.13B | 24 | **$130M** | baseline |
+| FRO | $8.50B | 81 | **$105M** | 0.81x |
+| CMES | $19.7B | ~280 | **$70M** | **0.54x (CHEAPER)** |
+| COSCO Energy | $18.6B | ~185 | **$101M** | 0.78x |
 
-Chinese VLCC stocks trade at ~2.5-3x premium per VLCC vs US peers — reflecting SOE platform value, energy security premium, and A-share retail premium.
+**Key insight**: On a per-vessel basis, CMES is actually the CHEAPEST of all four companies — trading at only 54% of DHT's per-vessel valuation. This demolishes the "A-share premium" narrative when the full fleet is properly accounted for.
+
+### Method 2: Sum-of-Parts (VLCC Segment Isolation)
+
+To compare VLCC valuations fairly, we must strip out non-VLCC business value:
+
+**CMES segment breakdown** (est. 2025 profit contribution):
+- Oil transport (VLCC): ~50-55% of profit → segment value ~$9.9-10.8B
+- Dry bulk: ~15-20% → ~$3.0-3.9B
+- LNG: ~10-15% → ~$2.0-3.0B
+- Container + Ro-Ro: ~10-15% → ~$2.0-3.0B
+
+**COSCO Energy segment breakdown** (est.):
+- VLCC/crude oil: ~45-55% → segment value ~$8.4-10.2B
+- Product tankers (Suez/Afra/MR/LR): ~15-20% → ~$2.8-3.7B
+- LNG (65 ships, long-term contracts): ~20-30% → ~$3.7-5.6B
+
+| Company | VLCC Segment Value (est.) | VLCC Count | **$/VLCC (segment-adjusted)** | vs DHT |
+|---|---|---|---|---|
+| DHT | $3.13B (100% VLCC) | 24 | **$130M** | baseline |
+| FRO | ~$6.0B (70% VLCC-eq) | 42 | **$143M** | 1.10x |
+| CMES | ~$10.0-10.8B (50-55%) | 52 | **$192-208M** | **1.5-1.6x** |
+| COSCO Energy | ~$8.4-10.2B (45-55%) | 55 | **$153-185M** | **1.2-1.4x** |
+
+**Corrected A-share premium: 1.2-1.6x** (not the previously stated 2.5-3.0x). This is largely explained by:
+1. Younger fleet (CMES 7.2yr avg → lower breakeven, longer economic life)
+2. SOE parent backing (China Merchants / COSCO Group credit and contracts)
+3. Captive Chinese crude import demand (~70% of VLCC demand is China-bound)
+4. A-share general PE premium (~30-50% above US markets historically)
+
+### Method 3: PE Comparison (Most Direct)
+
+| Company | PE (TTM) | Forward PE (at $150K VLCC) | Dividend Yield | PB |
+|---|---|---|---|---|
+| DHT | ~15x | ~6x | ~8-10% | ~1.8x |
+| FRO | ~12x | ~5x | ~6-8% | ~2.5x |
+| CMES | 28.4x | 10.5x | ~5% | 3.09x |
+| COSCO Energy | ~28.7x | 10.0x | ~3-4% | N/A |
+
+**A-share PE premium: ~1.7-2.0x vs US peers at forward earnings.** This is within the normal A-share premium range for cyclical SOEs and does NOT indicate overvaluation.
+
+### Method 4: Non-VLCC "Hidden Value"
+
+Assets the per-VLCC metric completely ignored:
+
+| Company | Non-VLCC Assets | Est. Value | Notes |
+|---|---|---|---|
+| CMES | 93 dry bulk + 40-60 LNG + 19 container + Ro-Ro | **$8-10B** | LNG fleet expanding rapidly (42 newbuilds) |
+| COSCO Energy | 18 Suezmax + 50 Afra/LR2 + 30 MR/LR1 + 65 LNG | **$8-10B** | LNG alone (65 ships × long contracts) worth $4-6B |
+| FRO | 21 Suezmax + 18 LR2 | **$2.5-3.5B** | Also benefits from tanker super-cycle |
+| DHT | None | $0 | Pure VLCC play |
+
+**COSCO Energy's 65 LNG carriers on long-term contracts are arguably worth $4-6B alone** — an asset completely invisible in a per-VLCC comparison. When this is subtracted, COSCO's VLCC segment trades at only $153-185M/VLCC, just 1.2-1.4x DHT.
+
+### Corrected Conclusion
+
+| Metric | Previous (Wrong) | Corrected |
+|---|---|---|
+| CMES per-VLCC premium vs DHT | 2.9x | **1.5-1.6x** |
+| COSCO per-VLCC premium vs DHT | 2.7-3.2x | **1.2-1.4x** |
+| Per-vessel (all ships) vs DHT | Not calculated | **CMES 0.54x (cheaper!)** |
+| PE premium (forward) | Not compared | **~1.7-2.0x (normal A-share range)** |
+
+The corrected analysis shows Chinese VLCC stocks are **reasonably valued** when the full portfolio is considered — NOT the 2.5-3x "premium" previously stated. In fact, CMES's massive dry bulk + LNG + container fleet makes it arguably **cheaper per asset** than any US-listed peer.
 
 ---
 
