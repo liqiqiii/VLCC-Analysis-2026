@@ -22,6 +22,7 @@ Our "market cap / VLCC-equivalent" model had **5 critical flaws** that made FRO 
 |--------|:-----------:|:-----------:|:-----------:|:-----------:|
 | EPS | $3.39 | $5.43 | $7.51 | $12.15 |
 | P/E | 5.7x | **3.6x** | 5.1x | **3.1x** |
+| Fwd P/B | 2.51x | **2.38x** | 3.19x | **2.96x** |
 | Div Yield (80%) | 14.0% | **22.4%** | 15.8% | **25.5%** |
 | TP @ 7x PE | $23.7 (+22%) | **$38.0 (+96%)** | $52.6 (+38%) | **$85.1 (+123%)** |
 
@@ -745,11 +746,13 @@ Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs 
 | **Annual Profit** | $546M | $875M | $1,674M | $2,710M |
 | **EPS** | $3.39 | $5.43 | $7.51 | $12.15 |
 | **P/E** | **5.7x** | **3.6x** | **5.1x** | **3.1x** |
+| **Trailing P/B** | **2.75x** | **2.75x** | **3.65x** | **3.65x** |
+| **Forward P/B** | **2.51x** | **2.38x** | **3.19x** | **2.96x** |
 | **EV/Profit** | 6.4x | 4.0x | 6.9x | 4.3x |
 | **Dividend Yield (80%)** | 14.0% | 22.4% | 15.8% | 25.5% |
 | **FCF Yield** | ~17% | ~28% | ~20% | ~32% |
 
-*Calculation: DHT per $1K rate = +$6.6M profit / +$0.041 EPS; FRO per $1K = +$20.8M / +$0.093. Shares: DHT ~161M, FRO ~223M. Prices: DHT $19.40, FRO $38.10.*
+*Calculation: DHT per $1K rate = +$6.6M profit / +$0.041 EPS; FRO per $1K = +$20.8M / +$0.093. Shares: DHT ~161M, FRO ~223M. Prices: DHT $19.40, FRO $38.10. Book value: DHT $7.05/sh (equity $1,133M), FRO $10.44/sh (equity $2,325M). Forward P/B = price ÷ (current BV + 20% retained NI per share).*
 
 #### Target Price Implications (PE-based)
 
@@ -766,6 +769,7 @@ Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs 
 | **NI Increase** | +$329M (+60%) | +$1,036M (+62%) |
 | **EPS Increase** | +$2.04 (+60%) | +$4.64 (+62%) |
 | **PE Compression** | 5.7x → 3.6x (-37%) | 5.1x → 3.1x (-39%) |
+| **PB Compression (Fwd)** | 2.51x → 2.38x (-5%) | 3.19x → 2.96x (-7%) |
 | **Div Yield Boost** | +8.4pp | +9.7pp |
 | **TP at 7x PE** | $23.7 → $38.0 (+60%) | $52.6 → $85.1 (+62%) |
 
@@ -777,6 +781,42 @@ Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs 
 4. **At $150K with 7x PE, FRO target is $85 (+123%) vs DHT $38 (+96%)** — FRO wins on absolute upside.
 5. **At $150K with 5x PE (aggressive peak compression), FRO still yields $61 (+60%) vs DHT $27 (+40%)** — both still significantly above current prices.
 6. **Risk asymmetry**: Even if rates average only $100K (bear case), both stocks trade at ~5x PE — still cheap. The downside is capped; the upside from $150K is massive.
+
+#### Historical Benchmark: FRO 2002-2008 Super Cycle PE/PB ⭐
+
+The last comparable supply-driven super cycle. FRO's valuation trajectory provides the key precedent for 2026:
+
+| Year | FRO Price (yr-end) | VLCC Rate (avg) | P/E | P/B | Cycle Phase |
+|------|:------------------:|:---------------:|:---:|:---:|:------------|
+| 2003 | ~$18 | ~$40K | 15-18x | ~1.2x | Early recovery |
+| 2004 | ~$28 | ~$70K | 8-10x | ~1.4x | Mid-cycle, rates surging |
+| 2005 | $32.40 | ~$55K | 10-12x | 1.5-2.0x | Strong cycle |
+| 2006 | $36.52 | ~$50K | 7-8x | 1.7-2.2x | Peak earnings compression |
+| 2007 | $86.87 | ~$80K | 9-10x | 2.0-2.2x | Pre-peak re-rate |
+| **2008 Peak (Jun)** | **$144** | **$120K+** | **5-7x** | **~3.0x** | **BLOWOFF TOP** |
+| 2008 Year-end | $64.30 | Collapsing | N/M | ~1.5x | Post-crash |
+
+**Cycle Averages (2004-2008H1, profitable years):**
+- **Average P/E: ~8-10x** | **Peak-earnings P/E: 5-7x** (lowest PE = highest earnings confidence)
+- **Average P/B: ~1.8x** | **Peak P/B: 3.0x** (June 2008 blowoff)
+
+**2026 vs 2008 Comparison:**
+
+| Metric | FRO 2008 Peak | FRO 2026 Now | FRO @ $100K | FRO @ $150K |
+|--------|:------------:|:------------:|:-----------:|:-----------:|
+| **P/E** | 5-7x | 4.7x (TTM) | 5.1x | **3.1x** |
+| **P/B** | 3.0x | 3.65x | 3.19x (fwd) | **2.96x (fwd)** |
+| **Div Yield** | ~8-12% | ~17% | 15.8% | **25.5%** |
+
+**Key Takeaways from Historical Comparison:**
+
+1. **PB already exceeds 2008 peak** — FRO's trailing 3.65x PB is *above* the 2008 blowoff top of 3.0x. This reflects: (a) higher vessel replacement costs in 2026, (b) FRO's $2B fleet renewal creating modern tonnage worth more than book, (c) years of accumulated depreciation making book values artificially low.
+2. **PE is LOWER than 2008 peak** — At $100K, FRO at 5.1x PE is *within* the 2008 peak range. At $150K, FRO at 3.1x would be *below* any point in the 2004-2008 cycle — **unprecedented earnings compression**.
+3. **The PE-PB divergence is bullish** — High PB + low PE = the market prices assets expensively but earnings even more cheaply. This implies the market still doubts earnings sustainability — classic mid-cycle mispricing.
+4. **Dividend yield is 2-3x the 2008 peak** — 80% payout didn't exist in 2008. The yield floor provides downside protection the 2008 cycle lacked.
+5. **If FRO re-rates to 2008-peak PE (7x) at $150K earnings, target = $85** — exactly our mid-case. The 2008 precedent validates the target range.
+
+**DHT Historical Note:** DHT IPO'd in Oct 2005 at ~$15/share. Limited 2005-2008 data, but it peaked at ~$28 in 2007 (PB ~2.0x). Current 2.75x PB also exceeds its prior peak, but DHT's pure-VLCC fleet and lower leverage mean the PB premium is better justified than FRO's.
 
 ### P10. Charter Strategy Conclusion (REVISED)
 

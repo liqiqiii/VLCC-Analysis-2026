@@ -242,3 +242,14 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 ### Prompt 24 (March 5, 2026) - DHT/FRO  Rate Scenario Addition
 **Request**: Add dual-scenario comparison ( vs  average VLCC rate) to DHT/FRO reports. Currently only shows results at . Update both EN/CN reports following Rule 14 (whole-file scenario consistency).
 **Result**: Added P9B section with full dual-scenario comparison tables (earnings, PE, EV/Profit, dividend yield, target prices at 3 PE levels). Updated TL;DR with scenario summary table. Updated Investment Thesis to reference both scenarios. Key finding: At , DHT drops to 3.6x PE (22.4% yield), FRO to 3.1x PE (25.5% yield). NI increases 60-62% from  to . Both EN/CN reports and dht-fro.md (GH Pages) updated.
+### Prompt 25 (March 5, 2026) - Add PB Ratios & FRO 2002-2008 Historical Cycle PE/PB
+**Request**: Add P/B (price-to-book) values for both  and  scenarios. Add FRO 2002-2008 super cycle historical PE/PB data (year-by-year, peak, and cycle average) as a benchmark section. Update both EN/CN reports per copilot-instructions.md.
+**Result**: 
+- Added trailing PB (DHT 2.75x, FRO 3.65x) and forward PB (DHT 2.51-2.38x, FRO 3.19-2.96x) to all dual-scenario tables
+- Added PB compression row to delta table
+- Created new Historical Benchmark subsection: FRO 2002-2008 Super Cycle PE/PB
+- Key findings: FRO PB (3.65x) already exceeds 2008 peak (3.0x), but PE (3.1-5.1x) is LOWER than 2008 peak (5-7x) - bullish PE-PB divergence
+- 2008 cycle averages: PE 8-10x, PB 1.8x; peak PE 5-7x, peak PB 3.0x
+- At , FRO 3.1x PE would be below ANY point in 2004-2008 cycle - unprecedented
+- All edits applied to EN (05), CN (06), dht-fro.md (GH Pages)
+- Book values: DHT .05/sh (equity ,133M), FRO .44/sh (equity ,325M)
