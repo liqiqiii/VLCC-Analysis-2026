@@ -16,6 +16,15 @@ Our "market cap / VLCC-equivalent" model had **5 critical flaws** that made FRO 
 4. **We ignored fleet renewal** — FRO's $2B VLCC swap (8 old → 9 new eco) adds massive NPV. DHT's fleet is good but not undergoing this kind of step-change.
 5. **Market cap ≠ Enterprise Value** — On EV/VLCC-eq, FRO is $165M vs DHT's $145M — a much smaller gap than the mcap-based $146M vs $130M suggested.
 
+**Dual-Scenario Summary ($100K / $150K avg VLCC rate):**
+
+| Metric | DHT @ $100K | DHT @ $150K | FRO @ $100K | FRO @ $150K |
+|--------|:-----------:|:-----------:|:-----------:|:-----------:|
+| EPS | $3.39 | $5.43 | $7.51 | $12.15 |
+| P/E | 5.7x | **3.6x** | 5.1x | **3.1x** |
+| Div Yield (80%) | 14.0% | **22.4%** | 15.8% | **25.5%** |
+| TP @ 7x PE | $23.7 (+22%) | **$38.0 (+96%)** | $52.6 (+38%) | **$85.1 (+123%)** |
+
 ---
 
 ## ⚠️ IMPORTANT UPDATE: Charter Strategy Correction (March 3, 2026)
@@ -551,9 +560,11 @@ Five AI models (Claude Opus 4.6, Claude Sonnet 4.6, GPT-5.2, GPT-5.1, Gemini 3 P
 
 ### Investment Thesis Summary
 
-**DHT = BUY** — Undervalued at current prices. Median base-case upside of +44% (12M) / +96% (24M). Lower leverage provides downside protection. 100% dividend payout creates yield floor. The pure-play simplicity attracts institutional flows. Risk/reward is asymmetric in favor of longs.
+**DHT = BUY** — Undervalued at current prices. Median base-case upside of +44% (12M) / +96% (24M). Lower leverage provides downside protection. 100% dividend payout creates yield floor. The pure-play simplicity attracts institutional flows. Risk/reward is asymmetric in favor of longs. At $150K avg rate, PE compresses to 3.6x with 22.4% dividend yield — making it one of the cheapest equities in any sector.
 
-**FRO = ACCUMULATE ON DIPS** — Fairly valued in the base case (12M median base at $49.50 = +30%). Higher absolute upside in bull scenario ($77-$117 at 24M) but also deeper downside (−19% to −27% in conservative). The leveraged play for high-conviction supercycle believers. Best entered below $35.
+**FRO = ACCUMULATE ON DIPS** — Fairly valued in the base case (12M median base at $49.50 = +30%). Higher absolute upside in bull scenario ($77-$117 at 24M) but also deeper downside (−19% to −27% in conservative). The leveraged play for high-conviction supercycle believers. Best entered below $35. At $150K, FRO becomes a 3.1x PE stock with 25.5% yield — extraordinary value if rates sustain.
+
+**Rate Scenario Impact**: The gap between $100K and $150K is transformational. At $100K, both are "cheap" (5–6x PE). At $150K, both become "absurdly cheap" (3–4x PE). The $150K scenario adds +60% to NI and compresses PE by ~37–39%. Since current spot exceeds $150K, the risk is to the upside.
 
 ---
 
@@ -722,6 +733,50 @@ With DHT at 25% TC and FRO at ~22-27% effective coverage, the two companies are
 
 **DHT is now significantly more attractive than old model suggested.** At $107K, DHT's corrected P/E
 drops from 6.4x to 5.3x. On EV/Profit (which adjusts for leverage), DHT is actually CHEAPER than FRO.
+
+### P9B. Dual-Scenario Valuation: $100K vs $150K Average VLCC Rate ⭐⭐
+
+Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs **$150K (current spot-implied)**:
+
+#### Earnings & Valuation Comparison
+
+| Metric | DHT @ $100K | DHT @ $150K | FRO @ $100K | FRO @ $150K |
+|--------|:-----------:|:-----------:|:-----------:|:-----------:|
+| **Annual Profit** | $546M | $875M | $1,674M | $2,710M |
+| **EPS** | $3.39 | $5.43 | $7.51 | $12.15 |
+| **P/E** | **5.7x** | **3.6x** | **5.1x** | **3.1x** |
+| **EV/Profit** | 6.4x | 4.0x | 6.9x | 4.3x |
+| **Dividend Yield (80%)** | 14.0% | 22.4% | 15.8% | 25.5% |
+| **FCF Yield** | ~17% | ~28% | ~20% | ~32% |
+
+*Calculation: DHT per $1K rate = +$6.6M profit / +$0.041 EPS; FRO per $1K = +$20.8M / +$0.093. Shares: DHT ~161M, FRO ~223M. Prices: DHT $19.40, FRO $38.10.*
+
+#### Target Price Implications (PE-based)
+
+| Target PE | DHT @ $100K | DHT @ $150K | FRO @ $100K | FRO @ $150K |
+|-----------|:-----------:|:-----------:|:-----------:|:-----------:|
+| **5x** (cycle peak) | $17.0 | $27.2 | $37.6 | $60.8 |
+| **7x** (mid-cycle) | $23.7 | $38.0 | $52.6 | $85.1 |
+| **9x** (re-rate) | $30.5 | $48.9 | $67.6 | $109.4 |
+
+#### Delta: What $150K Means vs $100K
+
+| Metric | DHT Delta | FRO Delta |
+|--------|:---------:|:---------:|
+| **NI Increase** | +$329M (+60%) | +$1,036M (+62%) |
+| **EPS Increase** | +$2.04 (+60%) | +$4.64 (+62%) |
+| **PE Compression** | 5.7x → 3.6x (-37%) | 5.1x → 3.1x (-39%) |
+| **Div Yield Boost** | +8.4pp | +9.7pp |
+| **TP at 7x PE** | $23.7 → $38.0 (+60%) | $52.6 → $85.1 (+62%) |
+
+#### Key Insights
+
+1. **The $150K scenario transforms both stocks from "cheap" to "absurdly cheap."** At 3.1–3.6x PE, these are deep-value territory regardless of cycle risk.
+2. **FRO benefits slightly more** (+62% NI vs +60%) due to higher operating leverage from Suezmax/LR2 fleet — but the difference is marginal.
+3. **Dividend yields of 22–25% at $150K** mean investors recoup their entire investment in ~4 years through dividends alone.
+4. **At $150K with 7x PE, FRO target is $85 (+123%) vs DHT $38 (+96%)** — FRO wins on absolute upside.
+5. **At $150K with 5x PE (aggressive peak compression), FRO still yields $61 (+60%) vs DHT $27 (+40%)** — both still significantly above current prices.
+6. **Risk asymmetry**: Even if rates average only $100K (bear case), both stocks trade at ~5x PE — still cheap. The downside is capped; the upside from $150K is massive.
 
 ### P10. Charter Strategy Conclusion (REVISED)
 
