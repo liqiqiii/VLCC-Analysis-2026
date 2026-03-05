@@ -262,3 +262,6 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 - Key insight: high PB + low PE = high ROE = the whole bull case for cyclical shipping at peak rates
 - Root cause of misleading forward PB: 80% payout means only 20% retained, barely moves book value
 - Updated TL;DR, P9B tables, delta, historical comparison in EN(05)/CN(06)/dht-fro.md
+### Prompt 27 (March 5, 2026) - Historical Dividend Payout Ratios and Forward Dividend Projection
+**Request**: Add historical dividend/profit payout ratio analysis for DHT and FRO. Calculate expected DPS at 100K/150K rate scenarios using historical payout patterns.
+**Result**: Added year-by-year payout history (2019-2024): DHT strong-year avg 95 pct, FRO strong-year avg 85 pct. Forward DPS at 3 payout scenarios (70/85/95 pct) x 2 rate scenarios. Key: FRO at 150K/85 pct payout = DPS 10.33 = 27.1 pct yield = 3.7yr payback. Added dividend payback period table. Updated EN(05), CN(06), dht-fro.md.

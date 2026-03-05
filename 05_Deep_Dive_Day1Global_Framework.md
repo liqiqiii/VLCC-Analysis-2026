@@ -830,6 +830,52 @@ The last comparable supply-driven super cycle. FRO's valuation trajectory provid
 
 **DHT Historical Note:** DHT IPO'd in Oct 2005 at ~$15/share. Limited 2005-2008 data, but it peaked at ~$28 in 2007 (PB ~2.0x). Current 2.75x PB also exceeds its prior peak, but DHT's pure-VLCC fleet and lower leverage mean the PB premium is better justified than FRO's.
 
+#### Historical Dividend Payout & Forward Dividend Projection ⭐
+
+**Historical Payout Ratios (DPS ÷ EPS):**
+
+| Year | DHT EPS | DHT DPS | DHT Payout | FRO EPS | FRO DPS | FRO Payout | Market |
+|------|:-------:|:-------:|:----------:|:-------:|:-------:|:----------:|:-------|
+| 2019 | $0.51 | $0.17 | 33% | $0.78 | $0.10 | 13% | Weak rates |
+| **2020** | **$1.61** | **$1.33** | **83%** | **$2.09** | **$1.60** | **77%** | **Floating storage boom** |
+| 2021 | -$0.07 | $0.13 | N/M | -$0.08 | $0.00 | N/M | Trough |
+| 2022 | $0.37 | $0.10 | 27% | $2.22 | $0.15 | 7%† | Recovery / FRO restructuring |
+| **2023** | **$0.99** | **$1.15** | **116%** | **$2.95** | **$2.87** | **97%** | **Strong cycle** |
+| **2024** | **$1.12** | **$1.00** | **89%** | **$2.23** | **$1.95** | **87%** | **Solid year** |
+
+*†FRO 2022: Low payout due to Euronav-related fleet restructuring; only Q3 dividend paid.*
+
+**Policy vs Reality:**
+- **DHT**: States "100% of ordinary net income." Actual payout in strong years: **83-116%** (avg ~96%). Ordinary NI excludes non-cash items, so GAAP payout varies. In bull markets, DHT is essentially a pass-through vehicle.
+- **FRO**: Variable dividend, board discretion. Actual payout in strong years (2020/2023/2024): **77-97%** (avg ~87%). More conservative than DHT — retains slightly more for fleet renewal.
+
+**Strong-year average payout: DHT ~95% | FRO ~85%**
+
+**Forward Dividend Projection (2026):**
+
+| Payout Scenario | DHT DPS @$100K | DHT Yield | DHT DPS @$150K | DHT Yield | FRO DPS @$100K | FRO Yield | FRO DPS @$150K | FRO Yield |
+|----------------|:-----------:|:---------:|:-----------:|:---------:|:-----------:|:---------:|:-----------:|:---------:|
+| **Conservative (70%)** | $2.37 | 12.2% | $3.80 | 19.6% | $5.26 | 13.8% | $8.51 | 22.3% |
+| **Base (85% — FRO hist avg)** | $2.88 | 14.8% | $4.62 | 23.8% | $6.38 | 16.7% | $10.33 | 27.1% |
+| **Aggressive (95% — DHT hist avg)** | $3.22 | 16.6% | $5.16 | 26.6% | $7.13 | 18.7% | $11.54 | 30.3% |
+
+*Yield = DPS ÷ current price (DHT $19.40, FRO $38.10). EPS: DHT @$100K $3.39, @$150K $5.43; FRO @$100K $7.51, @$150K $12.15.*
+
+**Dividend Payback Period (years to recoup investment via dividends alone):**
+
+| Scenario | DHT @$100K | DHT @$150K | FRO @$100K | FRO @$150K |
+|----------|:----------:|:----------:|:----------:|:----------:|
+| Base (85%) | 6.7 yrs | **4.2 yrs** | 6.0 yrs | **3.7 yrs** |
+| Aggressive (95%) | 6.0 yrs | **3.8 yrs** | 5.3 yrs | **3.3 yrs** |
+
+**Key Takeaways:**
+
+1. **Both companies are proven high-payout vehicles.** In strong years, 85-95% of earnings flow to shareholders. This isn't a promise — it's demonstrated behavior across multiple cycles (2020, 2023, 2024).
+2. **At $150K with 85% payout, FRO yields 27.1%** — investors recoup their investment in 3.7 years through dividends alone. DHT yields 23.8% (4.2 year payback).
+3. **Even at $100K (conservative rate), yields of 13-17%** dwarf the S&P 500 average (~1.3%) and investment-grade bonds (~5%). The yield floor alone justifies holding.
+4. **DHT's higher payout ratio (95% vs 85%) partially offsets FRO's higher EPS.** DHT is the purer income play; FRO retains more for growth but still delivers massive yields.
+5. **Risk context**: These yields assume rates sustain at $100-150K for 12 months. If rates drop to $60K, DHT DPS falls to ~$1.50 (7.7% yield) and FRO to ~$3.50 (9.2% yield) — still above market averages.
+
 ### P10. Charter Strategy Conclusion (REVISED)
 
 **The convergence thesis**: DHT is evolving FROM a defensive hedge play INTO a lower-leverage
