@@ -253,3 +253,12 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 - At , FRO 3.1x PE would be below ANY point in 2004-2008 cycle - unprecedented
 - All edits applied to EN (05), CN (06), dht-fro.md (GH Pages)
 - Book values: DHT .05/sh (equity ,133M), FRO .44/sh (equity ,325M)
+### Prompt 26 (March 5, 2026) - Fix PB Methodology: Replace Forward PB with Trailing PB + ROE + PB Targets
+**Request**: User identified that forward PB barely changes between scenarios (2.51x vs 2.38x = -5%) while PE swings -37%, making forward PB misleading. Replace with combination: trailing PB (single value), implied ROE (swings dramatically), and PB-based target prices (NAV anchor).
+**Result**: 
+- Replaced all forward PB rows with: (a) Trailing PB single row (DHT 2.75x, FRO 3.65x - same across scenarios), (b) Implied ROE row (DHT 48-76%, FRO 72-118% - dramatic swing), (c) New PB-based target price table (2.0x/3.0x/4.0x PB targets as NAV anchors)
+- Fixed delta table: replaced PB Compression (-5/-7%) with ROE Surge (+28pp/+46pp)
+- Fixed 2026 vs 2008 comparison: trailing PB + ROE instead of forward PB
+- Key insight: high PB + low PE = high ROE = the whole bull case for cyclical shipping at peak rates
+- Root cause of misleading forward PB: 80% payout means only 20% retained, barely moves book value
+- Updated TL;DR, P9B tables, delta, historical comparison in EN(05)/CN(06)/dht-fro.md

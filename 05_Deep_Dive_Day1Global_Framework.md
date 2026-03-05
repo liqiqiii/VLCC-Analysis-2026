@@ -22,7 +22,8 @@ Our "market cap / VLCC-equivalent" model had **5 critical flaws** that made FRO 
 |--------|:-----------:|:-----------:|:-----------:|:-----------:|
 | EPS | $3.39 | $5.43 | $7.51 | $12.15 |
 | P/E | 5.7x | **3.6x** | 5.1x | **3.1x** |
-| Fwd P/B | 2.51x | **2.38x** | 3.19x | **2.96x** |
+| P/B (trailing) | 2.75x | 2.75x | 3.65x | 3.65x |
+| Implied ROE | 48% | **76%** | 72% | **118%** |
 | Div Yield (80%) | 14.0% | **22.4%** | 15.8% | **25.5%** |
 | TP @ 7x PE | $23.7 (+22%) | **$38.0 (+96%)** | $52.6 (+38%) | **$85.1 (+123%)** |
 
@@ -746,13 +747,13 @@ Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs 
 | **Annual Profit** | $546M | $875M | $1,674M | $2,710M |
 | **EPS** | $3.39 | $5.43 | $7.51 | $12.15 |
 | **P/E** | **5.7x** | **3.6x** | **5.1x** | **3.1x** |
-| **Trailing P/B** | **2.75x** | **2.75x** | **3.65x** | **3.65x** |
-| **Forward P/B** | **2.51x** | **2.38x** | **3.19x** | **2.96x** |
+| **P/B (trailing)** | 2.75x | 2.75x | 3.65x | 3.65x |
+| **Implied ROE** | **48%** | **76%** | **72%** | **118%** |
 | **EV/Profit** | 6.4x | 4.0x | 6.9x | 4.3x |
 | **Dividend Yield (80%)** | 14.0% | 22.4% | 15.8% | 25.5% |
 | **FCF Yield** | ~17% | ~28% | ~20% | ~32% |
 
-*Calculation: DHT per $1K rate = +$6.6M profit / +$0.041 EPS; FRO per $1K = +$20.8M / +$0.093. Shares: DHT ~161M, FRO ~223M. Prices: DHT $19.40, FRO $38.10. Book value: DHT $7.05/sh (equity $1,133M), FRO $10.44/sh (equity $2,325M). Forward P/B = price ÷ (current BV + 20% retained NI per share).*
+*Calculation: DHT per $1K rate = +$6.6M profit / +$0.041 EPS; FRO per $1K = +$20.8M / +$0.093. Shares: DHT ~161M, FRO ~223M. Prices: DHT $19.40, FRO $38.10. Book value: DHT $7.05/sh (equity $1,133M), FRO $10.44/sh (equity $2,325M). Implied ROE = EPS ÷ BV/share. P/B is trailing (current) — with 80% payout, retained earnings barely move BV, so forward PB is nearly identical.*
 
 #### Target Price Implications (PE-based)
 
@@ -762,6 +763,16 @@ Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs 
 | **7x** (mid-cycle) | $23.7 | $38.0 | $52.6 | $85.1 |
 | **9x** (re-rate) | $30.5 | $48.9 | $67.6 | $109.4 |
 
+#### Target Price Implications (PB-based — NAV Anchor)
+
+| Target P/B | DHT (BV $7.05) | vs Current | FRO (BV $10.44) | vs Current |
+|------------|:--------------:|:----------:|:----------------:|:----------:|
+| **2.0x** (cycle avg) | $14.10 | -27% | $20.88 | -45% |
+| **3.0x** (2008 peak) | $21.15 | +9% | $31.32 | -18% |
+| **4.0x** (super-cycle re-rate) | $28.20 | +45% | $41.76 | +10% |
+
+*Note: PB-based targets serve as NAV floor/ceiling anchors, not primary valuation. Shipping PB expands at cycle peaks because earnings power far exceeds book value. At 2008 blowoff, FRO hit 3.0x PB. Current 3.65x PB already exceeds that — justified by $2B fleet renewal and higher replacement costs, but limits further PB expansion. PE-based targets remain the primary framework.*
+
 #### Delta: What $150K Means vs $100K
 
 | Metric | DHT Delta | FRO Delta |
@@ -769,7 +780,7 @@ Two scenarios for 2026 average VLCC rate — **$100K (sell-side consensus)** vs 
 | **NI Increase** | +$329M (+60%) | +$1,036M (+62%) |
 | **EPS Increase** | +$2.04 (+60%) | +$4.64 (+62%) |
 | **PE Compression** | 5.7x → 3.6x (-37%) | 5.1x → 3.1x (-39%) |
-| **PB Compression (Fwd)** | 2.51x → 2.38x (-5%) | 3.19x → 2.96x (-7%) |
+| **ROE Surge** | 48% → 76% (+28pp) | 72% → 118% (+46pp) |
 | **Div Yield Boost** | +8.4pp | +9.7pp |
 | **TP at 7x PE** | $23.7 → $38.0 (+60%) | $52.6 → $85.1 (+62%) |
 
@@ -805,7 +816,8 @@ The last comparable supply-driven super cycle. FRO's valuation trajectory provid
 | Metric | FRO 2008 Peak | FRO 2026 Now | FRO @ $100K | FRO @ $150K |
 |--------|:------------:|:------------:|:-----------:|:-----------:|
 | **P/E** | 5-7x | 4.7x (TTM) | 5.1x | **3.1x** |
-| **P/B** | 3.0x | 3.65x | 3.19x (fwd) | **2.96x (fwd)** |
+| **P/B** | 3.0x | 3.65x | 3.65x | 3.65x |
+| **Implied ROE** | ~40-50% | ~72% (TTM) | 72% | **118%** |
 | **Div Yield** | ~8-12% | ~17% | 15.8% | **25.5%** |
 
 **Key Takeaways from Historical Comparison:**
