@@ -284,3 +284,16 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 
 **创建文件**：09_Tanker_Peer_Universe_EN.md、10_Tanker_Peer_Universe_CN.md、peer_analysis.py、peer_chart_data.json
 **更新文件**：Prompt_Log_EN.md、Prompt_Log_CN.md、index.md、README.md
+
+### 提示29（2026年4月8日）— DHT vs FRO 2026年4月深度更新
+**请求**：按照05_Deep_Dive骨架创建更新的DHT vs FRO深度分析报告，使用2026年4月全部数据。添加$200K/$250K情景、霍尔木兹危机分析、更新的租约结构（DHT 75%现货）、船队更新（4艘新船交付）、单船期租合同表、INSW作为价值基准比较、霍尔木兹开放混合年化情景。
+
+**关键变更**：
+- DHT股价: $19.40 -> $18.57 (-4.3%), FRO股价: $38.10 -> $35.08 (-7.9%)
+- DHT租约: 54% -> 75%现货（Tiger期租Q2到期）
+- DHT期租均价: $49,400 -> $52,000（Opal $90K合同）
+- 波罗的海TD3C: $445K/天历史新高
+- 新增情景: $200K和$250K TCE
+- 在$200K: DHT 2.7x P/E, 34.7%股息率 | FRO 2.3x P/E, 36.8%股息率
+
+**文件创建**: 11_DHT_FRO_April_Update_EN.md, 12_DHT_FRO_April_Update_CN.md, dht_fro_april_calc.py

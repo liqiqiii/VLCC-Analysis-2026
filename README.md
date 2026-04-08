@@ -12,8 +12,9 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 - Hormuz crisis scenarios + $75K–$250K rate sensitivity
 
 ### US-Listed: DHT Holdings vs Frontline (FRO)
-- [Deep Dive EN](05_Deep_Dive_Day1Global_Framework.md) | [Deep Dive CN](06_Deep_Dive_Day1Global_Framework_CN.md)
-- [Full Report EN](01_Full_Report_EN.md) | [Full Report CN](03_Full_Report_CN.md)
+- **[April 2026 Update EN](11_DHT_FRO_April_Update_EN.md) | [April 2026 Update CN](12_DHT_FRO_April_Update_CN.md)** ← NEW: Hormuz crisis, $200K/$250K scenarios
+- [Deep Dive EN](05_Deep_Dive_Day1Global_Framework.md) | [Deep Dive CN](06_Deep_Dive_Day1Global_Framework_CN.md) (March 2026)
+- [Full Report EN](01_Full_Report_EN.md) | [Full Report CN](03_Full_Report_CN.md) (March 2026)
 
 ### A-Share: 招商轮船 vs 中远海能
 - [A-Share Report EN](07_CN_AShare_VLCC_Report_EN.md) | [A-Share Report CN](08_CN_AShare_VLCC_Report_CN.md)

@@ -1,0 +1,298 @@
+{
+  "rates": {
+    "25000": {
+      "dht_profit_m": 53.5,
+      "dht_eps": 0.332,
+      "fro_profit_m": 104.5,
+      "fro_eps": 0.4684
+    },
+    "30000": {
+      "dht_profit_m": 83.2,
+      "dht_eps": 0.5165,
+      "fro_profit_m": 198.3,
+      "fro_eps": 0.8893
+    },
+    "35000": {
+      "dht_profit_m": 112.9,
+      "dht_eps": 0.701,
+      "fro_profit_m": 292.1,
+      "fro_eps": 1.3101
+    },
+    "40000": {
+      "dht_profit_m": 142.6,
+      "dht_eps": 0.8855,
+      "fro_profit_m": 386.0,
+      "fro_eps": 1.7309
+    },
+    "45000": {
+      "dht_profit_m": 172.3,
+      "dht_eps": 1.0699,
+      "fro_profit_m": 479.8,
+      "fro_eps": 2.1517
+    },
+    "50000": {
+      "dht_profit_m": 202.0,
+      "dht_eps": 1.2544,
+      "fro_profit_m": 573.7,
+      "fro_eps": 2.5726
+    },
+    "55000": {
+      "dht_profit_m": 231.7,
+      "dht_eps": 1.4389,
+      "fro_profit_m": 667.5,
+      "fro_eps": 2.9934
+    },
+    "60000": {
+      "dht_profit_m": 261.4,
+      "dht_eps": 1.6234,
+      "fro_profit_m": 761.4,
+      "fro_eps": 3.4142
+    },
+    "65000": {
+      "dht_profit_m": 291.1,
+      "dht_eps": 1.8078,
+      "fro_profit_m": 855.2,
+      "fro_eps": 3.8351
+    },
+    "70000": {
+      "dht_profit_m": 320.8,
+      "dht_eps": 1.9923,
+      "fro_profit_m": 949.1,
+      "fro_eps": 4.2559
+    },
+    "75000": {
+      "dht_profit_m": 350.5,
+      "dht_eps": 2.1768,
+      "fro_profit_m": 1042.9,
+      "fro_eps": 4.6767
+    },
+    "80000": {
+      "dht_profit_m": 380.2,
+      "dht_eps": 2.3612,
+      "fro_profit_m": 1136.8,
+      "fro_eps": 5.0976
+    },
+    "85000": {
+      "dht_profit_m": 409.9,
+      "dht_eps": 2.5457,
+      "fro_profit_m": 1230.6,
+      "fro_eps": 5.5184
+    },
+    "90000": {
+      "dht_profit_m": 439.6,
+      "dht_eps": 2.7302,
+      "fro_profit_m": 1324.4,
+      "fro_eps": 5.9392
+    },
+    "95000": {
+      "dht_profit_m": 469.3,
+      "dht_eps": 2.9147,
+      "fro_profit_m": 1418.3,
+      "fro_eps": 6.36
+    },
+    "100000": {
+      "dht_profit_m": 499.0,
+      "dht_eps": 3.0991,
+      "fro_profit_m": 1512.1,
+      "fro_eps": 6.7809
+    },
+    "105000": {
+      "dht_profit_m": 528.7,
+      "dht_eps": 3.2836,
+      "fro_profit_m": 1606.0,
+      "fro_eps": 7.2017
+    },
+    "110000": {
+      "dht_profit_m": 558.4,
+      "dht_eps": 3.4681,
+      "fro_profit_m": 1699.8,
+      "fro_eps": 7.6225
+    },
+    "115000": {
+      "dht_profit_m": 588.1,
+      "dht_eps": 3.6525,
+      "fro_profit_m": 1793.7,
+      "fro_eps": 8.0434
+    },
+    "120000": {
+      "dht_profit_m": 617.8,
+      "dht_eps": 3.837,
+      "fro_profit_m": 1887.5,
+      "fro_eps": 8.4642
+    },
+    "125000": {
+      "dht_profit_m": 647.5,
+      "dht_eps": 4.0215,
+      "fro_profit_m": 1981.4,
+      "fro_eps": 8.885
+    },
+    "130000": {
+      "dht_profit_m": 677.2,
+      "dht_eps": 4.206,
+      "fro_profit_m": 2075.2,
+      "fro_eps": 9.3059
+    },
+    "135000": {
+      "dht_profit_m": 706.9,
+      "dht_eps": 4.3904,
+      "fro_profit_m": 2169.1,
+      "fro_eps": 9.7267
+    },
+    "140000": {
+      "dht_profit_m": 736.6,
+      "dht_eps": 4.5749,
+      "fro_profit_m": 2262.9,
+      "fro_eps": 10.1475
+    },
+    "145000": {
+      "dht_profit_m": 766.3,
+      "dht_eps": 4.7594,
+      "fro_profit_m": 2356.7,
+      "fro_eps": 10.5683
+    },
+    "150000": {
+      "dht_profit_m": 796.0,
+      "dht_eps": 4.9439,
+      "fro_profit_m": 2450.6,
+      "fro_eps": 10.9892
+    },
+    "155000": {
+      "dht_profit_m": 825.7,
+      "dht_eps": 5.1283,
+      "fro_profit_m": 2544.4,
+      "fro_eps": 11.41
+    },
+    "160000": {
+      "dht_profit_m": 855.4,
+      "dht_eps": 5.3128,
+      "fro_profit_m": 2638.3,
+      "fro_eps": 11.8308
+    },
+    "165000": {
+      "dht_profit_m": 885.1,
+      "dht_eps": 5.4973,
+      "fro_profit_m": 2732.1,
+      "fro_eps": 12.2517
+    },
+    "170000": {
+      "dht_profit_m": 914.8,
+      "dht_eps": 5.6817,
+      "fro_profit_m": 2826.0,
+      "fro_eps": 12.6725
+    },
+    "175000": {
+      "dht_profit_m": 944.5,
+      "dht_eps": 5.8662,
+      "fro_profit_m": 2919.8,
+      "fro_eps": 13.0933
+    },
+    "180000": {
+      "dht_profit_m": 974.2,
+      "dht_eps": 6.0507,
+      "fro_profit_m": 3013.7,
+      "fro_eps": 13.5142
+    },
+    "185000": {
+      "dht_profit_m": 1003.9,
+      "dht_eps": 6.2352,
+      "fro_profit_m": 3107.5,
+      "fro_eps": 13.935
+    },
+    "190000": {
+      "dht_profit_m": 1033.6,
+      "dht_eps": 6.4196,
+      "fro_profit_m": 3201.3,
+      "fro_eps": 14.3558
+    },
+    "195000": {
+      "dht_profit_m": 1063.3,
+      "dht_eps": 6.6041,
+      "fro_profit_m": 3295.2,
+      "fro_eps": 14.7766
+    },
+    "200000": {
+      "dht_profit_m": 1093.0,
+      "dht_eps": 6.7886,
+      "fro_profit_m": 3389.0,
+      "fro_eps": 15.1975
+    },
+    "205000": {
+      "dht_profit_m": 1122.7,
+      "dht_eps": 6.973,
+      "fro_profit_m": 3482.9,
+      "fro_eps": 15.6183
+    },
+    "210000": {
+      "dht_profit_m": 1152.4,
+      "dht_eps": 7.1575,
+      "fro_profit_m": 3576.7,
+      "fro_eps": 16.0391
+    },
+    "215000": {
+      "dht_profit_m": 1182.1,
+      "dht_eps": 7.342,
+      "fro_profit_m": 3670.6,
+      "fro_eps": 16.46
+    },
+    "220000": {
+      "dht_profit_m": 1211.8,
+      "dht_eps": 7.5265,
+      "fro_profit_m": 3764.4,
+      "fro_eps": 16.8808
+    },
+    "225000": {
+      "dht_profit_m": 1241.5,
+      "dht_eps": 7.7109,
+      "fro_profit_m": 3858.3,
+      "fro_eps": 17.3016
+    },
+    "230000": {
+      "dht_profit_m": 1271.2,
+      "dht_eps": 7.8954,
+      "fro_profit_m": 3952.1,
+      "fro_eps": 17.7225
+    },
+    "235000": {
+      "dht_profit_m": 1300.9,
+      "dht_eps": 8.0799,
+      "fro_profit_m": 4046.0,
+      "fro_eps": 18.1433
+    },
+    "240000": {
+      "dht_profit_m": 1330.6,
+      "dht_eps": 8.2643,
+      "fro_profit_m": 4139.8,
+      "fro_eps": 18.5641
+    },
+    "245000": {
+      "dht_profit_m": 1360.3,
+      "dht_eps": 8.4488,
+      "fro_profit_m": 4233.6,
+      "fro_eps": 18.9849
+    },
+    "250000": {
+      "dht_profit_m": 1390.0,
+      "dht_eps": 8.6333,
+      "fro_profit_m": 4327.5,
+      "fro_eps": 19.4058
+    },
+    "255000": {
+      "dht_profit_m": 1419.7,
+      "dht_eps": 8.8178,
+      "fro_profit_m": 4421.3,
+      "fro_eps": 19.8266
+    }
+  },
+  "hormuz": {},
+  "meta": {
+    "dht_price": 18.57,
+    "fro_price": 35.08,
+    "date": "2026-04-08",
+    "dht_shares": 161,
+    "fro_shares": 223,
+    "dht_bv": 7.05,
+    "fro_bv": 10.44,
+    "dht_spot_pct": 0.75,
+    "fro_spot_pct": 0.85
+  }
+}

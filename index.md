@@ -73,13 +73,15 @@ Key findings:
 | 08 | [A-Share Report CN](08_CN_AShare_VLCC_Report_CN) | 中文 | 招商轮船 vs 中远海能 |
 | 09 | [Tanker Peer Universe EN](09_Tanker_Peer_Universe_EN) | English | 7-Company Crude Tanker Comparison (DHT/FRO/INSW/ECO/TNK/NAT/CMBT) |
 | 10 | [Tanker Peer Universe CN](10_Tanker_Peer_Universe_CN) | 中文 | 7家原油油轮公司同业对比分析 |
-| 11 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
-| 12 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
+| 11 | [**DHT vs FRO Apr Update EN**](11_DHT_FRO_April_Update_EN) | English | **NEW** Hormuz Crisis + $200K/$250K Scenarios |
+| 12 | [**DHT vs FRO Apr Update CN**](12_DHT_FRO_April_Update_CN) | 中文 | **新** 霍尔木兹危机 + $200K/$250K情景 |
+| 13 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
+| 14 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
 
 ## 📝 Project Tracking
 
-- [Prompt Log (EN)](Prompt_Log_EN) — All 28 analytical prompts documented
-- [Prompt Log (CN)](Prompt_Log_CN) — 所有28条分析提示词记录
+- [Prompt Log (EN)](Prompt_Log_EN) — All 29 analytical prompts documented
+- [Prompt Log (CN)](Prompt_Log_CN) — 所有29条分析提示词记录
 
 ---
 

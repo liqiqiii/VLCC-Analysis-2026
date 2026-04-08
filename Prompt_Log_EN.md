@@ -288,3 +288,26 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 
 **Files Created**: 09_Tanker_Peer_Universe_EN.md, 10_Tanker_Peer_Universe_CN.md, peer_analysis.py, peer_chart_data.json
 **Files Updated**: Prompt_Log_EN.md, Prompt_Log_CN.md, index.md, README.md
+
+### Prompt 29 (April 8, 2026) — DHT vs FRO April 2026 Deep Review Update
+**Request**: Create updated DHT vs FRO deep-dive report following the 05_Deep_Dive skeleton but with all April 2026 data. Add $200K/$250K scenarios, Hormuz crisis analysis, updated charter mix (DHT 75% spot), fleet update (4 newbuilds delivered), individual TC vessel employment table, INSW as value benchmark comparison, and Hormuz-open blended annual scenarios.
+
+**Key Changes from March Report**:
+- DHT price: $19.40 -> $18.57 (-4.3%), FRO price: $38.10 -> $35.08 (-7.9%)
+- DHT charter mix: 54% -> 75% spot (Tiger TC expiring Q2 2026)
+- DHT TC rate avg: $49,400 -> $52,000 (Opal $90K deal lifts average)
+- DHT fleet: 24 VLCCs with 4 newbuilds delivered (Antelope, Addax, Gazelle, Impala)
+- Baltic TD3C: $445K/day all-time record (Hormuz crisis)
+- New scenarios: $200K and $250K TCE added to sensitivity analysis
+- Hormuz blended annual scenarios: opens May ($85.9K), Aug ($119.8K), stays closed ($170K)
+
+**Key Findings (Updated)**:
+- At $200K TCE: DHT 2.7x P/E, 34.7% div yield | FRO 2.3x P/E, 36.8% div yield
+- At $250K TCE: DHT 2.2x P/E, 44.2% div yield | FRO 1.8x P/E, 47.0% div yield
+- FRO captures 3.2x more profit per $1K rate increase (was 4.4x at old 54% spot for DHT)
+- DHT TC floor: $53M/yr ($0.33/sh) vs FRO $182M/yr ($0.82/sh)
+- INSW trades at 25-35% discount per VLCC-eq vs DHT/FRO (P/B 1.84x vs 2.63x/3.36x)
+- Recommendation unchanged: FRO 55-60% / DHT 40-45% allocation
+
+**Files Created**: 11_DHT_FRO_April_Update_EN.md, 12_DHT_FRO_April_Update_CN.md, dht_fro_april_calc.py, dht_fro_april_data.json
+**Files Updated**: Prompt_Log_EN.md, Prompt_Log_CN.md, index.md, README.md
