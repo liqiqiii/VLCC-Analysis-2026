@@ -262,3 +262,25 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 ### Prompt 27 (2026年3月5日) - 历史股利派息率与远期股利预测
 **请求**: 添加DHT和FRO的历史股利/利润派息率分析。基于历史派息模式计算100K/150K运价下的预期DPS。
 **结果**: 添加逐年派息历史(2019-2024)：DHT强周期年均值95%，FRO强周期年均值85%。远期DPS在3种派息情景(70/85/95%) x 2种运价情景。核心：FRO 150K/85%派息 = DPS .33 = 27.1%股息率 = 3.7年回本。添加股利回本周期表。EN(05)/CN(06)/dht-fro.md全部更新。
+
+### 提示28（2026年4月7-8日）— 7家原油油轮公司同业全景 + 霍尔木兹海峡危机分析
+**请求**：将分析从DHT/FRO扩展至7家公司的完整同业比较，涵盖DHT、FRO、INSW（International Seaways）、ECO（Okeanis Eco Tankers）、TNK（Teekay Tankers）、NAT（Nordic American Tankers）和CMBT（CMB.TECH/前Euronav）。在7个VLCC运价情景下（$75K-$250K/天）建模盈利敏感性。包含霍尔木兹海峡开放正常化情景（5月/8月开放/全年关闭）。创建计算引擎（peer_analysis.py）。按仓库模式生成EN + CN报告。
+
+**背景**：
+- 波罗的海TD3C在2026年3月创下$445K/天历史新高（霍尔木兹危机）
+- 此前报告仅建模$100K/$150K情景
+- 用户基于当前市场条件要求$200K/$250K TCE分析
+- 使用实时AIS船舶追踪识别DHT船队在海湾地区的位置
+- 使用dhtankers.com/fleetlist数据详细分析现货vs期租船队配置
+
+**关键发现**：
+- INSW在所有指标上最便宜：最低P/B（1.84x）、最低市值/VLCC当量（$93M）、最低盈亏平衡（$22K）、正常化运价下最高股息率
+- FRO在绝对上行杠杆方面获胜（83%现货、81艘船、任何运价下利润为DHT的4倍）
+- ECO拥有100%现货敞口——最年轻船队、最大运价敏感性
+- TNK拥有最安全资产负债表（净现金$853M、零杠杆风险）
+- NAT每VLCC当量市值最便宜（$87M）、27年不间断分红记录
+- CMBT低于账面价值交易（0.96x P/B）、正在峰值出售VLCC
+- $90K正常化后：INSW P/E 5.5x、NAT 5.9x、FRO 5.9x——均便宜
+
+**创建文件**：09_Tanker_Peer_Universe_EN.md、10_Tanker_Peer_Universe_CN.md、peer_analysis.py、peer_chart_data.json
+**更新文件**：Prompt_Log_EN.md、Prompt_Log_CN.md、index.md、README.md

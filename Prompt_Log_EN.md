@@ -1,7 +1,7 @@
 # Prompt Tracking Log — VLCC Analysis Project
 
 > This file tracks every analytical prompt/directive from the user throughout the project.
-> Updated after each conversation turn. Last updated: **March 3, 2026**.
+> Updated after each conversation turn. Last updated: **April 8, 2026**.
 
 ---
 
@@ -265,3 +265,26 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 ### Prompt 27 (March 5, 2026) - Historical Dividend Payout Ratios and Forward Dividend Projection
 **Request**: Add historical dividend/profit payout ratio analysis for DHT and FRO. Calculate expected DPS at 100K/150K rate scenarios using historical payout patterns.
 **Result**: Added year-by-year payout history (2019-2024): DHT strong-year avg 95 pct, FRO strong-year avg 85 pct. Forward DPS at 3 payout scenarios (70/85/95 pct) x 2 rate scenarios. Key: FRO at 150K/85 pct payout = DPS 10.33 = 27.1 pct yield = 3.7yr payback. Added dividend payback period table. Updated EN(05), CN(06), dht-fro.md.
+
+### Prompt 28 (April 7-8, 2026) — 7-Company Crude Tanker Peer Universe + Hormuz Crisis Analysis
+**Request**: Expand analysis from DHT/FRO to a full 7-company peer universe covering DHT, FRO, INSW (International Seaways), ECO (Okeanis Eco Tankers), TNK (Teekay Tankers), NAT (Nordic American Tankers), and CMBT (CMB.TECH/ex-Euronav). Model earnings sensitivity at 7 VLCC rate scenarios ($75K-$250K/day). Include Hormuz-open normalization scenarios (opens May/Aug/stays closed). Create calculation engine (peer_analysis.py). Generate EN + CN reports following repo patterns.
+
+**Context**: 
+- Baltic TD3C hit $445K/day all-time record in March 2026 (Hormuz crisis)
+- Previous reports only modeled $100K/$150K scenarios
+- User requested $200K/$250K TCE analysis based on current market conditions
+- Live AIS vessel tracking used to identify DHT fleet positions in Gulf area
+- Detailed analysis of spot vs TC fleet employment using dhtankers.com/fleetlist data
+
+**Key Findings**:
+- INSW is cheapest across every metric: lowest P/B (1.84x), lowest MktCap/VLCC-eq ($93M), lowest breakeven ($22K), highest dividend yield at normalized rates
+- FRO wins on absolute upside leverage (83% spot, 81 ships, 4x DHT profit at any rate)
+- ECO has 100% spot exposure — youngest fleet, maximum rate sensitivity
+- TNK has safest balance sheet (net cash $853M, zero leverage)
+- NAT cheapest per VLCC-eq ($87M), 27-year unbroken dividend streak
+- CMBT trading below book value (0.96x P/B), selling VLCCs at peak
+- At $90K normalized post-Hormuz: INSW P/E 5.5x, NAT 5.9x, FRO 5.9x — all cheap
+- Hormuz-open blended scenarios: even May opening yields $86K blended, Aug opening $120K
+
+**Files Created**: 09_Tanker_Peer_Universe_EN.md, 10_Tanker_Peer_Universe_CN.md, peer_analysis.py, peer_chart_data.json
+**Files Updated**: Prompt_Log_EN.md, Prompt_Log_CN.md, index.md, README.md
