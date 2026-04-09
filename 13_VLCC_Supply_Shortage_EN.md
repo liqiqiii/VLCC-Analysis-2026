@@ -336,6 +336,76 @@ High prices discourage purchases; budget fights and slow execution.
 
 ---
 
+---
+
+## ⭐⭐ Section 8B: Why High VLCC Rates Don't Matter to the Consumer
+
+> **The punchline**: Even at an "extreme" $250K/day TCE, VLCC shipping adds only **~$0.23 per gallon** to refined fuel costs. On a $3.07 gallon of gasoline, that's **7.4%** — and the *incremental* cost of going from a "normal" $50K TCE to $250K is just **$0.16/gallon (5.1%)**. Demand for crude shipping is almost perfectly **inelastic** to freight rates.
+
+### The Math: One VLCC Cargo
+
+| Metric | Value |
+|:-------|------:|
+| VLCC cargo (TD3C standard) | **270,000 metric tons** |
+| Crude oil barrels | **~2,000,000 barrels** |
+| Crude oil gallons | **~84,000,000 gallons** |
+| Total refined product (incl. refinery gain) | **~90,000,000 gallons** |
+| Round-trip voyage (MEG → China) | **~70 days** |
+| Estimated voyage costs (bunkers, port, canal) | **~$3,000,000** |
+
+### Shipping Cost per Gallon at Different TCE Levels
+
+| TCE ($/day) | Total Freight | Per Barrel | Per Gallon (crude) | Per Gallon (refined product) | % of $3.07 Gasoline |
+|:-----------:|:-------------:|:----------:|:------------------:|:----------------------------:|:-------------------:|
+| **$50K** (historical avg) | $6.5M | $3.25 | $0.077 | **$0.072** | **2.3%** |
+| **$100K** | $10.0M | $5.00 | $0.119 | **$0.111** | **3.6%** |
+| **$150K** | $13.5M | $6.75 | $0.161 | **$0.150** | **4.9%** |
+| **$200K** | $17.0M | $8.50 | $0.202 | **$0.189** | **6.2%** |
+| **$250K** | $20.5M | $10.25 | $0.244 | **$0.228** | **7.4%** |
+
+> *Total freight = TCE × 70 voyage days + $3M voyage costs. Refined product assumes ~45 gallons per barrel (incl. refinery gain).*
+
+### The Incremental Impact
+
+Going from "normal" rates ($50K) to today's extreme ($250K):
+
+| Metric | Increase |
+|:-------|:--------:|
+| Additional cost per barrel of crude | **+$7.00** |
+| Additional cost per gallon of gasoline | **+$0.16** |
+| On $3.07/gallon retail gasoline | **+5.1%** |
+| On $70/barrel crude oil price | **+10.0%** |
+
+**That's it.** The most extreme freight market in the history of VLCC shipping adds only **16 cents per gallon** to the end consumer's gasoline price.
+
+### Where Does Your $3.07/Gallon Go?
+
+| Component | Cost/Gallon | % of Price | Includes VLCC? |
+|:----------|:----------:|:----------:|:--------------:|
+| **Crude oil** | $1.65 | 54% | No — this is the commodity price |
+| **Refining** | $0.43 | 14% | No |
+| **Distribution & marketing** | $0.49 | 16% | **Partially** — VLCC is one leg |
+| **Taxes (federal + state)** | $0.52 | 17% | No |
+| **Total** | **$3.07** | **100%** | |
+
+> 📌 The VLCC ocean freight is only a **subset** of "Distribution & marketing" ($0.49). The rest of that $0.49 is pipeline transport, trucking to retail stations, terminal fees, and retailer margins. The actual VLCC component is roughly **$0.07–$0.23/gallon** depending on the rate environment — a fraction of a fraction.
+
+### Why This Matters for the VLCC Bull Thesis
+
+**Demand for crude oil shipping is almost perfectly inelastic to freight rates** because:
+
+1. **Shipping is tiny vs. final price** — Even at $250K TCE, it's 7% of gasoline. Crude oil price changes of $5/bbl move the pump more than a $200K TCE swing.
+
+2. **No substitutes** — You cannot pipeline crude from the Middle East to China. You cannot fly it. A VLCC is the only option for intercontinental crude transport. Demand doesn't fall because shipping costs rise.
+
+3. **Refineries must run** — Refineries operate on fixed schedules and contractual supply. They don't shut down because freight went from $50K to $250K. The incremental $7/barrel is absorbed in crack spreads.
+
+4. **Strategic necessity** — SPR restocking is a government mandate, not a commercial decision. Price sensitivity is near zero for sovereign buyers.
+
+> **Bottom line**: The VLCC market can sustain extreme rates for extended periods because the end consumer barely notices, the refinery can't switch suppliers, and governments buying for SPR don't care about freight cost. This is the definition of a **pricing-power moat** — the industry can charge dramatically more without destroying demand.
+
+---
+
 ## Section 9: Risk Factors
 
 | Risk | Direction | Probability | Impact |
