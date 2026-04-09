@@ -1,7 +1,7 @@
 # Prompt Tracking Log — VLCC Analysis Project
 
 > This file tracks every analytical prompt/directive from the user throughout the project.
-> Updated after each conversation turn. Last updated: **April 8, 2026**.
+> Updated after each conversation turn. Last updated: **April 10, 2026**.
 
 ---
 
@@ -311,3 +311,40 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 
 **Files Created**: 11_DHT_FRO_April_Update_EN.md, 12_DHT_FRO_April_Update_CN.md, dht_fro_april_calc.py, dht_fro_april_data.json
 **Files Updated**: Prompt_Log_EN.md, Prompt_Log_CN.md, index.md, README.md
+
+---
+
+### Prompt 30 (April 10, 2026) — VLCC Market Structural Supply Analysis + DHT/FRO Update
+
+**Request**: Two deliverables:
+1. Create standalone VLCC market report analyzing the structural supply/demand imbalance (not company-specific)
+2. Update DHT/FRO April report with structural supply thesis section
+
+**Research Conducted**:
+- TD3C current rate: WS 413.89 = $400,928/day round-trip TCE (April 9, 2026)
+- TD22 (USG-China) at $22.2M lump = $137,200/day — explained why 3x lower than TD3C (14,700 NM vs 5,900 NM one-way)
+- Shadow fleet deep dive: ~166 VLCCs, avg age 19-20yr, cannot return to regulated trade
+- Venezuela capitulation: Maduro captured, shadow fleet dissolving, 14+ tankers seized
+- Compliant regulated VLCC fleet: ~650-700 (not headline 870-900)
+- Fleet age: 20% over 20 years, EEXI/CII driving retirement, 15-yr charterer age caps
+- Operating days: 330-335/year = 92% availability = ~626 effective ship-equivalents from 680
+- Global SPR country-by-country analysis: US (243M post-release), Japan, Korea, China, India, EU
+- IEA March 2026 coordinated release: 400M barrels (largest ever) — country breakdown
+- Historical SPR refill patterns: US post-2011 (never refilled), post-2022 (<1M bbl/month)
+- China SPR build: 200K-500K bpd historically when prices low
+- Total restocking need: ~1.1 billion barrels
+- Three scenarios modeled: Aggressive (1.7M bpd, 2yr), Medium (1.1M bpd, 3yr), Conservative (600K bpd, 5yr)
+- Newbuild orderbook: 30 (2026), 35 (2027), 41-50+ (2028) — relief begins mid-2028
+- Supply/demand balance: +6 surplus 2026, -14 deficit 2027, relief H2 2028
+
+**Key Findings**:
+- Market is already at <1% slack in 2026 (6 ships surplus out of 626 available)
+- Structural deficit begins 2027 even without Hormuz crisis
+- SPR restocking absorbs 44-70 VLCCs continuously for 3-5 years
+- Three irreversible trends: shadow fleet exit, EEXI/CII regulation, SPR restocking
+- Earnings floor $100-120K TCE (vs FFA $80K) — 30-50% upside not in price
+- Investment sweet spot: now through mid-2028
+- 2004-2008 analog: sustained $80-150K for 4 years, tanker stocks at 6-10x PE
+
+**Files Created**: 13_VLCC_Supply_Shortage_EN.md, 14_VLCC_Supply_Shortage_CN.md, chart_bdti_overlay.py
+**Files Updated**: 11_DHT_FRO_April_Update_EN.md, 12_DHT_FRO_April_Update_CN.md, Prompt_Log_EN.md, Prompt_Log_CN.md, index.md, README.md

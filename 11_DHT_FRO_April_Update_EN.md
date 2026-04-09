@@ -27,6 +27,8 @@ title: DHT vs FRO April 2026 Update (EN)
 
 > **Key finding (vs March)**: DHT fell 4.3% and FRO fell 7.9% since our March 5 report. Yet VLCC spot rates have *quadrupled*. The market is aggressively pricing in a quick Hormuz normalization. If normalization takes 6-12 months instead of weeks, both stocks are deeply mispriced.
 
+> **Key finding (structural supply — April 10 update)**: Regulated VLCC fleet is only ~650-700 ships (not 900). IEA's record 400M barrel release created ~1.1B barrel restocking need over 3-5 years. Market enters structural deficit in 2027 even without Hormuz. Earnings floor is $100-120K TCE, not the $80K in FFAs. Sweet spot: now through mid-2028.
+
 ---
 
 ## What Changed Since March ⭐
@@ -673,6 +675,98 @@ We can reverse-engineer the market's implied rate assumption from current stock 
 | **Implied Avg VLCC Rate** | **~$100K/day** | **~$100K/day** |
 
 Both stocks are pricing in approximately **$100K/day average** for 2026 — essentially ignoring the Hormuz crisis entirely and pricing a "quick normalization + normal supercycle" scenario. If the crisis persists through even Q2, the market is significantly underpricing both stocks.
+
+---
+
+## Structural Supply Thesis — Beyond Hormuz ⭐⭐⭐ (NEW — April 10, 2026)
+
+> **This section introduces a fundamentally different bull case**: Even if Hormuz opens tomorrow and crisis premiums vanish, VLCC rates are structurally supported at $100-150K by three irreversible trends. The previous sections modeled rate scenarios; this section explains WHY those rates are sustainable.
+
+### The Real Fleet Is ~680, Not ~900
+
+The headline VLCC fleet of ~870 is misleading. Approximately **166 VLCCs** operate as "shadow fleet" — carrying sanctioned crude for Russia, Iran, and Venezuela. These ships:
+- Average age: 19-20 years
+- No P&I insurance from major clubs (IG Clubs won't touch them)
+- EEXI/CII non-compliant
+- Blacklisted by major charterers (15-year age caps are standard)
+- Contaminated sanctions history — cannot return to regulated trade
+
+**Compliant, regulated VLCC fleet: ~650-700 vessels**
+
+With Venezuela's capitulation (Maduro captured, oil sector surrendered to US-led reform) and escalating enforcement (14+ shadow tankers seized Dec 2025-Mar 2026), the shadow fleet is actively dissolving. Ghost ships are stranded off the Venezuelan coast. This tonnage is heading to the breakers, not back to the market.
+
+### Effective Available Fleet (Operating Day Adjustment)
+
+A VLCC operates ~330-335 days/year (drydock every 5 years, unplanned maintenance, repositioning). At any given moment:
+
+| Metric | Value |
+|--------|:-----:|
+| Compliant fleet | ~680 |
+| Availability factor | ×0.92 |
+| **Effective fleet (ship-equivalents)** | **~626** |
+| Ships offline on any given day | ~54 |
+
+### The SPR Restocking Supercycle
+
+The March 2026 IEA coordinated release — **400 million barrels**, the largest in history — created an unprecedented restocking obligation:
+
+| Country | Released (Mar 2026) | Post-Release Level | Capacity | Gap to 80% Fill |
+|---------|:---:|:---:|:---:|:---:|
+| **United States** | 172M bbl | ~243M | 714M | **328M** |
+| **Japan** | 80M | ~180M | ~400M | **140M** |
+| **South Korea** | 22.5M | ~77.5M | 146M | **39M** |
+| **EU aggregate** | ~62M | varies | varies | **~80M** |
+| **China** (building) | — | 400-500M | 1,000M+ target | **~500M** |
+| **India** (expanding) | — | ~25M | 87M (after expansion) | **~45M** |
+| **Total** | | | | **~1,132M bbl** |
+
+Historical refill rates are **slow**: the US managed only 32M barrels in 2.5 years after the 2022 drawdown (<1M bbl/month). This means restocking plays out over **3-5 years**, absorbing 44-70 VLCCs continuously.
+
+### Supply/Demand Balance (2026-2030)
+
+| Period | Gross Fleet | Avail. (×0.92) | Demand | Surplus/(Deficit) |
+|--------|:---:|:---:|:---:|:---:|
+| **2026** | 680 | 626 | 620 | **+6** (razor thin) |
+| **2027** | 680 | 626 | 640 | **-14** (deficit) |
+| **H1 2028** | 680 | 626 | 645 | **-19** (deep deficit) |
+| **H2 2028** | 715 | 658 | 645 | **+13** (relief begins) |
+| **2029** | 760 | 699 | 650 | **+49** (easing) |
+
+> **Key insight**: The market has +6 ships of cushion in 2026 — less than 1% slack. By 2027, we're in deficit. The newbuild wave arriving mid-2028 provides relief, but even then the market remains historically tight with SPR restocking demand persisting.
+
+### Revised Earnings With Structural Floor
+
+If the structural thesis holds, the **floor** for annual average TCE is $100-120K through mid-2028, not the $60-80K the market currently prices in FFA curves. This changes the earnings picture materially:
+
+| Scenario | TCE | DHT EPS | DHT PE | FRO EPS | FRO PE |
+|----------|:---:|:---:|:---:|:---:|:---:|
+| Market consensus (FFA) | $80K | $2.38 | 7.8x | $4.52 | 7.8x |
+| **Structural floor** | **$100K** | **$3.10** | **6.0x** | **$6.78** | **5.2x** |
+| **Structural base** | **$120K** | **$4.03** | **4.6x** | **$8.89** | **3.9x** |
+| Structural bull | $150K | $4.94 | 3.8x | $10.99 | 3.2x |
+
+> **If the market is pricing $80K forward TCE but the structural floor is $100-120K, both stocks have 30-50% earnings upside that isn't in the price.**
+
+### The 2004-2008 Analog
+
+The current setup most closely resembles 2004-2008, when:
+- Fleet supply growth couldn't keep up with China's demand surge
+- Rates sustained $80-150K TCE for **4 consecutive years**
+- Tanker stocks traded at 6-10x PE (vs 3-5x now)
+- Scrapping of old tonnage accelerated
+- Newbuild deliveries arrived too late to prevent the multi-year squeeze
+
+The difference today: the supply constraint is even tighter (shadow fleet exit + regulation) and there's an additional ~1.1 billion barrels of SPR restocking demand that didn't exist in 2004-2008.
+
+### Investment Sweet Spot: Now Through Mid-2028
+
+The highest-conviction window is the next ~2 years. After mid-2028, newbuild deliveries create supply relief (though not collapse — rates likely normalize to $70-100K).
+
+For portfolio positioning:
+- **DHT** (24 VLCCs, pure play): Maximum VLCC beta, hedged by TC contracts
+- **FRO** (81 ships, 83% spot): Maximum upside leverage but more volatile
+
+Both are trading at 3-6x PE on the structural floor scenario — historically cheap for a multi-year earnings cycle.
 
 ---
 

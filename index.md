@@ -10,6 +10,21 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🚢 VLCC Market: Supply Shortage & SPR Restocking (NEW — April 2026)
+
+Standalone market analysis: why the VLCC market faces a multi-year structural shortage driven by shadow fleet exit, regulatory attrition, and the largest SPR restocking cycle in history.
+
+**[📄 VLCC Supply Shortage Analysis (EN) →](13_VLCC_Supply_Shortage_EN)** | **[中文版 →](14_VLCC_Supply_Shortage_CN)**
+
+Key findings:
+- Regulated VLCC fleet is ~650-700 ships (NOT 900) — shadow fleet of ~166 VLCCs exiting permanently
+- IEA March 2026 release (400M bbl) + prior deficits = ~1.1B barrel restocking need
+- Three scenarios: Aggressive (2yr/85 ships), Medium (3yr/55 ships), Conservative (5yr/30 ships)
+- Market enters structural deficit in 2027; relief from newbuilds begins mid-2028
+- Sweet spot for tanker equities: now through mid-2028
+
+---
+
 ### 🇺🇸 US-Listed: DHT Holdings vs Frontline (FRO)
 
 Deep-dive comparative analysis of the two largest US-listed pure-play VLCC operators, using the Day1Global tech-earnings-deepdive framework across 5 AI models.
@@ -73,15 +88,17 @@ Key findings:
 | 08 | [A-Share Report CN](08_CN_AShare_VLCC_Report_CN) | 中文 | 招商轮船 vs 中远海能 |
 | 09 | [Tanker Peer Universe EN](09_Tanker_Peer_Universe_EN) | English | 7-Company Crude Tanker Comparison (DHT/FRO/INSW/ECO/TNK/NAT/CMBT) |
 | 10 | [Tanker Peer Universe CN](10_Tanker_Peer_Universe_CN) | 中文 | 7家原油油轮公司同业对比分析 |
-| 11 | [**DHT vs FRO Apr Update EN**](11_DHT_FRO_April_Update_EN) | English | **NEW** Hormuz Crisis + $200K/$250K Scenarios |
-| 12 | [**DHT vs FRO Apr Update CN**](12_DHT_FRO_April_Update_CN) | 中文 | **新** 霍尔木兹危机 + $200K/$250K情景 |
-| 13 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
-| 14 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
+| 11 | [**DHT vs FRO Apr Update EN**](11_DHT_FRO_April_Update_EN) | English | **UPDATED** Hormuz Crisis + Structural Supply Thesis |
+| 12 | [**DHT vs FRO Apr Update CN**](12_DHT_FRO_April_Update_CN) | 中文 | **更新** 霍尔木兹危机 + 结构性供给论证 |
+| 13 | [**VLCC Supply Shortage EN**](13_VLCC_Supply_Shortage_EN) | English | **NEW** Supply Crunch, Shadow Fleet Exit & SPR Restocking |
+| 14 | [**VLCC供给短缺分析 CN**](14_VLCC_Supply_Shortage_CN) | 中文 | **新** 供给紧缩、影子船队退出与SPR补库 |
+| 15 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
+| 16 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
 
 ## 📝 Project Tracking
 
-- [Prompt Log (EN)](Prompt_Log_EN) — All 29 analytical prompts documented
-- [Prompt Log (CN)](Prompt_Log_CN) — 所有29条分析提示词记录
+- [Prompt Log (EN)](Prompt_Log_EN) — All 30 analytical prompts documented
+- [Prompt Log (CN)](Prompt_Log_CN) — 所有30条分析提示词记录
 
 ---
 
@@ -94,4 +111,4 @@ Key findings:
 
 ---
 
-*Last updated: March 4, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
+*Last updated: April 10, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*

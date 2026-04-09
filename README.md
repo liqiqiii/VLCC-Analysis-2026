@@ -6,13 +6,17 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
-### 7-Company Peer Universe (NEW — April 2026)
+### 🚢 VLCC Market: Supply Shortage & SPR Restocking (NEW — April 10, 2026)
+- **[Supply Shortage EN](13_VLCC_Supply_Shortage_EN.md) | [供给短缺分析 CN](14_VLCC_Supply_Shortage_CN.md)** ← NEW: Shadow fleet exit, SPR restocking 3-scenario model, supply/demand 2026-2030
+- Regulated fleet ~650-700 (not 900), 1.1B barrel restocking need, structural deficit by 2027
+
+### 7-Company Peer Universe (April 2026)
 - [Peer Universe EN](09_Tanker_Peer_Universe_EN.md) | [Peer Universe CN](10_Tanker_Peer_Universe_CN.md)
 - Covers: DHT, FRO, INSW, ECO, TNK, NAT, CMBT
 - Hormuz crisis scenarios + $75K–$250K rate sensitivity
 
 ### US-Listed: DHT Holdings vs Frontline (FRO)
-- **[April 2026 Update EN](11_DHT_FRO_April_Update_EN.md) | [April 2026 Update CN](12_DHT_FRO_April_Update_CN.md)** ← NEW: Hormuz crisis, $200K/$250K scenarios
+- **[April 2026 Update EN](11_DHT_FRO_April_Update_EN.md) | [April 2026 Update CN](12_DHT_FRO_April_Update_CN.md)** ← UPDATED: Structural supply thesis added
 - [Deep Dive EN](05_Deep_Dive_Day1Global_Framework.md) | [Deep Dive CN](06_Deep_Dive_Day1Global_Framework_CN.md) (March 2026)
 - [Full Report EN](01_Full_Report_EN.md) | [Full Report CN](03_Full_Report_CN.md) (March 2026)
 
