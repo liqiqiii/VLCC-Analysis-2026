@@ -26,6 +26,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 ### Cyclical Metals: 中钨高新 (Tungsten)
 - [Tungsten EN](tungsten/report_en.md) | [Tungsten CN](tungsten/report_cn.md)
 
+### 🧮 Modeling Stash — Valuation & Sell Signal Framework (NEW)
+- **[Modeling Stash](modeling_stash.md)** — DCF rules for cyclicals, PE backtest (FRO 2006-2025), momentum sell algo with rate confirmation, cycle classification
+- Backtested: 4/4 correct across 2008, 2015, 2024, 2026 Hormuz
+
 ### Project Tracking
 - [Prompt Log EN](Prompt_Log_EN.md) | [Prompt Log CN](Prompt_Log_CN.md)
 

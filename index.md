@@ -94,6 +94,7 @@ Key findings:
 | 14 | [**VLCC供给短缺分析 CN**](14_VLCC_Supply_Shortage_CN) | 中文 | **新** 供给紧缩、影子船队退出与SPR补库 |
 | 15 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
 | 16 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
+| — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 
 ## 📝 Project Tracking
 
@@ -111,4 +112,4 @@ Key findings:
 
 ---
 
-*Last updated: April 10, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
+*Last updated: April 13, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
