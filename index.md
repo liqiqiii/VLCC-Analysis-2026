@@ -57,6 +57,22 @@ Key findings:
 
 ---
 
+### 🔬 US-Listed: Keysight Technologies (NYSE: KEYS) — NEW
+
+Multi-model deep dive on the #1 global test & measurement company — applying Day1Global framework, operating leverage analysis, and 6-perspective valuation to the AI/5G super-cycle beneficiary.
+
+**[📄 Keysight Deep Dive (EN) →](keysight/report_en)** | **[是德科技研究（中文）→](keysight/report_cn)**
+
+Key findings:
+- **Consensus: HOLD / Cautious BUY** — quality is A-tier, but at 58x trailing PE, much of the upside is priced in
+- Wide moat (★★★★★ switching costs) with $1.5B+ annual R&D spend
+- Operating leverage: 1.8–2.2x multiplier (10% revenue growth → 18–22% EBIT growth)
+- FCF margin 24% — A-tier cash conversion; $800M+/yr buybacks
+- 12M base target $350 (+6%); best entry on 15–20% pullback to $260–280
+- AI datacenter + defense tailwinds are real but already reflected in price
+
+---
+
 ### 🔩 A-Share: 中钨高新 (China Tungsten High-Tech, 000657.SZ)
 
 Cyclical metals deep dive on China's #2 tungsten producer — applying CRule 1–10 (Two-Cycle Backtrack, PE Compression, Operating Leverage) to the 2025–2026 tungsten super-cycle.
@@ -94,6 +110,8 @@ Key findings:
 | 14 | [**VLCC供给短缺分析 CN**](14_VLCC_Supply_Shortage_CN) | 中文 | **新** 供给紧缩、影子船队退出与SPR补库 |
 | 15 | [Tungsten Report EN](tungsten/report_en) | English | 中钨高新 Cyclical Metals Deep Dive |
 | 16 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
+| 17 | [**Keysight Report EN**](keysight/report_en) | English | **NEW** Keysight Technologies (KEYS) T&M Deep Dive |
+| 18 | [**是德科技研究 CN**](keysight/report_cn) | 中文 | **新** 是德科技 测试测量行业深度研究 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 
 ## 📝 Project Tracking

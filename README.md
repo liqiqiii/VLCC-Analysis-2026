@@ -23,6 +23,12 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 ### A-Share: 招商轮船 vs 中远海能
 - [A-Share Report EN](07_CN_AShare_VLCC_Report_EN.md) | [A-Share Report CN](08_CN_AShare_VLCC_Report_CN.md)
 
+### 🔬 Tech T&M: Keysight Technologies (KEYS) — NEW
+- [Keysight Report EN](keysight/report_en.md) | [是德科技研究 CN](keysight/report_cn.md)
+- Wide moat T&M leader, 58x trailing PE, AI/5G/defense tailwinds
+- Consensus: HOLD / Cautious BUY — quality excellent, price fair not cheap
+- 12M base target $350 (+6%), best entry on 15–20% pullback
+
 ### Cyclical Metals: 中钨高新 (Tungsten)
 - [Tungsten EN](tungsten/report_en.md) | [Tungsten CN](tungsten/report_cn.md)
 
