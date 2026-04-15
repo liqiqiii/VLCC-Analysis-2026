@@ -1,0 +1,856 @@
+---
+layout: null
+title: VLCC Hormuz Transit Tracker
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VLCC Hormuz Transit Tracker</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  :root {
+    --bg-primary: #1a1a2e;
+    --bg-panel: #16213e;
+    --bg-card: #0f3460;
+    --accent: #e94560;
+    --accent-alt: #00d2ff;
+    --text: #e0e0e0;
+    --text-muted: #8892b0;
+    --border: #233554;
+    --success: #00c853;
+    --warning: #ffd600;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: var(--accent-alt); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .header {
+    background: linear-gradient(135deg, var(--bg-panel), var(--bg-card));
+    padding: 1.2rem 2rem;
+    border-bottom: 2px solid var(--accent);
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem;
+  }
+  .header h1 { font-size: 1.5rem; font-weight: 700; }
+  .header h1 span { color: var(--accent); }
+  .header-links { display: flex; gap: 1rem; font-size: 0.85rem; }
+  .disclaimer {
+    background: var(--bg-panel);
+    padding: 0.4rem 2rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 1rem; }
+
+  /* Collapsible sections */
+  .collapsible-header {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px 8px 0 0;
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    user-select: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  .collapsible-header:hover { background: var(--bg-card); }
+  .collapsible-header .arrow { transition: transform 0.3s; font-size: 0.8rem; }
+  .collapsible-header.open .arrow { transform: rotate(180deg); }
+  .collapsible-body {
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    border: 1px solid var(--border); border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: var(--bg-panel);
+  }
+  .collapsible-body.open { max-height: 3000px; }
+  .collapsible-body .inner { padding: 1.2rem; }
+
+  /* Top stat cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1rem 0; }
+  .card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .card .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.3rem; }
+  .card .value { font-size: 2rem; font-weight: 700; }
+  .card .value.outbound { color: var(--accent-alt); }
+  .card .value.waiting { color: var(--warning); }
+  .card .value.yanbu { color: var(--success); }
+  .card .value.rate { color: var(--accent); }
+  .card .value.days { color: var(--text); }
+  .card .sub { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+  /* Charts */
+  .chart-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin: 1rem 0; }
+  @media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } }
+  .chart-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .chart-panel h3 { font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-muted); }
+  .chart-panel canvas { width: 100% !important; }
+
+  .stats-grid { display: grid; gap: 0.75rem; }
+  .stat-row {
+    background: var(--bg-card);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+  }
+  .stat-row .stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
+  .stat-row .stat-value { font-size: 1.4rem; font-weight: 700; color: var(--accent-alt); }
+
+  /* Form */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+  .form-group { display: flex; flex-direction: column; }
+  .form-group label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  .form-group input, .form-group select, .form-group textarea {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--accent-alt);
+  }
+  .form-group textarea { resize: vertical; min-height: 60px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-actions { grid-column: 1 / -1; display: flex; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap; }
+
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    font-family: inherit;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+  .btn-success { background: var(--success); color: #111; }
+  .btn-warning { background: var(--warning); color: #111; }
+  .btn-danger { background: #d32f2f; color: #fff; }
+  .btn-sm { padding: 0.3rem 0.7rem; font-size: 0.78rem; }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin-top: 0.75rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th {
+    background: var(--bg-card);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border);
+    position: sticky; top: 0;
+  }
+  td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:hover td { background: rgba(255,255,255,0.03); }
+
+  /* Vessel sightings */
+  .section-title {
+    font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem;
+    padding-bottom: 0.3rem; border-bottom: 1px solid var(--border);
+  }
+  .section-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  /* Fleet reference */
+  .fleet-group { margin-bottom: 1rem; }
+  .fleet-group h4 { color: var(--accent-alt); font-size: 0.9rem; margin-bottom: 0.3rem; }
+  .fleet-group .fleet-list { font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; }
+  .fleet-group .fleet-list span {
+    display: inline-block;
+    background: var(--bg-primary);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.1rem 0.2rem;
+    font-size: 0.78rem;
+  }
+
+  /* Info panel */
+  .info-panel { font-size: 0.85rem; }
+  .info-panel h4 { color: var(--accent-alt); margin: 0.8rem 0 0.3rem; font-size: 0.9rem; }
+  .info-panel ul { padding-left: 1.5rem; }
+  .info-panel li { margin-bottom: 0.3rem; color: var(--text-muted); }
+  .info-panel code { background: var(--bg-primary); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.82rem; }
+
+  /* Toast notification */
+  .toast {
+    position: fixed; bottom: 2rem; right: 2rem;
+    background: var(--success); color: #111;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600; font-size: 0.85rem;
+    opacity: 0; transition: opacity 0.3s;
+    pointer-events: none; z-index: 1000;
+  }
+  .toast.show { opacity: 1; }
+
+  .mt-1 { margin-top: 1rem; }
+  .mb-1 { margin-bottom: 1rem; }
+  .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+  @media (max-width: 600px) {
+    .header { padding: 1rem; }
+    .header h1 { font-size: 1.2rem; }
+    .container { padding: 0.5rem; }
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .card .value { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🚢 VLCC <span>Hormuz</span> Transit Tracker</h1>
+  <div class="header-links">
+    <a href="index.html">← VLCC Analysis Hub</a>
+  </div>
+</div>
+<div class="disclaimer">
+  ⚠️ Data entered manually from published reports. Not real-time AIS. For analytical reference only.
+</div>
+
+<div class="container">
+
+  <!-- Top Stat Cards -->
+  <div class="cards">
+    <div class="card">
+      <div class="label">Today's Outbound Laden</div>
+      <div class="value outbound" id="card-outbound">—</div>
+      <div class="sub">VLCCs through Hormuz</div>
+    </div>
+    <div class="card">
+      <div class="label">Waiting / Anchored</div>
+      <div class="value waiting" id="card-waiting">—</div>
+      <div class="sub">VLCCs near Hormuz</div>
+    </div>
+    <div class="card">
+      <div class="label">Yanbu Bypass</div>
+      <div class="value yanbu" id="card-yanbu">—</div>
+      <div class="sub">VLCCs at Red Sea</div>
+    </div>
+    <div class="card">
+      <div class="label">TD3C Rate</div>
+      <div class="value rate" id="card-td3c">—</div>
+      <div class="sub">$/day</div>
+    </div>
+    <div class="card">
+      <div class="label">Days of Data</div>
+      <div class="value days" id="card-days">—</div>
+      <div class="sub">entries collected</div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="chart-grid">
+    <div class="chart-panel">
+      <h3>📈 30-Day Transit Trend</h3>
+      <canvas id="trendChart" height="260"></canvas>
+    </div>
+    <div class="chart-panel">
+      <h3>📊 Cumulative Statistics</h3>
+      <div class="stats-grid">
+        <div class="stat-row">
+          <div class="stat-label">Total Outbound This Month</div>
+          <div class="stat-value" id="stat-total-outbound">—</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Avg Daily Transit Rate</div>
+          <div class="stat-value" id="stat-avg-daily">—</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Yanbu % of Total Outbound</div>
+          <div class="stat-value" id="stat-yanbu-pct">—</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Peak TD3C Recorded</div>
+          <div class="stat-value" id="stat-peak-td3c">—</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Avg Waiting / Anchored</div>
+          <div class="stat-value" id="stat-avg-waiting">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Entry Form (Collapsible) -->
+  <div class="mb-1">
+    <div class="collapsible-header" onclick="toggleCollapse(this)">
+      ➕ Enter New Data <span class="arrow">▼</span>
+    </div>
+    <div class="collapsible-body">
+      <div class="inner">
+        <form id="dataForm" class="form-grid" onsubmit="return handleSubmit(event)">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="f-date" required>
+          </div>
+          <div class="form-group">
+            <label>Outbound Laden VLCCs</label>
+            <input type="number" id="f-outbound" min="0" max="100" placeholder="e.g. 12" required>
+          </div>
+          <div class="form-group">
+            <label>Anchored / Waiting VLCCs</label>
+            <input type="number" id="f-waiting" min="0" max="200" placeholder="e.g. 45">
+          </div>
+          <div class="form-group">
+            <label>Yanbu Loading VLCCs</label>
+            <input type="number" id="f-yanbu" min="0" max="50" placeholder="e.g. 3">
+          </div>
+          <div class="form-group">
+            <label>TD3C Rate ($/day)</label>
+            <input type="number" id="f-td3c" min="0" max="2000000" step="100" placeholder="e.g. 175000">
+          </div>
+          <div class="form-group">
+            <label>Source</label>
+            <select id="f-source">
+              <option value="Lloyd's List">Lloyd's List</option>
+              <option value="Bloomberg">Bloomberg</option>
+              <option value="gCaptain">gCaptain</option>
+              <option value="Signal Ocean">Signal Ocean</option>
+              <option value="Manual/VesselFinder">Manual / VesselFinder</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Notable Vessels / Notes</label>
+            <textarea id="f-vessels" placeholder="e.g. DHT Bronco loading Yanbu, FRO Front Defender transiting Hormuz"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">💾 Save Entry</button>
+            <button type="reset" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vessel Sightings Log -->
+  <div class="section-panel">
+    <div class="flex-between">
+      <h3 class="section-title" style="margin:0;border:0;">🔭 Vessel Sightings Log</h3>
+    </div>
+    <div class="table-wrap" style="max-height: 320px; overflow-y: auto;">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Notes / Vessels</th><th>Source</th></tr>
+        </thead>
+        <tbody id="sightings-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Full Data Table -->
+  <div class="section-panel">
+    <div class="flex-between">
+      <h3 class="section-title" style="margin:0;border:0;">📋 Full Data History</h3>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+        <button class="btn btn-success btn-sm" onclick="exportCSV()">⬇ Export CSV</button>
+        <button class="btn btn-secondary btn-sm" onclick="exportJSON()">⬇ Export JSON</button>
+        <button class="btn btn-warning btn-sm" onclick="importJSON()">⬆ Import JSON</button>
+      </div>
+    </div>
+    <div class="table-wrap" style="max-height: 400px; overflow-y: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th><th>Outbound</th><th>Waiting</th><th>Yanbu</th><th>TD3C ($/day)</th><th>Source</th><th></th>
+          </tr>
+        </thead>
+        <tbody id="data-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- How to Use (Collapsible) -->
+  <div class="mb-1">
+    <div class="collapsible-header" onclick="toggleCollapse(this)">
+      ℹ️ How to Use — Data Sources <span class="arrow">▼</span>
+    </div>
+    <div class="collapsible-body">
+      <div class="inner info-panel">
+        <p>Enter daily observations from shipping reports to build a transit trend. Here's where to find data:</p>
+        <h4>📰 Lloyd's List (Paywalled — Summaries Free)</h4>
+        <ul>
+          <li>Weekly tanker market report includes Hormuz transit counts</li>
+          <li>Search for "Hormuz" or "VLCC" at <a href="https://lloydslist.com" target="_blank">lloydslist.com</a></li>
+        </ul>
+        <h4>🌐 gCaptain.com (Free)</h4>
+        <ul>
+          <li>Regular coverage of Hormuz chokepoint disruptions</li>
+          <li>Check <a href="https://gcaptain.com" target="_blank">gcaptain.com</a> — search "Hormuz" or "Strait" or "VLCC"</li>
+        </ul>
+        <h4>💹 Bloomberg Shipping Terminal</h4>
+        <ul>
+          <li>If you have access: <code>BMAP</code> function for vessel positions</li>
+          <li>Bloomberg tanker reports often cite Yanbu loading counts</li>
+        </ul>
+        <h4>🛰️ VesselFinder.com (Free Manual Check)</h4>
+        <ul>
+          <li>Go to <a href="https://www.vesselfinder.com" target="_blank">vesselfinder.com</a></li>
+          <li>Zoom to Strait of Hormuz: approximately <code>26.5°N, 56.3°E</code></li>
+          <li>Filter by vessel type: Tanker &gt; VLCC (200K+ DWT)</li>
+          <li>Count laden VLCCs transiting outbound (southwest direction)</li>
+          <li>Count VLCCs anchored in Gulf near the strait</li>
+        </ul>
+        <h4>📡 Signal Ocean</h4>
+        <ul>
+          <li>Professional AIS-based tanker tracking platform</li>
+          <li>Provides transit counts and waiting vessel analytics</li>
+        </ul>
+        <h4>💡 Tips</h4>
+        <ul>
+          <li>Enter data at the same time daily for consistency</li>
+          <li>Use "Notable Vessels" to track specific DHT/FRO/INSW ships</li>
+          <li>Export JSON regularly as backup to your GitHub repo</li>
+          <li>TD3C rate can be found on the Baltic Exchange or shipping news</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fleet Reference (Collapsible) -->
+  <div class="mb-1">
+    <div class="collapsible-header" onclick="toggleCollapse(this)">
+      🚢 Fleet Reference — DHT / Frontline / INSW / Teekay <span class="arrow">▼</span>
+    </div>
+    <div class="collapsible-body">
+      <div class="inner">
+        <div class="fleet-group">
+          <h4>DHT Holdings (24 VLCCs)</h4>
+          <div class="fleet-list">
+            <strong>Spot:</strong>
+            <span>DHT Bronco</span><span>DHT Colt</span><span>DHT Stallion</span><span>DHT Tiger</span><span>DHT Panther</span><span>DHT Lion</span><span>DHT Antelope</span><span>DHT Addax</span><span>DHT Gazelle</span><span>DHT Impala</span>
+          </div>
+          <div class="fleet-list" style="margin-top:0.3rem;">
+            <strong>TC:</strong>
+            <span>DHT Mustang</span><span>DHT Harrier</span><span>DHT Puma</span><span>DHT Leopard</span>
+          </div>
+        </div>
+        <div class="fleet-group">
+          <h4>Frontline (42 VLCCs — Selected Names)</h4>
+          <div class="fleet-list">
+            <span>Front Defender</span><span>Front Diva</span><span>Front Discovery</span><span>Front Duke</span><span>Front Dynasty</span><span>Front Favour</span><span>Front Feature</span><span>Front Force</span><span>Front Future</span><span>Front Garibaldi</span><span>Front Gulf</span><span>Front Idol</span><span>Front Jaguar</span><span>Front Leader</span><span>Front Lynx</span><span>Front Marvel</span><span>Front Panther</span><span>Front Puma</span><span>Front Shark</span><span>Front Sirius</span>
+          </div>
+        </div>
+        <div class="fleet-group">
+          <h4>INSW — International Seaways (73 Ships Mixed — Major VLCCs)</h4>
+          <div class="fleet-list">
+            <span>Seaways Laura Lynn</span><span>Seaways Mulan</span><span>Seaways Rosalyn</span><span>Seaways Grainne</span>
+          </div>
+        </div>
+        <div class="fleet-group">
+          <h4>TNK — Teekay Tankers (34 Ships)</h4>
+          <div class="fleet-list">
+            <span>Beothuk Spirit</span><span>Chinook Spirit</span><span>Haida Spirit</span><span>Huron Spirit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.container -->
+
+<div class="toast" id="toast"></div>
+
+<!-- Hidden file input for JSON import -->
+<input type="file" id="importInput" accept=".json" style="display:none" onchange="handleImport(event)">
+
+<script>
+// ── Constants & Seed Data ─────────────────────────────────────────────
+const STORAGE_KEY = 'hormuz_tracker_data';
+
+const SEED_DATA = [
+  {"date":"2026-03-05","outbound":8,"waiting":45,"yanbu":3,"td3c":423000,"vessels":"11 VLCCs waiting at Yanbu per Bloomberg. Crisis escalating.","source":"Bloomberg","timestamp":"2026-03-05T12:00:00Z"},
+  {"date":"2026-03-13","outbound":5,"waiting":60,"yanbu":11,"td3c":445000,"vessels":"11 VLCCs at Yanbu per Bloomberg. TD3C all-time high.","source":"Bloomberg","timestamp":"2026-03-13T12:00:00Z"},
+  {"date":"2026-03-25","outbound":12,"waiting":50,"yanbu":15,"td3c":175000,"vessels":"Yanbu ramp-up. 2.9M bpd exports.","source":"gCaptain","timestamp":"2026-03-25T12:00:00Z"},
+  {"date":"2026-04-09","outbound":15,"waiting":40,"yanbu":18,"td3c":400928,"vessels":"TD3C WS413.89. 600+ vessels still in Gulf per Lloyd's List.","source":"Lloyd's List","timestamp":"2026-04-09T12:00:00Z"}
+];
+
+// ── Data Layer ────────────────────────────────────────────────────────
+function loadData() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_DATA));
+    return [...SEED_DATA];
+  }
+  try { return JSON.parse(raw); }
+  catch { return []; }
+}
+
+function saveData(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function getSortedData() {
+  return loadData().slice().sort((a, b) => a.date.localeCompare(b.date));
+}
+
+function getNewestFirst() {
+  return loadData().slice().sort((a, b) => b.date.localeCompare(a.date));
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────
+function showToast(msg, duration = 2500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ── Collapsible ───────────────────────────────────────────────────────
+function toggleCollapse(header) {
+  header.classList.toggle('open');
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// ── Format Helpers ────────────────────────────────────────────────────
+function fmtK(n) {
+  if (n == null || isNaN(n)) return '—';
+  return '$' + Math.round(n / 1000) + 'K';
+}
+function fmtNum(n) {
+  if (n == null || isNaN(n)) return '—';
+  return n.toLocaleString();
+}
+function fmtDate(d) {
+  if (!d) return '—';
+  const p = d.split('-');
+  if (p.length !== 3) return d;
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return months[parseInt(p[1], 10) - 1] + ' ' + parseInt(p[2], 10) + ', ' + p[0];
+}
+
+// ── Update Dashboard ──────────────────────────────────────────────────
+let trendChart = null;
+
+function refresh() {
+  const data = getSortedData();
+  const latest = data.length ? data[data.length - 1] : null;
+
+  // Cards
+  document.getElementById('card-outbound').textContent = latest ? fmtNum(latest.outbound) : '—';
+  document.getElementById('card-waiting').textContent = latest ? fmtNum(latest.waiting) : '—';
+  document.getElementById('card-yanbu').textContent = latest ? fmtNum(latest.yanbu) : '—';
+  document.getElementById('card-td3c').textContent = latest ? fmtK(latest.td3c) : '—';
+  document.getElementById('card-days').textContent = data.length;
+
+  // Cumulative stats
+  if (data.length > 0) {
+    const now = new Date();
+    const currentMonth = data.filter(d => {
+      const dp = new Date(d.date);
+      return dp.getMonth() === now.getMonth() && dp.getFullYear() === now.getFullYear();
+    });
+
+    const totalOutbound = data.reduce((s, d) => s + (d.outbound || 0), 0);
+    const totalYanbu = data.reduce((s, d) => s + (d.yanbu || 0), 0);
+    const avgDaily = (totalOutbound / data.length).toFixed(1);
+    const yanbuPct = totalOutbound > 0 ? ((totalYanbu / (totalOutbound + totalYanbu)) * 100).toFixed(1) : '0';
+    const peakTd3c = Math.max(...data.map(d => d.td3c || 0));
+    const avgWaiting = (data.reduce((s, d) => s + (d.waiting || 0), 0) / data.length).toFixed(0);
+
+    const monthlyOut = currentMonth.reduce((s, d) => s + (d.outbound || 0), 0);
+    document.getElementById('stat-total-outbound').textContent = fmtNum(totalOutbound) + ' VLCCs';
+    document.getElementById('stat-avg-daily').textContent = avgDaily + ' VLCCs/day';
+    document.getElementById('stat-yanbu-pct').textContent = yanbuPct + '%';
+    document.getElementById('stat-peak-td3c').textContent = fmtK(peakTd3c) + '/day';
+    document.getElementById('stat-avg-waiting').textContent = avgWaiting + ' VLCCs';
+  }
+
+  // Trend chart (last 30 entries)
+  const recent = data.slice(-30);
+  const labels = recent.map(d => fmtDate(d.date));
+  const outbound = recent.map(d => d.outbound);
+  const waiting = recent.map(d => d.waiting);
+  const yanbu = recent.map(d => d.yanbu);
+  const td3c = recent.map(d => d.td3c ? d.td3c / 1000 : null);
+
+  if (trendChart) trendChart.destroy();
+  const ctx = document.getElementById('trendChart').getContext('2d');
+  trendChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Outbound Laden',
+          data: outbound,
+          borderColor: '#00d2ff',
+          backgroundColor: 'rgba(0,210,255,0.1)',
+          tension: 0.3,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          fill: true,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Waiting/Anchored',
+          data: waiting,
+          borderColor: '#ffd600',
+          backgroundColor: 'transparent',
+          tension: 0.3,
+          pointRadius: 4,
+          borderDash: [5, 3],
+          yAxisID: 'y'
+        },
+        {
+          label: 'Yanbu Loading',
+          data: yanbu,
+          borderColor: '#00c853',
+          backgroundColor: 'transparent',
+          tension: 0.3,
+          pointRadius: 4,
+          yAxisID: 'y'
+        },
+        {
+          label: 'TD3C ($K/day)',
+          data: td3c,
+          borderColor: '#e94560',
+          backgroundColor: 'rgba(233,69,96,0.08)',
+          tension: 0.3,
+          pointRadius: 3,
+          borderWidth: 2,
+          fill: true,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { labels: { color: '#8892b0', font: { size: 11 } } },
+        tooltip: {
+          backgroundColor: '#16213e',
+          titleColor: '#e0e0e0',
+          bodyColor: '#e0e0e0',
+          borderColor: '#233554',
+          borderWidth: 1
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#8892b0', font: { size: 10 }, maxRotation: 45 },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        },
+        y: {
+          type: 'linear',
+          position: 'left',
+          title: { display: true, text: 'VLCC Count', color: '#8892b0' },
+          ticks: { color: '#8892b0' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        },
+        y1: {
+          type: 'linear',
+          position: 'right',
+          title: { display: true, text: 'TD3C ($K/day)', color: '#e94560' },
+          ticks: { color: '#e94560' },
+          grid: { drawOnChartArea: false }
+        }
+      }
+    }
+  });
+
+  // Sightings log (last 30 with vessels)
+  const sightingsBody = document.getElementById('sightings-body');
+  const withVessels = getNewestFirst().filter(d => d.vessels && d.vessels.trim()).slice(0, 30);
+  sightingsBody.innerHTML = withVessels.length === 0
+    ? '<tr><td colspan="3" style="text-align:center;color:var(--text-muted);">No vessel sightings recorded yet.</td></tr>'
+    : withVessels.map(d => `<tr>
+        <td style="white-space:nowrap;">${fmtDate(d.date)}</td>
+        <td>${escapeHtml(d.vessels)}</td>
+        <td>${escapeHtml(d.source || '')}</td>
+      </tr>`).join('');
+
+  // Full data table
+  const dataBody = document.getElementById('data-body');
+  const all = getNewestFirst();
+  dataBody.innerHTML = all.length === 0
+    ? '<tr><td colspan="7" style="text-align:center;color:var(--text-muted);">No data yet. Use the form above to add entries.</td></tr>'
+    : all.map((d, i) => `<tr>
+        <td style="white-space:nowrap;">${fmtDate(d.date)}</td>
+        <td>${fmtNum(d.outbound)}</td>
+        <td>${fmtNum(d.waiting)}</td>
+        <td>${fmtNum(d.yanbu)}</td>
+        <td>${d.td3c ? '$' + d.td3c.toLocaleString() : '—'}</td>
+        <td>${escapeHtml(d.source || '')}</td>
+        <td><button class="btn btn-danger btn-sm" onclick="deleteEntry('${d.date}','${d.timestamp || ''}')">✕</button></td>
+      </tr>`).join('');
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ── Form Submit ───────────────────────────────────────────────────────
+function handleSubmit(e) {
+  e.preventDefault();
+  const entry = {
+    date: document.getElementById('f-date').value,
+    outbound: parseInt(document.getElementById('f-outbound').value, 10) || 0,
+    waiting: parseInt(document.getElementById('f-waiting').value, 10) || 0,
+    yanbu: parseInt(document.getElementById('f-yanbu').value, 10) || 0,
+    td3c: parseInt(document.getElementById('f-td3c').value, 10) || 0,
+    vessels: document.getElementById('f-vessels').value.trim(),
+    source: document.getElementById('f-source').value,
+    timestamp: new Date().toISOString()
+  };
+  const data = loadData();
+  data.push(entry);
+  saveData(data);
+  showToast('✅ Entry saved for ' + fmtDate(entry.date));
+  document.getElementById('dataForm').reset();
+  setDefaultDate();
+  refresh();
+}
+
+// ── Delete Entry ──────────────────────────────────────────────────────
+function deleteEntry(date, timestamp) {
+  if (!confirm('Delete entry for ' + date + '?')) return;
+  let data = loadData();
+  if (timestamp) {
+    data = data.filter(d => !(d.date === date && d.timestamp === timestamp));
+  } else {
+    data = data.filter(d => d.date !== date);
+  }
+  saveData(data);
+  showToast('🗑️ Entry deleted');
+  refresh();
+}
+
+// ── Export CSV ─────────────────────────────────────────────────────────
+function exportCSV() {
+  const data = getSortedData();
+  if (data.length === 0) { showToast('No data to export'); return; }
+  const headers = ['Date','Outbound','Waiting','Yanbu','TD3C','Vessels','Source'];
+  const rows = data.map(d => [
+    d.date,
+    d.outbound,
+    d.waiting,
+    d.yanbu,
+    d.td3c,
+    '"' + (d.vessels || '').replace(/"/g, '""') + '"',
+    d.source || ''
+  ].join(','));
+  const csv = [headers.join(','), ...rows].join('\n');
+  downloadFile(csv, 'hormuz_tracker_' + todayStr() + '.csv', 'text/csv');
+  showToast('📄 CSV exported');
+}
+
+// ── Export JSON ────────────────────────────────────────────────────────
+function exportJSON() {
+  const data = loadData();
+  if (data.length === 0) { showToast('No data to export'); return; }
+  downloadFile(JSON.stringify(data, null, 2), 'hormuz_tracker_' + todayStr() + '.json', 'application/json');
+  showToast('📄 JSON exported');
+}
+
+// ── Import JSON ────────────────────────────────────────────────────────
+function importJSON() {
+  document.getElementById('importInput').click();
+}
+
+function handleImport(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function (ev) {
+    try {
+      const imported = JSON.parse(ev.target.result);
+      if (!Array.isArray(imported)) throw new Error('Not an array');
+      const existing = loadData();
+      const existingKeys = new Set(existing.map(d => d.date + '|' + (d.timestamp || '')));
+      let added = 0;
+      for (const entry of imported) {
+        const key = entry.date + '|' + (entry.timestamp || '');
+        if (!existingKeys.has(key)) {
+          existing.push(entry);
+          existingKeys.add(key);
+          added++;
+        }
+      }
+      saveData(existing);
+      showToast('📥 Imported ' + added + ' new entries (' + imported.length + ' total in file)');
+      refresh();
+    } catch (err) {
+      alert('Import failed: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────
+function downloadFile(content, filename, mimeType) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function setDefaultDate() {
+  document.getElementById('f-date').value = todayStr();
+}
+
+// ── Init ──────────────────────────────────────────────────────────────
+setDefaultDate();
+refresh();
+</script>
+
+</body>
+</html>

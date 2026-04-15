@@ -32,6 +32,11 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 ### Cyclical Metals: 中钨高新 (Tungsten)
 - [Tungsten EN](tungsten/report_en.md) | [Tungsten CN](tungsten/report_cn.md)
 
+### 🔴 Hormuz Transit Tracker — LIVE Dashboard (NEW)
+- **[Hormuz Tracker](hormuz_tracker.html)** — Daily VLCC transit/waiting/Yanbu counts, TD3C rate overlay, vessel sightings
+- Manual-input dashboard: enter data from Lloyd's List / Bloomberg / VesselFinder daily
+- 30-day trend charts, fleet reference panel, CSV/JSON export
+
 ### 🧮 Modeling Stash — Valuation & Sell Signal Framework (NEW)
 - **[Modeling Stash](modeling_stash.md)** — DCF rules for cyclicals, PE backtest (FRO 2006-2025), momentum sell algo with rate confirmation, cycle classification
 - Backtested: 4/4 correct across 2008, 2015, 2024, 2026 Hormuz

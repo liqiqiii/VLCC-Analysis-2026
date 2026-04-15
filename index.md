@@ -113,6 +113,7 @@ Key findings:
 | 17 | [**Keysight Report EN**](keysight/report_en) | English | **NEW** Keysight Technologies (KEYS) T&M Deep Dive |
 | 18 | [**是德科技研究 CN**](keysight/report_cn) | 中文 | **新** 是德科技 测试测量行业深度研究 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
+| — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
 ## 📝 Project Tracking
 
@@ -130,4 +131,4 @@ Key findings:
 
 ---
 
-*Last updated: April 13, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
+*Last updated: April 15, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
