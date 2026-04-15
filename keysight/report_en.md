@@ -455,5 +455,109 @@ For investors already holding KEYS:
 
 ---
 
+## 14. Deep Dive: AI/CPO Business Valuation Model
+
+> *This section models Keysight's AI and co-packaged optics (CPO) business as a standalone value driver, with sum-of-parts implications for the full company.*
+
+### 14.1 AI/Optical Test Revenue Breakdown & Forecast
+
+Keysight does not break out AI/CPO revenue separately. The following is a bottoms-up estimate based on segment disclosures, earnings call commentary, and market sizing data.
+
+| Revenue Line | FY25E | FY26E | FY27E | FY28E |
+|---|---|---|---|---|
+| 800G pluggable test | \$400M | \$500M | \$550M | \$500M |
+| 1.6T transceiver test | \$50M | \$200M | \$450M | \$700M |
+| CPO module test | \$20M | \$50M | \$200M | \$500M |
+| Software (PathWave, subscriptions) | \$130M | \$150M | \$200M | \$300M |
+| **Total AI/Optical Revenue** | **\$600M** | **\$900M** | **\$1,400M** | **\$2,000M** |
+| YoY Growth | — | +50% | +56% | +43% |
+
+### 14.2 Margin Profile — Hardware vs Software
+
+A common error is applying the ~80% software margin to the entire AI business. The reality:
+
+| Component | Revenue Mix (FY28E) | Gross Margin | Gross Profit |
+|---|---|---|---|
+| **Hardware** (test instruments) | \$1,400M (70%) | ~60% | \$840M |
+| **Software** (PathWave, subscriptions) | \$600M (30%) | ~82% | \$492M |
+| **Blended** | **\$2,000M** | **66.6%** | **\$1,332M** |
+
+### 14.3 Full P&L Walk: AI/Optical Business (FY28E)
+
+| Line Item | Amount | Margin |
+|---|---|---|
+| Revenue | \$2,000M | 100% |
+| Gross Profit | \$1,332M | 66.6% |
+| R&D (allocated ~20%) | (\$400M) | |
+| SG&A (allocated ~12%) | (\$240M) | |
+| **Operating Profit (EBIT)** | **\$692M** | **34.6%** |
+| Tax (~21%) | (\$145M) | |
+| **Net Income** | **\$547M** | **27.4%** |
+
+**Key takeaway**: Net margin on the AI business is **~27%**, not 80%. The 80% figure applies only to incremental software gross margin — R&D, SG&A, and taxes consume the rest.
+
+### 14.4 AI/CPO Business — What Is It Worth?
+
+| PE Multiple | AI Biz Value | % of Current \$57B Cap |
+|---|---|---|
+| 30x (conservative) | \$16.4B | 29% |
+| **35x (base)** | **\$19.1B** | **34%** |
+| 40x (growth premium) | \$21.9B | 38% |
+| 50x (aggressive) | \$27.4B | 48% |
+
+### 14.5 Sum-of-Parts Valuation (FY28E)
+
+| Segment | Revenue | Net Income | PE | Value |
+|---|---|---|---|---|
+| **AI/Optical test** | \$2,000M | \$547M | 35x | **\$19.1B** |
+| **Core T&M** (non-AI CSG + EISG) | \$5,000M | \$750M | 25x | **\$18.8B** |
+| **Total** | **\$7,000M** | **\$1,297M** | **~29x blended** | **\$37.9B** |
+| **Current Market Cap** | — | — | — | **\$57.0B** |
+| **Premium / (Discount)** | — | — | — | **(\$19.1B) = -33%** |
+
+**Implication**: At \$330/share, the market is already pricing in FY28E bull-case execution PLUS a sustained 40–45x blended PE (growth premium). Even on optimistic AI/CPO assumptions, fair value on FY28E numbers is ~\$38B — roughly **33% below today's price**.
+
+### 14.6 CPO Test Competitive Landscape
+
+| Vendor | Market Share (800G/1.6T/CPO) | Key Advantage | Weakness |
+|---|---|---|---|
+| **Keysight** 🥇 | ~25–30% | Proprietary ASIC in DCA-M oscilloscopes; FlexOTO platform; first to ship 1.6T test (Mar 2025); IEEE 802.3df standards committee seat | Premium priced |
+| **VIAVI** 🥈 | ~25% | Broad portfolio (BERT, OSA); strong in R&D + production test | Less cutting-edge CPO focus |
+| **Anritsu** 🥉 | ~10–15% | Protocol/signal integrity; strong in Asia/Japan | Smaller scale |
+| **Tektronix** (Fortive) | ~10% | Signal integrity, oscilloscopes; strong in US labs | Niche; weaker in production |
+| **EXFO / Others** | ~5–10% | Fiber/network testing | Not CPO leaders |
+
+### 14.7 Keysight's Specific Moats in CPO Test
+
+| Moat | Detail |
+|---|---|
+| **Proprietary ASIC/MMIC** | Custom silicon in DCA-M oscilloscopes — competitors cannot replicate easily |
+| **FlexOTO platform** | Multi-channel automated test; scales from 800G → 1.6T → 3.2T on same platform |
+| **Standards influence** | Keysight sits on IEEE 802.3df committee — they help WRITE the test specifications |
+| **First-mover on 1.6T** | Shipped 1.6T test solutions March 2025; competitors are 6–12 months behind |
+| **Installed base lock-in** | Customers already using Keysight for 400G/800G — natural upgrade path to CPO |
+
+### 14.8 CPO Market Sizing (Test Equipment TAM)
+
+| Metric | Value | Source |
+|---|---|---|
+| SiPh & CPO T&M equipment market (2025) | ~\$1.36B | BusinessWire / ResearchAndMarkets |
+| SiPh & CPO T&M equipment market (2032E) | ~\$2.04B | CAGR ~6% |
+| CPO component market (2025) | ~\$95M | Adtek Fiber |
+| CPO component market (2034E) | ~\$1.05B | CAGR 30%+ |
+| LPO + CPO combined (2026E) | ~\$10B | LightCounting |
+| Ethernet transceiver unit growth | 60M → 120M units (2025–2029) | Keysight blog |
+
+### 14.9 Implied Entry Prices for AI/CPO Thesis
+
+| Entry Price | Implied Blended PE (on FY28E \$1.3B NI) | Risk/Reward |
+|---|---|---|
+| \$330 (today) | 43x | Priced for perfection — no margin of safety |
+| \$280 | 37x | Fair if AI/CPO accelerates beyond base case |
+| **\$240** | **31x** | **Good entry — margin of safety on AI thesis** |
+| \$200 | 26x | Deep value — assumes temporary market dislocation |
+
+---
+
 *Data as of April 14, 2026. Not investment advice. All models may contain errors — verify independently.*
 *Report generated using the Day1Global tech-earnings-deepdive framework.*
