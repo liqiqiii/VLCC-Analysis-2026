@@ -1,7 +1,7 @@
 # Prompt Tracking Log — VLCC Analysis Project
 
 > This file tracks every analytical prompt/directive from the user throughout the project.
-> Updated after each conversation turn. Last updated: **April 10, 2026**.
+> Updated after each conversation turn. Last updated: **April 23, 2026**.
 
 ---
 
@@ -348,3 +348,40 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 
 **Files Created**: 13_VLCC_Supply_Shortage_EN.md, 14_VLCC_Supply_Shortage_CN.md, chart_bdti_overlay.py
 **Files Updated**: 11_DHT_FRO_April_Update_EN.md, 12_DHT_FRO_April_Update_CN.md, Prompt_Log_EN.md, Prompt_Log_CN.md, index.md, README.md
+
+---
+
+## Prompt 31: Sinokor 40% Spot Dominance & Container Shipping Analog
+**Date**: April 23, 2026
+
+**User Request**:
+1. Analyze whether Sinokor, controlling 40% of global spot VLCC market, can use the Maersk pandemic playbook (idle some ships, earn more from rest) to keep TCE elevated post-Hormuz
+2. Compare container shipping stock performance during 2020-2022 bull market (driven by 2M Alliance capacity control + pandemic restocking) to current VLCC setup
+3. Map container company returns (ZIM/Hapag-Lloyd/Maersk) onto VLCC company projections (FRO/DHT/INSW)
+4. Create GitHub Pages report with both EN and CN versions
+
+**Note on Market Share**: User has proprietary data confirming 40% Sinokor spot market share. Published estimates range 16-24%. Analysis uses 40% as baseline per user instruction.
+
+**Research Conducted**:
+- Container shipping stock performance: ZIM (+693%, IPO $11.50 → $91.23), Hapag-Lloyd (+632%, €60 → €439), Maersk (+164%, 3,560 → 9,400 DKK)
+- Container freight rates: Shanghai-Europe $2K → $10-14K (5-7x), Shanghai-US West $1.5K → $12-20K (8-13x)
+- Maersk 2M Alliance market structure: ~17% solo, ~33% with MSC, 1,000+ blank sailings H1 2020
+- Sinokor VLCC fleet: ~148 vessels at 40% of ~370 compliant spot fleet (total fleet ~880, shadow ~230)
+- VLCC current positions: DHT $12→$18.53 (+54%), FRO $22→$36.42 (+66%), INSW $50→$76 (+52%)
+- SPR data: 409M barrels current vs 714M capacity = 305M barrel deficit; 12M bbl/yr current refill pace
+- Post-Hormuz demand quantification: queue clearance (4-8 wks), floating storage unwind (80-100M bbl), SPR multi-year
+- Sinokor idling math: at 15% idle (22 ships), TCE rises ~35%, total revenue rises ~15% — more from fewer ships
+- Current VLCC TCE: TD3C ~$400K/day (~9-10x normal) vs container 5-7x spike — yet VLCC stocks lagging
+
+**Key Findings**:
+- Container analog: high-beta/spot-exposed names delivered 400-700% returns over 14-25 months
+- Sinokor at 40% has STRONGER unilateral pricing power than Maersk (17%) + MSC (33% combined via alliance)
+- VLCC stocks only +50-66% so far = potentially 10-20% through the cycle vs container analog
+- Structural VLCC advantages over containers: higher concentration (40% solo), more inelastic demand (oil), longer restocking (SPR multi-year), tighter supply response (3yr+ newbuild, aging fleet)
+- Company mapping: FRO=ZIM (max beta), DHT=Hapag (pure play), INSW=Maersk (diversified)
+- Base case targets: DHT $46 (+148%), FRO $79 (+117%), INSW $92 (+21%)
+- Bull case targets: DHT $73 (+294%), FRO $132 (+262%), INSW $155 (+104%)
+- Dividend yields at base case: DHT 39.5%, FRO 30.8%, INSW 17.6%
+
+**Files Created**: 19_Sinokor_Container_VLCC_Analog_EN.md, 20_Sinokor_Container_VLCC_Analog_CN.md, write_cn_sinokor.py
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

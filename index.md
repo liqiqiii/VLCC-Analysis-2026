@@ -14,7 +14,7 @@ title: VLCC Analysis Hub
 
 How Maersk's 2020–2022 container shipping playbook maps onto the 2026 VLCC super-cycle — with Sinokor controlling 40% of the global spot VLCC market (vs Maersk's ~17%).
 
-**[📄 Sinokor & Container Analog Analysis (EN) →](19_Sinokor_Container_VLCC_Analog_EN)**
+**[📄 Sinokor & Container Analog Analysis (EN) →](19_Sinokor_Container_VLCC_Analog_EN)** | **[中文版 →](20_Sinokor_Container_VLCC_Analog_CN)**
 
 Key findings:
 - Container shipping stocks rallied **+400–700%** (ZIM, Hapag-Lloyd) when 2M Alliance controlled ~33% of supply
@@ -129,6 +129,7 @@ Key findings:
 | 17 | [**Keysight Report EN**](keysight/report_en) | English | **NEW** Keysight Technologies (KEYS) T&M Deep Dive |
 | 18 | [**是德科技研究 CN**](keysight/report_cn) | 中文 | **新** 是德科技 测试测量行业深度研究 |
 | 19 | [**Sinokor & Container Analog EN**](19_Sinokor_Container_VLCC_Analog_EN) | English | **NEW** Sinokor 40% Dominance, Container Boom Parallel & VLCC Bull Case |
+| 20 | [**兴高海运与集运类比 CN**](20_Sinokor_Container_VLCC_Analog_CN) | 中文 | **新** 兴高海运40%定价权、集运牛市类比与VLCC牛市论证 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
