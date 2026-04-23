@@ -10,6 +10,22 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 📊 Sinokor Dominance & Container Shipping Analog (NEW — April 23, 2026)
+
+How Maersk's 2020–2022 container shipping playbook maps onto the 2026 VLCC super-cycle — with Sinokor controlling 40% of the global spot VLCC market (vs Maersk's ~17%).
+
+**[📄 Sinokor & Container Analog Analysis (EN) →](19_Sinokor_Container_VLCC_Analog_EN)**
+
+Key findings:
+- Container shipping stocks rallied **+400–700%** (ZIM, Hapag-Lloyd) when 2M Alliance controlled ~33% of supply
+- Sinokor at **40% solo** has stronger unilateral pricing power than Maersk ever had with an alliance partner
+- VLCC stocks have only moved +50–66% so far — potentially **10–20% of the way through** vs the container analog
+- Post-Hormuz demand overshoot (SPR restocking + queue clearance + storage unwind) mirrors pandemic restocking
+- FRO = ZIM analog (max beta), DHT = Hapag analog (pure play), INSW = Maersk analog (diversified)
+- Base case: **+150–400% further upside** with 30–40% annual dividend yields
+
+---
+
 ### 🚢 VLCC Market: Supply Shortage & SPR Restocking (NEW — April 2026)
 
 Standalone market analysis: why the VLCC market faces a multi-year structural shortage driven by shadow fleet exit, regulatory attrition, and the largest SPR restocking cycle in history.
@@ -112,6 +128,7 @@ Key findings:
 | 16 | [Tungsten Report CN](tungsten/report_cn) | 中文 | 中钨高新 周期性金属深度研究 |
 | 17 | [**Keysight Report EN**](keysight/report_en) | English | **NEW** Keysight Technologies (KEYS) T&M Deep Dive |
 | 18 | [**是德科技研究 CN**](keysight/report_cn) | 中文 | **新** 是德科技 测试测量行业深度研究 |
+| 19 | [**Sinokor & Container Analog EN**](19_Sinokor_Container_VLCC_Analog_EN) | English | **NEW** Sinokor 40% Dominance, Container Boom Parallel & VLCC Bull Case |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
@@ -131,4 +148,4 @@ Key findings:
 
 ---
 
-*Last updated: April 15, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
+*Last updated: April 23, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
