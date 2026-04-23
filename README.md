@@ -6,6 +6,14 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### 📊 Sinokor 40% Dominance & Container Shipping Analog (NEW — April 23, 2026)
+- **[Sinokor & Container Analog EN](19_Sinokor_Container_VLCC_Analog_EN.md) | [兴高海运与集运类比 CN](20_Sinokor_Container_VLCC_Analog_CN.md)** ← NEW
+- How Maersk's 2020–2022 container boom maps onto the 2026 VLCC super-cycle
+- Sinokor at 40% spot control vs Maersk's 2M Alliance at 33%: stronger unilateral pricing power
+- Stock mapping: FRO=ZIM (+693%), DHT=Hapag (+632%), INSW=Maersk (+164%)
+- VLCC stocks only +50-66% so far — potentially 10-20% through the cycle
+- Base case: +150-400% further upside with 30-40% annual dividend yields
+
 ### 🚢 VLCC Market: Supply Shortage & SPR Restocking (NEW — April 10, 2026)
 - **[Supply Shortage EN](13_VLCC_Supply_Shortage_EN.md) | [供给短缺分析 CN](14_VLCC_Supply_Shortage_CN.md)** ← NEW: Shadow fleet exit, SPR restocking 3-scenario model, supply/demand 2026-2030
 - Regulated fleet ~650-700 (not 900), 1.1B barrel restocking need, structural deficit by 2027
