@@ -268,7 +268,151 @@ The container boom benefited from a **simultaneous demand explosion** (e-commerc
 
 ---
 
-## Part 7: Watchlist & Catalysts
+## Part 7: Why the Container Cycle Ended — And Why VLCC Won't Repeat It
+
+### 7.1 The Real Cause of Death (Ranked by Impact)
+
+The container boom did **not** end primarily because of newbuild deliveries. It ended because of a multi-factor collapse, in this order:
+
+| # | Factor | Timing | Impact | VLCC Equivalent? |
+|---|--------|--------|--------|-----------------|
+| **1** | **Demand collapse** — pandemic restocking ended, consumer spending shifted from goods back to services | Q2 2022 onwards | ⭐⭐⭐⭐⭐ **Primary killer** | ❌ Oil demand is non-discretionary — it doesn't "shift back" |
+| **2** | **Port congestion cleared** — 100+ ships no longer stuck outside ports; effectively released ~10-15% of capacity overnight | Q2–Q3 2022 | ⭐⭐⭐⭐ | ⚠️ Analogous to Hormuz reopening releasing trapped vessels |
+| **3** | **Capacity discipline collapsed** — alliances stopped blank sailings, resumed full deployment | H2 2022 | ⭐⭐⭐ | ❌ Sinokor at 40% solo control — no coordination needed |
+| **4** | **Newbuild deliveries** — ships ordered in 2021-2022 at peak prices started arriving | **2023-2024 (lagging)** | ⭐⭐ Lagging factor | ❌ VLCC orderbook at historic lows |
+
+### 7.2 Newbuilds Were the Finishing Blow, Not the Cause
+
+The container orderbook reached **30%+ of the existing fleet** during the boom — carriers ordered aggressively at peak cycle. These ships started delivering in 2023-2024, crushing an already-weak market further.
+
+VLCC orderbook comparison:
+
+| Metric | Container (2022 peak) | VLCC (2026) |
+|--------|----------------------|-------------|
+| Orderbook-to-fleet ratio | **30%+** | **~5-6%** |
+| Annual delivery rate | 6-8% fleet growth | ~3-4% fleet growth |
+| Fleet age pressure | Moderate | **Critical** — avg age rising, shadow fleet exiting, IMO CII forcing scrapping |
+
+### 7.3 Autopsy: The Four Kill Factors Applied to VLCC
+
+| Container "Kill Factor" | Will It Repeat for VLCC? | Why / Why Not |
+|------------------------|-------------------------|---------------|
+| Demand disappears | **No** | Crude oil is essential, not discretionary. No "shift from goods to services" equivalent |
+| Restocking ends | **Not yet started** | SPR has a 305M barrel deficit; restocking cycle hasn't even begun |
+| Newbuilds flood in | **No (until 2028H2)** | Only 30-50 ships on order vs 626 effective fleet. Relief begins mid-2028 at earliest |
+| Capacity discipline breaks | **Unlikely** | Sinokor controls 40% unilaterally vs alliances requiring multi-party coordination |
+| Congestion/trapped capacity released | **⚠️ Yes — the one real risk** | Hormuz reopening releases 150+ trapped vessels. But offset by queue clearance demand + SPR restocking |
+
+**Bottom line: The container cycle's primary cause of death (demand evaporation) has no VLCC analog.** The only shared risk factor (capacity release from congestion clearing) is partially offset by the simultaneous demand overshoot from restocking.
+
+---
+
+## Part 8: Sinokor Fleet Control — Sustainability Analysis
+
+### 8.1 Fleet Composition
+
+| Category | Estimated Count | Control Duration |
+|----------|----------------|-----------------|
+| **Purchased outright (owned)** | ~36+ confirmed (via S&P reports) | ✅ **Permanent** — bought and paid for |
+| **Time charter-in (TC-in)** | ~42-82 (estimated remainder) | ⚠️ **Depends on charter period** |
+| **Total** | 78-130 vessels | Mixed |
+
+Source: BRS Shipbrokers, Signal Ocean Platform (TSOP), Breakwave Advisors, Riviera Maritime Media.
+
+### 8.2 What We Know About the TC-in Duration
+
+Sinokor is private and does not disclose charter terms. However, from industry context:
+
+**Favorable factors (control persists):**
+- 36+ purchased vessels are **permanently owned** — this alone gives ~10% of spot fleet as an irreducible base
+- Standard VLCC TC-in periods are **1-3 years**, some with renewal options
+- Fleet average age is 12.6 years (70% over 10 years) — these ships have **5-7 years of remaining trading life** before 20-year retirement
+- Sinokor was **still expanding** as of Feb 2026, suggesting confidence in sustained high rates
+
+**Risk factors (control may erode):**
+- If a large portion of TC-ins are **1-year short-term charters**, some may not be renewed in 2027+
+- Original owners could **reclaim vessels** to operate themselves if rates stay high
+- Older ships face **IMO CII/EEXI regulatory pressure** — some may be forced out of service by 2028-2030
+
+### 8.3 Scenario Analysis: Sinokor's Effective Control Over Time
+
+| Scenario | Sinokor Effective Fleet | % of Spot Market | Pricing Power |
+|----------|------------------------|-----------------|---------------|
+| **Floor (owned only)** | ~50-60 vessels | ~15% | Still largest operator, but reduced pricing power |
+| **Base (owned + medium-term TC)** | ~100-120 vessels | ~30% | Strong, comparable to 2M Alliance |
+| **Your baseline (40%)** | ~148 vessels | ~40% | Dominant — unilateral market maker |
+| **Bull (continued expansion)** | 150+ vessels | 40%+ | Maximum pricing power |
+
+### 8.4 Key Signals to Monitor
+
+1. **S&P market activity** — Is Sinokor still buying? Continued purchases = consolidating control
+2. **TC-in renewal rates** — Watch for reports of ships "returning to market" from Sinokor in H2 2026-2027
+3. **DHT earnings calls** — DHT called Sinokor an "aggregator" controlling 25%+; track their commentary on May 5
+4. **Lucky Maritime / Trafigura** — Will the partnership reconvene? Would boost Sinokor's effective control
+5. **Competitor response** — Are FRO, COSCO, or others consolidating in response?
+
+---
+
+## Part 9: The Dividend Safety Cushion — DHT Case Study
+
+### 9.1 Historical: DHT from 2022 Cycle Low to Today
+
+| Metric | Value |
+|--------|-------|
+| 2022 low (unadjusted) | **$4.81** (Jan 2022) |
+| 2022 close (unadjusted) | **$8.57** (Dec 2022) |
+| Current price | **$17.79** (Apr 23, 2026) |
+| Cumulative dividends (2022-2026 Q1) | **$3.42/share** |
+
+| Return Measure | Price-Only (Unadjusted) | Total Return (Incl. Dividends) | Dividend Contribution |
+|---------------|------------------------|-------------------------------|----------------------|
+| From 2022 low | **3.70x** (+270%) | **4.41x** (+341%) | +0.71x |
+| From 2022 close | **2.08x** (+108%) | **2.47x** (+147%) | +0.40x |
+
+**Dividend cushion effect**: If you bought at the 2022 low, dividends alone have already recovered **71%** of your cost basis. From the 2022 close, **40%**. Even if the stock price crashes back to 2022 levels, you've already locked in most of your capital through dividends.
+
+### 9.2 Forward-Looking: DHT at TCE $150K (75% Spot Mix)
+
+| Metric | Value |
+|--------|-------|
+| Annual fleet profit | **$791M** |
+| EPS | **$4.91** |
+| DPS (95% payout) | **$4.67** |
+| Dividend yield | **26.2%** |
+| P/E (current price) | **3.62x** |
+| P/E (post-dividend, ex-div price) | **2.67x** ← Massively compressed! |
+
+**Cost recovery at $17.79 entry:**
+- Year 1 dividends: $4.67 → recovers **26%** of cost
+- Year 2 dividends: $9.33 → recovers **52%** of cost
+- The stock effectively pays for itself in ~4 years at this rate
+
+### 9.3 TCE Sensitivity — Dividend Yield & Post-Dividend PE
+
+*Assumes 75% spot mix, 24 VLCCs, 95% payout, $17.79 entry price.*
+
+| TCE | EPS | DPS | Div Yield | P/E | Post-Div P/E | 1yr Recovery | 2yr Recovery |
+|-----|-----|-----|-----------|-----|-------------|-------------|-------------|
+| $80K | $2.33 | $2.21 | 12.4% | 7.6x | 6.7x | 12% | 25% |
+| $100K | $3.07 | $2.91 | 16.4% | 5.8x | 4.9x | 16% | 33% |
+| $120K | $3.81 | $3.61 | 20.3% | 4.7x | 3.7x | 20% | 41% |
+| **$150K** | **$4.91** | **$4.67** | **26.2%** | **3.6x** | **2.7x** | **26%** | **52%** |
+| $180K | $6.02 | $5.72 | 32.1% | 3.0x | 2.0x | 32% | 64% |
+| $200K | $6.76 | $6.42 | 36.1% | 2.6x | 1.7x | 36% | 72% |
+| $250K | $8.60 | $8.17 | 45.9% | 2.1x | 1.1x | 46% | 92% |
+
+### 9.4 Why This Isn't a "Low PE Trap"
+
+The classic cyclical stock warning: "Low PE means peak earnings — it's about to crash." But this argument fails when **the earnings floor is structurally elevated**:
+
+- The supply gap is **objective and quantifiable** (Report #13): deficit begins 2027, relief only in 2028H2
+- Even at the **most conservative TCE floor of $100K**, DHT trades at 5.8x PE with 16.4% dividend yield — that's cheap for a floor scenario
+- At TCE $150K (base case with Sinokor discipline + SPR restocking), PE is 3.6x and dividends recover 26% of your cost annually
+- The "Davis Double Play": high dividends compress your cost basis → low PE attracts value buyers → stock price recovers → you win on both capital and income
+
+---
+
+## Part 10: Watchlist & Catalysts
 
 ### Near-Term Earnings Catalysts
 
@@ -318,4 +462,4 @@ If the container analog holds, **the VLCC stock rally is only 10–20% of the wa
 
 ---
 
-*Analysis date: April 23, 2026 | [← Back to Hub](index)*
+*Analysis date: April 24, 2026 (updated) | [← Back to Hub](index)*
