@@ -10,6 +10,22 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 📈 DHT Holdings Q1 2026 Earnings Deep Dive (NEW — May 5, 2026)
+
+Blowout quarter: Revenue $186.5M (+134% YoY), EPS $1.02 (beat consensus by 67%), spot TCE $106K/day, Q2 bookings at $189,500/day. TD3C at all-time high $420K+/day. Full Day1Global framework analysis with 6 rate scenarios.
+
+**[📄 DHT Q1 2026 Earnings (EN/CN Summary) →](dht-q1-2026)** | **[Full EN Report →](21_DHT_Q1_2026_Earnings_EN)** | **[完整中文报告 →](22_DHT_Q1_2026_Earnings_CN)**
+
+Key findings:
+- EPS $1.02 beat consensus $0.61 by **67%** — revenue +134% YoY to $186.5M
+- Q2 spot bookings at **$189,500/day** (2x Q1 avg) — Q2 earnings likely 2x+ Q1
+- Current TD3C at **$423,736/day** = 23x DHT's $18,300 breakeven — stock trades at <1x annualized spot earnings
+- Base case: **$3.98 FY2026 EPS**, 4.8x PE, **20.8% dividend yield**, 12M target **$27.90 (+46%)**
+- Fleet modernization: 3/4 newbuilds delivered, $94M gains from legacy sales, zero dilution
+- Rating: **STRONG BUY** across base/bull scenarios
+
+---
+
 ### 📊 Sinokor Dominance & Container Shipping Analog (NEW — April 23, 2026)
 
 How Maersk's 2020–2022 container shipping playbook maps onto the 2026 VLCC super-cycle — with Sinokor controlling 40% of the global spot VLCC market (vs Maersk's ~17%).
@@ -130,6 +146,8 @@ Key findings:
 | 18 | [**是德科技研究 CN**](keysight/report_cn) | 中文 | **新** 是德科技 测试测量行业深度研究 |
 | 19 | [**Sinokor & Container Analog EN**](19_Sinokor_Container_VLCC_Analog_EN) | English | **NEW** Sinokor 40% Dominance, Container Boom Parallel & VLCC Bull Case |
 | 20 | [**兴高海运与集运类比 CN**](20_Sinokor_Container_VLCC_Analog_CN) | 中文 | **新** 兴高海运40%定价权、集运牛市类比与VLCC牛市论证 |
+| 21 | [**DHT Q1 2026 Earnings EN**](21_DHT_Q1_2026_Earnings_EN) | English | **NEW** Q1 2026 Earnings Deep Dive & Call Analysis |
+| 22 | [**DHT Q1 2026 财报分析 CN**](22_DHT_Q1_2026_Earnings_CN) | 中文 | **新** Q1 2026财报深度分析与电话会议解读 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
@@ -149,4 +167,4 @@ Key findings:
 
 ---
 
-*Last updated: April 23, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
+*Last updated: May 5, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
