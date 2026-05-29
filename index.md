@@ -10,7 +10,22 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🎯 Mid-Rally Pullback or Post-Peak? — Cycle Position v2 (NEW — May 28, 2026, refines #27/#28)
+### 🟡 Cycle Position v3 — Bull-Case Stress Test & Honest Reassessment (NEW — May 28, 2026, refines #29/#30)
+
+User pushed back hard on prior bear lean with 3 strong bull arguments. **Validated against primary data**: (1) **MSC-Sinokor alliance formalized Feb 2, 2026** (SAS Lux acquired 50% of Sinokor) — combined fleet **130-150 VLCCs = up to 40% of compliant spot market** — major rate-floor mechanism analogous to 2M container alliance. **(I should have flagged this in #27/#28.)** (2) IEA released **400M bbl** SPR (largest ever); US 172M; refill demand real but slow at historical 12M/yr pace (33 yr to refill). (3) Iran normalization → **shadow-fleet shift** of ~30 VLCCs from sanctioned trade to mainstream fleet (95% of 1,100-1,400-ship shadow fleet already >15 yrs old). **Honest revised stance**: drawdown estimate -30 to -60% → **-15 to -45%**; bull/base/bear weights 25/50/25 → **40/45/15**; cycle stage "Stage 5 confirmed" → **"Stage 4 late / Stage 5 early — bimodal"**.
+
+**[📄 Cycle Position v3 (EN) →](31_VLCC_Cycle_Position_v3_EN)** | **[周期定位 v3（中文）→](32_VLCC_Cycle_Position_v3_CN)**
+
+Key revised findings:
+- Probability-weighted 12-month total return: **+8 to +15%** (including dividends), vs prior -10 to -25%
+- Sinokor 40% claim from page 19 was correct — **MSC formalization strengthens it, doesn't invalidate it**
+- Floor TCE estimate: **$60-80K/day** (vs prior cycle's $25-35K/day) due to MSC-Sinokor pricing power
+- Where I still push back: Greek-buyer signal IS firing; MSC pricing power is conditional not absolute; Iran normalization timing 6-24 months
+- **Dividend-anchored holders OK; active capital should not aggressively add at current levels**
+
+---
+
+### 🎯 Mid-Rally Pullback or Post-Peak? — Cycle Position v2 (May 28, 2026)
 
 Answers 4 sharp questions: **(NEW Q)** Did container 2020-2022 have similar 25-30% mid-rally pullbacks? **YES** — ZIM dropped −25 to −33% Sep-Oct 2021 then rallied to $91.23 ATH. But absorbed because freight + earnings were still rising. VLCC now has the inverse setup. **(Q4)** Q1 2026 VLCC orderer profile: **Greek-dominated** (Capital Ship Mgmt **11 ships at Hengli**, Cape Shipping 2, Navios + Monte Nero 4) = textbook cycle-top signal. Chinese SOEs measured: **招商轮船 10 VLCCs at Dalian Mar 30 (¥8.57B)**, 中远海能 6 (Nov 2024, first since 2017). **(Q2)** Prior tanker cycles (2004/2008/2015/2020): stocks lead/coincident with rates by 0-1 quarter — **NOT 9-18 months like container** (tanker is spot-based; container had long contracts). So VLCC earnings-momentum cushion is much shorter. **(Q3)** **DHT Q1 2026 dividend = $0.64** (annualized 17% yield); modeled bearish scenario still returns 40-50% of current price as dividends over 2026-27.
 
@@ -208,8 +223,10 @@ Key findings:
 | 26 | [VLCC 回调事实核查与修订 CN](26_VLCC_Selloff_FactCheck_Correction_CN) | 中文 | 38 个一手来源；修订核心结论（战争溢价仅占回撤约 5–7 个百分点） |
 | 27 | [VLCC Container Analog Updated EN](27_VLCC_Container_Analog_Updated_EN) | English | Where in the cycle: VLCC = container April-May 2022 equivalent |
 | 28 | [VLCC 集运类比重新校准 CN](28_VLCC_Container_Analog_Updated_CN) | 中文 | 周期位置：VLCC = 集运 2022 年 4-5 月等价位置 |
-| 29 | [**VLCC Cycle Position v2 EN**](29_VLCC_Cycle_Position_v2_EN) | English | **NEW** Mid-rally vs post-peak; Q1 2026 orderer profile (Greek-dominated); prior tanker lead-lag; DHT dividend model |
-| 30 | [**VLCC 周期定位 v2 CN**](30_VLCC_Cycle_Position_v2_CN) | 中文 | **新** 中段 vs 顶后；Q1 2026 下单方画像（希腊主导）；过往油运时滞；DHT 分红模型 |
+| 29 | [VLCC Cycle Position v2 EN](29_VLCC_Cycle_Position_v2_EN) | English | Mid-rally vs post-peak; Q1 2026 orderer profile (Greek-dominated); prior tanker lead-lag; DHT dividend model |
+| 30 | [VLCC 周期定位 v2 CN](30_VLCC_Cycle_Position_v2_CN) | 中文 | 中段 vs 顶后；Q1 2026 下单方画像（希腊主导）；过往油运时滞；DHT 分红模型 |
+| 31 | [**VLCC Cycle Position v3 EN**](31_VLCC_Cycle_Position_v3_EN) | English | **NEW** Bull-case stress test: MSC-Sinokor alliance (Feb 2 2026 formalization), SPR refill, shadow-fleet shift; honest reassessment — bear/base/bull 15/45/40 |
+| 32 | [**VLCC 周期定位 v3 CN**](32_VLCC_Cycle_Position_v3_CN) | 中文 | **新** 多头论据压力测试：MSC-Sinokor 联盟、SPR 补库、影子船队转移；诚实重估 — 空头/基准/多头 15/45/40 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
