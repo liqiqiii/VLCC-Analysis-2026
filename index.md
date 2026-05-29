@@ -10,7 +10,22 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🗺️ Where Are We in the VLCC Cycle? — Container 2020–2024 Analog Re-applied (NEW — May 28, 2026)
+### 🎯 Mid-Rally Pullback or Post-Peak? — Cycle Position v2 (NEW — May 28, 2026, refines #27/#28)
+
+Answers 4 sharp questions: **(NEW Q)** Did container 2020-2022 have similar 25-30% mid-rally pullbacks? **YES** — ZIM dropped −25 to −33% Sep-Oct 2021 then rallied to $91.23 ATH. But absorbed because freight + earnings were still rising. VLCC now has the inverse setup. **(Q4)** Q1 2026 VLCC orderer profile: **Greek-dominated** (Capital Ship Mgmt **11 ships at Hengli**, Cape Shipping 2, Navios + Monte Nero 4) = textbook cycle-top signal. Chinese SOEs measured: **招商轮船 10 VLCCs at Dalian Mar 30 (¥8.57B)**, 中远海能 6 (Nov 2024, first since 2017). **(Q2)** Prior tanker cycles (2004/2008/2015/2020): stocks lead/coincident with rates by 0-1 quarter — **NOT 9-18 months like container** (tanker is spot-based; container had long contracts). So VLCC earnings-momentum cushion is much shorter. **(Q3)** **DHT Q1 2026 dividend = $0.64** (annualized 17% yield); modeled bearish scenario still returns 40-50% of current price as dividends over 2026-27.
+
+**[📄 Cycle Position v2 (EN) →](29_VLCC_Cycle_Position_v2_EN)** | **[周期定位 v2（中文）→](30_VLCC_Cycle_Position_v2_CN)**
+
+Verdict — revised stance vs #27/#28:
+- "Post-peak drawdown" → **HIGH confidence** (vs "likely" before)
+- Cycle stage: late Stage 4 → early Stage 5 → **Stage 5 confirmed**
+- Drawdown estimate: −40 to −70% → **−30 to −60%** (dividend cushion smaller drawdown)
+- Time to bottom: 18-30 mo → **12-24 mo** (tanker shorter than container)
+- Active VLCC fleet: ~**905-920 ships**; orderbook ~**142 ships**
+
+---
+
+### 🗺️ Where Are We in the VLCC Cycle? — Container 2020–2024 Analog Re-applied (May 28, 2026)
 
 Direct timeline-and-orderbook comparison between the container 2020–2024 cycle and current VLCC cycle. **COSCO Holdings (601919) peaked July 2021 → FY2022 was peak earnings → stocks led earnings by ~12–18 months.** ZIM peaked March 2022 → bottomed Aug 2024 at $6.50 (−93%). Container orderbook hit 28.9% of fleet (early 2023); Q1 2026 VLCC orderbook is 17–26% — lower but lead time 30–48 months vs container's 24. **Best estimate: VLCC is in the container-equivalent of April–May 2022** — post-stock-peak, post-freight-peak, pre-confirmed-earnings-peak, pre-delivery-wave (2028–2030 for VLCC vs 2023–2024 for container).
 
@@ -191,8 +206,10 @@ Key findings:
 | 24 | [VLCC 顶部回调分析 CN](24_VLCC_Post_Peak_Selloff_CN) | 中文 | **已修订** — 初版（被 #26 修订） |
 | 25 | [VLCC Selloff Fact-Check & Revision EN](25_VLCC_Selloff_FactCheck_Correction_EN) | English | Fact-check with 38 primary sources; revised core conclusion (war premium only ~5–7ppt of drawdown) |
 | 26 | [VLCC 回调事实核查与修订 CN](26_VLCC_Selloff_FactCheck_Correction_CN) | 中文 | 38 个一手来源；修订核心结论（战争溢价仅占回撤约 5–7 个百分点） |
-| 27 | [**VLCC Container Analog Updated EN**](27_VLCC_Container_Analog_Updated_EN) | English | **NEW** Where in the cycle: VLCC = container April-May 2022 equivalent; full lead-lag + orderbook comparison; corrects pages #19/#20 |
-| 28 | [**VLCC 集运类比重新校准 CN**](28_VLCC_Container_Analog_Updated_CN) | 中文 | **新** 周期位置：VLCC = 集运 2022 年 4-5 月等价位置；完整领先滞后 + 订单簿对比；修订 #19/#20 |
+| 27 | [VLCC Container Analog Updated EN](27_VLCC_Container_Analog_Updated_EN) | English | Where in the cycle: VLCC = container April-May 2022 equivalent |
+| 28 | [VLCC 集运类比重新校准 CN](28_VLCC_Container_Analog_Updated_CN) | 中文 | 周期位置：VLCC = 集运 2022 年 4-5 月等价位置 |
+| 29 | [**VLCC Cycle Position v2 EN**](29_VLCC_Cycle_Position_v2_EN) | English | **NEW** Mid-rally vs post-peak; Q1 2026 orderer profile (Greek-dominated); prior tanker lead-lag; DHT dividend model |
+| 30 | [**VLCC 周期定位 v2 CN**](30_VLCC_Cycle_Position_v2_CN) | 中文 | **新** 中段 vs 顶后；Q1 2026 下单方画像（希腊主导）；过往油运时滞；DHT 分红模型 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
