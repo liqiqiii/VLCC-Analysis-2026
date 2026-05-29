@@ -7,6 +7,15 @@ title: VLCC Post-Peak Selloff (Mar–May 2026)
 ## Why DHT / FRO / 中远海能 / 招商轮船 Are ~25% Off the March High
 ### Two-Step Research Protocol Applied | May 28, 2026
 
+> **🛑 CORRECTION NOTICE (May 28, 2026, post-publication)**: The Step 1 core conclusion below was found to contain **four substantive errors** after expert review. A full fact-check with primary-source verification and a revised core conclusion is published at **[25_VLCC_Selloff_FactCheck_Correction_EN](25_VLCC_Selloff_FactCheck_Correction_EN)**. The errors are:
+>
+> 1. **TD3C was a paper price** during the war (few real fixtures). Real trading routes (TD22, TD15) softened but stayed 2–3× 2025 averages; Atlantic softness is partly MEG-to-Atlantic ballast oversupply, not demand collapse.
+> 2. **China was BUILDING, not drawing, stocks** — onshore inventory hit a record high ~1.17 bn bbl mid-May with tank utilization only ~62%. The "import collapse = demand cliff" framing was directly wrong.
+> 3. **Orderbook is a 2028–2030 problem, not 2026–2027** — only ~29 VLCCs deliver in 2026 / ~24 in 2027. Q1 2026 orders mostly land 2028–2030.
+> 4. **Stocks peaked at war-start, not after** (DHT $20.55 on Mar 2; war began Feb 28). Only ~3–7% of the rally was war-attributable; the drawdown is mostly a super-cycle thesis de-rating, not a war premium reversion.
+>
+> **Read the corrected page**: [25_VLCC_Selloff_FactCheck_Correction_EN](25_VLCC_Selloff_FactCheck_Correction_EN). The text below is preserved unchanged for transparency.
+
 > **TL;DR**: VLCC equities have given back roughly 25% from their March 2026 peak **despite a record-breaking Q1 earnings season**. The drawdown is a **sentiment-and-forward-curve repricing**, not an earnings miss. Six catalysts compressed into eight weeks: (1) fragile US–Iran ceasefire and partial Strait of Hormuz reopening (Apr 7–18), (2) OPEC+ +206 kb/d output-hike signal for Apr & May, (3) Evercore ISI downgrade of DHT and FRO on "reversion risk", (4) China crude-import collapse to a 4-year low (Apr −20% YoY; May seaborne forecast ~6.8 mbd, decade low) with teapot utilization down to 50%, (5) record Q1 2026 VLCC newbuild ordering (~85 ships; orderbook now 17–26% of the fleet vs ~1% in mid-2023), and (6) the single steepest one-day VLCC rate plunge since May 2020. TD3C has reverted from a >$600K/day panic peak to a $150K–$175K/day forward strip — still roughly 3× mid-cycle, but a brutal repricing of the war-risk premium.
 
 ---

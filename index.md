@@ -10,18 +10,26 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🔻 VLCC Post-Peak Selloff: Why the Sector Is ~25% Off March Highs (NEW — May 28, 2026)
+### 🔁 VLCC Selloff Fact-Check & Revised Analysis (NEW — May 28, 2026, supersedes #23/#24)
 
-First page to apply the new **Two-Step Research Protocol** (see top of `.github/copilot-instructions.md`). Walks through six catalysts in 8 weeks — fragile US–Iran ceasefire + partial Hormuz reopening, OPEC+ +206 kb/d signal, Evercore ISI downgrade of DHT/FRO on reversion risk, China crude-import collapse (April −20% YoY, teapot util 50%), record Q1 2026 VLCC orderbook (~85 ships, fleet ratio 17–26%), and the steepest one-day TD3C plunge since May 2020. Followed by a strict peer-review audit.
+Substantial corrections to the previous-day's selloff analysis after reader review identified 4 errors. Real trading routes (TD22 USG→China $59.26/mt vs 2025 avg $34.01/mt) still print 2–3× last year's averages; **China is BUILDING crude inventory to a record ~1.17 bn bbl** (tank util only 62%), not drawing; orderbook is a 2028–2030 problem (only ~29 VLCC deliveries in 2026 / ~24 in 2027); and **stocks peaked at war-start (DHT $20.55 March 2, war Feb 28), not after** — so only ~5–7 ppt of the drawdown is war-premium reversion, the rest is super-cycle thesis de-rating.
 
-**[📄 VLCC Selloff Analysis (EN) →](23_VLCC_Post_Peak_Selloff_EN)** | **[中文版 →](24_VLCC_Post_Peak_Selloff_CN)**
+**[📄 Fact-Check & Revised Analysis (EN) →](25_VLCC_Selloff_FactCheck_Correction_EN)** | **[事实核查与修订（中文）→](26_VLCC_Selloff_FactCheck_Correction_CN)**
 
-Key findings (Step 1 — draft only, subject to Step 2 audit):
-- DHT / FRO / 中远海能 (600026.SH) / 招商轮船 (601872.SH) all **~−25% from the March 2026 peak**
-- TD3C: >**$600K/day** (early Mar) → ~**$400K/day** (mid-Apr) → **$150K–$175K/day** forward strip (late May)
-- Q1 2026 was a **record earnings quarter** for both DHT (EPS $1.02, +67% beat) and FRO ($2.51 EPS, $1.55 dividend, "most profitable quarter since 2004")
-- Drawdown is a **sentiment + forward-curve repricing**, not an earnings miss — but Step 2 flags 10 items needing primary-source verification
-- Base-case direction: bearish 3–6 months; bull case needs ton-mile stickiness, a second Middle East flare-up, or China refinery restart
+Key revised findings (Step 1 — draft, subject to Step 2 audit; **38 primary sources cited**):
+- War-premium ≈ only ~5–7 ppt of the ~25% drawdown; ~18–20 ppt is broader super-cycle de-rating
+- TD22 (USG→China) softened from $108.52/mt (Mar) → $59.26/mt (late Apr) — but still ~74% premium to 2025 avg
+- China onshore stocks: March +1.74 mbpd to storage, April surplus +430 kbpd → record-high ~1.17 bn bbl mid-May
+- VLCC deliveries: 2026 ~29, 2027 ~24, then Q1 2026 orders mostly land 2028–2030 (Chinese yards 92% of new orders, booked through 2030)
+- Scrapping remains very slow (~2 VLCCs in 2025); 15-yr-old VLCC at ~$81M (15-yr high)
+
+---
+
+### 🔻 VLCC Post-Peak Selloff: Initial Draft (May 28, 2026 — SUPERSEDED by #25/#26)
+
+Original Step 1 draft contained four substantive errors (TD3C as paper price; China inventory direction; orderbook delivery timing; war timing). **Read the corrected analysis at #25/#26 above.** Original kept for transparency.
+
+**[📄 Original draft (EN) →](23_VLCC_Post_Peak_Selloff_EN)** | **[原草稿（中文）→](24_VLCC_Post_Peak_Selloff_CN)**
 
 ---
 
@@ -163,8 +171,10 @@ Key findings:
 | 20 | [**兴高海运与集运类比 CN**](20_Sinokor_Container_VLCC_Analog_CN) | 中文 | **新** 兴高海运40%定价权、集运牛市类比与VLCC牛市论证 |
 | 21 | [DHT Q1 2026 Earnings EN](21_DHT_Q1_2026_Earnings_EN) | English | Q1 2026 Earnings Deep Dive & Call Analysis |
 | 22 | [DHT Q1 2026 财报分析 CN](22_DHT_Q1_2026_Earnings_CN) | 中文 | Q1 2026财报深度分析与电话会议解读 |
-| 23 | [**VLCC Post-Peak Selloff EN**](23_VLCC_Post_Peak_Selloff_EN) | English | **NEW** Why DHT/FRO/中远海能/招商轮船 are ~25% off March peak — 6 catalysts + Two-Step protocol audit |
-| 24 | [**VLCC 顶部回调分析 CN**](24_VLCC_Post_Peak_Selloff_CN) | 中文 | **新** 三月顶部之后为何回撤约25% — 6 大催化剂 + 两步研究协议审稿 |
+| 23 | [VLCC Post-Peak Selloff EN](23_VLCC_Post_Peak_Selloff_EN) | English | **SUPERSEDED** — Initial draft (corrected by #25) |
+| 24 | [VLCC 顶部回调分析 CN](24_VLCC_Post_Peak_Selloff_CN) | 中文 | **已修订** — 初版（被 #26 修订） |
+| 25 | [**VLCC Selloff Fact-Check & Revision EN**](25_VLCC_Selloff_FactCheck_Correction_EN) | English | **NEW** Fact-check with 38 primary sources; revised core conclusion (war premium only ~5–7ppt of drawdown) |
+| 26 | [**VLCC 回调事实核查与修订 CN**](26_VLCC_Selloff_FactCheck_Correction_CN) | 中文 | **新** 38 个一手来源；修订核心结论（战争溢价仅占回撤约 5–7 个百分点） |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
