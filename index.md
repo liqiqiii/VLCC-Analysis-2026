@@ -10,7 +10,22 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🟡 Cycle Position v3 — Bull-Case Stress Test & Honest Reassessment (NEW — May 28, 2026, refines #29/#30)
+### 🛑 Global SPR Refill — Math Correction (NEW — May 29, 2026, refines #31/#32)
+
+User pushed back: SPR math was US-narrow. **400M release breakdown**: US 172M (43%), **Japan 79.8M (20%)**, Korea 22.5M, Germany 19.5M, France 14.6M, UK 14.0M, other 77.6M. **Japan refill is most VLCC-intensive** (100% imported crude, 70% MEG). **IEA 90-day rule is LEGAL OBLIGATION** for non-US members (faster refill than US's politically-paralyzed pace). **China structural building** runs in parallel at **500K-1M bpd through Q3 2026** (Goldman). Combined: IEA refill + China = **~270-770 kbpd structural demand = 2.7-7.7% of crude trade = 28-66 VLCC-equivalents**. Plus shadow-fleet shift (15-30) + MSC-Sinokor floor = **~60-90 VLCCs of mainstream demand boost = 6-10% of fleet**. **OFFSETS 2026-27 delivery wave (~50 ships)**.
+
+**[📄 Global SPR Refill Recalculated (EN) →](33_Global_SPR_Refill_Recalculated_EN)** | **[全球 SPR 补库重新测算（中文）→](34_Global_SPR_Refill_Recalculated_CN)**
+
+Cumulative revised stance across all pages 23-34:
+- **Cycle stage**: Stage 5 confirmed → Stage 4 late, **bull > bear**
+- **Drawdown estimate**: -40 to -70% → **-5 to -35%** (cumulative across iterations)
+- **Bull/Base/Bear weights**: unstated → 25/50/25 → 40/45/15 → **50/35/15**
+- **12-month total return**: not stated → +8 to +15% → **+10 to +25%**
+- **TCE floor**: $25-35K → $60-80K → **$70-90K**
+
+---
+
+### 🟡 Cycle Position v3 — Bull-Case Stress Test (May 28, 2026)
 
 User pushed back hard on prior bear lean with 3 strong bull arguments. **Validated against primary data**: (1) **MSC-Sinokor alliance formalized Feb 2, 2026** (SAS Lux acquired 50% of Sinokor) — combined fleet **130-150 VLCCs = up to 40% of compliant spot market** — major rate-floor mechanism analogous to 2M container alliance. **(I should have flagged this in #27/#28.)** (2) IEA released **400M bbl** SPR (largest ever); US 172M; refill demand real but slow at historical 12M/yr pace (33 yr to refill). (3) Iran normalization → **shadow-fleet shift** of ~30 VLCCs from sanctioned trade to mainstream fleet (95% of 1,100-1,400-ship shadow fleet already >15 yrs old). **Honest revised stance**: drawdown estimate -30 to -60% → **-15 to -45%**; bull/base/bear weights 25/50/25 → **40/45/15**; cycle stage "Stage 5 confirmed" → **"Stage 4 late / Stage 5 early — bimodal"**.
 
@@ -225,8 +240,10 @@ Key findings:
 | 28 | [VLCC 集运类比重新校准 CN](28_VLCC_Container_Analog_Updated_CN) | 中文 | 周期位置：VLCC = 集运 2022 年 4-5 月等价位置 |
 | 29 | [VLCC Cycle Position v2 EN](29_VLCC_Cycle_Position_v2_EN) | English | Mid-rally vs post-peak; Q1 2026 orderer profile (Greek-dominated); prior tanker lead-lag; DHT dividend model |
 | 30 | [VLCC 周期定位 v2 CN](30_VLCC_Cycle_Position_v2_CN) | 中文 | 中段 vs 顶后；Q1 2026 下单方画像（希腊主导）；过往油运时滞；DHT 分红模型 |
-| 31 | [**VLCC Cycle Position v3 EN**](31_VLCC_Cycle_Position_v3_EN) | English | **NEW** Bull-case stress test: MSC-Sinokor alliance (Feb 2 2026 formalization), SPR refill, shadow-fleet shift; honest reassessment — bear/base/bull 15/45/40 |
-| 32 | [**VLCC 周期定位 v3 CN**](32_VLCC_Cycle_Position_v3_CN) | 中文 | **新** 多头论据压力测试：MSC-Sinokor 联盟、SPR 补库、影子船队转移；诚实重估 — 空头/基准/多头 15/45/40 |
+| 31 | [VLCC Cycle Position v3 EN](31_VLCC_Cycle_Position_v3_EN) | English | Bull-case stress test: MSC-Sinokor alliance, SPR refill, shadow-fleet shift |
+| 32 | [VLCC 周期定位 v3 CN](32_VLCC_Cycle_Position_v3_CN) | 中文 | 多头论据压力测试 |
+| 33 | [**Global SPR Refill Recalculated EN**](33_Global_SPR_Refill_Recalculated_EN) | English | **NEW** Math correction — global (not US-only) 400M SPR refill + China structural + 90-day IEA obligation; demand 4-6x prior estimate |
+| 34 | [**全球 SPR 补库重新测算 CN**](34_Global_SPR_Refill_Recalculated_CN) | 中文 | **新** 算术修正 — 全球（非美国单一）4 亿桶补库 + 中国结构性 + IEA 90 天义务；需求是先前估计的 4-6 倍 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
