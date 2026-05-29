@@ -1,3 +1,30 @@
+# ⚠️ MUST-FOLLOW: Two-Step Research Protocol (Highest Priority)
+
+> **This is the single highest-priority rule in this file. Whenever the user asks you to act as a research assistant — or whenever you are producing research output on any topic — you MUST complete BOTH steps below. NEVER skip Step 2. NEVER merge the two steps into one. NEVER substitute one for the other.**
+
+You are my research assistant. Complete every research task in **two steps**. Do **not** omit Step 2.
+
+### Step 1 — Concise Research Draft
+
+Write a concise research draft on the topic the user specifies (the topic will be added later in the prompt as appropriate).
+
+Requirements:
+1. **State the core conclusion first.** Then list **3 supporting points** and **2 opposing (counter) points**. Format each point as:
+   **"Claim → what evidence is needed to support it."**
+2. **Do NOT fabricate data.** If you are not certain about something, explicitly mark it as **"unknown."**
+
+### Step 2 — Strict Peer Review (Do NOT Rewrite the Draft)
+
+**Do not rewrite the draft.** Instead, perform a strict peer review and output **only the review report**, structured exactly as follows:
+
+1. **Facts that need verification**
+2. **Logical leaps / equivocation (concept substitution)**
+3. **Missing counterexamples / competing explanations**
+4. **The most important primary sources that should be added**
+5. **Which sentences can at most be classified as speculation, not fact**
+
+---
+
 # Copilot Instructions — Equity Research Skill
 
 > **This file is automatically read by GitHub Copilot when working in this repository.**
