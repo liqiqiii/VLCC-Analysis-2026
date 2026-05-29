@@ -10,7 +10,23 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🔁 VLCC Selloff Fact-Check & Revised Analysis (NEW — May 28, 2026, supersedes #23/#24)
+### 🗺️ Where Are We in the VLCC Cycle? — Container 2020–2024 Analog Re-applied (NEW — May 28, 2026)
+
+Direct timeline-and-orderbook comparison between the container 2020–2024 cycle and current VLCC cycle. **COSCO Holdings (601919) peaked July 2021 → FY2022 was peak earnings → stocks led earnings by ~12–18 months.** ZIM peaked March 2022 → bottomed Aug 2024 at $6.50 (−93%). Container orderbook hit 28.9% of fleet (early 2023); Q1 2026 VLCC orderbook is 17–26% — lower but lead time 30–48 months vs container's 24. **Best estimate: VLCC is in the container-equivalent of April–May 2022** — post-stock-peak, post-freight-peak, pre-confirmed-earnings-peak, pre-delivery-wave (2028–2030 for VLCC vs 2023–2024 for container).
+
+**[📄 Container Analog Re-applied (EN) →](27_VLCC_Container_Analog_Updated_EN)** | **[集运类比的重新校准（中文）→](28_VLCC_Container_Analog_Updated_CN)**
+
+Key findings (Step 1 — draft, subject to Step 2 audit):
+- **The timing sequence is identical**: freight peak → stock peak → earnings peak (12–18 months later) → delivery wave (2-3 years later) → multi-year bear
+- VLCC structural advantages vs container at peak: orderbook 17–26% (vs 28.9%), lead time 30–48 mo (vs 24), oil demand steadier than COVID-rebound demand
+- Container peak-to-trough equity drawdown: −50% (Maersk) to −93% (ZIM); proportional VLCC could see −20% to −70% from current point (already down 25%)
+- Dividends are the cushion: ZIM holders collected ~$25/share before the worst drawdown — DHT/FRO 2026 dividend trajectory similarly large
+- **Cycle stage: late Stage 4 (distribution) → entering Stage 5 (early bear)**
+- Pages 19/20 ("VLCC orderbook at historic lows") explicitly **invalidated** by Q1 2026 ordering wave
+
+---
+
+### 🔁 VLCC Selloff Fact-Check & Revised Analysis (May 28, 2026, supersedes #23/#24)
 
 Substantial corrections to the previous-day's selloff analysis after reader review identified 4 errors. Real trading routes (TD22 USG→China $59.26/mt vs 2025 avg $34.01/mt) still print 2–3× last year's averages; **China is BUILDING crude inventory to a record ~1.17 bn bbl** (tank util only 62%), not drawing; orderbook is a 2028–2030 problem (only ~29 VLCC deliveries in 2026 / ~24 in 2027); and **stocks peaked at war-start (DHT $20.55 March 2, war Feb 28), not after** — so only ~5–7 ppt of the drawdown is war-premium reversion, the rest is super-cycle thesis de-rating.
 
@@ -173,8 +189,10 @@ Key findings:
 | 22 | [DHT Q1 2026 财报分析 CN](22_DHT_Q1_2026_Earnings_CN) | 中文 | Q1 2026财报深度分析与电话会议解读 |
 | 23 | [VLCC Post-Peak Selloff EN](23_VLCC_Post_Peak_Selloff_EN) | English | **SUPERSEDED** — Initial draft (corrected by #25) |
 | 24 | [VLCC 顶部回调分析 CN](24_VLCC_Post_Peak_Selloff_CN) | 中文 | **已修订** — 初版（被 #26 修订） |
-| 25 | [**VLCC Selloff Fact-Check & Revision EN**](25_VLCC_Selloff_FactCheck_Correction_EN) | English | **NEW** Fact-check with 38 primary sources; revised core conclusion (war premium only ~5–7ppt of drawdown) |
-| 26 | [**VLCC 回调事实核查与修订 CN**](26_VLCC_Selloff_FactCheck_Correction_CN) | 中文 | **新** 38 个一手来源；修订核心结论（战争溢价仅占回撤约 5–7 个百分点） |
+| 25 | [VLCC Selloff Fact-Check & Revision EN](25_VLCC_Selloff_FactCheck_Correction_EN) | English | Fact-check with 38 primary sources; revised core conclusion (war premium only ~5–7ppt of drawdown) |
+| 26 | [VLCC 回调事实核查与修订 CN](26_VLCC_Selloff_FactCheck_Correction_CN) | 中文 | 38 个一手来源；修订核心结论（战争溢价仅占回撤约 5–7 个百分点） |
+| 27 | [**VLCC Container Analog Updated EN**](27_VLCC_Container_Analog_Updated_EN) | English | **NEW** Where in the cycle: VLCC = container April-May 2022 equivalent; full lead-lag + orderbook comparison; corrects pages #19/#20 |
+| 28 | [**VLCC 集运类比重新校准 CN**](28_VLCC_Container_Analog_Updated_CN) | 中文 | **新** 周期位置：VLCC = 集运 2022 年 4-5 月等价位置；完整领先滞后 + 订单簿对比；修订 #19/#20 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 

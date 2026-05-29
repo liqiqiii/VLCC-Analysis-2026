@@ -13,6 +13,8 @@ title: "Sinokor Dominance & Container Shipping Analog: VLCC Bull Case"
 
 ## Executive Summary
 
+> **🛑 ORDERBOOK DATA CORRECTION (added May 28, 2026)**: This page was written April 23, 2026. Its claims of "VLCC orderbook at historic lows / ~5-6% of fleet" and "newbuilds flood in: No (until 2028H2)" are **invalidated** by the Q1 2026 ordering wave (~85 VLCCs in a single quarter, ~125 in 6 months; orderbook now 17-26% of active fleet). The cycle-position implications (Sinokor structural pricing power, ZIM/Hapag analogs for FRO/DHT, dividend mechanics, China demand thesis) remain largely intact, but the supply-side "historic-low orderbook" pillar of the bull case is no longer valid. **For the updated analog with current data, see [27_VLCC_Container_Analog_Updated_EN](27_VLCC_Container_Analog_Updated_EN).** Original text below preserved unchanged for transparency.
+
 > **Thesis**: Sinokor now controls ~40% of the global spot VLCC market — a concentration of pricing power that *exceeds* Maersk's position during the 2020–2022 container shipping boom. Combined with the post-Hormuz demand overshoot (queue clearance, floating storage unwind, SPR restocking), this creates a structural bull case for VLCC equities that closely parallels — and may exceed — the container shipping stock rally of 2020–2022.
 
 ---
