@@ -10,7 +10,22 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 📈 DHT Holdings Q1 2026 Earnings Deep Dive (NEW — May 5, 2026)
+### 🔻 VLCC Post-Peak Selloff: Why the Sector Is ~25% Off March Highs (NEW — May 28, 2026)
+
+First page to apply the new **Two-Step Research Protocol** (see top of `.github/copilot-instructions.md`). Walks through six catalysts in 8 weeks — fragile US–Iran ceasefire + partial Hormuz reopening, OPEC+ +206 kb/d signal, Evercore ISI downgrade of DHT/FRO on reversion risk, China crude-import collapse (April −20% YoY, teapot util 50%), record Q1 2026 VLCC orderbook (~85 ships, fleet ratio 17–26%), and the steepest one-day TD3C plunge since May 2020. Followed by a strict peer-review audit.
+
+**[📄 VLCC Selloff Analysis (EN) →](23_VLCC_Post_Peak_Selloff_EN)** | **[中文版 →](24_VLCC_Post_Peak_Selloff_CN)**
+
+Key findings (Step 1 — draft only, subject to Step 2 audit):
+- DHT / FRO / 中远海能 (600026.SH) / 招商轮船 (601872.SH) all **~−25% from the March 2026 peak**
+- TD3C: >**$600K/day** (early Mar) → ~**$400K/day** (mid-Apr) → **$150K–$175K/day** forward strip (late May)
+- Q1 2026 was a **record earnings quarter** for both DHT (EPS $1.02, +67% beat) and FRO ($2.51 EPS, $1.55 dividend, "most profitable quarter since 2004")
+- Drawdown is a **sentiment + forward-curve repricing**, not an earnings miss — but Step 2 flags 10 items needing primary-source verification
+- Base-case direction: bearish 3–6 months; bull case needs ton-mile stickiness, a second Middle East flare-up, or China refinery restart
+
+---
+
+### 📈 DHT Holdings Q1 2026 Earnings Deep Dive (May 5, 2026)
 
 Blowout quarter: Revenue $186.5M (+134% YoY), EPS $1.02 (beat consensus by 67%), spot TCE $106K/day, Q2 bookings at $189,500/day. TD3C at all-time high $420K+/day. Full Day1Global framework analysis with 6 rate scenarios.
 
@@ -146,8 +161,10 @@ Key findings:
 | 18 | [**是德科技研究 CN**](keysight/report_cn) | 中文 | **新** 是德科技 测试测量行业深度研究 |
 | 19 | [**Sinokor & Container Analog EN**](19_Sinokor_Container_VLCC_Analog_EN) | English | **NEW** Sinokor 40% Dominance, Container Boom Parallel & VLCC Bull Case |
 | 20 | [**兴高海运与集运类比 CN**](20_Sinokor_Container_VLCC_Analog_CN) | 中文 | **新** 兴高海运40%定价权、集运牛市类比与VLCC牛市论证 |
-| 21 | [**DHT Q1 2026 Earnings EN**](21_DHT_Q1_2026_Earnings_EN) | English | **NEW** Q1 2026 Earnings Deep Dive & Call Analysis |
-| 22 | [**DHT Q1 2026 财报分析 CN**](22_DHT_Q1_2026_Earnings_CN) | 中文 | **新** Q1 2026财报深度分析与电话会议解读 |
+| 21 | [DHT Q1 2026 Earnings EN](21_DHT_Q1_2026_Earnings_EN) | English | Q1 2026 Earnings Deep Dive & Call Analysis |
+| 22 | [DHT Q1 2026 财报分析 CN](22_DHT_Q1_2026_Earnings_CN) | 中文 | Q1 2026财报深度分析与电话会议解读 |
+| 23 | [**VLCC Post-Peak Selloff EN**](23_VLCC_Post_Peak_Selloff_EN) | English | **NEW** Why DHT/FRO/中远海能/招商轮船 are ~25% off March peak — 6 catalysts + Two-Step protocol audit |
+| 24 | [**VLCC 顶部回调分析 CN**](24_VLCC_Post_Peak_Selloff_CN) | 中文 | **新** 三月顶部之后为何回撤约25% — 6 大催化剂 + 两步研究协议审稿 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
@@ -167,4 +184,4 @@ Key findings:
 
 ---
 
-*Last updated: May 5, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
+*Last updated: May 28, 2026 | Created by [liqiqiii](https://github.com/liqiqiii)*
