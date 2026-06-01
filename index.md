@@ -10,7 +10,24 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🛑 Global SPR Refill — Math Correction (NEW — May 29, 2026, refines #31/#32)
+### 🤖 What Did AI Actually Revolutionize? — Capex vs Revenue Reality Check (NEW — Jun 1, 2026)
+
+Pivot from VLCC to AI industry analysis. Honest answer to "with $1.2T of cumulative Mag7 capex flowing into Nvidia + memory + components, what has AI actually revolutionized?" **Validated**: financial geometry user described is correct — picks-and-shovels (Nvidia $100B+ net, memory all $1T+ market cap with $300B+ revenue, components $150B+) captured most realized profit. **But pushed back**: "AI usage is limited" understates 900M weekly ChatGPT users + 20M Copilot seats + 70% F100 using Anthropic. **Honest "revolutionized" list is short**: software engineering (50%+ productivity gains, statistically validated); advertising (Meta $60B+ Advantage+) and customer service are *improved* not transformed; everything else is augmentation (only 6% of enterprises see 5%+ EBIT impact per McKinsey 2025). **Math gap**: $700B 2026 capex vs $150-200B AI revenue = $500B/yr gap, funded by debt. **Anthropic 30x growth in 17 months** is the single strongest counter to bubble thesis. Personal handicap: 55% bull / 35% middle / 10% bear on capex justification by 2028.
+
+**[📄 AI Industry Analysis (EN) →](ai_industry/report_en)** | **[AI 行业分析（中文）→](ai_industry/report_cn)**
+
+Key data points (mid 2026):
+- Hyperscaler capex 2024-2026 cumulative: **~$1.2 trillion**
+- Memory trio market caps: SK Hynix $1.06T, Samsung $1T+, Micron $1T+ (all crossed May 2026)
+- Anthropic ARR: $1B (Jan 2025) → **$45B (May 2026)** = 30x in 17 months, **passed OpenAI**
+- OpenAI ARR: $33B Q2 2026 with $14B projected losses
+- McKinsey: 88% of orgs use AI, but only **6% are "high performers" with 5%+ EBIT impact**
+- BCG: 30-90% productivity gains for AI-agent deployments
+- GitHub Copilot: 20M+ users, 90% Fortune 100, 51-55% faster task completion
+
+---
+
+### 🛑 Global SPR Refill — Math Correction (May 29, 2026)
 
 User pushed back: SPR math was US-narrow. **400M release breakdown**: US 172M (43%), **Japan 79.8M (20%)**, Korea 22.5M, Germany 19.5M, France 14.6M, UK 14.0M, other 77.6M. **Japan refill is most VLCC-intensive** (100% imported crude, 70% MEG). **IEA 90-day rule is LEGAL OBLIGATION** for non-US members (faster refill than US's politically-paralyzed pace). **China structural building** runs in parallel at **500K-1M bpd through Q3 2026** (Goldman). Combined: IEA refill + China = **~270-770 kbpd structural demand = 2.7-7.7% of crude trade = 28-66 VLCC-equivalents**. Plus shadow-fleet shift (15-30) + MSC-Sinokor floor = **~60-90 VLCCs of mainstream demand boost = 6-10% of fleet**. **OFFSETS 2026-27 delivery wave (~50 ships)**.
 
@@ -242,8 +259,10 @@ Key findings:
 | 30 | [VLCC 周期定位 v2 CN](30_VLCC_Cycle_Position_v2_CN) | 中文 | 中段 vs 顶后；Q1 2026 下单方画像（希腊主导）；过往油运时滞；DHT 分红模型 |
 | 31 | [VLCC Cycle Position v3 EN](31_VLCC_Cycle_Position_v3_EN) | English | Bull-case stress test: MSC-Sinokor alliance, SPR refill, shadow-fleet shift |
 | 32 | [VLCC 周期定位 v3 CN](32_VLCC_Cycle_Position_v3_CN) | 中文 | 多头论据压力测试 |
-| 33 | [**Global SPR Refill Recalculated EN**](33_Global_SPR_Refill_Recalculated_EN) | English | **NEW** Math correction — global (not US-only) 400M SPR refill + China structural + 90-day IEA obligation; demand 4-6x prior estimate |
-| 34 | [**全球 SPR 补库重新测算 CN**](34_Global_SPR_Refill_Recalculated_CN) | 中文 | **新** 算术修正 — 全球（非美国单一）4 亿桶补库 + 中国结构性 + IEA 90 天义务；需求是先前估计的 4-6 倍 |
+| 33 | [Global SPR Refill Recalculated EN](33_Global_SPR_Refill_Recalculated_EN) | English | Math correction — global (not US-only) 400M SPR refill + China structural + 90-day IEA obligation; demand 4-6x prior estimate |
+| 34 | [全球 SPR 补库重新测算 CN](34_Global_SPR_Refill_Recalculated_CN) | 中文 | 算术修正 — 全球（非美国单一）4 亿桶补库 + 中国结构性 + IEA 90 天义务；需求是先前估计的 4-6 倍 |
+| 35 | [**AI Industry Analysis EN**](ai_industry/report_en) | English | **NEW** What did AI actually revolutionize? $1.2T capex vs $150-200B AI revenue; coding is the only fully revolutionized category |
+| 36 | [**AI 行业分析 CN**](ai_industry/report_cn) | 中文 | **新** AI 究竟革命了什么？$1.2T 资本开支 vs $150-200B AI 收入；编程是唯一完全被革命的类别 |
 | — | [**Modeling Stash**](modeling_stash) | English | **NEW** Cyclical valuation framework, sell signal backtest, momentum algo |
 | — | [**🔴 Hormuz Tracker**](hormuz_tracker) | English | **LIVE** Daily VLCC transit monitor — manual input dashboard |
 
