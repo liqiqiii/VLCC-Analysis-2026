@@ -425,3 +425,23 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 
 **创建文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md
 **更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32b: 核查"未知"项目并提供来源
+**日期**: 2026年6月23日
+
+核查泡沫报告中先前标注"未知"的项目并提供数据来源。在 EN/CN 报告中新增**第 9 节——事实核查与数据来源**（按协议保留第 1–3 节草稿/评审不变）。
+
+**已核实（2025 – 2026 年中，附来源）**:
+- 英伟达市盈率约 40–50、市销率约 18–27，对比思科 2000 年 3 月 NASDAQ 5,048 峰值的约 200 倍（思科随后 −86%、纳斯达克 −78%）→ **确认"远不如 1999 极端"**
+- Mag7 = **标普 500 的 33–35%**——超过互联网峰值（修正先前"两面性" → 更偏空）
+- 散户 **3 个月流入 >750 亿（创纪录）**、场外现金 25 年新低、AI IPO 涌现 → 狂热信号部分触发
+- 循环融资：**英伟达 ↔ OpenAI 约 1000 亿**、甲骨文 3000 亿云协议——电信-2000（朗讯/北电）回响已确认
+- OpenAI 约 3000–5000 亿 / 约 200 亿以上 ARR；**Anthropic 9650 亿 / 约 470 亿 ARR**（2026 年 5 月）→ 确认本仓库约 450 亿
+- 超大规模厂商 2026 资本开支 **约 7000–7250 亿**；亚马逊自由现金流 **−95% 至 12 亿**、集团约 40 亿 → 确认本仓库锚点
+- **净效果**: 锚点确认；结论由"约 1998"微调至"**1998 正转向 1999 年初**"（四个狂热信号中已有两个部分触发；收入仍在加速使其仍处 2000 之前）
+
+**来源**: Macrotrends、Investing.com、Stocknear、ProfitByFriday、MarketCycleView、摩根士丹利、CNBC、Kingsview、EconomicLens(IMF)、UBS、NBC、Tom Tunguz、Anthropic、Sacra、VentureBeat、AnalyticsIndiaMag、Futurum、valueaddvc、StartupFortune（完整 URL 见报告第 9 节）。
+
+**更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -14,6 +14,7 @@ title: Dot-Com Bubble (1995–2000) vs Today's AI Bubble — Where Are We Now? (
 > - **The single biggest difference from 1999**: revenue is still **accelerating into** the capex. In 1999–2000 (internet) and 2001 (telecom), revenue growth rolled over *before* the spending did. That keeps us **pre-peak**.
 > - **The single biggest warning**: a **~$500B/yr** gap between 2026 hyperscaler capex (~$700B) and AI software revenue (~$150–200B), funded increasingly by **debt** ($230B+ new sector debt in 2026), with free cash flow collapsing (Amazon −95%).
 > - **Verdict**: **Late-Build / pre-Mania (~1998–early-1999 analog).** Bear reference = **telecom 2000–02** (real tech + real growth + ruinous overbuild). Bull reference = **Cisco/Intel 1998**.
+> - **Fact-checked (Jun 23, 2026)**: the "unknown" items were verified against external sources — see **Section 9**. Net effect: capex / FCF / Anthropic anchors **confirmed**; Nvidia confirmed **far less extreme** than Cisco-2000; but **two mania signals (circular financing + retail/concentration) are now partly firing** → marker nudged toward "1998 turning into early-1999."
 > - **This is education/analysis, NOT investment advice.**
 
 ---
@@ -65,7 +66,7 @@ Live mid-2026 figures that cannot be anchored are explicitly marked **"unknown"*
 2. **Claim:** The capex/revenue ratio (45–57%) is already unprecedented, arguing we're nearer the unsustainable edge than 1998 was.
    → *Evidence needed:* this ratio vs. telecom 2000–02 peak; GPU depreciation schedules (2–3 yr?) vs. useful life — an accounting-quality red flag.
 
-**Explicitly unknown (not fabricated):** exact mid-2026 P/E and P/S multiples for Nvidia / Mag7; precise share of circular / vendor-financed revenue; current retail-participation and AI-IPO counts; latest private-market (OpenAI / Anthropic) valuations.
+**Explicitly unknown (not fabricated):** exact mid-2026 P/E and P/S multiples for Nvidia / Mag7; precise share of circular / vendor-financed revenue; current retail-participation and AI-IPO counts; latest private-market (OpenAI / Anthropic) valuations. *(These were subsequently verified — see Section 9 Fact-Check, added Jun 23, 2026; the draft above is kept as originally written.)*
 
 ---
 
@@ -119,13 +120,13 @@ Live mid-2026 figures that cannot be anchored are explicitly marked **"unknown"*
 
 | Metric | Dot-com peak (1999–2000) | AI now (mid-2026) | Read |
 |---|---|---|---|
-| Leader multiples | Cisco ~150–200x P/E; many infinite P/S | Nvidia / Mag7 elevated but earnings-backed (**exact mult. unknown**) | **Less extreme than 1999** |
+| Leader multiples | Cisco ~**200x** P/E (Mar 2000); many infinite P/S | Nvidia ~**40–50x** P/E, ~**18–27x** P/S (2025) — earnings-backed (§9) | **Much less extreme than 1999** |
 | Capex / revenue | Telecom impossible to sustain | **45–57%** | Comparable / unprecedented for tech |
-| Financing | Equity + telecom debt | Op-cash + **$230B+ new debt 2026**, FCF collapsing | **Worsening — late-cycle tell** |
-| Concentration | Broad (hundreds of IPOs) | **Narrow** (Mag7 + Nvidia + 3 memory) | Different shape; cuts both ways |
+| Financing | Equity + telecom debt | Op-cash + new debt; **Amazon FCF −95% → group FCF ~$4B 2026** (§9) | **Worsening — late-cycle tell** |
+| Concentration | Mag-of-its-day broad + narrowing | **Mag7 = 33–35% of S&P 500** — *exceeds* dot-com peak (§9) | **More concentrated than 2000** |
 | Profit reality | Mostly pre-revenue | **Suppliers very profitable; end-AI revenue lags capex** | **More real than 1999** |
-| Retail / IPO mania | Extreme | **Unknown / appears more muted so far** | Key gauge to watch |
-| Circular financing | Vendor financing (Lucent / Nortel) | Nvidia ↔ neoclouds ↔ Nvidia | **Echo of telecom 2000 — size unknown** |
+| Retail / IPO mania | Extreme | **Elevated**: retail inflows >$75B/3mo (record), sidelines cash 25-yr low, AI-IPO surge (§9) | **Mania signal partly firing** |
+| Circular financing | Vendor financing (Lucent / Nortel) | **Nvidia ↔ OpenAI ~$100B**; Oracle $300B cloud deal (§9) | **Material — telecom-2000 echo confirmed** |
 
 ---
 
@@ -168,6 +169,62 @@ Key risk:               Revenue/demand stalls while ~2–3yr-depreciating GPU
 1. Is "1998, not 1999" right — or does the circular-financing echo already put us later in the cycle?
 2. Should the **bear case** (telecom-2000 overbuild) or the **bull case** (revenue compounding 3–5x by 2028) be stress-tested harder?
 3. Worth pulling **live mid-2026 multiples** (Nvidia / Mag7 P/E, NASDAQ vs. 2000) to replace the "unknown" tags with real numbers?
+
+---
+
+---
+
+# Section 9 — Fact-Check & Data Sources (verified Jun 23, 2026)
+
+This section resolves every item flagged **"unknown"** in Sections 2 / 5 / 8. Figures are as of the dates cited (2025 – mid-2026). **Caveat:** private-company ARR is **self-reported annualized run-rate**, not audited GAAP revenue; capex / FCF are company guidance or analyst (Morgan Stanley / BofA / Goldman) estimates, not final filings.
+
+| # | Item (previously "unknown") | Verified finding | Effect on verdict | Source |
+|---|---|---|---|---|
+| 1 | Nvidia multiples | **P/E ~40–50; P/S ~18–27** (2025) | far below Cisco's ~200x → **CONFIRMS "less extreme than 1999"** | Macrotrends; Investing.com; Stocknear |
+| 2 | Cisco 2000 peak (baseline) | **P/E ~200** at NASDAQ 5,048 (Mar 2000); then Cisco −86%, NASDAQ −78% | sets the "blow-off" reference | ProfitByFriday; MarketCycleView |
+| 3 | Mag7 concentration | **33–35% of S&P 500** (~$18.5–19T of ~$56T) — highest in decades, **exceeds dot-com peak** | **REVISES** my "cuts both ways" → more bearish | Morgan Stanley; CNBC; Kingsview |
+| 4 | Retail / IPO mania | Retail inflows **>$75B/3mo (record)**; sidelines cash 25-yr low; AI-IPO surge; IMF flags dot-com parallel | **REVISES** "appears muted" → **mania signal partly firing** | Morgan Stanley; EconomicLens (IMF) |
+| 5 | Circular / vendor financing | **Nvidia up to ~$100B into OpenAI** (cash largely re-leased as Nvidia GPUs); Oracle $300B OpenAI cloud; AMD / CoreWeave intertwined; explicit Lucent / Nortel parallel | flip-signal #2 **partly firing** | CNBC; UBS; NBC; Tom Tunguz |
+| 6 | OpenAI valuation / ARR | **$300–500B** valuation; **~$20B+ ARR** (CFO Sarah Friar) | end-demand more real than 1999 | AnalyticsIndiaMag; TradingKey |
+| 7 | Anthropic valuation / ARR | **$965B** (May 2026 Series H); **ARR ~$47B** (from $14B Feb → $30B Apr 2026) | **CONFIRMS repo's "~$45B ARR"**; ARR still accelerating = key reason it isn't 2000 yet | Anthropic; Sacra; VentureBeat; SiliconANGLE |
+| 8 | Hyperscaler capex | 2025 **~$260B** → 2026 **~$700–725B** (AMZN $200B, MSFT $190B, GOOG $175–185B, META $115–145B); 2027 >$1T | **CONFIRMS repo's ~$700B** | CNBC; Futurum; valueaddvc |
+| 9 | Amazon / group FCF | Amazon Q1 2026 trailing FCF **−95% to $1.2B**; 2026 proj. **−$17B to −$28B**; group FCF **~$4B (lowest since 2014)**; Alphabet −90% | **CONFIRMS repo's "Amazon −95%"** | CNBC; StartupFortune |
+
+**Net effect on the verdict:** The fact-check **confirms** the spending-side anchors (≈$700B 2026 capex, collapsing FCF) and the demand-side anchor (Anthropic ARR ~$47B, still accelerating), and confirms **Nvidia (~40–50x) is nowhere near Cisco's ~200x** in 2000 — all consistent with **pre-blow-off**. **However**, two of the four "flip-to-1999" signals from Section 7 are **already partly firing**: (a) circular / vendor financing is now **material** (Nvidia↔OpenAI ~$100B), and (b) **concentration (33–35% of the S&P 500) and retail participation now exceed the dot-com peak**. So the honest update is to nudge the marker from a clean "~1998" toward **"1998 turning into early-1999"** — still pre-peak, but the mania signals are no longer dormant. The single fact still holding the "not 2000 yet" line is that **revenue is still accelerating into the capex** (Anthropic $14B → $30B → $47B in months).
+
+## Sources (accessed Jun 23, 2026)
+
+**Valuations / multiples**
+- Macrotrends — *NVIDIA Price to Sales Ratio 2012–2026*: https://www.macrotrends.net/stocks/charts/NVDA/nvidia/price-sales
+- Investing.com — *NVDA P/E Ratio*: https://www.investing.com/pro/NASDAQGS:NVDA/explorer/pe_ltm
+- Stocknear — *NVDA Financial Ratios & Valuation*: https://stocknear.com/stocks/NVDA/financials/ratios
+- ProfitByFriday — *Cisco Peaked at a P/E of 200 in 2000*: https://www.profitbyfriday.com/the-brief/cisco-nvidia-pe-valuation-maths-explained.html
+- MarketCycleView — *Dotcom Bubble Warning Signs*: https://www.marketcycleview.com/en/blog/dotcom-bubble-warning-signs
+
+**Concentration / retail / IPO**
+- Morgan Stanley — *Mag 7 Dominance & Stock-Picking 2025*: https://www.morganstanley.com/insights/articles/magnificent-7-dominance-stock-picking-2025
+- CNBC — *Investors all-in on Mag 7 face decision in 2026*: https://www.cnbc.com/2025/12/12/stocks-market-risks-investors-portfolios-2026.html
+- Kingsview — *Magnificent 7, AI, and Concentration*: https://www.kingsview.com/portfolio-manager-insights-the-magnificent-7-ai-and-concentration-risk-8-13-25/
+- EconomicLens — *AI stock market bubble 2025 (IMF warning)*: https://economiclens.org/ai-stock-market-bubble-2025-big-tech-concentration-global-market-risk/
+
+**Circular / vendor financing**
+- CNBC — *Nvidia OpenAI investment mostly used to lease Nvidia chips*: https://www.cnbc.com/2025/09/24/nvidia-openai-investment-in-cash-mostly-used-to-lease-nvidia-chips.html
+- UBS — *Should recent AI financing deals be a cause for concern?*: https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/house-view/daily/2025/latest-10102025.html
+- NBC News — *Big AI's reliance on circular deals raising bubble fears*: https://www.nbcnews.com/business/economy/openai-nvidia-amd-deals-risks-rcna234806
+- Tom Tunguz — *Circular Financing: Does Nvidia's $110B Bet Echo the Telecom Bubble?*: https://tomtunguz.com/nvidia_nortel_vendor_financing_comparison/
+
+**Private-lab revenue / valuation**
+- Anthropic — *Series H, $965B valuation*: https://www.anthropic.com/news/series-h
+- Anthropic — *Series G, $380B valuation*: https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation
+- Sacra — *Anthropic revenue, valuation & funding*: https://sacra.com/c/anthropic/
+- VentureBeat — *Anthropic $30B revenue run rate*: https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth
+- AnalyticsIndiaMag — *OpenAI hits $20B ARR*: https://analyticsindiamag.com/ai-news-updates/openai-hits-20-bn-arr-mark-as-compute-capacity-triples-cfo-sarah-friar/
+
+**Hyperscaler capex / cash flow**
+- CNBC — *Tech AI spending approaches $700B in 2026, cash taking a hit*: https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html
+- Futurum — *AI Capex 2026: The $690B Infrastructure Sprint*: https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/
+- valueaddvc — *Big Tech AI Spending 2026 (~$725B)*: https://valueaddvc.com/blog/big-tech-ai-capex-in-2025-microsoft-google-meta-amazon-and-the-spending-race
+- StartupFortune — *Big Tech's $725B AI spending wave turning FCF into a memory*: https://startupfortune.com/big-techs-725-billion-ai-spending-wave-is-turning-free-cash-flow-into-a-distant-memory/
 
 ---
 

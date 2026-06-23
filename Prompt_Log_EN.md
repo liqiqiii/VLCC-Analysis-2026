@@ -440,3 +440,23 @@ Following the repo's research pattern, discuss the dot-com bubble (1995–2000) 
 
 **Files Created**: ai_bubble/report_en.md, ai_bubble/report_cn.md
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32b: Fact-Check the "Unknown" Items + Provide Sources
+**Date**: June 23, 2026
+
+Fact-check the items previously marked "unknown" in the bubble report and provide data sources. Added **Section 9 — Fact-Check & Data Sources** to both EN/CN reports (kept Steps 1–3 draft/review intact per protocol).
+
+**Verified (2025 – mid-2026, with sources)**:
+- Nvidia P/E ~40–50, P/S ~18–27 vs Cisco ~200x at the March-2000 NASDAQ-5,048 peak (Cisco then −86%, NASDAQ −78%) → **confirms "far less extreme than 1999"**
+- Mag7 = **33–35% of S&P 500** — exceeds dot-com peak (revises prior "cuts both ways" → more bearish)
+- Retail inflows **>$75B/3mo (record)**, sidelines cash 25-yr low, AI-IPO surge → mania signal partly firing
+- Circular financing: **Nvidia ↔ OpenAI ~$100B**, Oracle $300B cloud deal — telecom-2000 (Lucent/Nortel) echo confirmed
+- OpenAI ~$300–500B / ~$20B+ ARR; **Anthropic $965B / ~$47B ARR** (May 2026) → confirms repo's ~$45B
+- Hyperscaler capex 2026 **~$700–725B**; Amazon FCF **−95% to $1.2B**, group FCF ~$4B → confirms repo anchors
+- **Net**: anchors confirmed; verdict nudged from "~1998" to "**1998 turning into early-1999**" (2 of 4 mania signals now partly firing; revenue still accelerating keeps it pre-2000)
+
+**Sources**: Macrotrends, Investing.com, Stocknear, ProfitByFriday, MarketCycleView, Morgan Stanley, CNBC, Kingsview, EconomicLens(IMF), UBS, NBC, Tom Tunguz, Anthropic, Sacra, VentureBeat, AnalyticsIndiaMag, Futurum, valueaddvc, StartupFortune (full URLs in report Section 9).
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
