@@ -228,4 +228,81 @@ This section resolves every item flagged **"unknown"** in Sections 2 / 5 / 8. Fi
 
 ---
 
+---
+
+# Section 10 — What Others Think: The Dot-Com vs AI Debate (voices, 2025–2026)
+
+A survey of how analysts, bank economists, tech CEOs, and famous bears frame the same comparison. The debate sorts into **three camps**. Notably, **almost no serious commentator argues "no bubble at all"** — the disagreement is about *depth* and *timing*, which is consistent with this report's "late-Build / early-Mania" marker.
+
+## 10.1 Camp A — "Bubble-ish, but less extreme than 2000" (banks)
+
+| Source | View | Key quote / datum | Source |
+|---|---|---|---|
+| **Goldman Sachs** | Parallels exist (high valuations, speculation) but **fewer IPOs** and leader multiples **below** dot-com extremes; AI is a real long-term theme | "no immediate signs of an AI bubble," but warns of correction if capex slows | Goldman *Top of Mind: AI in a bubble?* |
+| **JPMorgan / Dimon** | **Concentration risk**: top-10 stocks ≈ 25% of global market cap, echoing pre-2000; Dimon warns of a possible "serious fall" in 1–2 years | "overexuberance remains a danger to manage" | JPMorgan *2026 Market Outlook* |
+| **Morgan Stanley** | AI is an **industrial transformation**, not a fad (~$3T infra by 2028); risk is sudden "valuation resets," not a pure bubble | AI is now a "macro variable" for GDP | Morgan Stanley *AI Market Trends 2026* |
+
+**Takeaway:** the sell-side consensus ≈ this report's view — real + stretched + concentrated, but **not** a clean 1999 rerun. Supports "less extreme than 1999" (§5/§9) while flagging concentration as the bearish tell.
+
+## 10.2 Camp B — "Yes it's a bubble, but the technology is real" (tech CEOs)
+
+| Source | View | Key quote | Source |
+|---|---|---|---|
+| **Sam Altman (OpenAI)** | "We are in **a kind of AI bubble**"; absurd prices paid for some companies, but underlying tech is transformative | "investors as a whole are overexcited about AI" | CNBC (Aug 2025) |
+| **Jeff Bezos (Amazon)** | An **"industrial bubble"** — distinct from the "purely financial" 1999 dot-com bubble; like 1990s biotech, it will leave enduring value even as startups fail | "AI is real, and it is going to change every industry" | CNBC (Oct 2025) |
+| **Jensen Huang (Nvidia)** | Infrastructure reflects **real, enduring demand**; "bubble" talk overstates the speculative share | — | QZ round-up |
+
+**Takeaway:** Bezos's "industrial vs financial bubble" distinction is essentially this report's **disanalogy thesis** (§6) stated by an insider — and it cuts both ways: 1990s biotech *and* 2000 telecom were "industrial bubbles" that still crashed hard before paying off.
+
+## 10.3 Camp C — "This is a dangerous bubble" (bears + multilaterals)
+
+| Source | View | Key datum | Source |
+|---|---|---|---|
+| **Michael Burry** | Accuses hyperscalers of **understating depreciation** by ~**$176B (2026–28)** via 5–6yr schedules on 2–3yr GPUs; claims Oracle/Meta 2028 profits overstated +27%/+21%; disclosed **>$1B notional puts** on Nvidia/Palantir | likens AI financing to **Enron** SPVs | CNBC (Nov 2025) |
+| **Jim Chanos** | Capex "treadmill" outpacing monetization; spending no longer justified by returns | — | Markets.com |
+| **MIT study (2025)** | **95% of enterprise GenAI pilots fail** to deliver measurable ROI; only ~5% see real gains | echoes McKinsey "6% with 5%+ EBIT" in repo | MIT via Economic Times |
+| **IMF / BIS (Oct 2025)** | Synchronized warning: **Shiller CAPE near dot-com peak**, extreme P/S, concentrated leadership; risk of "slow-motion deflation" | — | IMF/BIS via Economic Times |
+
+**Takeaway:** the bear case targets exactly the two soft spots this report flagged — **accounting/depreciation quality** (§3 peer review, item O) and the **capex-vs-revenue gap** (§1). Burry's depreciation thesis is the single most concrete version of "reported earnings are overstated *today*."
+
+## 10.4 The data-driven comparison others cite
+
+A widely circulated side-by-side (IntuitionLabs / Forbes / AInvest) lands close to this report:
+
+| Feature | Dot-com (2000) | AI (2024–26) |
+|---|---|---|
+| Avg P/E at peak | ~60× NASDAQ; Cisco ~200× | 25–47× big tech |
+| % profitable leaders | <15% | most leaders profitable |
+| Infrastructure | fiber-optic overbuild | data-center / chip overbuild |
+| Adoption ROI | slow business integration | broad usage, **ROI still elusive (95% pilots fail)** |
+| Likely outcome | violent crash | **"slow-motion deflation" / shakeout** (lower debt, stronger core profits) |
+
+## 10.5 How this maps to our verdict
+
+- **Consensus across all three camps** ≈ "real technology + speculative excess." Almost no one argues "no bubble." That *itself* is a mid/late-cycle signal (in 1996 few called it a bubble; by 1999 everyone did and bought anyway).
+- **Bull anchor** (Bezos/Huang/Morgan Stanley): industrial transformation, profitable leaders → supports our **"pre-2000, not yet blow-off."**
+- **Bear anchor** (Burry/Chanos/IMF/MIT): depreciation games, 95% pilot failure, CAPE near dot-com peak → supports the **"mania signals partly firing"** update in §9.
+- **Net:** the external chorus brackets our marker neatly: **most-similar to 1998–early-1999**, with the bear camp arguing it's later and the CEO camp arguing the eventual payoff is bigger. The unresolved swing factor remains the same one this report isolated — **does end-revenue scale into the capex before the depreciation/debt bill comes due?**
+
+> **Method note:** this chapter reports *what others think* with citations; it is not an endorsement. Famous-investor positions (e.g., Burry's puts) are directional bets, not facts, and several figures (CAPE "near" dot-com peak, "$3T by 2028") are estimates. Treat as opinion-with-source, per the Two-Step Protocol.
+
+## Sources (Section 10, accessed Jun 23, 2026)
+
+- Goldman Sachs — *Top of Mind: AI: in a bubble?*: https://www.goldmansachs.com/insights/top-of-mind/ai-in-a-bubble
+- JPMorgan — *2026 Market Outlook*: https://www.jpmorgan.com/insights/global-research/outlook/market-outlook
+- Morgan Stanley — *AI Market Trends 2026*: https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026
+- Economic Times — *Is the AI boom becoming a bubble? Goldman, JPMorgan, IMF sound the alarm*: https://economictimes.indiatimes.com/markets/stocks/news/is-the-becoming-a-bubble-why-goldman-jpmorgan-imf-are-sounding-the-alarm/articleshow/124443190.cms
+- CNBC — *Sam Altman warns AI market is in a bubble*: https://www.cnbc.com/2025/08/18/openai-sam-altman-warns-ai-market-is-in-a-bubble.html
+- CNBC — *Jeff Bezos: AI in an 'industrial bubble' but society will benefit*: https://www.cnbc.com/2025/10/03/jeff-bezos-ai-in-an-industrial-bubble-but-society-to-benefit.html
+- QZ — *Is the AI boom a bubble? What CEOs of OpenAI, Nvidia and more say*: https://qz.com/ai-stock-boom-bubble-ceos-sam-altman-jensen-huang-lisa-su
+- CNBC — *'Big Short' investor Michael Burry accuses AI hyperscalers of artificially boosting earnings*: https://www.cnbc.com/2025/11/11/big-short-investor-michael-burry-accuses-ai-hyperscalers-of-artificially-boosting-earnings.html
+- Investing.com — *Michael Burry warns of $176B depreciation understatement*: https://uk.investing.com/news/stock-market-news/michael-burry-warns-of-176-billion-depreciation-understatement-by-tech-giants-4360594
+- Markets.com — *Burry & Chanos sound the alarm*: https://www.markets.com/analysis/ai-investment-risk-michael-burry-jim-chanos-warnings-2112-en
+- Economic Times — *MIT study: 95% of generative AI projects are failing*: https://economictimes.indiatimes.com/magazines/panache/mit-study-shatters-ai-hype-95-of-generative-ai-projects-are-failing-sparking-tech-bubble-jitters/articleshow/123428252.cms
+- MIT Technology Review — *What even is the AI bubble?*: https://www.technologyreview.com/2025/12/15/1129183/what-even-is-the-ai-bubble/
+- IntuitionLabs — *AI Bubble vs Dot-com Bubble: A Data-Driven Comparison*: https://intuitionlabs.ai/articles/ai-bubble-vs-dot-com-comparison
+- Forbes — *Is the AI Bubble Bursting? Lessons From the Dot-Com Era*: https://www.forbes.com/sites/paulocarvao/2025/08/21/is-the-ai-bubble-bursting-lessons-from-the-dot-com-era/
+
+---
+
 *Two-Step Research Protocol applied. Bilingual mirror: [中文版 →](report_cn). Education/analysis only — not investment advice.*

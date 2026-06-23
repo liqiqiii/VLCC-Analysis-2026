@@ -460,3 +460,20 @@ Fact-check the items previously marked "unknown" in the bubble report and provid
 **Sources**: Macrotrends, Investing.com, Stocknear, ProfitByFriday, MarketCycleView, Morgan Stanley, CNBC, Kingsview, EconomicLens(IMF), UBS, NBC, Tom Tunguz, Anthropic, Sacra, VentureBeat, AnalyticsIndiaMag, Futurum, valueaddvc, StartupFortune (full URLs in report Section 9).
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32c: Add "What Others Think" Chapter (dot-com vs AI debate)
+**Date**: June 23, 2026
+
+Gather online commentary and add a separate chapter comparing how others view dot-com vs AI. Added **Section 10 — What Others Think** to both EN/CN reports, sorted into three camps.
+
+**Camps captured (with sources)**:
+- **Camp A — banks (bubble-ish but less extreme than 2000)**: Goldman ("no immediate signs," fewer IPOs, multiples below dot-com); JPMorgan/Dimon (top-10 = 25% of global mcap, possible "serious fall" in 1-2 yrs); Morgan Stanley (industrial transformation, ~$3T infra by 2028, risk = valuation resets)
+- **Camp B — tech CEOs (bubble but real)**: Altman ("a kind of AI bubble"); Bezos ("industrial bubble" vs 1999's "purely financial," like 1990s biotech); Huang (real enduring demand)
+- **Camp C — bears + multilaterals**: Burry (hyperscalers understate depreciation ~$176B 2026-28, Oracle/Meta profits overstated +27%/+21%, >$1B puts, Enron analogy); Chanos (capex treadmill); MIT (95% of GenAI pilots fail); IMF/BIS (Shiller CAPE near dot-com peak, "slow-motion deflation")
+- **Mapping**: external chorus brackets our marker — near-universal "real + frothy" consensus; bull anchor supports "pre-2000," bear anchor supports "mania signals partly firing" (§9). Swing factor unchanged: does revenue scale into capex before the depreciation/debt bill comes due
+
+**Sources**: Goldman, JPMorgan, Morgan Stanley, CNBC, QZ, Economic Times, Investing.com, Markets.com, MIT Technology Review, IntuitionLabs, Forbes (full URLs in report Section 10).
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

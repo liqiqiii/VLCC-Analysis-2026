@@ -445,3 +445,20 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 **来源**: Macrotrends、Investing.com、Stocknear、ProfitByFriday、MarketCycleView、摩根士丹利、CNBC、Kingsview、EconomicLens(IMF)、UBS、NBC、Tom Tunguz、Anthropic、Sacra、VentureBeat、AnalyticsIndiaMag、Futurum、valueaddvc、StartupFortune（完整 URL 见报告第 9 节）。
 
 **更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32c: 新增"其他人怎么看"章节（互联网 vs AI 之争）
+**日期**: 2026年6月23日
+
+收集网络评论，新增独立章节对比他人如何看待互联网 vs AI。在 EN/CN 报告中新增**第 10 节——其他人怎么看**，按三大阵营分类。
+
+**收录阵营（附来源）**:
+- **阵营 A——银行（有点泡沫但不如 2000 极端）**: 高盛（"暂无即时迹象"、IPO 更少、倍数低于互联网）；摩根大通/Dimon（前 10 大 = 全球市值 25%，1–2 年内可能"大幅下跌"）；摩根士丹利（工业转型、2028 年前约 3 万亿基础设施、风险=估值重置）
+- **阵营 B——科技 CEO（是泡沫但真实）**: Altman（"某种 AI 泡沫"）；Bezos（"工业泡沫" vs 1999"纯金融"，类比 1990 年代生物科技）；黄仁勋（真实持久需求）
+- **阵营 C——空头 + 多边机构**: Burry（超大规模厂商少计折旧约 1760 亿 2026-28，甲骨文/Meta 利润高估 +27%/+21%，逾 10 亿看跌期权，安然类比）；Chanos（资本开支跑步机）；MIT（95% GenAI 试点失败）；IMF/BIS（席勒 CAPE 接近互联网峰值、"慢动作泄气"）
+- **映射**: 外部声音把我们的标记夹得很准——近乎一致的"真实+过热"共识；看多锚支持"2000 之前"，看空锚支持"狂热信号部分触发"（§9）。摆动因素不变：收入能否在折旧/债务账单到期前追上资本开支
+
+**来源**: 高盛、摩根大通、摩根士丹利、CNBC、QZ、Economic Times、Investing.com、Markets.com、MIT Technology Review、IntuitionLabs、Forbes（完整 URL 见报告第 10 节）。
+
+**更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
