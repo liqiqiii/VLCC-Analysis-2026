@@ -420,3 +420,23 @@ User's specific rule (CRule 1): "Find the two most recent cycles, do a backtrack
 
 **Files Created**: 21_DHT_Q1_2026_Earnings_EN.md, 22_DHT_Q1_2026_Earnings_CN.md, dht-q1-2026.md (GH Pages), write_dht_q1_earnings.py
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32: Dot-Com Bubble (1995–2000) vs AI Bubble — Cycle Position
+**Date**: June 23, 2026
+
+Following the repo's research pattern, discuss the dot-com bubble (1995–2000) vs the current AI bubble and judge "where we are now." Requested broad open discussion including: (1) two-cycle 5-phase mapping, (2) side-by-side bubble-metrics comparison, (3) disanalogies (why AI may not be 1999). Then publish as a bilingual GitHub Page like the other reports.
+
+**Method**: Applied the Two-Step Research Protocol (Step 1 concise draft with core conclusion + 3 supporting / 2 opposing points as "claim → evidence needed"; Step 2 strict peer review, 5 headings, no rewrite), framed via CRule 1 two-cycle backtrack (dot-com = reference cycle, AI = current cycle). Reused `ai_industry` report anchors.
+
+**Key Findings**:
+- Verdict: **Late-Build / pre-Mania, ~1998–early-1999 analog** — past the inflection, mid-capex-mania, stretched but not yet detached
+- Decisive difference vs 1999: revenue still **accelerating into** capex (in 1999/2001 revenue rolled over first) → keeps us pre-peak
+- Decisive risk: ~$500B/yr capex-vs-revenue gap (~$700B capex vs ~$150–200B AI revenue), $230B+ new 2026 debt, FCF collapsing (Amazon −95%)
+- Bear analog = telecom 2000–02 (real tech + real growth + ~10x overbuild); bull analog = Cisco/Intel 1998
+- 4 signals that flip us to "1999/2000": ARR growth decelerates while capex rises; circular/vendor-financed revenue becomes material; debt funds more capex + FCF turns negative; narrative ("AGI") replaces numbers
+- Several present-day figures (Nvidia/Mag7 multiples, circular-revenue share, retail/IPO mania) explicitly marked "unknown" — no fabrication
+
+**Files Created**: ai_bubble/report_en.md, ai_bubble/report_cn.md
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

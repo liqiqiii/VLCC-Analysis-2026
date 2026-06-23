@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🤖 What Did AI Actually Revolutionize? — Capex vs Revenue Reality Check (NEW — Jun 1, 2026)
+### 🫧 Dot-Com Bubble (1995–2000) vs AI Bubble — Where Are We Now? (NEW — Jun 23, 2026)
+
+Following the repo's **Two-Step Research Protocol** + **CRule 1 two-cycle backtrack** (dot-com = reference cycle, AI = current cycle). **Verdict: Late-Build / pre-Mania, ~1998–early-1999 analog** — past the inflection, mid-capex-mania, valuations stretched but not yet at the 1999/2000 blow-off. **Decisive difference vs 1999**: revenue still *accelerating into* the capex (in 1999/2001 revenue rolled over first) → keeps us pre-peak. **Decisive risk**: ~$500B/yr capex-vs-revenue gap (~$700B capex vs ~$150–200B AI revenue), $230B+ new 2026 debt, FCF collapsing (Amazon −95%). Bear analog = **telecom 2000–02**; bull analog = **Cisco/Intel 1998**. Includes 5-phase mapping, side-by-side bubble metrics, disanalogies, and 4 signals that would flip us to "1999/2000". *Education/analysis, not investment advice.*
+
+**[📄 Dot-Com vs AI Bubble (EN) →](ai_bubble/report_en)** | **[互联网泡沫 vs AI 泡沫（中文）→](ai_bubble/report_cn)**
+
+---
+
+### 🤖 What Did AI Actually Revolutionize? — Capex vs Revenue Reality Check (Jun 1, 2026)
 
 Pivot from VLCC to AI industry analysis. Honest answer to "with $1.2T of cumulative Mag7 capex flowing into Nvidia + memory + components, what has AI actually revolutionized?" **Validated**: financial geometry user described is correct — picks-and-shovels (Nvidia $100B+ net, memory all $1T+ market cap with $300B+ revenue, components $150B+) captured most realized profit. **But pushed back**: "AI usage is limited" understates 900M weekly ChatGPT users + 20M Copilot seats + 70% F100 using Anthropic. **Honest "revolutionized" list is short**: software engineering (50%+ productivity gains, statistically validated); advertising (Meta $60B+ Advantage+) and customer service are *improved* not transformed; everything else is augmentation (only 6% of enterprises see 5%+ EBIT impact per McKinsey 2025). **Math gap**: $700B 2026 capex vs $150-200B AI revenue = $500B/yr gap, funded by debt. **Anthropic 30x growth in 17 months** is the single strongest counter to bubble thesis. Personal handicap: 55% bull / 35% middle / 10% bear on capex justification by 2028.
 
