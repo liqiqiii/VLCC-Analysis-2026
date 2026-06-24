@@ -462,3 +462,24 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 **来源**: 高盛、摩根大通、摩根士丹利、CNBC、QZ、Economic Times、Investing.com、Markets.com、MIT Technology Review、IntuitionLabs、Forbes（完整 URL 见报告第 10 节）。
 
 **更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32d: 美光（MU）2026 财年第三季度实时案例
+**日期**: 2026年6月24日
+
+用户：美光业绩远超预期——按我们的框架有何评论？随后：加进去。在 EN/CN 报告中新增**附录 A——实时检验：美光（MU）2026 财年第三季度**。
+
+**已报告（官方、已印证）**：收入/毛利率/EPS 均创纪录且高于指引上限；数据中心收入同比翻倍以上；DRAM 创纪录（HBM 环比约 +50%）；NAND 数据中心 SSD 份额创纪录；指引持续创纪录；股息上调 30%。毛利率约 38%→80%+（同比）；HBM 2026 售罄；市值 >1 万亿；股价年内约 +70%。
+
+**数据质量提示（规则 4）**：第三方数字冲突 >20%（约 415 亿/84.6% 毛利率/25 美元 EPS vs 约 335 亿/81%/19-20 美元）——确切量级暂定待 10-Q；方向明确。
+
+**框架解读**：
+- 确认看多锚（§5/§6）：售罄 HBM 80%+ 毛利率 = "铲子已盈利，思科/英特尔 1998 而非 Pets.com"
+- CRule 2/5 警示：创纪录盈利+毛利率 = Phase-4 后段周期配置；"售罄 / 1,200-1,500 目标价 / 存储是基础设施非商品" = 教科书级见顶重估叙事（呼应 1999 思科"互联网管道"）
+- CRule 1 依赖：美光位于本报告单一风险下游——超大规模厂商资本开支（自由现金流崩塌、2300 亿债务、5000 亿缺口、Burry 折旧 §10.3）；作为运营杠杆最高一环，若资本开支暂停存储最猛最先回调
+- **结论不变且被强化**：爆表 = "1998→1999 年初"标记的确认证据，而非反驳。三家寡头 + 多年期 HBM 合同可延长（如本仓库 VLCC 供给命题）但历史上只推迟、从未废除存储均值回归
+
+**来源**：美光投资者关系（investors.micron.com）、247WallSt、MoneyMorning、StartupFortune、TradingKey、S&P Global、Zacks。
+
+**更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

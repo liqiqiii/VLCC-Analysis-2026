@@ -477,3 +477,24 @@ Gather online commentary and add a separate chapter comparing how others view do
 **Sources**: Goldman, JPMorgan, Morgan Stanley, CNBC, QZ, Economic Times, Investing.com, Markets.com, MIT Technology Review, IntuitionLabs, Forbes (full URLs in report Section 10).
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32d: Micron (MU) Q3-FY26 Real-Time Case Study
+**Date**: June 24, 2026
+
+User: Micron just reported way above expectations — comments through our framework? Then: add it. Added **Addendum A — Real-Time Test: Micron (MU) Q3-FY26** to both EN/CN reports.
+
+**Reported (official, corroborated)**: record revenue / GM / EPS all above guidance high end; data-center revenue >2x YoY; DRAM record (HBM ~+50% sequential); record DC SSD share (NAND); guides to continued records; 30% dividend increase. GM ~38% → 80%+ YoY; HBM sold out through 2026; MU mcap >$1T; stock ~+70% YTD.
+
+**Data-quality flag (Rule 4)**: third-party figures conflict >20% (~$41.5B/84.6% GM/$25 EPS vs ~$33.5B/81%/$19-20) — exact magnitude provisional pending 10-Q; direction unambiguous.
+
+**Framework read**:
+- Confirms bull anchor (§5/§6): 80%+ GM on sold-out HBM = "shovels already profitable, Cisco/Intel 1998 not Pets.com"
+- CRule 2/5 caution: record earnings+margins = Phase-4 late-cycle setup; "sold out / $1,200-1,500 targets / memory is infrastructure not commodity" = textbook peak re-rating narrative (echoes Cisco "plumbing of internet" 1999)
+- CRule 1 dependency: MU downstream of the report's single risk — hyperscaler capex (collapsing FCF, $230B debt, $500B gap, Burry depreciation §10.3); as most operationally-levered link, memory corrects hardest/first if capex pauses
+- **Verdict unchanged, reinforced**: blowout = confirming evidence for "1998→early-1999" marker, NOT a refutation. 3-player oligopoly + multi-year HBM contracts can extend (like repo's VLCC supply thesis) but historically only delay, never repeal, memory mean-reversion
+
+**Sources**: Micron IR (investors.micron.com), 247WallSt, MoneyMorning, StartupFortune, TradingKey, S&P Global, Zacks.
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

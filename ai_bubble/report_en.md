@@ -306,3 +306,27 @@ A widely circulated side-by-side (IntuitionLabs / Forbes / AInvest) lands close 
 ---
 
 *Two-Step Research Protocol applied. Bilingual mirror: [中文版 →](report_cn). Education/analysis only — not investment advice.*
+
+---
+
+# Addendum A — Real-Time Test: Micron (MU) Q3-FY26 (Jun 24, 2026)
+
+> **Why this matters to the framework:** Micron is one leg of the memory trio (SK Hynix / Samsung / Micron) that this report identifies as the **profit-capture "picks-and-shovels" layer** of the AI buildout (§1.2). A blowout here is the single cleanest real-world test of the report's central tension — *real supplier profits (bullish) vs late-cycle euphoria (bearish on timing)*. DRAM/NAND is also a textbook **cyclical** industry, so Layer-2 Cyclical Rules apply directly.
+
+**What was reported (official, corroborated):** record revenue, gross margin, and EPS — **all above the high end of guidance**; **data-center revenue more than doubled YoY**; **DRAM a record** (HBM **~+50% sequential**); record data-center SSD share in NAND; management guides to **continued records** in revenue / GM / EPS / FCF; board approved a **30% dividend increase**. *(Source: Micron IR, investors.micron.com, Q3-FY26 release & prepared remarks.)*
+
+**⚠️ Data-quality flag (Rule 4):** third-party trackers disagree on the exact magnitude — one set cites **~$41.5B revenue / ~84.6% GAAP GM / ~$25 EPS / ~$50B next-Q guide**, another cites **~$33.5B / ~81% non-GAAP GM / ~$19–20 EPS**. That is a >20% spread (likely actual-vs-guide and GAAP-vs-non-GAAP mixing). The **direction** is unambiguous; treat the **exact figures as provisional** pending the 10-Q. Corroborated anchors: GM rose from ~38% to **80%+** YoY, **HBM sold out through 2026**, MU market cap **>$1T**, stock **~+70% YTD**.
+
+**Framework read (3 points):**
+
+1. **Confirms the bull anchor (§5 / §6).** An 80%+ gross margin on sold-out, contracted HBM *is* the "shovels already profitable — Cisco/Intel 1998, not Pets.com" thesis in its purest form. MU **validates** the "pre-2000, revenue accelerating into capex" marker — the demand is real and being paid for.
+2. **But Cyclical Rules flag peak-type behavior.** Memory is the most boom-bust commodity in tech; **record earnings + record margins is the Phase-4 (late-cycle) setup** where PE looks lowest exactly when it's most dangerous (**CRule 2**). And the chorus — *"sold out through 2026," $1,200–1,500 targets, near-universal buys, "memory is now infrastructure not a commodity"* — is the **textbook peak re-rating narrative** (**CRule 5**), almost verbatim the "plumbing of the internet" framing applied to Cisco in 1999.
+3. **MU is downstream of the report's single risk.** Its revenue quality rests on **hyperscaler capex continuing** — yet those same buyers show **collapsing FCF (Amazon −95%), $230B+ new debt, a ~$500B capex-vs-revenue gap (§1)**, and face Burry's depreciation critique (§10.3). As the most operationally-levered link, memory would correct **hardest and first** if capex pauses (**CRule 1** lead/lag: suppliers peak *before* the underlying rate).
+
+**Verdict (unchanged, reinforced):** MU's blowout is **confirming evidence for the "1998 → early-1999" marker, not a refutation.** It proves demand is real *while simultaneously* displaying classic late-cycle euphoria. The decisive swing variable is unchanged: **does end-AI revenue scale into the capex before hyperscaler cash flow forces a pause?** The genuine "this-time-different" is the **3-player oligopoly + multi-year HBM contracts**, which can *extend* the cycle (mirroring this repo's supply-driven VLCC thesis) — but in memory, supply discipline has historically *delayed* the mean-reversion, never *repealed* it.
+
+**Sources:** Micron IR (investors.micron.com/quarterly-results); 247WallSt; MoneyMorning; StartupFortune; TradingKey; S&P Global Market Intelligence; Zacks — accessed Jun 24, 2026.
+
+---
+
+*Addendum A applied within the Two-Step Research Protocol. Education/analysis only — not investment advice.*
