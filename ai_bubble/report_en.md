@@ -474,6 +474,121 @@ Single swing variable:        Does AI end-revenue 3-5x into the capex before the
 
 ---
 
+# Section 12 — The "Fish-Tail" Question (鱼尾理论): Is the Final Phase the Fattest?
+
+> **The saying:** *"鱼尾虽然刺多，但是最肥美"* — "the fish tail has many bones, but it's the fattest, most delicious part." **Applied to a bubble:** even as we near the burst, we may be entering the **bumpiest yet potentially most profitable** part of the cycle. **Does the dot-com record support this?**
+
+> **TL;DR verdict:** **The saying is empirically TRUE about magnitude, but DANGEROUS as a buy-and-hold rule.** The dot-com "tail" (the final ~6–12 months) really did deliver the cycle's single fattest gains — but those gains were inseparable from the sharpest bones, and the round-trip wiped out anyone without a disciplined **exit**. The tail rewards the *disciplined seller* and punishes the *greedy holder*. This is precisely why the repo's **CRule 5 (contrarian sell signals)** and **CRule 8 (exit triggers)** exist.
+
+## 12.1 Step 1 — Concise Research Draft
+
+**Core conclusion (first):** In the dot-com cycle the final leg WAS the fattest *and* the most dangerous: the NASDAQ gained ~77% in its last 6 months and 1999 produced the wildest single-stock returns of the whole bubble — but the same melt-up was followed by −78%, so the "fat meat" was only capturable **with a pre-committed exit**. Magnitude: confirms the saying. As investing advice: only valid with strict sell discipline (CRule 8).
+
+**3 supporting points** *(claim → evidence needed)*:
+1. **Claim:** The biggest index gains came at the very end. → *Evidence:* NASDAQ +~77% in the final 6 months (≈2,857 on Sep-10-1999 → 5,048 on Mar-10-2000).
+2. **Claim:** The fattest single-stock gains came in the last full year. → *Evidence:* 1999 — Qualcomm **+2,619%**, VeriSign +1,165%, F5 +1,012%; **13 large-caps >1,000%** in that one year.
+3. **Claim:** Exiting "early to be safe" had a large opportunity cost. → *Evidence:* selling in 1998 would have missed the single most explosive leg of the entire cycle.
+
+**2 opposing / counter points** *(claim → evidence needed)*:
+1. **Claim:** The tail's gains evaporate faster than they appear. → *Evidence:* NASDAQ −34% in ~6 weeks post-peak; −78% over 31 months; back to break-even only in **2015 (15 yrs)**.
+2. **Claim:** Holding through negates the tail entirely. → *Evidence:* buy at the *start* of the melt-up (Sep-1999, 2,857) and hold to the trough (Oct-2002, 1,140) = **−60%**, despite catching the whole fat leg.
+
+**Explicitly unknown (not fabricated):** what fraction of real investors actually sold near the top (survivorship/anecdote-heavy); whether the current AI tail will be as steep (HBM/Micron suggest a fatter-fundamentals tail than 1999's pure-story names — **unknown** if that means higher or lower final gains).
+
+## 12.2 Step 2 — Strict Peer Review (draft NOT rewritten)
+
+**1. Facts that need verification**
+- NASDAQ 2,857 (Sep-10-1999) and 5,048 (Mar-10-2000) — verify exact closes (Wikipedia/index data).
+- Qualcomm "+2,619% in 1999," "13 large-caps >1,000%" — secondary (StatMuse/MDPI); verify against total-return data.
+- "−34% in ~6 weeks," "trough 1,139.90 Oct-2002," "−78%," "break-even 2015" — verify against index history.
+
+**2. Logical leaps / equivocation**
+- **"Fattest" conflates index vs single stocks.** +77% (index) and +2,619% (one stock) are different claims; survivorship makes the single-stock figure look more attainable than it was.
+- **"Most profitable part" ⇄ "highest paper gains."** Profit is only realized on *exit*; unrealized melt-up gains are not profit. The saying quietly swaps the two.
+- **Calendar ≠ phase:** "the tail" is only identifiable *after* the peak; in real time you don't know if you're in the tail or mid-body.
+
+**3. Missing counterexamples / competing explanations**
+- **The bubble could have kept inflating** — the "tail" might have had another year (it didn't, but ex-ante that was unknowable; cf. 1998 "this is a bubble" calls that were 18 months early).
+- **Bonds/cash comparison:** risk-adjusted, the final-leg Sharpe was terrible — huge volatility for gains that round-tripped.
+- **Selection bias of winners:** for every Qualcomm there were Pets.com / eToys that went to zero *during* the same "fat" window.
+
+**4. Most important primary sources to add**
+- NASDAQ Composite historical index levels (official/Wikipedia).
+- Total-return tables for 1999 single-stock performance (CRSP/StatMuse).
+- Deutsche Bank / academic dot-com timelines for the crash path.
+
+**5. Sentences that are at most speculation, not fact**
+- "the tail rewards the disciplined seller and punishes the greedy holder" (a maxim, not a measured fact).
+- "the current AI tail will be fatter-fundamentals" (speculative).
+- any implication about *where in the tail* 2026 sits.
+
+## 12.3 FOR the saying — the tail really was the fattest
+
+| Evidence | Figure | Source |
+|---|---|---|
+| NASDAQ gain, final 6 months | **~+77%** (≈2,857 → 5,048, Sep-1999 → Mar-2000) | Wikipedia |
+| Qualcomm, 1999 (best large-cap) | **+2,619%** | StatMuse; MDPI |
+| Other 1999 monsters | VeriSign +1,165%, F5 +1,012%, **13 large-caps >1,000%** | StatMuse; TraderLion |
+| Implication | the **single most explosive leg came last**; exiting in 1998 missed it | — |
+
+## 12.4 AGAINST the saying — the bones are lethal
+
+| Evidence | Figure | Source |
+|---|---|---|
+| NASDAQ drop, first ~6 weeks post-peak | **−34%** (incl. one −9.7% day) | Money Morning; Deutsche Bank |
+| Peak → trough | **−78%** (5,048 → 1,139.90, Oct-2002), over **31 months** | Money Morning; Finbold |
+| Time to break even | **2015 — 15 years** | climbtheladder; daytrading.com |
+| Tail-gainers' own crashes | Cisco **−86%**, Yahoo **−90%**, Qualcomm ~**−88%** | Wikipedia |
+
+## 12.5 The decisive test — the round-trip math
+
+The saying lives or dies on whether you can **keep** the tail. Two illustrations using NASDAQ levels:
+
+- **Held through:** buy at the *start* of the final melt-up (Sep-10-1999, 2,857), hold to the trough (Oct-2002, ≈1,140) → **≈ −60%** — *worse than never playing the tail at all*, despite "catching" the entire fat leg.
+- **Gave it back fast:** the +77% melt-up was **nearly all surrendered within ~6 weeks** of the peak (by end-Apr-2000 the index was ~+16% vs the Sep-1999 entry — i.e. ~80% of the melt-up gone in six weeks).
+
+> **The fish-tail is real, but it is a *trader's* prize, not a *holder's*.** The "肥美" (fat meat) is only realized by someone who **sells into the euphoria**; the "刺多" (many bones) is the −78% that follows. Without a pre-committed exit, the tail is a wealth-destroyer, not a wealth-builder.
+
+## 12.6 Verdict + how it maps to our framework
+
+```
+Is the final phase the fattest?     YES, empirically (NASDAQ +77% in 6 months;
+                                    1999 single-stock gains the cycle's biggest).
+Is it the "most profitable" part?   ONLY IF you exit. Paper gains != realized profit.
+                                    Held-through, the tail produced a NET LOSS (-60%).
+Risk character:                     Highest reward AND highest danger simultaneously
+                                    -> the most bumpy ("刺多") leg, exactly as the saying says.
+Framework tie-in:                   This is why CRule 5 (sell signals: super-cycle
+                                    headlines, >70% buys, 3x+ breakeven) and CRule 8
+                                    (explicit exit triggers) exist. The tail is the
+                                    REWARD for staying through Phase 4 (late-cycle) -
+                                    but only for those with the discipline to sell it.
+For the current AI cycle:           Consistent with the '1998->early-1999' marker: if
+                                    the analog holds, the fattest, bumpiest gains may
+                                    still be AHEAD - but so is the -78% bone. Stay for
+                                    the tail ONLY with a written exit (spreads widen,
+                                    capex guide-down, Fed hike - see Section 11).
+```
+
+> **Honest synthesis:** *鱼尾最肥美* is **vindicated as a description** of where the biggest gains cluster (the end), and **rejected as a naive hold-forever strategy** (the same end delivers the biggest losses). The saying is really an argument *for staying invested late WITH a disciplined exit* — not for greed. In our terms: the tail is the payoff for correctly reading Phase 4, claimed only by those who obey CRule 8. **Anti-bias note:** beware survivorship (we remember Qualcomm, not Pets.com) and recency/narrative bias ("this time the tail is longer") — the two biases most likely to make a reader eat the bones.
+
+## Sources (Section 12, accessed Jun 25, 2026)
+
+- Wikipedia — *Dot-com bubble* (NASDAQ levels, stock drawdowns): https://en.wikipedia.org/wiki/Dot-com_bubble
+- StatMuse — *Best performing stocks 1999*: https://www.statmuse.com/money/ask/5-best-performing-stocks-in-1999
+- MDPI Encyclopedia — *Dot-Com Bubble*: https://encyclopedia.pub/entry/31800
+- TraderLion — *Lessons From the 1999 Dot-Com Bubble*: https://traderlion.com/research/dot-com-bubble/
+- Money Morning — *The Dot-Com Crash of 2000–2002*: https://moneymorning.com/2015/06/12/the-dot-com-crash-of-2000-2002
+- Finbold — *Dot-com Bubble Explained*: https://finbold.com/guide/dot-com-bubble-crash/
+- climbtheladder — *How Long the Dot-Com Bubble Lasted*: https://climbtheladder.com/how-long-the-dot-com-bubble-lasted-boom-crash-recovery/
+- Investing.com / Deutsche Bank — *How did the dot-com bubble burst*: https://in.investing.com/news/stock-market-news/how-did-the-dot-com-bubble-burst-deutsche-banks-definitive-guide-4657250
+
+---
+
+*Two-Step Research Protocol applied (Section 12 §12.1 draft + §12.2 review). Education/analysis only — not investment advice.*
+
+---
+
 # Addendum A — Real-Time Test: Micron (MU) Q3-FY26 (Jun 24, 2026)
 
 > **Why this matters to the framework:** Micron is one leg of the memory trio (SK Hynix / Samsung / Micron) that this report identifies as the **profit-capture "picks-and-shovels" layer** of the AI buildout (§1.2). A blowout here is the single cleanest real-world test of the report's central tension — *real supplier profits (bullish) vs late-cycle euphoria (bearish on timing)*. DRAM/NAND is also a textbook **cyclical** industry, so Layer-2 Cyclical Rules apply directly.

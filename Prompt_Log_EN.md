@@ -526,3 +526,22 @@ User thesis: we're ~98-99; shovels stay profitable; but hyperscaler FCF is drain
 User asked what "IG 利差" (IG credit spread) means. Added glossary box §11.4a to both EN/CN: IG = investment grade; credit spread = corporate yield over same-maturity Treasury = risk premium; spread widening = rising perceived credit risk / falling bond price; explains why "spreads widen while stock flat" is the canary (bondholders react before equity holders — telecom-2001 sequence), tying to §11.7 dashboard signal #1.
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32g: The "Fish-Tail" Question (鱼尾理论) — fact-check
+**Date**: June 25, 2026
+
+User: fact-check the saying "鱼尾虽然刺多，但是最肥美" (the tail has many bones but is the fattest) for the dot-com bubble — is the final phase the bumpiest yet most profitable? Give examples for/against. Added **Section 12** to both EN/CN (Two-Step Protocol §12.1 draft + §12.2 review).
+
+**FOR (tail is fattest)**: NASDAQ +~77% in final 6 months (2,857 Sep-1999 → 5,048 Mar-2000); 1999 single-stock monsters — Qualcomm +2,619%, VeriSign +1,165%, F5 +1,012%, 13 large-caps >1,000% in one year.
+
+**AGAINST (bones are lethal)**: −34% in ~6 weeks post-peak; −78% over 31 months; break-even only 2015 (15 yrs); Cisco −86%, Yahoo −90%, Qualcomm ~−88%.
+
+**Decisive round-trip math**: buy at melt-up start (Sep-1999, 2,857), hold to trough (Oct-2002, ~1,140) = −60% despite catching the whole fat leg; +77% melt-up nearly all given back within ~6 weeks of peak.
+
+**Verdict**: true about magnitude, false as buy-and-hold; the tail is a trader's prize claimable only with a disciplined exit → maps directly to CRule 5 (sell signals) + CRule 8 (exit triggers). Anti-bias note: survivorship (Qualcomm vs Pets.com) + recency/narrative.
+
+**Sources**: Wikipedia, StatMuse, MDPI, TraderLion, Money Morning, Finbold, climbtheladder, Deutsche Bank (full URLs in report Section 12).
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
