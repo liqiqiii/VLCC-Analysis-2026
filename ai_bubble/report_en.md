@@ -531,6 +531,28 @@ Single swing variable:        Does AI end-revenue 3-5x into the capex before the
 | Other 1999 monsters | VeriSign +1,165%, F5 +1,012%, **13 large-caps >1,000%** | StatMuse; TraderLion |
 | Implication | the **single most explosive leg came last**; exiting in 1998 missed it | — |
 
+## 12.3a How fat vs the "body"? — the pace accelerated ~5–7×
+
+The user's key question: **how 肥美 is the tail vs the phase before it?** Using NASDAQ closes, the answer is that the *rate* of gain went near-parabolic into the peak:
+
+| Phase | Index move | Total gain | Annualized pace |
+|---|---|---|---|
+| The "body" 1995–1998 (4 yrs) | 751 → 2,192 | **+192%** | **~31%/yr** |
+| 1995 | 751 → 1,052 | +43.5% | +43.5% |
+| 1996 | 1,052 → 1,291 | +24.2% | +24.2% |
+| 1997 | 1,291 → 1,570 | +21.9% | +21.9% |
+| 1998 | 1,570 → 2,192 | +32.7% | +32.7% |
+| 1999 (last full year) | 2,192 → 4,069 | **+81.1%** | +81% |
+| **Final 6 months** (Sep-99 → peak) | 2,857 → 5,048 | **+77%** | **≈ +213%/yr** |
+| Final 17-mo melt-up (Oct-98 low → peak) | 1,419 → 5,048 | **+256%** | ≈ +145%/yr |
+
+**Three ways to see how much fatter the tail was:**
+1. **Pace:** the final 6 months ran at **~213% annualized — roughly 7× the ~31%/yr pace of the 1995–98 body**, and the last full year (+81%) was ~2.6× that pace.
+2. **The tail out-earned the whole body:** the **17-month melt-up (+256%) exceeded the entire prior 4-year body (+192%)** — more was made in the last 1.4 years than in the preceding 4.
+3. **Share of the peak built late:** of the 5,048 peak, **~3,629 points (72%) were added in the final 17 months**; ~2,191 points (43% of the peak) in just the final 6 months.
+
+> **So "鱼尾最肥美" is quantitatively vindicated on the upside:** the tail wasn't marginally fatter — by pace it was **~5–7× richer** than the body, and the final stretch alone out-produced years of prior gains. **But** re-read §12.4–12.5 immediately: that same 72%-of-the-index "fat" is exactly what the −78% crash gave back. The fatter the tail, the sharper the bones.
+
 ## 12.4 AGAINST the saying — the bones are lethal
 
 | Evidence | Figure | Source |
@@ -582,6 +604,8 @@ For the current AI cycle:           Consistent with the '1998->early-1999' marke
 - Finbold — *Dot-com Bubble Explained*: https://finbold.com/guide/dot-com-bubble-crash/
 - climbtheladder — *How Long the Dot-Com Bubble Lasted*: https://climbtheladder.com/how-long-the-dot-com-bubble-lasted-boom-crash-recovery/
 - Investing.com / Deutsche Bank — *How did the dot-com bubble burst*: https://in.investing.com/news/stock-market-news/how-did-the-dot-com-bubble-burst-deutsche-banks-definitive-guide-4657250
+- DQYDJ — *NASDAQ Composite Annual Returns by Year* (year-end levels 1994–99): https://dqydj.com/scripts/fullhtml/indexes/index-annual-returns.html?index=nasdaq
+- FRED, St. Louis Fed — *NASDAQ Composite daily closes*: https://fred.stlouisfed.org/data/NASDAQCOM
 
 ---
 

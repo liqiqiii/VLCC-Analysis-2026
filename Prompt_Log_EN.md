@@ -545,3 +545,22 @@ User: fact-check the saying "鱼尾虽然刺多，但是最肥美" (the tail has
 **Sources**: Wikipedia, StatMuse, MDPI, TraderLion, Money Morning, Finbold, climbtheladder, Deutsche Bank (full URLs in report Section 12).
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32h: How fat is the tail vs the body? — phase-pace comparison
+**Date**: June 25, 2026
+
+User: how 肥美 is the tail vs the phase before it — the +77% is the final 6 months, but how much did the market grow before that? Added §12.3a (phase-by-phase NASDAQ comparison) to both EN/CN.
+
+**Findings (NASDAQ year-end closes)**:
+- "Body" 1995–98 (4 yrs): 751 → 2,192 = +192% total = ~31%/yr (1995 +43.5%, 1996 +24.2%, 1997 +21.9%, 1998 +32.7%)
+- 1999 (last full year): +81.1% (2,192 → 4,069)
+- Final 6 months: +77% ≈ 213% annualized
+- Final 17-mo melt-up (Oct-98 low 1,419 → peak 5,048): +256% ≈ 145%/yr
+- **3 punchlines**: (1) final 6mo pace ~7× the 1995–98 ~31%/yr body; (2) the 17-mo melt-up (+256%) out-earned the entire prior 4-yr body (+192%); (3) ~72% of the 5,048 peak (3,629 pts) was added in the last 17 months, 43% in the last 6
+- Verdict: "鱼尾最肥美" quantitatively vindicated (~5–7× richer by pace) — but that same 72% is exactly what the −78% crash gave back
+
+**Sources added**: DQYDJ (NASDAQ annual returns), FRED St. Louis Fed.
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
