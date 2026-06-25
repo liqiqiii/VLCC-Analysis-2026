@@ -502,3 +502,12 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 **来源**：Investopedia、美联储、CNBC（×3）、IndexBox、QZ、US News、Economic Times、Janus Henderson、CreditSights、primerates（完整 URL 见报告第 11 节）。
 
 **更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32f: 术语 ——"IG 利差"解释
+**日期**: 2026年6月25日
+
+用户问"IG 利差"是什么。在 EN/CN 中新增术语框 §11.4a：IG = 投资级；信用利差 = 公司债收益率高出同期限国债的部分 = 风险溢价；利差走阔 = 感知信用风险上升/债券价格下跌；解释为何"利差走阔而股票仍平"是金丝雀（债券持有人先于股票持有人反应——电信 2001 序列），并关联 §11.7 仪表盘第 1 条。
+
+**更新文件**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

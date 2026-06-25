@@ -517,3 +517,12 @@ User thesis: we're ~98-99; shovels stay profitable; but hyperscaler FCF is drain
 **Sources**: Investopedia, Federal Reserve, CNBC (×3), IndexBox, QZ, US News, Economic Times, Janus Henderson, CreditSights, primerates (full URLs in report Section 11).
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32f: Glossary — "IG credit spread" explainer
+**Date**: June 25, 2026
+
+User asked what "IG 利差" (IG credit spread) means. Added glossary box §11.4a to both EN/CN: IG = investment grade; credit spread = corporate yield over same-maturity Treasury = risk premium; spread widening = rising perceived credit risk / falling bond price; explains why "spreads widen while stock flat" is the canary (bondholders react before equity holders — telecom-2001 sequence), tying to §11.7 dashboard signal #1.
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

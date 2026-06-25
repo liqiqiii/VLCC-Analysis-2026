@@ -375,6 +375,28 @@ A widely circulated side-by-side (IntuitionLabs / Forbes / AInvest) lands close 
 
 Bubbles move through **displacement → boom → euphoria → profit-taking → panic** (Minsky). The hinge is **credit**: borrowers shift from **hedge** (cover principal + interest from cash flow) → **speculative** (cover interest only) → **Ponzi** (need rising asset prices to refinance). The **Minsky moment** is when funding can no longer be rolled — usually because an **external tightening** (Fed hikes, spread widening, a default) freezes the refinancing the structure depends on. **The user's chain — FCF drain → debt funding → leverage crack on a liquidity withdrawal — is a textbook Minsky sequence.** The open question is only *which rung* (hedge/speculative/Ponzi) the AI complex sits on, and *when* the external tightening bites.
 
+## 11.4a Glossary box — what "IG credit spread" means (and why it's the canary)
+
+> **IG = Investment Grade** — bonds from high-rated issuers (S&P BBB-/Moody's Baa3 and above). Hyperscaler bonds (Microsoft, Amazon, Alphabet, Meta, Oracle) are A/AA-rated, i.e. IG.
+>
+> **Credit spread (利差)** = the extra yield a corporate bond pays **over the same-maturity US Treasury** (the "risk-free" benchmark). It is the market's required **compensation for credit risk**:
+> ```
+> Credit spread = corporate bond yield − same-maturity Treasury yield
+> ```
+> *Example:* 10-yr Treasury 4.2%, Oracle 10-yr bond 4.9% → spread = **0.7% = 70 bps** (basis points; 1 bp = 0.01%).
+>
+> **"Spread widening" = rising risk premium = bond price falling.** When a spread **widens**, investors demand more compensation to lend to that issuer — they perceive **higher credit risk**. The §11.5 figures (Oracle **+48 bps**, Meta +15, Google +10 in late-2025) mean exactly this: too much new supply + balance-sheet concern pushed their spreads up.
+>
+> **Why "spreads widen while the stock is still flat" is an early warning (dashboard signal #1):** the **credit market usually smells trouble before the equity market**, because bondholders care about only one thing — *getting paid back* — so they react fast to drained cash flow and rising debt. Equity holders are still paying for the *growth story* and tend to ignore balance-sheet stress. The classic burst sequence is therefore:
+> ```
+> Credit spreads widen first  (bondholders exit early)
+>          ↓
+> Stock still flat / rising    (equity still believes the story)
+>          ↓
+> Stock finally catches down    (the telecom-2001 script)
+> ```
+> **Practical takeaway:** watch the **credit spreads on AI/hyperscaler IG bonds**, not just their P/E. A visible spread widening while the stock is still calm is often the "smart money" leaving quietly — and is the first item on the §11.7 warning dashboard.
+
 ## 11.5 The 2026 debt pivot — the user's core thesis, in data
 
 | Metric | Value | Source |
