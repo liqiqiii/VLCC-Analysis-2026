@@ -498,3 +498,22 @@ User: Micron just reported way above expectations — comments through our frame
 **Sources**: Micron IR (investors.micron.com), 247WallSt, MoneyMorning, StartupFortune, TradingKey, S&P Global, Zacks.
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 32e: How Bubbles Burst — Timing, Triggers & the 2026 Debt Setup
+**Date**: June 25, 2026
+
+User thesis: we're ~98-99; shovels stay profitable; but hyperscaler FCF is drained so they're issuing bonds to keep funding AI infra (no one can afford to under-invest); next the debt leverage cracks and Fed rate hikes drain liquidity. Asked to research how bubbles crash and add a chapter. Added **Section 11** to both EN/CN (with mandatory Two-Step Protocol: §11.2 draft + §11.3 peer review).
+
+**Key findings (sourced)**:
+- Bubbles burst on a LIQUIDITY/CREDIT trigger, not high valuations: dot-com peaked Mar 10 2000 ~9 months into Fed hikes (4.75%→6.50%), at the LAST hikes; NASDAQ −78% to Oct 2002
+- Telecom (debt cousin): bankruptcies (Global Crossing, WorldCom $11B fraud Jun 2002) LAGGED the equity peak by 1-2 years
+- Minsky: hedge→speculative→Ponzi; Minsky moment = funding can't roll on external tightening
+- 2026 debt pivot CONFIRMS user thesis: hyperscaler bond issuance ~$121B 2025 (4× ~$28B avg), >$175B proj 2026, Amazon $54B Mar-26, Alphabet 100-yr century bond, Oracle spread +48bps, CNBC "shatters unspoken contract"
+- Fed Jun-2026: 3.50-3.75%, 4 holds, NO 2026 cuts, 9/19 project a HIKE, core PCE 3.3%/CPI 4.2% — leverage rising AS liquidity tightens
+- **Verdict**: thesis directionally right & better-supported in mid-2026; refinements — (1) trigger more likely exogenous (Fed/credit) than leverage self-cracking; (2) IG borrowers → slow-motion deflation not 2000-style crash; (3) debt unwind lags equity peak → ~2027-28 watch window. Watch credit spreads + first capex guide-down
+
+**Sources**: Investopedia, Federal Reserve, CNBC (×3), IndexBox, QZ, US News, Economic Times, Janus Henderson, CreditSights, primerates (full URLs in report Section 11).
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

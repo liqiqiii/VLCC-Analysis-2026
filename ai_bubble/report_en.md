@@ -309,6 +309,149 @@ A widely circulated side-by-side (IntuitionLabs / Forbes / AInvest) lands close 
 
 ---
 
+# Section 11 — How Bubbles Actually Burst: Timing, Triggers, and the 2026 Debt Setup
+
+> **User thesis (Jun 25, 2026), paraphrased:** We're ~1998–99; the shovel-sellers (Micron etc.) keep proving they're wildly profitable, so the bull runs on. But the threat builds underneath: hyperscaler **free cash flow is drained**, so they've started **issuing bonds / borrowing** to keep funding AI infra because profits aren't enough — and this continues *because no one can afford to be the one that under-invests if AI keeps getting more powerful*. The next step is the company **debt leverage (债务杠杆) cracks**, and market **liquidity is drained by the Fed raising rates**. → This chapter researches *how* tech bubbles actually burst, and tests that thesis.
+
+> **TL;DR verdict:** The thesis is **largely correct on mechanism and is now supported by 2026 data**, with two refinements. (1) Bubbles burst on a **liquidity/credit trigger**, not on high valuations alone — dot-com peaked ~9 months into Fed tightening, *at the last hikes*, not when valuations first got silly. (2) The **debt pivot is real and is the key regime change**: hyperscaler bond issuance quadrupled to ~$121B in 2025, and the Fed is "higher-for-longer" with hike risk — so leverage is rising *as* liquidity tightens. **Refinements:** hyperscalers are investment-grade "speculative" (not "Ponzi") borrowers, so the bust is likelier **slow-motion deflation than a 2000-style −78% crash**; and the **debt unwind historically lags the equity peak by 1–2 years** (telecom peaked 2000, bankruptcies hit 2001–02), pointing the "leverage crack" toward **2027–28**, not 2026.
+
+## 11.1 Fact-base — how the two reference bubbles actually burst (timing)
+
+| | Dot-com / NASDAQ | Telecom (the debt cousin) |
+|---|---|---|
+| Equity peak | **Mar 10, 2000** (NASDAQ 5,048) | ~2000, with the broader tech top |
+| Proximate trigger | **Fed hikes 4.75% → 6.50%** (Jun 1999 → May 2000); liquidity dried up for unprofitable names | Same liquidity turn + **overcapacity + vendor-financed debt** |
+| Lag: first hike → peak | **~9 months** (peak came at the *last* hikes, not the first) | similar |
+| The real carnage | −78% to **Oct 2002 trough** (~2.5 yrs) | **bankruptcies 2001–02** (Global Crossing, WorldCom) — *lagged the equity peak by 1–2 yrs* |
+| Tipping point | profit warnings → panic selling as financing vanished | **WorldCom $11B fraud, Jun 2002** — largest US bankruptcy then |
+
+**Key lesson:** valuations don't pop bubbles; **the marginal funding source drying up** does. In 1999–2000 that was the Fed. The debt-heavy part of the complex (telecom) **kept falling for 2+ years after the equity peak** as leverage unwound.
+
+## 11.2 Step 1 — Concise Research Draft
+
+**Core conclusion (first):** A tech bubble bursts when its **marginal funding source is withdrawn** — almost always via **credit tightening (Fed hikes / liquidity drain)** that exposes accumulated leverage (a *Minsky moment*). The 2026 AI complex has just **swapped its marginal funding source from internal FCF to external debt**, precisely as the Fed turns "higher-for-longer," which **raises systemic fragility** versus 1999. But because the core borrowers are cash-generative investment-grade names, the likely path is a **slower, shallower deflation that lags the eventual equity peak by 1–2 years**, not an instant 2000-style collapse.
+
+**3 supporting points** *(claim → evidence needed)*:
+1. **Claim:** Bubbles pop on liquidity, not valuation. → *Evidence:* dot-com peaked Mar-2000 ~9 months into Fed hikes (4.75%→6.50%), not in 1998 when multiples were already extreme; 2008 and Japan-1990 followed central-bank tightening too.
+2. **Claim:** The 2026 funding-source switch (FCF → debt) is real and rate-sensitive. → *Evidence:* hyperscaler bond issuance **~$121B in 2025 (4× the ~$28B prior avg)**, **>$175B projected 2026**, Amazon **$54B** (Mar 2026), Alphabet 100-yr "century bond," spreads widening (Oracle +48bps); CNBC: "shatters the unspoken contract with investors."
+3. **Claim:** The Fed backdrop is tightening, not easing. → *Evidence:* Jun 2026 funds rate **3.50–3.75%**, four holds, **no 2026 cuts**, **9/19 FOMC project a hike**, core PCE 3.3%, CPI 4.2%, liquidity "mildly restrictive."
+
+**2 opposing / counter points** *(claim → evidence needed)*:
+1. **Claim:** It won't be a 2000-style crash because the borrowers are solvent. → *Evidence:* hyperscalers are A/AA-rated with huge operating cash flow (Minsky "speculative," not "Ponzi"); the asset (compute) has real, contracted demand (Micron HBM sold out) unlike unused dark fiber.
+2. **Claim:** The Fed could *cut* and defuse the trigger. → *Evidence:* a growth scare or disinflation could flip "higher-for-longer" to cuts, re-opening the liquidity window — **unknown** which way 2026 H2 breaks.
+
+**Explicitly unknown (not fabricated):** the *timing* of any Fed pivot; whether private-credit/data-center leverage (off the hyperscaler balance sheet) is large enough to cascade; the exact aggregate hyperscaler net-debt/EBITDA; whether AI revenue 3–5x's before the debt service bites.
+
+## 11.3 Step 2 — Strict Peer Review (draft NOT rewritten)
+
+**1. Facts that need verification**
+- "$121B 2025 issuance / >$175B 2026 / $1.5T multi-year" — secondary (IndexBox, QZ, CreditSights); verify vs. issuers' filings.
+- "9/19 FOMC project a hike," "core PCE 3.3%, CPI 4.2%" — secondary summaries of the June-2026 SEP/CPI; verify vs. the Fed SEP and BLS releases.
+- "dot-com peak ~9 months after first hike" — directionally right but compresses a messy sequence (hikes began Jun 1999; arguably the *first* hike of the cycle vs. the cluster matters).
+
+**2. Logical leaps / equivocation (concept substitution)**
+- **"FCF drained" ⇄ "profits insufficient" ⇄ "must borrow."** Capex > FCF is partly a *choice* (buybacks, dividends compete for the same cash); "drained" overstates distress for firms still generating record operating cash.
+- **"Debt → leverage crash"** treats issuance as if it equals fragility; investment-grade leverage at low net-debt/EBITDA is not the same as speculative leverage. The draft must not equate *more debt* with *Ponzi finance*.
+- **"Liquidity drained by the Fed"** conflates *policy rate* with *systemic liquidity* (QT, reserves, credit spreads) — related but not identical.
+
+**3. Missing counterexamples / competing explanations**
+- **2018–19**: Fed hiking + QT produced a −20% Q4-2018 equity drop but **no bubble burst** — tightening is necessary, not sufficient.
+- **Soft-landing / cut path**: the bust may be *postponed indefinitely* if the Fed eases and AI revenue scales — the draft underweights the bull resolution.
+- **Trigger could be non-monetary**: an AI *product* disappointment (model plateau, enterprise ROI failure — recall MIT "95% of pilots fail," §10.3) or Burry-style depreciation re-statement could pop it with rates flat.
+
+**4. Most important primary sources to add**
+- Federal Reserve June-2026 **SEP/dot-plot** + FOMC statement; BLS CPI; BEA PCE.
+- Issuer prospectuses / 10-Qs for the debt (Amazon, Meta, Alphabet, Oracle).
+- Fed **H.4.1 / reserves & QT schedule** for actual liquidity (not just the policy rate).
+- Moody's/S&P credit reports on hyperscaler net leverage and data-center private credit.
+
+**5. Sentences that are at most speculation, not fact**
+- "raises systemic fragility versus 1999."
+- "slower, shallower deflation that lags the equity peak by 1–2 years."
+- "the leverage crack toward 2027–28."
+- "no one can afford to under-invest" (a behavioral assumption, however plausible).
+
+## 11.4 The mechanism — Minsky, in one paragraph
+
+Bubbles move through **displacement → boom → euphoria → profit-taking → panic** (Minsky). The hinge is **credit**: borrowers shift from **hedge** (cover principal + interest from cash flow) → **speculative** (cover interest only) → **Ponzi** (need rising asset prices to refinance). The **Minsky moment** is when funding can no longer be rolled — usually because an **external tightening** (Fed hikes, spread widening, a default) freezes the refinancing the structure depends on. **The user's chain — FCF drain → debt funding → leverage crack on a liquidity withdrawal — is a textbook Minsky sequence.** The open question is only *which rung* (hedge/speculative/Ponzi) the AI complex sits on, and *when* the external tightening bites.
+
+## 11.5 The 2026 debt pivot — the user's core thesis, in data
+
+| Metric | Value | Source |
+|---|---|---|
+| Hyperscaler bond issuance 2025 | **~$121B (≈4× the ~$28B prior 5-yr avg)** | IndexBox; QZ |
+| Projected 2026 issuance | **>$175B** (multi-yr scenarios to **~$1.5T**) | US News; Portfolio Adviser |
+| Marquee deals | Meta **$30B** (Oct-25), Amazon **$15B** (Nov-25) → **$54B** (Mar-26); Alphabet **$17.5B** → **$32B incl. 100-yr century bond**; Oracle **$18B** | CNBC; ET; QZ |
+| Spread reaction | Oracle **+48bps**, Meta +15, Google +10 (late-25), underperforming IG | Janus Henderson |
+| Capex / revenue | **45–57%** (utility-like) | CreditSights (§1) |
+| Fed stance (Jun-26) | **3.50–3.75%**, 4 holds, **no 2026 cuts**, **9/19 project a hike** | CNBC; primerates |
+| Inflation | Core PCE **3.3%**, CPI **4.2%** | CNBC SEP summary |
+
+**Read:** the funding base has shifted from **internal cash (rate-insensitive)** to **external debt (rate-sensitive)** at the exact moment the Fed signals **higher-for-longer with hike risk**. That is the precise combination that converts "expensive market" into "fragile market." **This validates the user's mechanism.** CNBC's "shattered the unspoken contract" captures the regime change: Big Tech was a *fortress-balance-sheet* credit; it is becoming a *levered industrial* credit.
+
+## 11.6 Assessing the user's specific sequencing
+
+| User's step | Verdict | Note |
+|---|---|---|
+| "We're ~98–99" | **Consistent** with §4/§9 marker (1998→early-99) | Micron blowout = late-Build proof, not refutation (Addendum A) |
+| "Shovels stay very profitable" | **Confirmed** | Micron 80%+ GM, sold out; memory trio $1T+ |
+| "FCF drained → borrowing to keep investing" | **Confirmed (2026 data)** | $121B→$175B+ issuance; Amazon FCF −95% (§9) |
+| "No one can afford to under-invest" | **Plausible (behavioral)** | Arms-race/option-value → capex won't pause *voluntarily* → trigger must be exogenous |
+| "Debt leverage cracks" | **Plausible, but likely lags** | Telecom: bankruptcies came **1–2 yrs after** the 2000 equity peak |
+| "Fed rate hike drains liquidity" | **Live risk, not hypothetical** | Higher-for-longer; 9/19 project a hike; QT/spreads matter as much as the policy rate |
+
+**Net:** the sequence is **directionally right and better-supported in mid-2026 than it would have been in 2024**. The main correction is **ordering and depth**: liquidity tightening usually *precedes and causes* the leverage crack (not the reverse), and IG balance sheets make the likely outcome a **drawn-out deflation** rather than an overnight collapse.
+
+## 11.7 Warning-signs dashboard (what would confirm the burst is starting)
+
+1. **Credit, not equity, leads:** IG **spreads widen materially** on hyperscaler/AI names while equities are still flat (the telecom-2001 tell).
+2. **A capex guide-down:** any hyperscaler *cuts* 2027 capex or "optimizes" data-center commitments → supply-chain (Micron, Nvidia, REITs) re-rates first (CRule 1 lead/lag).
+3. **Private-credit stress:** data-center/neocloud debt marked down, vacancies, a build-to-suit default → the off-balance-sheet leg cascades.
+4. **Fed actually hikes (or QT bites):** the 1999–2000 analog's proximate trigger; watch the H2-2026 SEP.
+5. **Accounting catalyst:** a depreciation-schedule restatement (Burry thesis, §10.3) or an AI-ROI disappointment (MIT 95%, §10.3) — pops it even with rates flat.
+6. **Refinancing wall:** the first big maturity that has to be rolled at higher rates with wider spreads = the Minsky moment made concrete.
+
+## 11.8 Verdict + rough timing
+
+```
+Bubble-stage (where we are):  Late-Build / early-Mania (~1998–early-1999) — unchanged
+Newly elevated risk:          The marginal funding source flipped FCF -> DEBT in
+                              2025-26, into a higher-for-longer Fed. Fragility UP.
+Most likely burst trigger:    Exogenous liquidity/credit tightening (Fed hike or
+                              spread blowout) OR an AI-ROI/depreciation catalyst —
+                              NOT high valuations by themselves.
+Likely shape:                 Slow-motion deflation + sector shakeout (IG balance
+                              sheets) rather than an instant 2000-style -78%.
+Rough timing (speculative):   Equity froth can persist into 2026-27 while revenue
+                              still accelerates; the DEBT/leverage crack historically
+                              LAGS the equity peak by 1-2 yrs -> ~2027-2028 watch window.
+Single swing variable:        Does AI end-revenue 3-5x into the capex before the
+                              refinancing bill arrives? If yes -> deflate, not detonate.
+```
+
+> **Bottom line for the user:** your instinct is right and the mechanism is now visible in hard 2026 data — the bull keeps running on real shovel profits *while* the financing quietly migrates to debt under a tightening Fed. That is exactly how 1999 set up 2000–02. The two caveats: the **trigger** is more likely to come from **credit markets / the Fed than from the leverage cracking on its own**, and the **timing of the debt unwind probably lags the equity peak**, so the dangerous window is plausibly **2027–28**. Watch **credit spreads and the first capex guide-down**, not the headline multiples.
+
+## Sources (Section 11, accessed Jun 25, 2026)
+
+- Investopedia — *Dotcom Bubble*: https://www.investopedia.com/terms/d/dotcom-bubble.asp
+- Federal Reserve — *Open Market Operations (historical rates)*: https://www.federalreserve.gov/monetarypolicy/openmarket.htm
+- CNBC — *The dot-com bubble burst 20 years ago*: https://www.cnbc.com/2020/03/09/the-dot-com-bubble-burst-20-years-ago.html
+- IndexBox — *Tech Hyperscalers' Debt Quadruples in 2025 to $121B*: https://www.indexbox.io/blog/tech-giants-quadruple-debt-issuance-to-121-billion-in-2025/
+- QZ — *Tech hyperscalers displacing banks as top US bond issuers*: https://qz.com/tech-hyperscaler-bond-issuance-investment-grade-index-050526
+- CNBC — *Big Tech's AI bond binge shatters 'unspoken contract' with investors*: https://www.cnbc.com/2026/02/23/big-techs-ai-bond-binge-shatters-unspoken-contract-with-investors.html
+- US News — *Analysts revise AI hyperscaler debt forecasts after Amazon bond sale*: https://money.usnews.com/investing/news/articles/2026-03-17/analysts-revise-ai-hyperscaler-debt-forecasts-after-amazon-bond-sale
+- Economic Times — *Alphabet, Meta, Oracle, Amazon selling ~$90B of bonds*: https://economictimes.indiatimes.com/news/international/us/google-owner-alphabet-meta-oracle-amazon-are-selling-bonds-worth-nearly-90-billion-what-is-going-on-with-us-tech-giants/articleshow/125487147.cms
+- Janus Henderson — *Mega-issuance and the AI arms race: impact on credit spreads*: https://www.janushenderson.com/en-us/advisor/article/mega-issuance-and-the-ai-arms-race-big-techs-impact-on-credit-spreads/
+- CreditSights — *Hyperscaler Capex 2026 Estimates*: https://know.creditsights.com/insights/technology-hyperscaler-capex-2026-estimates/
+- CNBC — *Fed interest rate decision June 2026: holds steady*: https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html
+- primerates — *Fed Rate Forecast 2026*: https://primerates.com/primerate/fed-rate-forecast-2026/
+
+---
+
+*Two-Step Research Protocol applied (Section 11 §11.2 draft + §11.3 review). Education/analysis only — not investment advice.*
+
+---
+
 # Addendum A — Real-Time Test: Micron (MU) Q3-FY26 (Jun 24, 2026)
 
 > **Why this matters to the framework:** Micron is one leg of the memory trio (SK Hynix / Samsung / Micron) that this report identifies as the **profit-capture "picks-and-shovels" layer** of the AI buildout (§1.2). A blowout here is the single cleanest real-world test of the report's central tension — *real supplier profits (bullish) vs late-cycle euphoria (bearish on timing)*. DRAM/NAND is also a textbook **cyclical** industry, so Layer-2 Cyclical Rules apply directly.
