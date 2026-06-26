@@ -209,13 +209,13 @@
       {
         "cycle": "2008 demand super-spike",
         "tce_baseline": 30000,
-        "tce_peak": 300000,
-        "tce_peak_mult": 10.0,
-        "source": "2008 TD3C peak ~$300-350k/day (web-verified); baseline ~ pre-spike trough",
+        "tce_peak": 230000,
+        "tce_peak_mult": 7.67,
+        "source": "2008 Baltic TD3C published peak ~$229-230k/day summer-2008 (Clarksons/Baltic, fact-checked; $300k+ were outlier single fixtures); baseline ~ 2006-07 trough",
         "FRO_peak_mult": 2.96,
-        "FRO_compression": 3.38,
+        "FRO_compression": 2.59,
         "DHT_peak_mult": 0.92,
-        "DHT_compression": 10.86
+        "DHT_compression": 8.33
       },
       {
         "cycle": "2015 mini-cycle",
@@ -242,13 +242,13 @@
       {
         "cycle": "2026 Hormuz spike",
         "tce_baseline": 50000,
-        "tce_peak": 400000,
-        "tce_peak_mult": 8.0,
-        "source": "repo modeling_stash.md: TD3C ~$400k ATH Mar-2026",
+        "tce_peak": 420000,
+        "tce_peak_mult": 8.4,
+        "source": "2026 Hormuz peak ~$420-424k/day Mar-2026 (Lloyd's List 'VLCC index tops $420K', fact-checked; repo modeling_stash.md)",
         "FRO_peak_mult": 1.87,
-        "FRO_compression": 4.28,
+        "FRO_compression": 4.49,
         "DHT_peak_mult": 1.59,
-        "DHT_compression": 5.05
+        "DHT_compression": 5.3
       }
     ]
   }

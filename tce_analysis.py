@@ -176,10 +176,10 @@ def long_cycle_table(prices: pd.DataFrame) -> dict:
     # Sourced TCE anchors ($/day). baseline = mid-cycle trough avg before the spike.
     # Sources: industry press / Clarksons-Gibson commentary / web verification.
     cycles = [
-        {"cycle": "2008 demand super-spike", "tce_baseline": 30000, "tce_peak": 300000,
+        {"cycle": "2008 demand super-spike", "tce_baseline": 30000, "tce_peak": 230000,
          "stk_lo": "2007-01-01", "stk_lo_end": "2007-03-31",
          "stk_hi": "2008-01-01", "stk_hi_end": "2008-12-31",
-         "source": "2008 TD3C peak ~$300-350k/day (web-verified); baseline ~ pre-spike trough"},
+         "source": "2008 Baltic TD3C published peak ~$229-230k/day summer-2008 (Clarksons/Baltic, fact-checked; $300k+ were outlier single fixtures); baseline ~ 2006-07 trough"},
         {"cycle": "2015 mini-cycle", "tce_baseline": 20000, "tce_peak": 100000,
          "stk_lo": "2014-01-01", "stk_lo_end": "2014-06-30",
          "stk_hi": "2015-01-01", "stk_hi_end": "2015-12-31",
@@ -188,10 +188,10 @@ def long_cycle_table(prices: pd.DataFrame) -> dict:
          "stk_lo": "2019-10-01", "stk_lo_end": "2019-12-31",
          "stk_hi": "2020-01-01", "stk_hi_end": "2020-06-30",
          "source": "2020 TD3C peak $264,072/day Mar-2020 (web-verified)"},
-        {"cycle": "2026 Hormuz spike", "tce_baseline": 50000, "tce_peak": 400000,
+        {"cycle": "2026 Hormuz spike", "tce_baseline": 50000, "tce_peak": 420000,
          "stk_lo": "2025-10-01", "stk_lo_end": "2025-12-31",
          "stk_hi": "2026-01-01", "stk_hi_end": "2026-06-30",
-         "source": "repo modeling_stash.md: TD3C ~$400k ATH Mar-2026"},
+         "source": "2026 Hormuz peak ~$420-424k/day Mar-2026 (Lloyd's List 'VLCC index tops $420K', fact-checked; repo modeling_stash.md)"},
     ]
     rows = []
     for c in cycles:

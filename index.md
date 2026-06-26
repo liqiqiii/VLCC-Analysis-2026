@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 📉 TCE vs VLCC Stock Price — Why "Watching the Rate Tape" Fails (NEW — Jun 26, 2026)
+### 💰 VLCC Cycle Position — Are DHT/FRO Cheap or Expensive? (NEW — Jun 26, 2026)
+
+Applies the **Average × Duration** model to **current prices** (DHT **$17.34**, FRO **$34.94**, Jun 26). **Verdict: neither is expensive — both CHEAP-to-FAIR, and the market is pricing them on the *sustained* ~$100k TCE, not the $420k Hormuz spike (which already collapsed).** Spot TD3C **~$100k now** (−76% from the ~$420k March peak) vs 2025's ~$50–70k; structural elevation sustained **~9–12 months**, supply-backed through 2027. PE just **5–6× @ $100k sustained** (8–9× @ $70k) = mid-cycle, not peak. 12M targets: FRO base **$38 (+9%)** / bull $55; DHT base **$17.5** / bull $25 — **plus 12–15% dividend yield**. Sell-signal algo: 🛡️ **"do not sell"** (spike-unwind ≠ cycle turn). The real risk is the *average* rolling over in **late-2027–2028**, not the spot tape. Includes a **Fact-Check section** (2008 peak corrected to ~$230k; 2026 Hormuz ~$420k; BDTI-vs-TD3C proxy resolved). *Analysis, not investment advice.*
+
+**[📄 VLCC Cycle Position (EN) →](37_VLCC_Cycle_Position_Jun2026_EN)** | **[VLCC 周期定位（中文）→](38_VLCC_Cycle_Position_Jun2026_CN)**
+
+---
+
+### 📉 TCE vs VLCC Stock Price — Why "Watching the Rate Tape" Fails (Jun 26, 2026)
 
 The **"Average × Duration"** thesis, proven with data (FRO + DHT). Settles the debate that *"watching spot TCE to trade VLCC stock is bad."* **Verdict: the stock prices the AVERAGE TCE sustained over a DURATION, not spot spikes.** Six evidence points: (1) stock-vs-rate R² rises with the averaging window (FRO **0.12→0.37**, DHT **0.20→0.50** as spot→52-wk avg, real BDTI 2020–24); (2) **amplitude compression** — TCE peaks **5–10.6×** baseline but stock peaks only **~1–3×** (the direct answer to "how big is TCE peak vs stock peak"); (3) real episode contrast — 2020 short spike → FRO **+11%** vs 2022–24 sustained → FRO **+307%**; (4) simulation: same $200k peak, 2-wk spike **×1.0** vs 2-yr sustained **×1.82**; (5) control — tripling the peak ($120k→$350k) moves stock only **+10%**; (6) sustained-avg signal forward return median **+64% (80% win)** vs spot **+10% (63%)**. Ties to the Modeling Stash momentum+rate-confirmation algo. Includes the repo's Two-Step Research Protocol (draft + peer review). *Analysis, not investment advice.*
 

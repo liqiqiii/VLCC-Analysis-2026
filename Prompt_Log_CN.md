@@ -594,3 +594,41 @@ DHT与FRO的VLCC周期顶部估值回测规则：
 **更新文件**: tce_analysis.py, tce_simulation.py, generate_tce_charts.py,
 35_TCE_vs_StockPrice_EN.md, 36_TCE_vs_StockPrice_CN.md, index.md, charts/tce_*.png,
 Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 34: 应用模型 — DHT/FRO 便宜吗？+ 对 TCE 报告做事实核查
+**日期**: 2026年6月26日
+
+用户：用"均值 x 持续时间"模型评估当前 DHT/FRO（便宜/贵），查询最新 TCE 状态 + 持续时间；
+发布带日期的报告；然后解答 35/36 报告中的遗留问题，核查第8节第二步（同行评审）各项，
+并在全部四篇（35/36/37/38）新增一节。
+
+**最新数据（2026年6月26日获取）**：
+- 价格：DHT $17.34（距52周高点 -8%），FRO $34.94（距高点 -15%）。
+- TCE：当前即期 TD3C 约 $10万/天，较 2026年3月 约 $42-42.4万 霍尔木兹峰值下跌约 76%；
+  2025 基线约 $5-7万；结构性抬升已持续约 9-12 个月；订单簿多在 2027 后交付 -> 支撑至 2027。
+
+**结论（37/38）**：都不贵；均便宜偏合理。市场按持续约 $10万 均值定价，而非飙升（论点实时
+验证）。PE 5-6x @ $10万持续（8-9x @ $7万）= 周期中段。12个月目标价（仓库敏感性模型）：
+FRO 保守 $30 / 基准 $38（+9%）/ 乐观 $55；DHT 保守 $14 / 基准 $17.5 / 乐观 $25；外加
+12-15% 股息率。卖出算法 = "不要卖"（飙升回吐 != 周期反转；2026 霍尔木兹案例）。真正风险 =
+均值在 2027下半年-2028 回落。
+
+**事实核查（第8节第二步已解决）**：
+- 2008 TD3C 峰值：约 $30-35万 -> 修正为约 $22.9-23万/天（Baltic/Clarksons 公布基准；
+  $30万+ 为异常成交）。2008 振幅行 10x -> 7.7x。
+- 2026 霍尔木兹：约 $40万 -> 约 $42-42.4万（Lloyd's List "VLCC 指数突破 $42万"）。
+  行 8.0x -> 8.4x。
+- 2020 $264,072 已确认；2015 均值约 $5-6万/峰值约 $10万 已确认。
+- BDTI vs TD3C：BDTI 是 Baltic 一篮子（VLCC TD1/TD2/TD3C + Suezmax + Aframax），包含
+  TD3C，相关但被削弱 -> 低估纯 VLCC 振幅，故压缩结论是保守的。（原"未知" -> 已解决。）
+- 结论不变：TCE 峰值 5-10.6x vs 股价 1-3x。
+
+**新增**：第9节（35/36）与第8节（37/38）"事实核查与遗留问题解答"加入全部四篇报告。
+
+**更新文件**: tce_analysis.py（锚点）, tce_results.json, charts/tce_amplitude.png,
+write_tce_report.py, 35_TCE_vs_StockPrice_EN.md, 36_TCE_vs_StockPrice_CN.md,
+write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
+38_VLCC_Cycle_Position_Jun2026_CN.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

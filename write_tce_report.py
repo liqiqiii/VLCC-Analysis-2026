@@ -264,14 +264,14 @@ they coincide with.
 
 ### Step 2 — Strict Peer Review (review only; draft not rewritten)
 
-**1. Facts that need verification**
-- 2008 TD3C peak "~\\$300–350k/day": single secondary source; verify vs Clarksons/Baltic
-  archives (some cite ~\\$200–290k). Baseline assumptions (\\$20–50k) are analyst-set, not
-  measured.
-- 2026 Hormuz "~\\$400k ATH": sourced only from repo `modeling_stash.md`; corroborate with
-  a primary Baltic print.
+**1. Facts that need verification → now fact-checked (see §9)**
+- 2008 TD3C peak: draft said "~\\$300–350k/day"; **fact-checked to ~\\$229–230k/day**
+  (published Baltic/Clarksons benchmark — \\$300k+ were *outlier single fixtures*). The
+  2008 row is corrected accordingly (now **7.7×**, was 10×).
+- 2026 Hormuz peak: draft "~\\$400k"; **fact-checked to ~\\$420–424k** (Lloyd's List "VLCC
+  index tops \\$420K"). 2026 row corrected (now **8.4×**).
 - DHT 2008 "×0.92": DHT was a tiny fleet in 2008 and the GFC crushed Q4 — the multiple may
-  reflect company-specific factors, not the rate mechanism.
+  reflect company-specific factors, not the rate mechanism. (Limitation retained.)
 
 **2. Logical leaps / concept substitution**
 - BDTI (blended dirty index) is silently substituted for **VLCC TD3C TCE \\$/day**; they
@@ -300,6 +300,56 @@ they coincide with.
   measurements, and must not be read as predictions.
 - "Operating leverage makes duration-confirmed entries powerful" — plausible mechanism,
   demonstrated only in-sample/in-model here.
+
+---
+
+## 9. Fact-Check & Open-Questions Resolution (added Jun 26, 2026)
+
+This section resolves the questions raised by the §8 Step-2 peer review.
+
+### 9.1 Verified / corrected facts
+
+| Item | Draft claim | Verified value | Source | Action |
+|:---|:---|:---|:---|:---|
+| 2008 TD3C peak | ~\\$300–350k | **~\\$229–230k/day** (summer-08; \\$300k+ = outlier fixtures) | Clarksons/Baltic recaps | **Corrected → 2008 row 7.7×** |
+| 2026 Hormuz peak | ~\\$400k | **~\\$420–424k/day** (Mar-26) | Lloyd's List "VLCC index tops \\$420K" | **Corrected → 2026 row 8.4×** |
+| 2020 COVID peak | \\$264k | **\\$264,072/day** (Mar-20) confirmed | industry press | Unchanged |
+| 2015 | ~\\$50–60k avg | avg ~\\$50–60k, intra-yr peak ~\\$100k confirmed | industry press | Unchanged |
+
+The corrections **do not change the conclusion**: TCE peaks remain **5–10.6×** baseline vs
+stock peaks ~1–3×.
+
+### 9.2 Proxy concern resolved — BDTI vs TD3C
+
+The peer review flagged that **BDTI was substituted for VLCC TD3C \\$/day**. Fact-check:
+BDTI is a Baltic **basket** (VLCC TD1/TD2/TD3C + Suezmax + Aframax routes) that *includes*
+TD3C and is **strongly correlated** with it, but **dampened** by the smaller, less-volatile
+routes/sizes. **Implication:** BDTI is a valid correlated proxy that **understates** pure-VLCC
+spike amplitude — so the true TCE-vs-stock amplitude compression is **even larger** than the
+BDTI-based numbers in §1/§3. This *strengthens*, not weakens, the thesis. (Status: was
+"unknown/paywalled" → resolved as a known, conservative bias.)
+
+### 9.3 Methodology clarifications (logical-leap items)
+
+- **"R² of level" ≠ "predicts forward returns."** Kept distinct: the level-R² (§1) shows what
+  the stock *is worth*; tradability is handled separately by the forward-return signal test
+  (§4.3). We do not equate explanatory R² with alpha.
+- **Baseline-window sensitivity.** Amplitude multiples depend on the chosen pre-spike
+  baseline; we use a fixed window and report magnitudes as **directional**, not precise.
+
+### 9.4 Counter-explanations acknowledged
+
+- **Earnings-revision vs duration.** A sustained rate and rising consensus EPS are
+  correlated; we do not fully separate them. Framing: *duration is the mechanism, earnings
+  revisions are the transmission* — both point the same way.
+- **Balance-sheet / dividend effects** (FRO recaps, DHT payout policy) and **survivorship**
+  (only FRO/DHT studied) remain genuine limitations, not controlled for here.
+
+### 9.5 Still open (honest unknowns)
+
+- Full **Baltic TD3C \\$/day weekly history 2005–2026** (paywalled) — would replace the BDTI
+  proxy and measure VLCC-specific amplitude directly.
+- Company **realised-TCE** disclosures (FRO/DHT 10-Q/6-K) to tie rate → EPS precisely.
 
 ---
 
@@ -536,13 +586,13 @@ FRO **+307%**。**驱动股票重估的是持续时间，而非峰值高度。**
 
 ### 第二步 — 严格同行评审（仅评审；不改写草稿）
 
-**1. 需要核实的事实**
-- 2008 TD3C 峰值"约 \\$30–35万/天"：单一二手来源；需对照 Clarksons/Baltic 档案（部分引用
-  约 \\$20–29万）。基线假设（\\$2–5万）为分析师设定，非实测。
-- 2026 霍尔木兹"约 \\$40万 历史新高"：仅来自仓库 `modeling_stash.md`；需用 Baltic 原始
-  报价佐证。
+**1. 需要核实的事实 → 现已完成事实核查（见 §9）**
+- 2008 TD3C 峰值：草稿称"约 \\$30–35万/天"；**经核查为约 \\$22.9–23万/天**（Baltic/Clarksons
+  公布基准——\\$30万+ 为*个别异常成交*）。2008 行已据此修正（现为 **7.7×**，原 10×）。
+- 2026 霍尔木兹峰值：草稿"约 \\$40万"；**经核查为约 \\$42–42.4万**（Lloyd's List "VLCC 指数
+  突破 \\$42万"）。2026 行已修正（现为 **8.4×**）。
 - DHT 2008"×0.92"：DHT 在 2008 年船队极小且金融危机重创 Q4——该倍数可能反映公司个体因素，
-  而非运价机制。
+  而非运价机制。（保留为局限。）
 
 **2. 逻辑跳跃 / 概念替换**
 - BDTI（混合脏油指数）被悄然替代为 **VLCC TD3C TCE 美元/天**；二者相关但不等同，且该替换
@@ -567,6 +617,51 @@ FRO **+307%**。**驱动股票重估的是持续时间，而非峰值高度。**
   统计检验确立。
 - 模拟重估倍数（×1.0 / ×1.82 等）是**模型输出**，非市场实测，不可解读为预测。
 - "经营杠杆使经持续时间确认的入场极具威力"——机制合理，但此处仅在样本内/模型内得到展示。
+
+---
+
+## 9. 事实核查与遗留问题解答（2026年6月26日新增）
+
+本节解答 §8 第二步同行评审提出的问题。
+
+### 9.1 已核实/已修正的事实
+
+| 项目 | 草稿说法 | 核实值 | 来源 | 处理 |
+|:---|:---|:---|:---|:---|
+| 2008 TD3C 峰值 | 约 \\$30–35万 | **约 \\$22.9–23万/天**（2008夏；\\$30万+ 为异常成交） | Clarksons/Baltic | **修正 → 2008 行 7.7×** |
+| 2026 霍尔木兹峰值 | 约 \\$40万 | **约 \\$42–42.4万/天**（2026年3月） | Lloyd's List "VLCC 指数突破 \\$42万" | **修正 → 2026 行 8.4×** |
+| 2020 新冠峰值 | \\$26.4万 | **\\$264,072/天**（2020年3月）已确认 | 行业媒体 | 不变 |
+| 2015 | 均值约 \\$5–6万 | 均值约 \\$5–6万，年内峰值约 \\$10万 已确认 | 行业媒体 | 不变 |
+
+这些修正**不改变结论**：TCE 峰值仍为基线 **5–10.6×**，而股价峰值约 1–3×。
+
+### 9.2 代理指标疑虑已解决 —— BDTI vs TD3C
+
+同行评审指出 **BDTI 被替代为 VLCC TD3C 美元/天**。核查：BDTI 是 Baltic **一篮子**指数
+（VLCC TD1/TD2/TD3C + Suezmax + Aframax 航线），其*包含* TD3C 且与之**高度相关**，但被
+波动较小的小型航线/船型**削弱**。**含义：** BDTI 是有效的相关代理，但**低估**了纯 VLCC 的
+飙升振幅——因此真实的 TCE-vs-股价振幅压缩比 §1/§3 基于 BDTI 的数值**更大**。这*强化*而非
+削弱了论点。（状态：原为"未知/付费墙" → 现解决为已知的保守偏差。）
+
+### 9.3 方法论澄清（逻辑跳跃项）
+
+- **"水平的 R²" ≠ "预测前瞻收益"。** 保持区分：水平 R²（§1）显示股票的*内在价值*；可交易性
+  由前瞻收益信号测试（§4.3）单独处理。我们不把解释性 R² 等同于 alpha。
+- **基线窗口敏感性。** 振幅倍数依赖所选的飙升前基线；我们使用固定窗口，并将幅度作为
+  **方向性**而非精确值报告。
+
+### 9.4 已承认的竞争性解释
+
+- **盈利上修 vs 持续时间。** 持续高运价与一致预期 EPS 上修相关；我们未完全分离二者。
+  表述：*持续时间是机制，盈利上修是传导*——二者方向一致。
+- **资产负债表/分红效应**（FRO 重组、DHT 派息政策）与**幸存者偏差**（仅研究 FRO/DHT）
+  仍是真实局限，本文未加控制。
+
+### 9.5 仍然开放（诚实的未知）
+
+- 完整的 **Baltic TD3C 美元/天周度历史 2005–2026**（付费墙）——可替换 BDTI 代理并直接测量
+  VLCC 特有振幅。
+- 公司**实现 TCE** 披露（FRO/DHT 10-Q/6-K），精确串联运价 → EPS。
 
 ---
 
