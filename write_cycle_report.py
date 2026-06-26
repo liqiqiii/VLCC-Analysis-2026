@@ -17,13 +17,13 @@ def eps(stk, tce):
     step = RT["70000"][f"{s}_eps"] - RT["65000"][f"{s}_eps"]
     return base + (tce - 70000) / 5000 * step
 
-# ── current snapshot (fetched 2026-06-26) ───────────────────────────────────
-ASOF = "June 26, 2026"
-PX = {"FRO": 34.94, "DHT": 17.34}
-OFF_HI = {"FRO": -14.6, "DHT": -8.2}      # % off 52-wk high
-VS_AVG = {"FRO": +34.1, "DHT": +25.5}     # % vs 52-wk avg
-HI52 = {"FRO": 40.93, "DHT": 18.89}
-LO52 = {"FRO": 16.20, "DHT": 10.22}
+# ── current snapshot (live quote 2026-06-26 intraday) ───────────────────────
+ASOF = "June 26, 2026 (intraday)"
+PX = {"FRO": 35.12, "DHT": 17.44}
+OFF_HI = {"FRO": -18.1, "DHT": -12.6}     # % off 52-wk high (raw)
+VS_AVG = {"FRO": +28.0, "DHT": +21.2}     # % vs 52-wk avg
+HI52 = {"FRO": 42.88, "DHT": 19.96}
+LO52 = {"FRO": 16.41, "DHT": 10.72}
 
 # sustained-average PE matrix
 PEROWS = [50000, 70000, 90000, 100000, 120000]
@@ -53,6 +53,18 @@ def pematrix_rows():
         lines.append(f"| ${t:,} | {eps('DHT',t):.2f} | {pe('DHT',t):.1f}x | "
                      f"{eps('FRO',t):.2f} | {pe('FRO',t):.1f}x |")
     return "\n".join(lines)
+
+# high-conviction supply scenarios (sustained, not spot)
+HICONV = [100000, 120000, 150000, 200000]
+def hiconv_rows():
+    rows = []
+    for t in HICONV:
+        fro_t6 = 6 * eps("FRO", t); dht_t6 = 6 * eps("DHT", t)
+        rows.append(
+            f"| ${t:,} | {eps('DHT',t):.2f} | {pe('DHT',t):.1f}x | {eps('FRO',t):.2f} | "
+            f"{pe('FRO',t):.1f}x | ${fro_t6:.0f} ({(fro_t6/PX['FRO']-1)*100:+.0f}%) | "
+            f"${dht_t6:.0f} ({(dht_t6/PX['DHT']-1)*100:+.0f}%) |")
+    return "\n".join(rows)
 
 # ── English report ──────────────────────────────────────────────────────────
 EN = f"""---
@@ -209,6 +221,8 @@ Key risk: the AVERAGE rolling over (not the spot spike unwinding)
 **Bottom line:** on any reasonable *sustained* average ≥ \\$70k, **neither is expensive**;
 both are **cheap-to-fair with income**, and the decisive variable is **duration** — how
 long ~\\$100k holds — exactly what reports 35/36 argue you should watch instead of the tape.
+
+{{HICONV_EN}}
 
 {{EXTRA_EN}}
 
@@ -367,6 +381,8 @@ title: "VLCC 周期定位（2026年6月）— DHT/FRO 便宜还是贵？"
 决定性变量是**持续时间**——约 \\$10万 能维持多久——这正是报告 35/36 主张你应当关注的、
 而非盘口。
 
+{{HICONV_CN}}
+
 {{EXTRA_CN}}
 
 ---
@@ -378,7 +394,7 @@ title: "VLCC 周期定位（2026年6月）— DHT/FRO 便宜还是贵？"
 # Fact-check section (shared with 35/36 §9), tailored heading number
 EXTRA_EN = """---
 
-## 8. Fact-Check & Open-Questions Resolution
+## 9. Fact-Check & Open-Questions Resolution
 
 Verifications behind reports 35/36 (carried here for completeness):
 
@@ -398,7 +414,7 @@ Verifications behind reports 35/36 (carried here for completeness):
 
 EXTRA_CN = """---
 
-## 8. 事实核查与遗留问题解答
+## 9. 事实核查与遗留问题解答
 
 支撑报告 35/36 的核查（此处一并列出）：
 
@@ -416,8 +432,82 @@ EXTRA_CN = """---
   披露以精确串联运价 -> EPS。
 """
 
-EN = EN.replace("{EXTRA_EN}", EXTRA_EN)
-CN = CN.replace("{EXTRA_CN}", EXTRA_CN)
+HICONV_EN = f"""---
+
+## 8. High-Conviction Supply Case — \\$100k / \\$150k / \\$200k *sustained*
+
+§3's base case deliberately used a conservative ~\\$95k sustained TCE. A stronger,
+structural-supply view — **~\\$100k is essentially locked for 2026, ~\\$150k likely, ~\\$200k
+possible** as the zero-newbuild-until-late-2028 squeeze plays out — produces materially
+bigger numbers. **The base case is conservative for two structural reasons:**
+
+1. **The repo EPS model is linear.** At \\$150–200k, incremental revenue is ~pure profit
+   (operating leverage, CRule 4), so realized EPS is likely **higher** than the linear
+   figures below — these targets are, if anything, a **floor**.
+2. **The base PE (6x) is mid-cycle.** A genuine structural squeeze can sustain a higher PE
+   for longer before compression sets in.
+
+| Sustained TCE | DHT EPS | DHT PE (now) | FRO EPS | FRO PE (now) | FRO tgt @6x | DHT tgt @6x |
+|:---|:--:|:--:|:--:|:--:|:--:|:--:|
+{hiconv_rows()}
+
+*(Conservative PE 5x ≈ 17% below the @6x targets; e.g. FRO \\$150k @5x = ~\\$55, DHT ~\\$25.)*
+
+**The framework's discipline cuts BOTH ways — two non-negotiable caveats:**
+
+- **Sustained ≠ spike.** The upside above is real **only if \\$150–200k is a sustained
+  average**, not a brief print. A \\$200k *spot* spike that fades in weeks (like the \\$420k
+  Hormuz print just did) will **not** re-rate the stock — that is the entire lesson of
+  reports 35/36. Note a \\$150k *annual average* would **exceed even 2008** (~\\$230k peak but
+  only ~\\$90–100k annual average) — historically unprecedented, plausible only in a true
+  multi-quarter structural squeeze.
+- **PE 2.5–3.5x is the peak-pricing zone (a SELL tell, not a buy).** If the stocks reach
+  those PEs on sustained \\$150–200k earnings, the cyclical framework (CRule 2/5, Modeling
+  Stash) flags **peak earnings at trough PE** — the classic top — i.e. the **trim/exit**
+  point, not an add. So this case is **bullish on price from here, with a built-in sell
+  discipline** as it plays out.
+
+**Net:** at a sustained **\\$120–150k** the stocks roughly **double** (FRO ~\\$51–66 /
+DHT ~\\$23–30 at 6x); at **\\$200k** sustained, FRO ~\\$91 / DHT ~\\$41 (+130–160%). The cap
+is set by **how long the average holds**, and PE compression toward 2.5–3.5x is the signal
+that the cycle is fully priced — that is when you execute the §4 sell rules, not before.
+"""
+
+HICONV_CN = f"""---
+
+## 8. 高确信供给情景 —— \\$10万 / \\$15万 / \\$20万 *持续*
+
+§3 的基准情景刻意采用了保守的约 \\$9.5万 持续 TCE。一个更强的结构性供给观点——
+**2026 年基本锁定约 \\$10万，约 \\$15万 很可能，约 \\$20万 有可能**，随着"2028年底前零新船"的
+挤压兑现——会产生明显更大的数字。**基准情景因两个结构性原因而偏保守：**
+
+1. **仓库 EPS 模型是线性的。** 在 \\$15–20万 时，增量收入近乎纯利润（经营杠杆，CRule 4），
+   故实现 EPS 很可能**高于**下表线性值——这些目标价更像**地板**。
+2. **基准 PE（6x）是周期中段。** 真正的结构性挤压可以在压缩到来前更久地维持更高 PE。
+
+| 持续 TCE | DHT EPS | DHT PE（当前） | FRO EPS | FRO PE（当前） | FRO 目标@6x | DHT 目标@6x |
+|:---|:--:|:--:|:--:|:--:|:--:|:--:|
+{hiconv_rows()}
+
+*（保守 PE 5x ≈ 比 @6x 目标低约 17%；如 FRO \\$15万 @5x ≈ \\$55，DHT ≈ \\$25。）*
+
+**框架的纪律是双向的 —— 两条不可妥协的告诫：**
+
+- **持续 ≠ 飙升。** 上述上行**仅在 \\$15–20万 为持续均值**时成立，而非短暂报价。一次数周
+  即回落的 \\$20万 *即期*飙升（正如刚刚回落的 \\$42万 霍尔木兹报价）**不会**重估股票——这正是
+  报告 35/36 的全部教训。注意 \\$15万 的*年度均值*将**超过 2008 年**（峰值约 \\$23万 但年均
+  仅约 \\$9–10万）——历史上前所未有，只有在真正的多季度结构性挤压中才可能。
+- **PE 2.5–3.5x 是峰值定价区（卖出信号，而非买入）。** 若股价在持续 \\$15–20万 盈利下达到
+  这些 PE，周期框架（CRule 2/5、Modeling Stash）标记**峰值盈利配谷底 PE**——典型顶部——
+  即**减仓/退出**点，而非加仓。故此情景**对当前价格看涨，但内含卖出纪律**。
+
+**结论：** 持续 **\\$12–15万** 时股价大致**翻倍**（FRO 约 \\$51–66 / DHT 约 \\$23–30 @6x）；
+持续 **\\$20万** 时 FRO 约 \\$91 / DHT 约 \\$41（+130–160%）。上限由**均值能维持多久**决定，
+而 PE 压缩至 2.5–3.5x 是周期被完全定价的信号——届时执行 §4 的卖出规则，而非提前。
+"""
+
+EN = EN.replace("{HICONV_EN}", HICONV_EN).replace("{EXTRA_EN}", EXTRA_EN)
+CN = CN.replace("{HICONV_CN}", HICONV_CN).replace("{EXTRA_CN}", EXTRA_CN)
 
 Path("37_VLCC_Cycle_Position_Jun2026_EN.md").write_text(EN, encoding="utf-8")
 Path("38_VLCC_Cycle_Position_Jun2026_CN.md").write_text(CN, encoding="utf-8")

@@ -654,3 +654,30 @@ to all four reports.
 write_tce_report.py, 35_TCE_vs_StockPrice_EN.md, 36_TCE_vs_StockPrice_CN.md,
 write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
 38_VLCC_Cycle_Position_Jun2026_CN.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 35: High-conviction supply case + live price refresh (37/38)
+**Date**: June 26, 2026
+
+User: add an extra section in 38 (added to 37 too for EN/CN parity, Rule 1): the base case
+was too conservative — we will reach $100k this year for sure, ~$150k likely, ~$200k
+possible. Also the stock price was stale — query today.
+
+**Live prices (Jun 26 intraday)**: FRO $35.12 (-18% off 52w high $42.88, fell $42.88->$35.12
+in 3 days as spike premium unwinds), DHT $17.44 (-13% off $19.96). Refreshed all of 37/38.
+
+**New Section 8 "High-Conviction Supply Case ($100k/$150k/$200k sustained)"**:
+- PE now: $100k 5.2-5.6x, $120k 4.1-4.5x, $150k 3.2-3.5x, $200k 2.3-2.6x.
+- Targets @6x: $150k -> FRO $66 (+88%)/DHT $30 (+70%); $200k -> FRO $91 (+160%)/DHT $41 (+134%).
+- Base case conservative b/c (1) linear EPS model understates operating leverage at high
+  rates (CRule 4) -> targets are a floor; (2) base PE 6x is mid-cycle.
+- Two caveats (framework discipline both ways): (a) sustained != spike - $150-200k must be a
+  SUSTAINED average not a brief print to re-rate the stock; a $150k annual avg would exceed
+  even 2008 (~$230k peak but ~$90-100k annual avg). (b) PE 2.5-3.5x is the peak-pricing/SELL
+  zone (peak earnings at trough PE = classic top), so it's bullish-now with built-in exit.
+- Fact-check section renumbered to Section 9.
+
+**Files Updated**: write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
+38_VLCC_Cycle_Position_Jun2026_CN.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
