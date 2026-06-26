@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "bdti_source": "https://raw.githubusercontent.com/Aftikharmnz/Baltic/main/Baltic%20Dirty%20Tanker%20Historical%20Data.csv",
+    "bdti_range": [
+      "2020-01-03",
+      "2024-11-22"
+    ],
+    "price_source": "yfinance weekly auto-adjusted",
+    "price_range": [
+      "2001-08-10",
+      "2026-06-26"
+    ],
+    "aligned_n_weeks": 252,
+    "disclaimer": "Not investment advice. BDTI used as VLCC dirty-rate proxy; long-cycle TCE values are sourced approximations."
+  },
+  "correlation": {
+    "windows_weeks": [
+      1,
+      4,
+      13,
+      26,
+      52
+    ],
+    "stocks": {
+      "FRO": {
+        "r2_level": [
+          0.1242,
+          0.1326,
+          0.1766,
+          0.2571,
+          0.3726
+        ],
+        "r2_change4w": [
+          0.2057,
+          0.0432,
+          0.0,
+          0.0081,
+          0.0003
+        ]
+      },
+      "DHT": {
+        "r2_level": [
+          0.2037,
+          0.2133,
+          0.2699,
+          0.375,
+          0.5017
+        ],
+        "r2_change4w": [
+          0.2568,
+          0.0803,
+          0.0022,
+          0.0013,
+          0.0087
+        ]
+      }
+    }
+  },
+  "leadlag_FRO": {
+    "lags_weeks": [
+      -12,
+      -11,
+      -10,
+      -9,
+      -8,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "corr": [
+      -0.05,
+      -0.025,
+      -0.07,
+      -0.042,
+      -0.072,
+      -0.022,
+      -0.021,
+      -0.149,
+      0.026,
+      0.046,
+      0.027,
+      0.102,
+      0.423,
+      -0.173,
+      0.136,
+      -0.113,
+      0.029,
+      -0.005,
+      0.021,
+      -0.02,
+      -0.122,
+      -0.062,
+      -0.038,
+      0.068,
+      -0.007
+    ],
+    "best_lag_weeks": 0,
+    "interpretation": "positive lag = rate leads stock"
+  },
+  "leadlag_DHT": {
+    "lags_weeks": [
+      -12,
+      -11,
+      -10,
+      -9,
+      -8,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "corr": [
+      -0.068,
+      -0.029,
+      -0.034,
+      -0.079,
+      -0.124,
+      -0.096,
+      -0.035,
+      -0.099,
+      0.035,
+      0.094,
+      0.069,
+      0.116,
+      0.431,
+      -0.105,
+      0.136,
+      -0.108,
+      -0.014,
+      0.067,
+      0.008,
+      -0.107,
+      -0.173,
+      -0.058,
+      -0.131,
+      0.093,
+      0.002
+    ],
+    "best_lag_weeks": 0,
+    "interpretation": "positive lag = rate leads stock"
+  },
+  "amplitude_real": [
+    {
+      "episode": "2020 COVID floating-storage spike",
+      "rate_baseline": 1070.2,
+      "rate_peak": 1550.0,
+      "rate_peak_mult": 1.45,
+      "FRO_peak_mult": 1.11,
+      "FRO_compression": 1.31,
+      "DHT_peak_mult": 1.25,
+      "DHT_compression": 1.16
+    },
+    {
+      "episode": "2022-2024 sustained up-cycle",
+      "rate_baseline": 1105.5,
+      "rate_peak": 2494.0,
+      "rate_peak_mult": 2.26,
+      "FRO_peak_mult": 4.07,
+      "FRO_compression": 0.55,
+      "DHT_peak_mult": 2.54,
+      "DHT_compression": 0.89
+    }
+  ],
+  "duration_real": {
+    "bdti_median": 1018.5,
+    "rolling_window_weeks": 26,
+    "rows": [],
+    "r2_fwdstock_vs_avgrate": 0.0844,
+    "r2_fwdstock_vs_maxspot": 0.0985,
+    "r2_fwdstock_vs_weeks_elevated": 0.0823,
+    "n": 200
+  },
+  "long_cycle": {
+    "note": "TCE = sourced approximations; stock multiples = real yfinance adjusted weekly closes. DHT IPO Oct-2005, so 2008 row valid; earlier-than-IPO cells are None.",
+    "rows": [
+      {
+        "cycle": "2008 demand super-spike",
+        "tce_baseline": 30000,
+        "tce_peak": 300000,
+        "tce_peak_mult": 10.0,
+        "source": "2008 TD3C peak ~$300-350k/day (web-verified); baseline ~ pre-spike trough",
+        "FRO_peak_mult": 2.96,
+        "FRO_compression": 3.38,
+        "DHT_peak_mult": 0.92,
+        "DHT_compression": 10.86
+      },
+      {
+        "cycle": "2015 mini-cycle",
+        "tce_baseline": 20000,
+        "tce_peak": 100000,
+        "tce_peak_mult": 5.0,
+        "source": "2015 avg ~$50-60k, intra-year peak ~$100k (web-verified); baseline 2013-14 trough",
+        "FRO_peak_mult": 1.09,
+        "FRO_compression": 4.57,
+        "DHT_peak_mult": 1.17,
+        "DHT_compression": 4.26
+      },
+      {
+        "cycle": "2020 COVID storage pulse",
+        "tce_baseline": 25000,
+        "tce_peak": 264000,
+        "tce_peak_mult": 10.56,
+        "source": "2020 TD3C peak $264,072/day Mar-2020 (web-verified)",
+        "FRO_peak_mult": 1.21,
+        "FRO_compression": 8.73,
+        "DHT_peak_mult": 1.16,
+        "DHT_compression": 9.13
+      },
+      {
+        "cycle": "2026 Hormuz spike",
+        "tce_baseline": 50000,
+        "tce_peak": 400000,
+        "tce_peak_mult": 8.0,
+        "source": "repo modeling_stash.md: TD3C ~$400k ATH Mar-2026",
+        "FRO_peak_mult": 1.87,
+        "FRO_compression": 4.28,
+        "DHT_peak_mult": 1.59,
+        "DHT_compression": 5.05
+      }
+    ]
+  }
+}

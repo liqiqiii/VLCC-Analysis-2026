@@ -1,0 +1,74 @@
+{
+  "params": {
+    "weeks": 260,
+    "base_tce": 40000.0,
+    "opex": 25000.0,
+    "pe": 6.0,
+    "earnings_window_wks": 13,
+    "normalize_window_wks": 52,
+    "note": "Synthetic; deterministic seed=42. Illustrates mechanism, not a price forecast."
+  },
+  "exp1_duration": {
+    "peak_tce": 200000.0,
+    "base_tce": 40000.0,
+    "scenarios": {
+      "spike_2w": {
+        "duration_weeks": 2,
+        "tce_peak": 200000.0,
+        "avg_tce_over_episode": 200000.0,
+        "stock_pre": 1360.967,
+        "stock_peak": 1358.071,
+        "stock_rerate_x": 1.0
+      },
+      "plateau_6m": {
+        "duration_weeks": 26,
+        "tce_peak": 200000.0,
+        "avg_tce_over_episode": 200000.0,
+        "stock_pre": 4515.554,
+        "stock_peak": 4905.957,
+        "stock_rerate_x": 1.09
+      },
+      "sustained_2y": {
+        "duration_weeks": 104,
+        "tce_peak": 200000.0,
+        "avg_tce_over_episode": 200000.0,
+        "stock_pre": 4633.835,
+        "stock_peak": 8442.0,
+        "stock_rerate_x": 1.82
+      }
+    }
+  },
+  "exp2_peak_control": {
+    "duration_weeks": 52,
+    "scenarios": {
+      "peak_120k": {
+        "tce_peak": 120000.0,
+        "stock_rerate_x": 1.66
+      },
+      "peak_200k": {
+        "tce_peak": 200000.0,
+        "stock_rerate_x": 1.76
+      },
+      "peak_350k": {
+        "tce_peak": 350000.0,
+        "stock_rerate_x": 1.83
+      }
+    }
+  },
+  "exp3_signal_quality": {
+    "n_paths": 600,
+    "forward_weeks": 26,
+    "spot_signal": {
+      "n": 923,
+      "mean_fwd_return": 0.342,
+      "median_fwd_return": 0.104,
+      "win_rate": 0.628
+    },
+    "sustained_signal": {
+      "n": 766,
+      "mean_fwd_return": 0.681,
+      "median_fwd_return": 0.638,
+      "win_rate": 0.795
+    }
+  }
+}

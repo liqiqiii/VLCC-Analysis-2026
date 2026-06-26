@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 📉 TCE vs VLCC Stock Price — Why "Watching the Rate Tape" Fails (NEW — Jun 26, 2026)
+
+The **"Average × Duration"** thesis, proven with data (FRO + DHT). Settles the debate that *"watching spot TCE to trade VLCC stock is bad."* **Verdict: the stock prices the AVERAGE TCE sustained over a DURATION, not spot spikes.** Six evidence points: (1) stock-vs-rate R² rises with the averaging window (FRO **0.12→0.37**, DHT **0.20→0.50** as spot→52-wk avg, real BDTI 2020–24); (2) **amplitude compression** — TCE peaks **5–10.6×** baseline but stock peaks only **~1–3×** (the direct answer to "how big is TCE peak vs stock peak"); (3) real episode contrast — 2020 short spike → FRO **+11%** vs 2022–24 sustained → FRO **+307%**; (4) simulation: same $200k peak, 2-wk spike **×1.0** vs 2-yr sustained **×1.82**; (5) control — tripling the peak ($120k→$350k) moves stock only **+10%**; (6) sustained-avg signal forward return median **+64% (80% win)** vs spot **+10% (63%)**. Ties to the Modeling Stash momentum+rate-confirmation algo. Includes the repo's Two-Step Research Protocol (draft + peer review). *Analysis, not investment advice.*
+
+**[📄 TCE vs Stock Price (EN) →](35_TCE_vs_StockPrice_EN)** | **[TCE 与 VLCC 股价（中文）→](36_TCE_vs_StockPrice_CN)**
+
+---
+
 ### 🫧 Dot-Com Bubble (1995–2000) vs AI Bubble — Where Are We Now? (NEW — Jun 23, 2026)
 
 Following the repo's **Two-Step Research Protocol** + **CRule 1 two-cycle backtrack** (dot-com = reference cycle, AI = current cycle). **Verdict: Late-Build / pre-Mania, ~1998–early-1999 analog** — past the inflection, mid-capex-mania, valuations stretched but not yet at the 1999/2000 blow-off. **Decisive difference vs 1999**: revenue still *accelerating into* the capex (in 1999/2001 revenue rolled over first) → keeps us pre-peak. **Decisive risk**: ~$500B/yr capex-vs-revenue gap (~$700B capex vs ~$150–200B AI revenue), $230B+ new 2026 debt, FCF collapsing (Amazon −95%). Bear analog = **telecom 2000–02**; bull analog = **Cisco/Intel 1998**. Includes 5-phase mapping, side-by-side bubble metrics, disanalogies, and 4 signals that would flip us to "1999/2000". *Education/analysis, not investment advice.*

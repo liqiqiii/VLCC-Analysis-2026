@@ -564,3 +564,51 @@ User: how 肥美 is the tail vs the phase before it — the +77% is the final 6 
 **Sources added**: DQYDJ (NASDAQ annual returns), FRED St. Louis Fed.
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 33: TCE/WS vs VLCC stock price — the "Average x Duration" thesis
+**Date**: June 26, 2026
+
+User: discuss the relationship between TCE/WS and VLCC stock prices. People say
+"watching TCE to trade VLCC stock is bad." The key is the AVERAGE TCE level and the
+DURATION at that level — prove it with data. Also: how big is the TCE peak vs the
+stock-price peak in past cycles? Do both a real backtest and a simulation. (FRO + DHT.)
+
+**What was built**:
+- `tce_analysis.py` — real backtest: weekly BDTI (proxy, 2020-2024) + FRO/DHT adjusted
+  closes. Correlation of stock LEVEL vs rate across spot/4/13/26/52-wk averaging windows;
+  lead/lag; real amplitude episodes; long-cycle TCE-peak vs stock-peak table.
+- `tce_simulation.py` — synthetic average x duration model (deterministic, seed=42):
+  same-peak/different-duration, peak control, and signal-quality (spot vs sustained).
+- `generate_tce_charts.py` — 5 charts.
+- `35_TCE_vs_StockPrice_EN.md` + `36_TCE_vs_StockPrice_CN.md`.
+
+**Key findings (data)**:
+- **Core proof**: stock-vs-rate R² rises with the averaging window — FRO 0.12 (spot) -> 0.37
+  (52-wk avg); DHT 0.20 -> 0.50. The stock prices the sustained average, not spot. Lead/lag
+  is contemporaneous (best lag = 0) so the spot tape gives no timing edge. (Honest nuance:
+  4-wk *change* R² is higher for spot ~0.21 -> spot wiggles jiggle the stock intra-quarter,
+  but not its level.)
+- **Amplitude compression (answers the user's direct question)**: TCE peaks 5-10.6x baseline
+  while stock peaks only ~1-3x (2008 TCE x10 / FRO x3.0 / DHT x0.9; 2015 x5 / x1.1 / x1.2;
+  2020 x10.6 / x1.2 / x1.2; 2026 Hormuz x8 / x1.9 / x1.6).
+- **Duration beats peak (real)**: 2020 COVID spike (+45% rate, weeks) -> FRO +11%; 2022-24
+  sustained (lower peak, ~18 mo) -> FRO +307%.
+- **Simulation**: same $200k peak -> 2-wk spike x1.0 vs 2-yr sustained x1.82; tripling the
+  peak ($120k->$350k) at fixed 52-wk duration moves stock only x1.66->x1.83 (+10%);
+  sustained-avg signal fwd-26w return median +64% (80% win) vs spot +10% (63% win).
+
+**Verdict**: spot TCE is the noise, the trailing 26-52-wk average + its duration is the
+signal. Dovetails with Modeling Stash (momentum + rate-confirmation); 2026 Hormuz (stock
+dipped while spot hit $400k ATH) is the canonical "don't trade the tape" case.
+
+**Limitations**: BDTI proxy understates pure-VLCC TD3C amplitude; free BDTI only 2020-24;
+long-cycle TCE values are sourced approximations (web-verified, flagged); simulation is
+illustrative not predictive; ~4 clean cycles only. Two-Step Research Protocol (draft +
+strict peer review) included in the report.
+
+**Files Updated**: tce_analysis.py, tce_simulation.py, generate_tce_charts.py,
+35_TCE_vs_StockPrice_EN.md, 36_TCE_vs_StockPrice_CN.md, index.md, charts/tce_*.png,
+Prompt_Log_EN.md, Prompt_Log_CN.md
