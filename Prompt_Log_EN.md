@@ -681,3 +681,23 @@ in 3 days as spike premium unwinds), DHT $17.44 (-13% off $19.96). Refreshed all
 
 **Files Updated**: write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
 38_VLCC_Cycle_Position_Jun2026_CN.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 39: Saudi Oil Price War → VLCC — Two Prior Analogs & DHT/FRO Record
+**Date**: July 6, 2026
+
+User: Saudi announced an oil price war today; it's happened twice this century and both times was good for VLCC — check the two prior times and the DHT/FRO history. Then: make it a standalone page. Created bilingual pages **39/40** (CRule 6 cross-cycle analog, Two-Step Protocol).
+
+**Findings**:
+- Mechanism: tanker rates track oil VOLUME + STORAGE, not oil price; price war = more barrels + floating storage (esp. contango) → rate spike
+- **2014–16** (vs US shale): oil >$100 → <$30; VLCC >$100k/day in 2015 ("golden year"); **FRO 2014 −33%, 2015 +21%, 2016 −46%**; ended by newbuild wave
+- **2020** (vs Russia + COVID): WTI briefly negative; VLCC **~$200k–$279k/day**; **DHT Q2-2020 record NI $135.8M ($0.92), $0.48 div**; but full-year **DHT −20.5% / FRO −25.9%**; ended by storage unwind
+- **On rates: premise confirmed 2/2. On stocks: cyclical trap** — spike = sell-into-strength (CRule 5/8); record earnings marked the top in 2020
+- **2026 difference**: near-zero orderbook to late-2028 removes the supply response that killed both prior booms → potentially MORE durable (rare bullish 'this time is different'), unless it's a demand-collapse/recession event
+- Live anchor: FRO ~$37.02 (Jul 6), DHT ~$17.18 (Jul 2); TD3C ~$100k sustained
+
+**Sources**: Reuters, Bloomberg, Clarksons, Motley Fool, Hellenic Shipping News, Macrotrends, financecharts, irei, Morningstar, StockAnalysis (full URLs in report).
+
+**Files Created**: 39_Saudi_Price_War_VLCC_Analog_EN.md, 40_Saudi_Price_War_VLCC_Analog_CN.md
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

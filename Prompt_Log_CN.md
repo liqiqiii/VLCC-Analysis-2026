@@ -657,3 +657,23 @@ write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
 
 **更新文件**: write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
 38_VLCC_Cycle_Position_Jun2026_CN.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 39: 沙特石油价格战 → VLCC —— 前两次类比及 DHT/FRO 记录
+**日期**: 2026年7月6日
+
+用户：沙特今日宣布石油价格战；本世纪发生过两次、两次都利好 VLCC——核查前两次及 DHT/FRO 历史。随后：做成独立页面。创建双语页面 **39/40**（CRule 6 跨周期类比，两步协议）。
+
+**发现**：
+- 机制：油轮运价跟随油量 + 存储，而非油价；价格战 = 更多原油 + 浮式存储（尤其升水）→ 运价飙升
+- **2014–16**（vs 美国页岩油）：油 >$100 → <$30；2015 VLCC >10 万/天（"黄金年"）；**FRO 2014 −33%、2015 +21%、2016 −46%**；被新船潮终结
+- **2020**（vs 俄罗斯 + 新冠）：WTI 一度转负；VLCC **约 20 万–27.9 万/天**；**DHT 2020Q2 创纪录净利 $135.8M（$0.92）、股息 $0.48**；但全年 **DHT −20.5% / FRO −25.9%**；被存储回吐终结
+- **论运价：前提 2/2 确认。论股票：周期陷阱**——飙升 = 卖入强势（CRule 5/8）；创纪录盈利在 2020 标记顶部
+- **2026 差异**：到 2028 年底前接近于零的订单簿移除了终结前两次繁荣的供给响应 → 可能更持久（罕见的看多"这次不同"），除非这是需求崩溃/衰退事件
+- 实时锚点：FRO 约 $37.02（7月6日），DHT 约 $17.18（7月2日）；TD3C 约 10 万持续
+
+**来源**：路透、彭博、Clarksons、Motley Fool、Hellenic Shipping News、Macrotrends、financecharts、irei、Morningstar、StockAnalysis（完整 URL 见报告）。
+
+**创建文件**: 39_Saudi_Price_War_VLCC_Analog_EN.md, 40_Saudi_Price_War_VLCC_Analog_CN.md
+**更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

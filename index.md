@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 💰 VLCC Cycle Position — Are DHT/FRO Cheap or Expensive? (NEW — Jun 26, 2026)
+### 🛢️ Saudi Oil Price War → VLCC — The Two Prior Analogs & DHT/FRO Record (NEW — Jul 6, 2026)
+
+Saudi announced an oil **price war** — the **3rd this century** after **2014–16** (vs US shale) and **2020** (vs Russia). **Verdict: bullish for VLCC RATES, 2 for 2** (a price war = more barrels + floating storage, not about the oil price level; rates hit >$100k/day in 2015 and **~$200k–$279k/day** in 2020; DHT's Q2-2020 was its best quarter ever). **But the STOCK record is a cyclical trap:** FRO **+21% (2015) → −46% (2016)**; in 2020 **DHT −20.5% / FRO −25.9% full-year despite record earnings** — the spike is a **sell-into-strength** event (CRule 5/8). **What's different in 2026:** the **near-zero orderbook to late-2028** removes the newbuild wave that killed 2016 and the storage-unwind of 2020 → a boost now could be **more durable** — a rare *bullish* "this time is different," unless the war is a demand-collapse (recession) event. Live: FRO **~$37.02** (Jul 6), DHT **~$17.18** (Jul 2). *Analysis, not investment advice.*
+
+**[📄 Saudi Price War → VLCC (EN) →](39_Saudi_Price_War_VLCC_Analog_EN)** | **[沙特价格战 → VLCC（中文）→](40_Saudi_Price_War_VLCC_Analog_CN)**
+
+---
+
+### 💰 VLCC Cycle Position — Are DHT/FRO Cheap or Expensive? (Jun 26, 2026)
 
 Applies the **Average × Duration** model to **live prices** (DHT **$17.44**, FRO **$35.12**, Jun 26 — both down sharply this week as the spike premium unwinds). **Verdict: neither is expensive — both CHEAP-to-FAIR, and the market is pricing them on the *sustained* ~$100k TCE, not the $420k Hormuz spike (which already collapsed).** Spot TD3C **~$100k now** (−76% from the ~$420k March peak) vs 2025's ~$50–70k; structural elevation sustained **~9–12 months**, supply-backed through 2027. PE just **5–6× @ $100k sustained** (8–9× @ $70k) = mid-cycle, not peak. **High-conviction supply case (§8):** at a *sustained* **$150k** the stocks roughly double (FRO ~$66 / DHT ~$30, +70–88%); at **$200k**, FRO ~$91 / DHT ~$41 (+130–160%) — but only if it's a sustained average, and PE 2.5–3.5× there is the *sell* tell. 12M base targets: FRO **$38 (+9%)** / DHT **$17.5**; plus 12–15% dividend yield. Sell-algo: 🛡️ **"do not sell"** (spike-unwind ≠ cycle turn). Includes a **Fact-Check section** (2008 peak corrected to ~$230k; 2026 Hormuz ~$420k; BDTI-vs-TD3C proxy resolved). *Analysis, not investment advice.*
 
