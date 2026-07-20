@@ -15,6 +15,7 @@ title: Tail-Hedging & Convexity — A 50-Year Backtest (1974–2024)
 > 3. **Your instinct to use LONG-dated puts is correct.** A 1-year (LEAPS) put **halved the drawdown (−40% → −21%)** while barely denting CAGR — far better than short 1-month puts, which bleed through slow bear markets.
 > 4. **But at realistic option pricing it costs CAGR.** With a normal vol-risk-premium (VRP 25–50%), the hedge gives up **~0.4–1.4%/yr of CAGR** to buy that protection — and if bought *too* expensively (VRP 50%) it can **deepen** drawdown via premium bleed (−54.4% > −51.8%). This is exactly the **AQR vs Universa** debate, and the data shows *both* can be right.
 > 5. **Fair fight (equal drawdown), convexity wins — but narrowly.** Tuned to the same −40% maxDD, the put hedge beat a cash barbell **6.13% vs 5.81% CAGR** — a real but thin edge.
+> 6. **Follow-up on DAILY data (§7)** — the "monetize + buy-the-dip" ladder: redeploying crash proceeds into equity beats hoarding them as cash by **+1.37%/yr**, confirming the monetization instinct *on average* — **but** the daily path exposes a **failure mode**: in a *fast* crash (2020) the mechanical +100%/+200% ladder de-hedged partway down and re-bought insurance at peak IV, turning a −3.8% quarter into **−17.2%**.
 >
 > *Education/analysis, not investment advice.*
 
@@ -189,13 +190,60 @@ Hedge = 1-month k=10% OTM, VRP 25% (weak/short version; **understated by month-a
 
 ---
 
+# Section 7 — Follow-up: DAILY path-dependent test of the monetize-ladder
+
+The §1–6 backtest used **monthly month-average** data, which smooths intra-month V-bottoms and therefore **could not test the user's actual rule** — hold a long-dated put, **monetize on +100%/+200% spikes, and redeploy ("buy the dip")**. This section re-runs it on **daily ^GSPC (1974–2024, 12,860 days)** so the intra-month crashes are visible. Code: [`run_backtest_daily.py`](run_backtest_daily.py); data: [`sp500_daily_close_1974_2024.csv`](data/sp500_daily_close_1974_2024.csv) (nominal price + ~1.9%/yr dividend drip). The put is marked-to-market daily by Black-Scholes (1-yr, 20% OTM, IV = 63-day realized × 1.25).
+
+**First, daily data reveals the true fat tail** the monthly series hid: Buy&Hold kurtosis **3.7 (monthly) → 18.6 (daily)**, maxDD **−51.8% → −55.6%**. Crashes are now real.
+
+## 7.1 Four strategies, 50 years → [`results_daily_ladder.csv`](data/results_daily_ladder.csv)
+
+| Strategy | CAGR | Vol | maxDD | Sharpe | kurt | ×wealth |
+|---|---|---|---|---|---|---|
+| **A. Buy & Hold** | **10.45%** | 17.4% | **−55.6%** | 0.66 | 18.6 | ×159 |
+| B. Hedge **passive** (hold to expiry) | 9.08% | 14.4% | −47.1% | 0.68 | 14.2 | ×84 |
+| C. Ladder monetize → **cash** (hoard) | 7.92% | 13.3% | **−37.9%** | 0.64 | 21.3 | ×49 |
+| **D. Ladder monetize → equity (full)** | **9.29%** | 15.7% | −45.0% | 0.64 | 16.7 | ×93 |
+
+*(Nominal, price + dividend drip — higher absolute level than the real-return §3; the point here is the **relative** ranking.)*
+
+## 7.2 Isolating the alphas
+
+- **Redeploy vs hoard cash (D − C): +1.37%/yr.** Redeploying crash proceeds **into equity** beats letting them sit in cash by a wide margin — **the "buy-the-dip" instinct is validated *on average*.** This is exactly what the monthly data could not show.
+- **Monetization vs passive (C − B): −1.16%/yr.** Monetizing early *to cash* and staying there under-performs simply holding the put to expiry — taking profits then chickening out is a drag.
+- **Full ladder vs passive (D − B): +0.21%/yr** — roughly a wash on return; the monetize-and-redeploy machine ≈ passive hedging, with slightly higher vol/drawdown.
+- **Best hedge vs Buy&Hold (D − A): −1.16%/yr** — consistent with §3–4: over a 50-yr bull, even the best-run hedge **costs ~1.2%/yr** of CAGR to buy the tail protection (maxDD −55.6% → −45.0%, kurtosis 18.6 → 16.7).
+
+## 7.3 The failure mode the daily path exposes → [`results_daily_crash_episodes.csv`](data/results_daily_crash_episodes.csv)
+
+| Episode | Buy&Hold | Hedge passive | **Full ladder** | Trough DD: B&H → Full |
+|---|---|---|---|---|
+| 2008 GFC (slow) | −46.9% | −38.8% | −38.9% | −55.6% → **−45.0%** ✅ |
+| 2000–02 (slow) | −32.4% | −32.4% | **−27.3%** | −46.9% → **−40.5%** ✅ |
+| 2022 bear (slow) | −18.4% | −18.9% | −17.2% | −24.3% → −21.9% ✅ |
+| **2020 COVID (fast V)** | **−3.8%** | −0.6% | **−17.2%** ✗ | −33.8% → −32.8% |
+
+**The 2020 anomaly is the key new finding — and it is not a bug, it is the strategy's real failure mode.** In the fast COVID V-crash the mechanical **+100%/+200% ladder de-hedged the portfolio partway down** (it sold protection as the market kept falling), and then **re-established a fresh put at peak implied vol (~80%)** — the most expensive possible moment — which then bled to zero on the snap-back. Net: a quarter that was **−3.8%** unhedged became **−17.2%** for the "full" strategy. **This is the empirical proof of the risk flagged in our original discussion: a fixed monetization ladder can remove your protection exactly when a fast crash is deepening, and "wait for the next round" can mean re-buying insurance at the top of the vol spike.**
+
+## 7.4 Refined synthesis
+
+The monetize-ladder is **path- and regime-dependent**:
+- **Slow, grinding bears (2000–02, 2008, 2022):** it works — you monetize gradually and redeploy near a drawn-out bottom; troughs cut by 4–11 pp.
+- **Fast, deep V-crashes (2020, and by extension 1987):** it can **backfire** — the ladder sells protection into the plunge and re-hedges at peak IV.
+- **Practical fixes** (what Universa-style managers actually do, vs the naïve rule): scale monetization to crash *depth* rather than a fixed +100/+200; **keep a residual core hedge on**; and **do not mechanically re-buy at peak IV** — wait for vol to normalize. The redeploy-into-equity is the good part; the fixed de-hedging ladder + instant re-hedge is the dangerous part.
+
+> **Bottom line of the follow-up:** daily data **confirms** the "buy-the-dip with hedge proceeds" adds value on average (+1.37%/yr vs hoarding cash), **and** confirms the whole-hedge still costs ~1.2%/yr over a long bull — but it also **surfaces a genuine tail risk in the user's exact mechanical rule** that the monthly test was blind to. Convexity harvesting rewards discipline *and the right monetization design*; the fixed ladder is not it.
+
+---
+
 ## Reproduce it yourself
 
 ```
 cd tail_hedge
-python run_backtest.py     # re-derives the CSVs in data/ from the Shiller series
+python run_backtest.py         # monthly real-total-return study -> data/results_*.csv
+python run_backtest_daily.py   # daily path-dependent ladder     -> data/results_daily_*.csv
 ```
-The script uses the committed [`data/shiller_real_tr_monthly_1974_2024.csv`](data/shiller_real_tr_monthly_1974_2024.csv); if absent it re-downloads Shiller's `ie_data.xls` and rebuilds it.
+`run_backtest.py` uses the committed [`data/shiller_real_tr_monthly_1974_2024.csv`](data/shiller_real_tr_monthly_1974_2024.csv) (else re-downloads Shiller's `ie_data.xls`); `run_backtest_daily.py` uses [`data/sp500_daily_close_1974_2024.csv`](data/sp500_daily_close_1974_2024.csv) (from Yahoo/yfinance).
 
 ## Sources
 - Robert J. Shiller, online data (S&P monthly, dividends, CPI): http://www.econ.yale.edu/~shiller/data.htm

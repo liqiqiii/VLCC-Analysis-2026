@@ -10,14 +10,18 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 |---|---|
 | [`report_en.md`](report_en.md) | Full write-up (EN) — GitHub Page |
 | [`report_cn.md`](report_cn.md) | 中文版 — GitHub Page |
-| [`run_backtest.py`](run_backtest.py) | Reproducible backtest; regenerates every CSV in `data/` |
-| `data/shiller_real_tr_monthly_1974_2024.csv` | Derived input series actually used (Date, RealTRP, ret) |
+| [`run_backtest.py`](run_backtest.py) | Reproducible monthly backtest; regenerates the monthly CSVs in `data/` |
+| [`run_backtest_daily.py`](run_backtest_daily.py) | **Daily** path-dependent backtest of the monetize-ladder (§7 of the report) |
+| `data/shiller_real_tr_monthly_1974_2024.csv` | Derived monthly input series (Date, RealTRP, ret) |
+| `data/sp500_daily_close_1974_2024.csv` | Daily ^GSPC close 1974-2024 (Yahoo/yfinance) — input for the daily test |
 | `data/results_baseline_barbell.csv` | Buy&Hold + cash-barbell (AQR "just de-risk") |
 | `data/results_monthly_put_hedge.csv` | Rolling 1-month OTM put, BS-priced (strike × VRP grid) |
 | `data/results_leaps_put_hedge.csv` | Rolling 12-month (LEAPS) put grid — the long-dated design |
 | `data/results_equal_drawdown.csv` | Hedge vs cash barbell tuned to equal max drawdown |
 | `data/results_tail_shape.csv` | Skew / kurtosis / worst-month (left-tail clipping) |
-| `data/results_crash_episodes.csv` | Convex payoff across the 5 major crashes |
+| `data/results_crash_episodes.csv` | Convex payoff across the 5 major crashes (monthly) |
+| `data/results_daily_ladder.csv` | **Daily**: Buy&Hold vs passive vs ladder→cash vs ladder→equity |
+| `data/results_daily_crash_episodes.csv` | **Daily**: crash-window returns + trough drawdowns (reveals the 2020 failure mode) |
 
 ## Reproduce
 

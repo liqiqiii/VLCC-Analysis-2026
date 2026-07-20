@@ -699,3 +699,23 @@ write_cycle_report.py, 37_VLCC_Cycle_Position_Jun2026_EN.md,
 
 **创建文件**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/run_backtest.py, tail_hedge/data/*.csv(7 个 CSV:衍生序列 + 6 张结果表)
 **更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 40b: 尾部对冲后续 —— 日度路径依赖的变现阶梯
+**日期**: 2026年7月20日
+
+Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确规则——长期看跌、在 +100%/+200% 尖峰变现、再投入("抄底")。在两份报告新增 **§7** + `run_backtest_daily.py` + 日度数据/结果 CSV。
+
+**数据**:^GSPC 日度 1974-2024(yfinance,12,860 天),名义价格 + 1.9%/年股息滴灌;看跌按 BS 每日盯市(1 年、20% 虚值,IV = 63 日已实现 × 1.25)。
+
+**发现**:
+- 日度揭示月度掩盖的真实肥尾:买入持有峰度 3.7 → 18.6,maxDD −51.8% → −55.6%
+- 四策略:A 买入持有 CAGR 10.45%/maxDD −55.6%;B 被动 9.08%/−47.1%;C 阶梯→现金 7.92%/−37.9%;D 阶梯→股票(完整)9.29%/−45.0%
+- **再投入 alpha 真实存在(后续的重点):D − C = +1.37%/年** —— 用对冲赔付抄底胜过囤现金;月度数据无法展示
+- 变现→现金 vs 被动 C − B = −1.16%/年(止盈后躺现金是拖累);完整阶梯 ≈ 被动(D − B +0.21%/年);最佳对冲仍损 D − A −1.16%/年 vs 买入持有
+- **关键新发现——2020 失效模式**:快速 COVID V 崩盘中,机械 +100%/+200% 阶梯半途卸对冲、并在波动率峰值(约 80%)重新买看跌,把 −3.8% 的季度变成 **−17.2%**(比什么都不做还差)。这是讨论中所提"变现过早移除保护"风险的实证。慢熊(2008 谷底 −11pp、2000-02 −6pp 保护)奖励阶梯;快速 V 惩罚它。
+- 精炼教训:按崩盘深度分批变现(而非固定 +100/+200)、保留核心底仓对冲、不要在波动率峰值重新买入。再投入股票是好的部分;固定卸对冲阶梯 + 即时重新对冲是危险的部分。
+
+**创建文件**: tail_hedge/run_backtest_daily.py, tail_hedge/data/sp500_daily_close_1974_2024.csv, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv
+**更新文件**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

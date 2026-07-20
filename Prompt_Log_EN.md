@@ -723,3 +723,23 @@ Discussion turned to Taleb/Spitznagel tail-hedging: spend ~4% on long-dated puts
 
 **Files Created**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/run_backtest.py, tail_hedge/data/*.csv (7 CSVs: derived series + 6 result tables)
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 40b: Tail-Hedging follow-up — DAILY path-dependent monetize-ladder
+**Date**: July 20, 2026
+
+Follow-up to Prompt 40: pull DAILY data (to capture intra-month V-bottoms) and test the user's exact rule — long-dated put, monetize on +100%/+200% spikes, redeploy ("buy the dip"). Added **§7** to both reports + `run_backtest_daily.py` + daily data/results CSVs.
+
+**Data**: ^GSPC daily 1974-2024 (yfinance, 12,860 days), nominal price + 1.9%/yr dividend drip; put marked daily by BS (1y, 20% OTM, IV = 63d realized × 1.25).
+
+**Findings**:
+- Daily reveals the true fat tail hidden by monthly: Buy&Hold kurtosis 3.7 → 18.6, maxDD −51.8% → −55.6%
+- 4 strategies: A Buy&Hold CAGR 10.45%/maxDD −55.6%; B passive 9.08%/−47.1%; C ladder→cash 7.92%/−37.9%; D ladder→equity (full) 9.29%/−45.0%
+- **Redeploy alpha is REAL (the point of the follow-up): D − C = +1.37%/yr** — buying the dip with hedge proceeds beats hoarding cash; monthly data couldn't show this
+- Monetize→cash vs passive C − B = −1.16%/yr (taking profits then sitting in cash drags); full ladder ≈ passive (D − B +0.21%/yr); best hedge still costs D − A −1.16%/yr vs Buy&Hold
+- **Key new finding — the 2020 FAILURE MODE**: in the fast COVID V-crash the mechanical +100%/+200% ladder de-hedged partway down AND re-bought a put at peak IV (~80%), turning a −3.8% quarter into **−17.2%** (worse than doing nothing). Empirical proof of the "monetize-too-early removes protection" risk raised in discussion. Slow bears (2008 −11pp, 2000-02 −6pp trough protection) rewarded the ladder; fast V punished it.
+- Refined lesson: scale monetization to crash depth (not fixed +100/+200), keep a residual core hedge, don't re-buy at peak IV. Redeploy-into-equity is the good part; fixed de-hedging ladder + instant re-hedge is the dangerous part.
+
+**Files Created**: tail_hedge/run_backtest_daily.py, tail_hedge/data/sp500_daily_close_1974_2024.csv, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv
+**Files Updated**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
