@@ -701,3 +701,25 @@ User: Saudi announced an oil price war today; it's happened twice this century a
 
 **Files Created**: 39_Saudi_Price_War_VLCC_Analog_EN.md, 40_Saudi_Price_War_VLCC_Analog_CN.md
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 40: Tail-Hedging & Convexity — 50-Year Backtest
+**Date**: July 20, 2026
+
+Discussion turned to Taleb/Spitznagel tail-hedging: spend ~4% on long-dated puts, monetize on +100%/+200% spikes, to raise geometric return (几何收益率) and compensate Kelly's fat-tail fragility. User asked to **backtest it on 50 years of real data** and reflect, then build a dedicated folder of backtest data + a bilingual GitHub page referencing it.
+
+**Data/method**: Robert Shiller monthly Real Total Return Price (dividends reinvested, CPI-adjusted), 1974-08→2024-07 (600 months). Rolling OTM puts BS-priced with IV = trailing realized vol × (1+VRP); VRP = vol-risk-premium knob. Caveat: month-average prices smooth fast crashes → hedge value conservative.
+
+**Findings (real numbers)**:
+- Buy&Hold: real CAGR 7.80%, maxDD −51.8%, skew −0.90, kurt 3.67
+- Convexity clips the left tail: skew −0.90→+0.02, kurt 3.67→0.19, worst month −19.4%→−6.3%
+- **Cheap puts (VRP 0)**: CAGR 7.80%→8.57%, vol 12.6%→10.7%, maxDD −51.8%→−38.6%, Sharpe 0.66→0.83 (wins on every axis)
+- **LEAPS (1y) put validates long-dated design**: maxDD −40%→−21% for ~0.4%/yr — far better than 1-month puts (bleed through slow bears)
+- **Price is destiny (AQR)**: at VRP 25–50% hedge costs 0.4–1.4%/yr CAGR; too dear (VRP 50%) DEEPENS drawdown (−54.4%) via bleed
+- Equal-drawdown fair test (−40%): put hedge 6.13% vs cash barbell 5.81% CAGR (+0.3pp, thin)
+- Crash protection: 2020 +8.8pp, 2008 +5.8pp, 1987 +3.7pp (fast crashes), 2000-02 +0.7pp (slow bleed)
+- **Synthesis**: geometric gain comes mostly from removing negative skew/kurtosis, not variance (drain only ~0.6–0.8%/yr); tail-hedging = disciplined ruin-insurance complementing Kelly, not standalone alpha; both Universa and AQR partly right — cheap+long+monetized = win, expensive+short = loss. Redeploy alpha untestable on monthly data.
+
+**Files Created**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/run_backtest.py, tail_hedge/data/*.csv (7 CSVs: derived series + 6 result tables)
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

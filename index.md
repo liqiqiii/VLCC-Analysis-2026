@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🛢️ Saudi Oil Price War → VLCC — The Two Prior Analogs & DHT/FRO Record (NEW — Jul 6, 2026)
+### 🛡️ Tail-Hedging & Convexity — A 50-Year Backtest (NEW — Jul 20, 2026)
+
+Empirical test of the Taleb/Spitznagel **tail-hedging / convexity** thesis on **50 years of real S&P 500 total return (1974–2024, Shiller data)** — does buying puts actually raise the **geometric return (几何收益率)** and compensate for Kelly's fat-tail fragility? **Verdict: real, but NOT a free lunch — price is destiny.** Convexity flipped Buy&Hold's fat left tail (**skew −0.90 → +0.02**) and clipped the worst month **−19.4% → −6.3%**; cheap puts raised CAGR **7.80% → 8.57%** with lower risk; a **1-year LEAPS put halved drawdown (−40% → −21%)** for ~0.4%/yr — validating long-dated protection. **But** at realistic vol-risk-premium the hedge costs 0.4–1.4%/yr CAGR, and bought too dear it *deepens* drawdown (the AQR vs Universa debate, quantified). At equal drawdown, convexity beat a cash barbell only **+0.3%/yr**. Full reproducible backtest + committed CSV data tables. *Analysis, not investment advice.*
+
+**[📄 Tail-Hedging Backtest (EN) →](tail_hedge/report_en)** | **[尾部对冲回测（中文）→](tail_hedge/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/tail_hedge)**
+
+---
+
+### 🛢️ Saudi Oil Price War → VLCC — The Two Prior Analogs & DHT/FRO Record (Jul 6, 2026)
 
 Saudi announced an oil **price war** — the **3rd this century** after **2014–16** (vs US shale) and **2020** (vs Russia). **Verdict: bullish for VLCC RATES, 2 for 2** (a price war = more barrels + floating storage, not about the oil price level; rates hit >$100k/day in 2015 and **~$200k–$279k/day** in 2020; DHT's Q2-2020 was its best quarter ever). **But the STOCK record is a cyclical trap:** FRO **+21% (2015) → −46% (2016)**; in 2020 **DHT −20.5% / FRO −25.9% full-year despite record earnings** — the spike is a **sell-into-strength** event (CRule 5/8). **What's different in 2026:** the **near-zero orderbook to late-2028** removes the newbuild wave that killed 2016 and the storage-unwind of 2020 → a boost now could be **more durable** — a rare *bullish* "this time is different," unless the war is a demand-collapse (recession) event. Live: FRO **~$37.02** (Jul 6), DHT **~$17.18** (Jul 2). *Analysis, not investment advice.*
 
