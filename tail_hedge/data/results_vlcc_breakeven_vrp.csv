@@ -1,0 +1,4 @@
+asset,strike,tenor,mean_payoff_frac,breakeven_VRP_expectancy,breakeven_VRP_CAGR,CAGR_unhedged
+DHT,30%OTM,252d,0.0492,0.01,0.67,-0.0617
+FRO,30%OTM,252d,0.0536,0.0,0.0,-0.0473
+SP500,20%OTM,252d,0.0039,0.0,0.0,0.0837

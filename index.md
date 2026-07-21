@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🛡️ Tail-Hedging & Convexity — A 50-Year Backtest (NEW — Jul 20, 2026)
+### 🚢 VLCC Convexity Hedging — DHT/FRO Backtest & Win-Rate-vs-VRP Framework (NEW — Jul 20, 2026)
+
+Applies the tail-hedging logic to **the assets a VLCC holder actually owns (DHT/FRO)** and answers: how much can you *overpay* for tail insurance? **Verdict: VLCC's catastrophic tail (DHT vol 48%/maxDD −97%, FRO 61%/−98% vs S&P 17%/−57%) makes tail-hedging worth a MUCH higher vol-risk-premium — DHT's CAGR break-even VRP ≈ 67% vs the S&P's ≈ 0%.** But it's **not reliable**: FRO's break-even VRP ≈ 0% (grind + high premium + 2011–12 restructuring defeat it), and DHT's entire hedge value came from ~**one year (2011)**. Introduces a **win-rate-vs-VRP framework**: raw win-rate is 4–18% (useless for a convex bet) — decide by the **CAGR break-even VRP vs your *paid* VRP**, conditioned on **entry vol** (buying puts mid-crash at peak IV is a near-guaranteed loss). Reproducible backtest + committed CSV data. *Analysis, not investment advice.*
+
+**[📄 VLCC Convexity Hedging (EN) →](tail_hedge/report_vlcc_en)** | **[VLCC 凸性对冲（中文）→](tail_hedge/report_vlcc_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/tail_hedge)**
+
+---
+
+### 🛡️ Tail-Hedging & Convexity — A 50-Year Backtest (Jul 20, 2026)
 
 Empirical test of the Taleb/Spitznagel **tail-hedging / convexity** thesis on **50 years of real S&P 500 total return (1974–2024, Shiller data)** — does buying puts actually raise the **geometric return (几何收益率)** and compensate for Kelly's fat-tail fragility? **Verdict: real, but NOT a free lunch — price is destiny.** Convexity flipped Buy&Hold's fat left tail (**skew −0.90 → +0.02**) and clipped the worst month **−19.4% → −6.3%**; cheap puts raised CAGR **7.80% → 8.57%** with lower risk; a **1-year LEAPS put halved drawdown (−40% → −21%)** for ~0.4%/yr — validating long-dated protection. **But** at realistic vol-risk-premium the hedge costs 0.4–1.4%/yr CAGR, and bought too dear it *deepens* drawdown (the AQR vs Universa debate, quantified). At equal drawdown, convexity beat a cash barbell only **+0.3%/yr**. Full reproducible backtest + committed CSV data tables. *Analysis, not investment advice.*
 

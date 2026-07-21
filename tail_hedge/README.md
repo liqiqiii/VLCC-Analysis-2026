@@ -2,14 +2,16 @@
 
 Empirical test of the Taleb/Spitznagel tail-hedging (convexity) thesis on **50 years
 of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's monthly
-*Real Total Return Price* (dividends reinvested, CPI-adjusted).
+*Real Total Return Price* (dividends reinvested, CPI-adjusted). A companion study
+([`report_vlcc_en.md`](report_vlcc_en.md)) applies the same logic to **VLCC equities
+(DHT/FRO)** with a **win-rate-vs-VRP / break-even-VRP framework**.
 
 ## Contents
 
 | File | What |
 |---|---|
-| [`report_en.md`](report_en.md) | Full write-up (EN) — GitHub Page |
-| [`report_cn.md`](report_cn.md) | 中文版 — GitHub Page |
+| [`report_en.md`](report_en.md) / [`report_cn.md`](report_cn.md) | S&P study (EN/CN) — GitHub Pages |
+| [`report_vlcc_en.md`](report_vlcc_en.md) / [`report_vlcc_cn.md`](report_vlcc_cn.md) | **VLCC (DHT/FRO) study + win-rate-vs-VRP framework (EN/CN)** |
 | [`run_backtest.py`](run_backtest.py) | Reproducible monthly backtest; regenerates the monthly CSVs in `data/` |
 | [`run_backtest_daily.py`](run_backtest_daily.py) | **Daily** path-dependent backtest: ladder, lagged-redeploy control, and Universa-style variant (§7 of the report) |
 | `data/shiller_real_tr_monthly_1974_2024.csv` | Derived monthly input series (Date, RealTRP, ret) |
@@ -24,6 +26,13 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 | `data/results_daily_redeploy_lag.csv` | **Daily**: dip-timing control — CAGR by redeploy lag (0/5/20/60/120d/cash) |
 | `data/results_daily_universa_core.csv` | **Daily**: Universa-style variant (F) core-fraction sensitivity + 2020 outcome |
 | `data/results_daily_crash_episodes.csv` | **Daily**: crash-window returns + trough drawdowns (Buy&Hold / D / F) |
+| [`run_backtest_vlcc.py`](run_backtest_vlcc.py) | **VLCC** convexity backtest (DHT/FRO) + win-rate-vs-VRP + break-even VRP |
+| `data/{dht,fro}_daily_2005_2024.csv` | DHT/FRO daily adjusted close (yfinance) |
+| `data/results_vlcc_profile.csv` | VLCC vs S&P vol / drawdown profile |
+| `data/results_vlcc_hedge_grid.csv` | DHT/FRO strike × tenor × VRP: CAGR / maxDD |
+| `data/results_vlcc_winrate_vrp.csv` | per-VRP win-rate, expectancy, payoff ratio, CAGR delta |
+| `data/results_vlcc_breakeven_vrp.csv` | expectancy & CAGR break-even VRP (DHT 67% / FRO 0% / S&P 0%) |
+| `data/results_vlcc_reliability.csv` | annual underlying return vs hedge P&L (convexity / lumpiness) |
 
 ## Reproduce
 

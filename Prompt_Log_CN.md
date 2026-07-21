@@ -750,3 +750,22 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **更新文件**: tail_hedge/run_backtest_daily.py(新增策略 F), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
 **创建文件**: tail_hedge/data/results_daily_universa_core.csv
+
+---
+
+## Prompt 41: VLCC 凸性对冲 —— DHT/FRO 回测 + 胜率 vs VRP 框架
+**日期**: 2026年7月20日
+
+用户(持有大额 VLCC 仓位)要求:用 DHT/FRO 历史回测凸性/尾部对冲逻辑;比较深度虚值看跌在不同情形下的**可靠度**;把 VLCC 与前研究结合思考 VRP;并设计一个更好的、考虑不同 VRP 的对冲**胜率**计算法。新增 run_backtest_vlcc.py + 6 张结果 CSV + 双语 report_vlcc_en/cn.md。
+
+**数据**:DHT(2005-10..2024-12)、FRO(2005-01..2024-12)日度复权(yfinance)。被动滚动 BS 定价看跌;IV = 63日已实现 ×(1+VRP)。
+
+**发现**:
+- 画像:DHT 波动 48%/maxDD −97%,FRO 61%/−98%(vs 标普 17%/−57%)。全周期窗口(2005 近顶)→ 买入持有 DHT −6.2%/年、FRO −4.7%/年(窗口条件,已标注)
+- **头条框架——CAGR 盈亏平衡 VRP**:DHT ≈ 67%,FRO ≈ 0%,标普 ≈ 0%。尾部越肥→可容忍 VRP 越高(1 年看跌平均赔付 DHT 4.9% vs 标普 0.4%)。DHT 保险价值带 [期望值BE ~0%,CAGR-BE 67%]
+- **可靠性依赖资产/状态/运气**:同一对冲帮 DHT(CAGR −6.2%→+0.7%,maxDD −97%→−78%)却伤 FRO(即便 VRP0 也全负)。DHT 全部对冲价值来自约一年(2011,−83%→对冲 +49%);高入场 IV 年份(2009/2015)亏 37–41%(峰值 IV 陷阱被 48-61% 波动放大)
+- **胜率框架(概念答案)**:原始胜率 4–18% 对凸性押注无用;按 CAGR 盈亏平衡 VRP vs 实付 VRP(= 市场 IV/已实现 − 1)决策;胜率报三个数(无条件/状态条件/量级加权);按入场波动条件化(在周期顶部波动低时买 = CRule 5)。缓慢磨底下长期 > 短期
+- VLCC 特有:股息是部分天然对冲;VLCC 期权稀薄 → 实付 VRP 可能超过 67% 缓冲 → 改为减仓/FFA(期权形式的 CRule 5/8)
+
+**创建文件**: tail_hedge/run_backtest_vlcc.py, tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/data/{dht,fro}_daily_2005_2024.csv, tail_hedge/data/results_vlcc_{profile,hedge_grid,winrate_vrp,breakeven_vrp,reliability}.csv
+**更新文件**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -774,3 +774,22 @@ User asked to continue: add a more Universa-realistic variant (F) that (i) keeps
 
 **Files Updated**: tail_hedge/run_backtest_daily.py (added strategy F), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
 **Files Created**: tail_hedge/data/results_daily_universa_core.csv
+
+---
+
+## Prompt 41: VLCC convexity hedging — DHT/FRO backtest + win-rate-vs-VRP framework
+**Date**: July 20, 2026
+
+User (holds a large VLCC position) asked: backtest the convexity/tail-hedge logic on DHT/FRO history; compare RELIABILITY of the deep-OTM put across scenarios; combine VLCC with the prior study to think about VRP; and design a better way to compute the hedge's WIN-RATE considering different VRP. Added run_backtest_vlcc.py + 6 result CSVs + bilingual report_vlcc_en/cn.md.
+
+**Data**: DHT (2005-10..2024-12), FRO (2005-01..2024-12) daily adjusted (yfinance). PASSIVE rolled BS-priced puts; IV = 63d realized × (1+VRP).
+
+**Findings**:
+- Profile: DHT vol 48%/maxDD −97%, FRO 61%/−98% (vs S&P 17%/−57%). Full-cycle window (2005 near-peak) → buy&hold DHT −6.2%/yr, FRO −4.7%/yr (window-conditional; flagged)
+- **Headline framework — CAGR break-even VRP**: DHT ≈ 67%, FRO ≈ 0%, S&P ≈ 0%. Fatter tail → far higher tolerable VRP (mean 1yr put payoff DHT 4.9% vs S&P 0.4%). Insurance-value band [expectancy-BE ~0%, CAGR-BE 67%] for DHT
+- **Reliability is asset/regime/luck specific**: same hedge helps DHT (CAGR −6.2%→+0.7% at k20 1yr VRP0, maxDD −97%→−78%) but HURTS FRO (all negative even VRP0). DHT's entire hedge value came from ~ONE year (2011, −83% → hedge +49%); high-entry-IV years (2009/2015) LOST 37–41% (peak-IV trap amplified by 48-61% vol)
+- **Win-rate framework (the conceptual answer)**: raw win-rate 4–18% is useless for a convex bet; decide by CAGR-break-even-VRP vs paid VRP (= market IV/realized − 1); report win-rate as 3 numbers (unconditional/regime-conditional/magnitude-weighted); condition on entry vol (buy at cycle top when vol low = CRule 5). Long-dated > short-dated for slow grinds
+- VLCC-specific: dividends are a partial natural hedge; VLCC options illiquid → real paid VRP may exceed the 67% cushion → consider trimming/FFAs instead (CRule 5/8 in options form)
+
+**Files Created**: tail_hedge/run_backtest_vlcc.py, tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/data/{dht,fro}_daily_2005_2024.csv, tail_hedge/data/results_vlcc_{profile,hedge_grid,winrate_vrp,breakeven_vrp,reliability}.csv
+**Files Updated**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
