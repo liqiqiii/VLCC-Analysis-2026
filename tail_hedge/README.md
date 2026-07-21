@@ -20,7 +20,8 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 | `data/results_equal_drawdown.csv` | Hedge vs cash barbell tuned to equal max drawdown |
 | `data/results_tail_shape.csv` | Skew / kurtosis / worst-month (left-tail clipping) |
 | `data/results_crash_episodes.csv` | Convex payoff across the 5 major crashes (monthly) |
-| `data/results_daily_ladder.csv` | **Daily**: Buy&Hold vs passive vs ladder→cash vs ladder→equity |
+| `data/results_daily_ladder.csv` | **Daily**: Buy&Hold vs passive vs ladder→cash vs ladder→equity (lagged E & immediate D) |
+| `data/results_daily_redeploy_lag.csv` | **Daily**: dip-timing control — CAGR by redeploy lag (0/5/20/60/120d/cash) |
 | `data/results_daily_crash_episodes.csv` | **Daily**: crash-window returns + trough drawdowns (reveals the 2020 failure mode) |
 
 ## Reproduce

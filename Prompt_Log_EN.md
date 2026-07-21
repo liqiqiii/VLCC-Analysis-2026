@@ -743,3 +743,19 @@ Follow-up to Prompt 40: pull DAILY data (to capture intra-month V-bottoms) and t
 
 **Files Created**: tail_hedge/run_backtest_daily.py, tail_hedge/data/sp500_daily_close_1974_2024.csv, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv
 **Files Updated**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 40c: Redeploy control group — isolating dip-timing from reinvestment
+**Date**: July 20, 2026
+
+User asked to add the control group I proposed: a LAGGED-redeploy strategy (E) that buys equity N trading days after monetizing, to strip the "buy exactly at the dip" timing from the perpetual-cash-drag confound in the earlier D − C = +1.37%/yr figure. Rewrote run_backtest_daily.py with a lag queue; added §7.1/§7.2 updates + results_daily_redeploy_lag.csv.
+
+**Clean decomposition (the correction)**:
+- **E − C (reinvest vs hoard cash): +1.42%/yr** — nearly the ENTIRE "redeploy edge"
+- **D − E (pure dip-timing): −0.05%/yr** — buying the exact bottom vs 20d later adds ≈0
+- Lag sensitivity: immediate 9.29% / +5d 9.27% / +20d 9.34% / +60d 9.41% / +120d 9.42% — i.e. **waiting 1–6 months was marginally BETTER than nailing the dip** (after a violent monetization the market keeps falling/chops)
+- **Honest correction to Prompt 40b**: the +1.37%/yr is REINVESTMENT discipline, not dip-timing skill. The lesson is "redeploy your crash proceeds and stay invested," not "time the low." Crash episodes: E ≈ D (both −17.2% in 2020), confirming the 2020 damage is the DE-HEDGING, not the redeploy timing.
+
+**Files Updated**: tail_hedge/run_backtest_daily.py (rewritten with lag control), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
+**Files Created**: tail_hedge/data/results_daily_redeploy_lag.csv

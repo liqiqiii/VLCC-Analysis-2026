@@ -719,3 +719,19 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: tail_hedge/run_backtest_daily.py, tail_hedge/data/sp500_daily_close_1974_2024.csv, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv
 **更新文件**: tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 40c: 再投入对照组 —— 从"再投入"中分离"择时抄底"
+**日期**: 2026年7月20日
+
+用户要求加入我提议的对照组:滞后再投入策略(E),在变现后 N 个交易日再买股票,以从之前 D − C = +1.37%/年 里剥离"精确抄底"的择时成分(该数字被"永久囤现金"的拖累混淆)。重写 run_backtest_daily.py 加入滞后队列;更新 §7.1/§7.2 + 新增 results_daily_redeploy_lag.csv。
+
+**干净拆解(修正)**:
+- **E − C(再投入 vs 囤现金):+1.42%/年** —— 几乎是全部"再投入优势"
+- **D − E(纯择时):−0.05%/年** —— 精确抄底 vs 晚 20 天买,≈0
+- 滞后敏感性:即时 9.29% / +5天 9.27% / +20天 9.34% / +60天 9.41% / +120天 9.42% —— 即**晚 1–6 个月反而略优于精确抄底**(剧烈变现后市场常继续跌/震荡)
+- **对 Prompt 40b 的诚实修正**:+1.37%/年是"再投入"的纪律,而非择时抄底的技巧。要点是"把崩盘赔付再投入、保持在场",而非"择时低点"。崩盘事件:E ≈ D(2020 均 −17.2%),证实 2020 的损害来自*卸对冲*,而非再投入时点。
+
+**更新文件**: tail_hedge/run_backtest_daily.py(重写含滞后对照), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
+**创建文件**: tail_hedge/data/results_daily_redeploy_lag.csv
