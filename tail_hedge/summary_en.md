@@ -39,6 +39,8 @@ title: Tail-Hedge Cheat-Sheet — Cross-Asset Decision Table (S&P · Sectors · 
 
 ## Why: "deep AND frequent *relative to drift*"
 
+> **What is "drift μ"?** Drift is an asset's **deterministic upward trend over time** — the directional part of the return once you strip out the random wobble. In the standard model `dS/S = μ·dt + σ·dW`, **μ is the drift** (the trend) and **σ is the volatility** (the noise). Picture someone walking randomly *on an escalator*: their side-to-side sway is σ, but the escalator's speed (μ) decides where they end up. Practically, **the "Long-run CAGR" column above *is* the realized drift** (`CAGR ≈ μ − ½σ²`): JPM/AXP/S&P have strong positive drift (a fast up-escalator you should just ride); DHT/FRO have **negative** drift (a down-escalator — holding only loses, so you must time it).
+
 Tail-hedging is a race between **premium bled while waiting** (grows with the asset's **drift** and its **vol × VRP**) and **payoff harvested in crashes** (grows with crash **depth × frequency**). The hedge only pays when the harvest beats the bleed:
 
 - **High drift raises the bar twice** — it is the CAGR you must beat, *and* it pushes the underlying up and away from the strike so rolled puts expire worthless more often. That is why **quality compounders (JPM/AXP, +10%) and the S&P are the *worst* hedge candidates** despite deep 2008 tails.

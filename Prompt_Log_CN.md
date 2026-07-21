@@ -844,3 +844,12 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md
 **更新文件**: index.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42d: 在速查表中加入"什么是漂移 μ"解释
+**日期**: 2026年7月20日
+
+用户要求解释漂移 μ 并加进 summary。在 summary_en/cn.md"相对漂移"处新增漂移 μ 解释框:μ = 确定性上行趋势(dS/S = μ·dt + σ·dW,扶梯比喻——σ 是乱晃、μ 是扶梯速度);"长期 CAGR"列就是已实现漂移(CAGR ≈ μ − ½σ²);强正漂移(JPM/AXP/标普)= 单纯持有别买保险;零/负漂移(VLCC)= 持有无意义,对冲退化成择时。
+
+**更新文件**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

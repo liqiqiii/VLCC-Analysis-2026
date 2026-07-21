@@ -868,3 +868,12 @@ User agreed to the cheat-sheet cover page and asked what "deep AND frequent rela
 
 **Files Created**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md
 **Files Updated**: index.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42d: Add "what is drift μ" explainer to the cheat-sheet
+**Date**: July 20, 2026
+
+User asked to explain drift μ and add it to the summary. Added a drift-μ explainer box to summary_en/cn.md §"relative to drift": μ = deterministic upward trend (dS/S = μ·dt + σ·dW, escalator analogy — σ = sway, μ = escalator speed); the Long-run CAGR column IS the realized drift (CAGR ≈ μ − ½σ²); strong positive drift (JPM/AXP/S&P) = ride it, don't insure it; zero/negative drift (VLCC) = holding is pointless so hedging degrades to timing.
+
+**Files Updated**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
