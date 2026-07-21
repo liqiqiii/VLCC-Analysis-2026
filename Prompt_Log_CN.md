@@ -832,3 +832,15 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: tail_hedge/run_backtest_stocks.py, tail_hedge/data/{jpm,axp}_daily_1998_2024.csv, tail_hedge/data/results_stock_{profile,breakeven_windows,winrate_vrp,hedge_grid,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum_full.csv
 **更新文件**: tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42c: 跨资产尾部对冲速查表(封面页)+ "相对漂移"解释
+**日期**: 2026年7月20日
+
+用户同意做速查封面页,并问"深、且相对漂移足够频繁"是什么意思。解释了该概念(一场赛跑:等待期间放血——随漂移与波动×VRP增长——vs 崩盘收割——随深度×频率增长;高漂移双重抬高门槛:既是要打赢的 CAGR,又把标的推离行权价使滚动看跌更常归零)。创建 summary_en/cn.md 作为专题枢纽。
+
+**速查表主表(7 资产)**:标普(−57%/+8.4%/BE 0%)、XLF(−83%/+5.7%/0%)、JPM(−74%/+10.3%/0%/实付 ~107%)、AXP(−84%/+10.9%/0%/~99%)、XLK(−82%/+9.2%/BE 27%/实付 24%)、DHT(−97%/−6.2%/BE 67%/实付 33%)、FRO(−98%/−4.7%/0%)。决策规则:仅当实付 VRP < 盈亏平衡 VRP 且有状态理由(科技崩盘风险或周期顶部)才对冲。7 中 5 → 持有别对冲;仅战术性 XLK 与周期顶部 DHT 越过门槛。作为专题枢纽从 index 链接。
+
+**创建文件**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md
+**更新文件**: index.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

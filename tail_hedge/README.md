@@ -10,6 +10,7 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 
 | File | What |
 |---|---|
+| [`summary_en.md`](summary_en.md) / [`summary_cn.md`](summary_cn.md) | **Cheat-sheet: 7-asset cross-asset decision table (topic hub)** |
 | [`report_en.md`](report_en.md) / [`report_cn.md`](report_cn.md) | S&P study (EN/CN) — GitHub Pages |
 | [`report_vlcc_en.md`](report_vlcc_en.md) / [`report_vlcc_cn.md`](report_vlcc_cn.md) | **VLCC (DHT/FRO) study + win-rate-vs-VRP framework (EN/CN)** |
 | [`report_sectors_en.md`](report_sectors_en.md) / [`report_sectors_cn.md`](report_sectors_cn.md) | **Financials (XLF) & Technology (XLK) study — hold-vs-hedge suitability (EN/CN)** |

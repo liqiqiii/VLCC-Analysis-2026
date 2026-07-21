@@ -856,3 +856,15 @@ User: consider Chase (JPM) and Amex (AXP) instead of the whole XLF. Added run_ba
 
 **Files Created**: tail_hedge/run_backtest_stocks.py, tail_hedge/data/{jpm,axp}_daily_1998_2024.csv, tail_hedge/data/results_stock_{profile,breakeven_windows,winrate_vrp,hedge_grid,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum_full.csv
 **Files Updated**: tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42c: Cross-asset tail-hedge cheat-sheet (cover page) + "relative to drift" explainer
+**Date**: July 20, 2026
+
+User agreed to the cheat-sheet cover page and asked what "deep AND frequent relative to drift" means. Explained the concept (a race: premium bled while waiting — grows with drift and vol×VRP — vs payoff harvested in crashes — grows with depth×frequency; high drift raises the bar twice: it's the CAGR to beat AND pushes the underlying away from the strike so rolled puts expire worthless more). Created summary_en/cn.md as the topic hub.
+
+**Cheat-sheet master table (7 assets)**: S&P (−57%/+8.4%/BE 0%), XLF (−83%/+5.7%/0%), JPM (−74%/+10.3%/0%/paid ~107%), AXP (−84%/+10.9%/0%/~99%), XLK (−82%/+9.2%/BE 27%/paid 24%), DHT (−97%/−6.2%/BE 67%/paid 33%), FRO (−98%/−4.7%/0%). Decision rule: hedge only if paid VRP < break-even VRP AND you have a regime reason (Tech crash-risk or cyclical top). 5 of 7 → hold, don't hedge; only tactical XLK and top-of-cycle DHT clear the bar. Linked from index as the topic hub.
+
+**Files Created**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md
+**Files Updated**: index.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

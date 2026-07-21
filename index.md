@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🏦 Sector Convexity Hedging — Financials (XLF) & Technology (XLK) (NEW — Jul 20, 2026)
+### 🧭 Tail-Hedge Cheat-Sheet — Cross-Asset Decision Table (NEW — Jul 20, 2026)
+
+The one-page hub for the whole `tail_hedge/` study: a **7-asset decision table** (S&P, XLF, JPM, AXP, XLK, DHT, FRO) with each asset's **hold verdict, break-even VRP, live paid VRP, and hedge verdict** — plus the single decision rule (**hedge only if paid VRP < break-even VRP *and* you have a regime reason**) and the "deep AND frequent relative to drift" principle. **Bottom line: 5 of 7 → hold, don't hedge; only tactical XLK and top-of-cycle DHT clear the bar.**
+
+**[📄 Cheat-Sheet (EN) →](tail_hedge/summary_en)** | **[速查表（中文）→](tail_hedge/summary_cn)**
+
+---
+
+### 🏦 Sector Convexity Hedging — Financials (XLF) & Technology (XLK) (Jul 20, 2026)
 
 Extends the tail-hedge framework to **long-term-holdable fat-tailed sectors** to test whether they beat VLCC as "hold + tail-hedge." **Verdict — a useful split: better to HOLD (XLF/XLK CAGR +5.7%/+9.2% vs VLCC negative), but mostly NOT better to systematically HEDGE.** The **break-even VRP spectrum**: S&P ≈0%, **Financials ≈0%**, **Technology ≈27%**, DHT-VLCC ≈67%. The positive drift that makes a sector holdable is what makes hedging it bleed — so only **Technology** (recurring dot-com/2008/2022 crashes) has a positive break-even, and **live 1-yr 20%-OTM XLK puts price a paid VRP of ≈24% < 27%** → a *tactical* XLK hedge is marginally defensible now, a direct expression of the [AI-bubble §11](ai_bubble/report_en) thesis (but XLK's edge collapses to 0% post-2010 — crash-regime-dependent). Unifying rule: tail-hedging pays only where crashes are deep AND frequent relative to drift. *Analysis, not investment advice.*
 
