@@ -759,3 +759,18 @@ User asked to add the control group I proposed: a LAGGED-redeploy strategy (E) t
 
 **Files Updated**: tail_hedge/run_backtest_daily.py (rewritten with lag control), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
 **Files Created**: tail_hedge/data/results_daily_redeploy_lag.csv
+
+---
+
+## Prompt 40d: Universa-style disciplined-hedge variant (F) — does it fix the 2020 failure?
+**Date**: July 20, 2026
+
+User asked to continue: add a more Universa-realistic variant (F) that (i) keeps a residual CORE hedge on, (ii) monetizes scaled to crash DEPTH (not fixed +100/+200), (iii) never re-buys at peak IV — to test whether it removes the 2020 −17.2% failure. Rewrote run_backtest_daily.py adding mode 'universa' + core sensitivity; added §7.5 (EN/CN) + results_daily_universa_core.csv.
+
+**Findings**:
+- **F removes the 2020 failure mode**: D −17.2% → F −2.6% (even beats Buy&Hold −3.8%). Hypothesis confirmed — keep a core + depth-scaled gradual monetization + no peak-IV re-buy. Core sensitivity: even core=0% fixes 2020 (−3.4%), so the fix is mostly the gradual/no-rebuy design; larger core mainly improves overall maxDD (−54.8% core0 → −49.5% core50) at flat CAGR 9.13%
+- **But not a free fix — F trades away slow-crash protection**: 2008 F −47.0% ≈ Buy&Hold −46.9% (essentially unhedged); full-sample maxDD F −51.6% WORSE than D −45.0%. Gradual selling + redeploy into a multi-month grind bleeds protection away. No single mechanical rule dominates
+- **CAPSTONE**: none of the fancy variants (C/D/E/F) beats plain PASSIVE rolling (B). B protected BOTH 2008 (−38.8%) and 2020 (−0.6%), lowest hedged maxDD (−47.1%), highest hedged Sharpe (0.68), CAGR 9.08% within 0.2pp of the best. The active monetize-ladder adds tail risk (D) or gives up protection (F) without improving risk-adjusted return. Surviving lessons: buy cheap+long-dated (§3.3), never hoard cash after monetizing (§7.2), don't over-engineer the exit — passive-and-roll ~ CRule 8
+
+**Files Updated**: tail_hedge/run_backtest_daily.py (added strategy F), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
+**Files Created**: tail_hedge/data/results_daily_universa_core.csv

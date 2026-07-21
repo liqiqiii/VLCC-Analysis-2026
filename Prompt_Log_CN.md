@@ -735,3 +735,18 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **更新文件**: tail_hedge/run_backtest_daily.py(重写含滞后对照), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
 **创建文件**: tail_hedge/data/results_daily_redeploy_lag.csv
+
+---
+
+## Prompt 40d: Universa 式纪律对冲变体(F)—— 能否修好 2020 失效?
+**日期**: 2026年7月20日
+
+用户要求继续:加入更贴近 Universa 现实的变体(F):①保留核心底仓对冲,②按崩盘深度分批变现(而非固定 +100/+200),③绝不在峰值 IV 重新买入——检验能否消除 2020 的 −17.2% 失效。重写 run_backtest_daily.py 加入 'universa' 模式 + 核心敏感性;新增 §7.5(EN/CN)+ results_daily_universa_core.csv。
+
+**发现**:
+- **F 消除了 2020 失效**:D −17.2% → F −2.6%(甚至优于买入持有 −3.8%)。假设成立——保留核心 + 按深度渐进变现 + 不在峰值 IV 重新买入。核心敏感性:即便核心=0% 也修复 2020(−3.4%),故修复主要来自渐进/不重买设计;更大核心主要改善整体 maxDD(核心0 −54.8% → 核心50 −49.5%),CAGR 基本不变 9.13%
+- **但不是免费修复——F 牺牲了慢速崩盘保护**:2008 F −47.0% ≈ 买入持有 −46.9%(几乎不对冲);全样本 maxDD F −51.6% 差于 D −45.0%。渐进卖出 + 再投入走进数月磨底会把保护耗光。没有单一机械规则能全面占优
+- **总结论**:所有花哨变体(C/D/E/F)都没能胜过单纯被动滚动(B)。B *同时*保护了 2008(−38.8%)与 2020(−0.6%),对冲后最低 maxDD(−47.1%)、最高夏普(0.68),CAGR 9.08% 与最优只差 0.2pp。主动变现阶梯要么加尾部风险(D)、要么放弃保护(F),都没改善风险调整回报。经受住检验的教训:买便宜+长期(§3.3)、变现后绝不囤现金(§7.2)、别把退出过度工程化——被动滚动 ≈ CRule 8
+
+**更新文件**: tail_hedge/run_backtest_daily.py(新增策略 F), tail_hedge/report_en.md, tail_hedge/report_cn.md, tail_hedge/README.md, tail_hedge/data/results_daily_ladder.csv, tail_hedge/data/results_daily_crash_episodes.csv, Prompt_Log_EN.md, Prompt_Log_CN.md
+**创建文件**: tail_hedge/data/results_daily_universa_core.csv

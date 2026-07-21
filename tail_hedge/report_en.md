@@ -16,6 +16,7 @@ title: Tail-Hedging & Convexity — A 50-Year Backtest (1974–2024)
 > 4. **But at realistic option pricing it costs CAGR.** With a normal vol-risk-premium (VRP 25–50%), the hedge gives up **~0.4–1.4%/yr of CAGR** to buy that protection — and if bought *too* expensively (VRP 50%) it can **deepen** drawdown via premium bleed (−54.4% > −51.8%). This is exactly the **AQR vs Universa** debate, and the data shows *both* can be right.
 > 5. **Fair fight (equal drawdown), convexity wins — but narrowly.** Tuned to the same −40% maxDD, the put hedge beat a cash barbell **6.13% vs 5.81% CAGR** — a real but thin edge.
 > 6. **Follow-up on DAILY data with a lagged-redeploy control (§7).** Redeploying crash proceeds into equity beats hoarding them as cash by **+1.37%/yr** — **but the control group shows this is REINVESTMENT discipline, not dip-timing: nailing the *exact* bottom adds ≈0 (waiting 1–6 months was even marginally better).** And the daily path exposes a **failure mode**: in a *fast* crash (2020) the mechanical +100%/+200% ladder de-hedged partway down and re-bought insurance at peak IV, turning a −3.8% quarter into **−17.2%**.
+> 7. **Can discipline fix the ladder? (§7.5)** A Universa-style rule (keep a residual core + monetize scaled to crash depth + no peak-IV re-buy) **removes the 2020 failure (−17.2% → −2.6%)** — but trades it away for weaker slow-crash protection (2008 falls back to ≈ −47%, ≈ unhedged). **Capstone: no mechanical monetization beats simply holding the put to expiry and rolling (B)** — the plainest hedge had the best hedged drawdown (−47.1%) and Sharpe (0.68), protecting *both* 2008 and 2020.
 >
 > *Education/analysis, not investment advice.*
 
@@ -205,6 +206,7 @@ The §1–6 backtest used **monthly month-average** data, which smooths intra-mo
 | C. Ladder monetize → **cash** (hoard) | 7.92% | 13.3% | **−37.9%** | 0.64 | 21.3 | ×49 |
 | E. Ladder → equity, **+20d lagged** (control) | 9.34% | 15.7% | −44.6% | 0.65 | 16.2 | ×95 |
 | **D. Ladder → equity, immediate** (buy the dip) | 9.29% | 15.7% | −45.0% | 0.64 | 16.7 | ×93 |
+| **F. Universa-style** (core 30%, depth-scaled) | 9.13% | 15.7% | **−51.6%** | 0.64 | 13.7 | ×87 |
 
 *(Nominal, price + dividend drip — higher absolute level than the real-return §3; the point here is the **relative** ranking.)*
 
@@ -254,6 +256,27 @@ The monetize-ladder is **path- and regime-dependent**:
 - **Practical fixes** (what Universa-style managers actually do, vs the naïve rule): scale monetization to crash *depth* rather than a fixed +100/+200; **keep a residual core hedge on**; **do not mechanically re-buy at peak IV**; and **redeploy on a disciplined schedule, not by trying to time the low.**
 
 > **Bottom line of the follow-up:** daily data + the lagged control show the "+1.37%/yr redeploy edge" is **reinvestment discipline, not dip-timing** (nailing the bottom ≈ 0), the whole-hedge still **costs ~1.2%/yr** over a long bull, and the mechanical +100/+200 ladder carries a **genuine fast-crash failure mode** the monthly test was blind to. Convexity harvesting rewards *staying invested and the right monetization design* — not market-timing the low, and not a fixed de-hedging ladder.
+
+## 7.5 Can a Universa-style rule remove the 2020 failure mode? (strategy F)
+
+**F** fixes the two flaws behind D's 2020 blow-up: it (i) **monetizes gradually, scaled to crash depth** (not a fixed +100/+200 dump), (ii) **always keeps a residual core hedge on** (never fully de-hedges), and (iii) **never re-buys a full put at peak IV** (it only rolls at expiry). → [`results_daily_crash_episodes.csv`](data/results_daily_crash_episodes.csv)
+
+| Episode (window return) | Buy&Hold | D (fixed ladder) | **F (Universa)** |
+|---|---|---|---|
+| **2020 COVID (fast V)** | −3.8% | **−17.2%** ✗ | **−2.6%** ✅ |
+| 1987 crash | −21.6% | −22.0% | −19.8% |
+| 2000–02 (slow) | −32.4% | −27.3% | −28.3% |
+| **2008 GFC (slow)** | −46.9% | **−38.9%** | **−47.0%** ✗ |
+
+**The 2020 failure mode is gone (−17.2% → −2.6%, even beating Buy&Hold).** But it is **not a free fix — F trades away the slow-crash protection.** In the multi-month 2008 grind, F's gradual selling + redeploy walked it *back into* a market that kept falling — ending at −47.0%, essentially **unhedged**, and its full-sample maxDD (−51.6%) is *worse* than D's (−45.0%). The fixed ladder over-protects the *aftermath* of a crash but self-destructs *inside* a fast one; the gradual core-keeping rule survives fast crashes but under-protects slow ones. **No single mechanical monetization rule dominates.**
+
+*(Core sensitivity → [`results_daily_universa_core.csv`](data/results_daily_universa_core.csv): even core = 0% already fixes 2020 (−3.4%), so the fix is mostly the **gradual/depth-scaled selling + no peak-IV re-buy**, not the core itself; a larger core mainly improves overall maxDD, −54.8% (core 0%) → −49.5% (core 50%), at ~flat CAGR 9.13%.)*
+
+### The capstone finding
+
+Rank all six strategies by risk-adjusted robustness and a humbling result emerges: **the plainest hedge — B, just hold the put to expiry and roll, no monetization at all — was the best-rounded.** B protected **both** 2008 (−38.8%) **and** 2020 (−0.6%), had the **lowest hedged max drawdown (−47.1%)** and the **highest hedged Sharpe (0.68)**, with CAGR (9.08%) within ~0.2pp of the fancier variants. Every layer of monetization / redeploy / core sophistication (C/D/E/F) either created a failure mode (D's 2020), traded one crash type for another (F's 2008), or added drag (C) — **without improving risk-adjusted return over the simple passive rolled put.**
+
+> **Capstone:** across 50 years of daily data, the user's active monetize-ladder is elegant but empirically **adds tail risk or gives up protection without beating a simple passive rolled put.** The lessons that survived *every* test: **(1) buy protection cheap and long-dated (§3.3); (2) never hoard cash after monetizing (§7.2); (3) don't over-engineer the exit ladder — passive-and-roll is hard to beat.** In spirit this is **CRule 8**: a simple pre-committed hedge beats a clever discretionary one.
 
 ---
 

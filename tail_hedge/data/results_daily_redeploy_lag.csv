@@ -1,7 +1,7 @@
 lag_days,CAGR,dip_timing_vs_this,note
-0,0.0929,0.0,D immediate (buy the dip)
-5,0.0927,0.0002,buy 5 trading days after the dip
-20,0.0934,-0.0005,buy 20 trading days after the dip
-60,0.0941,-0.0012,buy 60 trading days after the dip
-120,0.0942,-0.0013,buy 120 trading days after the dip
-cash,0.0792,0.0137,C hoard cash forever
+0,0.0929,0.0,D immediate
+5,0.0927,0.0002,buy 5d after dip
+20,0.0934,-0.0005,buy 20d after dip
+60,0.0941,-0.0012,buy 60d after dip
+120,0.0942,-0.0013,buy 120d after dip
+cash,0.0792,0.0137,C hoard cash
