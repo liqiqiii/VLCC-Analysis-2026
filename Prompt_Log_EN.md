@@ -808,3 +808,14 @@ User asked to do both follow-ups I proposed: (1) sub-window break-even VRP robus
 
 **Files Created**: tail_hedge/run_backtest_vlcc_windows.py, tail_hedge/data/results_vlcc_breakeven_windows.csv, tail_hedge/data/results_vlcc_paid_vrp.csv
 **Files Updated**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 41c: Map current VLCC cycle read → "hedge now?" decision (§8)
+**Date**: July 20, 2026
+
+User asked to add a section tying the repo's current cycle-position judgment (pages 37/38, 35/36) to the tail-hedge decision. Added §8 to report_vlcc_en/cn.md (synthesis, no new backtest).
+
+**Content**: Repo's live read = mid-cycle, cheap-to-fair (DHT $17.44/FRO $35.12 on sustained ~$100k TCE, PE 5.2-5.6×, supply-backed through 2027, "do not sell"). Crossed with §3.6/§7 (recent-regime break-even VRP 0%, live paid VRP ~33%): **mid-cycle + 0% break-even + 33% paid = the hedge bleeds.** Added a cycle-phase → hedge-action decision matrix; trigger to start hedging = late-cycle flip (rate rollover from sustained high, orderbook filling, PE compression, >70% buys) WHILE vol still low, most likely 2027-28. **Current verdict: do NOT tail-hedge yet; collect dividends, keep powder dry, buy long-dated deep-OTM puts when signals flip late-cycle with vol still cheap; trim rather than hedge if risk must be cut sooner.**
+
+**Files Updated**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

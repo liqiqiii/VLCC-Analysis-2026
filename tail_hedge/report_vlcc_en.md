@@ -227,6 +227,27 @@ This is where the whole tail-hedge study converges with this repo's core compete
 
 ---
 
+# Section 8 — Should You Hedge NOW? Mapping the Current Cycle Read to the Decision
+
+This repo's live cycle work ([VLCC Cycle Position, Jun 2026 — p.37/38](../37_VLCC_Cycle_Position_Jun2026_EN); [Average × Duration, p.35](../35_TCE_vs_StockPrice_EN)) puts VLCC at **mid-cycle, cheap-to-fair**: DHT **$17.44** / FRO **$35.12** priced on a *sustained* **~$100k** TCE (not the collapsed $420k Hormuz spike), **PE 5.2–5.6× @ $100k**, supply-backed **through 2027** (near-zero orderbook to late-2028), sell-algo **"do not sell."**
+
+Cross that with §3.6 / §7: the hedge's ~67% cushion only pays in a **2008-scale crash**, the **recent-regime break-even VRP is 0%**, and you'd pay a **live ~33% VRP** on DHT puts today. **Mid-cycle + 0% break-even + 33% paid = the hedge would just bleed.** The cycle read and the convexity math agree.
+
+**Decision matrix — cycle phase (CRule 1) → hedge action:**
+
+| Cycle phase | Vol / put price | Hedge action |
+|---|---|---|
+| Trough / early upturn | vol high, puts dear | **Don't hedge** — own the recovery |
+| **Mid-cycle ← we are here (Jun-2026)** | vol moderate, break-even VRP ≈ 0% | **Don't hedge — it bleeds.** Ride it; dividends are the cushion; "do not sell" |
+| Late-cycle / approaching peak | **vol still low, puts cheap** | **START buying long-dated deep-OTM puts** — the CRule 5 window; the 67% cushion goes live |
+| Peak / downturn confirmed | vol spiked, puts dear (peak-IV trap) | **Too late for cheap insurance — de-risk by TRIMMING** |
+
+**The trigger to start hedging** (watch for the late-cycle flip *while vol is still low*): rates rolling over from a **sustained high** (not a spike), the **orderbook filling / newbuild surge** (CRule 5 sell signal), **PE compressing toward its trough** on peak earnings, sell-side **>70% buys** and "super-cycle" headlines. Because supply is backed **through 2027**, that window is most likely **2027–2028, not now** — so **pre-position the puts when those signals appear and vol is still cheap, not after the rate has already rolled over** (by then IV has spiked → the peak-IV trap of §3.5).
+
+> **Current verdict (Jul 2026): do NOT tail-hedge the VLCC book yet.** You are mid-cycle, the stocks are cheap-to-fair, the break-even VRP here is ~0%, and paying ~33% VRP would bleed. **Collect the dividends as your natural cushion, keep the powder dry, and buy the long-dated deep-OTM puts when the cycle signals flip to late-cycle *while vol is still low* (likely 2027).** If you must cut risk before then, **trim rather than hedge.**
+
+---
+
 ## Reproduce it yourself
 ```
 cd tail_hedge

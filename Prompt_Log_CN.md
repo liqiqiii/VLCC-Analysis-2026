@@ -784,3 +784,14 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: tail_hedge/run_backtest_vlcc_windows.py, tail_hedge/data/results_vlcc_breakeven_windows.csv, tail_hedge/data/results_vlcc_paid_vrp.csv
 **更新文件**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 41c: 把当前 VLCC 周期判断 → "现在该对冲吗"决策(§8)
+**日期**: 2026年7月20日
+
+用户要求加一小节,把仓库当前周期定位判断(第37/38、35/36页)接到尾部对冲决策。在 report_vlcc_en/cn.md 新增 §8(综合,无新回测)。
+
+**内容**:仓库实时判断 = 中周期、cheap-to-fair(DHT $17.44/FRO $35.12 按可持续 ~$100k TCE,PE 5.2-5.6×,供给支撑到 2027,"不要卖")。与 §3.6/§7 交叉(近期状态盈亏平衡 VRP 0%,实盘实付 VRP ~33%):**中周期 + 0% 盈亏平衡 + 33% 实付 = 对冲放血。** 加入周期阶段→对冲动作决策矩阵;开始对冲的触发 = 后段翻转(运价从可持续高位回落、订单簿填满、PE 压缩、>70% 看多)且波动仍低时,最可能 2027-28。**当前结论:暂不做尾部对冲;收股息、保持弹药、待信号翻入后段且波动仍便宜时买长期深度虚值看跌;若须提前降风险则减仓而非对冲。**
+
+**更新文件**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
