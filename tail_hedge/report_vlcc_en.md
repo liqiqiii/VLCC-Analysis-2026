@@ -14,6 +14,7 @@ title: VLCC Convexity Hedging — DHT/FRO Backtest & a Win-Rate-vs-VRP Framework
 > 2. **The core new metric — CAGR break-even VRP.** For **DHT**, tail-hedging with a **1-year 30%-OTM rolled put raises CAGR as long as you pay a VRP below ≈ 67%** (i.e., IV up to ~1.67× realized). For the **S&P that break-even VRP is ≈ 0%.** **The fatter the tail, the more you can overpay for insurance.**
 > 3. **But it is asset- and regime-specific — not universally reliable.** **FRO's** break-even VRP is **≈ 0%** (its 61% vol makes premiums brutal, and the 2011–12 restructuring + choppy grind defeat the rolled put). And **DHT's entire positive contribution came from essentially ONE year (2011, −83%)** — extreme lumpiness.
 > 4. **Win-rate is the wrong headline.** The hedge "wins" only **16% (DHT) / 4% (S&P)** of one-year periods — you are "wrong" most of the time *by design*. Use **expectancy, the CAGR break-even VRP, and the insurance-value band**, conditioned on **entry vol** (buying puts *after* vol spikes is a near-guaranteed loss).
+> 5. **Robustness + live pricing → it's really a cycle bet (§3.6, §7).** DHT's 67% break-even VRP is **entirely the 2008–12 crash**: exclude it (2013+, 2019+ windows, +14–25%/yr) and the break-even collapses to **0%**. Live options (Jul 2026) price DHT's 1-yr 30%-OTM put at a **paid VRP of ≈33%** (FRO ≈26–31%). So hedging DHT is worth it **only if you believe a 2008-scale downturn is ahead** (33% < 67%) — i.e., **hedge near a cyclical top (CRule 1 + CRule 5), or don't hedge at all.**
 >
 > *Education/analysis, not investment advice.*
 
@@ -142,6 +143,19 @@ Full tables in [`data/`](data/). All returns from **adjusted (total-return)** se
 
 *Two brutal, honest lessons: **(a)** the hedge's value is **lumped into ~one event** (2011) — extreme fragility; **(b)** initiating in a high-IV year (2009, 2015) *lost* 37–41% even as the stock fell — the peak-IV trap, amplified by 48–61% vol. **When you buy the hedge matters more than that you buy it.***
 
+## 3.6 Robustness — is the 67% break-even VRP stable? (sub-windows) → [`results_vlcc_breakeven_windows.csv`](data/results_vlcc_breakeven_windows.csv)
+
+| Asset | Window | Years | Unhedged CAGR | **CAGR break-even VRP** |
+|---|---|---|---|---|
+| **DHT** | 2005+ | 19.2 | −6.2% | **67%** |
+| **DHT** | 2013+ | 12.0 | +14.3% | **0%** |
+| **DHT** | 2019+ | 6.0 | +24.8% | **0%** |
+| FRO | 2005+ | 20.0 | −4.7% | 0% |
+| FRO | 2013+ | 12.0 | +3.8% | 0% |
+| FRO | 2019+ | 6.0 | +25.8% | 0% |
+
+**The 67% is NOT a stable property — it is entirely the 2008–2012 catastrophe.** Exclude that crash (2013+, 2019+) and DHT compounded **+14% to +25%/yr**, so the rolled put just bled premium → break-even VRP **collapses to 0%.** **The break-even VRP is a function of whether a catastrophic crash falls inside the window — not a durable feature of the stock.** Translation: the ~67% cushion is real *only if a 2008-scale downturn is actually ahead.* This is the ultimate form of the "convex bets are lumpy and regime-dependent" theme — and it turns the hedge decision into a **cycle-position call** (§7).
+
 ---
 
 # Section 4 — How to Compute the "Win-Rate" vs VRP (the framework)
@@ -189,10 +203,35 @@ Raw win-rate (4–18%) is **useless as a standalone** for a convex hedge — you
 
 ---
 
+# Section 7 — Live Calibration: Your Paid VRP vs the Break-Even (it's a cycle bet)
+
+**What you actually pay today** (live DHT/FRO option chains, ~Jul 2026) → [`results_vlcc_paid_vrp.csv`](data/results_vlcc_paid_vrp.csv):
+
+| Ticker | Expiry (T) | Spot | ~30%-OTM put IV | Realized vol (63d) | **Paid VRP** | Open int. |
+|---|---|---|---|---|---|---|
+| **DHT** | 2027-07 (1.0y) | $17.89 | 55% | 42% | **≈ +33%** | 589 |
+| **FRO** | 2028-01 (1.5y) | $36.93 | 59% | 47% | **≈ +26%** | 23 (thin) |
+| FRO | 2027-02 (0.6y) | $36.93 | 62% | 47% | ≈ +31% | 349 |
+
+*Paid VRP = option IV / trailing-realized vol − 1. Snapshot; VLCC options are illiquid (note FRO's OI of 23) so treat as indicative.*
+
+**The decision, made concrete:**
+- **DHT paid VRP ≈ 33%.** That is **below the full-cycle break-even (67%)** → hedging is worth it **only if** a 2008-scale downturn is plausibly ahead. It is **far above the recent-regime break-even (0%)** → in a continuing super-cycle the same put just bleeds.
+- **FRO paid VRP ≈ 26–31%,** but its break-even VRP is **≈ 0% in every window** → **do not hedge FRO with these puts** — de-risk (trim) or hedge the rate via FFAs.
+
+**So the hedge decision collapses to a CYCLE-POSITION call.** The ~67% cushion only pays if the catastrophe that created it recurs; §3.6 shows that outside the 2008–12 crash the break-even is 0%. Therefore:
+
+> **Hedge the VLCC book only near a cyclical TOP** — when (a) rates/valuations are stretched, (b) vol is low so puts are cheap (low paid VRP), and (c) a large downturn is plausible. That is exactly **CRule 1 (cycle positioning) + CRule 5 (buy protection into greed).** Mid-cycle or early-cycle, the hedge is a near-guaranteed drag — **de-risk by trimming instead.**
+
+This is where the whole tail-hedge study converges with this repo's core competency: **convexity hedging on a cyclical is a bet on cycle position, priced through the VRP.** The options market hands you a live paid-VRP (~33% for DHT); your job is to compare it to a break-even VRP that is itself a function of *where in the cycle you think you are.*
+
+---
+
 ## Reproduce it yourself
 ```
 cd tail_hedge
 python run_backtest_vlcc.py   # pulls DHT/FRO (yfinance) -> data/results_vlcc_*.csv
+python run_backtest_vlcc_windows.py   # sub-window break-even VRP + live option paid-VRP
 ```
 
 ## Sources

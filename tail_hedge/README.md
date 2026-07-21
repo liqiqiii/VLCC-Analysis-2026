@@ -33,6 +33,9 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 | `data/results_vlcc_winrate_vrp.csv` | per-VRP win-rate, expectancy, payoff ratio, CAGR delta |
 | `data/results_vlcc_breakeven_vrp.csv` | expectancy & CAGR break-even VRP (DHT 67% / FRO 0% / S&P 0%) |
 | `data/results_vlcc_reliability.csv` | annual underlying return vs hedge P&L (convexity / lumpiness) |
+| [`run_backtest_vlcc_windows.py`](run_backtest_vlcc_windows.py) | sub-window break-even VRP robustness + LIVE option paid-VRP calibration |
+| `data/results_vlcc_breakeven_windows.csv` | break-even VRP by window (DHT 67% full → 0% in 2013+/2019+) |
+| `data/results_vlcc_paid_vrp.csv` | live DHT/FRO ~30%-OTM put IV → paid VRP (DHT ≈33%, FRO ≈26–31%) |
 
 ## Reproduce
 

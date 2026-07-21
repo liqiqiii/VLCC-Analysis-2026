@@ -769,3 +769,18 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: tail_hedge/run_backtest_vlcc.py, tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/data/{dht,fro}_daily_2005_2024.csv, tail_hedge/data/results_vlcc_{profile,hedge_grid,winrate_vrp,breakeven_vrp,reliability}.csv
 **更新文件**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 41b: VLCC 对冲稳健性(子窗口)+ 实盘期权 VRP 校准
+**日期**: 2026年7月20日
+
+用户要求把我提议的两个后续都做:①子窗口盈亏平衡 VRP 稳健性(2013+/2019+),②用真实 DHT/FRO 期权链 IV 校准此刻实付 VRP。新增 run_backtest_vlcc_windows.py + §3.6 + §7(EN/CN)+ 2 张 CSV。
+
+**发现**:
+- **子窗口稳健性——67% 不稳定**:DHT CAGR 盈亏平衡 VRP = 67%(2005+,不对冲 −6.2%)→ **0%(2013+,+14.3%)**→ **0%(2019+,+24.8%)**。FRO 所有窗口皆 0%。67% 完全是 2008–12 灾难;剔除它对冲纯拖累。盈亏平衡 VRP = 窗口内是否落入灾难性崩盘的函数,而非股票持久特征
+- **实盘期权校准(2026年7月)**:DHT 1年 30%虚值看跌 IV 55%/已实现 42% → **实付 VRP ≈33%**(OI 589);FRO 1.5年 IV 59%/47% → **≈26%**(OI 23 稀薄);FRO 0.6年 IV 62% → ≈31%
+- **决策塌缩为周期定位**:DHT 实付 33% < 全周期盈亏平衡 67%(仅当 2008 级下行在前方才划算)但 >> 近期状态盈亏平衡 0%(中周期放血)。FRO 付 26–31% vs 盈亏平衡 ~0% → 别对冲 FRO,改减仓/FFA。结论:只在周期顶部附近对冲 VLCC(CRule 1 + CRule 5);对周期股做凸性对冲是通过 VRP 定价的周期定位押注
+
+**创建文件**: tail_hedge/run_backtest_vlcc_windows.py, tail_hedge/data/results_vlcc_breakeven_windows.csv, tail_hedge/data/results_vlcc_paid_vrp.csv
+**更新文件**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

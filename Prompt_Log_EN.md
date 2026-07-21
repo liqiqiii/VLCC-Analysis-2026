@@ -793,3 +793,18 @@ User (holds a large VLCC position) asked: backtest the convexity/tail-hedge logi
 
 **Files Created**: tail_hedge/run_backtest_vlcc.py, tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/data/{dht,fro}_daily_2005_2024.csv, tail_hedge/data/results_vlcc_{profile,hedge_grid,winrate_vrp,breakeven_vrp,reliability}.csv
 **Files Updated**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 41b: VLCC hedge robustness (sub-windows) + live-option VRP calibration
+**Date**: July 20, 2026
+
+User asked to do both follow-ups I proposed: (1) sub-window break-even VRP robustness (2013+/2019+), (2) real DHT/FRO option-chain IV to calibrate the paid VRP now. Added run_backtest_vlcc_windows.py + §3.6 + §7 (EN/CN) + 2 CSVs.
+
+**Findings**:
+- **Sub-window robustness — 67% is NOT stable**: DHT CAGR break-even VRP = 67% (2005+, unhedged −6.2%) → **0% (2013+, +14.3%)** → **0% (2019+, +24.8%)**. FRO 0% in all windows. The 67% is ENTIRELY the 2008–12 catastrophe; exclude it and the hedge is pure drag. Break-even VRP = a function of whether a catastrophic crash falls in the window, not a durable stock feature
+- **Live option calibration (Jul 2026)**: DHT 1y 30%-OTM put IV 55% / realized 42% → **paid VRP ≈33%** (OI 589); FRO 1.5y IV 59%/47% → **≈26%** (OI 23, thin); FRO 0.6y IV 62% → ≈31%
+- **The decision collapses to CYCLE POSITION**: DHT paid VRP 33% < full-cycle break-even 67% (hedge worth it ONLY if a 2008-scale downturn is ahead) but >> recent-regime break-even 0% (bleeds mid-cycle). FRO paid 26–31% vs break-even ~0% → don't hedge FRO, trim/FFA instead. Conclusion: hedge the VLCC book only near a cyclical TOP (CRule 1 + CRule 5); convexity hedging on a cyclical is a cycle-position bet priced through the VRP
+
+**Files Created**: tail_hedge/run_backtest_vlcc_windows.py, tail_hedge/data/results_vlcc_breakeven_windows.csv, tail_hedge/data/results_vlcc_paid_vrp.csv
+**Files Updated**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

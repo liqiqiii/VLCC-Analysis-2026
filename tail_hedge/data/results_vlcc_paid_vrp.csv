@@ -1,0 +1,4 @@
+ticker,expiry,T_years,spot,strike_30pctOTM,put_IV,realized_vol_63d,paid_VRP,open_interest
+DHT,2027-07-16,0.99,17.89,13.0,0.552,0.416,0.328,589
+FRO,2028-01-21,1.51,36.93,25.0,0.594,0.472,0.258,23
+FRO,2027-02-19,0.59,36.93,25.0,0.618,0.472,0.309,349
