@@ -12,6 +12,7 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 |---|---|
 | [`report_en.md`](report_en.md) / [`report_cn.md`](report_cn.md) | S&P study (EN/CN) — GitHub Pages |
 | [`report_vlcc_en.md`](report_vlcc_en.md) / [`report_vlcc_cn.md`](report_vlcc_cn.md) | **VLCC (DHT/FRO) study + win-rate-vs-VRP framework (EN/CN)** |
+| [`report_sectors_en.md`](report_sectors_en.md) / [`report_sectors_cn.md`](report_sectors_cn.md) | **Financials (XLF) & Technology (XLK) study — hold-vs-hedge suitability (EN/CN)** |
 | [`run_backtest.py`](run_backtest.py) | Reproducible monthly backtest; regenerates the monthly CSVs in `data/` |
 | [`run_backtest_daily.py`](run_backtest_daily.py) | **Daily** path-dependent backtest: ladder, lagged-redeploy control, and Universa-style variant (§7 of the report) |
 | `data/shiller_real_tr_monthly_1974_2024.csv` | Derived monthly input series (Date, RealTRP, ret) |
@@ -36,6 +37,15 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 | [`run_backtest_vlcc_windows.py`](run_backtest_vlcc_windows.py) | sub-window break-even VRP robustness + LIVE option paid-VRP calibration |
 | `data/results_vlcc_breakeven_windows.csv` | break-even VRP by window (DHT 67% full → 0% in 2013+/2019+) |
 | `data/results_vlcc_paid_vrp.csv` | live DHT/FRO ~30%-OTM put IV → paid VRP (DHT ≈33%, FRO ≈26–31%) |
+| [`run_backtest_sectors.py`](run_backtest_sectors.py) | Financials (XLF) & Technology (XLK) convexity backtest + break-even spectrum |
+| `data/{xlf,xlk}_daily_1998_2024.csv` | XLF/XLK daily adjusted close (yfinance) |
+| `data/results_sector_profile.csv` | XLF/XLK/S&P vol / maxDD / CAGR |
+| `data/results_sector_breakeven_windows.csv` | sector break-even VRP by window (XLK 27% full → 0% post-2010) |
+| `data/results_sector_winrate_vrp.csv` | per-VRP win-rate, payoff, CAGR delta (XLF/XLK/S&P) |
+| `data/results_sector_hedge_grid.csv` | XLF/XLK strike × tenor × VRP |
+| `data/results_sector_reliability.csv` | annual underlying vs hedge P&L |
+| `data/results_sector_paid_vrp.csv` | live XLK ≈24% paid VRP (XLF LEAPS puts too thin) |
+| `data/results_breakeven_spectrum.csv` | S&P/XLF/XLK/DHT/FRO break-even VRP side by side |
 
 ## Reproduce
 

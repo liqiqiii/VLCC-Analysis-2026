@@ -819,3 +819,23 @@ User asked to add a section tying the repo's current cycle-position judgment (pa
 **Content**: Repo's live read = mid-cycle, cheap-to-fair (DHT $17.44/FRO $35.12 on sustained ~$100k TCE, PE 5.2-5.6×, supply-backed through 2027, "do not sell"). Crossed with §3.6/§7 (recent-regime break-even VRP 0%, live paid VRP ~33%): **mid-cycle + 0% break-even + 33% paid = the hedge bleeds.** Added a cycle-phase → hedge-action decision matrix; trigger to start hedging = late-cycle flip (rate rollover from sustained high, orderbook filling, PE compression, >70% buys) WHILE vol still low, most likely 2027-28. **Current verdict: do NOT tail-hedge yet; collect dividends, keep powder dry, buy long-dated deep-OTM puts when signals flip late-cycle with vol still cheap; trim rather than hedge if risk must be cut sooner.**
 
 **Files Updated**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42: Sector convexity hedging — Financials (XLF) & Technology (XLK)
+**Date**: July 20, 2026
+
+User's insight: VLCC is a pure cyclical needing heavy timing → hedging it = cycle timing, low value; can't hold it like a broad index. Financials & Tech may be more suitable (holdable). Asked for a similar backtest on those two sectors. Added run_backtest_sectors.py + bilingual report_sectors_en/cn.md + 7 CSVs.
+
+**Data**: XLF, XLK daily adjusted (1998-2024, yfinance). Same PASSIVE rolled-put framework; canonical 20%-OTM 1yr.
+
+**Findings**:
+- Profile: XLF vol 29%/maxDD −83%/CAGR +5.7%; XLK 26%/−82%/+9.2%; both HOLDABLE (positive drift, unlike VLCC −6.2%)
+- **Break-even VRP spectrum**: S&P ≈0%, XLF ≈0%, **XLK ≈27%**, DHT ≈67%, FRO ≈0%. Rises with tail depth AND absence of drift
+- **Split verdict**: sectors are better to HOLD than VLCC, but mostly NOT better to systematically HEDGE — the positive drift that makes them holdable makes hedging bleed (break-even ~0% for XLF/S&P). **Technology is the sole exception** (~27%): recurring dot-com/2008/2022 crashes + lower vol. Hedged XLK 20% OTM 1yr VRP0: CAGR 9.2%→10.85%, maxDD −82%→−68%
+- Robustness: XLK 27% is entirely dot-com+2008; collapses to 0% in 2010+/2015+ (crash-regime-dependent, like VLCC's 67%)
+- **Live calibration**: XLK 1yr 20% OTM put IV 41%/realized 33% → paid VRP ≈24% < 27% break-even → tactical XLK hedge marginally defensible NOW (ties to AI-bubble §11); XLF deep-OTM LEAPS too thin (no clean quote)
+- **Unifying rule**: tail-hedging pays only where crashes are deep AND frequent relative to drift. Broad holdable sectors fail 'frequent-vs-drift' (hold instead); VLCC fails 'holdable' (time instead); Tech is the rare asset that fails neither
+
+**Files Created**: tail_hedge/run_backtest_sectors.py, tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/data/{xlf,xlk}_daily_1998_2024.csv, tail_hedge/data/results_sector_{profile,breakeven_windows,winrate_vrp,hedge_grid,reliability,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum.csv
+**Files Updated**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

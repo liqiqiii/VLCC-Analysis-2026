@@ -1,0 +1,3 @@
+ticker,expiry,T_years,spot,strike,otm,put_IV,realized_vol_63d,paid_VRP,open_interest,note
+XLF,2027-06-30,0.95,56.04,,,,0.132,,0,no liquid deep-OTM LEAPS put
+XLK,2027-06-17,0.91,175.71,117.5,0.2,0.408,0.33,0.237,32,

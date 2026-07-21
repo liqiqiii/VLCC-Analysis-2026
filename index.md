@@ -10,7 +10,15 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🚢 VLCC Convexity Hedging — DHT/FRO Backtest & Win-Rate-vs-VRP Framework (NEW — Jul 20, 2026)
+### 🏦 Sector Convexity Hedging — Financials (XLF) & Technology (XLK) (NEW — Jul 20, 2026)
+
+Extends the tail-hedge framework to **long-term-holdable fat-tailed sectors** to test whether they beat VLCC as "hold + tail-hedge." **Verdict — a useful split: better to HOLD (XLF/XLK CAGR +5.7%/+9.2% vs VLCC negative), but mostly NOT better to systematically HEDGE.** The **break-even VRP spectrum**: S&P ≈0%, **Financials ≈0%**, **Technology ≈27%**, DHT-VLCC ≈67%. The positive drift that makes a sector holdable is what makes hedging it bleed — so only **Technology** (recurring dot-com/2008/2022 crashes) has a positive break-even, and **live 1-yr 20%-OTM XLK puts price a paid VRP of ≈24% < 27%** → a *tactical* XLK hedge is marginally defensible now, a direct expression of the [AI-bubble §11](ai_bubble/report_en) thesis (but XLK's edge collapses to 0% post-2010 — crash-regime-dependent). Unifying rule: tail-hedging pays only where crashes are deep AND frequent relative to drift. *Analysis, not investment advice.*
+
+**[📄 Sector Hedging (EN) →](tail_hedge/report_sectors_en)** | **[板块凸性对冲（中文）→](tail_hedge/report_sectors_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/tail_hedge)**
+
+---
+
+### 🚢 VLCC Convexity Hedging — DHT/FRO Backtest & Win-Rate-vs-VRP Framework (Jul 20, 2026)
 
 Applies the tail-hedging logic to **the assets a VLCC holder actually owns (DHT/FRO)** and answers: how much can you *overpay* for tail insurance? **Verdict: VLCC's catastrophic tail (DHT vol 48%/maxDD −97%, FRO 61%/−98% vs S&P 17%/−57%) makes tail-hedging worth a MUCH higher vol-risk-premium — DHT's CAGR break-even VRP ≈ 67% vs the S&P's ≈ 0%.** But it's **not reliable**: FRO's break-even VRP ≈ 0% (grind + high premium + 2011–12 restructuring defeat it), and DHT's entire hedge value came from ~**one year (2011)**. Introduces a **win-rate-vs-VRP framework**: raw win-rate is 4–18% (useless for a convex bet) — decide by the **CAGR break-even VRP vs your *paid* VRP**, conditioned on **entry vol** (buying puts mid-crash at peak IV is a near-guaranteed loss). Reproducible backtest + committed CSV data. *Analysis, not investment advice.*
 

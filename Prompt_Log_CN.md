@@ -795,3 +795,23 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 **内容**:仓库实时判断 = 中周期、cheap-to-fair(DHT $17.44/FRO $35.12 按可持续 ~$100k TCE,PE 5.2-5.6×,供给支撑到 2027,"不要卖")。与 §3.6/§7 交叉(近期状态盈亏平衡 VRP 0%,实盘实付 VRP ~33%):**中周期 + 0% 盈亏平衡 + 33% 实付 = 对冲放血。** 加入周期阶段→对冲动作决策矩阵;开始对冲的触发 = 后段翻转(运价从可持续高位回落、订单簿填满、PE 压缩、>70% 看多)且波动仍低时,最可能 2027-28。**当前结论:暂不做尾部对冲;收股息、保持弹药、待信号翻入后段且波动仍便宜时买长期深度虚值看跌;若须提前降风险则减仓而非对冲。**
 
 **更新文件**: tail_hedge/report_vlcc_en.md, tail_hedge/report_vlcc_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42: 板块凸性对冲 —— 金融(XLF)与科技(XLK)
+**日期**: 2026年7月20日
+
+用户洞见:VLCC 是纯周期股,需大量择时 → 对它对冲=择时,意义不大;不能像宽基那样长期持有。金融与科技可能更合适(可持有)。要求对这两个行业做同样回测。新增 run_backtest_sectors.py + 双语 report_sectors_en/cn.md + 7 张 CSV。
+
+**数据**:XLF、XLK 日度复权(1998-2024,yfinance)。同款被动滚动看跌框架;基准 20% 虚值 1 年。
+
+**发现**:
+- 画像:XLF 波动 29%/maxDD −83%/CAGR +5.7%;XLK 26%/−82%/+9.2%;二者皆可持有(正漂移,不像 VLCC −6.2%)
+- **盈亏平衡 VRP 谱系**:标普 ≈0%、XLF ≈0%、**XLK ≈27%**、DHT ≈67%、FRO ≈0%。随尾部深度与漂移缺失而上升
+- **分裂判断**:板块比 VLCC 更适合持有,但多数并不更适合系统性对冲——让它们可持有的正漂移让对冲放血(XLF/标普盈亏平衡 ~0%)。**科技是唯一例外**(~27%):反复的互联网/2008/2022 崩盘 + 更低波动。对冲 XLK 20% 虚值 1 年 VRP0:CAGR 9.2%→10.85%,maxDD −82%→−68%
+- 稳健性:XLK 27% 完全来自互联网+2008;2010+/2015+ 塌到 0%(依赖崩盘状态,与 VLCC 67% 同理)
+- **实盘校准**:XLK 1年 20% 虚值看跌 IV 41%/已实现 33% → 实付 VRP ≈24% < 27% 盈亏平衡 → 现在做战术性 XLK 对冲勉强合理(接 AI 泡沫 §11);XLF 深度虚值 LEAPS 太稀薄(无干净报价)
+- **统一规则**:尾部对冲只在崩盘又深又相对漂移足够频繁时才划算。宽的可持有板块过不了"相对漂移足够频繁"(改持有);VLCC 过不了"可持有"(改择时);科技是罕见地两关都过的资产
+
+**创建文件**: tail_hedge/run_backtest_sectors.py, tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/data/{xlf,xlk}_daily_1998_2024.csv, tail_hedge/data/results_sector_{profile,breakeven_windows,winrate_vrp,hedge_grid,reliability,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum.csv
+**更新文件**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
