@@ -887,6 +887,17 @@ User asked whether "even in the 1982 Volcker moment, financial-system stability 
 
 ---
 
+## Prompt 43b: Survivor screen — how to avoid dip-buying a "Citi" (§7.6)
+**Date**: July 21, 2026
+
+User: if the strategy is dip-buying quality financial names not the ETF, how do you avoid buying a Citi? Added §7.6 to report_sectors_en/cn.md (framework/checklist, no new data).
+
+**Content**: survivorship is largely predictable ex-ante (casualties failed on visible pre-crash factors). Five-factor screen: (1) capital (thick CET1/low leverage vs thin TCE), (2) funding (sticky insured retail deposits vs short-term wholesale/concentrated uninsured — the liability side is the killer), (3) asset concentration (diversified vs subprime/CRE/duration + AFS/HTM marks), (4) franchise/model (diversified/closed-loop vs monoline), (5) track record (came through 2008/2020 & acquired the weak vs repeat-offender rescues). Three process guardrails: buy a 3-5 name basket (not single, not whole ETF); scale in & wait for the survival signal (forced dilution/emergency facilities/seizure = casualty tell); buy after the capital raise with tangible-book margin of safety (fear discount vs insolvency discount). Maps to Day1Global Modules C/L/O.
+
+**Files Updated**: tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
 ## Prompt 42d: Add "what is drift μ" explainer to the cheat-sheet
 **Date**: July 20, 2026
 

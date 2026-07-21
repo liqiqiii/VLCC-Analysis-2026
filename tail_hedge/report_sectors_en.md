@@ -238,6 +238,31 @@ Buying at the **2009-03-09** market bottom (our committed daily adjusted data; [
 
 *(Sources: Federal Reserve History; St. Louis Fed Review 2025; PIIE; FDIC — 1982/LDC. Own data: `results_crisis_dipbuy.csv`, `results_stock_paid_vrp.csv`. Casualty Citi (C) pulled live via yfinance. Education/analysis, not investment advice.)*
 
+## 7.6 The survivor screen — how to avoid dip-buying a "Citi"
+
+**Good news: survivorship is largely predictable *ex ante*.** Almost every casualty (Citi, Lehman, Bear, WaMu, SVB) failed for reasons **visible in the pre-crash filings** — thin capital, fragile funding, a single toxic concentration. Don't be fooled by hindsight: you can screen for this.
+
+**Five-factor screen (check *before* you buy):**
+
+| Dimension | 🟢 Survivor (JPM / AXP) | 🔴 Casualty (Citi / Lehman / SVB) |
+|---|---|---|
+| **1. Capital** (survival factor #1) | CET1 well above minimum + buffers; low leverage | thin tangible common equity; leverage >15–20× |
+| **2. Funding** (the liability side is the killer) | **sticky, diversified, insured retail deposits** | short-term wholesale/repo; **concentrated uninsured deposits**; hot money |
+| **3. Asset concentration** | diversified; no exposure to the cycle's toxic asset; small unrealized losses | concentrated in subprime / CRE / long-duration; large AFS/HTM marks |
+| **4. Franchise / model** | diversified earnings, closed-loop network (AXP), fee income | monoline; reliant on leverage/spread; fragile funding model |
+| **5. Track record / risk culture** | came through 2008/2020 intact — **even acquired the weak** | needed a rescue/dilution *last* time (repeat offender: Citi also rescued ~1991) |
+
+*Mnemonic: **thick capital · sticky deposits · no toxic concentration · diversified model · didn't beg for help last crisis.***
+
+**Three process guardrails (in case the screen misses):**
+1. **Buy a small BASKET (3–5 fortress names), not one stock.** This is the correct middle ground between a single name (Citi risk) and the whole ETF (diluted by the weak). Diversify away idiosyncratic blow-ups (fraud, litigation, a single-firm run).
+2. **Scale in and wait for the survival signal.** The [S&P §7.2](report_en) result — averaging in over 1–6 months ≈ nailing the bottom — means you can *confirm* survival before committing: did it withstand the funding run without a **massively dilutive** raise? **A forced dilution / tapping emergency facilities / seizure = the casualty tell** (Citi's serial 2008–09 dilutions and near-nationalization were an observable "avoid" signal, even though it bounced +264% in year 1).
+3. **Buy *after* the capital raise, with a margin of safety.** Don't buy before a dilutive raise (you get diluted). Distinguish a **fear** discount to tangible book (buyable) from an **insolvency** discount (a death notice — avoid).
+
+**Live "survival signal" you can watch mid-crisis:** 🟢 needs no rescue, or *opportunistically* acquires the weak (JPM → Bear/WaMu/First Republic); 🔴 survives only via emergency facilities (discount window/BTFP), a 50%+ dilutive raise, rating cuts, unstemmed deposit flight, or seizure.
+
+> **Net:** screen out ~90% of "Citis" *ex ante* on **capital + funding + concentration**; catch the residual tail with a **basket + scale-in + survival-signal + tangible-book margin of safety.** This maps to the Day1Global **Module C (cash flow) / L (ownership & dilution risk) / O (accounting quality: AFS/HTM marks)**.
+
 ---
 
 ## Reproduce it yourself
