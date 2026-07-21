@@ -815,3 +815,20 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: tail_hedge/run_backtest_sectors.py, tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/data/{xlf,xlk}_daily_1998_2024.csv, tail_hedge/data/results_sector_{profile,breakeven_windows,winrate_vrp,hedge_grid,reliability,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum.csv
 **更新文件**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42b: 优质个股 —— 用 JPM 与 AXP 代替 XLF
+**日期**: 2026年7月20日
+
+用户:考虑用 Chase(JPM)与 Amex(AXP)代替整个 XLF。新增 run_backtest_stocks.py + report_sectors_en/cn.md §6 + 6 张 CSV。
+
+**发现**:
+- 画像:JPM 波动 38%/maxDD −74%/CAGR +10.3%;AXP 36%/−84%/+10.9% —— 均跑赢 XLF 复利(+5.7%)→ 更优的持有对象(证实用户直觉;稀释板块拖入弱成分股)
+- 盈亏平衡 VRP:JPM 0%、AXP 0%,所有窗口(全/2010+/2015+)—— 更高漂移 + 更高单只波动使对冲比 XLF 放血更多
+- **实盘实付 VRP 是关键**:JPM 1年 20% 虚值看跌 IV 47%/已实现 23% → 实付 VRP ≈107%;AXP IV 49%/25% → ≈99%。单只期权约为已实现的 2 倍(特异性/偏斜溢价)。付 ~100% VRP 对 ~0% 盈亏平衡 = 灾难性拖累
+- win-rate:JPM 即使免费 VRP0 下 CAGR 增量 −3.95pp;AXP −0.95pp
+- **精炼判断**:JPM/AXP 是整个研究里最清晰的"持有、别对冲"案例——比 XLF 更好的持有对象、最差的对冲对象。实操推论:单只实付 VRP(~100%)是指数实付 VRP(XLK ~24%)的 3-4 倍;若必须给金融仓位对冲,用指数看跌而非个股(且看跌无法对冲单只爆雷)
+
+**创建文件**: tail_hedge/run_backtest_stocks.py, tail_hedge/data/{jpm,axp}_daily_1998_2024.csv, tail_hedge/data/results_stock_{profile,breakeven_windows,winrate_vrp,hedge_grid,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum_full.csv
+**更新文件**: tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

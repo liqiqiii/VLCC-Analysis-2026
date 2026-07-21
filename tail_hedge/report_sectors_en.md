@@ -14,6 +14,7 @@ title: Sector Convexity Hedging — Financials (XLF) & Technology (XLK) vs S&P &
 > 2. **For systematic tail-HEDGING: mostly NO — the drift that makes them holdable makes the hedge bleed.** Break-even VRP (the max overpricing at which hedging still raises CAGR): **S&P ≈ 0%, Financials ≈ 0%, Technology ≈ 27%, VLCC-DHT ≈ 67%.**
 > 3. **Technology is the one genuine sector candidate.** XLK's **multiple** deep crashes (dot-com, 2008, 2022) + lower vol give it a real break-even VRP ≈ **27%**, and **live 1-yr 20%-OTM XLK puts price a paid VRP of ≈ 24% (< 27%)** → a tactical XLK tail-hedge is *marginally* defensible **today**. **But** that edge is **crash-regime-dependent** (0% post-2010) — it only pays if big tech drawdowns keep recurring (see the [AI-bubble report §11](../ai_bubble/report_en)).
 > 4. **Unifying principle:** tail-hedging pays only where crashes are **deep AND frequent relative to drift.** Broad holdable assets have too much drift and too-rare crashes → **hold, don't hedge.** Only Tech (frequent crashes) and top-of-cycle VLCC clear the bar — both are regime/timing calls.
+> 5. **Quality names (JPM / AXP) — the clearest "hold, don't hedge" case (§6).** They *out-compound* XLF (**+10.3% / +10.9%** vs +5.7%) → far better **holds**. But their break-even VRP is ~0% *and* **live single-name 1-yr 20%-OTM puts price a paid VRP of ≈100% (IV roughly *double* realized)** → hedging them is a catastrophic drag. **If you must hedge a financials book, buy an INDEX put, not the name.**
 >
 > *Education/analysis, not investment advice.*
 
@@ -95,8 +96,10 @@ Applies the repo's **Two-Step Research Protocol**; connects to **CRule 1/5** and
 | **XLK** Technology | −82% | +9.2% | **≈ 27%** |
 | DHT (VLCC) | −97% | −6.2% | ≈ 67% |
 | FRO (VLCC) | −98% | −4.7% | ≈ 0% |
+| *JPM (quality name, §6)* | −74% | +10.3% | ≈ 0% |
+| *AXP (quality name, §6)* | −84% | +10.9% | ≈ 0% |
 
-*The number rises with tail depth **and** the absence of drift. A −83% crash (XLF) is **not** enough on its own; you need either **recurring** deep crashes (XLK) or **no drift** to offset (DHT).*
+*The number rises with tail depth **and** the absence of drift. A −83% crash (XLF) is **not** enough on its own; you need either **recurring** deep crashes (XLK) or **no drift** to offset (DHT). Quality compounders JPM/AXP — deepest single-name drift — sit at ~0% (see §6).*
 
 ## 3.3 Win-rate vs VRP (20%-OTM 1-yr) → [`results_sector_winrate_vrp.csv`](data/results_sector_winrate_vrp.csv)
 
@@ -158,10 +161,31 @@ Applies the repo's **Two-Step Research Protocol**; connects to **CRule 1/5** and
 
 ---
 
+# Section 6 — Individual Quality Names: JPM & AXP Instead of XLF?
+
+A holder might reasonably prefer **quality compounders** — JPMorgan (**JPM**), American Express (**AXP**) — to the diluted XLF. Do they change the hedge calculus? → [`results_stock_profile.csv`](data/results_stock_profile.csv), [`results_stock_paid_vrp.csv`](data/results_stock_paid_vrp.csv)
+
+| Name | Vol | maxDD | **CAGR** | Break-even VRP | **Live paid VRP** |
+|---|---|---|---|---|---|
+| **JPM** | 38% | −74% | **+10.3%** | ≈ 0% (all windows) | **≈ +107%** (IV 47% / rv 23%, OI 309) |
+| **AXP** | 36% | −84% | **+10.9%** | ≈ 0% (all windows) | **≈ +99%** (IV 49% / rv 25%, OI 8) |
+| *(ref) XLF* | 29% | −83% | +5.7% | ≈ 0% | deep-OTM LEAPS thin |
+
+**Two decisive findings:**
+1. **For HOLDING — you're right, the quality names win.** JPM/AXP compound at **+10.3% / +10.9%** vs XLF's +5.7% — the diluted sector drags in weaker constituents. **Quality > sector ETF for a long-term hold.**
+2. **For HEDGING — they are the *worst* candidates, and the live options prove it.** Break-even VRP is ~0% (higher drift + higher single-name vol → the hedge bleeds even more than XLF), while **live JPM/AXP 1-yr 20%-OTM puts price a paid VRP of ~100% — IV roughly *double* realized.** Single-name options carry a large idiosyncratic/skew premium. **Paying ~100% VRP against a ~0% break-even is a catastrophic drag** ([win-rate](data/results_stock_winrate_vrp.csv): JPM CAGR delta −3.95pp even at *free* VRP0; AXP −0.95pp).
+
+**Practical corollary — hedge the index, not the name.** Single-name paid VRP (~100%) is ~3–4× the index paid VRP (XLK ~24%). A put also cannot cleanly hedge single-name blow-ups (fraud, litigation) — only broad crashes. **So if you ever want tail protection on a quality-financials book, buy an INDEX put (SPX/XLF), not JPM/AXP puts** — and for JPM/AXP specifically, the answer is simply **HOLD** (the drift is your friend; the options are far too dear).
+
+> **Refined verdict:** the user's instinct is right in the best possible way — **JPM/AXP are superior long-term *holds* to XLF, and precisely *because* they compound so well (and their single-name options are so expensive), they are the clearest "just hold, don't hedge" case in the entire study.**
+
+---
+
 ## Reproduce it yourself
 ```
 cd tail_hedge
 python run_backtest_sectors.py   # pulls XLF/XLK (yfinance) -> data/results_sector_*.csv
+python run_backtest_stocks.py    # JPM/AXP quality names (§6) -> data/results_stock_*.csv
 ```
 
 ## Sources

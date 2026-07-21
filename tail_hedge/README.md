@@ -46,6 +46,14 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 | `data/results_sector_reliability.csv` | annual underlying vs hedge P&L |
 | `data/results_sector_paid_vrp.csv` | live XLK ≈24% paid VRP (XLF LEAPS puts too thin) |
 | `data/results_breakeven_spectrum.csv` | S&P/XLF/XLK/DHT/FRO break-even VRP side by side |
+| [`run_backtest_stocks.py`](run_backtest_stocks.py) | JPM/AXP quality-name backtest (§6 of sector report) |
+| `data/{jpm,axp}_daily_1998_2024.csv` | JPM/AXP daily adjusted close (yfinance) |
+| `data/results_stock_profile.csv` | JPM/AXP vol / maxDD / CAGR |
+| `data/results_stock_breakeven_windows.csv` | JPM/AXP break-even VRP by window (all ~0%) |
+| `data/results_stock_winrate_vrp.csv` | per-VRP win-rate / CAGR delta (JPM/AXP) |
+| `data/results_stock_hedge_grid.csv` | JPM/AXP strike × VRP grid |
+| `data/results_stock_paid_vrp.csv` | live JPM/AXP put paid VRP (~100%!) |
+| `data/results_breakeven_spectrum_full.csv` | full spectrum incl JPM/AXP |
 
 ## Reproduce
 

@@ -839,3 +839,20 @@ User's insight: VLCC is a pure cyclical needing heavy timing → hedging it = cy
 
 **Files Created**: tail_hedge/run_backtest_sectors.py, tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/data/{xlf,xlk}_daily_1998_2024.csv, tail_hedge/data/results_sector_{profile,breakeven_windows,winrate_vrp,hedge_grid,reliability,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum.csv
 **Files Updated**: tail_hedge/README.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 42b: Individual quality names — JPM & AXP instead of XLF
+**Date**: July 20, 2026
+
+User: consider Chase (JPM) and Amex (AXP) instead of the whole XLF. Added run_backtest_stocks.py + §6 to report_sectors_en/cn.md + 6 CSVs.
+
+**Findings**:
+- Profile: JPM vol 38%/maxDD −74%/CAGR +10.3%; AXP 36%/−84%/+10.9% — both out-compound XLF (+5.7%) → superior HOLDS (user's instinct confirmed; the diluted sector drags in weaker names)
+- Break-even VRP: JPM 0%, AXP 0% in ALL windows (full/2010+/2015+) — higher drift + higher single-name vol make hedging bleed even more than XLF
+- **Live paid VRP is the kicker**: JPM 1y 20%-OTM put IV 47%/realized 23% → paid VRP ≈107%; AXP IV 49%/25% → ≈99%. Single-name options carry ~2× realized (idiosyncratic/skew premium). Paying ~100% VRP vs ~0% break-even = catastrophic drag
+- Win-rate: JPM CAGR delta −3.95pp even at free VRP0; AXP −0.95pp
+- **Refined verdict**: JPM/AXP are the CLEAREST "hold, don't hedge" case in the study — better holds than XLF, worst hedge candidates. Practical corollary: single-name paid VRP (~100%) is 3-4× index paid VRP (XLK ~24%); if you must hedge a financials book use an INDEX put, not the name (and a put can't hedge single-name blow-ups anyway)
+
+**Files Created**: tail_hedge/run_backtest_stocks.py, tail_hedge/data/{jpm,axp}_daily_1998_2024.csv, tail_hedge/data/results_stock_{profile,breakeven_windows,winrate_vrp,hedge_grid,paid_vrp}.csv, tail_hedge/data/results_breakeven_spectrum_full.csv
+**Files Updated**: tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
