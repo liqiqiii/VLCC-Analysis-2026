@@ -181,11 +181,71 @@ A holder might reasonably prefer **quality compounders** — JPMorgan (**JPM**),
 
 ---
 
+# Section 7 — Crisis Playbook for Financials: Dip-Buy the Survivors, Don't Insure Them
+
+> **The claim tested (user):** *"Even in the 1982 Volcker moment, the stability of the financial system prevailed over inflation pressure"* — with the implicit assumption that **even in a market crash the state prioritizes financial-system stability**, which would make **dip-buying financials in a crash** a strategy backed by policy. Is it right?
+
+## 7.1 Fact-base — 1982 (cited)
+
+- **Aug 1982**: Mexico announced it could not service its ~$80B debt; other LDCs followed. The **nine largest US money-center banks held Latin-American debt = 176% of capital** (total LDC ≈ 290%) → a systemic solvency threat. *(Federal Reserve History, "Latin American Debt Crisis of the 1980s"; FDIC, "The LDC Debt Crisis.")*
+- **July–Aug 1982**: the Fed **ended tightening and began easing** — *"although inflation was still high (>7%), the risks to the financial system were deemed more urgent."* *(St. Louis Fed Review, "The Volcker Tightening Cycle: Explaining the 1982 Course Reversal," 2025.)*
+- **Forbearance**: regulators did **not** force banks to write down LDC loans (which would have wiped out capital); Fed/Treasury/IMF arranged bridge loans and reschedulings. *(PIIE, "How de Larosière and Volcker contained the 1982–89 debt crisis.")*
+- **Crucial nuance**: inflation had **already fallen from ~14% (1980) to ~7%** and was declining — so easing to save the system was *cheap*; the "stability vs inflation" tradeoff was **not fully binding**.
+
+## 7.2 Step 1 — Concise draft
+
+**Core conclusion (first):** The claim is **broadly correct but conditional.** In 1982 the Fed did put financial-system stability above the (still-elevated) inflation pressure — **but only because inflation was already falling**, making the rescue low-cost. So the durable rule is: **stability > inflation *when inflation is receding/moderate*; the rule fails when inflation is high and sticky.** For the dip-buy strategy this means it works only when (a) you buy the **quality survivor**, not the casualty, and (b) inflation is **not** the binding constraint (so the "Fed put" is live).
+
+**3 supporting points** *(claim → evidence)*:
+1. **The Fed pivots to save the system.** → 1982 pivot (above); repeated in 2008 (TARP + Fed liquidity), 2020 (unlimited QE), 2023 (SVB → BTFP + deposit backstop).
+2. **Quality survivors deliver enormous crash-recovery returns.** → §7.4: JPM/AXP bought at the 2009 bottom returned ×22 / ×35 to 2024.
+3. **Crises make strong banks stronger (consolidation).** → JPM acquired Bear Stearns + WaMu (2008), First Republic (2023) at fire-sale prices.
+
+**2 opposing points** *(claim → evidence)*:
+1. **1982 wasn't a clean stability>inflation trade — inflation was already broken** (14% → 7%); Volcker first inflicted the −10.8%-unemployment 1981–82 recession, i.e. he put inflation *above* stability for years.
+2. **When inflation is the binding constraint, the rule reverses.** → **2022**: stocks −25%, financials fell, but the Fed **kept hiking** into 9% inflation — no rescue.
+
+**Explicitly unknown:** whether the next crash coincides with high sticky inflation (stagflation) — which would disable the Fed put.
+
+## 7.3 Step 2 — Strict peer review (draft NOT rewritten)
+
+1. **Facts to verify:** exact pivot month (FOMC 1982 minutes); note the Fed can *simultaneously* hike (anti-inflation) and backstop (BTFP 2023) — the two aren't strictly exclusive.
+2. **Logical leaps:** the fatal equivocation is **"save the system" ⇄ "save bank *equity*."** The state protects **depositors/creditors/payments**, routinely **wiping out or diluting equity** (Citi, AIG, WaMu, Lehman, Fannie/Freddie, SVB equity → ~0). "System stability" ≠ "your shares are backstopped." Also "financial *system*" ⇄ "financial *stock*" — the system survives; a given firm may not.
+3. **Missing counterexamples:** casualties vs survivors (Citi −98%, never regained its peak — §7.4); the post-1982 bull owed as much to **inflation being tamed + rock-bottom valuations (S&P PE ~7)** as to the bank rescue.
+4. **Primary sources to add:** FOMC 1982 minutes; Volcker, *Keeping At It*; 2022–23 FOMC statements + BTFP terms.
+5. **Speculation, not fact:** "stability > inflation" as a *law* (it is conditional); "dip-buy financials in a crash" (a strategy hypothesis contingent on survivor-selection + a live Fed put).
+
+## 7.4 Dip-buy evidence — survivors vs a casualty → [`results_crisis_dipbuy.csv`](data/results_crisis_dipbuy.csv)
+
+Buying at the **2009-03-09** market bottom (our committed daily adjusted data; [`run_crisis_dipbuy.py`](run_crisis_dipbuy.py)):
+
+| Asset | 2008–09 drawdown | +1yr | **→ 2024 (×)** | 2020 DD → +1yr | Regained 2007 peak? |
+|---|---|---|---|---|---|
+| **JPM** (survivor) | −68% | +168% | **×22** | −44% → +96% | ✅ yes |
+| **AXP** (survivor) | −84% | +285% | **×35** | −50% → +101% | ✅ yes |
+| XLF (sector) | −83% | +150% | ×13 | −43% → +92% | ✅ yes |
+| **C — Citigroup (casualty)** | **−98%** | +264% | **×8** | −57% → +109% | ❌ **no** |
+
+*The trap made concrete: **Citi bounced +264% in year one** (looks like the best dip-buy!) — yet its 15-year total (×8) badly lagged the survivors (JPM ×22, AXP ×35), and it **never regained its 2007 high**. The first-year dead-cat bounce does **not** separate survivors from casualties; the −98% vs −68% drawdown and the "regained peak" test do. **Buy the quality survivor, not "financials."***
+
+## 7.5 Verdict + how it plugs into this study
+
+**The claim is correct with two asterisks:** *(1)* **"stability > inflation" only holds when inflation is receding** (1982/2008/2020) and **fails when inflation is the binding constraint** (2022); *(2)* **the state saves the *system*, often by sacrificing *equity*** — so the strategy is "buy the **survivor**," not "buy financials."
+
+**And this is the *better* convex play for a quality-financials holder than buying puts.** §6 showed live JPM/AXP puts price a paid VRP of ~100% — a catastrophic hedge. The convex alternative the crisis history endorses:
+
+> **Hold JPM/AXP + keep dry powder + dip-buy the survivors in a Fed-backstopped (inflation-permitting) crisis.** You capture (a) the deepest discount, (b) the **consolidation premium** (strong banks eat weak ones), and (c) the system backstop — *without* paying ~100% VRP for insurance. This is **CRule 5** ("buy fear") and the reinvestment discipline of the [S&P study §7.2](report_en) applied to financials — the crash is the **buying** signal, not the hedging signal.
+
+*(Sources: Federal Reserve History; St. Louis Fed Review 2025; PIIE; FDIC — 1982/LDC. Own data: `results_crisis_dipbuy.csv`, `results_stock_paid_vrp.csv`. Casualty Citi (C) pulled live via yfinance. Education/analysis, not investment advice.)*
+
+---
+
 ## Reproduce it yourself
 ```
 cd tail_hedge
 python run_backtest_sectors.py   # pulls XLF/XLK (yfinance) -> data/results_sector_*.csv
 python run_backtest_stocks.py    # JPM/AXP quality names (§6) -> data/results_stock_*.csv
+python run_crisis_dipbuy.py      # crisis dip-buy evidence (§7) -> data/results_crisis_dipbuy.csv
 ```
 
 ## Sources

@@ -55,6 +55,8 @@ of real S&P 500 total return (1974-08 → 2024-07)**, using Robert Shiller's mon
 | `data/results_stock_hedge_grid.csv` | JPM/AXP strike × VRP grid |
 | `data/results_stock_paid_vrp.csv` | live JPM/AXP put paid VRP (~100%!) |
 | `data/results_breakeven_spectrum_full.csv` | full spectrum incl JPM/AXP |
+| [`run_crisis_dipbuy.py`](run_crisis_dipbuy.py) | crisis dip-buy evidence (§7): survivors JPM/AXP/XLF vs casualty Citi |
+| `data/results_crisis_dipbuy.csv` | 2009/2020-bottom dip-buy returns + drawdowns + "regained 2007 peak" |
 
 ## Reproduce
 

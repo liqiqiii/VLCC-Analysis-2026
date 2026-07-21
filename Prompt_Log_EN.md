@@ -871,6 +871,22 @@ User agreed to the cheat-sheet cover page and asked what "deep AND frequent rela
 
 ---
 
+## Prompt 43: Crisis playbook for financials — is "stability > inflation" (1982) right? dip-buy strategy
+**Date**: July 21, 2026
+
+User asked whether "even in the 1982 Volcker moment, financial-system stability prevailed over inflation" is correct, and whether it supports a dip-buy-financials-in-a-crash strategy. Asked to add it to the repo WITH data citations. Added §7 to report_sectors_en/cn.md (Two-Step Protocol) + run_crisis_dipbuy.py + results_crisis_dipbuy.csv.
+
+**Analysis**:
+- Claim is broadly CORRECT but conditional. 1982 fact-base (cited: Fed History, St. Louis Fed Review 2025, PIIE, FDIC): Mexico Aug-1982 default; 9 money-center banks' LDC debt = 290% of capital; Fed pivoted to ease despite ~7% inflation because system risk "more urgent"; forbearance on write-downs. BUT inflation had already fallen 14%→7% → the rescue was cheap, tradeoff not fully binding
+- **Two asterisks**: (1) "stability > inflation" holds only when inflation is receding (1982/2008/2020); FAILS when inflation is the binding constraint (2022: −25% stocks but Fed kept hiking into 9%). (2) The state saves the SYSTEM/depositors, routinely WIPING OUT equity (Citi/AIG/WaMu/Lehman/SVB → ~0) → "save system" ≠ "save your shares"
+- **Dip-buy data (own, results_crisis_dipbuy.csv)**: buying 2009-03-09 bottom → 2024: JPM ×22, AXP ×35, XLF ×13 — all regained 2007 peak; **Citi (casualty) bounced +264% in year 1 but only ×8 over 15y and NEVER regained its 2007 peak** (DD −98% vs JPM −68%). Lesson: buy the quality SURVIVOR, not "financials"
+- **Strategy = the better convex play than puts**: §6 showed JPM/AXP puts cost ~100% VRP (catastrophic hedge); instead HOLD + keep dry powder + dip-buy survivors in a Fed-backstopped (inflation-permitting) crisis — captures deepest discount + consolidation premium + system backstop. CRule 5 + the S&P §7.2 reinvestment discipline applied to financials; the crash is the BUY signal, not the hedge signal
+
+**Files Created**: tail_hedge/run_crisis_dipbuy.py, tail_hedge/data/results_crisis_dipbuy.csv
+**Files Updated**: tail_hedge/report_sectors_en.md, tail_hedge/report_sectors_cn.md, tail_hedge/README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
 ## Prompt 42d: Add "what is drift μ" explainer to the cheat-sheet
 **Date**: July 20, 2026
 
