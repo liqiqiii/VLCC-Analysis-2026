@@ -918,3 +918,20 @@ Added **Addendum B** to ai_bubble/report_en.md + report_cn.md (bilingual, Two-St
 **Verdict:** marker nudged 1998->early-1999 toward ~mid-1999 — FIRST tremor in the most-levered links (memory + Oracle), credit canary now chirping, but a first crack NOT the burst: no capex guide-down (Moody's RAISED), no default, spreads still IG, Korea leg amplified by a leveraged-ETF unwind. Re-scored §11.7 dashboard: 2/6 firing (credit + soft ROI scare), marquee capex guide-down NOT firing. 2027-28 danger window unchanged. Key validation: CRule 1 (suppliers peak first) + CRule 5 (peak-narrative trap) fired on schedule.
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 45: AI-bubble deep-dive — Meta/MSFT earnings + Warsh FOMC close the open items (Addendum C)
+**Date**: July 29, 2026
+
+User: deep-dive the limits/open items from Addendum B and find proof; check Meta & Microsoft's just-out quarterlies; note Warsh announced the Fed will neither cut nor hike.
+
+Added **Addendum C** to ai_bubble/report_en.md + report_cn.md (bilingual, Two-Step Protocol). Proof found for every open item:
+- **Capex guide-down (11.7 #2, the marquee bear trigger): CONFIRMED ABSENT — both RAISED.** Meta Q2 FY26 capex guide raised to $130-145B (rev +28%, but net income -14%, EPS $6.18 miss, op margin 43%->31%). Microsoft FQ4 capex $41B (+69% YoY), FY26 ~$190B, FY27 ~$220B; Azure +43%, FY Azure >$100B; FCF $19.64B (-23%); ~$25B of capex increase is just higher memory/GPU prices (quantifies the memory->debt-capex loop).
+- **Fed/QT (11.7 #4): higher-for-longer + hawkish CONFIRMED.** Warsh held 3.50-3.75% (5th hold), 3 dissents FOR A HIKE, QT continues, "will not hesitate"; Dow worst day since 2025, 10Y ~4.6%.
+- **Memory attribution RESOLVED:** TrendForce 3Q26 DRAM contract prices still +13-18% QoQ (decel from +58-63%), HBM +8-13%, NAND +10-15%; no DRAM oversupply until ~2028, NAND oversupply looms 2027. So the -40% was 2nd-derivative + leveraged-ETF unwind, NOT demand destruction (pure CRule 1).
+- **Private credit (11.7 #3): fragile structure PROVEN** (CoreWeave debt <$8B->$21B, GPU-collateralized SPVs, $8.5B A3-rated paper in pension funds, $4.2B GPU debt wall), no default yet -> upgraded 21->22.
+
+**Verdict:** "loaded but unlit" — all fragility preconditions now proven PRESENT (hawkish Fed+QT, margin/FCF compression, fragile private credit), but triggers ABSENT (no capex cut, no demand collapse, no default, no hike). Marker: high-confidence mid/late-1999, not March-2000. 2027-28 window reinforced with datable fuses. Re-scored 11.7: 1 firing, 2 upgraded to amber, marquee capex-cut confirmed absent.
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

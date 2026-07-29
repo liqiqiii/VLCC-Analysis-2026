@@ -731,3 +731,119 @@ Watch next:        (1) an ACTUAL hyperscaler capex guide-down; (2) CDS widening
 ---
 
 *Addendum B applied within the Two-Step Research Protocol (§B.2 draft + §B.3 review). Live figures pulled Jul 29, 2026; unverifiable items marked "unknown." Education/analysis only — not investment advice.*
+
+---
+
+# Addendum C — Deep-Dive Proof: Earnings + the Fed close the open items (Jul 29, 2026, PM)
+
+> **Why this addendum:** Addendum B left five items marked "unknown/unverified." Two of them became testable *the same day*: **Meta and Microsoft reported**, and **Chair Warsh's FOMC decision** landed. This addendum hunts the **primary proof** for each open item — and the proof **sharpens, but does not overturn, the "mid-1999, first-crack-not-burst" read.** Prior verdicts are **not** rewritten.
+
+## C.1 Fact-base — proof for each Addendum-B open item (verified Jul 29, 2026)
+
+**(a) §11.7 #2 "capex guide-down" — the marquee signal — DID NOT fire. Both hyperscalers RAISED.**
+
+| | Meta (Q2-2026) | Microsoft (FQ4-2026, rep. Jul 29) |
+|---|---|---|
+| Revenue | $60.80B (**+28% YoY**) | $90.01B |
+| Net income | $15.85B (**−14% YoY**) | $35.77B |
+| EPS | $6.18 (**missed** $7.13) | $4.81 |
+| Operating margin | **31% (was 43% a yr ago)** | Cloud GM **~64% (falling)** |
+| Quarterly capex | **$31.08B** | **$41B (+69% YoY)** |
+| **Full-year capex guide** | **RAISED to $130–145B** (from $125–145B) | **~$190B (+61% YoY)**; **FY27 ~$220B** |
+| FCF signal | ad business funding the build | **FCF $19.64B, −23% YoY** |
+
+- **The bull's engine is still revving** — the single most important §11.7 trigger (a capex *cut*) is the **opposite** of what printed. This **reinforces** "not the terminal top."
+- **But the *character* changed:** the capex is now **visibly compressing margins and cash flow** in the actual prints (Meta op-margin 43%→31% + an EPS miss; MSFT FCF −23%, cloud GM →~64%). This is the §1 "FCF drained" thesis showing up in reported numbers, not forecasts.
+- **Smoking gun for the circular loop:** Microsoft disclosed that **~$25B of its capex increase is simply higher component prices (memory/GPU), not added capacity.** So the **memory-price surge is now a *cost input* to hyperscaler capex** — which is increasingly **debt-funded** (Addendum B). Memory ↑ → capex $ ↑ → debt ↑ → CDS ↑. The loop is now quantified from the buyer's side.
+
+**(b) §11.7 #4 "Fed hikes / QT bites" — higher-for-longer + a hawkish tilt, CONFIRMED (Warsh FOMC, Jul 29).**
+- **Held at 3.50–3.75% — the 5th consecutive hold.** No cut (despite White-House pressure), no hike.
+- **Three dissents — all FOR A HIKE** (Hammack, Kashkari, Logan). The dissent is **hawkish**, not dovish.
+- **QT continues** — balance-sheet runoff **unchanged**; liquidity still draining.
+- Warsh: **"will not hesitate,"** refused to call it a "pause," said **future hikes remain possible** if inflation persists.
+- **Market reaction: Dow's worst day since 2025; bond yields at multi-year highs** (US 10Y ~**4.6%**).
+- *Read: no proximate detonator today (rates held), but the exact fragility backdrop §11.5 flagged — **higher-for-longer, hike-biased, QT-on** — is now confirmed, not hypothetical.*
+
+**(c) The memory attribution question — RESOLVED: the −40% was NOT fundamental demand destruction.** TrendForce 3Q26 contract prices are **still RISING**, only *decelerating*:
+
+| Product | 3Q26 QoQ | vs 2Q26 QoQ | Structural |
+|---|---|---|---|
+| DRAM (conventional) | **+13–18%** | +58–63% | no oversupply until **~2028** |
+| HBM | **+8–13%** | faster prior | tight; HBM3e–DDR5 gap narrowing to 1–2× |
+| NAND | **+10–15%** | +55–60% | oversupply **looming 2027** |
+
+- **Prices did not fall — the *second derivative* (rate of increase) rolled over** (DRAM +58–63% → +13–18%). The equity de-rated on the **deceleration + the leveraged-ETF unwind**, not on a demand collapse. **This is CRule 1 in its purest textbook form: the cyclical stock peaks when the *rate-of-change* peaks, not when the absolute price peaks.** It **vindicates the Addendum-B §B.3 caveat** ("do not over-attribute the −40% to the debt thesis").
+- **Forward fuse identified:** **NAND oversupply looms in 2027** — a concrete, datable catalyst that lines up with the report's **2027–28** danger window.
+
+**(d) §11.7 #3 "private-credit / data-center stress" — the fragile structure is now PROVEN (no default yet).** CoreWeave, the bellwether neocloud:
+- Debt **<$8B (2024) → >$21B (2026)**; **~$30B capex** planned for 2026.
+- **GPU-collateralized SPVs** — debt secured on **Nvidia GPUs + future contract revenue**, bankruptcy-remote from the parent, "investment-grade" **only as long as Microsoft/Meta/OpenAI keep paying.**
+- An **$8.5B facility rated A3 by Moody's** → now eligible for **pension funds and insurers** → the risk has **left Silicon Valley and entered mainstream portfolios** (exactly the §11.7 #3 "off-balance-sheet leg cascades" channel + §10 circular-financing concern).
+- A **"GPU debt wall": ~$4.2B principal due this year**; high short interest; widely called the **"canary in the coal mine."**
+- *Status: fragile and proven, but **no outright default as of Jul 29, 2026.** Upgrade 🟡→🟠, not 🔴.*
+
+**(e) Oracle CDS level — still flagged (Rule 4).** The ~200bps "all-time-high" figure and the S&P **BBB−** downgrade are corroborated; the exact print remains **provisional**, and Oracle stays **idiosyncratic** (most-levered hyperscaler) — not to be extrapolated to MSFT/GOOG.
+
+*Live tape context (Jul 29, 2026 close): Micron **−9.9%** on the day (now −46% from its Jun 25 top), Nvidia −3.6%, Oracle −1.9%, Meta −1.3%, Microsoft −0.7%; US 10Y **4.62%**.*
+
+## C.2 Step 1 — Concise Research Draft
+
+**Core conclusion:** The new proof **tightens the "mid-1999, first-crack" read into a specific configuration: the fragility preconditions are now all provably PRESENT, while the detonating triggers have NOT fired.** The powder is demonstrably dry; nobody has lit it. The **2027–28** window is **reinforced** with datable fuses.
+
+*Supporting (claim → evidence):*
+1. **The marquee bear trigger is absent** → both Meta ($130–145B) and MSFT (~$190B; FY27 ~$220B) **raised** capex; §11.7 #2 is the opposite of firing. *Evidence: Q2/FQ4 releases — obtained.*
+2. **The −40% semi crash was technical/valuation, not fundamental** → memory contract prices still **+13–18%** (DRAM); the *deceleration* + leveraged-ETF unwind de-rated the stocks (CRule 1). *Evidence: TrendForce 3Q26 — obtained.*
+3. **Every fragility precondition is now confirmed** → hawkish Fed + QT-on (3 hike-dissents), margin/FCF compression in the prints, and a proven-fragile private-credit structure (CoreWeave A3 paper in pension funds). *Evidence: FOMC + earnings + CoreWeave — obtained.*
+
+*Opposing (claim → evidence):*
+1. **"Preconditions present" is not "burst imminent"** → no default, no capex cut, no hike, prices still rising; the trigger is still **exogenous and unscheduled**. *Evidence: absence — by construction, unfalsifiable until it happens; mark timing **unknown**.*
+2. **The buyers' own numbers can still bail out the thesis** → if AI revenue scales into the raised capex (Azure >$100B, +43%; Meta ad +28%), margins re-expand and the debt is serviced → deflate-not-detonate. *Evidence: need FY27 AI revenue vs capex — **unknown**.*
+
+## C.3 Step 2 — Strict Peer Review (draft NOT rewritten)
+
+1. **Facts that need verification:** MSFT's "~$25B of capex is price, not capacity" split (management characterization — get the 10-K MD&A); Meta's **Anthropic compute-lease** talks (rumored external-monetization offset — unconfirmed); whether the 3 FOMC dissents translate into an **actual** H2-2026 hike; CoreWeave's exact **near-term maturity schedule**; the precise **Oracle CDS** quote.
+2. **Logical leaps / equivocation:** "capex raised = thesis weaker" conflates **near-term** (bullish: no cut) with **structural** (bearish: the raise is **debt-funded into compressing FCF**) — both are true and must not cancel; "memory prices still rising = fundamentals fine" ignores that a **decelerating** second derivative is *exactly* the cyclical peak signal; "CoreWeave fragile = systemic" over-extrapolates a single name.
+3. **Missing counterexamples / competing explanations:** Nvidia's shallow −19% and MSFT/META's muted −1% reaction argue the market is **discriminating** (quality vs leverage), not panicking; the leveraged-ETF unwind is a **Korea-specific** technical, not a global-fundamental tell; a still-hawkish Fed that **holds** is arguably *supportive* of risk in the short run (no hike delivered).
+4. **Most important primary sources to add:** Meta & Microsoft **10-Q/10-K + earnings-call transcripts** (capex guide, FCF, depreciation schedule — Burry's §10.3 critique); the **FOMC statement + Warsh transcript + SEP/dot-plot**; **TrendForce/DRAMeXchange** contract tables; **Moody's rating rationale** on the CoreWeave A3 facility; **S&P's Oracle** action.
+5. **Sentences that are at most speculation, not fact:** "the powder is dry, nobody lit it"; "the loop is now quantified"; the "mid-1999" marker; that NAND-2027 / the GPU-debt-wall **will** be the trigger — these are **characterizations and projections**, not established facts.
+
+## C.4 §11.7 dashboard — re-scored with proof
+
+| # | Signal | Addendum B (Jul 29 AM) | **Addendum C (Jul 29 PM, w/ proof)** | Move |
+|---|---|---|---|---|
+| 1 | Credit spreads widen on AI names | 🟠→🔴 firing | 🔴 **firing** (Oracle BBB−, CDS record; bonds +25bps>IG) | = |
+| 2 | **A capex guide-down** | 🟢 not firing | 🟢 **CONFIRMED not firing** — Meta & MSFT **RAISED** | = (proven) |
+| 3 | Private-credit / DC stress | 🟡 partial/unknown | 🟠 **fragile structure PROVEN** (CoreWeave A3→pensions), no default | 🟡→🟠 |
+| 4 | Fed hikes / QT bites | ⚪ unverified | 🟠 **higher-for-longer + hawkish** (3 hike-dissents, QT-on), no hike | ⚪→🟠 |
+| 5 | Accounting / AI-ROI catalyst | 🟡 partial | 🟡 **partial, now visible** (margin/FCF compression in prints) | = |
+| 6 | Refinancing wall | ⚪ not yet | ⚪ **not yet, but the fuse is dated** (NAND-2027; CoreWeave $4.2B; FY27 capex>FCF) | = (fuse ID'd) |
+
+**Read: 1 firing, 2 upgraded to amber (fragility now proven), the marquee capex-cut confirmed absent, 1 partial, 1 fuse dated.** This is a **"loaded but unlit"** configuration — maximal late-cycle fragility with the trigger still pending. **Textbook mid-to-late 1999, not March-2000.**
+
+## C.5 Verdict update (prior verdicts NOT overturned)
+
+```
+Marker:            ~mid-1999, held (Addendum B) -> now HIGH-CONFIDENCE mid/late-1999.
+What the proof adds:
+  * Capex guide-down (the #1 bear trigger) CONFIRMED ABSENT — Meta & MSFT RAISED.
+  * The -40% semi crash was TECHNICAL/2nd-derivative, NOT demand destruction
+    (DRAM contract prices still +13-18% QoQ; no DRAM oversupply until ~2028). CRule 1.
+  * ALL fragility preconditions now proven PRESENT: hawkish Fed + QT-on (3 hike
+    dissents), margin/FCF compression in the prints, fragile GPU-collateralized
+    private credit (CoreWeave A3 paper in pension funds), and a quantified
+    memory-cost -> debt-capex loop (MSFT: ~$25B of capex is just higher prices).
+Triggers still ABSENT: no capex cut, no memory-demand collapse, no default, no hike.
+Config:            "Loaded but unlit." Powder provably dry; no ignition yet.
+Timing:            2027-28 window REINFORCED with datable fuses (NAND oversupply
+                   2027; CoreWeave GPU debt wall; FY27 capex ~$220B > FCF; QT).
+Single swing var:  Does AI end-revenue scale into the RAISED capex before the
+                   refinancing bill + NAND-2027 arrive? Yes -> deflate; no -> detonate.
+```
+
+> **Bottom line for the user:** the deep dive proves your instinct on the *setup* while disciplining the *timing*. The credit canary (Oracle/CDS) and the memory −40% are real, **but the two things that would confirm an actual burst did the opposite today**: Meta and Microsoft **raised** capex (no guide-down), and memory **contract prices are still rising** (so the crash was a leverage/2nd-derivative de-rate, not demand destruction — pure CRule 1). What *has* changed is that **every fragility precondition is now proven present** — a hawkish, QT-on Warsh Fed; margin and FCF compression in the actual prints; and fragile GPU-collateralized private credit (CoreWeave) sitting in pension portfolios. That's **"loaded but unlit."** Keep watching, in order: **(1) the first real capex guide-down, (2) CDS spreading from Oracle to the AA names, (3) a CoreWeave-type default, (4) the 2027 NAND turn.**
+
+**Sources (Addendum C, accessed Jul 29, 2026):** Meta Q2-2026 release (StockWireX; 247WallSt; InsiderFinance); Microsoft FQ4-2026 (CNBC; Motley Fool; MarketBeat; INDmoney); FOMC / Warsh Jul 29 (Federal Reserve press-conference transcript; Yahoo Finance; Politico; Forbes; US News; CNBC-TV18); TrendForce 3Q26 memory-price release (trendforce.com; infotechlead; bisinfotech); CoreWeave / neocloud private credit (Quartz; s3partners; Wedbush; TechTimes; GlobalDataCenterHub); yfinance daily closes (MU/MSFT/META/ORCL/NVDA/^TNX). **Oracle CDS level provisional (Rule 4).**
+
+---
+
+*Addendum C applied within the Two-Step Research Protocol (§C.2 draft + §C.3 review). Live figures pulled Jul 29, 2026; unverifiable items marked "unknown." Education/analysis only — not investment advice.*
