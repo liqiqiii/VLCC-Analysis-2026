@@ -634,3 +634,100 @@ For the current AI cycle:           Consistent with the '1998->early-1999' marke
 ---
 
 *Addendum A applied within the Two-Step Research Protocol. Education/analysis only — not investment advice.*
+
+---
+
+# Addendum B — One-Month Update: The Canary Started Chirping (Jul 29, 2026)
+
+> **Why this addendum:** it has been ~5 weeks since the Jun 23 verdict and the Jun 24 Micron test (Addendum A). The user flagged two live developments: (1) **SK Hynix and many semis are down ~40%**, and (2) **Big-Tech CDS**. Both map *directly* onto the **§11.7 warning-signs dashboard**. This addendum re-scores that dashboard against hard data pulled **Jul 29, 2026** — it does **not** rewrite the prior verdict.
+
+## B.1 Fact-base — what actually happened since Jun 23 (verified Jul 29, 2026)
+
+**(a) The supply-chain re-rated hard — and the June peak was almost to-the-day the Micron blowout.** Drawdowns from each name's own June peak (yfinance daily close, auto-adjusted, accessed Jul 29, 2026):
+
+| Name | Peak date | From-peak drawdown | Note |
+|---|---|---|---|
+| **Micron (MU)** | **Jun 25** | **−39%** | **The Addendum A "blowout" day *was* the top** |
+| **SK Hynix (000660.KS)** | Jun 22 | **−47%** | User's "~40%" — confirmed, actually worse |
+| **Samsung (005930.KS)** | Jun 18 | −39% | Memory trio all ~−40% |
+| **PHLX Semi Index (^SOX)** | Jun 22 | −29% | Broad semi |
+| **Semi ETF (SMH)** | Jun 22 | −25% | Broad semi |
+| **Broadcom (AVGO)** | Jun 2 | −23% | |
+| **Nvidia (NVDA)** | May 14 | −19% | Peaked *earliest*, fell *least* (highest-quality link) |
+| **Oracle (ORCL)** | Jun 1 | **−52%** | The AI-credit lightning rod (see B.1c) |
+
+*The single cleanest read: **the most operationally-levered link (memory) peaked first and fell hardest** — exactly the **CRule 1** lead/lag prediction in Addendum A ("suppliers peak *before* the underlying rate"). The Jun 24 blowout chorus ("sold out through 2026," $1,200–1,500 targets, "memory is infrastructure not a commodity") was, verbatim, the **CRule 5** peak-narrative trap.*
+
+**(b) The trigger was partly market-structure, not pure fundamentals (attribution caveat).** The Korea leg was amplified by **forced unwinding of single-stock leveraged ETFs** (retail), which tripped the KOSPI circuit-breaker on consecutive days — a **technical** accelerant on top of NAND-oversupply and "new AI software may cut chip demand" (an efficiency/ROI scare echoing the DeepSeek-type shock). Memory analysts argue **DRAM/HBM fundamentals remain intact**. *So −40% in memory is also just* **CRule 4** *(memory is the most boom-bust commodity in tech); do not over-attribute it to the debt thesis.*
+
+**(c) The credit canary is now chirping — led by Oracle.** Big-Tech 5-yr CDS (accessed Jul 29, 2026):
+
+| Metric | Value | vs history |
+|---|---|---|
+| Oracle 5Y CDS | **~75bps earlier in 2026 → ~200bps late-July** after S&P cut to **BBB−** | 7-yr high → **highest since ~2008** |
+| Peer group (MSFT/AMZN/GOOG/META) 5Y CDS | **~49–75bps** | **highest since 2018**, ~**2×** early-2025, above 2022 peaks |
+| Hyperscaler bonds vs IG index | **+25bps and wider** | **~10-yr high** |
+| 2026 IG bond issuance (5 names) | **~$182B YTD (+~1,300% YoY, ~15% of all US IG)** | record |
+| Sector capex | **~$700B (2026); Moody's sees ~$1T by 2027**; capex **> combined FCF by 2027** | record |
+
+> **⚠️ Data-quality flag (Rule 4):** sources disagree on Oracle's *level* — some cite **~75bps** ("7-yr high"), others **~198–203bps** ("all-time high") after the late-July S&P downgrade. The **direction is unambiguous (sharply wider)**; treat the **exact Oracle number as provisional** and note Oracle is **idiosyncratic** (most-levered hyperscaler, BBB−, negative FCF) — do **not** extrapolate its ~200bps to Microsoft/Google.
+
+## B.2 Step 1 — Concise Research Draft
+
+**Core conclusion:** The July-2026 semi crash + CDS widening are **the first genuine tremor in the most-levered links** of the AI trade (memory + Oracle), and they **fire several §11.7 warning signs** — but they are a **first crack / early-warning tremor, not the terminal burst.** The Jun-23 marker nudges from "**1998 → early-1999**" toward "**mid-1999**": the first real air-pocket, credit canary now audible, but no capex guide-down, no default, spreads still investment-grade.
+
+*Supporting (claim → evidence needed):*
+1. **The suppliers-peak-first mechanism fired on schedule** → the Micron blowout day (Jun 25) *was* the top; memory −40–47% led the tape (CRule 1). *Evidence: yfinance peak dates + drawdowns above — obtained.*
+2. **The credit signal is now real, not hypothetical** → Oracle CDS to a multi-year/record high, peers highest since 2018, hyperscaler bonds +25bps over IG, S&P cut Oracle to BBB−. *Evidence: CDS/issuance table — obtained; exact Oracle level flagged provisional.*
+3. **The funding regime the report warned about is now visibly binding** → $182B IG issuance (+1,300% YoY), capex set to exceed combined FCF by 2027. *Evidence: issuance + Moody's capex data — obtained.*
+
+*Opposing (claim → evidence needed):*
+1. **This may be a mid-cycle cyclical correction, not the burst** → memory routinely does ±40%; Korea leg was a leveraged-ETF technical unwind; analysts say HBM demand intact. *Evidence: need Q3 DRAM/HBM contract prices + inventory to confirm demand didn't actually roll over — **unknown** as of Jul 29.*
+2. **"Credit led equity" is not cleanly established** → equities and CDS **widened together**, not credit-first-while-equity-flat (the telecom-2001 tell in §11.7 #1). *Evidence: need intraday credit-vs-equity sequencing — **unknown**; and the July FOMC / QT stance is **unverified here** (§11.7 #4 still open).*
+
+## B.3 Step 2 — Strict Peer Review (draft NOT rewritten)
+
+1. **Facts that need verification:** the **exact Oracle CDS level** (~75 vs ~200bps — sources conflict); whether **DRAM/HBM contract prices or hyperscaler inventories actually fell** (vs pure equity/leverage de-rating); the **July-2026 FOMC decision & QT pace** (§11.7 #4, not pulled here); whether any **neocloud/data-center private-credit default** has printed (§11.7 #3).
+2. **Logical leaps / equivocation:** conflating **Oracle (BBB−, idiosyncratic)** with "Big-Tech credit" broadly; conflating a **−40% price drawdown** (could be leverage/technical) with **fundamental demand destruction**; treating "**semis fell**" as proof "**the debt thesis is playing out**" when no capex cut or default has occurred — the drawdown is so far **necessary but not sufficient**.
+3. **Missing counterexamples / competing explanations:** the **Korea single-stock leveraged-ETF unwind** (market-structure, not fundamentals); **Nvidia's** shallow −19% and earliest peak argues **quality dispersion**, not uniform collapse; **Moody's *raised* capex to ~$1T** — the opposite of the §11.7 #2 "capex guide-down," so the supply chain re-rated **without** the predicted proximate cause.
+4. **Most important primary sources to add:** the actual **CDS quotes** (IHS Markit/CDX), **S&P's Oracle rating action** (primary), **hyperscaler 10-Q FCF & capex guidance** (Q2-2026), **Korea Exchange** statements on the ETF unwind/circuit-breakers, and **DRAMeXchange/TrendForce** contract prices.
+5. **Sentences that are at most speculation, not fact:** "first crack, not the burst"; "credit canary now audible" (a characterization); the "mid-1999" marker; and any implication that the **2027–28 danger window** is now confirmed — the timing thesis remains a **projection**.
+
+## B.4 Re-scoring the §11.7 warning-signs dashboard
+
+| # | §11.7 signal | Status Jul 29, 2026 | Evidence |
+|---|---|---|---|
+| 1 | **Credit spreads widen on AI names** | 🟠→🔴 **Increasingly firing** | Oracle CDS record/multi-yr high; peers highest since 2018; bonds +25bps over IG. *Caveat: equities fell too, so not the clean "credit-first" tell.* |
+| 2 | **A capex guide-down** | 🟢 **NOT firing** | Moody's *raised* 2027 capex to ~$1T; Meta *raised* guide to $125–145B. **Yet the supply chain re-rated anyway** (semis −25 to −52%). |
+| 3 | **Private-credit / data-center stress** | 🟡 **Partial / unknown** | Oracle BBB− + negative FCF is the closest tell; no confirmed neocloud default in hand. |
+| 4 | **Fed hikes / QT bites** | ⚪ **Unverified here** | Last known: higher-for-longer w/ hike risk (§11.5); July FOMC not pulled. |
+| 5 | **Accounting / AI-ROI catalyst** | 🟡 **Partial** | "New AI software may cut chip demand" cited as a selloff driver (an efficiency/ROI scare). |
+| 6 | **Refinancing wall** | ⚪ **Not yet** | No forced roll at wide spreads reported. |
+
+**Read:** **2 of 6 firing (credit + a soft ROI scare), 1 partial, the marquee "capex guide-down" NOT firing, 2 unverified.** That is precisely a **first-crack** configuration — the **canary** (credit) is chirping and the **most-levered links** (memory, Oracle) have taken the first hit, but the **self-reinforcing** legs (capex cut → default → refinancing wall) have **not** engaged.
+
+## B.5 Verdict update (prior verdict NOT overturned)
+
+```
+Marker (Jun 23):   Late-Build / early-Mania (~1998 -> early-1999)
+Marker (Jul 29):   Nudged to ~mid-1999 — FIRST air-pocket in the most-levered
+                   links; credit canary now audible; NOT the terminal burst.
+What changed:      Supply-chain re-rated -25 to -52% (memory led, CRule 1);
+                   Big-Tech CDS at multi-year/record wides (Oracle -> BBB-).
+What did NOT:      No hyperscaler capex guide-down (Moody's RAISED to ~$1T);
+                   no default; spreads still investment-grade; Korea leg had a
+                   leveraged-ETF technical amplifier.
+Timing thesis:     Unchanged — debt/leverage crack historically LAGS the equity
+                   peak by 1-2 yrs; the 2027-28 danger window still stands.
+Watch next:        (1) an ACTUAL hyperscaler capex guide-down; (2) CDS widening
+                   spreading FROM Oracle TO the AA/AAA names; (3) a neocloud/
+                   data-center private-credit default; (4) the refinancing wall.
+```
+
+> **Bottom line for the user:** your two signals are real and they matter — the **memory −40% and the CDS blowout are the report's own canaries, now chirping**, and the Micron top landed on the *exact day* Addendum A flagged the euphoria. But be disciplined about what it is: a **first tremor in the most-levered links**, amplified in Korea by a **leveraged-ETF unwind**, with the decisive legs (a **capex guide-down**, a **default**, a **refinancing failure**) still **absent**. That is consistent with **mid-1999, not March-2000.** Keep watching **credit → capex guidance → private-credit**, in that order.
+
+**Sources (Addendum B, accessed Jul 29, 2026):** yfinance daily closes (MU, 000660.KS, 005930.KS, ^SOX, SMH, AVGO, NVDA, ORCL); Benzinga — *Big Tech's $182B AI Debt Spree*; CNBC — *Bond-market anxiety over AI capex* & *Moody's: AI spending threatens credit quality*; S&P Global (Oracle → BBB−, via press coverage); INDmoney / US News / StocksDownunder — *KOSPI/SK Hynix/Samsung July-2026 rout*; Moody's / DataCenterDynamics — *hyperscaler capex → ~$1T by 2027*; bondblox / BiggO / Benzinga — *Oracle 5Y CDS*. **Exact Oracle CDS level flagged provisional (Rule 4).**
+
+---
+
+*Addendum B applied within the Two-Step Research Protocol (§B.2 draft + §B.3 review). Live figures pulled Jul 29, 2026; unverifiable items marked "unknown." Education/analysis only — not investment advice.*

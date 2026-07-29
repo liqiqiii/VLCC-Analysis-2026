@@ -904,3 +904,17 @@ User: if the strategy is dip-buying quality financial names not the ETF, how do 
 User asked to explain drift μ and add it to the summary. Added a drift-μ explainer box to summary_en/cn.md §"relative to drift": μ = deterministic upward trend (dS/S = μ·dt + σ·dW, escalator analogy — σ = sway, μ = escalator speed); the Long-run CAGR column IS the realized drift (CAGR ≈ μ − ½σ²); strong positive drift (JPM/AXP/S&P) = ride it, don't insure it; zero/negative drift (VLCC) = holding is pointless so hedging degrades to timing.
 
 **Files Updated**: tail_hedge/summary_en.md, tail_hedge/summary_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 44: AI-bubble one-month update — semis -40%, Big-Tech CDS (Addendum B)
+**Date**: July 29, 2026
+
+User: return to the AI-bubble topic (~1 month later); combine prior discussion with latest data — SK Hynix and many semis down ~40%, and check latest Big-Tech CDS.
+
+Added **Addendum B** to ai_bubble/report_en.md + report_cn.md (bilingual, Two-Step Protocol). Live data pulled Jul 29, 2026 (yfinance) — drawdowns from June peaks: Micron -39% (peak Jun 25 = the Addendum A "blowout" day = the top), SK Hynix -47%, Samsung -39%, SOX -29%, SMH -25%, Broadcom -23%, Nvidia -19% (least, peaked earliest), Oracle -52%. CDS (web): Oracle 5Y ~75bps -> ~200bps after S&P cut to BBB- (level flagged provisional, Rule 4); peers ~49-75bps (highest since 2018, ~2x early-2025); hyperscaler bonds +25bps over IG (10-yr high); $182B IG issuance YTD (+1,300% YoY); Moody's sees ~$1T capex by 2027 (capex > combined FCF).
+
+**Verdict:** marker nudged 1998->early-1999 toward ~mid-1999 — FIRST tremor in the most-levered links (memory + Oracle), credit canary now chirping, but a first crack NOT the burst: no capex guide-down (Moody's RAISED), no default, spreads still IG, Korea leg amplified by a leveraged-ETF unwind. Re-scored §11.7 dashboard: 2/6 firing (credit + soft ROI scare), marquee capex guide-down NOT firing. 2027-28 danger window unchanged. Key validation: CRule 1 (suppliers peak first) + CRule 5 (peak-narrative trap) fired on schedule.
+
+**Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
