@@ -952,3 +952,22 @@ Built new `vlcc_seasonality/` folder (run_seasonality.py + data/*.csv + bilingua
 
 **Files Created**: vlcc_seasonality/run_seasonality.py, vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, vlcc_seasonality/data/*.csv
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 47: VLCC geopolitical-surprise corollary — is an unpriced Hormuz / "black-to-white" event convex upside? (seasonality report Section 8)
+**Date**: August 2, 2026
+
+User's thesis: because of the US-Iran war + Trump TACO, VLCC stocks stopped reacting to Iran headlines -> the market doesn't price a Hormuz disruption / "black-to-white" (黑油转白) sanctions normalization / China restocking -> so when the day comes, both rate and stock surprise higher. Support/refute with data.
+
+Added Section 8 to vlcc_seasonality/report_en.md + report_cn.md (Two-Step Protocol) + reproducible run_event_vol.py (data/event_vol_monthly.csv, event_spike_fade.csv).
+
+Findings:
+- SUPPORTED (desensitization is real): DHT/FRO made 2026 highs on Jun 23 (peak Hormuz crisis: strait shut, VLCC hit, Brent >$120, spot ~$480k); 6 weeks later only -7%/-8% off high while the war festers; event-vol compressed Jun 50%/60% -> Jul 39%/42% (vs 2025 Dec 16%/27%). Market sold the geopolitical premium fast (TACO). Convexity is real (2019 COSCO ~$300k, 2022 Russia).
+- REFUTED / corrected on sign: the three catalysts have different signs & durations. (1) Strait closure = SPIKE that FADES (volumes -95%, TACO, newbuilds) -> sell it, don't hold. (2) "Black-to-white" normalization is likely rate-BEARISH: shadow fleet ~1,000-1,300 ships (~200-300 VLCCs of ~850 global); its capacity removal is what props compliant TCE, so normalization returns ships = +10-12% supply -> consensus rate COLLAPSE (barrels already move on shadow ships today; black-to-white frees ships, doesn't add cargo). Caveat: old shadow tonnage may scrap not return. (3) Restocking = mildly bullish, partly priced (Q4 FFA ~$60k).
+- Carry caveat (our tail_hedge finding): long the unpriced tail = long an option that bleeds carry; DHT break-even VRP ~67%; June proves you can be right on the event and still be -7% off the high 6 weeks later.
+
+Verdict: meta-principle right + desensitization real, but a strait EVENT is a spike-to-SELL, "black-to-white" is probably BEARISH, and waiting costs carry. Trade the surprise spike tactically; don't underwrite a durable re-rate on "peace + black-to-white."
+
+**Files Created**: vlcc_seasonality/run_event_vol.py, vlcc_seasonality/data/event_vol_monthly.csv, vlcc_seasonality/data/event_spike_fade.csv
+**Files Updated**: vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

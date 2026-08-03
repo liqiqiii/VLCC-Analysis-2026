@@ -928,3 +928,22 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: vlcc_seasonality/run_seasonality.py, vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, vlcc_seasonality/data/*.csv
 **更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 47: VLCC 地缘意外推论 —— 未计价的霍尔木兹 / "黑油转白"事件是凸性上行吗？（季节性报告第 8 节）
+**日期**: 2026年8月2日
+
+用户论点：因美伊战争 + 特朗普 TACO，VLCC 股票不再对伊朗头条反应 -> 市场不计价霍尔木兹中断 / "黑油转白"制裁正常化 / 中国补库 -> 所以那一天来时运价与股价都超预期上涨。用数据支持/反驳。
+
+在 vlcc_seasonality/report_en.md + report_cn.md 增加第 8 节（两步协议）+ 可复现 run_event_vol.py（data/event_vol_monthly.csv、event_spike_fade.csv）。
+
+结论：
+- 支持（脱敏为真）：DHT/FRO 于 6 月 23 日创 2026 高点（霍尔木兹危机顶峰：海峡封锁、VLCC 被击中、布伦特 >$120、现货约 $480k）；六周后战争延烧中仅较高点 -7%/-8%；事件波动 6 月 50%/60% -> 7 月 39%/42%（对比 2025 年 12 月 16%/27%）。市场迅速卖出地缘溢价（TACO）。凸性真实（2019 中远海运约 $300k、2022 俄罗斯）。
+- 反驳/符号更正：三个催化剂符号与时长不同。(1) 海峡封锁 = 会消退的飙升（运量 -95%、TACO、新船）-> 卖它、别持有。(2) "黑油转白"正常化多半运价利空：影子船队约 1,000-1,300 艘（约 200-300 艘 VLCC，全球约 850）；其运力移除正是撑起合规 TCE 之因，故正常化让船回归 = +10-12% 供给 -> 共识运价崩塌（桶今天已由影子船运输；黑油转白释放船只、不增货）。警告：老旧影子运力或拆解而非回归。(3) 补库 = 温和利多、部分已计价（Q4 FFA 约 $60k）。
+- 持有成本警告（tail_hedge 发现）：做多未计价尾部 = 做多消耗持有成本的期权；DHT 盈亏平衡 VRP 约 67%；6 月证明你可对事件判断正确、六周后却较高点 -7%。
+
+结论：元原则对 + 脱敏真，但海峡事件是要卖的飙升、"黑油转白"多半利空、等待要付持有成本。战术性交易意外飙升；别用"和平 + 黑油转白"押注一次持久重估。
+
+**创建文件**: vlcc_seasonality/run_event_vol.py, vlcc_seasonality/data/event_vol_monthly.csv, vlcc_seasonality/data/event_spike_fade.csv
+**更新文件**: vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
