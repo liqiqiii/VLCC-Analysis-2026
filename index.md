@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🚢📅 VLCC Seasonality — Is the Q4 Stock Bump the Calendar, or the Year's Rate Strength? (NEW — Aug 2, 2026)
+
+Tests whether the seasonal **Q4 VLCC TCE peak** reliably lifts **DHT/FRO** — or whether Q4 stock performance is really about **that year's rate *level***. **Verdict: it's the level, not the calendar.** Over ~16 years Q4 is a **coin-flip** (DHT 50% / FRO 44% of Q4s positive; FRO Q4 **median −4.3%**); the genuinely strong seasonal quarter is **Q1** (DHT +12.5% avg, 75% positive) and **November is the *worst* month** (DHT −5.6%). **But cross-year Q4 return correlates R ≈ 0.60 (DHT) / 0.66 (FRO) with the Q4 TCE level** — high-rate Q4s rip (2019/2014/2022), low-rate Q4s fall (2021/2017). The reason is **CRule 1**: the stock leads the rate 1–3 months, so the *predictable* winter bump is pre-priced (→ Q1 confirmation + Nov sell-the-news), and only a **surprise in the level** pays. **2026 already fired its move in Q1 (DHT +53%, FRO +65%)** front-running the Mar/Jun >\$400k spikes — so "buy for Q4 seasonality" is not an edge. Reproducible script + committed CSVs. *Analysis, not investment advice.*
+
+**[📄 VLCC Seasonality (EN) →](vlcc_seasonality/report_en)** | **[VLCC 季节性（中文）→](vlcc_seasonality/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/vlcc_seasonality)**
+
+---
+
 ### 🧭 Tail-Hedge Cheat-Sheet — Cross-Asset Decision Table (NEW — Jul 20, 2026)
 
 The one-page hub for the whole `tail_hedge/` study: a **7-asset decision table** (S&P, XLF, JPM, AXP, XLK, DHT, FRO) with each asset's **hold verdict, break-even VRP, live paid VRP, and hedge verdict** — plus the single decision rule (**hedge only if paid VRP < break-even VRP *and* you have a regime reason**) and the "deep AND frequent relative to drift" principle. **Bottom line: 5 of 7 → hold, don't hedge; only tactical XLK and top-of-cycle DHT clear the bar.**

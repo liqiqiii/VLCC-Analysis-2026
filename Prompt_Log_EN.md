@@ -935,3 +935,20 @@ Added **Addendum C** to ai_bubble/report_en.md + report_cn.md (bilingual, Two-St
 **Verdict:** "loaded but unlit" — all fragility preconditions now proven PRESENT (hawkish Fed+QT, margin/FCF compression, fragile private credit), but triggers ABSENT (no capex cut, no demand collapse, no default, no hike). Marker: high-confidence mid/late-1999, not March-2000. 2027-28 window reinforced with datable fuses. Re-scored 11.7: 1 firing, 2 upgraded to amber, marquee capex-cut confirmed absent.
 
 **Files Updated**: ai_bubble/report_en.md, ai_bubble/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 46: VLCC seasonality — Q4 stock bump = calendar or the year's rate strength?
+**Date**: August 2, 2026
+
+User: it's August, heading into Q4 when VLCC TCE is seasonally highest. Does the Q4 rate peak reliably lift DHT/FRO, or is it about the RELATIVE strength of that year's Q4? Find TCE data, compare years, test the correlation.
+
+Built new `vlcc_seasonality/` folder (run_seasonality.py + data/*.csv + bilingual report_en/cn.md). Findings (yfinance total return 2010-2026, exact; Q4 TD3C TCE levels approximate per Rule 4):
+- **No calendar Q4 rally**: Q4 is a coin-flip — DHT 50% / FRO 44% of Q4s positive; FRO Q4 median -4.3%.
+- **Q1 is the strong seasonal quarter** (DHT +12.5% avg, 75% positive); **November is the WORST month** (DHT -5.6%, 25% positive) — opposite of a Q4 rally.
+- **But cross-year Q4 return correlates with the Q4 TCE LEVEL: R = 0.60 (DHT), 0.66 (FRO).** High-rate Q4s rip (2019 ~$120k +36/+43%; 2014 ~$75k +19/+99%; 2022 ~$65k +18/+11%); low-rate Q4s fall (2021 ~$12k -20/-25%; 2017 ~$26k -9/-24%).
+- **Answer: it's the relative rate STRENGTH, not the calendar.** Mechanism = CRule 1 (stock leads rate 1-3 months): the predictable winter bump is pre-priced (Q1 confirmation + Nov sell-the-news); only a SURPRISE in the level pays (2014 oil crash, 2019 COSCO sanctions ~$300k, 2022 Russia rerouting).
+- **2026 read**: Q1-2026 already fired (DHT +53%, FRO +65%) front-running the Mar/Jun >$400k spikes; Q4 FFA ~$60k+ (3-yr high), utilization ~92%; but record newbuild deliveries late-2026/27 are the offset. So "buy for Q4 seasonality" is NOT an edge; the bar is a rate surprise above the already-priced base.
+
+**Files Created**: vlcc_seasonality/run_seasonality.py, vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, vlcc_seasonality/data/*.csv
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
