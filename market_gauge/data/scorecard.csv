@@ -1,0 +1,8 @@
+axis,reading,percentile,signal
+Valuation (CAPE),CAPE 41.3,98.9,EXPENSIVE
+Valuation (Buffett),~225% GDP,99,EXPENSIVE
+Breadth (concentration),RSP/SPY 3.0th pct,3.0,NARROW
+Breadth (recent trend),3mo +1.81% / 1wk -3.46%,-,BROADENING but fragile
+Positioning (VIX),VIX percentile 48.0,48.0,MID / complacent-ish
+Positioning (CTA),net long $34B S&P; $100B+ downside,-,STRETCHED/asymmetric
+Quality (earnings),record earnings + record margins,-,HIGH (real profits)

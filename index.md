@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 📈 Market Gauge — How High Is the S&P 500, and How Good Is the Quality? (NEW — Aug 4, 2026)
+
+A four-axis "market-level" scorecard — **breadth · valuation · positioning · quality**. **Verdict: expensive and stretched, but genuinely high-quality — "priced for perfection," not a junk bubble.** **Valuation is ~99th-percentile extreme** — Shiller **CAPE 41.3 = the 98.9th percentile since 1881** (only the Dec-1999 peak of 44.2 was higher), forward P/E ~21, **Buffett indicator ~225% of GDP**. **Breadth is two-faced:** participation is healthy (~69% of the S&P above its 200-day MA) but *leadership concentration* is the **narrowest in 20 years** (equal-/cap-weight RSP/SPY at the **3rd percentile**); the broadening is real on a 3-month view (+1.8%) but **fragile** (last week re-narrowed −3.5% on mega-cap earnings; only 3/11 sectors beat the index over 1mo). **Positioning is stretched** (CTAs net long with $100B+ mechanical downside; VIX 48th pct — no cushion). **But quality is the anchor** — record earnings + record margins make this the [AI-bubble report's](ai_bubble/report_en) "1998→late-1999, loaded but unlit" market. **Thin margin of safety + high quality → stay invested but hedged/diversified; watch positioning/credit, not the P/E, for the turn.** Reproducible (CAPE percentile from Shiller data, breadth/VIX computed). *Analysis, not investment advice.*
+
+**[📄 Market Gauge (EN) →](market_gauge/report_en)** | **[市场标尺（中文）→](market_gauge/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/market_gauge)**
+
+---
+
 ### 💼 Portfolio Strategy — The 30/30/40 Gold + Index + Alpha Barbell (NEW — Aug 4, 2026)
 
 Assesses a **30% gold / 30% index / 40% concentrated alpha (max 2 domains)** barbell, plus **dividend/blue-chip (SCHD) and "ballast" (XLP vs low-vol vs Treasuries)** sleeves. **Verdict: the skeleton is sound; the risk is entirely in the 40%.** The **60% core is the free lunch** — gold and the S&P both ~11% CAGR but **corr 0.08**, so 50/50 keeps the return and **halves drawdown** (−51% → −25%, Sharpe 0.75→~0.97) *if you rebalance mechanically*. **30% gold is a macro/regime bet** (~0 long-run real drift — insurance, not compounding). On the dividend idea: **SCHD ≈ a quality-value S&P (corr 0.85), a core tilt not a diversifier**; and a **corrected-data finding — XLP is NOT a near-zero ballast (corr 0.65, ~54% down-capture)**, it's lower-beta *equity* — the only true diversifiers (corr ~0) are **Treasuries + the gold you already own.** The **40% alpha must clear a ~10% hurdle** (or just index it), stay **uncorrelated across both domains**, and run with **hard exit discipline** (a 20% domain −50% = −10% to the whole book). Reproducible backtest + committed CSVs. *Analysis, not investment advice.*

@@ -992,3 +992,23 @@ Findings (monthly total return):
 
 **Files Created**: portfolio/run_portfolio.py, portfolio/report_en.md, portfolio/report_cn.md, portfolio/data/*.csv
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 49: Market Gauge report — how high is the S&P 500, how good is the quality?
+**Date**: August 4, 2026
+
+User requested a separate report measuring how high the market is and how good the quality is, across breadth / valuation / institutional-positioning (CTA) + extras.
+
+Built new `market_gauge/` folder (run_market_gauge.py + data/*.csv + bilingual report_en/cn.md; index.md entry). Data hygiene: yfinance indexed by name (Rule 4); CAPE percentile/breadth/VIX computed & reproducible; PE/PS/Buffett web-sourced & flagged; CTA snapshots conflict by date (flagged).
+
+Findings across 4 axes:
+- VALUATION (uniformly extreme): Shiller CAPE 41.3 = 98.9th percentile since 1881 (computed from Yale ie_data.xls; median 16.5, all-time max 44.2 in Dec-1999). Forward PE ~21 (vs 17-18), trailing ~28, P/S ~3 (vs 1.5), Buffett indicator ~225% GDP (~99th pct). No metric says cheap.
+- BREADTH (two-faced): participation healthy (~69% >200dma) BUT leadership concentration narrowest in 20yrs (RSP/SPY at 3rd percentile of 2005-26, -1.4% 12mo). Recent trend mixed: 3mo +1.8% (broadening) but last 1wk -3.5% (re-narrowed on mega-cap earnings); only 3/11 sectors beat SPY over 1mo, 4/11 over 3mo. User's "width getting better" = partly right (participation) but concentration still extreme + fragile.
+- POSITIONING (stretched/asymmetric): CTAs net long ~$34B S&P, $100B+ mechanical downside if momentum breaks; VIX 16.5 = 48th pct (no fear cushion).
+- QUALITY (the bull anchor): record earnings + record margins = real profits, not a profitless bubble. Maps to ai_bubble "1998->late-1999, loaded but unlit."
+
+Verdict: "priced for perfection" — high price, high quality, thin margin of safety, still-narrow. Vulnerable to a positioning/rate/credit shock, not a valuation-only collapse. Practical tie-in: the 30/30/40 barbell + tail-hedge case; watch positioning/credit not P/E for the turn.
+
+**Files Created**: market_gauge/run_market_gauge.py, market_gauge/report_en.md, market_gauge/report_cn.md, market_gauge/data/*.csv
+**Files Updated**: index.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -968,3 +968,23 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: portfolio/run_portfolio.py, portfolio/report_en.md, portfolio/report_cn.md, portfolio/data/*.csv
 **更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 49: 市场标尺报告 —— 标普 500 有多高、质量有多好？
+**日期**: 2026年8月4日
+
+用户要求一份单独报告，衡量市场有多高、质量有多好，围绕广度 / 估值 / 机构持仓（CTA）+ 补充。
+
+新建 `market_gauge/` 文件夹（run_market_gauge.py + data/*.csv + 双语 report_en/cn.md；index.md 条目）。数据卫生：yfinance 按名称索引（Rule 4）；CAPE 百分位/广度/VIX 计算且可复现；PE/PS/巴菲特网络来源并标注；CTA 快照按日期冲突（标注）。
+
+四维度结论：
+- 估值（一致极端）：席勒 CAPE 41.3 = 1881 年来第 98.9 百分位（由耶鲁 ie_data.xls 计算；中位 16.5、史上最高 44.2 于 1999 年 12 月）。前瞻 PE 约 21（对比 17-18）、滚动约 28、P/S 约 3（对比 1.5）、巴菲特约 225% GDP（约 99 百分位）。无一指标说便宜。
+- 广度（两副面孔）：参与健康（约 69% >200 日）但领导集中度 20 年最窄（RSP/SPY 处 2005-26 第 3 百分位，12 月 -1.4%）。近期趋势矛盾：3 月 +1.8%（扩散）但上周 -3.5%（因大盘股财报重新收窄）；1 月仅 3/11 行业跑赢、3 月 4/11。用户"宽度变好" = 部分正确（参与）但集中仍极端且脆弱。
+- 持仓（拥挤/不对称）：CTA 净多约 340 亿标普，若动量转向 1000 亿+ 机械下行；VIX 16.5 = 第 48 百分位（无恐惧缓冲）。
+- 质量（多头之锚）：创纪录盈利 + 利润率 = 真实利润、非无盈利泡沫。对应 ai_bubble"1998->1999 年末、已装填但未点燃"。
+
+结论："为完美定价"——高价、高质量、薄安全边际、仍窄。易受持仓/利率/信用冲击，而非单纯估值崩塌。实操衔接：30/30/40 杠铃 + tail-hedge；盯持仓/信用而非 PE 判拐点。
+
+**创建文件**: market_gauge/run_market_gauge.py, market_gauge/report_en.md, market_gauge/report_cn.md, market_gauge/data/*.csv
+**更新文件**: index.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md

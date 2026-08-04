@@ -1,0 +1,6 @@
+metric,current,hist_avg_or_median,percentile,source
+Shiller CAPE,41.3,16.5,98.9,"computed vs 1713 mo since 1881 (all-time max 44.2, Dec-1999)"
+Forward P/E,21.0,17.5,>90,web (MacroMicro/investsnips)
+Trailing P/E,28.5,19.5,>90,web (investsnips/worldperatio)
+Price/Sales,3.0,1.5,~99,web (est.)
+Buffett (MktCap/GDP),225.0,100.0,99-100,web (200-250% range)
