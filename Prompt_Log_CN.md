@@ -947,3 +947,24 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: vlcc_seasonality/run_event_vol.py, vlcc_seasonality/data/event_vol_monthly.csv, vlcc_seasonality/data/event_spike_fade.csv
 **更新文件**: vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 48: 组合策略 —— 30/30/40 黄金+指数+alpha 杠铃 + 红利/压舱子仓
+**日期**: 2026年8月4日
+
+用户讨论 30% 黄金 / 30% 标普 / 40% alpha（各 20%、最多 2 领域）组合，接着问加入 XLP/SCHD 红利蓝筹 ETF，再要求比较压舱替代品并整合成报告。
+
+新建 `portfolio/` 文件夹（run_portfolio.py + data/*.csv + 双语 report_en/cn.md；index.md 条目）。
+
+重要自我更正（Rule 4）：早先交互草稿错标资产，因 yfinance 按字母序返回列、非传入顺序，而我按位置重命名。已按明确代码名重拉全部数字更正。就此 yfinance 陷阱存了一条用户记忆。
+
+结论（月度总回报）：
+- 贝塔核心（2005-2026）：黄金 10.6% CAGR / 标普 11.2%，相关 0.08；50/50 保收益、回撤减半（-51% -> -25%），夏普 0.75 -> 约 0.97。再平衡红利是免费午餐。30% 黄金 = 体制押注（长期实际漂移约 0）。
+- 红利/压舱（2011-2026，更正后与标普相关）：BIL -0.00、SHY 0.06、GLD 0.10、XLP 0.65、SPLV 0.74、USMV 0.86、SCHD 0.85。故 SCHD = 质量-价值版标普倾斜（留在指数子仓、非分散器）；XLP = 低贝塔防御股票（下行捕获 -1.87%、约标普 54%），并非我最初误说的近零压舱物。唯一真分散器（相关约 0）= 国债 + 黄金（已持）。加 XLP 是把满贝塔标普换成低贝塔股票（降险、牺牲收益）。
+- 混合：加红利/防御名字小幅削减波动/回撤但不提高收益；最佳夏普来自由黄金出资的小额 XLP 子仓（组合 D，夏普 1.17）。
+- 40% alpha = 全部胜负手：门槛约 10%/年（否则只做指数）；20% 领域 -50% = 整体 -10%；最多 2 领域即内部零分散；两领域须彼此且与核心不相关；周期性 alpha 需 CRule 8 退出。
+- 建议起始配置：25-30 GLD / 20 标普 / 10 SCHD / 5 XLP 或 SHY / 35-40 alpha。
+
+**创建文件**: portfolio/run_portfolio.py, portfolio/report_en.md, portfolio/report_cn.md, portfolio/data/*.csv
+**更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

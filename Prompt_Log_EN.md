@@ -971,3 +971,24 @@ Verdict: meta-principle right + desensitization real, but a strait EVENT is a sp
 
 **Files Created**: vlcc_seasonality/run_event_vol.py, vlcc_seasonality/data/event_vol_monthly.csv, vlcc_seasonality/data/event_spike_fade.csv
 **Files Updated**: vlcc_seasonality/report_en.md, vlcc_seasonality/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 48: Portfolio strategy — 30/30/40 gold+index+alpha barbell + dividend/ballast sleeves
+**Date**: August 4, 2026
+
+User discussed a 30% gold / 30% S&P / 40% alpha (20% each, max 2 domains) portfolio, then asked about adding XLP/SCHD dividend-blue-chip ETFs, then to compare ballast alternatives and fold into a report.
+
+Built new `portfolio/` folder (run_portfolio.py + data/*.csv + bilingual report_en/cn.md; index.md entry). 
+
+IMPORTANT SELF-CORRECTION (Rule 4): an earlier interactive draft mislabeled assets because yfinance returns columns ALPHABETICALLY, not in passed order, and I renamed positionally. Corrected all figures by pulling per explicit ticker name. Stored a user memory about this yfinance gotcha.
+
+Findings (monthly total return):
+- Beta core (2005-2026): gold 10.6% CAGR / S&P 11.2%, corr 0.08; 50/50 keeps return, halves drawdown (-51% -> -25%), Sharpe 0.75 -> ~0.97. The rebalancing bonus is the free lunch. 30% gold = a regime bet (~0 long-run real drift).
+- Dividend/ballast (2011-2026, corrected corr-to-SPX): BIL -0.00, SHY 0.06, GLD 0.10, XLP 0.65, SPLV 0.74, USMV 0.86, SCHD 0.85. So SCHD = quality-value S&P tilt (keep in index sleeve, not a diversifier); XLP = lower-beta defensive EQUITY (down-capture -1.87%, ~54% of S&P), NOT a near-zero ballast as I wrongly said first. Only true diversifiers (corr ~0) = Treasuries + gold (already held). Adding XLP swaps full-beta S&P for lower-beta equity (de-risk, costs return).
+- Blends: adding dividend/defensive names shaves vol/drawdown modestly but doesn't raise return; best Sharpe from a small XLP sleeve funded from gold (portfolio D, Sharpe 1.17).
+- 40% alpha = the whole ballgame: hurdle ~10%/yr (else just index it); a 20% domain -50% = -10% to whole book; max-2-domains = no internal diversification; two domains must be uncorrelated to each other AND the core; cyclical alpha needs CRule 8 exits.
+- Suggested starting allocation: 25-30 GLD / 20 S&P / 10 SCHD / 5 XLP-or-SHY / 35-40 alpha.
+
+**Files Created**: portfolio/run_portfolio.py, portfolio/report_en.md, portfolio/report_cn.md, portfolio/data/*.csv
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

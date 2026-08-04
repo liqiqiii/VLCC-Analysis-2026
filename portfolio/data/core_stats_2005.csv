@@ -1,0 +1,4 @@
+asset,CAGR_pct,Vol_pct,MaxDD_pct,Sharpe
+GLD,10.6,17.2,-42.9,0.62
+SPX,11.2,14.9,-50.9,0.75
+corr_GLD_SPX,0.08,,,

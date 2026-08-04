@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 💼 Portfolio Strategy — The 30/30/40 Gold + Index + Alpha Barbell (NEW — Aug 4, 2026)
+
+Assesses a **30% gold / 30% index / 40% concentrated alpha (max 2 domains)** barbell, plus **dividend/blue-chip (SCHD) and "ballast" (XLP vs low-vol vs Treasuries)** sleeves. **Verdict: the skeleton is sound; the risk is entirely in the 40%.** The **60% core is the free lunch** — gold and the S&P both ~11% CAGR but **corr 0.08**, so 50/50 keeps the return and **halves drawdown** (−51% → −25%, Sharpe 0.75→~0.97) *if you rebalance mechanically*. **30% gold is a macro/regime bet** (~0 long-run real drift — insurance, not compounding). On the dividend idea: **SCHD ≈ a quality-value S&P (corr 0.85), a core tilt not a diversifier**; and a **corrected-data finding — XLP is NOT a near-zero ballast (corr 0.65, ~54% down-capture)**, it's lower-beta *equity* — the only true diversifiers (corr ~0) are **Treasuries + the gold you already own.** The **40% alpha must clear a ~10% hurdle** (or just index it), stay **uncorrelated across both domains**, and run with **hard exit discipline** (a 20% domain −50% = −10% to the whole book). Reproducible backtest + committed CSVs. *Analysis, not investment advice.*
+
+**[📄 Portfolio Strategy (EN) →](portfolio/report_en)** | **[组合策略（中文）→](portfolio/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/portfolio)**
+
+---
+
 ### 🚢📅 VLCC Seasonality — Is the Q4 Stock Bump the Calendar, or the Year's Rate Strength? (NEW — Aug 2, 2026)
 
 Tests whether the seasonal **Q4 VLCC TCE peak** reliably lifts **DHT/FRO** — or whether Q4 stock performance is really about **that year's rate *level***. **Verdict: it's the level, not the calendar.** Over ~16 years Q4 is a **coin-flip** (DHT 50% / FRO 44% of Q4s positive; FRO Q4 **median −4.3%**); the genuinely strong seasonal quarter is **Q1** (DHT +12.5% avg, 75% positive) and **November is the *worst* month** (DHT −5.6%). **But cross-year Q4 return correlates R ≈ 0.60 (DHT) / 0.66 (FRO) with the Q4 TCE level** — high-rate Q4s rip (2019/2014/2022), low-rate Q4s fall (2021/2017). The reason is **CRule 1**: the stock leads the rate 1–3 months, so the *predictable* winter bump is pre-priced (→ Q1 confirmation + Nov sell-the-news), and only a **surprise in the level** pays. **2026 already fired its move in Q1 (DHT +53%, FRO +65%)** front-running the Mar/Jun >\$400k spikes — so "buy for Q4 seasonality" is not an edge. Reproducible script + committed CSVs. *Analysis, not investment advice.*
