@@ -11,7 +11,8 @@ title: Market Gauge — How High Is the S&P 500, and How Good Is the Quality? (A
 
 > **TL;DR — expensive and stretched, but genuinely high-quality. "Priced for perfection," not "junk bubble."**
 > - **Valuation: historically extreme.** Shiller **CAPE 41.3 = the 98.9th percentile since 1881** (median 16.5; only the Dec-1999 peak of 44.2 was ever higher). Forward P/E ~21 (vs ~17–18 norm), trailing ~28, P/S ~3 (vs ~1.5), **Buffett indicator ~225% of GDP (~99th pct).** *Every* metric says expensive.
-> - **Breadth: two-faced.** *Participation* is healthy (~**69% of the S&P above its 200-day MA**), but *leadership concentration* is still the **narrowest in 20 years** — equal-weight/cap-weight (RSP/SPY) sits at the **3rd percentile** of 2005–26. The "widening" is real on a 3-month view (+1.8%) but **fragile**: the last *week* re-narrowed −3.5% on mega-cap earnings, and only **3 of 11 sectors** beat the S&P over the past month.
+> - **Breadth: two-faced.** *Participation* is healthy (**72% of the S&P above its 200-day MA, 70% above its 60-day MA** — computed from 503 constituents, Aug 4), but *leadership concentration* is still the **narrowest in 20 years** — equal-weight/cap-weight (RSP/SPY) sits at the **3rd percentile** of 2005–26. The "widening" is real on a 3-month view (+1.8%) but **fragile**: the last *week* re-narrowed −3.5% on mega-cap earnings, and only **3 of 11 sectors** beat the S&P over the past month.
+> - **Forward returns: the price you pay caps what you get.** Backtesting **145 years**, the cheapest CAPE decile returned **+11.7%/yr real** over the next 10 years; the most expensive **+0.6%/yr**. **Starting from CAPE ≥34 (like today's 41.3), the average forward 10-yr real return was −2.4%/yr (range −5.9% to +1.7%)** — see §9. Every prior CAPE ~40 (1929, 2000) preceded a **−43% to −77% real drawdown**.
 > - **Positioning: stretched/asymmetric.** CTAs net long (~$34B S&P) with **$100B+ of *mechanical* downside** if momentum breaks; **VIX 16.5 (48th pct)** — no fear cushion.
 > - **Quality: the genuine bull anchor.** **Record earnings + record net margins.** This is why it's the [AI-bubble report's](../ai_bubble/report_en) "**1998→late-1999, loaded but unlit**" market, *not* a profitless-1999 blow-off. High price, but real earnings underneath.
 > - **Net: the market is HIGH (valuation ~99th pct, positioning stretched) with a THIN margin of safety — but the quality is high. Vulnerable to a positioning/rate/credit shock, not to a valuation-only collapse.**
@@ -62,7 +63,7 @@ Applies the **Two-Step Research Protocol**. §1 method · §2 Step-1 draft · §
 
 # Section 4 — Breadth: the two faces (is the rally broadening?)
 
-**Face A — participation is healthy (bullish):** ~**69% of S&P 500 stocks are above their 200-day MA** (some screens up to 95%), well above the long-run norm. On a 3-month view the equal-weight index is catching up (RSP/SPY **+1.8%**).
+**Face A — participation is healthy (bullish):** **72% of S&P 500 constituents are above their 200-day MA and 70% above their 60-day MA** (computed from 503 members, Aug 4, 2026 — chart in §9.1; matches the web's ~69%). On a 3-month view the equal-weight index is catching up (RSP/SPY **+1.8%**).
 
 **Face B — leadership concentration is the narrowest in 20 years (cautionary):**
 
@@ -146,14 +147,84 @@ What would improve quality: RSP/SPY rising for months + >6/11 sectors leading
 
 ---
 
+# Section 9 — Deep-Dive Update (Aug 4, 2026): true breadth, charts, forward returns & valuation peaks
+
+> Added per the user's follow-up: (a) **true** breadth from the 503 constituents (% above **60-day** and **200-day** MA), (b) a **CAPE → forward-return backtest**, **charts** to see the trends, and a **peak/bottom history** ("a high P/E like 26 — which year, why, and what happened after?"). All reproducible via `run_deep_dive.py`.
+
+## 9.0 Two-Step Protocol (for the new claims)
+
+**Step 1 — Concise draft.** *Core conclusion:* today's valuation (CAPE ~99th pct) sits in the zone that, across 145 years, preceded **near-zero-to-negative 10-yr real returns**, while breadth confirms healthy-but-narrow participation — reinforcing the §8 "priced-for-perfection" verdict.
+- Support 1: *cheap-start → high forward return, expensive-start → low* → CAPE decile table (§9.2). *Evidence: obtained.*
+- Support 2: *every prior CAPE ~40 ended badly* → 1929/2000 drawdowns −77%/−43% (§9.3). *Evidence: obtained.*
+- Support 3: *participation is genuinely broad now* → 72% >200dma / 70% >60dma computed (§9.1). *Evidence: obtained.*
+- Counter 1: *high margins/structure may justify higher CAPE* → margins record; index tech-tilted. *Evidence: partial — margin mean-reversion unknown.*
+- Counter 2: *CAPE is not a timing tool* → it's been >30 since ~2017 and the market rose. *Evidence: obtained (1-yr column is weak).*
+
+**Step 2 — Peer review.** (1) *Verify:* the 41.3 print (web) vs my Shiller file that ends Sept-2023 — the percentile/backtest use history **through the file**, and 41.3 is applied as a marker; the constituent breadth uses **current** membership (survivorship bias — dropped names excluded). (2) *Equivocation:* "forward 10-yr real −2.4%" is an **average of overlapping** start-months (autocorrelated; small effective n≈36) — directionally strong, statistically soft. (3) *Missing counter:* the CAPE ≥34 sample is dominated by **1998–2000 and 2021** — a narrow set of regimes, not 145 independent draws. (4) *Primary sources:* Shiller original series; Bunn/Shiller CAPE-return studies; a survivorship-free constituent history. (5) *Speculation, not fact:* that today "must" deliver −2.4% (it's a base rate, not a forecast); the peak analogies (each cycle differs).
+
+## 9.1 True breadth from constituents (computed today)
+
+**As of Aug 4, 2026: 72% of the 503 members are above their 200-day MA, 70% above their 60-day MA.** This *confirms* (and slightly upgrades) the web's ~69% and settles §4's "Face A" — participation is genuinely broad, and the 60-day (faster) line sitting just below the 200-day says the very-recent momentum is neither overheated nor breaking.
+
+![S&P 500 breadth — % of constituents above moving averages](charts/breadth_constituents.png)
+
+*Read: healthy participation (both lines ~70%), recovered from the early-2026 dip. But recall §4 Face B — this broad participation coexists with **record cap-weight concentration** (RSP/SPY 3rd percentile). Two true things at once.*
+
+## 9.2 Valuation through time + the forward-return backtest
+
+**Is forward P/E ~21 really above the historical average? Yes** — forward P/E ~21 vs a ~10-yr average of ~17–18 is **~15–20% above trend**; the longer-history median P/E is ~15–16, so it's richer still. But the cleanest long-history anchor is **CAPE**:
+
+![Shiller CAPE 1881–2026](charts/cape_history.png)
+
+*Today's CAPE 41.3 (red) is above the 1929 peak (32.6) and the 2021 peak (38.6), and second only to the 2000 peak (44.2), versus a 145-yr median of ~17.*
+
+**The backtest — starting valuation vs subsequent real total return (annualized, 1881→now):**
+
+| CAPE decile | CAPE range | Fwd 1-yr | Fwd 3-yr | **Fwd 10-yr** |
+|---|---|---|---|---|
+| 1 (cheapest) | 4.8–9.3 | +16.7% | +12.8% | **+11.7%** |
+| 5 (median) | 15.0–16.5 | +7.2% | +5.0% | **+6.7%** |
+| 9 | 22.4–26.9 | +6.2% | +5.7% | **+4.5%** |
+| **10 (most expensive)** | **26.9–44.2** | +2.9% | +0.9% | **+0.6%** |
+| **Start at CAPE ≥34 (like today)** | ≥34 | — | — | **−2.4%/yr avg (−5.9% to +1.7%)** |
+
+![Starting CAPE vs forward 10-yr real return](charts/cape_forward_scatter.png)
+
+**Read:** the relationship is monotonic and strong — **the price you pay caps the return you get.** The top decile has *historically* delivered ~0%/yr real over a decade; the ≥34 zone (where we are) has averaged **negative**. *Caveat (§9.0): this is a base rate over overlapping, regime-clustered windows — a low-return *tilt*, not a dated forecast, and it says little about the next 1–2 years (the 1-yr column is noisy).* 
+
+## 9.3 Valuation peaks & troughs — which year, why, what happened after
+
+*(Real total-return drawdown and forward-10-yr real CAGR computed from Shiller's real-TR index.)*
+
+| Event | ~CAPE | Driver | Next 5-yr **real drawdown** | Next 10-yr real CAGR |
+|---|---|---|---|---|
+| **1929-09 peak** | 32.6 | Roaring-20s leverage/margin mania | **−77%** | −1.4%/yr |
+| 1966 peak | 24.1 | Nifty-Fifty start; pre-stagflation | −22% | −2.5%/yr |
+| **2000-03 peak** | **44.2** | Dot-com internet bubble | **−43%** | −2.8%/yr |
+| 2007-10 peak | 27.5 | Housing/credit peak | −50% | +5.7%/yr |
+| 2021-12 peak | 38.6 | Post-COVID stimulus / mega-cap | −24% *(partial)* | −5.8%/yr *(ongoing)* |
+| **1982-07 trough** | **6.6** | Volcker recession; 14% inflation broke | 0% | **+14.3%/yr** |
+| **2009-03 trough** | 13.3 | GFC bottom | 0% | **+14.3%/yr** |
+
+**On the user's specific example — "a high P/E like 26":** a *trailing* P/E in the mid-to-high 20s (CAPE mid-20s to ~30) has clustered at **1929, 1966, 2007** — each a **major top** that preceded −22% to −77% real drawdowns and a **lost decade** of real returns. The mirror image is decisive: the two **cheapest** starts (1982 CAPE 6.6, 2009 CAPE 13.3) delivered **+14%/yr real** for the next decade. **Valuation didn't time the exact top, but it powerfully set the 10-year payoff — and today's 41.3 is on the wrong end of that.**
+
+## 9.4 What this adds to the verdict
+
+- The §8 "priced for perfection" call is **reinforced with a number**: from here, the *base-rate* 10-yr real return is **~0 to negative**, and every historical CAPE ~40 preceded a deep real drawdown.
+- **But quality (§7) and broad participation (§9.1) are why it's "1998→late-1999," not March-2000** — real earnings, 72% of stocks participating. High price on high quality.
+- **Practical implication is unchanged and sharper:** a low expected *return* + thin margin of safety argues for the [30/30/40 barbell](../portfolio/report_en) (gold's uncorrelated real return matters more when equity forward returns are low) and for **watching positioning/credit for the turn** — valuation sets the *stakes*, not the *timing*.
+
+---
+
 ## Reproduce it yourself
 
 ```
 cd market_gauge
 python run_market_gauge.py     # writes data/*.csv (breadth, sector breadth, valuation, VIX, scorecard)
+python run_deep_dive.py        # §9: constituent breadth (60/200dma), CAPE forward returns, peaks -> charts/*.png
 ```
 
-**Data files** (`market_gauge/data/`): `breadth.csv`, `sector_breadth.csv`, `valuation.csv`, `vix.csv`, `scorecard.csv`. CAPE percentile computed from Yale `ie_data.xls` (cached locally).
+**Data files** (`market_gauge/data/`): `breadth.csv`, `sector_breadth.csv`, `valuation.csv`, `vix.csv`, `scorecard.csv`, plus §9: `breadth_constituents.csv`, `cape_forward_returns.csv`, `valuation_peaks.csv`. **Charts** (`market_gauge/charts/`): `breadth_constituents.png`, `cape_history.png`, `cape_forward_scatter.png`. CAPE computed from Yale `ie_data.xls`; constituents from the `datasets/s-and-p-500-companies` list.
 
 **Sources (accessed Aug 4, 2026):** yfinance (RSP, SPY, ^VIX, 11 SPDR sectors); Yale/Shiller `ie_data.xls` (CAPE 1881–now); web valuation (MacroMicro, investsnips, GuruFocus, worldperatio — forward/trailing P/E, CAPE, Buffett); breadth (Stock Alarm Pro, MacroMicro, CondorEdge — %>200dma, A/D); positioning (Goldman/Deutsche Bank via Yahoo/Hedgeweek/Investing.com — CTA/sentiment). **PE/PS/Buffett are point-in-time estimates (Rule 4); CTA snapshots conflict by date.**
 

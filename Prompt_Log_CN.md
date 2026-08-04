@@ -988,3 +988,24 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: market_gauge/run_market_gauge.py, market_gauge/report_en.md, market_gauge/report_cn.md, market_gauge/data/*.csv
 **更新文件**: index.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 50: 市场标尺深挖 —— 成分股广度（60/200 日）、CAPE 前瞻回报回测、图表、估值峰谷
+**日期**: 2026年8月4日
+
+用户对市场标尺报告的追问：(a) 由成分股计算真实的标普在 60 日与 200 日均线上方占比；(b) 回测 CAPE vs 前瞻回报；用今日最新数据核对；确认前瞻 PE 约 21 高于历史均值；画图；加峰/底分析（像 26 这样的高 PE——哪一年、为什么、之后如何）。
+
+新增 run_deep_dive.py + 第 9 节到 market_gauge/report_en.md + report_cn.md（双语，9.0 含两步协议）+ 3 张图表。
+
+结论（全部可复现；数据卫生：yfinance 按名称、CAPE 来自耶鲁 ie_data.xls 截至 2023 年 9 月故 41.3 为网络标记、成分股来自 datasets GitHub CSV）：
+- 由 503 只成分股得出的真实广度（2026 年 8 月 4 日）：72% 在 200 日上方、70% 在 60 日上方——确认/上修网络约 69%；参与健康、未过热。
+- 前瞻 PE 约 21 对比 10 年均值约 17-18 = 高出约 15-20%（确认高于均值）。CAPE 41.3 高于 1929（32.6）与 2021（38.6）峰，仅次于 2000（44.2）；中位约 17。
+- CAPE 前瞻回报回测（1881 至今、实际总回报）：最便宜十分位前瞻 10 年 +11.7%/年，最贵十分位 +0.6%/年，单调。从 CAPE >=34 起步（如今天）：前瞻 10 年平均实际 -2.4%/年（区间 -5.9% 至 +1.7%）。你付的价格决定回报。
+- 估值峰/底 -> 之后如何（席勒实际 TR）：1929 峰（CAPE 32.6）此后 5 年实际回撤 -77%、10 年 -1.4%/年；2000 峰（44.2）-43%/-2.8%；2007（27.5）-50%/+5.7%；2021（38.6）-24%（部分）/-5.8%；底部 1982（6.6）与 2009（13.3）-> 此后十年 +14.3%/年。"像 26 的高 PE"聚集于 1929/1966/2007 顶部。
+- 图表：breadth_constituents.png、cape_history.png、cape_forward_scatter.png。
+
+结论：用一个数字强化 §8"为完美定价"——基率前瞻 10 年实际约 0 至负；但质量 + 宽参与使其为"1998->1999 年末"而非 2000 年 3 月。估值设定赌注、而非时机。
+
+**创建文件**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png, market_gauge/data/{breadth_constituents,cape_forward_returns,valuation_peaks}.csv
+**更新文件**: market_gauge/report_en.md, market_gauge/report_cn.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md

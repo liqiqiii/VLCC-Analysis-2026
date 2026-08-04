@@ -1012,3 +1012,24 @@ Verdict: "priced for perfection" — high price, high quality, thin margin of sa
 
 **Files Created**: market_gauge/run_market_gauge.py, market_gauge/report_en.md, market_gauge/report_cn.md, market_gauge/data/*.csv
 **Files Updated**: index.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 50: Market Gauge deep-dive — constituent breadth (60/200dma), CAPE forward-return backtest, charts, valuation peaks
+**Date**: August 4, 2026
+
+User follow-up on the Market Gauge report: (a) compute TRUE % of S&P above 60-day AND 200-day MA from constituents; (b) backtest CAPE vs forward returns; check with latest data today; confirm forward PE ~21 is above history avg; draw charts; add peak/bottom analysis (a high PE like 26 - which year, why, what happened after).
+
+Added run_deep_dive.py + Section 9 to market_gauge/report_en.md + report_cn.md (bilingual, Two-Step Protocol in 9.0) + 3 charts.
+
+Findings (all reproducible; data hygiene: yfinance by name, CAPE from Yale ie_data.xls which ends Sep-2023 so 41.3 is a web marker, constituents from datasets GitHub CSV):
+- TRUE breadth from 503 constituents (Aug 4, 2026): 72% above 200dma, 70% above 60dma - confirms/upgrades the web ~69%; healthy participation, not overheated.
+- Forward PE ~21 vs 10yr avg ~17-18 = ~15-20% above trend (confirmed above average). CAPE 41.3 above 1929 (32.6) and 2021 (38.6) peaks, 2nd only to 2000 (44.2); median ~17.
+- CAPE forward-return backtest (1881-now, real total return): cheapest decile +11.7%/yr fwd-10y, most expensive decile +0.6%/yr, MONOTONIC. Starting CAPE >=34 (like today): avg fwd-10y real -2.4%/yr (range -5.9% to +1.7%). The price you pay caps the return.
+- Valuation peaks/troughs -> what happened after (Shiller real-TR): 1929 peak (CAPE 32.6) next-5y real drawdown -77%, 10y -1.4%/yr; 2000 peak (44.2) -43%/-2.8%; 2007 (27.5) -50%/+5.7%; 2021 (38.6) -24%(partial)/-5.8%; troughs 1982 (6.6) & 2009 (13.3) -> +14.3%/yr next decade. "High PE like 26" clustered at 1929/1966/2007 tops.
+- Charts: breadth_constituents.png, cape_history.png, cape_forward_scatter.png.
+
+Verdict: reinforces §8 "priced for perfection" with a number - base-rate fwd-10y real ~0 to negative; but quality + broad participation keep it "1998->late-1999" not March-2000. Valuation sets the stakes, not the timing.
+
+**Files Created**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png, market_gauge/data/{breadth_constituents,cape_forward_returns,valuation_peaks}.csv
+**Files Updated**: market_gauge/report_en.md, market_gauge/report_cn.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md
