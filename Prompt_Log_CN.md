@@ -1025,3 +1025,18 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 更新 report_en.md + report_cn.md（双语）的图注/正文以描述双面板与重构说明。
 
 **更新文件**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png（重新生成）, market_gauge/data/breadth_constituents.csv, market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 52: 市场标尺 —— 增加股权风险溢价（超额 CAPE 收益率）作为利率感知的第 4 指标（§9.2a）
+**日期**: 2026年8月5日
+
+用户：加入 ERP（盈利收益率减 10 年期，约 4.6%）的近 10 年——原始 CAPE 在更高利率体制下漏掉的"对债券"视角。
+
+在 run_deep_dive.py 增加 erp_excess_cape_yield() + 新图 erp_excess_cape_yield.png（双面板：1920-2026 + 近 10 年）+ report_en/cn.md 第 9.2a 节（双语）+ TL;DR 一条。
+
+方法（Rule 4）：ECY = CAPE 实际盈利收益率（1/CAPE）− 实际 10Y。历史 = 席勒自有的超额 CAPE 收益率列，截至 2023 年 9 月；2023-26 延伸锚定该末值（1.87%），按 CAPE 收益率与名义 10Y（^TNX）的变化移动——恒定通胀预期在利率差中抵消。
+
+结论：ECY 现约 +1.0%，低于十年中位（约 2.6%）与长期中位（约 3.5%）= 十年来股票对债券最薄缓冲（2010 中期约 4%、2020 低点约 4.9%）。但仍为正，不同于 2000 峰（-2.6%）：因 2000 是高 CAPE 叠加高实际利率，而今天实际利率更低。两面：偏空（溢价从 4%->1%、债券成真实竞争）但缓和（按利率约第 10-25 百分位、薄但为正、非 2000 零溢价极端——反对纯"CAPE=2000 重演"的最强论据；强化杠铃的黄金 + 国债片）。
+
+**更新文件**: market_gauge/run_deep_dive.py, market_gauge/charts/erp_excess_cape_yield.png（新）, market_gauge/data/excess_cape_yield.csv（新）, market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

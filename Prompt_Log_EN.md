@@ -1049,3 +1049,18 @@ Rebuilt all 3 charts in run_deep_dive.py as 2-panel (full history + last ~10 yea
 Updated captions/text in report_en.md + report_cn.md (bilingual) to describe the 2-panel views and the reconstruction note.
 
 **Files Updated**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png (regenerated), market_gauge/data/breadth_constituents.csv, market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 52: Market Gauge — add equity risk premium (Excess CAPE Yield) as the rate-aware 4th metric (§9.2a)
+**Date**: August 5, 2026
+
+User: add ERP (earnings yield minus 10-yr, ~4.6%) over the last 10 years - the "vs bonds" angle that raw CAPE misses in a higher-rate regime.
+
+Added erp_excess_cape_yield() to run_deep_dive.py + new chart erp_excess_cape_yield.png (2-panel: 1920-2026 + last 10 years) + Section 9.2a to report_en/cn.md (bilingual) + TL;DR bullet.
+
+Method (Rule 4): ECY = CAPE real earnings yield (1/CAPE) - real 10Y. History = Shiller's own Excess CAPE Yield column through Sep-2023; 2023-26 extension anchored to that last value (1.87%) and moved by the change in CAPE-yield and nominal 10Y (^TNX) - a constant inflation expectation cancels in the rate difference.
+
+Finding: ECY now ~+1.0%, below the decade median (~2.6%) and long-run median (~3.5%) = thinnest equity cushion over bonds in a decade (was ~4% mid-2010s, ~4.9% at 2020 low). BUT still POSITIVE, unlike the 2000 peak (-2.6%): because 2000 paired high CAPE with high real rates while today's real rates are lower. Two-sided: bearish (premium compressed 4%->1%, bonds now real competition) but tempering (rate-adjusted we're ~10-25th pct, thin-but-positive, NOT the 2000 no-premium extreme - the strongest argument against a pure "CAPE=2000 redux" panic; reinforces the barbell's gold + Treasury sliver).
+
+**Files Updated**: market_gauge/run_deep_dive.py, market_gauge/charts/erp_excess_cape_yield.png (new), market_gauge/data/excess_cape_yield.csv (new), market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

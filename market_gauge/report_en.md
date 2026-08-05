@@ -11,6 +11,7 @@ title: Market Gauge — How High Is the S&P 500, and How Good Is the Quality? (A
 
 > **TL;DR — expensive and stretched, but genuinely high-quality. "Priced for perfection," not "junk bubble."**
 > - **Valuation: historically extreme.** Shiller **CAPE 41.3 = the 98.9th percentile since 1881** (median 16.5; only the Dec-1999 peak of 44.2 was ever higher). Forward P/E ~21 (vs ~17–18 norm), trailing ~28, P/S ~3 (vs ~1.5), **Buffett indicator ~225% of GDP (~99th pct).** *Every* metric says expensive.
+> - **…but adjusted for rates, thin — not apocalyptic.** The **Excess CAPE Yield (equity earnings yield − real 10-yr) ≈ +1.0%**, below the decade median (~2.6%) and long-run (~3.5%) — the **thinnest cushion over bonds in a decade** — yet still **positive, unlike the 2000 peak (−2.6%)**. Bonds at 4.6% are now real competition (§9.2a).
 > - **Breadth: two-faced.** *Participation* is healthy (**72% of the S&P above its 200-day MA, 70% above its 60-day MA** — computed from 503 constituents, Aug 4), but *leadership concentration* is still the **narrowest in 20 years** — equal-weight/cap-weight (RSP/SPY) sits at the **3rd percentile** of 2005–26. The "widening" is real on a 3-month view (+1.8%) but **fragile**: the last *week* re-narrowed −3.5% on mega-cap earnings, and only **3 of 11 sectors** beat the S&P over the past month.
 > - **Forward returns: the price you pay caps what you get.** Backtesting **145 years**, the cheapest CAPE decile returned **+11.7%/yr real** over the next 10 years; the most expensive **+0.6%/yr**. **Starting from CAPE ≥34 (like today's 41.3), the average forward 10-yr real return was −2.4%/yr (range −5.9% to +1.7%)** — see §9. Every prior CAPE ~40 (1929, 2000) preceded a **−43% to −77% real drawdown**.
 > - **Positioning: stretched/asymmetric.** CTAs net long (~$34B S&P) with **$100B+ of *mechanical* downside** if momentum breaks; **VIX 16.5 (48th pct)** — no fear cushion.
@@ -194,6 +195,20 @@ What would improve quality: RSP/SPY rising for months + >6/11 sectors leading
 
 **Read:** the relationship is monotonic and strong — **the price you pay caps the return you get.** The top decile has *historically* delivered ~0%/yr real over a decade; the ≥34 zone (where we are) has averaged **negative**. **Strikingly, the recent-decade panel slopes down too:** even at a 1-year horizon, the decade's *highest* CAPE readings (the 2021 peak, ~38) were followed by **−10% to −20% real** (the 2022 bear), while the cheaper 2013–2016 starts (CAPE ~24) delivered positive years. *Caveat (§9.0): the recent-decade 1-yr signal leans heavily on the single 2022 episode — suggestive, not proof; and none of this dates the exact top (the 1-yr signal is noisy in the full sample).*
 
+## 9.2a Adjusting for rates — the equity risk premium (the "vs bonds" view)
+
+**The one thing raw CAPE misses:** "expensive vs history" implicitly assumes bonds yield what they used to. They don't — the 10-yr Treasury is **~4.6%** now vs **~2%** through the 2010s. The rate-aware gauge is the **Excess CAPE Yield (ECY) = CAPE real earnings yield (1/CAPE) − real 10-yr yield** — i.e., the premium stocks offer *over bonds*.
+
+![Equity Risk Premium — Excess CAPE Yield, 1920–2026 + last 10 years](charts/erp_excess_cape_yield.png)
+
+**As of Aug 2026, ECY ≈ +1.0%** — below the last-decade median (**~2.6%**) and the long-run median (**~3.5%**): the **thinnest equity cushion over bonds in the entire decade** (it was ~4% in the mid-2010s and ~4.9% at the 2020 low). **But — the crucial nuance — it is still *positive*, unlike the 2000 peak (−2.6%).** Because 2000 paired a high CAPE *with high real rates*, whereas today's real rates are lower, the *rate-adjusted* picture is **expensive but not the no-premium extreme of the dot-com top.**
+
+**Two-sided read:**
+- 🔴 *Bearish:* the premium over bonds has compressed from ~4% (mid-2010s) to ~1% — **bonds are now genuine competition**; this is the higher-for-longer regime taxing equities, and it's why "just own stocks" is a weaker reflex than in the 2010s.
+- 🟢 *Tempering:* on a rates basis we're at roughly the **10–25th percentile — thin, but positive**; part of the raw-CAPE alarm is offset once you stop comparing today's multiple to a near-zero-rate decade. This is the strongest single argument *against* a pure "CAPE = 2000 redux" panic — and it's exactly why the [30/30/40 barbell's](../portfolio/report_en) gold + a Treasury sliver matters more now (bonds finally pay).
+
+*(Data hygiene, Rule 4: ECY history is Shiller's own column through Sep-2023; the 2023–26 extension is anchored to that last value and moved by the change in CAPE-yield and the nominal 10-yr — a constant inflation expectation cancels in the rate difference. Level is approximate; the trend/percentile is robust.)*
+
 ## 9.3 Valuation peaks & troughs — which year, why, what happened after
 
 *(Real total-return drawdown and forward-10-yr real CAGR computed from Shiller's real-TR index.)*
@@ -223,10 +238,10 @@ What would improve quality: RSP/SPY rising for months + >6/11 sectors leading
 ```
 cd market_gauge
 python run_market_gauge.py     # writes data/*.csv (breadth, sector breadth, valuation, VIX, scorecard)
-python run_deep_dive.py        # §9: constituent breadth (60/200dma), CAPE forward returns, peaks -> charts/*.png
+python run_deep_dive.py        # §9: constituent breadth (60/200dma), CAPE forward returns, ERP, peaks -> charts/*.png
 ```
 
-**Data files** (`market_gauge/data/`): `breadth.csv`, `sector_breadth.csv`, `valuation.csv`, `vix.csv`, `scorecard.csv`, plus §9: `breadth_constituents.csv`, `cape_forward_returns.csv`, `valuation_peaks.csv`. **Charts** (`market_gauge/charts/`): `breadth_constituents.png`, `cape_history.png`, `cape_forward_scatter.png`. CAPE computed from Yale `ie_data.xls`; constituents from the `datasets/s-and-p-500-companies` list.
+**Data files** (`market_gauge/data/`): `breadth.csv`, `sector_breadth.csv`, `valuation.csv`, `vix.csv`, `scorecard.csv`, plus §9: `breadth_constituents.csv`, `cape_forward_returns.csv`, `excess_cape_yield.csv`, `valuation_peaks.csv`. **Charts** (`market_gauge/charts/`): `breadth_constituents.png`, `cape_history.png`, `cape_forward_scatter.png`, `erp_excess_cape_yield.png`. CAPE computed from Yale `ie_data.xls`; constituents from the `datasets/s-and-p-500-companies` list; 10-yr yield from yfinance `^TNX`.
 
 **Sources (accessed Aug 4, 2026):** yfinance (RSP, SPY, ^VIX, 11 SPDR sectors); Yale/Shiller `ie_data.xls` (CAPE 1881–now); web valuation (MacroMicro, investsnips, GuruFocus, worldperatio — forward/trailing P/E, CAPE, Buffett); breadth (Stock Alarm Pro, MacroMicro, CondorEdge — %>200dma, A/D); positioning (Goldman/Deutsche Bank via Yahoo/Hedgeweek/Investing.com — CTA/sentiment). **PE/PS/Buffett are point-in-time estimates (Rule 4); CTA snapshots conflict by date.**
 

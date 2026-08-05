@@ -208,6 +208,55 @@ def cape_forward_returns():
     return tab, df
 
 
+# ---------- (c) Equity Risk Premium: Excess CAPE Yield (rate-aware) ----------
+def erp_excess_cape_yield():
+    """Excess CAPE Yield (ECY) = CAPE real earnings yield (1/CAPE) - 10Y REAL yield.
+    Uses Shiller's own ECY column for history (through Sep-2023), then extends to
+    now anchored to that last value by the CHANGE in CAPE-yield and nominal 10Y:
+      ECY_t = ECY_sep23 + (100/CAPE_t - 100/CAPE_sep23) - (TNX_t - TNX_sep23)
+    (a constant inflation expectation cancels in the rate DIFFERENCE)."""
+    raw = pd.read_excel(os.path.join(HERE, "ie_data.xls"), sheet_name="Data", skiprows=7)
+    d = raw.iloc[:, 0].astype(str)
+    yr = pd.to_numeric(d.str.split(".").str[0], errors="coerce")
+    mo = pd.to_numeric(d.str.split(".").str[1].fillna("01").str.pad(2, "right", "0"), errors="coerce")
+    ym = yr + (mo - 1) / 12
+    ecy = pd.to_numeric(raw.iloc[:, 16], errors="coerce") * 100  # -> %
+    hist = pd.DataFrame({"ym": ym, "ECY": ecy}).dropna()
+    ecy_sep23 = float(hist["ECY"].iloc[-1])                       # ~1.87%
+    cape_sep23 = 30.8
+
+    recent = recent_cape_series()                                # ym, CAPE (2023-10..now)
+    tnx = yf.download("^TNX", start="2023-06-01", interval="1mo",
+                      auto_adjust=False, progress=False)["Close"].dropna()
+    tnx = tnx.iloc[:, 0] if hasattr(tnx, "columns") else tnx
+    tnx_sep23 = float(tnx[tnx.index <= "2023-09-30"].iloc[-1])
+    tnx_recent = tnx[tnx.index > "2023-09-30"].reset_index(drop=True)
+    rec = recent.reset_index(drop=True).copy()
+    n = min(len(rec), len(tnx_recent))
+    rec = rec.iloc[:n]
+    rec["ECY"] = ecy_sep23 + (100 / rec["CAPE"] - 100 / cape_sep23) \
+        - (tnx_recent.iloc[:n].values - tnx_sep23)
+    full = pd.concat([hist[["ym", "ECY"]], rec[["ym", "ECY"]]], ignore_index=True)
+    full.to_csv(os.path.join(OUT, "excess_cape_yield.csv"), index=False)
+    cur = float(rec["ECY"].iloc[-1])
+    print(f"\nExcess CAPE Yield now ~{cur:.1f}% (vs Sep-2023 {ecy_sep23:.1f}%; 2000 low {hist['ECY'].min():.1f}%)")
+
+    fig, (axL, axR) = plt.subplots(1, 2, figsize=(14, 5), gridspec_kw={"width_ratios": [2.2, 1]})
+    for ax, sub, ttl in [(axL, full[full["ym"] >= 1920], "1920-2026"),
+                         (axR, full[full["ym"] >= 2016], "LAST ~10 YEARS (2016-2026)")]:
+        ax.plot(sub["ym"], sub["ECY"], lw=1.0, color="#6b46c1")
+        ax.axhline(0, color="red", lw=0.8, ls="-", alpha=0.6)
+        ax.axhline(sub["ECY"].median(), color="green", lw=0.8, ls=":", label=f"median {sub['ECY'].median():.1f}%")
+        ax.axhline(cur, color="black", lw=1.0, ls="--", label=f"today ~{cur:.1f}%")
+        ax.set_ylabel("Excess CAPE Yield (%)"); ax.grid(alpha=0.2); ax.set_title(ttl); ax.legend(loc="upper right")
+    axL.annotate("2000 (negative!)", (2000, -1.8), fontsize=8, color="crimson")
+    fig.suptitle("Equity Risk Premium (Excess CAPE Yield = real earnings yield - real 10Y): thin ~1% now, but NOT the negative 2000 extreme",
+                 y=1.02, fontsize=10)
+    fig.tight_layout(); fig.savefig(os.path.join(CH, "erp_excess_cape_yield.png"), dpi=110, bbox_inches="tight")
+    plt.close(fig)
+    return cur
+
+
 # ---------- valuation peak/bottom history ----------
 def peaks_and_troughs(df):
     # Known major CAPE extremes; compute the subsequent drawdown from Shiller RTR
@@ -249,6 +298,7 @@ def peaks_and_troughs(df):
 def main():
     breadth_from_constituents()
     tab, df = cape_forward_returns()
+    erp_excess_cape_yield()
     peaks_and_troughs(df)
     print(f"\nCharts -> {CH}")
     print(f"CSVs   -> {OUT}")
