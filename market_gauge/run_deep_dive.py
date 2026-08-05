@@ -50,7 +50,8 @@ def get_constituents():
 # ---------- (a) TRUE breadth from constituents ----------
 def breadth_from_constituents():
     syms = get_constituents()
-    px = yf.download(syms, start="2022-06-01", interval="1d",
+    # ~11 years so the 200-day MA is valid from ~2015 (a full-decade view)
+    px = yf.download(syms, start="2014-06-01", interval="1d",
                      auto_adjust=True, progress=False)["Close"]
     px = px.dropna(axis=1, how="all")
     ma60 = px.rolling(60).mean()
@@ -59,21 +60,24 @@ def breadth_from_constituents():
     above200 = (px > ma200).sum(axis=1) / px.notna().sum(axis=1) * 100
     bt = pd.DataFrame({"pct_above_60dma": above60.round(1),
                        "pct_above_200dma": above200.round(1)}).dropna()
+    bt = bt[bt.index >= "2015-01-01"]
     bt.to_csv(os.path.join(OUT, "breadth_constituents.csv"))
     cur = bt.iloc[-1]
     print(f"BREADTH from {px.shape[1]} constituents, latest {bt.index[-1].date()}: "
           f">60dma {cur['pct_above_60dma']:.0f}% | >200dma {cur['pct_above_200dma']:.0f}%")
 
-    # chart
-    fig, ax = plt.subplots(figsize=(10, 5))
-    ax.plot(bt.index, bt["pct_above_60dma"], label="% above 60-day MA", lw=1.3, color="#e07b39")
-    ax.plot(bt.index, bt["pct_above_200dma"], label="% above 200-day MA", lw=1.6, color="#2b6cb0")
-    for lvl in (20, 50, 80):
-        ax.axhline(lvl, color="grey", lw=0.5, ls=":")
-    ax.set_title("S&P 500 market breadth — % of constituents above moving averages")
-    ax.set_ylabel("% of index members"); ax.set_ylim(0, 100)
-    ax.legend(loc="lower left"); ax.grid(alpha=0.2)
-    fig.tight_layout(); fig.savefig(os.path.join(CH, "breadth_constituents.png"), dpi=110)
+    # 2-panel chart: full decade (left) + last 12 months zoom (right)
+    fig, (axL, axR) = plt.subplots(1, 2, figsize=(14, 5), gridspec_kw={"width_ratios": [2.4, 1]})
+    for ax, sub, ttl in [(axL, bt, "Last ~10 years (2015-2026)"),
+                         (axR, bt[bt.index >= bt.index[-1] - pd.Timedelta(days=365)], "Last 12 months")]:
+        ax.plot(sub.index, sub["pct_above_60dma"], label="% > 60-day MA", lw=1.2, color="#e07b39")
+        ax.plot(sub.index, sub["pct_above_200dma"], label="% > 200-day MA", lw=1.6, color="#2b6cb0")
+        for lvl in (20, 50, 80):
+            ax.axhline(lvl, color="grey", lw=0.5, ls=":")
+        ax.set_ylim(0, 100); ax.grid(alpha=0.2); ax.set_title(ttl)
+    axL.set_ylabel("% of index members"); axL.legend(loc="lower left")
+    fig.suptitle("S&P 500 breadth — % of constituents above moving averages", y=1.02, fontsize=12)
+    fig.tight_layout(); fig.savefig(os.path.join(CH, "breadth_constituents.png"), dpi=110, bbox_inches="tight")
     plt.close(fig)
     return cur, bt
 
@@ -102,12 +106,32 @@ def load_shiller():
     return df.dropna(subset=["CAPE"]).reset_index(drop=True)
 
 
+# ---------- recent CAPE reconstruction (Shiller mirror ends Sep-2023) ----------
+def recent_cape_series(last_shiller_cape=30.8, target_today=41.3):
+    """Extend CAPE from 2023-10 to now using real price (CPI cancels in CAPE):
+    CAPE_t = CAPE_sep23 * (P_t/P_sep23) / (E10_t/E10_sep23), with the slow E10
+    denominator grown at a constant rate CALIBRATED so the endpoint = today's
+    reported CAPE (41.3). Transparent 2-anchor interpolation, not a new source."""
+    g = yf.download("^GSPC", start="2023-06-01", interval="1mo",
+                    auto_adjust=False, progress=False)["Close"].dropna()
+    g = g.iloc[:, 0] if hasattr(g, "columns") else g
+    p0 = float(g[g.index <= "2023-09-30"].iloc[-1])
+    post = g[g.index > "2023-09-30"]
+    n = len(post)
+    m = (last_shiller_cape * (float(post.iloc[-1]) / p0) / target_today) ** (1 / n) - 1
+    rows = []
+    for k, (dt, px) in enumerate(post.items(), start=1):
+        ym = dt.year + (dt.month - 1) / 12
+        cape = last_shiller_cape * (float(px) / p0) / ((1 + m) ** k)
+        rows.append({"ym": ym, "CAPE": cape})
+    return pd.DataFrame(rows)
+
+
 # ---------- (b) CAPE -> forward real total return ----------
 def cape_forward_returns():
     df = load_shiller()
     df = df.dropna(subset=["RTR"]).reset_index(drop=True)
     rtr = df["RTR"].values
-    cape = df["CAPE"].values
     n = len(df)
     for horizon, key in [(12, "fwd_1y"), (36, "fwd_3y"), (120, "fwd_10y")]:
         fwd = np.full(n, np.nan)
@@ -124,39 +148,63 @@ def cape_forward_returns():
     print("\nCAPE decile -> forward REAL total return (annualized %, 1881-now):")
     print(tab.to_string())
 
-    # what happens starting from today's CAPE bucket (top decile)
     cur_cape = 41.3
-    hi = df[df["CAPE"] >= 34]  # roughly the >=95th pct / dot-com-like zone
+    hi = df[df["CAPE"] >= 34]
     print(f"\nStarting CAPE >= 34 (n={len(hi.dropna(subset=['fwd_10y']))}): "
           f"avg fwd-10y real {hi['fwd_10y'].mean():.1f}%/yr, "
           f"worst {hi['fwd_10y'].min():.1f}%, best {hi['fwd_10y'].max():.1f}%")
 
-    # scatter chart: starting CAPE vs forward 10y real return
-    fig, ax = plt.subplots(figsize=(9, 6))
+    # build a full CAPE series (history + reconstructed recent) for the charts
+    recent = recent_cape_series()
+    full = pd.concat([df[["ym", "CAPE"]], recent], ignore_index=True)
+
+    # ===== CHART 1: scatter — full history (fwd-10y) + last-10yr (fwd-1y) =====
+    fig, (axL, axR) = plt.subplots(1, 2, figsize=(14, 6))
     s = df.dropna(subset=["fwd_10y"])
-    sc = ax.scatter(s["CAPE"], s["fwd_10y"], s=6, alpha=0.35, c=s["ym"], cmap="viridis")
-    ax.axvline(cur_cape, color="red", lw=1.5, ls="--", label=f"today CAPE {cur_cape}")
-    ax.axhline(0, color="grey", lw=0.6)
-    ax.set_xlabel("Starting Shiller CAPE"); ax.set_ylabel("Subsequent 10-yr real total return (%/yr)")
-    ax.set_title("Starting valuation vs forward 10-yr return (S&P, 1881-now)")
-    cb = fig.colorbar(sc); cb.set_label("year")
-    ax.legend(); ax.grid(alpha=0.2)
-    fig.tight_layout(); fig.savefig(os.path.join(CH, "cape_forward_scatter.png"), dpi=110)
+    sc = axL.scatter(s["CAPE"], s["fwd_10y"], s=6, alpha=0.35, c=s["ym"], cmap="viridis")
+    axL.axvline(cur_cape, color="red", lw=1.5, ls="--", label=f"today CAPE {cur_cape}")
+    axL.axhline(0, color="grey", lw=0.6)
+    axL.set_xlabel("Starting Shiller CAPE"); axL.set_ylabel("Subsequent 10-yr real return (%/yr)")
+    axL.set_title("FULL HISTORY (1881-now): CAPE vs forward 10-yr return")
+    axL.legend(); axL.grid(alpha=0.2)
+    fig.colorbar(sc, ax=axL, label="year")
+    # right: last-10-years starts (2013-2022) CAPE vs forward 1-yr real return
+    rec = df[(df["ym"] >= 2013) & (df["ym"] <= 2022.8)].dropna(subset=["fwd_1y"])
+    sc2 = axR.scatter(rec["CAPE"], rec["fwd_1y"], s=18, alpha=0.7, c=rec["ym"], cmap="plasma")
+    axR.axhline(0, color="grey", lw=0.6)
+    axR.set_xlabel("Starting Shiller CAPE"); axR.set_ylabel("Subsequent 1-yr real return (%)")
+    axR.set_title("LAST ~10 YEARS (2013-2022 starts): CAPE vs forward 1-yr")
+    axR.grid(alpha=0.2)
+    fig.colorbar(sc2, ax=axR, label="year")
+    fig.suptitle("Higher starting CAPE -> lower forward return: full history (10-yr) AND the recent decade (1-yr; note the 2021 peak preceding 2022)",
+                 y=1.02, fontsize=10)
+    fig.tight_layout(); fig.savefig(os.path.join(CH, "cape_forward_scatter.png"), dpi=110, bbox_inches="tight")
     plt.close(fig)
 
-    # CAPE history line chart with peaks annotated
-    fig, ax = plt.subplots(figsize=(11, 5))
-    ax.plot(df["ym"], df["CAPE"], lw=0.8, color="#2b6cb0")
-    ax.axhline(df["CAPE"].median(), color="green", lw=0.8, ls=":", label=f"median {df['CAPE'].median():.0f}")
-    ax.axhline(cur_cape, color="red", lw=1.0, ls="--", label=f"today {cur_cape}")
+    # ===== CHART 2: CAPE history — full 1881-2026 + last-10-year zoom =====
+    fig, (axL, axR) = plt.subplots(1, 2, figsize=(14, 5), gridspec_kw={"width_ratios": [2.2, 1]})
+    axL.plot(df["ym"], df["CAPE"], lw=0.8, color="#2b6cb0")
+    axL.plot(recent["ym"], recent["CAPE"], lw=1.2, color="#c0392b")  # reconstructed tail
+    axL.axhline(df["CAPE"].median(), color="green", lw=0.8, ls=":", label=f"median {df['CAPE'].median():.0f}")
+    axL.axhline(cur_cape, color="red", lw=1.0, ls="--", label=f"today {cur_cape}")
     for yr, lab in [(1929.7, "1929"), (2000.0, "2000"), (2021.9, "2021")]:
         row = df.iloc[(df["ym"] - yr).abs().argmin()]
-        ax.annotate(lab, (row["ym"], row["CAPE"]), fontsize=8,
-                    xytext=(row["ym"] - 6, row["CAPE"] + 2))
-    ax.set_title("Shiller CAPE, 1881-2026 (with today marked)")
-    ax.set_ylabel("CAPE (P/E10)"); ax.legend(); ax.grid(alpha=0.2)
-    fig.tight_layout(); fig.savefig(os.path.join(CH, "cape_history.png"), dpi=110)
+        axL.annotate(lab, (row["ym"], row["CAPE"]), fontsize=8, xytext=(row["ym"] - 6, row["CAPE"] + 2))
+    axL.set_title("FULL HISTORY 1881-2026"); axL.set_ylabel("CAPE (P/E10)")
+    axL.legend(loc="upper left"); axL.grid(alpha=0.2)
+    # right: last 10 years
+    f10 = full[full["ym"] >= 2016]
+    med10 = f10["CAPE"].median()
+    axR.plot(f10["ym"], f10["CAPE"], lw=1.4, color="#2b6cb0")
+    axR.axhline(med10, color="green", lw=0.9, ls=":", label=f"10-yr median {med10:.0f}")
+    axR.axhline(cur_cape, color="red", lw=1.0, ls="--", label=f"today {cur_cape}")
+    axR.set_title("LAST ~10 YEARS (2016-2026)"); axR.grid(alpha=0.2); axR.legend(loc="upper left")
+    fig.suptitle("Shiller CAPE — today 41.3 is high vs both the century and the decade (2023-26 reconstructed, red)",
+                 y=1.02, fontsize=11)
+    fig.tight_layout(); fig.savefig(os.path.join(CH, "cape_history.png"), dpi=110, bbox_inches="tight")
     plt.close(fig)
+
+    print(f"\nRecent-decade CAPE median (2016-2026): {med10:.1f}; today {cur_cape}")
     return tab, df
 
 

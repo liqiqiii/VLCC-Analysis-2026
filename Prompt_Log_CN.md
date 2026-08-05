@@ -1009,3 +1009,19 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png, market_gauge/data/{breadth_constituents,cape_forward_returns,valuation_peaks}.csv
 **更新文件**: market_gauge/report_en.md, market_gauge/report_cn.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 51: 市场标尺 —— 增加"近 10 年"对照图（广度、CAPE 历史、前瞻回报），双面板
+**日期**: 2026年8月4日
+
+用户：用近 10 年数据重做同样的图（100 年作参考，但 10 年更接近近未来情形）；把它们并入现有图表位置、放在一起。
+
+在 run_deep_dive.py 中把 3 张图重建为双面板（全历史 + 近 10 年），文件名不变以就地替换：
+- breadth_constituents.png：左 = 近 10 年（2015-2026，扩展成分股下载），右 = 近 12 个月。十年广度在 20-90% 间摆动；今天约 70% 属中性偏健康。
+- cape_history.png：左 = 全历史 1881-2026，右 = 近 10 年（2016-2026）。近十年 CAPE 中位约 31；今天 41.3 也高居十年之首。数据卫生（Rule 4）：耶鲁镜像截至 2023 年 9 月（CAPE 30.8）；2023-26 红色尾部由实际价格（^GSPC）重构、把缓慢的 E10 分母校准至已报的 41.3（E10 约 10.7%/年；双锚内插、非新数据源）。
+- cape_forward_scatter.png：左 = 全历史 CAPE vs 前瞻 10 年，右 = 近十年（2013-2022 起点）CAPE vs 前瞻 1 年。重要更正：近十年面板也向下倾斜——2021 CAPE 峰（约 38）先于 2022 的 -10 至 -20% 实际；修正了图标题（原误写"CAPE 不能择时次年"）。警告：依赖 2022 单一事件。
+
+更新 report_en.md + report_cn.md（双语）的图注/正文以描述双面板与重构说明。
+
+**更新文件**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png（重新生成）, market_gauge/data/breadth_constituents.csv, market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

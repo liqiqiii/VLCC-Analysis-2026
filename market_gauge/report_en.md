@@ -166,17 +166,17 @@ What would improve quality: RSP/SPY rising for months + >6/11 sectors leading
 
 **As of Aug 4, 2026: 72% of the 503 members are above their 200-day MA, 70% above their 60-day MA.** This *confirms* (and slightly upgrades) the web's ~69% and settles §4's "Face A" — participation is genuinely broad, and the 60-day (faster) line sitting just below the 200-day says the very-recent momentum is neither overheated nor breaking.
 
-![S&P 500 breadth — % of constituents above moving averages](charts/breadth_constituents.png)
+![S&P 500 breadth — % of constituents above moving averages, last 10 years + last 12 months](charts/breadth_constituents.png)
 
-*Read: healthy participation (both lines ~70%), recovered from the early-2026 dip. But recall §4 Face B — this broad participation coexists with **record cap-weight concentration** (RSP/SPY 3rd percentile). Two true things at once.*
+*Left: the **last ~10 years (2015–2026)**; right: the **last 12 months**. Read: healthy participation (both lines ~70%), recovered from the early-2026 dip. Across the decade, breadth swings 20–90% — today's ~70% is middling-to-healthy, not euphoric. But recall §4 Face B — this broad participation coexists with **record cap-weight concentration** (RSP/SPY 3rd percentile). Two true things at once.*
 
 ## 9.2 Valuation through time + the forward-return backtest
 
 **Is forward P/E ~21 really above the historical average? Yes** — forward P/E ~21 vs a ~10-yr average of ~17–18 is **~15–20% above trend**; the longer-history median P/E is ~15–16, so it's richer still. But the cleanest long-history anchor is **CAPE**:
 
-![Shiller CAPE 1881–2026](charts/cape_history.png)
+![Shiller CAPE — full history 1881–2026 + last-10-year zoom](charts/cape_history.png)
 
-*Today's CAPE 41.3 (red) is above the 1929 peak (32.6) and the 2021 peak (38.6), and second only to the 2000 peak (44.2), versus a 145-yr median of ~17.*
+*Left: **full history 1881–2026**; right: the **last ~10 years (2016–2026)**. Today's CAPE 41.3 (red) is above the 1929 peak (32.6) and the 2021 peak (38.6), and second only to the 2000 peak (44.2), versus a 145-yr median of ~17. **And it's high even against the recent decade: the 2016–2026 median CAPE is ~31 — today's 41.3 tops the decade too.** (Data-hygiene note, Rule 4: Yale's Shiller mirror ends Sep-2023 at CAPE 30.8; the **2023–2026 tail (red) is reconstructed** from real price with the slow 10-yr-earnings denominator calibrated to the reported 41.3 — a transparent two-anchor interpolation, not a new data source.)*
 
 **The backtest — starting valuation vs subsequent real total return (annualized, 1881→now):**
 
@@ -188,9 +188,11 @@ What would improve quality: RSP/SPY rising for months + >6/11 sectors leading
 | **10 (most expensive)** | **26.9–44.2** | +2.9% | +0.9% | **+0.6%** |
 | **Start at CAPE ≥34 (like today)** | ≥34 | — | — | **−2.4%/yr avg (−5.9% to +1.7%)** |
 
-![Starting CAPE vs forward 10-yr real return](charts/cape_forward_scatter.png)
+![Starting CAPE vs forward return — full history (10-yr) + last decade (1-yr)](charts/cape_forward_scatter.png)
 
-**Read:** the relationship is monotonic and strong — **the price you pay caps the return you get.** The top decile has *historically* delivered ~0%/yr real over a decade; the ≥34 zone (where we are) has averaged **negative**. *Caveat (§9.0): this is a base rate over overlapping, regime-clustered windows — a low-return *tilt*, not a dated forecast, and it says little about the next 1–2 years (the 1-yr column is noisy).* 
+*Left: **full history (1881–now), CAPE vs forward 10-yr real return**; right: the **last ~10 years (2013–2022 starts), CAPE vs forward 1-yr real return**.*
+
+**Read:** the relationship is monotonic and strong — **the price you pay caps the return you get.** The top decile has *historically* delivered ~0%/yr real over a decade; the ≥34 zone (where we are) has averaged **negative**. **Strikingly, the recent-decade panel slopes down too:** even at a 1-year horizon, the decade's *highest* CAPE readings (the 2021 peak, ~38) were followed by **−10% to −20% real** (the 2022 bear), while the cheaper 2013–2016 starts (CAPE ~24) delivered positive years. *Caveat (§9.0): the recent-decade 1-yr signal leans heavily on the single 2022 episode — suggestive, not proof; and none of this dates the exact top (the 1-yr signal is noisy in the full sample).*
 
 ## 9.3 Valuation peaks & troughs — which year, why, what happened after
 

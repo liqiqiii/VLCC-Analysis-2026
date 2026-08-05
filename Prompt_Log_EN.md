@@ -1033,3 +1033,19 @@ Verdict: reinforces §8 "priced for perfection" with a number - base-rate fwd-10
 
 **Files Created**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png, market_gauge/data/{breadth_constituents,cape_forward_returns,valuation_peaks}.csv
 **Files Updated**: market_gauge/report_en.md, market_gauge/report_cn.md, .gitignore, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 51: Market Gauge — add past-10-year companion graphs (breadth, CAPE history, forward-return), 2-panel
+**Date**: August 4, 2026
+
+User: redo the same graphs using the past 10 years (100-yr as reference, but 10-yr closer to the near-future scenario); patch them into the existing graph locations, together.
+
+Rebuilt all 3 charts in run_deep_dive.py as 2-panel (full history + last ~10 years), same filenames so they patch in place:
+- breadth_constituents.png: left = last 10 years (2015-2026, extended constituent download), right = last 12 months. Decade breadth swings 20-90%; today ~70% is middling-to-healthy.
+- cape_history.png: left = full 1881-2026, right = last 10 years (2016-2026). Recent-decade CAPE median ~31; today's 41.3 tops the decade too. Data hygiene (Rule 4): Yale mirror ends Sep-2023 (CAPE 30.8); reconstructed the 2023-26 red tail from real price (^GSPC) with the slow E10 denominator calibrated to the reported 41.3 (E10 ~10.7%/yr; two-anchor interpolation, not a new source).
+- cape_forward_scatter.png: left = full history CAPE vs fwd-10y, right = last decade (2013-2022 starts) CAPE vs fwd-1y. IMPORTANT correction: the recent-decade panel ALSO slopes down - the 2021 CAPE peak (~38) preceded -10 to -20% real in 2022; fixed the chart title (had wrongly said "CAPE doesn't time the next year"). Caveat: leans on the single 2022 episode.
+
+Updated captions/text in report_en.md + report_cn.md (bilingual) to describe the 2-panel views and the reconstruction note.
+
+**Files Updated**: market_gauge/run_deep_dive.py, market_gauge/charts/*.png (regenerated), market_gauge/data/breadth_constituents.csv, market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
