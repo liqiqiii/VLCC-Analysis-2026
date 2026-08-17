@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🏡 Bellevue Buy vs Rent — Housing Investment or Lifestyle Consumption? (NEW — Aug 16, 2026)
+
+A reproducible seven-year terminal-wealth model for a **$1.8M Bellevue home with $900K down**, compared with rents from **$4,300–$8,000/month**. **Key matched-home result:** if the same house rents for **$5,200/month**, buying needs about **4.31% nominal annual appreciation** to match renting under the stated assumptions (4% after-tax alternative return, 1% buy cost, 7% sale cost). At **3% appreciation**, ownership's lifestyle premium is about **$1,960/month**—the price of ownership, customization, and tenure certainty after renting already supplies the same home. Also covers Bellevue's high-end price-to-rent ratios, affordability, tech-employment concentration, and European evidence on nominal versus real house-price growth. Includes the Two-Step Research Protocol and a dependency-free reproducible model. *Analysis, not tax or investment advice.*
+
+**[📄 Buy vs Rent (EN) →](housing/report_en)** | **[Bellevue 买房还是租房（中文）→](housing/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/housing)**
+
+---
+
 ### 📈 Market Gauge — How High Is the S&P 500, and How Good Is the Quality? (NEW — Aug 4, 2026)
 
 A four-axis "market-level" scorecard — **breadth · valuation · positioning · quality**. **Verdict: expensive and stretched, but genuinely high-quality — "priced for perfection," not a junk bubble.** **Valuation is ~99th-percentile extreme** — Shiller **CAPE 41.3 = the 98.9th percentile since 1881** (only the Dec-1999 peak of 44.2 was higher), forward P/E ~21, **Buffett indicator ~225% of GDP**. **Breadth is two-faced:** participation is healthy (~69% of the S&P above its 200-day MA) but *leadership concentration* is the **narrowest in 20 years** (equal-/cap-weight RSP/SPY at the **3rd percentile**); the broadening is real on a 3-month view (+1.8%) but **fragile** (last week re-narrowed −3.5% on mega-cap earnings; only 3/11 sectors beat the index over 1mo). **Positioning is stretched** (CTAs net long with $100B+ mechanical downside; VIX 48th pct — no cushion). **But quality is the anchor** — record earnings + record margins make this the [AI-bubble report's](ai_bubble/report_en) "1998→late-1999, loaded but unlit" market. **Thin margin of safety + high quality → stay invested but hedged/diversified; watch positioning/credit, not the P/E, for the turn.** Reproducible (CAPE percentile from Shiller data, breadth/VIX computed). *Analysis, not investment advice.*

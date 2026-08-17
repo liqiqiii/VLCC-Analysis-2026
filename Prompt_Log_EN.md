@@ -1,7 +1,7 @@
 # Prompt Tracking Log — VLCC Analysis Project
 
 > This file tracks every analytical prompt/directive from the user throughout the project.
-> Updated after each conversation turn. Last updated: **April 23, 2026**.
+> Updated after each conversation turn. Last updated: **August 16, 2026**.
 
 ---
 
@@ -1064,3 +1064,25 @@ Method (Rule 4): ECY = CAPE real earnings yield (1/CAPE) - real 10Y. History = S
 Finding: ECY now ~+1.0%, below the decade median (~2.6%) and long-run median (~3.5%) = thinnest equity cushion over bonds in a decade (was ~4% mid-2010s, ~4.9% at 2020 low). BUT still POSITIVE, unlike the 2000 peak (-2.6%): because 2000 paired high CAPE with high real rates while today's real rates are lower. Two-sided: bearish (premium compressed 4%->1%, bonds now real competition) but tempering (rate-adjusted we're ~10-25th pct, thin-but-positive, NOT the 2000 no-premium extreme - the strongest argument against a pure "CAPE=2000 redux" panic; reinforces the barbell's gold + Treasury sliver).
 
 **Files Updated**: market_gauge/run_deep_dive.py, market_gauge/charts/erp_excess_cape_yield.png (new), market_gauge/data/excess_cape_yield.csv (new), market_gauge/report_en.md, market_gauge/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 53: Bellevue Buy vs Rent — Opportunity Cost, Price-to-Rent, Inflation, and Lifestyle Consumption
+**Date**: August 16, 2026
+
+The user asked to add the full U.S. buy-vs-rent discussion as a standalone section in this GitHub Pages repository. The discussion centers on Bellevue: $900K cash, buying a $1.8M home with a $900K mortgage, and alternatives at $4,300 townhouse / $5,200 same-home / $6,000 / $8,000 monthly rent; the user also observed that a $3M home rents for roughly $7,000.
+
+Built a dependency-free, reproducible seven-year terminal-wealth model and made the key methodology correction explicit: the $36K down-payment opportunity cost in the annual user-cost lens and the renter investing the retained down payment in the terminal model represent the same economic quantity and cannot both be charged. The terminal code uses only the investment-account method. The mortgage amortizes monthly, and deductible interest is recalculated from each year's average balance and the $750K acquisition-debt cap.
+
+Key results:
+- A $1.8M same home at $5,200 rent: 28.8× price-to-rent and 3.47% gross rental yield.
+- A $3M home at $7,000 rent: 35.7× and 2.80%; the extra $1.2M of housing value adds only $1,800 monthly rent, a 1.8% marginal gross yield.
+- Seven-year break-even appreciation at $4,300 / $5,200 / $6,000 / $8,000 monthly rent: about 4.86% / 4.31% / 3.80% / 2.45%.
+- At 3% appreciation, buying versus renting the same home at $5,200 produces about $190K less terminal wealth, equivalent to a $1,960/month ownership lifestyle premium; equivalent economic housing cost is about $7,160/month.
+- Bellevue price-to-income is roughly 8–9× versus about 4–5× nationally. A tech slowdown pressures the cyclical premium, but supply, schools, and amenities are structural; premium compression may occur through nominal stagnation and real decline.
+- Real house-price growth = (1+nominal growth)/(1+inflation)-1. At 3% inflation, seven years of flat nominal prices means -18.7% real. EU 2010–2025Q2 nominal house prices rose about 60.5% and matching HICP about 42.6%, implying roughly 12.6% cumulative real growth (~0.8% annualized).
+
+Applied the Two-Step Research Protocol: Step 1 contains the core conclusion plus 3 supporting and 2 opposing claims; Step 2 is a strict peer review identifying observed rents, insurance, maintenance, transaction costs, and future appreciation as unverified or conditional assumptions.
+
+**Files Created**: housing/run_buy_vs_rent.py, housing/report_en.md, housing/report_cn.md, housing/data/*.csv
+**Files Updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -6,6 +6,12 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### 🏡 Bellevue Buy vs Rent (NEW — August 16, 2026)
+- **[Buy vs Rent EN](housing/report_en.md) | [Bellevue 买房还是租房 CN](housing/report_cn.md)**
+- Seven-year terminal-wealth model: $1.8M home, $900K down, $4,300–$8,000 rent scenarios
+- Same-home result at $5,200 rent: ~4.31% annual appreciation required to break even
+- Reproducible model: `housing/run_buy_vs_rent.py`
+
 ### 📊 Sinokor 40% Dominance & Container Shipping Analog (NEW — April 23, 2026)
 - **[Sinokor & Container Analog EN](19_Sinokor_Container_VLCC_Analog_EN.md) | [兴高海运与集运类比 CN](20_Sinokor_Container_VLCC_Analog_CN.md)** ← NEW
 - How Maersk's 2020–2022 container boom maps onto the 2026 VLCC super-cycle
