@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🚢🏭 VLCC Supply — Does the 2027/2028 Newbuild Wave Break the Cycle? (NEW — Aug 22, 2026)
+
+Turns the scary GROSS delivery numbers (~68 VLCCs in 2027, ~125 in 2028 ≈ **21% of the ~900-ship fleet**) into **NET fleet growth** after scrapping + shadow-fleet exit. **Verdict: materially — but as a 2028 *rate-normaliser*, not a 2027 cycle-killer.** 2028 is +13% gross but only **+4.9% to +9.9% net** (depending on scrapping), and 2027 stays tight (**+2.5–5.8% net**, absorbed by SPR restocking + the shadow-fleet exit). The offset is a **record aging pool** — ~130 VLCCs already >20yo (~20%), doubling to ~300 by 2029–30, forced out by IMO-2030/EEXI/CII. **The whole answer reduces to one variable: does scrapping accelerate?** High-scrap → healthy renewal (fleet shrinks 2029–30); Low-scrap → real oversupply. Confirms the cycle's expiry window (**late-2027/2028**) and the repo's exit discipline (CRule 8). Reproducible net-growth model + chart + 3 scrap scenarios. *Analysis, not investment advice.*
+
+**[📄 VLCC Supply (EN) →](vlcc_supply/report_en)** | **[VLCC 供给（中文）→](vlcc_supply/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/vlcc_supply)**
+
+---
+
 ### 🏡 Bellevue Buy vs Rent — Housing Investment or Lifestyle Consumption? (NEW — Aug 16, 2026)
 
 A reproducible seven-year terminal-wealth model for a **$1.8M Bellevue home with $900K down**, compared with rents from **$4,300–$8,000/month**. **Key matched-home result:** if the same house rents for **$5,200/month**, buying needs about **4.31% nominal annual appreciation** to match renting under the stated assumptions (4% after-tax alternative return, 1% buy cost, 7% sale cost). At **3% appreciation**, ownership's lifestyle premium is about **$1,960/month**—the price of ownership, customization, and tenure certainty after renting already supplies the same home. Also covers Bellevue's high-end price-to-rent ratios, affordability, tech-employment concentration, and European evidence on nominal versus real house-price growth. Includes the Two-Step Research Protocol and a dependency-free reproducible model. *Analysis, not tax or investment advice.*

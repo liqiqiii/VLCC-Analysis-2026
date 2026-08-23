@@ -1062,3 +1062,19 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: housing/run_buy_vs_rent.py, housing/report_en.md, housing/report_cn.md, housing/data/*.csv
 **更新文件**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 53: VLCC 供给 —— 2027/2028 新船浪潮会打破周期吗？
+**日期**: 2026年8月22日
+
+用户听闻 2027 约 68 艘、2028 约 125 艘新 VLCC（外加 Suezmax 等）——会否大幅影响供需？新建 vlcc_supply/ 文件夹（run_supply_model.py + data/balance.csv + charts/net_growth.png + 双语 report_en/cn.md；index.md 条目）。CRule 3 供需时长 + 两步协议。
+
+数据（Rule 4 区间已标注）：VLCC 船队总量 ~900（870-917）；合规 ~650-700；影子 ~166-200。总交付：2026 ~15、2027 ~41-68（用户 68 vs Gibson 41，>20% 差距——按偏空的 68 建模）、2028 ~125-127（用户 125 确认，Seatrade/MSI 127）。2026 上半年订单 ~177（纪录），订单簿 2%->35%。>20 岁 ~130（~20%）到 2029-30 翻倍至 ~300。近年拆解近零（2024 约 1、2025 约 5）。吨海里 ~+2% 2026 -> ~0% 2027-28（BIMCO）。SPR 补库多年吸纳 30-70 艘。
+
+模型（3 拆解情景，船队起点 900）：净增长 = 总交付 - 拆解。2027 净 +2.5-5.8%，2028 净 +4.9-9.9%（对比 +13% 总量）。2027+28 累计净：+7.6%（高拆解）至 +16.4%（低拆解），对比 +21% 总量头条。
+
+结论：是，显著，但作为 2028 运价正常化器、而非 2027 周期终结者。2027 仍紧（被 SPR 补库 + 影子退出吸收）；2028 是枢纽（交付见顶 + 补库变薄 + 约 0% 需求）。整个答案归结为一个变量：拆解会加速吗？（创纪录老龄池 + IMO-2030 若拆解即可抵消浪潮）。核心偷换已标注："老龄 = 拆解"——老船可拆解或加入影子船队。确认周期到期 2027 年底/2028 + 仓库退出纪律（CRule 8）：吃下 2026-2028 上半年，在 2028 集群时减仓。
+
+**创建文件**: vlcc_supply/run_supply_model.py, vlcc_supply/report_en.md, vlcc_supply/report_cn.md, vlcc_supply/data/balance.csv, vlcc_supply/charts/net_growth.png
+**更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

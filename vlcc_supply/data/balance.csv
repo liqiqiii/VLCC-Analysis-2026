@@ -1,0 +1,16 @@
+year,scenario,gross_deliveries,scrapping,net_add,gross_growth_pct,net_growth_pct,fleet_end
+2026,"Low  (rates stay high, owners defer)",15,5,10,1.7,1.1,910
+2026,Base (IMO-2030 forces gradual exit),15,8,7,1.7,0.8,907
+2026,High (regulatory cliff + soft rates),15,12,3,1.7,0.3,903
+2027,"Low  (rates stay high, owners defer)",68,15,53,7.5,5.8,963
+2027,Base (IMO-2030 forces gradual exit),68,30,38,7.5,4.2,945
+2027,High (regulatory cliff + soft rates),68,45,23,7.5,2.5,926
+2028,"Low  (rates stay high, owners defer)",125,30,95,13.0,9.9,1058
+2028,Base (IMO-2030 forces gradual exit),125,55,70,13.2,7.4,1015
+2028,High (regulatory cliff + soft rates),125,80,45,13.5,4.9,971
+2029,"Low  (rates stay high, owners defer)",90,45,45,8.5,4.3,1103
+2029,Base (IMO-2030 forces gradual exit),90,70,20,8.9,2.0,1035
+2029,High (regulatory cliff + soft rates),90,95,-5,9.3,-0.5,966
+2030,"Low  (rates stay high, owners defer)",40,45,-5,3.6,-0.5,1098
+2030,Base (IMO-2030 forces gradual exit),40,60,-20,3.9,-1.9,1015
+2030,High (regulatory cliff + soft rates),40,80,-40,4.1,-4.1,926

@@ -1086,3 +1086,19 @@ Applied the Two-Step Research Protocol: Step 1 contains the core conclusion plus
 
 **Files Created**: housing/run_buy_vs_rent.py, housing/report_en.md, housing/report_cn.md, housing/data/*.csv
 **Files Updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 53: VLCC supply — does the 2027/2028 newbuild wave break the cycle?
+**Date**: August 22, 2026
+
+User heard ~68 new VLCCs in 2027, ~125 in 2028 (plus Suezmax etc.) - will they greatly influence supply-demand? Built new vlcc_supply/ folder (run_supply_model.py + data/balance.csv + charts/net_growth.png + bilingual report_en/cn.md; index.md entry). CRule 3 supply-demand-duration + Two-Step Protocol.
+
+Data (Rule 4 ranges flagged): total VLCC fleet ~900 (870-917); compliant ~650-700; shadow ~166-200. Gross deliveries: 2026 ~15, 2027 ~41-68 (user 68 vs Gibson 41, >20% spread - modeled the bearish 68), 2028 ~125-127 (user 125 confirmed, Seatrade/MSI 127). H1-2026 orders ~177 (record), orderbook 2%->35% of fleet. Over-20yo ~130 (~20%) doubling to ~300 by 2029-30. Recent scrapping near-zero (1 in 2024, 5 in 2025). Tonne-mile ~+2% 2026 -> ~0% 2027-28 (BIMCO). SPR restocking absorbs 30-70 VLCCs multi-year.
+
+Model (3 scrap scenarios, fleet start 900): NET growth = gross deliveries - scrapping. 2027 net +2.5-5.8%, 2028 net +4.9-9.9% (vs +13% gross). Cumulative 2027+28 net: +7.6% (high-scrap) to +16.4% (low-scrap), vs +21% gross headline.
+
+Verdict: YES materially, but as a 2028 RATE-NORMALISER not a 2027 cycle-killer. 2027 stays tight (absorbed by SPR restocking + shadow exit); 2028 is the pivot (peak deliveries + thinning restocking + ~0% demand). The whole answer reduces to ONE variable: does scrapping accelerate? (record aging pool + IMO-2030 can offset the wave IF it scraps). Central equivocation flagged: "aging = scrapping" - an old ship can scrap OR join the shadow fleet. Confirms cycle expiry late-2027/2028 + repo exit discipline (CRule 8): ride 2026-H1-2028, trim into the 2028 cluster.
+
+**Files Created**: vlcc_supply/run_supply_model.py, vlcc_supply/report_en.md, vlcc_supply/report_cn.md, vlcc_supply/data/balance.csv, vlcc_supply/charts/net_growth.png
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
