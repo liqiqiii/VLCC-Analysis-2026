@@ -1094,3 +1094,18 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: gold_miners/run_gold_compare.py, gold_miners/report_en.md, gold_miners/report_cn.md, gold_miners/data/*.csv, gold_miners/charts/aisc_margin.png
 **更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 55: 金矿股追问 —— 弹性更正 + 长期黄金多头如何选择（第 9 节）
+**日期**: 2026年9月3日
+
+用户：Agnico 看起来更有弹性（低成本 + 纯金 -> 更高 PE）；若长期看多黄金，如何在 6 家中选，若选 2 家选哪对？
+
+在 run_gold_compare.py 增加弹性 + report_en/cn.md 第 9 节（双语）。
+
+关键更正：Agnico 对黄金*最不*弹性、而非最弹性。黄金利润弹性 = P/(P-AISC)，故成本*越高*弹性*越大*。Agnico 溢价 PE（16.6×）定价的是安全、非上行。弹性排名：巴里克 1.58×、纽蒙特 1.56×、金罗斯 1.49×、紫金 1.49×、Agnico 1.43×、招金 1.41×、山东 1.39×。股票金价弹性（弹性 × 黄金%）：金罗斯 1.48×（最高干净）、Agnico 1.39×、纽蒙特 1.37×、山东 1.32×、招金 1.27×、巴里克 1.26×、紫金 0.49×（最低——仅 33% 黄金、被铜稀释）。牛市金价 $4,474->$6,000：利润 +47%（山东）至 +54%（巴里克）——很窄，故 AISC 差距主要是*下行*对冲（CRule 2）、非上行区分器。
+
+建议：单一最佳全能 = 金罗斯（干净弹性 + 价值 + 近纯金）或 Agnico（质量锚、已定价）。按观点：激进->金罗斯；稳健复利->Agnico；价值+再通胀->紫金；中国纯金->山东；核心回避巴里克（马里/巴新辖区）与招金（太小）。选两 = 杠铃（质量锚 + 风险轴不相关卫星）：方案 A"干净黄金" = Agnico + 金罗斯（纯西方黄金、无铜/中国）；方案 B"分散化债务货币化" = Agnico + 紫金（最大不相关：一级西方 vs 中国、纯金 vs 金+铜、质量溢价 16.6× vs 深度价值 9.3×）。权重 60/40 偏锚以降波动、50/50 以增弹性。衔接组合杠铃 + 市场标尺"质量被定价"。
+
+**更新文件**: gold_miners/run_gold_compare.py, gold_miners/data/peers.csv, gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

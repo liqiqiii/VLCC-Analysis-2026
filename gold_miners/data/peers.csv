@@ -1,8 +1,8 @@
-name,ticker,market,gold_moz,aisc,gold_rev_pct,mcap_usd_b,fwd_pe,div_yield,note,margin_oz_now,gold_gross_profit_b,margin_pct_now
-Newmont,NEM,US-listed,5.9,1609,88,137,12.9,0.8,World #1 gold; >85% gold pure-play (post-Newcrest),2865,16.9,64.0
-Agnico Eagle,AEM,US-listed,3.45,1339,97,105,16.6,0.9,Lowest AISC of the majors; Tier-1 (Canada/Finland/Aus),3135,10.8,70.0
-Kinross,KGC,US-listed,2.0,1480,99,38,10.3,0.5,Near-pure gold; US(Nevada/Alaska)+W.Africa,2994,6.0,67.0
-Barrick,GOLD,US-listed,3.26,1637,80,72,11.1,1.9,Gold + growing copper ambition; jurisdiction issues,2837,9.2,63.0
-Zijin Mining,2899.HK,China,2.9,1480,33,120,9.3,3.0,"COPPER-gold major: ~50-55% copper rev (its profit engine), 45% overseas",2994,8.7,67.0
-Shandong Gold,1787.HK,China,1.5,1250,95,24,11.0,1.2,China's gold pure-play; deep Jiaodong mines,3224,4.8,72.0
-Zhaojin Mining,1818.HK,China,0.6,1300,90,10,10.0,0.5,"Pure gold; Haiyu ramp -> AISC toward ~$1,100; Zijin-affiliated",3174,1.9,71.0
+name,ticker,market,gold_moz,aisc,gold_rev_pct,mcap_usd_b,fwd_pe,div_yield,note,margin_oz_now,gold_gross_profit_b,margin_pct_now,gold_elasticity,equity_gold_torque
+Newmont,NEM,US-listed,5.9,1609,88,137,12.9,0.8,World #1 gold; >85% gold pure-play (post-Newcrest),2865,16.9,64.0,1.56,1.37
+Agnico Eagle,AEM,US-listed,3.45,1339,97,105,16.6,0.9,Lowest AISC of the majors; Tier-1 (Canada/Finland/Aus),3135,10.8,70.0,1.43,1.39
+Kinross,KGC,US-listed,2.0,1480,99,38,10.3,0.5,Near-pure gold; US(Nevada/Alaska)+W.Africa,2994,6.0,67.0,1.49,1.48
+Barrick,GOLD,US-listed,3.26,1637,80,72,11.1,1.9,Gold + growing copper ambition; jurisdiction issues,2837,9.2,63.0,1.58,1.26
+Zijin Mining,2899.HK,China,2.9,1480,33,120,9.3,3.0,"COPPER-gold major: ~50-55% copper rev (its profit engine), 45% overseas",2994,8.7,67.0,1.49,0.49
+Shandong Gold,1787.HK,China,1.5,1250,95,24,11.0,1.2,China's gold pure-play; deep Jiaodong mines,3224,4.8,72.0,1.39,1.32
+Zhaojin Mining,1818.HK,China,0.6,1300,90,10,10.0,0.5,"Pure gold; Haiyu ramp -> AISC toward ~$1,100; Zijin-affiliated",3174,1.9,71.0,1.41,1.27

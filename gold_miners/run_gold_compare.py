@@ -56,6 +56,11 @@ def build_peers():
     df["margin_oz_now"] = GOLD_NOW - df["aisc"]
     df["gold_gross_profit_b"] = (df["margin_oz_now"] * df["gold_moz"] * 1e6 / 1e9).round(1)
     df["margin_pct_now"] = (df["margin_oz_now"] / GOLD_NOW * 100).round(0)
+    # Gold-price elasticity of gold gross profit = P / (P - AISC).
+    # Higher AISC -> higher torque to the gold price (more upside AND downside).
+    df["gold_elasticity"] = (GOLD_NOW / (GOLD_NOW - df["aisc"])).round(2)
+    # Effective equity torque also scaled by how much of the business IS gold.
+    df["equity_gold_torque"] = (df["gold_elasticity"] * df["gold_rev_pct"] / 100).round(2)
     df.to_csv(os.path.join(OUT, "peers.csv"), index=False)
     return df
 
@@ -111,6 +116,15 @@ def main():
     print("\nAISC ranking (low->high):")
     for _, r in df.sort_values("aisc").iterrows():
         print(f"  {r['name']:14s} ({r['market']:10s}) AISC ${r['aisc']:,} | gold {r['gold_rev_pct']}% of rev")
+    print("\nGOLD-PRICE ELASTICITY = P/(P-AISC): higher AISC -> MORE torque to gold")
+    for _, r in df.sort_values("gold_elasticity", ascending=False).iterrows():
+        print(f"  {r['name']:14s} elasticity {r['gold_elasticity']:.2f}x | equity gold-torque {r['equity_gold_torque']:.2f}x (x gold%%)")
+    # torque check: gold gross profit at $4,474 vs a $6,000 bull case
+    print("\nBull-case torque — gold gross profit $4,474 -> $6,000/oz:")
+    for _, r in df.sort_values("aisc").iterrows():
+        p0 = (GOLD_NOW - r["aisc"]) * r["gold_moz"]
+        p1 = (6000 - r["aisc"]) * r["gold_moz"]
+        print(f"  {r['name']:14s} +{(p1/p0-1)*100:4.0f}% gold profit  (AISC ${r['aisc']:,})")
     print(f"\nCharts -> {CH}\nCSVs -> {OUT}")
 
 

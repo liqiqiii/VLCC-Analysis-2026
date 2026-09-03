@@ -177,6 +177,67 @@ At $4,474 gold: scale/reserves > a $300 AISC edge (Newmont's gold profit 2x Shan
 
 ---
 
+# Section 9 — If you're long-term bullish on gold: how to choose (and a 2-name barbell)
+
+> Follow-up: "Agnico looks more *elastic* — low cost + pure gold — so its P/E is higher. If I'm a long-term gold bull, how do I pick among the six, and if I pick two, which?"
+
+## 9.0 First, correct the premise (this flips the whole choice)
+
+**Agnico is the LEAST elastic to the gold price, not the most.** Gold-profit elasticity = **Price ÷ (Price − AISC)** — a *lower* cost means a *bigger* margin base, so a given gold move is a *smaller* percentage change. **Its premium P/E (16.6×) prices SAFETY/quality, not torque.** The torque ranking (gold-profit % move per 1% gold move) is the opposite of "low cost":
+
+| Rank (gold torque) | Company | Elasticity P/(P−AISC) | Equity gold-torque (×gold% of rev) | Read |
+|---|---|---|---|---|
+| 1 | **Barrick** | **1.58×** | 1.26× | Most torque, but only 80% gold + jurisdiction risk |
+| 2 | **Newmont** | **1.56×** | 1.37× | High torque + #1 scale; execution/volume-decline baggage |
+| 3 | **Kinross** | 1.49× | **1.48× ⬅ highest** | High torque **AND** ~99% gold → cleanest pure-gold torque |
+| 3 | Zijin | 1.49× | **0.49× ⬅ lowest** | Gold torque *diluted* — only 33% gold (rest = copper) |
+| 5 | **Agnico** | **1.43×** | 1.39× | Lowest torque of the Western pure-plays = the quality/defensive one |
+| 6 | Zhaojin | 1.41× | 1.27× | Low torque + small/ramp |
+| 7 | **Shandong** | **1.39×** | 1.32× | Lowest torque = most *defensive* to a gold fall |
+
+**Two clean takeaways:**
+1. **Maximum gold upside torque = the high-cost pure-plays (Barrick, Newmont, Kinross)** — with **Kinross the best "clean" torque** (high elasticity × ~99% gold, cheapest at ~10× P/E).
+2. **Zijin gives the LEAST *gold* exposure per dollar (0.49× equity gold-torque)** because 2/3 of it is copper. That's not bad — but if your thesis is *specifically gold*, Zijin is a **debasement-basket** play (gold + copper), not a gold play.
+
+*Bull-case check (gold $4,474 → $6,000): gold-profit rises +47% (Shandong) to +54% (Barrick) — a narrow spread, because at $4,000+ every margin is already fat. **The AISC gap matters far more on the DOWNSIDE** (if gold falls to $2,000-2,500, low-cost names keep fat margins while high-cost names compress — CRule 2). So "high cost = more torque" is really "more torque up AND more pain down."*
+
+## 9.1 The choice depends on *what kind* of gold bull you are
+
+| If your view is… | Pick | Why |
+|---|---|---|
+| **Aggressive (gold to $6k+, want max torque)** | **Kinross** | Best clean gold-torque (1.48×), ~99% gold, cheap ~10× P/E, Nevada/Alaska + W.Africa |
+| **Steady compounder (gold grinds higher, sleep at night)** | **Agnico** | Best-in-class ops, Tier-1 jurisdictions, lowest Western AISC — but you pay 16.6× ("quality is priced") |
+| **Value + growth + reflation (gold AND copper)** | **Zijin** | Cheapest (9.3×), 3% yield, ~17% growth, 36% ROE, copper double-levers the debasement trade — at a China discount |
+| **China pure gold** | **Shandong Gold** | Low cost, ~95% gold, the true like-for-like to Newmont — but less liquid for a foreign holder |
+| **Avoid** (for a core) | Barrick / Zhaojin | Barrick = torque with a landmine (Mali/PNG disputes); Zhaojin = too small/ramp-speculative |
+
+**Single best all-rounder for most gold bulls:** **Kinross** (torque + value + near-pure + cleaner jurisdictions than Barrick) *or* **Agnico** (if you prioritize safety over torque and accept the premium).
+
+## 9.2 If you pick TWO — the barbell (this repo's favorite structure)
+
+The right 2-name portfolio pairs a **low-cost QUALITY anchor** with a **satellite that is uncorrelated on the *risk axis*** (jurisdiction / commodity / valuation-style) — so you're not doubling one bet (the same logic as the [30/30/40 barbell](../portfolio/report_en) and the "two alpha domains must be uncorrelated" rule).
+
+**Option A — "Clean gold barbell": Agnico + Kinross** ✅ *(best if you want pure, Western, no-copper, no-China gold)*
+- **Agnico = the quality/defensive anchor** (lowest Western AISC, Tier-1, but least torque).
+- **Kinross = the torque/value satellite** (highest clean gold-torque, ~10× P/E).
+- You get: **pure gold-price beta**, quality + torque combined, both liquid Western names, clean governance.
+- Trade-off: **no diversification of jurisdiction or commodity** — it's a concentrated bet that *gold specifically* rises. Perfect if that's exactly your thesis.
+
+**Option B — "Diversified debasement barbell": Agnico + Zijin** ✅ *(best risk-adjusted if you can hold China risk)*
+- **Agnico = Western, low-cost, Tier-1, quality-premium, pure gold.**
+- **Zijin = China, cheap, high-growth, copper-levered, deep-value.**
+- These are **maximally uncorrelated on the risk axis**: Tier-1 West ↔ China; pure gold ↔ gold+copper; quality-premium (16.6×) ↔ deep-value (9.3×). If the broad **debasement trade** (gold *and* copper rising on monetary/fiat concerns) is your real view, this captures it while diversifying governance and commodity risk.
+- Trade-off: one leg carries **China/SOE/geopolitical risk**; and Zijin gives less *pure* gold torque.
+
+**My default recommendation:**
+- **If your conviction is specifically GOLD → Option A (Agnico + Kinross):** quality anchor + cleanest torque, no dilution.
+- **If your conviction is the broader DEBASEMENT/reflation trade → Option B (Agnico + Zijin):** best diversification and the cheapest growth, accepting China risk in one leg.
+- **Weighting:** for a long-term bull, tilt to the anchor (~60% Agnico / 40% satellite) if you want lower volatility; go ~50/50 (or overweight the satellite) if you want more torque and can stomach drawdowns.
+
+> **Bottom line for the user:** the intuition to correct is that **low-cost/pure ≠ more elastic** — Agnico is the *low-torque quality* name (its rich P/E is a safety premium), while the **high-cost pure-plays (Kinross/Newmont/Barrick) give the most gold upside torque.** For a long-term gold bull picking one, **Kinross** is the sharpest single (torque + value + near-pure); for a quality anchor, **Agnico.** Picking two, run a **barbell**: **Agnico + Kinross** for a *pure* gold bet, or **Agnico + Zijin** for the *diversified debasement* bet (quality West anchor + cheap copper-levered China growth). Avoid Barrick (jurisdiction landmines) and Zhaojin (too small) as a core. *(All at gold $4,474 — remember the AISC gap is mostly a downside hedge, not today's differentiator.)*
+
+---
+
 ## Reproduce it yourself
 
 ```

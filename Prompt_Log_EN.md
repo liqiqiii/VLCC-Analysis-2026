@@ -1118,3 +1118,18 @@ Verdict: user's thesis HALF RIGHT, HALF INVERTED. (1) Cost: true vs Newmont/Barr
 
 **Files Created**: gold_miners/run_gold_compare.py, gold_miners/report_en.md, gold_miners/report_cn.md, gold_miners/data/*.csv, gold_miners/charts/aisc_margin.png
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 55: Gold miners follow-up — elasticity correction + how a long-term gold bull should choose (Section 9)
+**Date**: September 3, 2026
+
+User: Agnico looks more elastic (low cost + pure gold -> higher PE); if long-term bullish on gold, how to choose among the 6, and if picking 2, which pair?
+
+Added elasticity to run_gold_compare.py + Section 9 to report_en/cn.md (bilingual).
+
+KEY CORRECTION: Agnico is the LEAST elastic to gold, not the most. Gold-profit elasticity = P/(P-AISC), so HIGHER cost = MORE torque. Agnico's premium PE (16.6x) prices SAFETY, not upside. Elasticity ranking: Barrick 1.58x, Newmont 1.56x, Kinross 1.49x, Zijin 1.49x, Agnico 1.43x, Zhaojin 1.41x, Shandong 1.39x. Equity gold-torque (elasticity x gold%): Kinross 1.48x (highest clean), Agnico 1.39x, Newmont 1.37x, Shandong 1.32x, Zhaojin 1.27x, Barrick 1.26x, ZIJIN 0.49x (lowest - only 33% gold, diluted by copper). Bull-case gold $4,474->$6,000: profit +47% (Shandong) to +54% (Barrick) - narrow, so AISC gap is mostly a DOWNSIDE hedge (CRule 2), not upside differentiator.
+
+Recommendations: single best all-rounder = Kinross (clean torque + value + near-pure) or Agnico (quality anchor, priced). By view: aggressive->Kinross; steady compounder->Agnico; value+reflation->Zijin; China pure gold->Shandong; avoid Barrick (Mali/PNG jurisdiction) & Zhaojin (too small) as core. Pick-two = BARBELL (quality anchor + risk-axis-uncorrelated satellite): Option A "clean gold" = Agnico + Kinross (pure Western gold, no copper/China); Option B "diversified debasement" = Agnico + Zijin (maximally uncorrelated: Tier-1 West vs China, pure gold vs gold+copper, quality-premium 16.6x vs deep-value 9.3x). Weighting 60/40 anchor-tilt for lower vol, 50/50 for more torque. Ties to portfolio barbell + market-gauge "quality is priced".
+
+**Files Updated**: gold_miners/run_gold_compare.py, gold_miners/data/peers.csv, gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
