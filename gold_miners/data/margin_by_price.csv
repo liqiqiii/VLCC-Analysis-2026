@@ -1,0 +1,43 @@
+gold_price,name,market,margin_oz,gold_gross_profit_b
+2500,Newmont,US-listed,891,5.3
+2500,Agnico Eagle,US-listed,1161,4.0
+2500,Kinross,US-listed,1020,2.0
+2500,Barrick,US-listed,863,2.8
+2500,Zijin Mining,China,1020,3.0
+2500,Shandong Gold,China,1250,1.9
+2500,Zhaojin Mining,China,1200,0.7
+3000,Newmont,US-listed,1391,8.2
+3000,Agnico Eagle,US-listed,1661,5.7
+3000,Kinross,US-listed,1520,3.0
+3000,Barrick,US-listed,1363,4.4
+3000,Zijin Mining,China,1520,4.4
+3000,Shandong Gold,China,1750,2.6
+3000,Zhaojin Mining,China,1700,1.0
+3500,Newmont,US-listed,1891,11.2
+3500,Agnico Eagle,US-listed,2161,7.5
+3500,Kinross,US-listed,2020,4.0
+3500,Barrick,US-listed,1863,6.1
+3500,Zijin Mining,China,2020,5.9
+3500,Shandong Gold,China,2250,3.4
+3500,Zhaojin Mining,China,2200,1.3
+4000,Newmont,US-listed,2391,14.1
+4000,Agnico Eagle,US-listed,2661,9.2
+4000,Kinross,US-listed,2520,5.0
+4000,Barrick,US-listed,2363,7.7
+4000,Zijin Mining,China,2520,7.3
+4000,Shandong Gold,China,2750,4.1
+4000,Zhaojin Mining,China,2700,1.6
+4474,Newmont,US-listed,2865,16.9
+4474,Agnico Eagle,US-listed,3135,10.8
+4474,Kinross,US-listed,2994,6.0
+4474,Barrick,US-listed,2837,9.2
+4474,Zijin Mining,China,2994,8.7
+4474,Shandong Gold,China,3224,4.8
+4474,Zhaojin Mining,China,3174,1.9
+5000,Newmont,US-listed,3391,20.0
+5000,Agnico Eagle,US-listed,3661,12.6
+5000,Kinross,US-listed,3520,7.0
+5000,Barrick,US-listed,3363,11.0
+5000,Zijin Mining,China,3520,10.2
+5000,Shandong Gold,China,3750,5.6
+5000,Zhaojin Mining,China,3700,2.2

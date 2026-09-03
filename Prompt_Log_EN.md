@@ -1102,3 +1102,19 @@ Verdict: YES materially, but as a 2028 RATE-NORMALISER not a 2027 cycle-killer. 
 
 **Files Created**: vlcc_supply/run_supply_model.py, vlcc_supply/report_en.md, vlcc_supply/report_cn.md, vlcc_supply/data/balance.csv, vlcc_supply/charts/net_growth.png
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 54: Gold miners — US-listed Western majors vs China majors
+**Date**: September 3, 2026
+
+User researching gold miners: compare Kinross (金罗斯) from US, Zijin (紫金) from China, plus top-3 each market; thesis that US miners are higher-cost but more pure-gold-focused while Chinese ones are low-cost but carry non-lucrative diversification.
+
+Built new gold_miners/ folder (run_gold_compare.py + data/{peers,margin_by_price}.csv + charts/aisc_margin.png + bilingual report_en/cn.md; index.md entry). Cyclical CRules 1/2/4/6 + Two-Step Protocol. Gold ~$4,474/oz (Kitco Sep 3).
+
+Data (2025, Rule-4 ranges flagged): AISC - Shandong Gold $1,250, Zhaojin $1,300, Agnico $1,339, Kinross ~$1,480, Zijin ~$1,480, Newmont $1,609, Barrick $1,637. Gold-% of revenue: Kinross 99, Agnico 97, Shandong 95, Zhaojin 90, Newmont 88, Barrick 80, ZIJIN 33. Production Moz: Newmont 5.9, Agnico 3.45, Barrick 3.26, Zijin 2.9, Kinross 2.0, Shandong 1.5, Zhaojin 0.6. Valuation: Zijin fwd PE 9.3/div 3.0%/ROE 36%; Newmont 12.9/0.8%; Agnico 16.6/0.9%.
+
+Verdict: user's thesis HALF RIGHT, HALF INVERTED. (1) Cost: true vs Newmont/Barrick, but the lowest-cost major is WESTERN (Agnico $1,339) - "China = lowest cost" is false. (2) Focus: INVERTED for the flagship - Zijin is a COPPER-gold major (gold ~33% rev; copper ~50-55% is its most lucrative/fastest-growing engine), while Newmont is the >85%-gold pure-play. "Non-lucrative" fits SOE smelting (China Gold/Zhaojin), NOT Zijin's copper. (3) Valuation: China cheaper+higher-yield+higher-ROE but carries China/SOE-governance+geopolitical discount. Central equivocation flagged: "diversification=non-lucrative" is a value judgment (Zijin's copper is its best business). Right like-for-like GOLD pair = Newmont vs Shandong Gold. Operating leverage: at $4,474 gold, scale beats cost - Newmont gold gross profit ~$16.9B vs Shandong ~$4.8B despite $360 higher AISC; cost only decisive if gold falls to $2,000-2,500 (CRule 2). Also clarified only Newmont is US-domiciled (Agnico/Kinross/Barrick are Canada-HQ, US-listed).
+
+**Files Created**: gold_miners/run_gold_compare.py, gold_miners/report_en.md, gold_miners/report_cn.md, gold_miners/data/*.csv, gold_miners/charts/aisc_margin.png
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

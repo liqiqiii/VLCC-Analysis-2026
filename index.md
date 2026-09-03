@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🥇 Gold Miners — US-Listed Western Majors vs China Majors (NEW — Sep 3, 2026)
+
+Compares the top gold miners — **Newmont / Agnico / Kinross** (US-listed Western) vs **Zijin / Shandong Gold / Zhaojin** (China) — and stress-tests a common thesis ("US = higher cost but pure-gold focus; China = low cost but non-lucrative diversification"). **Verdict: half right, half inverted.** On **cost** it's true vs Newmont ($1,609) / Barrick ($1,637), but **the lowest-cost major is Western — Agnico at $1,339** (below every Chinese name except Shandong). On **focus** it's *backwards* for the flagship: **Zijin is a copper-gold major (gold only ~33% of revenue); copper is its most *lucrative*, fastest-growing engine**, while **Newmont is the >85%-gold pure-play**. The "non-lucrative" tag fits SOE **smelting/refining**, not Zijin's copper. China screens cheaper (Zijin fwd P/E ~9.3, div ~3.0%, ROE ~36%) but carries a **China/SOE-governance + geopolitical discount**. At gold **~$4,474/oz**, scale beats cost — Newmont's gold gross profit (~$16.9B) is ~2× Shandong's despite a $360 higher AISC. Right like-for-like *gold* pair = **Newmont vs Shandong Gold**. Reproducible cost/margin model + chart. *Analysis, not investment advice.*
+
+**[📄 Gold Miners (EN) →](gold_miners/report_en)** | **[黄金矿业股（中文）→](gold_miners/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/gold_miners)**
+
+---
+
 ### 🚢🏭 VLCC Supply — Does the 2027/2028 Newbuild Wave Break the Cycle? (NEW — Aug 22, 2026)
 
 Turns the scary GROSS delivery numbers (~68 VLCCs in 2027, ~125 in 2028 ≈ **21% of the ~900-ship fleet**) into **NET fleet growth** after scrapping + shadow-fleet exit. **Verdict: materially — but as a 2028 *rate-normaliser*, not a 2027 cycle-killer.** 2028 is +13% gross but only **+4.9% to +9.9% net** (depending on scrapping), and 2027 stays tight (**+2.5–5.8% net**, absorbed by SPR restocking + the shadow-fleet exit). The offset is a **record aging pool** — ~130 VLCCs already >20yo (~20%), doubling to ~300 by 2029–30, forced out by IMO-2030/EEXI/CII. **The whole answer reduces to one variable: does scrapping accelerate?** High-scrap → healthy renewal (fleet shrinks 2029–30); Low-scrap → real oversupply. Confirms the cycle's expiry window (**late-2027/2028**) and the repo's exit discipline (CRule 8). Reproducible net-growth model + chart + 3 scrap scenarios. *Analysis, not investment advice.*

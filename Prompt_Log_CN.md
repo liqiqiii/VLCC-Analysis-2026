@@ -1078,3 +1078,19 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: vlcc_supply/run_supply_model.py, vlcc_supply/report_en.md, vlcc_supply/report_cn.md, vlcc_supply/data/balance.csv, vlcc_supply/charts/net_growth.png
 **更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 54: 黄金矿业股 —— 美股西方龙头 vs 中国龙头
+**日期**: 2026年9月3日
+
+用户研究金矿股：对比美国金罗斯、中国紫金，及各市场前三；命题为美国矿企成本更高但更专注纯金，中国矿企成本低但带非盈利多元化。
+
+新建 gold_miners/ 文件夹（run_gold_compare.py + data/{peers,margin_by_price}.csv + charts/aisc_margin.png + 双语 report_en/cn.md；index.md 条目）。周期 CRules 1/2/4/6 + 两步协议。金价约 $4,474/盎司（Kitco 9月3日）。
+
+数据（2025，Rule-4 区间已标注）：AISC——山东黄金 $1,250、招金 $1,300、Agnico $1,339、金罗斯 ~$1,480、紫金 ~$1,480、纽蒙特 $1,609、巴里克 $1,637。黄金占营收：金罗斯 99、Agnico 97、山东 95、招金 90、纽蒙特 88、巴里克 80、紫金 33。产量 Moz：纽蒙特 5.9、Agnico 3.45、巴里克 3.26、紫金 2.9、金罗斯 2.0、山东 1.5、招金 0.6。估值：紫金前瞻 PE 9.3/股息 3.0%/ROE 36%；纽蒙特 12.9/0.8%；Agnico 16.6/0.9%。
+
+结论：用户命题对一半、反一半。(1) 成本：对纽蒙特/巴里克为真，但成本最低的龙头是西方的 Agnico（$1,339）——"中国 = 成本最低"为假。(2) 专注：对旗舰是反的——紫金是铜-金龙头（黄金约 33% 营收；铜约 50-55% 是其最赚钱/增长最快引擎），而纽蒙特才是 >85% 黄金的纯金标的。"非盈利"适用国企冶炼（中国黄金/招金），而非紫金的铜。(3) 估值：中国更便宜+更高股息+更高 ROE，但带中国/国企治理+地缘折价。核心偷换已标注："多元化=非盈利"是价值判断（紫金的铜是其最好业务）。同口径黄金正确配对 = 纽蒙特 vs 山东黄金。经营杠杆：$4,474 金价下规模击败成本——纽蒙特黄金毛利约 $16.9B vs 山东约 $4.8B（尽管 AISC 高 $360）；只有金价回落至 $2,000-2,500 成本才决定性（CRule 2）。并厘清仅纽蒙特注册于美国（Agnico/金罗斯/巴里克总部在加拿大、美股上市）。
+
+**创建文件**: gold_miners/run_gold_compare.py, gold_miners/report_en.md, gold_miners/report_cn.md, gold_miners/data/*.csv, gold_miners/charts/aisc_margin.png
+**更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
