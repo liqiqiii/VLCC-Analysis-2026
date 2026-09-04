@@ -1133,3 +1133,19 @@ KEY CORRECTION: Agnico is the LEAST elastic to gold, not the most. Gold-profit e
 Recommendations: single best all-rounder = Kinross (clean torque + value + near-pure) or Agnico (quality anchor, priced). By view: aggressive->Kinross; steady compounder->Agnico; value+reflation->Zijin; China pure gold->Shandong; avoid Barrick (Mali/PNG jurisdiction) & Zhaojin (too small) as core. Pick-two = BARBELL (quality anchor + risk-axis-uncorrelated satellite): Option A "clean gold" = Agnico + Kinross (pure Western gold, no copper/China); Option B "diversified debasement" = Agnico + Zijin (maximally uncorrelated: Tier-1 West vs China, pure gold vs gold+copper, quality-premium 16.6x vs deep-value 9.3x). Weighting 60/40 anchor-tilt for lower vol, 50/50 for more torque. Ties to portfolio barbell + market-gauge "quality is priced".
 
 **Files Updated**: gold_miners/run_gold_compare.py, gold_miners/data/peers.csv, gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 56: Gold miners — two requested price charts (six vs gold; Zijin vs gold+copper) (Section 10)
+**Date**: September 3, 2026
+
+User requested two charts: (1) the six stocks' dividend-adjusted (复权) price vs the gold price; (2) Zijin alone with its stock price vs gold AND copper.
+
+Added run_price_charts.py + Section 10 to report_en/cn.md (bilingual) + 2 charts + 2 CSVs. Weekly div-adjusted, rebased to 100 at 2021-01.
+
+Data-hygiene fix (Rule 4): Barrick's NYSE ticker changed GOLD->B in 2025, so `GOLD` returned a wrong/stale series (spurious +200% in 2022). Dropped Barrick and used the clean SIX = top-3 each market: Newmont, Agnico, Kinross + Zijin(601899.SS A), Shandong(600547.SS A), Zhaojin(1818.HK). Also fixed cross-exchange date alignment by resampling all series to W-FRI before rebasing.
+
+Findings (2021->now, rebased): Kinross +372% (torque winner, confirms §9 highest clean gold-torque), Zijin +231%, Agnico +228%, gold +146%, Zhaojin +139%, Newmont +145% (only matched gold - execution/volume-decline ate its high theoretical torque), Shandong +59% (laggard). Teaching points: (a) operating leverage is LAGGED - all miners traded BELOW gold 2021-mid2024 (cost inflation), then exploded above in 2025-26 once margins got fat (CRule 4); (b) reality = torque x execution (Newmont's torque diluted by self-inflicted problems). Chart 2: Zijin weekly-return corr to COPPER 0.53 > to GOLD 0.43 - visual proof Zijin is more a copper play than gold (validates §5/§9); buying Zijin as a "gold stock" = buying a copper-tilted basket.
+
+**Files Created**: gold_miners/run_price_charts.py, gold_miners/charts/{miners_vs_gold,zijin_gold_copper}.png, gold_miners/data/{miners_vs_gold,zijin_gold_copper}.csv
+**Files Updated**: gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

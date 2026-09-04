@@ -1109,3 +1109,19 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 建议：单一最佳全能 = 金罗斯（干净弹性 + 价值 + 近纯金）或 Agnico（质量锚、已定价）。按观点：激进->金罗斯；稳健复利->Agnico；价值+再通胀->紫金；中国纯金->山东；核心回避巴里克（马里/巴新辖区）与招金（太小）。选两 = 杠铃（质量锚 + 风险轴不相关卫星）：方案 A"干净黄金" = Agnico + 金罗斯（纯西方黄金、无铜/中国）；方案 B"分散化债务货币化" = Agnico + 紫金（最大不相关：一级西方 vs 中国、纯金 vs 金+铜、质量溢价 16.6× vs 深度价值 9.3×）。权重 60/40 偏锚以降波动、50/50 以增弹性。衔接组合杠铃 + 市场标尺"质量被定价"。
 
 **更新文件**: gold_miners/run_gold_compare.py, gold_miners/data/peers.csv, gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 56: 金矿股 —— 两张所需价格图（六家 vs 黄金；紫金 vs 黄金+铜）（第 10 节）
+**日期**: 2026年9月3日
+
+用户要求两张图：(1) 六只股票复权价 vs 金价；(2) 单独紫金，股价 vs 黄金*与*铜。
+
+新增 run_price_charts.py + report_en/cn.md 第 10 节（双语）+ 2 张图 + 2 个 CSV。周频复权，2021-01 起基准 100。
+
+数据卫生修复（Rule 4）：巴里克 NYSE 代码 2025 年由 GOLD->B，故 `GOLD` 返回错误/过期序列（2022 年虚假 +200%）。剔除巴里克，用干净的六家 = 各市场前三：纽蒙特、Agnico、金罗斯 + 紫金(601899.SS A)、山东(600547.SS A)、招金(1818.HK)。并通过将各序列重采样为 W-FRI 后再基准化，修复跨交易所日期对齐。
+
+结论（2021->今，基准）：金罗斯 +372%（弹性冠军，确认 §9 最高干净金价弹性）、紫金 +231%、Agnico +228%、黄金 +146%、招金 +139%、纽蒙特 +145%（仅追平黄金——执行/产量下滑吃掉其高理论弹性）、山东 +59%（落后者）。教学点：(a) 经营杠杆滞后——所有矿企 2021-2024 年中在黄金之下（成本通胀），随后 2025-26 毛利变肥后爆发上冲（CRule 4）；(b) 现实 = 弹性 × 执行（纽蒙特弹性被自身问题稀释）。图二：紫金周收益与铜相关 0.53 > 与黄金 0.43——视觉证明紫金更是铜标的而非黄金（验证 §5/§9）；把紫金当"黄金股"买 = 买一个偏铜的篮子。
+
+**创建文件**: gold_miners/run_price_charts.py, gold_miners/charts/{miners_vs_gold,zijin_gold_copper}.png, gold_miners/data/{miners_vs_gold,zijin_gold_copper}.csv
+**更新文件**: gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

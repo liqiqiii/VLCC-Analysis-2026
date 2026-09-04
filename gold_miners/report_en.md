@@ -238,6 +238,40 @@ The right 2-name portfolio pairs a **low-cost QUALITY anchor** with a **satellit
 
 ---
 
+# Section 10 — Two requested charts: miners vs gold, and Zijin vs gold+copper
+
+*(Weekly, dividend-adjusted / 复权, rebased to 100 at 2021-01. Reproducible: `run_price_charts.py`.)*
+
+## 10.1 The six miners vs the gold price
+
+![Six gold miners (dividend-adjusted) vs the gold price, rebased to 100](charts/miners_vs_gold.png)
+
+**Performance since 2021 (rebased, 100 = start):**
+
+| | Rebased now | Total return | Read |
+|---|---|---|---|
+| **Kinross** | **472** | **+372%** | The torque winner — empirically confirms §9's "highest clean gold-torque" |
+| Zijin | 331 | +231% | Amplified — but copper-driven (see §10.2) |
+| Agnico | 328 | +228% | Quality *and* strong return — earns its premium |
+| **Gold (spot)** | **246** | **+146%** | The baseline |
+| Zhaojin | 239 | +139% | ~tracked gold; small-cap ramp |
+| Newmont | 245 | +145% | **Only matched gold** — high theoretical torque eaten by execution/volume decline |
+| Shandong Gold | 159 | +59% | The laggard (A-share; grade/cost pressure) |
+
+**Two things the chart teaches:**
+1. **Operating leverage is visible and *lagged*.** From 2021 to mid-2024 **every miner traded *below* gold** (mining cost-inflation + company issues squeezed margins). Then in 2025–26, as gold went parabolic and margins got fat, the miners **exploded above gold** — the classic CRule-4 non-linear payoff, but only once price ran far above cost.
+2. **The theoretical torque ranking held — with an execution overlay.** Kinross (high torque, clean) won; **Newmont *underperformed* its high theoretical torque** because volume decline + integration ate the leverage (why §9 flagged it "torque diluted by self-inflicted problems"). **Reality = torque × execution.**
+
+## 10.2 Zijin alone: stock vs gold AND copper
+
+![Zijin vs gold and copper, rebased to 100, with correlations](charts/zijin_gold_copper.png)
+
+**Weekly-return correlation: Zijin ↔ Copper = 0.53 > Zijin ↔ Gold = 0.43.**
+
+This is the visual proof of the whole thesis correction (§5): **Zijin moves *more* with copper than with gold.** It amplifies both, but copper is the bigger driver — because copper is ~50-55% of revenue and its main profit engine. **If you buy Zijin as a "gold stock," you are actually buying a copper-gold basket with a slight copper tilt.** For a *pure* long-gold thesis that makes Zijin the *least* direct expression (§9's 0.49× equity gold-torque); for a *debasement/reflation* thesis (gold **and** copper both rising on fiat concerns), it's the *most* complete single name.
+
+---
+
 ## Reproduce it yourself
 
 ```
@@ -246,6 +280,8 @@ python run_gold_compare.py     # writes data/peers.csv, margin_by_price.csv + ch
 ```
 
 Assumptions (production, AISC, mix) are explicit at the top of `run_gold_compare.py` and editable. **Data files:** `gold_miners/data/{peers,margin_by_price}.csv`. **Chart:** `gold_miners/charts/aisc_margin.png`.
+
+**Price charts (§10):** `python run_price_charts.py` → `charts/{miners_vs_gold,zijin_gold_copper}.png` + `data/{miners_vs_gold,zijin_gold_copper}.csv`. Uses dividend-adjusted (复权) weekly prices; gold=`GC=F`, copper=`HG=F`; the SIX = top-3 each market (Barrick's NYSE ticker changed `GOLD`→`B` in 2025, so it's excluded here).
 
 **Sources (accessed Sep 3, 2026):** Mining Magazine "largest gold miners of 2025"; Selborne AISC benchmarks; company FY-2025 results (Newmont, Agnico, Barrick, Kinross); Sina Finance / Xueqiu / cninfo filings (Zijin, Shandong Gold, Zhaojin, China Gold); MarketScreener / Yahoo (valuation); Kitco (gold $4,474/oz); yfinance (live multiples). **AISC comparability (China cash-cost vs WGC AISC) and Zijin's segment split are the key Rule-4 uncertainties.**
 
