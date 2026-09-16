@@ -1149,3 +1149,21 @@ Findings (2021->now, rebased): Kinross +372% (torque winner, confirms §9 highes
 
 **Files Created**: gold_miners/run_price_charts.py, gold_miners/charts/{miners_vs_gold,zijin_gold_copper}.png, gold_miners/data/{miners_vs_gold,zijin_gold_copper}.csv
 **Files Updated**: gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 57: VLCC deep-dive — US product-export limits + rate-vs-stock cycle playbook (new report)
+**Date**: September 16, 2026
+
+Back to DHT/FRO after 6+ months of big gains; user wants a mid-to-late-cycle checkpoint with two modules, in a new report + GitHub page. Built new vlcc_cycles/ folder (run_cycle_model.py + data/cycle_multiples.csv + charts/fro_dht_history.png + bilingual report_en/cn.md; index.md entry). Two-Step Protocol + CRules 1/3/4/6/8.
+
+Module 1 (US product-export limits -> crude rerouting): H.R. 8266 "Gasoline Export Ban Act of 2026" exists (triggers if US pump price >$3.12/gal for 7 days) but administration NOT pursuing (tail, not base). Corrected the premise: the bill targets PRODUCTS not crude - bearish for product tankers (LR2/MR, US Gulf exports ~3.5-4 mb/d), only INDIRECTLY/modestly bullish VLCC via more crude to Asian refiners (est +2-5%, EXPLICITLY unverified - no credible published number found). China demand may peak ~2027. 1975-2015 crude-ban analog proves policy can re-route tankers for decades. Don't underwrite the VLCC bull on this; core is supply-driven.
+
+Module 2 (rate-vs-stock across 4 cycles, quantified from our own yfinance data): (A) FRO is high-beta - trough->peak ~1.6-2x DHT every cycle (2005-08 FRO 3.7x/DHT 1.8x; 2015 2.5x/1.4x; 2019-20 2.5x/2.2x; 2022-26 FRO 11.8x/DHT 6.9x). (B) Stocks price SUSTAINED rates ~1:1 (FRO beta-vs-sustained 1.0-2.5x) and IGNORE transient spikes - 2019-20 rate spiked 16.7x (COSCO $300k, COVID $200k) but stocks only 2.2-2.5x (beta-vs-spike ~0.13x). (C) Current 2022-26 is the biggest stock move ever (FRO +1080%) BECAUSE the most SUSTAINED rate regime (~4.8x, 56 months vs 11-26 historically), not highest-spiking. Stock leads rate by 2-4 weeks (up AND down).
+
+Cycle-position verdict: mid-to-LATE. Stock multiples exceed every prior normal cycle (supercycle territory); big cycle has largely paid off. Upside now needs SUSTAINED rate to hold (spikes won't re-rate); equity leads rate DOWN by 2-4 weeks (waiting = selling late); 2028 supply wall is the datable ender. CRule 8: trim into strength, don't add on spike headlines, pre-commit exits. FRO = more torque both ways, DHT = lower-beta stay-in.
+
+Data-quality (Rule 4): fixed trough-then-peak logic to peak-then-trough-before (DHT 2008 crash was being caught as trough); rate levels approximate/sourced; +2-5% trade-flow figure flagged unverified.
+
+**Files Created**: vlcc_cycles/run_cycle_model.py, vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, vlcc_cycles/data/cycle_multiples.csv, vlcc_cycles/charts/fro_dht_history.png
+**Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

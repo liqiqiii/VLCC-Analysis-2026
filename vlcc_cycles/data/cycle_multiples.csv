@@ -1,0 +1,9 @@
+cycle,ticker,trough,trough_date,peak,peak_date,mult,months,rate_lo,rate_hi_sustained,rate_spike,rate_mult_sustained,rate_mult_spike,stock_vs_sustained_beta,stock_vs_spike_beta,note
+2005-08,FRO,36.5,2006-04-01,134.53,2008-06-01,3.7,26,50000,95000,196000,1.9,3.9,1.95,0.94,"China demand supercycle; sustained ~$50k->$95k, Jul-2008 spike ~$196k"
+2005-08,DHT,26.24,2005-10-01,47.37,2007-07-01,1.8,21,50000,95000,196000,1.9,3.9,0.95,0.46,"China demand supercycle; sustained ~$50k->$95k, Jul-2008 spike ~$196k"
+2015,FRO,2.91,2014-11-01,7.4,2015-10-01,2.5,11,28000,65000,100000,2.3,3.6,1.08,0.7,"China SPR buying + cheap oil; sustained ~$28k->$65k, spike ~$100k"
+2015,DHT,2.42,2014-09-01,3.42,2015-12-01,1.4,15,28000,65000,100000,2.3,3.6,0.6,0.39,"China SPR buying + cheap oil; sustained ~$28k->$65k, spike ~$100k"
+2019-20,FRO,2.89,2018-07-01,7.33,2019-12-01,2.5,17,18000,45000,300000,2.5,16.7,1.0,0.15,"Sustained ~$18k->$45k; TRANSIENT spikes: COSCO Oct-19 ~$300k, COVID 2020 ~$200k"
+2019-20,DHT,2.02,2018-12-01,4.43,2019-12-01,2.2,12,18000,45000,300000,2.5,16.7,0.88,0.13,"Sustained ~$18k->$45k; TRANSIENT spikes: COSCO Oct-19 ~$300k, COVID 2020 ~$200k"
+2022-26,FRO,4.53,2022-01-01,53.67,2026-09-01,11.8,56,20000,95000,585000,4.8,29.2,2.48,0.4,"Supply-driven + Russia rerouting + Hormuz; sustained ~$20k->$85-95k, 2026 spike ~$585k"
+2022-26,DHT,3.35,2022-01-01,23.04,2026-09-01,6.9,56,20000,95000,585000,4.8,29.2,1.45,0.24,"Supply-driven + Russia rerouting + Hormuz; sustained ~$20k->$85-95k, 2026 spike ~$585k"

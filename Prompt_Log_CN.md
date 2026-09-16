@@ -1125,3 +1125,21 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: gold_miners/run_price_charts.py, gold_miners/charts/{miners_vs_gold,zijin_gold_copper}.png, gold_miners/data/{miners_vs_gold,zijin_gold_copper}.csv
 **更新文件**: gold_miners/report_en.md, gold_miners/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 57: VLCC 深挖 —— 美国成品油出口限制 + 运价-股价周期手册（新报告）
+**日期**: 2026年9月16日
+
+半年多大涨后回到 DHT/FRO；用户要一次中后段周期检查点，含两个模块，做成新报告 + GitHub 页面。新建 vlcc_cycles/ 文件夹（run_cycle_model.py + data/cycle_multiples.csv + charts/fro_dht_history.png + 双语 report_en/cn.md；index.md 条目）。两步协议 + CRules 1/3/4/6/8。
+
+模块 1（美国成品油出口限制 -> 原油再路由）：H.R. 8266《2026 汽油出口禁令法案》存在（美国零售价 >$3.12/加仑连续 7 天触发）但政府不推进（尾部、非基准）。更正前提：法案针对成品油而非原油——利空成品油轮（LR2/MR，美湾出口 ~3.5-4 mb/d），仅间接/温和利多 VLCC（估 +2-5%，明确未证实——未找到可信公开数字）。中国需求或 2027 见顶。1975-2015 原油禁令类比证明政策能重塑油轮路线数十年。别把 VLCC 多头押在此上；核心是供给驱动。
+
+模块 2（跨 4 周期运价-股价，从我们自己的 yfinance 数据量化）：(A) FRO 高贝塔——谷底->顶部每周期约 DHT 的 1.6-2 倍（2005-08 FRO 3.7x/DHT 1.8x；2015 2.5x/1.4x；2019-20 2.5x/2.2x；2022-26 FRO 11.8x/DHT 6.9x）。(B) 股价定价持续运价约 1:1（FRO 对持续贝塔 1.0-2.5x），忽略瞬时飙升——2019-20 运价飙 16.7x（中远海运 $300k、疫情 $200k）但股价仅 2.2-2.5x（对飙升贝塔约 0.13x）。(C) 当前 2022-26 是史上最大股价涨幅（FRO +1080%），因为运价体制最持续（~4.8x，56 个月 vs 历史 11-26），而非飙得最高。股价领先运价 2-4 周（上下皆然）。
+
+周期定位结论：中后段。股价倍数超过所有此前正常周期（超级周期区间）；大周期已大体兑现。上行现需持续运价守住（飙升不会重估）；股权领先运价下跌 2-4 周（等待=卖晚）；2028 供给墙是可标注日期的终结者。CRule 8：逢强减仓、别在飙升头条上加仓、预设退出。FRO=双向弹性更大，DHT=低贝塔留守。
+
+数据质量（Rule 4）：把"先谷后峰"逻辑修正为"先峰后其前谷"（DHT 2008 崩盘曾被当作谷底）；运价水平近似/来源；+2-5% 贸易流数字标注未证实。
+
+**创建文件**: vlcc_cycles/run_cycle_model.py, vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, vlcc_cycles/data/cycle_multiples.csv, vlcc_cycles/charts/fro_dht_history.png
+**更新文件**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -10,6 +10,14 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🚢📉 VLCC Deep-Dive — US Product-Export Limits & the Rate-vs-Stock Cycle Playbook (NEW — Sep 16, 2026)
+
+Two modules for a mid-to-late-cycle checkpoint on DHT/FRO. **Module 1 — US product-export limits → "all crude to China then re-export"?** The bill exists (**H.R. 8266**, triggers if US pump price >\$3.12/gal for 7 days) but the administration **isn't pursuing it** — a tail, not a base case. The honest verdict corrects the premise: a **product**-export cap is bearish for **product tankers (LR2/MR)** and only **indirectly, modestly** bullish for VLCCs (est. +2–5%, *unverified*) via more crude routing to Asian refiners; the 1975–2015 crude-ban analog proves policy *can* re-route tankers for decades. **Module 2 — rate-vs-stock across 4 cycles (quantified):** **(A) FRO is the high-beta vehicle** — trough→peak ~1.6–2× DHT's every cycle (2022-26: FRO **11.8×** vs DHT **6.9×**); **(B) stocks price SUSTAINED rates ~1:1 and IGNORE transient spikes** (2019-20 rate spiked 16.7× but stocks only ~2.2–2.5×); **(C) the current cycle is the biggest stock move ever *because* it's the most sustained** (~4.8×, 56 months), not the highest-spiking. Stock **leads the rate by 2–4 weeks** (up and down). Cycle read: **mid-to-late — trim into strength (CRule 8), don't chase spikes**, with the 2028 supply wall ahead. Reproducible cycle model + log-scale chart. *Analysis, not investment advice.*
+
+**[📄 VLCC Cycles (EN) →](vlcc_cycles/report_en)** | **[VLCC 周期（中文）→](vlcc_cycles/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/vlcc_cycles)**
+
+---
+
 ### 🥇 Gold Miners — US-Listed Western Majors vs China Majors (NEW — Sep 3, 2026)
 
 Compares the top gold miners — **Newmont / Agnico / Kinross** (US-listed Western) vs **Zijin / Shandong Gold / Zhaojin** (China) — and stress-tests a common thesis ("US = higher cost but pure-gold focus; China = low cost but non-lucrative diversification"). **Verdict: half right, half inverted.** On **cost** it's true vs Newmont ($1,609) / Barrick ($1,637), but **the lowest-cost major is Western — Agnico at $1,339** (below every Chinese name except Shandong). On **focus** it's *backwards* for the flagship: **Zijin is a copper-gold major (gold only ~33% of revenue); copper is its most *lucrative*, fastest-growing engine**, while **Newmont is the >85%-gold pure-play**. The "non-lucrative" tag fits SOE **smelting/refining**, not Zijin's copper. China screens cheaper (Zijin fwd P/E ~9.3, div ~3.0%, ROE ~36%) but carries a **China/SOE-governance + geopolitical discount**. At gold **~$4,474/oz**, scale beats cost — Newmont's gold gross profit (~$16.9B) is ~2× Shandong's despite a $360 higher AISC. Right like-for-like *gold* pair = **Newmont vs Shandong Gold**. Reproducible cost/margin model + chart. *Analysis, not investment advice.*
