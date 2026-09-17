@@ -1213,3 +1213,28 @@ Added run_quarterly_deep.py + Section 8 (bilingual) + charts/quarterly_rate_vs_s
 
 **Files Created**: vlcc_cycles/run_quarterly_deep.py, vlcc_cycles/charts/quarterly_rate_vs_stock.png, vlcc_cycles/data/{quarterly_rate_price,pnav,leadlag,exit_dashboard}.csv
 **Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 60: CORRECTION — TD3C broke $1,000,000/day (Section 9)
+**Date**: September 16, 2026
+
+User challenged: "TD3C is now at 1 million, how can you say seventy-eighty thousand?" USER WAS RIGHT - I was working from stale data.
+
+VERIFIED: TD3C hit $1.035M-1.099M/day on Sep 14-15, 2026 - first time ever above $1M, ~26% above the March-2026 record. Path: Aug 24 $87,711 (the -20% plunge I had quoted) -> Sep 8 ~$760,000 -> Sep 14-15 $1.035M. I had anchored on the Aug-24 figure and failed to re-verify before writing Sections 7/8.
+
+CRITICAL NUANCE (Rule 4): the $1.035M headline is a Baltic THEORETICAL index assessment from standardized voyage assumptions; ACTUAL PHYSICAL FIXTURES at the same moment were $530,000-$600,000/day - roughly half. Use $530-600k as the "real money" number.
+
+DRIVER: war-driven EFFECTIVE-SUPPLY collapse, not a demand boom. Only 4 commodity vessels transited Hormuz on Sep 14 vs a pre-crisis norm of ~125/day; ME crude exports -36% vs the six-month pre-crisis average. Paradox: cargo volumes FELL yet freight soared because available tonnage fell faster. PG->North Asia per-barrel freight went from ~$5-6 to ~$30.
+
+DOES IT BREAK THE FRAMEWORK? No - it is the most extreme confirmation of Rule B yet. At $1.035M sustained, DHT EPS would be $52.36 and FRO $90.61; at 3x that implies DHT $157 (+582%) and FRO $272 (+407%). Yet they trade at $23.04/$53.67, implying only ~$177k (DHT) / ~$237k (FRO) even at a 3x PE. The market is capitalizing only ~10-20% of the headline as durable.
+
+BUT THE RULE NEEDED REFINEMENT (important): "stocks ignore spikes" is incomplete at this magnitude. Spike cash is BANKED PERMANENTLY. At $1.035M, DHT earns its ENTIRE market cap in ~159 days ($23.4M/day vs $3.7B mcap); FRO in ~213 days. Two months alone = ~$1.4B for DHT = 38% of market cap in cash. Refined rule: the MULTIPLE ignores the spike, but the NAV/BOOK absorbs it permanently -> track book value/net cash from here, not the P/E. This mechanically pushes the Section 8.2 P/NAV (DHT 0.95x, FRO 1.21x) lower even with flat prices.
+
+DHT-over-FRO CONCLUSION SURVIVES AND STRENGTHENS: DHT has the larger % upside at EVERY level tested ($300k: +83% vs +32%; $530k: +239% vs +149%; $1.035M: +582% vs +407%) because its price embeds the lower rate. FRO gives more absolute dollars per share.
+
+REVISED CYCLE READ: not "mid-to-late with softening rates" but A WAR-DRIVEN BLOW-OFF at an all-time record. CRule 8 discipline unchanged and MORE urgent - blow-offs are trimming zones, and the Aug-24 -20%-in-one-day print proves how fast it reverses.
+
+Corrected all stale $85-95k references in Sections 7.3/7.5 (both languages).
+
+**Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

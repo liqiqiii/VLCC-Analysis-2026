@@ -183,7 +183,7 @@ EPS           = Net income / shares
 | 7× | \$93,179/day | \$124,908/day |
 | 8× | \$85,282/day | \$114,393/day |
 
-**🔑 The key finding — FRO is priced for a ~34% higher sustained rate than DHT.** At a common 6× multiple, DHT's price discounts **~\$104k/day**, FRO's discounts **~\$139k/day**. Given the Aug-2026 plunge settled TD3C near **\$87.7k** and the global VLCC average was ~**\$83.9k**, **DHT is priced roughly in line with today's spot, while FRO already requires a materially higher sustained rate to justify itself.**
+**🔑 The key finding — FRO is priced for a ~34% higher sustained rate than DHT.** At a common 6× multiple, DHT's price discounts **~\$104k/day**, FRO's discounts **~\$139k/day**. **⚠️ See §9 for the Sep-14/15 record (TD3C \$1.035M/day) — these implied levels are far BELOW spot, which is the whole point: the market is capitalizing only a small fraction of the spike as durable.** On a *sustained* basis, **DHT requires a much less demanding rate than FRO to justify itself.**
 
 ## 7.4 Stock guidance at \$150k / \$200k / \$250k sustained (CRule 7)
 
@@ -220,12 +220,12 @@ EPS           = Net income / shares
 **From the 2022 trough, FRO was the higher-beta winner (11.8× vs DHT 6.9×). But from TODAY's price, DHT has the better risk/reward — because FRO has already priced in the higher rate.**
 
 - **At \$150k sustained (P-Rule 3 base):** DHT **+63%**, FRO only **+11%** (at 6×). FRO needs ~\$139k *just to stand still*.
-- **At \$80-100k (i.e., today's actual spot ~\$84-88k):** DHT is roughly **fair to −5%**, FRO is **−40% to −60%**. **FRO carries far more downside if the rate merely stays where it is.**
+- **At \$80-100k (a *post-spike normalisation* scenario — cf. the Aug-24 plunge to \$87.7k):** DHT is roughly **fair to −5%**, FRO is **−40% to −60%**. **FRO carries far more downside if the rate normalises back to the summer level.**
 - **FRO only wins decisively above ~\$200k**, where its operating leverage (57.9 VLCC-equiv vs 24) dominates: +62% vs DHT's +131%… *note DHT still leads in % terms; FRO leads in absolute dollars per share.*
 
 **Why:** FRO's higher gearing cuts **both ways**. It gave the bigger trough→peak multiple, and it now embeds the more demanding rate assumption. **DHT's low \$17,500 breakeven + a price discounting only ~\$104k is the better-protected way to stay long the cycle.**
 
-> **给用户的直接结论 / Bottom line:** today's prices say the market has **already capitalized roughly today's spot for DHT (~\$104k) but a much higher sustained ~\$139k for FRO.** So: **if you believe \$150k+ is sustainable into 2027-28, DHT offers the better upside (+63% vs +11%) and FRO offers more absolute torque only above ~\$200k. If rates merely hold at today's ~\$85-90k, DHT is roughly fair while FRO is exposed to a 40-60% de-rate.** Combined with §5's "stocks capitalize *sustained*, not spike" and the **2028 supply wall**, this argues for **rotating cycle exposure toward the lower-breakeven, less-demanding name (DHT) and trimming the one that needs heroic rates (FRO)** — a concrete CRule 8 action rather than a generic "stay vigilant."
+> **给用户的直接结论 / Bottom line:** today's prices say the market has **capitalized only ~\$104k/day for DHT and ~\$139k for FRO — a small fraction of the \$1.035M Sep-15 print (§9).** So: **if you believe \$150k+ is sustainable into 2027-28, DHT offers the better upside (+63% vs +11%) and FRO offers more absolute torque only above ~\$200k. If rates normalise back toward \$85-90k, DHT is roughly fair while FRO is exposed to a 40-60% de-rate.** Combined with §5's "stocks capitalize *sustained*, not spike" and the **2028 supply wall**, this argues for **rotating cycle exposure toward the lower-breakeven, less-demanding name (DHT) and trimming the one that needs heroic rates (FRO)** — a concrete CRule 8 action rather than a generic "stay vigilant."
 
 *(Reproduce: `python run_rate_valuation.py` → `data/{rate_vs_price_table,cycle_avg_rates,implied_rate,target_prices}.csv` + `charts/rate_vs_stock.png`. **Rule 4:** annual TCE averages are approximate/broker-derived and conflict across providers by >20% in some years; breakevens and current prices are company-disclosed/live; D&A is estimated; P/E 4-8× brackets the historical cycle range (CRule 2). Targets are scenario arithmetic, **not forecasts**.)*
 
@@ -298,6 +298,105 @@ EPS           = Net income / shares
 > **Net for the user:** on a **quarterly** basis the picture is sharper, not softer. The 2026Q2→Q3 print (rate −26%, stocks +26–33%) is textbook "capitalize the sustained, ignore the spike." And the **P/NAV cross-check independently confirms the §7 conclusion** — **DHT at 0.95× asset value vs FRO at 1.21×.** Both the earnings-based and the asset-based lens say the same thing: **DHT is the better-protected way to stay long this cycle; FRO is the one to trim first when the dashboard triggers fire.**
 
 *(Reproduce: `python run_quarterly_deep.py` → `data/{quarterly_rate_price,pnav,leadlag,exit_dashboard}.csv` + `charts/quarterly_rate_vs_stock.png`.)*
+
+---
+
+# Section 9 — ⚠️ CORRECTION: TD3C broke \$1,000,000/day (Sep 14-15, 2026)
+
+## 9.0 What I got wrong
+
+**Earlier sections used \$85–95k/day as "current spot." That was stale and wrong.** I was anchored on the **Aug-24 plunge to \$87,711/day** and did not re-verify before writing §7/§8. In the three weeks since, TD3C went **vertical**:
+
+| Date | TD3C (Baltic assessment) |
+|---|---|
+| Aug 24, 2026 | \$87,711/day *(the −20% one-day plunge I quoted)* |
+| Sep 8, 2026 | ~\$760,000/day |
+| **Sep 14-15, 2026** | **\$1.035M–1.099M/day — first time ever above \$1M** |
+
+That is **~26% above the previous all-time high** set in March 2026. **Thank you for catching it.** The stale figures in §7.3/§7.5 are corrected above.
+
+**⚠️ But one critical nuance (Rule 4): the headline is an INDEX, not a fixture.** The Baltic TD3C assessment is a *theoretical* TCE from standardized voyage assumptions. **Actual physical fixtures at the same moment were \$530,000–\$600,000/day** — astronomical, but roughly **half** the headline. Use \$530–600k as the "real money" number and \$1.035M as the index print.
+
+**What drove it (a war-driven *effective-supply* collapse, not a demand boom):**
+- **Only 4 commodity vessels transited Hormuz on Sep 14 vs a pre-crisis norm of ~125/day.**
+- Middle East crude exports **−36%** vs the six-month pre-crisis average.
+- **The paradox:** cargo volumes *fell*, yet freight soared — because **available tonnage fell faster than cargo**. Owners won't enter the Gulf.
+- Per-barrel PG→North Asia freight went from **~\$5–6 to ~\$30**.
+
+## 9.1 Does this break the framework? No — it is the most extreme confirmation of Rule B yet
+
+If **\$1.035M were sustained for a year**, the arithmetic is absurd:
+
+| Sustained TCE | DHT EPS | DHT @3× | FRO EPS | FRO @3× |
+|---|---|---|---|---|
+| \$300,000 | \$14.07 | \$42 *(+83%)* | \$23.63 | \$71 *(+32%)* |
+| \$530,000 *(physical)* | \$26.05 | \$78 *(+239%)* | \$44.59 | \$134 *(+149%)* |
+| **\$1,035,000 *(index)*** | **\$52.36** | **\$157 *(+582%)*** | **\$90.61** | **\$272 *(+407%)*** |
+
+**Yet DHT trades at \$23.04 and FRO at \$53.67.** Reversing the model, today's prices imply only:
+
+| | PE 3× | PE 6× |
+|---|---|---|
+| **DHT implies** | \$177,419/day | \$103,710/day |
+| **FRO implies** | \$237,073/day | \$138,929/day |
+
+> **🔑 The market is capitalizing roughly 10–20% of the headline rate as durable.** That is **Rule B in its purest possible form** — the equity flatly refuses to capitalize a war-driven spike. This is the same behaviour as 2019 (COSCO \$300k → stocks +2.2–2.5× only) and Aug-2026 (\$585k spike faded), just at an unprecedented magnitude.
+
+## 9.2 ⚠️ BUT — the rule needs one important refinement
+
+My earlier framing ("stocks ignore spikes") is **incomplete at this magnitude.** A spike this large is **balance-sheet-transforming even if brief**, because the cash is *banked permanently*:
+
+| | Market cap | Daily profit at \$1.035M | **Days to earn entire market cap** |
+|---|---|---|---|
+| **DHT** | \$3.7B | \$23.4M | **159 days** |
+| **FRO** | \$11.9B | \$56.1M | **213 days** |
+
+**Even two months at these rates ≈ \$1.4B of cash for DHT — about 38% of its entire market cap, in cash, permanently.** Industry commentary notes owners can earn *the value of a 10-year-old VLCC in under five months*.
+
+**So the refined rule is:**
+- **The MULTIPLE ignores the spike** (the market won't pay a high P/E on war rates) — Rule B holds.
+- **But the NAV/book absorbs it permanently.** Spike cash → deleveraging, special dividends, buybacks, asset purchases. At this magnitude the **P/NAV denominator (§8.2) is rising fast**, which mechanically pushes DHT *below* 0.95× and FRO *below* 1.21× even with flat share prices.
+
+**That is the genuine bull case here, and it is NOT the same as "rates are high."** It is: *how many months of banked cash do we get before Hormuz normalises?*
+
+## 9.3 Does the DHT-over-FRO conclusion survive? Yes — and it strengthens
+
+At **every** rate level tested, DHT shows the larger **percentage** upside, because its price embeds the lower rate:
+
+| Sustained TCE | DHT upside @3× | FRO upside @3× |
+|---|---|---|
+| \$150,000 | −19% | −44% |
+| \$300,000 | **+83%** | +32% |
+| \$530,000 | **+239%** | +149% |
+| \$1,035,000 | **+582%** | +407% |
+
+FRO delivers more **absolute dollars per share**; DHT delivers more **percentage return and a lower break-point**. The §7/§8 conclusion is unchanged.
+
+## 9.4 Revised cycle-position read
+
+```
+Was (Sep 16, pre-correction):  mid-to-late cycle, rate softening from the Aug plunge.
+IS (corrected):                A WAR-DRIVEN BLOW-OFF. TD3C at an all-time record
+                               ($1.035M index / $530-600k physical) on an effective-
+                               supply collapse (4 ships/day through Hormuz vs ~125).
+What has NOT changed:          The market still capitalizes only ~$104k (DHT) /
+                               ~$139k (FRO) - it is pricing this as transient.
+What HAS changed:              The CASH being banked is enormous and permanent
+                               (DHT: entire market cap in ~159 days at these rates).
+                               Watch BOOK VALUE / net cash, not just the multiple.
+The asymmetry now:             Upside = months of banked cash + a possible re-rate if
+                               the market concedes durability. Downside = Hormuz
+                               normalises, rates round-trip to $85-100k, and FRO
+                               (priced at 1.21x NAV / $139k) de-rates 40-60%.
+CRule 8 discipline:            UNCHANGED and now MORE urgent - this is a blow-off,
+                               and blow-offs are where you TRIM, not chase. The Aug-24
+                               -20%-in-a-day print is the live proof of how fast it
+                               can reverse.
+```
+
+> **Bottom line for the user:** you were right and I was working from stale data — TD3C is at a **record \$1.035M (index) / \$530–600k (physical)**, not \$87.7k. But correcting it **does not overturn the analysis; it sharpens it.** The market is capitalizing only ~10–20% of that rate, which is the strongest possible confirmation that **equities price the *sustained* level, not the spike.** The genuine new information is the **cash**: at these rates DHT banks its *entire market cap in ~159 days*, which permanently lifts NAV. **So track book value/net cash from here, not the P/E — and treat a war-driven blow-off as a trimming zone (CRule 8), not a chasing zone.** DHT remains the better-protected leg at every rate level tested.
+
+*(Sources, accessed Sep 16, 2026: Lloyd's List *VLCC market hits historic high in latest phase of Hormuz crisis*; Seatrade-Maritime; PortNews; Splash247 *Tanker boom breaks every historical benchmark*; ShipUniverse; Xinde Marine *"VLCCs top \$1m a day — but what price is TD3C actually discovering?"* (the index-vs-fixture distinction). **Rule 4: the \$1.035M is a Baltic theoretical assessment; physical fixtures were \$530–600k.**)*
 
 ---
 
