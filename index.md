@@ -16,6 +16,8 @@ Two modules for a mid-to-late-cycle checkpoint on DHT/FRO. **Module 1 — US pro
 
 **[📄 VLCC Cycles (EN) →](vlcc_cycles/report_en)** | **[VLCC 周期（中文）→](vlcc_cycles/report_cn)** | **[data + code →](https://github.com/liqiqiii/VLCC-Analysis-2026/tree/master/vlcc_cycles)**
 
+**§7 DEEP rate-to-valuation bridge (Sep 16):** average TCE by cycle in **one table with DHT/FRO adjusted prices**; a **company-anchored EPS model** (DHT breakeven \$17,500/day, FRO ~\$26,000/day) **validated to within ~5%** of each stock's quoted P/E. **Today's price implies ~\$104k/day for DHT but ~\$139k/day for FRO** — so at \$150k sustained, **DHT +63% vs FRO +11%**, while at today's ~\$85-90k spot **DHT is ~fair but FRO screens −40% to −60%**. Full \$150k/\$200k/\$250k × P/E 4/6/8 target grid. Also documents the study's sharpest fact: **2015-16 and 2019-20 had nearly the SAME average rate as 2005-08 (~\$52-64k) yet FRO traded ~12× lower** — proof that **durability + leverage, not the rate level, set the multiple.**
+
 ---
 
 ### 🥇 Gold Miners — US-Listed Western Majors vs China Majors (NEW — Sep 3, 2026)

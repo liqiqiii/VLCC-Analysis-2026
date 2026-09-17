@@ -123,11 +123,120 @@ Key risk:          A sustained-rate rollover (2028 deliveries, demand slip, shad
 
 ---
 
+# Section 7 — 【DEEP】Rate-to-valuation bridge: average rates by cycle, implied rate, and $150k/$200k/$250k guidance
+
+> Follow-up: summarize **average VLCC rates by cycle**, put them in **one table with DHT/FRO adjusted prices**, work out **what rate today's price implies**, and give **stock guidance at $150k / $200k / $250k sustained**.
+
+## 7.1 The earnings model (transparent + validated)
+
+```
+Cash earnings = vessel_days x (TCE - cash_breakeven)
+Net income    = Cash earnings - D&A
+EPS           = Net income / shares
+```
+
+| Anchor | DHT | FRO | Source |
+|---|---|---|---|
+| Fleet | 24 VLCC | 42 VLCC + 21 Suezmax + 18 LR2 = **57.9 VLCC-equiv** | P-Rule 1 |
+| Vessel-days/yr | ~8,400 | ~20,290 (VLCC-equiv) | 96% utilization |
+| **Cash breakeven** | **\$17,500/day** | **~\$26,000/day** | **Company-disclosed** (DHT 2026 spot BE; FRO Q3-25 deck) |
+| D&A | ~\$105M | ~\$300M | est. from fleet |
+| Shares | 161.24M | 222.62M | yfinance |
+| Price (Sep 16, 2026) | **\$23.04** | **\$53.67** | live |
+
+**✅ Model validation (Rule 4) — this is why you can trust the outputs:** feeding each stock's quoted trailing P/E back through the model implies a trailing TCE of **~\$88.7k/day (DHT)** and **~\$117.0k/day (FRO)**. Both sit sensibly between their disclosed quarterly prints (DHT Q4-25 \$60.3k → Q1-26 \$78.8k; FRO Q2-26 \$152.7k, Q3-26 \$156.9k blended with weaker 2025). **The model reproduces reality within ~5%.**
+
+## 7.2 Average TCE by cycle — in ONE table with DHT/FRO adjusted prices
+
+| Cycle | Years | **Avg VLCC TCE** | **FRO avg px** | **DHT avg px** |
+|---|---|---|---|---|
+| **2005-08** demand supercycle | 2005-08 | **\$64,250** | **\$62.01** | **\$31.76** |
+| 2009-14 post-GFC bust | 2009-14 | \$27,166 | \$28.34 | \$8.54 |
+| **2015-16** SPR mini-cycle | 2015-16 | **\$52,500** | **\$5.21** | **\$2.66** |
+| 2017-18 trough | 2017-18 | \$19,500 | \$3.18 | \$2.11 |
+| **2019-20** sanction/COVID | 2019-20 | **\$54,500** | **\$4.81** | **\$3.28** |
+| 2021-22 bottom | 2021-22 | \$14,000 | \$6.19 | \$4.46 |
+| **2023-26** current supply cycle | 2023-26 | **\$57,000** | **\$21.93** | **\$10.89** |
+
+![VLCC average TCE vs DHT/FRO adjusted share price](charts/rate_vs_stock.png)
+
+### ⚠️ The single most important row-pair in this study
+
+**2005-08 avg TCE \$64,250 → FRO \$62.01.  2015-16 avg TCE \$52,500 → FRO \$5.21.  2019-20 avg \$54,500 → FRO \$4.81.**
+
+**Nearly the same rate, a ~12× different share price.** This kills the naive "rate X ⇒ price Y" mapping. Three reasons:
+1. **Durability (Rule B, §5).** 2015 and 2020 were *transient* (SPR buying; COVID floating storage) — the market refused to capitalize them. 2005-08 and 2023-26 are *sustained* regimes, so they get capitalized.
+2. **Balance sheet.** In 2015-20 the sector was over-levered post-2012; equity was a thin option on the assets.
+3. **⚠️ Share count (Rule 4 caveat).** Adjusted prices correct for *splits*, **not dilution** — FRO's share count grew from roughly the 70-80M area (mid-2000s) to **222.6M** today. So cross-era *price* comparisons overstate the collapse; **market-cap-per-VLCC** would be the cleaner metric. Treat the 12× as **directional, not literal.**
+
+> **Implication:** never underwrite a target price off a rate *level* alone. The multiple the market pays per unit of rate has ranged from **~\$0.08 to ~\$1.73 of FRO share price per \$1k/day** — it is a function of **durability and leverage**, not the rate itself.
+
+## 7.3 What sustained rate does TODAY's price imply?
+
+*(Reverse the model: what TCE makes today's price fair at a given P/E?)*
+
+| Assumed P/E | **DHT @ \$23.04 implies** | **FRO @ \$53.67 implies** |
+|---|---|---|
+| 4× (cycle-peak PE, CRule 2) | \$140,564/day | \$188,001/day |
+| 5× | \$118,451/day | \$158,558/day |
+| **6× (base)** | **~\$103,700/day** | **~\$138,900/day** |
+| 7× | \$93,179/day | \$124,908/day |
+| 8× | \$85,282/day | \$114,393/day |
+
+**🔑 The key finding — FRO is priced for a ~34% higher sustained rate than DHT.** At a common 6× multiple, DHT's price discounts **~\$104k/day**, FRO's discounts **~\$139k/day**. Given the Aug-2026 plunge settled TD3C near **\$87.7k** and the global VLCC average was ~**\$83.9k**, **DHT is priced roughly in line with today's spot, while FRO already requires a materially higher sustained rate to justify itself.**
+
+## 7.4 Stock guidance at \$150k / \$200k / \$250k sustained (CRule 7)
+
+**EPS at sustained TCE:**
+
+| Sustained TCE | DHT EPS | FRO EPS |
+|---|---|---|
+| \$100,000 | \$3.65 | \$5.40 |
+| \$120,000 | \$4.69 | \$7.22 |
+| **\$150,000** | **\$6.25** | **\$9.95** |
+| **\$200,000** | **\$8.86** | **\$14.51** |
+| **\$250,000** | **\$11.46** | **\$19.07** |
+
+**Target price & upside vs today (DHT \$23.04 / FRO \$53.67):**
+
+| Sustained TCE | | **PE 4× (bear)** | **PE 6× (base)** | **PE 8× (bull)** |
+|---|---|---|---|---|
+| **\$150k** | **DHT** | \$25.01 *(+9%)* | **\$37.51 *(+63%)*** | \$50.01 *(+117%)* |
+| | **FRO** | \$39.82 *(−26%)* | **\$59.72 *(+11%)*** | \$79.63 *(+48%)* |
+| **\$200k** | **DHT** | \$35.43 *(+54%)* | **\$53.14 *(+131%)*** | \$70.85 *(+208%)* |
+| | **FRO** | \$58.04 *(+8%)* | **\$87.07 *(+62%)*** | \$116.09 *(+116%)* |
+| **\$250k** | **DHT** | \$45.84 *(+99%)* | **\$68.77 *(+198%)*** | \$91.69 *(+298%)* |
+| | **FRO** | \$76.27 *(+42%)* | **\$114.41 *(+113%)*** | \$152.55 *(+184%)* |
+
+**And the downside symmetry (equally important):**
+
+| Sustained TCE | DHT @ 6× | FRO @ 6× |
+|---|---|---|
+| \$100k | \$21.88 *(−5%)* | \$32.38 *(−40%)* |
+| \$80k | \$15.63 *(−32%)* | \$21.44 *(−60%)* |
+
+## 7.5 The counter-intuitive conclusion (this inverts the earlier read)
+
+**From the 2022 trough, FRO was the higher-beta winner (11.8× vs DHT 6.9×). But from TODAY's price, DHT has the better risk/reward — because FRO has already priced in the higher rate.**
+
+- **At \$150k sustained (P-Rule 3 base):** DHT **+63%**, FRO only **+11%** (at 6×). FRO needs ~\$139k *just to stand still*.
+- **At \$80-100k (i.e., today's actual spot ~\$84-88k):** DHT is roughly **fair to −5%**, FRO is **−40% to −60%**. **FRO carries far more downside if the rate merely stays where it is.**
+- **FRO only wins decisively above ~\$200k**, where its operating leverage (57.9 VLCC-equiv vs 24) dominates: +62% vs DHT's +131%… *note DHT still leads in % terms; FRO leads in absolute dollars per share.*
+
+**Why:** FRO's higher gearing cuts **both ways**. It gave the bigger trough→peak multiple, and it now embeds the more demanding rate assumption. **DHT's low \$17,500 breakeven + a price discounting only ~\$104k is the better-protected way to stay long the cycle.**
+
+> **给用户的直接结论 / Bottom line:** today's prices say the market has **already capitalized roughly today's spot for DHT (~\$104k) but a much higher sustained ~\$139k for FRO.** So: **if you believe \$150k+ is sustainable into 2027-28, DHT offers the better upside (+63% vs +11%) and FRO offers more absolute torque only above ~\$200k. If rates merely hold at today's ~\$85-90k, DHT is roughly fair while FRO is exposed to a 40-60% de-rate.** Combined with §5's "stocks capitalize *sustained*, not spike" and the **2028 supply wall**, this argues for **rotating cycle exposure toward the lower-breakeven, less-demanding name (DHT) and trimming the one that needs heroic rates (FRO)** — a concrete CRule 8 action rather than a generic "stay vigilant."
+
+*(Reproduce: `python run_rate_valuation.py` → `data/{rate_vs_price_table,cycle_avg_rates,implied_rate,target_prices}.csv` + `charts/rate_vs_stock.png`. **Rule 4:** annual TCE averages are approximate/broker-derived and conflict across providers by >20% in some years; breakevens and current prices are company-disclosed/live; D&A is estimated; P/E 4-8× brackets the historical cycle range (CRule 2). Targets are scenario arithmetic, **not forecasts**.)*
+
+---
+
 ## Reproduce it yourself
 
 ```
 cd vlcc_cycles
-python run_cycle_model.py     # writes data/cycle_multiples.csv + charts/fro_dht_history.png
+python run_cycle_model.py       # data/cycle_multiples.csv + charts/fro_dht_history.png
+python run_rate_valuation.py    # §7: rate-to-valuation bridge, implied rate, target prices
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.

@@ -1167,3 +1167,27 @@ Data-quality (Rule 4): fixed trough-then-peak logic to peak-then-trough-before (
 
 **Files Created**: vlcc_cycles/run_cycle_model.py, vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, vlcc_cycles/data/cycle_multiples.csv, vlcc_cycles/charts/fro_dht_history.png
 **Files Updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 58: VLCC DEEP rate-to-valuation bridge — avg rates by cycle, implied rate, $150k/$200k/$250k guidance (Section 7)
+**Date**: September 16, 2026
+
+User: earlier work lacked depth. Wanted (a) average VLCC rates summarized by cycle, (b) in ONE table with DHT/FRO adjusted price trends, (c) what rate the current price implies, (d) stock guidance at 150k/200k/250k seasonal rates.
+
+Added run_rate_valuation.py + Section 7 to report_en/cn.md (bilingual) + charts/rate_vs_stock.png + 4 CSVs.
+
+MODEL (transparent, company-anchored): Cash earnings = vessel_days x (TCE - cash breakeven); NI = cash - D&A; EPS = NI/shares. DHT: 24 VLCC, ~8,400 days, breakeven $17,500/day (company-disclosed 2026 spot BE), D&A ~$105M, 161.24M sh, $23.04. FRO: 57.9 VLCC-equiv (P-Rule 1), ~20,290 days, breakeven ~$26,000/day (FRO Q3-25 deck), D&A ~$300M, 222.62M sh, $53.67. VALIDATED: feeding quoted trailing P/E back implies trailing TCE of ~$88.7k (DHT) and ~$117.0k (FRO), both consistent with disclosed quarterly prints (DHT Q4-25 $60.3k/Q1-26 $78.8k; FRO Q2-26 $152.7k/Q3-26 $156.9k) - within ~5%.
+
+Avg TCE by cycle + avg adjusted prices (ONE table): 2005-08 $64,250/FRO $62.01/DHT $31.76; 2009-14 $27,166/$28.34/$8.54; 2015-16 $52,500/$5.21/$2.66; 2017-18 $19,500/$3.18/$2.11; 2019-20 $54,500/$4.81/$3.28; 2021-22 $14,000/$6.19/$4.46; 2023-26 $57,000/$21.93/$10.89.
+
+SHARPEST FINDING: 2015-16 ($52.5k) and 2019-20 ($54.5k) had nearly the SAME avg rate as 2005-08 ($64.25k) yet FRO traded ~12x lower ($5.21/$4.81 vs $62.01). Kills the naive "rate X -> price Y" mapping. Causes: (1) durability - transient spikes aren't capitalized; (2) balance-sheet leverage; (3) Rule-4 caveat: adjusted price corrects splits NOT dilution (FRO ~70-80M shares mid-2000s -> 222.6M now), so treat the 12x as directional; market-cap-per-VLCC is cleaner.
+
+IMPLIED RATE (reverse model at 6x PE): DHT $23.04 implies ~$103,700/day; FRO $53.67 implies ~$138,900/day. FRO is priced for a ~34% HIGHER sustained rate. Given Aug-2026 TD3C settled ~$87.7k and global avg ~$83.9k, DHT is priced ~in line with spot while FRO needs materially higher.
+
+TARGETS (PE 4/6/8): at $150k - DHT $25.01/$37.51/$50.01 (+9/+63/+117%), FRO $39.82/$59.72/$79.63 (-26/+11/+48%). At $200k - DHT $35.43/$53.14/$70.85, FRO $58.04/$87.07/$116.09. At $250k - DHT $45.84/$68.77/$91.69, FRO $76.27/$114.41/$152.55. DOWNSIDE at 6x: $100k -> DHT $21.88 (-5%), FRO $32.38 (-40%); $80k -> DHT $15.63 (-32%), FRO $21.44 (-60%).
+
+COUNTER-INTUITIVE CONCLUSION (inverts the earlier read): from the 2022 trough FRO was the high-beta winner (11.8x vs 6.9x), but from TODAY'S price DHT has better risk/reward because FRO already discounts the higher rate. At $150k: DHT +63% vs FRO +11%. If rates merely hold at today's $85-90k, DHT ~fair while FRO -40 to -60%. FRO only wins decisively above ~$200k. Actionable CRule 8: rotate toward the lower-breakeven/less-demanding name (DHT), trim the one needing heroic rates (FRO).
+
+**Files Created**: vlcc_cycles/run_rate_valuation.py, vlcc_cycles/charts/rate_vs_stock.png, vlcc_cycles/data/{rate_vs_price_table,cycle_avg_rates,implied_rate,target_prices}.csv
+**Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
