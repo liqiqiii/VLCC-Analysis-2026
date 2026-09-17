@@ -1238,3 +1238,26 @@ REVISED CYCLE READ: not "mid-to-late with softening rates" but A WAR-DRIVEN BLOW
 Corrected all stale $85-95k references in Sections 7.3/7.5 (both languages).
 
 **Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 61: MAJOR CORRECTION — spot vs time-charter coverage inverts the DHT-over-FRO call (Section 10)
+**Date**: September 16, 2026
+
+User: "your work is inaccurate - you must account for the SPOT PROPORTION. DHT and FRO are both only ~50% real spot (if I remember right). Find the actual spot counts and fixture prices to support your conclusion."
+
+USER WAS RIGHT about the flaw (and right about DHT specifically; FRO turned out different). Sections 7-9 assumed 100% of vessel-days earn the spot rate. Found the real data:
+- DHT: 23 VLCCs = 11 on TIME CHARTER + 12 spot -> ~52% spot (DHT annual report, Mar-2026). User's ~50% memory CONFIRMED.
+- FRO: 86% of Q3-2026 VLCC days spot-exposed, 14% TC (FRO Q3-2026 disclosure). NOT ~50% - FRO is nearly fully spot.
+- Supporting fixture data: DHT Q1-26 spot $91,700 / TC $61,300 / blend $78,800; Q2-26 spot $162,600 / TC $90,800 / blend $126,700; Q3-26 48% of spot days at $139,700. FRO Q3-26 86% booked at $156,900; breakeven revised $26,000 -> $23,800; Aug-26 TC fixtures newbuild 1yr $120,000, 2016-built 2yr avg $90,000, 3yr avg $75,000.
+
+Built run_spot_adjusted.py: blended TCE = spot% x spot + TC% x TC. VALIDATED vs disclosure: DHT Q2-26 model $128,136 vs disclosed $126,700 (+1%); FRO Q3-26 model $148,934 vs disclosed $156,900 (-5%).
+
+THE CONCLUSION INVERTS. Crossover at ~$200-300k spot. Upside @3x: $95k DHT -57% vs FRO -71% (DHT wins); $200k DHT -20% vs FRO -25% (DHT); $300k DHT +15% vs FRO +19% (FRO); $530k DHT +96% vs FRO +120% (FRO); $1.035M DHT +274% vs FRO +341% (FRO). Since spot is currently $530k (physical) to $1.035M (index), FRO is the better vehicle TODAY - the opposite of what Sections 7.5/9.3 concluded. Marked both as SUPERSEDED with pointers to Section 10.
+
+Corrected implied spot from today's price: DHT @6x $115,626 (was $103,710), FRO @6x $142,709 (was $138,929); at 3x they nearly converge ($257,376 vs $256,829) - the valuation gap narrows a lot once spot exposure is handled.
+
+Restated trade-off: DHT = HEDGED (TC book cushions; wins below crossover); FRO = FULL SPIKE EXPOSURE (wins above). Caveats still favouring DHT: its TC book is repricing UP ($61,300 -> $90,800 per renewal); the Section 8.2 P/NAV fact is unaffected (DHT 0.95x vs FRO 1.21x); and most of the September $1M print lands in Q4-2026 earnings (DHT had only 48% of Q3 spot days fixed at $139,700 before the spike).
+
+**Files Created**: vlcc_cycles/run_spot_adjusted.py, vlcc_cycles/data/spot_adjusted.csv
+**Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

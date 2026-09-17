@@ -217,6 +217,8 @@ EPS           = Net income / shares
 
 ## 7.5 The counter-intuitive conclusion (this inverts the earlier read)
 
+> **⚠️ SUPERSEDED BY §10.** This subsection assumed both names are 100% spot-exposed. They are not (DHT ~52%, FRO ~86%), and correcting it **reverses the conclusion above ~\$200-300k spot**. Read §10 before acting on this.
+
 **From the 2022 trough, FRO was the higher-beta winner (11.8× vs DHT 6.9×). But from TODAY's price, DHT has the better risk/reward — because FRO has already priced in the higher rate.**
 
 - **At \$150k sustained (P-Rule 3 base):** DHT **+63%**, FRO only **+11%** (at 6×). FRO needs ~\$139k *just to stand still*.
@@ -359,7 +361,9 @@ My earlier framing ("stocks ignore spikes") is **incomplete at this magnitude.**
 
 **That is the genuine bull case here, and it is NOT the same as "rates are high."** It is: *how many months of banked cash do we get before Hormuz normalises?*
 
-## 9.3 Does the DHT-over-FRO conclusion survive? Yes — and it strengthens
+## 9.3 Does the DHT-over-FRO conclusion survive? ~~Yes~~ — **NO, see §10**
+
+> **⚠️ SUPERSEDED BY §10.** The table below still assumes 100% spot exposure for both. With the real split (DHT ~52% / FRO ~86%), **FRO wins above ~\$200-300k spot — i.e. at today's rates.**
 
 At **every** rate level tested, DHT shows the larger **percentage** upside, because its price embeds the lower rate:
 
@@ -397,6 +401,96 @@ CRule 8 discipline:            UNCHANGED and now MORE urgent - this is a blow-of
 > **Bottom line for the user:** you were right and I was working from stale data — TD3C is at a **record \$1.035M (index) / \$530–600k (physical)**, not \$87.7k. But correcting it **does not overturn the analysis; it sharpens it.** The market is capitalizing only ~10–20% of that rate, which is the strongest possible confirmation that **equities price the *sustained* level, not the spike.** The genuine new information is the **cash**: at these rates DHT banks its *entire market cap in ~159 days*, which permanently lifts NAV. **So track book value/net cash from here, not the P/E — and treat a war-driven blow-off as a trimming zone (CRule 8), not a chasing zone.** DHT remains the better-protected leg at every rate level tested.
 
 *(Sources, accessed Sep 16, 2026: Lloyd's List *VLCC market hits historic high in latest phase of Hormuz crisis*; Seatrade-Maritime; PortNews; Splash247 *Tanker boom breaks every historical benchmark*; ShipUniverse; Xinde Marine *"VLCCs top \$1m a day — but what price is TD3C actually discovering?"* (the index-vs-fixture distinction). **Rule 4: the \$1.035M is a Baltic theoretical assessment; physical fixtures were \$530–600k.**)*
+
+---
+
+# Section 10 — ⚠️ MAJOR CORRECTION: spot vs time-charter coverage INVERTS the DHT-over-FRO call
+
+## 10.0 The modelling flaw
+
+**§7–§9 assumed 100% of vessel-days earn the spot rate. That is wrong**, and it biased the entire DHT-vs-FRO conclusion. The two companies have **radically different spot exposure:**
+
+| | Spot exposure | Evidence |
+|---|---|---|
+| **DHT** | **~52% spot** — **11 of 23 VLCCs are on TIME CHARTER**, 12 on spot | DHT annual report, Mar-2026 |
+| **FRO** | **~86% spot** — 86% of Q3-2026 VLCC days spot-exposed, 14% TC | FRO Q3-2026 disclosure |
+
+**You were right about DHT (~50%), but FRO is the opposite — it is ~86% spot.** So **DHT captures only about half of a spot spike, while FRO captures ~86% of it.** My prior model gave both 100%, which systematically flattered DHT.
+
+**Corrected model:** `blended TCE = spot% × spot rate + TC% × TC rate`, then EPS as before.
+*(TC rates used: DHT \$90,800 — its own Q2-26 disclosed TC TCE; FRO ~\$100,000 — the Aug-26 fixture blend: newbuild 1-yr \$120,000/day; 2016-built 2-yr avg \$90,000; 3-yr avg \$75,000. **FRO breakeven also revised \$26,000 → \$23,800**, its stated next-12-month figure.)*
+
+**✅ Validation against disclosed blended fleet TCE:** DHT Q2-26 model \$128,136 vs **disclosed \$126,700 (+1%)**; FRO Q3-26 model \$148,934 vs **disclosed booked \$156,900 (−5%)**. *(DHT Q1-26 is +16% off because its TC book was still rolling at \$61,300 then — TC rates are re-pricing upward each renewal, a point in DHT's favour over time.)*
+
+## 10.1 The corrected numbers — and the inversion
+
+| Spot \$/day | **DHT blended** | DHT EPS *(old wrong)* | **FRO blended** | FRO EPS *(old wrong)* |
+|---|---|---|---|---|
+| \$95,000 | \$92,984 | 3.28 *(3.39)* | \$95,700 | 5.21 *(5.14)* |
+| \$150,000 | \$121,584 | 4.77 *(6.25)* | \$143,000 | 9.52 *(10.15)* |
+| \$200,000 | \$147,584 | 6.13 *(8.86)* | \$186,000 | 13.44 *(14.71)* |
+| \$300,000 | \$199,584 | 8.83 *(14.07)* | \$272,000 | 21.27 *(23.83)* |
+| \$530,000 | \$319,184 | 15.07 *(26.05)* | \$469,800 | 39.30 *(44.79)* |
+| **\$1,035,000** | **\$581,784** | **28.75** *(52.36)* | **\$904,100** | **78.88** *(90.82)* |
+
+**Upside at 3× P/E — note where the winner flips:**
+
+| Spot \$/day | DHT @3× | FRO @3× | **Winner** |
+|---|---|---|---|
+| \$95,000 | −57% | −71% | **DHT** |
+| \$150,000 | −38% | −47% | **DHT** |
+| \$200,000 | −20% | −25% | **DHT** |
+| **\$300,000** | **+15%** | **+19%** | **FRO** ← crossover |
+| \$530,000 | +96% | +120% | **FRO** |
+| **\$1,035,000** | **+274%** | **+341%** | **FRO** |
+
+> **🔑 THE CONCLUSION INVERTS. The crossover is around \$200–300k spot.** Below it, DHT's time-charter book cushions and DHT wins. **Above it — which is exactly where we are today (\$530k physical / \$1.035M index) — FRO wins decisively**, because it has ~86% spot exposure versus DHT's ~52%.
+
+## 10.2 What this means — the real trade-off restated
+
+**My §7.5/§9.3 statement that "DHT has the better risk/reward at every rate level" was WRONG.** It was an artefact of assuming equal (100%) spot exposure. The correct framing:
+
+| | **DHT** | **FRO** |
+|---|---|---|
+| Spot exposure | ~52% | **~86%** |
+| Character | **Hedged / defensive** | **Full spike exposure** |
+| Wins when | spot **< ~\$200–300k** | spot **> ~\$200–300k** |
+| Today (\$530k–1.035M) | captures ~52% | **captures ~86%** ✓ |
+| Downside if spot → \$95k | −57% @3× (TC book cushions) | −71% @3× |
+| Implied spot @6× P/E | **\$115,626** | **\$142,709** |
+
+**DHT's time charters are a genuine hedge**: they cap the upside in a blow-off but cushion the fall. **FRO is the pure expression of the current spike.** Note also that at a 3× P/E the two now imply **almost the same spot rate** (\$257,376 vs \$256,829) — the valuation gap I highlighted in §7/§8 **narrows substantially** once spot exposure is handled correctly.
+
+**Two caveats that still favour DHT structurally (Rule 4):**
+1. **DHT's TC book is re-pricing upward** (\$61,300 in Q1-26 → \$90,800 in Q2-26). Its "hedge" is getting less costly each renewal.
+2. **The P/NAV finding from §8.2 is unaffected** — DHT 0.95× vs FRO 1.21× is an asset-value fact independent of charter mix. FRO still costs more per ship.
+3. **Timing lag:** spot fixtures are earned over the following 30–60 days, and DHT had only **48% of Q3 spot days fixed at \$139,700** *before* the September spike — so **most of the \$1M print flows into Q4-2026**, for both names.
+
+## 10.3 Revised bottom line
+
+```
+WRONG (Sections 7.5 / 9.3): "DHT has better risk/reward at every rate level."
+  -> That assumed both were 100% spot. They are not.
+
+CORRECTED:
+  Spot exposure is the deciding variable, not breakeven.
+    DHT ~52% spot (11 of 23 VLCCs time-chartered) = HEDGED
+    FRO ~86% spot                                 = FULL EXPOSURE
+  Crossover ~$200-300k spot:
+    BELOW -> DHT wins (TC book cushions the fall)
+    ABOVE -> FRO wins (captures far more of the spike)
+  TODAY spot is $530k (physical) to $1.035M (index) -- far ABOVE the crossover
+    -> FRO is currently the better vehicle for this blow-off (+341% vs +274% @3x).
+  BUT that is a statement about a BLOW-OFF, and blow-offs mean-revert:
+    if Hormuz normalises and spot round-trips to ~$95k, FRO is -71% vs DHT -57%.
+  So the honest framing is a BARBELL, not a single pick:
+    FRO = the torque on the spike (and the bigger loser if it reverses)
+    DHT = the hedged carrier of the cycle (TC book + 0.95x NAV + repricing TCs)
+```
+
+> **Bottom line for the user:** thank you — this was a real modelling error and it **reverses my recommendation at current rates.** I assumed both names were fully spot-exposed; in fact **DHT is only ~52% spot (11 of 23 VLCCs are time-chartered) while FRO is ~86%.** That means **DHT captures barely half of the \$1M spike while FRO captures most of it** — so **at today's rates FRO is the better vehicle (+341% vs +274% at 3×), not DHT.** The crossover is ~\$200–300k spot. DHT only wins if rates normalise back below that, which is precisely its role: **it is the hedged way to hold the cycle, not the way to play the blow-off.** The P/NAV point still stands (DHT 0.95× vs FRO 1.21×), and note most of the September \$1M print lands in **Q4-2026** earnings, not Q3.
+
+*(Reproduce: `python run_spot_adjusted.py` → `data/spot_adjusted.csv`. Sources: DHT annual report Mar-2026 (11 TC / 12 spot of 23 VLCCs); DHT Q1/Q2/Q3-2026 disclosures (spot vs TC TCE split); FRO Q3-2026 (86% spot, \$156,900 booked, \$23,800 breakeven); FRO Aug-2026 time-charter fixtures. **Rule 4: fleet counts vary by source — DHT 23 (annual report) vs 24 (P-Rule 1) vs 28 (trade press); TC rates are modelled as a fixed blend when they are actually a rolling book.**)*
 
 ---
 
