@@ -231,12 +231,83 @@ EPS           = Net income / shares
 
 ---
 
+# Section 8 — Quarterly rebuild + P/NAV cross-check + lead/lag + exit dashboard
+
+## 8.0 First: what the rate unit actually is
+
+**TCE is US dollars per vessel per DAY (\$/day).** A "quarterly rate" here is the **average of that daily rate across the quarter** — *not* a per-quarter dollar total. §7 used **annual** averages of the daily rate; this section rebuilds on **quarterly**, which is better because (a) DHT/FRO **disclose achieved TCE quarterly** (primary data), (b) VLCC seasonality is quarterly, and (c) lead/lag needs the higher frequency.
+
+## 8.1 Quarterly rate vs quarterly average price
+
+![Quarterly VLCC TCE vs DHT/FRO quarterly average adjusted price](charts/quarterly_rate_vs_stock.png)
+
+**⚠️ Honest data note (Rule 4):** the chart uses **two different qualities of rate data**, and they are drawn differently. **Dark blue = DHT's OWN disclosed quarterly fleet TCE (primary, 2024Q1-2026Q3).** **Light grey = an annual broker average carried across the four quarters — these are NOT true quarterly prints** and must not be read as such. No reliable public quarterly TD3C series was obtainable for the earlier period.
+
+**The real quarterly data (primary, company-disclosed):**
+
+| Quarter | DHT fleet TCE (\$/day) | FRO avg px | DHT avg px |
+|---|---|---|---|
+| 2024Q1 | 47,200 | 19.05 | 8.86 |
+| 2024Q4 | 45,200 | 14.84 | 8.24 |
+| **2025Q1** | **35,800** (cycle low) | 14.65 | 9.29 |
+| 2025Q3 | 40,500 | 19.23 | 10.23 |
+| 2025Q4 | 60,300 | 21.79 | 11.33 |
+| 2026Q1 | 78,800 | 31.73 | 15.60 |
+| **2026Q2** | **126,700** (peak) | 34.33 | 15.84 |
+| **2026Q3** | **94,300** | **45.61** | **20.02** |
+
+**Note the 2026Q2→Q3 divergence:** the **rate fell 26%** (126,700→94,300) while **both stocks rose sharply** (FRO +33%, DHT +26%). That is the market **capitalizing the sustained regime and looking through the Q2 spike** — a live, quarterly-resolution confirmation of §5's Rule B.
+
+## 8.2 ⭐ P/NAV — an INDEPENDENT check that confirms §7
+
+**First, an honest retraction.** I attempted the "market-cap-per-VLCC across eras" idea and **rejected it**: reliable point-in-time share counts aren't available, and FRO's reverse split makes pre-2012 raw prices ambiguous. A naive run produced **\$495M per VLCC for DHT in 2010** when a VLCC was actually worth ~\$100M — the method was broken, so it is not published. Instead, the **standard shipping metric on today's data**, which is fully sourced:
+
+| | Ships | Fleet asset value | EV | **EV per ship** | **EV / NAV** |
+|---|---|---|---|---|---|
+| **DHT** | 24 VLCC | \$4,188M | \$3,994M | \$166.4M | **0.95× (−5% discount)** |
+| **FRO** | 42 VLCC + 21 Suezmax + 18 LR2 | \$11,649M | \$14,060M | \$173.6M | **1.21× (+21% premium)** |
+
+*Asset values (Clarksons/trade press 2026): 5-yr-old VLCC **\$174.5M** (now above the **\$129.5M** newbuild price — a 35% premium for prompt tonnage), Suezmax ~\$120M, LR2 ~\$100M.*
+
+> **🔑 This is the important part: a completely INDEPENDENT method reaches the same verdict as §7.** The implied-rate approach said FRO discounts ~\$139k/day vs DHT's ~\$104k. The asset-value approach says **DHT trades at a 5% *discount* to its ships while FRO trades at a 21% *premium*.** Two unrelated methods, same conclusion: **FRO is priced far more demandingly.** When two independent approaches agree, the finding is robust.
+
+## 8.3 Lead/lag on REAL quarterly data
+
+*(Correlation of quarterly stock return vs quarterly disclosed-TCE change, at various lags. Positive lag = the stock moved **first**.)*
+
+| | Best correlation | At lag | Reading |
+|---|---|---|---|
+| **DHT** | **0.75** | **+1 quarter** | **Stock LEADS by ~1 quarter** |
+| **FRO** | 0.72 | −1 quarter | Stock lags by ~1 quarter |
+
+**⚠️ Do not over-read this (n = 10 quarters).** With ten observations the DHT-vs-FRO *difference* is **not statistically meaningful**. What *is* robust is the **high contemporaneous-to-near-term correlation (0.72–0.75)** — i.e., stock and rate are tightly coupled at quarterly resolution, and DHT's result is consistent with the industry norm (equities lead the physical rate). **I also tested weekly lead/lag and discarded it:** the weekly rate series had to be *interpolated* from quarterly points, which destroys the high-frequency signal (all correlations came out 0.03–0.18, i.e. noise). **You cannot measure weekly lead/lag against interpolated quarterly data** — reporting it would have been spurious precision.
+
+## 8.4 CRule 8 exit-trigger dashboard
+
+| Trigger (observable) | Action | Why |
+|---|---|---|
+| **Spot TD3C < \$60k/day for >3 consecutive weeks** | Reduce 30% | Below ~2× DHT breakeven; the *sustained* regime is breaking (Rule B) |
+| **DHT disclosed fleet TCE falls QoQ two quarters running** | Reduce 30% | Company-disclosed TCE is the cleanest primary signal; two down quarters = trend, not noise |
+| **FRO forward-booked % fixed at a LOWER rate than the prior print** | **Trim FRO first** | FRO is priced for ~\$139k and 1.21× NAV — a booking downgrade hits it hardest |
+| **Monthly VLCC demolition < 3–4 ships/month through 2027** | Raise cash / trim | Low-scrap path → net fleet growth ≈ gross → 2028 oversupply ([vlcc_supply](../vlcc_supply/report_en)) |
+| **New VLCC orders keep running >150/yr** | Begin trimming | Orderbook already ~35% of fleet (CRule 5: "order books filling") |
+| **Sanctions thaw / shadow-fleet re-entry headlines** | Full re-underwrite | Returning shadow VLCCs = +10–12% compliant supply shock |
+| **Stock falls while spot is flat/up for >2 weeks** | Investigate — likely early exit | The equity sees it first (§5 lead/lag; the Aug-2026 episode) |
+| **P/E < 4× on peak earnings** | Take profits on 50% | CRule 2: trough-PE on peak-EPS = market pricing terminal decline |
+
+> **Net for the user:** on a **quarterly** basis the picture is sharper, not softer. The 2026Q2→Q3 print (rate −26%, stocks +26–33%) is textbook "capitalize the sustained, ignore the spike." And the **P/NAV cross-check independently confirms the §7 conclusion** — **DHT at 0.95× asset value vs FRO at 1.21×.** Both the earnings-based and the asset-based lens say the same thing: **DHT is the better-protected way to stay long this cycle; FRO is the one to trim first when the dashboard triggers fire.**
+
+*(Reproduce: `python run_quarterly_deep.py` → `data/{quarterly_rate_price,pnav,leadlag,exit_dashboard}.csv` + `charts/quarterly_rate_vs_stock.png`.)*
+
+---
+
 ## Reproduce it yourself
 
 ```
 cd vlcc_cycles
 python run_cycle_model.py       # data/cycle_multiples.csv + charts/fro_dht_history.png
 python run_rate_valuation.py    # §7: rate-to-valuation bridge, implied rate, target prices
+python run_quarterly_deep.py    # §8: QUARTERLY rebuild, P/NAV, lead/lag, exit dashboard
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.

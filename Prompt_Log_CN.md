@@ -1167,3 +1167,25 @@ Prompt 40 的后续:拉日度数据(捕捉月内 V 型底),检验用户的精确
 
 **创建文件**: vlcc_cycles/run_rate_valuation.py, vlcc_cycles/charts/rate_vs_stock.png, vlcc_cycles/data/{rate_vs_price_table,cycle_avg_rates,implied_rate,target_prices}.csv
 **更新文件**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 59: VLCC 季度重建 + P/NAV + 领先滞后 + 退出仪表盘（第 8 节）
+**日期**: 2026年9月16日
+
+用户询问运价单位是什么、是否按月；建议改为按季度；然后做我先前提出的三件事。
+
+单位回答：TCE = 美元/每船/每天。"季度运价" = 该日费率在该季度内的平均值（不是季度总额）。第 7 节用的是该日费率的年度平均；第 8 节改为季度口径重建。
+
+新增 run_quarterly_deep.py + 第 8 节（双语）+ charts/quarterly_rate_vs_stock.png + 4 个 CSV。
+
+(1) 季度重建：以 DHT 自己披露的季度船队 TCE 为一手（2024Q1-2026Q3：47,200 / 47,200 / 43,000 / 45,200 / 35,800 / 46,300 / 40,500 / 60,300 / 78,800 / 126,700 / 94,300）。更早季度无可靠公开季度 TD3C 序列 -> 标注为"annual-interp（非真实季度值）"并用不同颜色绘制。关键实时发现：2026Q2->Q3 运价下跌 26%（126,700->94,300）而两只股票大涨（FRO +33%、DHT +26%）——这是对规则 B（资本化持续、无视飙升）的季度级别确认。
+
+(2) P/NAV（替代每艘 VLCC 市值）：尝试了历史 mcap/VLCC 并否决——可靠时点股本不可得，且 FRO 反向拆股使 2012 年前原始股价含义不清；朴素计算得出 DHT 2010 年每艘 $495M 而实际约 $100M，故不予发布。改用今日 EV vs 船队资产价值（Clarksons 2026：5 年船龄 VLCC $174.5M，已高于 $129.5M 新造价；Suezmax 约 $120M；LR2 约 $100M）。结果：DHT EV $3,994M / NAV $4,188M = 0.95×（折价 5%）；FRO EV $14,060M / NAV $11,649M = 1.21×（溢价 21%）。这独立确认了第 7 节的隐含运价结论（DHT 贴现 ~$104k/日 vs FRO ~$139k/日）——两个互不相关的方法、同一结论：FRO 定价苛刻得多。
+
+(3) 用真实季度披露 TCE 做领先/滞后：DHT 最佳相关 0.75 在滞后 +1Q（股价领先约 1 季度）；FRO 最佳 0.72 在 -1Q（滞后）。重度警告：n=10，故 DHT 与 FRO 的差异不具统计显著性；稳健的是 0.72-0.75 的高耦合。另外测试并丢弃了周度领先滞后：周度运价须由季度点插值，相关系数仅 0.03-0.18（噪声）——报告它就是伪精度。
+
+(4) CRule 8 退出仪表盘，8 条可观察触发 + 动作：现货 <$60k/日 超 3 周（减 30%）；DHT 披露 TCE 连续两季环比下降（减 30%）；FRO 前瞻锁定价下调（优先减 FRO）；2027 年内月拆解 <3-4 艘（提高现金）；订单 >150 艘/年（开始减仓）；制裁解冻（重新论证）；现货平/涨但股价跌超 2 周（提前退出）；峰值 EPS 下 P/E<4×（兑现 50%）。
+
+**创建文件**: vlcc_cycles/run_quarterly_deep.py, vlcc_cycles/charts/quarterly_rate_vs_stock.png, vlcc_cycles/data/{quarterly_rate_price,pnav,leadlag,exit_dashboard}.csv
+**更新文件**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

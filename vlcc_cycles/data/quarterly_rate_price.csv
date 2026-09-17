@@ -1,0 +1,88 @@
+quarter,year,q,TCE_usd_per_day,rate_source,FRO_avg_px,DHT_avg_px
+2005Q1,2005,1,54000,annual-interp (NOT a true quarterly print),45.4,
+2005Q2,2005,2,54000,annual-interp (NOT a true quarterly print),40.84,
+2005Q3,2005,3,54000,annual-interp (NOT a true quarterly print),45.34,
+2005Q4,2005,4,54000,annual-interp (NOT a true quarterly print),42.8,27.95
+2006Q1,2006,1,61000,annual-interp (NOT a true quarterly print),41.23,30.07
+2006Q2,2006,2,61000,annual-interp (NOT a true quarterly print),39.56,30.63
+2006Q3,2006,3,61000,annual-interp (NOT a true quarterly print),47.97,34.68
+2006Q4,2006,4,61000,annual-interp (NOT a true quarterly print),44.24,36.85
+2007Q1,2007,1,52000,annual-interp (NOT a true quarterly print),48.51,38.08
+2007Q2,2007,2,52000,annual-interp (NOT a true quarterly print),67.02,41.72
+2007Q3,2007,3,52000,annual-interp (NOT a true quarterly print),74.54,43.01
+2007Q4,2007,4,52000,annual-interp (NOT a true quarterly print),80.98,38.0
+2008Q1,2008,1,90000,annual-interp (NOT a true quarterly print),80.76,31.56
+2008Q2,2008,2,90000,annual-interp (NOT a true quarterly print),118.51,29.9
+2008Q3,2008,3,90000,annual-interp (NOT a true quarterly print),112.56,24.86
+2008Q4,2008,4,90000,annual-interp (NOT a true quarterly print),61.88,17.01
+2009Q1,2009,1,31000,annual-interp (NOT a true quarterly print),45.79,17.03
+2009Q2,2009,2,31000,annual-interp (NOT a true quarterly print),47.67,17.4
+2009Q3,2009,3,31000,annual-interp (NOT a true quarterly print),48.65,16.49
+2009Q4,2009,4,31000,annual-interp (NOT a true quarterly print),55.77,13.11
+2010Q1,2010,1,44000,annual-interp (NOT a true quarterly print),63.22,13.22
+2010Q2,2010,2,44000,annual-interp (NOT a true quarterly print),71.54,15.23
+2010Q3,2010,3,44000,annual-interp (NOT a true quarterly print),64.11,14.88
+2010Q4,2010,4,44000,annual-interp (NOT a true quarterly print),61.33,16.78
+2011Q1,2011,1,19000,annual-interp (NOT a true quarterly print),59.98,18.67
+2011Q2,2011,2,19000,annual-interp (NOT a true quarterly print),42.85,16.07
+2011Q3,2011,3,19000,annual-interp (NOT a true quarterly print),18.81,11.7
+2011Q4,2011,4,19000,annual-interp (NOT a true quarterly print),9.83,4.33
+2012Q1,2012,1,22000,annual-interp (NOT a true quarterly print),14.12,4.42
+2012Q2,2012,2,22000,annual-interp (NOT a true quarterly print),12.36,3.05
+2012Q3,2012,3,22000,annual-interp (NOT a true quarterly print),8.33,2.3
+2012Q4,2012,4,22000,annual-interp (NOT a true quarterly print),7.6,1.53
+2013Q1,2013,1,19000,annual-interp (NOT a true quarterly print),6.13,1.74
+2013Q2,2013,2,19000,annual-interp (NOT a true quarterly print),4.26,1.72
+2013Q3,2013,3,19000,annual-interp (NOT a true quarterly print),6.01,1.69
+2013Q4,2013,4,19000,annual-interp (NOT a true quarterly print),6.92,2.27
+2014Q1,2014,1,28000,annual-interp (NOT a true quarterly print),9.74,3.1
+2014Q2,2014,2,28000,annual-interp (NOT a true quarterly print),6.7,2.91
+2014Q3,2014,3,28000,annual-interp (NOT a true quarterly print),4.47,2.58
+2014Q4,2014,4,28000,annual-interp (NOT a true quarterly print),4.03,2.65
+2015Q1,2015,1,64000,annual-interp (NOT a true quarterly print),5.51,2.8
+2015Q2,2015,2,64000,annual-interp (NOT a true quarterly print),5.92,3.17
+2015Q3,2015,3,64000,annual-interp (NOT a true quarterly print),6.59,3.07
+2015Q4,2015,4,64000,annual-interp (NOT a true quarterly print),7.21,3.28
+2016Q1,2016,1,41000,annual-interp (NOT a true quarterly print),4.52,2.52
+2016Q2,2016,2,41000,annual-interp (NOT a true quarterly print),4.19,2.45
+2016Q3,2016,3,41000,annual-interp (NOT a true quarterly print),3.95,2.08
+2016Q4,2016,4,41000,annual-interp (NOT a true quarterly print),3.78,1.89
+2017Q1,2017,1,21000,annual-interp (NOT a true quarterly print),3.72,2.25
+2017Q2,2017,2,21000,annual-interp (NOT a true quarterly print),3.36,2.18
+2017Q3,2017,3,21000,annual-interp (NOT a true quarterly print),3.14,1.99
+2017Q4,2017,4,21000,annual-interp (NOT a true quarterly print),3.0,1.92
+2018Q1,2018,1,18000,annual-interp (NOT a true quarterly print),2.43,1.8
+2018Q2,2018,2,18000,annual-interp (NOT a true quarterly print),3.0,2.12
+2018Q3,2018,3,18000,annual-interp (NOT a true quarterly print),3.08,2.33
+2018Q4,2018,4,18000,annual-interp (NOT a true quarterly print),3.75,2.31
+2019Q1,2019,1,45000,annual-interp (NOT a true quarterly print),3.4,2.22
+2019Q2,2019,2,45000,annual-interp (NOT a true quarterly print),4.52,2.95
+2019Q3,2019,3,45000,annual-interp (NOT a true quarterly print),4.7,3.08
+2019Q4,2019,4,45000,annual-interp (NOT a true quarterly print),6.52,4.15
+2020Q1,2020,1,64000,annual-interp (NOT a true quarterly print),5.13,3.49
+2020Q2,2020,2,64000,annual-interp (NOT a true quarterly print),5.17,3.58
+2020Q3,2020,3,64000,annual-interp (NOT a true quarterly print),4.93,3.39
+2020Q4,2020,4,64000,annual-interp (NOT a true quarterly print),4.11,3.36
+2021Q1,2021,1,3000,annual-interp (NOT a true quarterly print),4.56,3.81
+2021Q2,2021,2,3000,annual-interp (NOT a true quarterly print),5.78,4.27
+2021Q3,2021,3,3000,annual-interp (NOT a true quarterly print),5.64,4.07
+2021Q4,2021,4,3000,annual-interp (NOT a true quarterly print),5.22,3.95
+2022Q1,2022,1,25000,annual-interp (NOT a true quarterly print),5.7,3.9
+2022Q2,2022,2,25000,annual-interp (NOT a true quarterly print),6.18,4.08
+2022Q3,2022,3,25000,annual-interp (NOT a true quarterly print),7.47,5.08
+2022Q4,2022,4,25000,annual-interp (NOT a true quarterly print),8.96,6.49
+2023Q1,2023,1,44000,annual-interp (NOT a true quarterly print),11.7,7.39
+2023Q2,2023,2,44000,annual-interp (NOT a true quarterly print),11.08,6.3
+2023Q3,2023,3,44000,annual-interp (NOT a true quarterly print),14.05,7.46
+2023Q4,2023,4,44000,annual-interp (NOT a true quarterly print),16.99,8.02
+2024Q1,2024,1,47200,DHT-disclosed (primary),19.05,8.86
+2024Q2,2024,2,47200,DHT-disclosed (primary),21.95,9.5
+2024Q3,2024,3,43000,DHT-disclosed (primary),20.78,9.33
+2024Q4,2024,4,45200,DHT-disclosed (primary),14.84,8.24
+2025Q1,2025,1,35800,DHT-disclosed (primary),14.65,9.29
+2025Q2,2025,2,46300,DHT-disclosed (primary),15.84,9.69
+2025Q3,2025,3,40500,DHT-disclosed (primary),19.23,10.23
+2025Q4,2025,4,60300,DHT-disclosed (primary),21.79,11.33
+2026Q1,2026,1,78800,DHT-disclosed (primary),31.73,15.6
+2026Q2,2026,2,126700,DHT-disclosed (primary),34.33,15.84
+2026Q3,2026,3,94300,DHT-disclosed (primary),45.61,20.02

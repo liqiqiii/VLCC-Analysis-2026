@@ -1191,3 +1191,25 @@ COUNTER-INTUITIVE CONCLUSION (inverts the earlier read): from the 2022 trough FR
 
 **Files Created**: vlcc_cycles/run_rate_valuation.py, vlcc_cycles/charts/rate_vs_stock.png, vlcc_cycles/data/{rate_vs_price_table,cycle_avg_rates,implied_rate,target_prices}.csv
 **Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 59: VLCC quarterly rebuild + P/NAV + lead/lag + exit dashboard (Section 8)
+**Date**: September 16, 2026
+
+User asked what the rate UNIT is and whether it was monthly; suggested switching to QUARTERLY; then do the three follow-ups I had offered.
+
+UNIT ANSWER: TCE = USD per vessel per DAY. A "quarterly rate" = the AVERAGE of that daily rate over the quarter (not a quarterly sum). Section 7 had used ANNUAL averages of the daily rate; Section 8 rebuilds on quarterly.
+
+Added run_quarterly_deep.py + Section 8 (bilingual) + charts/quarterly_rate_vs_stock.png + 4 CSVs.
+
+(1) QUARTERLY rebuild: uses DHT's OWN disclosed quarterly fleet TCE as primary (2024Q1-2026Q3: 47,200 / 47,200 / 43,000 / 45,200 / 35,800 / 46,300 / 40,500 / 60,300 / 78,800 / 126,700 / 94,300). Earlier quarters have NO reliable public quarterly TD3C series -> marked 'annual-interp (NOT a true quarterly print)' and drawn in a different colour. Key live finding: 2026Q2->Q3 the RATE FELL 26% (126,700->94,300) while both stocks ROSE sharply (FRO +33%, DHT +26%) - a quarterly-resolution confirmation of Rule B (capitalize the sustained, ignore the spike).
+
+(2) P/NAV (replaces market-cap-per-VLCC): ATTEMPTED the historical mcap/VLCC idea and REJECTED it - reliable point-in-time share counts unavailable and FRO's reverse split makes pre-2012 raw prices ambiguous; a naive run produced $495M/VLCC for DHT-2010 vs a true ~$100M, so it was not published. Used today's EV vs fleet asset value instead (Clarksons 2026: 5-yr VLCC $174.5M - now ABOVE the $129.5M newbuild; Suezmax ~$120M; LR2 ~$100M). RESULT: DHT EV $3,994M / NAV $4,188M = 0.95x (5% DISCOUNT); FRO EV $14,060M / NAV $11,649M = 1.21x (21% PREMIUM). This INDEPENDENTLY CONFIRMS Section 7's implied-rate finding (DHT discounts ~$104k/day vs FRO ~$139k/day) - two unrelated methods, same verdict: FRO is priced far more demandingly.
+
+(3) LEAD/LAG on REAL quarterly disclosed TCE: DHT best corr 0.75 at lag +1Q (STOCK LEADS ~1 quarter); FRO best corr 0.72 at lag -1Q (lags). HEAVILY CAVEATED: n=10, so the DHT-vs-FRO difference is NOT statistically meaningful; the robust part is the high 0.72-0.75 coupling. Also TESTED AND DISCARDED weekly lead/lag: the weekly rate series had to be interpolated from quarterly points, producing only 0.03-0.18 correlations (noise) - reporting it would be spurious precision.
+
+(4) CRule 8 EXIT DASHBOARD with 8 observable triggers + actions: spot <$60k/day >3wks (reduce 30%); DHT disclosed TCE down 2 quarters QoQ (reduce 30%); FRO forward-booking downgrade (TRIM FRO FIRST); demolition <3-4/month through 2027 (raise cash); orders >150/yr (begin trimming); sanctions thaw (re-underwrite); stock down while spot flat/up >2wks (early exit); P/E<4x on peak EPS (take 50%).
+
+**Files Created**: vlcc_cycles/run_quarterly_deep.py, vlcc_cycles/charts/quarterly_rate_vs_stock.png, vlcc_cycles/data/{quarterly_rate_price,pnav,leadlag,exit_dashboard}.csv
+**Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
