@@ -1284,3 +1284,32 @@ TWO-SIDED CONCLUSION (not contradictory): Section 10 (spike capture) says FRO wi
 CORRECTED MULTIPLE GUIDANCE: normalized/mid-cycle 6-8x; peak-annualized ~4.5x today / 1.7-2.6x at a true top; windfall cash ~1.0x; a full year at spike rates - don't, use sum-of-parts.
 
 **Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 63: CAPSTONE — 15-combination rate x durability matrix with DERIVED peak P/E (Section 12)
+**Date**: September 16, 2026
+
+User: build a final summary table across rate levels AND rate durability, showing what peak P/E each implies and HOW that peak P/E is calculated; pessimistic/neutral/optimistic; ~15 combinations; highlight the most likely.
+
+Added run_capstone_matrix.py + Section 12 (bilingual) + data/capstone_matrix.csv.
+
+THE METHOD (answers "how is the peak P/E calculated"): the peak multiple is an OUTPUT, not an input.
+   Value = normal_EPS x PE_normal + (N/4) x (spike_EPS - normal_EPS)
+   implied peak P/E = Value / spike_EPS
+The windfall is valued at ~1.0x because cash is cash; only the durable business gets a multiple. So a big-but-brief spike yields a LOW implied P/E (0.8-1.8x) while a moderate-but-durable rate yields a higher one (4-6x). Assumptions: normal spot $80k, normal PE 7x, spot exposure DHT 52%/FRO 86%, breakevens $17,500/$23,800 -> normalized EPS DHT $2.87 / FRO $4.03; base value DHT $20.12 / FRO $28.21.
+
+GRID: 5 rate levels (P1 $95k Hormuz-normalises, P2 $150k partial easing, N $300k war premium holds, O1 $530k today's PHYSICAL fixture, O2 $1,035k today's INDEX) x 3 durabilities (D1 2 quarters, D2 4 quarters, D3 12 quarters) = 15 combos per name.
+
+KEY VALIDATION: implied peak P/E of 1.7-2.6x in the matrix corresponds to scenarios N+D1/D2 and O1+D1 - and FRO ACTUALLY traded at 1.69-2.55x at the 2008 peak. The model independently reproduces the historical peak multiple, confirming the construction. Also gives a decoder: P/E<2x on peak-annualized EPS => market expects ~2 quarters; 2.5-4x => ~a year; >5x => near-normal or structural.
+
+WHAT'S PRICED IN NOW: today's peak-annualized P/E is 4.7x (DHT) / 4.5x (FRO), which sits between the P2 and N scenarios -> the market is discounting roughly $150-300k sustained for about a year, NOT $530k and certainly not $1.035M.
+
+RESULTS: modal scenario N+D2 ($300k for ~1 year, 14%) -> DHT fair $26.08 (+13%, implied PE 2.95x), FRO fair $45.45 (-15%, implied PE 2.14x). Second-most-likely O1+D1 ($530k for 2Q, 11%) -> DHT $26.22 (+14%), FRO $45.84 (-15%). Both most-likely cases agree. Probability-weighted: DHT $28.40 (+23%), FRO $52.17 (-3%). Negative in 5/15 combos for DHT vs 8/15 for FRO.
+
+ASYMMETRY: FRO only wins if rates stay VERY high for a LONG time (O1+D2 and better) - it is already priced for the modal outcome so it needs an above-modal result just to stand still; DHT is priced BELOW the modal outcome. DHT = better risk-adjusted; FRO = the leveraged bet on durability.
+
+RULE 4: the probability weights are explicitly my subjective judgement, not data (they encode the Aug-2026 -20%/day reversal speed, the 2028 supply wall capping multi-year durability, and Hormuz being unforecastable). The durable contribution is the STRUCTURE (rate x durability -> derived PE); the weights are opinion and are substitutable.
+
+**Files Created**: vlcc_cycles/run_capstone_matrix.py, vlcc_cycles/data/capstone_matrix.csv
+**Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -1,0 +1,31 @@
+rate_scn,rate_label,spot,dur,quarters,ticker,blended_TCE,spike_EPS,normal_EPS,base_value,windfall,fair_value,implied_peak_PE,px,upside_pct,prob
+P1,P1 Pessimistic  - Hormuz normalises,95000,D1,2,DHT,92984,3.28,2.87,20.12,0.2,20.33,6.2,23.04,-12,0.06
+P1,P1 Pessimistic  - Hormuz normalises,95000,D1,2,FRO,95700,5.21,4.03,28.21,0.59,28.8,5.53,53.67,-46,0.06
+P1,P1 Pessimistic  - Hormuz normalises,95000,D2,4,DHT,92984,3.28,2.87,20.12,0.41,20.53,6.26,23.04,-11,0.05
+P1,P1 Pessimistic  - Hormuz normalises,95000,D2,4,FRO,95700,5.21,4.03,28.21,1.18,29.38,5.64,53.67,-45,0.05
+P1,P1 Pessimistic  - Hormuz normalises,95000,D3,12,DHT,92984,3.28,2.87,20.12,1.22,21.34,6.5,23.04,-7,0.03
+P1,P1 Pessimistic  - Hormuz normalises,95000,D3,12,FRO,95700,5.21,4.03,28.21,3.53,31.74,6.1,53.67,-41,0.03
+P2,P2 Below-normal - partial easing,150000,D1,2,DHT,121584,4.77,2.87,20.12,0.95,21.07,4.42,23.04,-9,0.08
+P2,P2 Below-normal - partial easing,150000,D1,2,FRO,143000,9.52,4.03,28.21,2.74,30.95,3.25,53.67,-42,0.08
+P2,P2 Below-normal - partial easing,150000,D2,4,DHT,121584,4.77,2.87,20.12,1.9,22.02,4.62,23.04,-4,0.09
+P2,P2 Below-normal - partial easing,150000,D2,4,FRO,143000,9.52,4.03,28.21,5.49,33.7,3.54,53.67,-37,0.09
+P2,P2 Below-normal - partial easing,150000,D3,12,DHT,121584,4.77,2.87,20.12,5.69,25.81,5.41,23.04,12,0.04
+P2,P2 Below-normal - partial easing,150000,D3,12,FRO,143000,9.52,4.03,28.21,16.46,44.67,4.69,53.67,-17,0.04
+N,N  Neutral      - war premium holds,300000,D1,2,DHT,199584,8.83,2.87,20.12,2.98,23.1,2.62,23.04,0,0.1
+N,N  Neutral      - war premium holds,300000,D1,2,FRO,272000,21.27,4.03,28.21,8.62,36.83,1.73,53.67,-31,0.1
+N,N  Neutral      - war premium holds,300000,D2,4,DHT,199584,8.83,2.87,20.12,5.96,26.08,2.95,23.04,13,0.14
+N,N  Neutral      - war premium holds,300000,D2,4,FRO,272000,21.27,4.03,28.21,17.24,45.45,2.14,53.67,-15,0.14
+N,N  Neutral      - war premium holds,300000,D3,12,DHT,199584,8.83,2.87,20.12,17.88,38.0,4.3,23.04,65,0.05
+N,N  Neutral      - war premium holds,300000,D3,12,FRO,272000,21.27,4.03,28.21,51.73,79.94,3.76,53.67,49,0.05
+O1,O1 Optimistic   - today's PHYSICAL,530000,D1,2,DHT,319184,15.07,2.87,20.12,6.1,26.22,1.74,23.04,14,0.11
+O1,O1 Optimistic   - today's PHYSICAL,530000,D1,2,FRO,469800,39.3,4.03,28.21,17.64,45.84,1.17,53.67,-15,0.11
+O1,O1 Optimistic   - today's PHYSICAL,530000,D2,4,DHT,319184,15.07,2.87,20.12,12.19,32.31,2.14,23.04,40,0.09
+O1,O1 Optimistic   - today's PHYSICAL,530000,D2,4,FRO,469800,39.3,4.03,28.21,35.27,63.48,1.62,53.67,18,0.09
+O1,O1 Optimistic   - today's PHYSICAL,530000,D3,12,DHT,319184,15.07,2.87,20.12,36.57,56.7,3.76,23.04,146,0.03
+O1,O1 Optimistic   - today's PHYSICAL,530000,D3,12,FRO,469800,39.3,4.03,28.21,105.82,134.02,3.41,53.67,150,0.03
+O2,O2 Extreme      - today's INDEX,1035000,D1,2,DHT,581784,28.75,2.87,20.12,12.94,33.06,1.15,23.04,43,0.08
+O2,O2 Extreme      - today's INDEX,1035000,D1,2,FRO,904100,78.88,4.03,28.21,37.43,65.64,0.83,53.67,22,0.08
+O2,O2 Extreme      - today's INDEX,1035000,D2,4,DHT,581784,28.75,2.87,20.12,25.87,46.0,1.6,23.04,100,0.04
+O2,O2 Extreme      - today's INDEX,1035000,D2,4,FRO,904100,78.88,4.03,28.21,74.85,103.06,1.31,53.67,92,0.04
+O2,O2 Extreme      - today's INDEX,1035000,D3,12,DHT,581784,28.75,2.87,20.12,77.61,97.74,3.4,23.04,324,0.01
+O2,O2 Extreme      - today's INDEX,1035000,D3,12,FRO,904100,78.88,4.03,28.21,224.56,252.77,3.2,53.67,371,0.01

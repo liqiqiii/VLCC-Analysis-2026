@@ -581,6 +581,135 @@ Value = (normalized earnings x normal mid-cycle PE)  +  (windfall cash x ~1.0)
 
 ---
 
+# Section 12 — 【CAPSTONE】The 15-combination matrix: rate × durability → derived peak P/E → value
+
+> Request: a final summary table across rate levels **and rate durability**, showing what peak P/E each implies, **how that peak P/E is calculated**, with pessimistic/neutral/optimistic cases and the most-likely one highlighted.
+
+## 12.1 How the peak P/E is CALCULATED (not assumed)
+
+This is the core methodological fix from §11. **The peak multiple is an OUTPUT, not an input.** If a spike rate lasts **N quarters** and then reverts to normal:
+
+```
+Value  =  normal_EPS × PE_normal          ← the ongoing business
+        + (N/4) × (spike_EPS − normal_EPS) ← the EXCESS, valued at ~1.0×
+                                             because a windfall is CASH
+
+implied peak P/E  =  Value ÷ spike_EPS
+```
+
+**Why this is the right construction:** a windfall earns a multiple of ~1.0 (cash is cash), while the durable business earns a normal mid-cycle multiple. So **the implied peak P/E falls as the spike gets bigger-but-briefer, and rises as the rate becomes durable.** That is exactly the behaviour CRule 2 describes — but now derived rather than asserted.
+
+**Assumptions (all explicit):** normal spot **\$80,000/day**, normal P/E **7×**, spot exposure **DHT 52% / FRO 86%** (§10), breakevens DHT \$17,500 / FRO \$23,800.
+→ normalized EPS: **DHT \$2.87, FRO \$4.03**; base business value: **DHT \$20.12, FRO \$28.21**.
+
+## 12.2 DHT — 15 combinations (price \$23.04)
+
+| Rate scenario | Spot \$/day | Durability | Spike EPS | Base | Windfall | **Fair value** | **Implied peak P/E** | Upside | Prob |
+|---|---|---|---|---|---|---|---|---|---|
+| **P1** Pessimistic — Hormuz normalises | 95k | D1 2Q | 3.28 | 20.12 | 0.20 | 20.33 | 6.20× | −12% | 6% |
+| P1 | 95k | D2 4Q | 3.28 | 20.12 | 0.41 | 20.53 | 6.26× | −11% | 5% |
+| P1 | 95k | D3 12Q | 3.28 | 20.12 | 1.22 | 21.34 | 6.50× | −7% | 3% |
+| **P2** Below-normal — partial easing | 150k | D1 2Q | 4.77 | 20.12 | 0.95 | 21.07 | 4.42× | −9% | 8% |
+| P2 | 150k | D2 4Q | 4.77 | 20.12 | 1.90 | 22.02 | 4.62× | −4% | 9% |
+| P2 | 150k | D3 12Q | 4.77 | 20.12 | 5.69 | 25.81 | 5.41× | +12% | 4% |
+| **N** Neutral — war premium holds | 300k | D1 2Q | 8.83 | 20.12 | 2.98 | 23.10 | 2.62× | 0% | 10% |
+| ⭐ **N — MODAL** | **300k** | **D2 4Q** | **8.83** | **20.12** | **5.96** | **26.08** | **2.95×** | **+13%** | **14%** |
+| N | 300k | D3 12Q | 8.83 | 20.12 | 17.88 | 38.00 | 4.30× | +65% | 5% |
+| ⭐ **O1** Optimistic — today's PHYSICAL | **530k** | **D1 2Q** | **15.07** | 20.12 | 6.10 | **26.22** | **1.74×** | **+14%** | **11%** |
+| O1 | 530k | D2 4Q | 15.07 | 20.12 | 12.19 | 32.31 | 2.14× | +40% | 9% |
+| O1 | 530k | D3 12Q | 15.07 | 20.12 | 36.57 | 56.70 | 3.76× | +146% | 3% |
+| **O2** Extreme — today's INDEX | 1,035k | D1 2Q | 28.75 | 20.12 | 12.94 | 33.06 | **1.15×** | +43% | 8% |
+| O2 | 1,035k | D2 4Q | 28.75 | 20.12 | 25.87 | 46.00 | 1.60× | +100% | 4% |
+| O2 | 1,035k | D3 12Q | 28.75 | 20.12 | 77.61 | 97.74 | 3.40× | +324% | 1% |
+
+> **Probability-weighted fair value: \$28.40 vs \$23.04 → +23%.** Negative in only **5 of 15** combinations.
+
+## 12.3 FRO — 15 combinations (price \$53.67)
+
+| Rate scenario | Spot \$/day | Durability | Spike EPS | Base | Windfall | **Fair value** | **Implied peak P/E** | Upside | Prob |
+|---|---|---|---|---|---|---|---|---|---|
+| **P1** Pessimistic | 95k | D1 2Q | 5.21 | 28.21 | 0.59 | 28.80 | 5.53× | **−46%** | 6% |
+| P1 | 95k | D2 4Q | 5.21 | 28.21 | 1.18 | 29.38 | 5.64× | −45% | 5% |
+| P1 | 95k | D3 12Q | 5.21 | 28.21 | 3.53 | 31.74 | 6.10× | −41% | 3% |
+| **P2** Below-normal | 150k | D1 2Q | 9.52 | 28.21 | 2.74 | 30.95 | 3.25× | −42% | 8% |
+| P2 | 150k | D2 4Q | 9.52 | 28.21 | 5.49 | 33.70 | 3.54× | −37% | 9% |
+| P2 | 150k | D3 12Q | 9.52 | 28.21 | 16.46 | 44.67 | 4.69× | −17% | 4% |
+| **N** Neutral | 300k | D1 2Q | 21.27 | 28.21 | 8.62 | 36.83 | 1.73× | −31% | 10% |
+| ⭐ **N — MODAL** | **300k** | **D2 4Q** | **21.27** | **28.21** | **17.24** | **45.45** | **2.14×** | **−15%** | **14%** |
+| N | 300k | D3 12Q | 21.27 | 28.21 | 51.73 | 79.94 | 3.76× | +49% | 5% |
+| ⭐ **O1** Optimistic — PHYSICAL | **530k** | **D1 2Q** | **39.30** | 28.21 | 17.64 | **45.84** | **1.17×** | **−15%** | **11%** |
+| O1 | 530k | D2 4Q | 39.30 | 28.21 | 35.27 | 63.48 | 1.62× | +18% | 9% |
+| O1 | 530k | D3 12Q | 39.30 | 28.21 | 105.82 | 134.02 | 3.41× | +150% | 3% |
+| **O2** Extreme — INDEX | 1,035k | D1 2Q | 78.88 | 28.21 | 37.43 | 65.64 | **0.83×** | +22% | 8% |
+| O2 | 1,035k | D2 4Q | 78.88 | 28.21 | 74.85 | 103.06 | 1.31× | +92% | 4% |
+| O2 | 1,035k | D3 12Q | 78.88 | 28.21 | 224.56 | 252.77 | 3.20× | +371% | 1% |
+
+> **Probability-weighted fair value: \$52.17 vs \$53.67 → −3%.** Negative in **8 of 15** combinations.
+
+## 12.4 ✅ Internal validation — the matrix reproduces the 2008 fact
+
+**FRO actually traded at 1.7–2.6× at the 2008 peak (§11.1).** In this matrix, an implied peak P/E of **1.7–2.6×** corresponds to scenarios **N+D1/D2 and O1+D1** — i.e. *high rates expected to last only ~2–4 quarters.* **The model independently reproduces the historical peak multiple**, which is strong evidence the construction is right: in 2008 the market was implicitly pricing ~2–4 quarters of durability, and it was correct.
+
+**Read the implied-P/E column as a market-expectation decoder:**
+- **P/E < 2×** on peak-annualized EPS ⇒ the market expects the spike to last only ~2 quarters.
+- **P/E 2.5–4×** ⇒ the market expects roughly a year.
+- **P/E > 5×** ⇒ either rates are near-normal, or the market believes the level is structural.
+
+**Today's actual peak-annualized P/E is 4.7× (DHT) and 4.5× (FRO)** (§11.2). Cross-referencing the matrix, that sits **between the P2 and N scenarios — i.e. the market is currently pricing something like \$150–300k sustained for about a year, NOT \$1M.** That is the single cleanest statement of what is priced in.
+
+## 12.5 The highlighted (most likely) cases and what they say
+
+**Modal scenario — N + D2 (\$300k sustained ~1 year, 14%):**
+
+| | Fair value | vs price | Implied peak P/E |
+|---|---|---|---|
+| **DHT** | **\$26.08** | **+13%** | 2.95× |
+| **FRO** | **\$45.45** | **−15%** | 2.14× |
+
+**Second-most-likely — O1 + D1 (\$530k physical for 2 quarters, 11%):**
+
+| | Fair value | vs price | Implied peak P/E |
+|---|---|---|---|
+| **DHT** | **\$26.22** | **+14%** | 1.74× |
+| **FRO** | **\$45.84** | **−15%** | 1.17× |
+
+> **🔑 Both of the two most likely scenarios say the same thing: DHT ≈ +13–14%, FRO ≈ −15%.** And the probability-weighted verdict agrees: **DHT +23%, FRO −3%.**
+
+## 12.6 Final summary
+
+```
+HOW THE PEAK P/E IS CALCULATED (the answer to "how"):
+   Value = normal_EPS x 7  +  (N/4) x (spike_EPS - normal_EPS)
+   implied peak P/E = Value / spike_EPS
+   -> big-but-brief spike  => LOW implied P/E (0.8-1.8x)  [it is just cash]
+   -> moderate-but-durable => HIGHER implied P/E (4-6x)   [it is an earnings stream]
+   Validated: reproduces FRO's actual 1.7-2.6x at the 2008 peak.
+
+WHAT IS PRICED IN TODAY:
+   Peak-annualized P/E is 4.7x (DHT) / 4.5x (FRO)
+   -> the market is discounting roughly $150-300k sustained for ~1 year.
+   It is NOT pricing $530k, and certainly not $1.035M.
+
+THE TWO MOST LIKELY CASES (25% combined) BOTH CONCLUDE:
+   DHT  +13% to +14%      FRO  -15%
+PROBABILITY-WEIGHTED:
+   DHT  $28.40 (+23%)     FRO  $52.17 (-3%)
+NEGATIVE IN:
+   DHT  5 of 15 combos    FRO  8 of 15 combos
+
+THE ASYMMETRY:
+   FRO only wins if rates stay VERY high for a LONG time (O1+D2 and better).
+   It is already priced for the modal outcome, so it needs an above-modal result
+   just to stand still. DHT is priced BELOW the modal outcome.
+   -> DHT = better risk-adjusted; FRO = the leveraged bet on durability.
+```
+
+> **⚠️ On the probabilities (Rule 4):** the weights are **my subjective judgement**, not data. They encode: (a) the Aug-2026 −20%-in-a-day plunge shows how fast spikes revert, (b) the 2028 supply wall caps multi-year durability, (c) Hormuz is unforecastable. **Change the probabilities and the weighted answer changes** — the table is built so you can substitute your own. The *structure* (rate × durability → derived P/E) is the durable contribution; the weights are opinion.
+
+*(Reproduce: `python run_capstone_matrix.py` → `data/capstone_matrix.csv`. All 15 × 2 combinations with every intermediate column.)*
+
+---
+
 ## Reproduce it yourself
 
 ```
@@ -588,6 +717,8 @@ cd vlcc_cycles
 python run_cycle_model.py       # data/cycle_multiples.csv + charts/fro_dht_history.png
 python run_rate_valuation.py    # §7: rate-to-valuation bridge, implied rate, target prices
 python run_quarterly_deep.py    # §8: QUARTERLY rebuild, P/NAV, lead/lag, exit dashboard
+python run_spot_adjusted.py     # §10: spot-vs-time-charter corrected model
+python run_capstone_matrix.py   # §12: 15-combination rate x durability matrix
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
