@@ -1313,3 +1313,37 @@ RULE 4: the probability weights are explicitly my subjective judgement, not data
 
 **Files Created**: vlcc_cycles/run_capstone_matrix.py, vlcc_cycles/data/capstone_matrix.csv
 **Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 64: Volcker vs Warsh — did the Latin American debt crisis end the high-rate regime?
+**Date**: September 17, 2026
+
+User: *"If Russia-Ukraine is the 1st oil crisis, US-Iran the 2nd, and Warsh's hike the 1979 Volcker moment — was it the Latin American debt crisis that ended Volcker's high rates? By that analogy, what would make Warsh slow down? Give this its own page."*
+
+New report: volcker_warsh/ (report_en.md, report_cn.md, run_volcker_warsh.py, 7 CSVs, 2 charts) + index.md entry.
+
+ANSWER: NO — and the chronology alone settles it.
+  - Board voted CUT #1 on Jul 19, 1982 (eff. Jul 20) and CUT #2 on Jul 30 — 24 and 13 days BEFORE Silva Herzog's Aug 12 call. EFFR fell 14.15% (Jun) -> 12.59% (Jul), i.e. −1.56pp BEFORE Mexico, vs −3.64pp across the remaining five months.
+  - DECISIVE REFUTATION: (a) the Board REFUSED a cut on Sep 13, 1982 at the height of the crisis; (b) the Fed re-tightened +3.13pp (8.51% Feb-83 -> 11.64% Aug-84) WHILE the crisis worsened (Continental Illinois failed May-84); (c) at the Brady Plan (Mar-1989) fed funds was 9.85% — HIGHER than the 1983 trough. The rate cycle and the debt cycle are decoupled; rates bottomed ~6.5 years before the debt was actually reduced.
+  - None of the seven 1982 discount-rate votes cites Latin America. All cite market rates + restrained money and credit growth. Volcker himself (Oct 9, 1982) grouped the post-Mexico cuts with the pre-Mexico ones as "no change in the basic thrust of policy."
+  - Goodfriend & King's definitive account of the disinflation mentions Mexico zero times.
+
+WHAT MEXICO DID DO (the honest counter-case, §7): the FOMC privately WAS easing for fragility. Solomon (Aug 24, 1982): "putting monetary policy on the back burner because of our concern about fragility. And even though we are doing that, in a certain sense we are not." Volcker personally instructed that the Oct 5 directive mention "the problems of foreign lending in particular... just to indicate that we are someplace in the real world." And Mexico was on the FOMC agenda from Jun 30, six weeks before Aug 12. So the peer review NARROWED the verdict: the debt crisis was neither necessary nor sufficient — an accelerant and a lock-in, not a trigger.
+
+THE SEPARATION PRINCIPLE (most transferable finding): the Fed answered Mexico with a 325m Fed swap inside an 1.85bn BIS facility plus regulatory forbearance — liquidity and regulatory tools, NOT the policy rate. Modern control experiment (n=2): SVB failed Mar 10, 2023 and the Fed HIKED 25bp on Mar 22 while launching the BTFP; EFFR 4.57% -> 5.12% (+0.55pp) straight through the banking crisis. A financial accident buys a FACILITY, not a CUT.
+
+DISTANCE TO A PIVOT TODAY: at Volcker's pivot the real policy rate was +6.03pp headline / +4.91pp core, with unemployment 9.8% (peaking 10.8%). After the Sep-16-2026 hike to 3.75-4.00%, Warsh's is +0.16pp / +1.11pp with unemployment 4.1%. Gap = 5.9pp of real rate. Warsh is at the 1979 STARTING line, not the 1982 finish line — there is no restrictive stance to un-do, so the question is premature by construction.
+
+THE 1980 FALSE DAWN (why he will stop LATE): Volcker cut −8.58pp in three months (17.61% Apr-80 -> 9.03% Jul-80) at a −4.12pp REAL rate, then was forced to re-hike +9.87pp; the 10-yr rose from ~11% to >15% because the market believed he would back down. That failure is why the 1982 pivot required +6pp real.
+
+WHAT WOULD ACTUALLY SLOW WARSH (ranked): (1) Hormuz reopens — today's entire headline-core gap (3.71% − 2.76% = 0.95pp) IS the oil shock, so this stops him with NO recession and NO default; (2) labour cracks (Sahm +0.30 today vs +0.50 trigger vs +2.23 in Jul-82); (3) he reaches a ~2pp real rate (~4.75-5.00% nominal, i.e. ~4 more hikes) and simply stops; (4) a financial accident — ranked LAST, refuted twice; (5) political capitulation — low confidence.
+
+CROSS-REPORT WARNING (the actionable part): the most likely path to a Fed pause (Hormuz normalising) is THE SAME EVENT as the collapse of the VLCC super-spike. "Fed pause" and "sustained tanker super-profits" are not independent positions — they are opposite sides of one bet on the Strait of Hormuz. Anyone holding both is hedged to ~zero on the dominant variable while paying carry on both.
+
+MODERN FRAGILITY MAP (§9): 1982 had nine money-center banks at 176% of capital in Latin American debt (290% all-LDC; FDIC 147% for the four largest borrowers). Today: US HY OAS 2.76% (19th pct of the available window), EM corporate OAS 1.37% (1st pct — the window LOW was set Sep 10, 2026, one week ago). The named blind spot is private credit / NBFI leverage, which has no observable spread — exactly the kind of unobserved leverage that produced Drysdale and Penn Square.
+
+Rule 4 flags: F1 CPI conflict (FRED 3.71/3.69% vs a press aggregator's 3.35%; conclusion insensitive); F2 monthly EFFR pre-dates the hike so target mid 3.875% is used; F3 the FRED mirror truncates both OAS series to ~3 years so percentiles are window-only; F4 several 1982 event DAYS are secondary (all discount-rate vote dates are primary); F5 no memoir text obtained — Volcker/Silber/Meltzer NOT quoted, and a Silber web summary containing a date error was discarded; F6 2026 macro is point-in-time web-sourced; F7 the §10 scenario probabilities are subjective, not data.
+
+**Files created**: volcker_warsh/report_en.md, volcker_warsh/report_cn.md, volcker_warsh/run_volcker_warsh.py, volcker_warsh/data/*.csv (7), volcker_warsh/charts/*.png (2)
+**Files updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
