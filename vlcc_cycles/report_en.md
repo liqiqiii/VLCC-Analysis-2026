@@ -494,6 +494,93 @@ CORRECTED:
 
 ---
 
+# Section 11 — What is the "3× P/E" actually based on? (and why the whole rate×PE method is flawed at a blow-off)
+
+> Challenge: *"What is your 3× P/E based on? Do you mean the peak quarter trades at about 3×?"*
+
+## 11.0 Honest answer first: I cited the principle, not the data
+
+**§7–§10 used 3×/4×/6×/8× by invoking CRule 2's general principle ("peak earnings get the lowest multiple") — I did NOT verify it against DHT/FRO's own history.** That was a real weakness. Having now checked it, the data says **3× was if anything too generous.**
+
+## 11.1 The empirical peak multiple
+
+**FRO at the 2008 cycle top (P/E is split-invariant, so these are valid despite later reverse splits):**
+
+| Quarter | Price | Trailing EPS | **P/E** |
+|---|---|---|---|
+| 2008 Q1 | \$42.50 | \$22.05 | **1.93×** |
+| 2008 Q2 | \$51.10 | \$20.05 | **2.55×** |
+| 2008 Q3 | \$56.45 | \$33.49 | **1.69×** |
+
+**→ At the actual peak, FRO traded at 1.7–2.6× trailing peak earnings.** So my "3× = bear case" was **above** what the last true supercycle peak delivered.
+
+## 11.2 But the question exposes a deeper ambiguity — there are THREE different P/Es
+
+This is the important part, and I was sloppy about which one I meant:
+
+| Definition | FRO now | DHT now | What it means |
+|---|---|---|---|
+| **(a) P/E on TTM EPS** | **8.0×** | **7.8×** | FRO TTM \$6.67 (0.18+1.02+2.51+2.96); DHT \$2.94 |
+| **(b) P/E on the latest quarter ANNUALIZED** | **4.5×** | **4.7×** | FRO Q2-26 \$2.96 ×4 = \$11.84; DHT \$1.23 ×4 = \$4.92 |
+| (c) P/E on a hypothetical full year at spike rates | *what §7/§10 tabulated* | | The most artificial of the three |
+
+> **So the direct answer to your question: the market is right now paying ~4.5–4.7× on the annualized peak quarter.** At the 2008 top that compressed to 1.7–2.6×. **My 3× sits between those two — it is a reasonable "peak multiple," but it should be applied to *peak-annualized* earnings, not to a fantasy year of \$1M rates.**
+
+## 11.3 ⚠️ The real flaw: "sustained rate × P/E" is the wrong tool for a blow-off
+
+Applying a multiple to a full year of war-spike rates **double-counts optimism**: it assumes (i) the spike lasts 12 months *and* (ii) the market capitalizes it. Neither happens. **The correct framework for a windfall is sum-of-parts:**
+
+```
+Value = (normalized earnings x normal mid-cycle PE)  +  (windfall cash x ~1.0)
+```
+**Windfall cash gets a multiple of ~1.0, not 3–8×, because cash is cash.**
+
+**DHT (price \$23.04):**
+
+| Component | Value/share |
+|---|---|
+| Normalized base: \$60k spot × 6× | \$14.00 |
+| Normalized base: \$80k spot × 8× | \$23.00 |
+| **+ windfall: 2 quarters at \$530k spot** | **+\$7.86** |
+| **Sum-of-parts range** | **\$21.9 – \$30.9** |
+
+**FRO (price \$53.67):**
+
+| Component | Value/share |
+|---|---|
+| Normalized base: \$60k spot × 6× | \$14.77 |
+| Normalized base: \$80k spot × 8× | \$32.24 |
+| **+ windfall: 2 quarters at \$530k spot** | **+\$20.32** |
+| **Sum-of-parts range** | **\$35.1 – \$52.6** |
+
+*(Windfall per share at other assumptions — DHT: 1Q@\$530k = +\$3.93, 1Q@\$1.035M = +\$7.35, 2Q@\$1.035M = +\$14.70. FRO: 1Q@\$530k = +\$10.16, 1Q@\$1.035M = +\$20.06, 2Q@\$1.035M = +\$40.12.)*
+
+## 11.4 What sum-of-parts says — and it re-favours DHT on a NEW basis
+
+- **DHT at \$23.04 sits in the lower-middle of its \$21.9–30.9 range** → still has headroom to a normalized-plus-windfall fair value.
+- **FRO at \$53.67 sits AT or slightly ABOVE the top of its \$35.1–52.6 range** → **already discounting roughly two quarters of \$530k spot plus a healthy normalized base.**
+
+> **🔑 This creates the honest, two-sided picture:**
+> - **§10 (spike capture):** FRO wins **if** rates stay extreme — it has 86% spot vs DHT's 52%.
+> - **§11 (sum-of-parts valuation):** **DHT has more margin of safety** — FRO is already priced for ~2 quarters of the blow-off, DHT is not.
+>
+> **These are not contradictory — they are the two sides of the same trade.** FRO = higher torque, already partly paid for. DHT = less torque, cheaper relative to a normalized base. **Which you prefer depends entirely on how many more quarters of extreme rates you expect** — and per §9, that is a function of Hormuz, which nobody can forecast.
+
+## 11.5 Corrected guidance on multiples
+
+| Use case | Multiple to apply | Basis |
+|---|---|---|
+| Normalized/mid-cycle earnings | **6–8×** | where DHT/FRO have traded in normal years |
+| **Peak-annualized earnings** | **~4.5×** today, **1.7–2.6×** at a true top (FRO 2008) | empirical |
+| **Windfall/spike cash** | **~1.0×** | it is cash, not an earnings stream |
+| A full year at spike rates | **don't** | double-counts; use sum-of-parts instead |
+
+> **Bottom line:** you were right to push on this. **3× was asserted from principle, not measured** — and the measurement (FRO 1.7–2.6× at the 2008 peak; 4.5–4.7× on today's annualized peak quarter) shows it was slightly generous. More importantly, the challenge exposed that **"sustained rate × P/E" is the wrong tool for a war-driven windfall.** On the correct sum-of-parts basis, **DHT (\$23.04 vs a \$21.9–30.9 range) has headroom while FRO (\$53.67 vs \$35.1–52.6) is already paid up for about two quarters of the spike.**
+
+*(Reproduce: the arithmetic is in §11.3 and uses the §10 spot-adjusted EPS engine. Sources: reported quarterly diluted EPS via yfinance (FRO 2025Q3–2026Q2: 0.18/1.02/2.51/2.96; DHT: 0.28/0.41/1.02/1.23); Macrotrends/market data for FRO's 2008 quarterly P/E. **Rule 4: 2008 EPS are on the pre-reverse-split share count, but P/E is scale-invariant so the ratio is valid.**)*
+
+---
+
 ## Reproduce it yourself
 
 ```

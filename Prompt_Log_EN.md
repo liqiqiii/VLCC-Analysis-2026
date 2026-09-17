@@ -1261,3 +1261,26 @@ Restated trade-off: DHT = HEDGED (TC book cushions; wins below crossover); FRO =
 
 **Files Created**: vlcc_cycles/run_spot_adjusted.py, vlcc_cycles/data/spot_adjusted.csv
 **Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 62: What is the "3x PE" based on? — peak-multiple verification + sum-of-parts rebuild (Section 11)
+**Date**: September 16, 2026
+
+User: "What is your 3x PE based on? Do you mean the peak quarter trades at about 3x?"
+
+HONEST ANSWER: I had cited CRule 2's general principle ("peak earnings get the lowest multiple") WITHOUT verifying it against DHT/FRO history. Now measured it.
+
+EMPIRICAL PEAK PE (FRO at the 2008 top; PE is split-invariant so valid despite later reverse splits): 2008Q1 $42.50/$22.05 = 1.93x; Q2 $51.10/$20.05 = 2.55x; Q3 $56.45/$33.49 = 1.69x. So FRO traded 1.7-2.6x trailing peak EPS at the last true supercycle top -> my 3x "bear case" was actually GENEROUS.
+
+THREE DIFFERENT PEs (the ambiguity I was sloppy about): (a) PE on TTM EPS - FRO 8.0x (TTM $6.67 = 0.18+1.02+2.51+2.96), DHT 7.8x (TTM $2.94); (b) PE on the LATEST QUARTER ANNUALIZED - FRO 4.5x ($2.96x4=$11.84), DHT 4.7x ($1.23x4=$4.92); (c) PE on a hypothetical full year at spike rates - what Sections 7/10 tabulated, the most artificial. Direct answer: the market is currently paying ~4.5-4.7x on the annualized peak quarter; at the 2008 top it compressed to 1.7-2.6x.
+
+DEEPER FLAW EXPOSED: "sustained rate x PE" double-counts optimism at a blow-off (assumes the spike lasts 12 months AND gets a multiple). Correct framework = SUM-OF-PARTS: Value = (normalized earnings x normal PE) + (windfall cash x ~1.0), because cash is cash, not an earnings stream.
+
+SUM-OF-PARTS RESULT: DHT (px $23.04): normalized $60-80k spot x 6-8x = $14.00-$23.00 base, + 2Q at $530k spot = +$7.86/share -> range $21.9-$30.9, so DHT sits in the LOWER-MIDDLE (headroom). FRO (px $53.67): base $14.77-$32.24, + 2Q at $530k = +$20.32/share -> range $35.1-$52.6, so FRO sits AT OR ABOVE THE TOP (already paid up for ~2 quarters of the blow-off).
+
+TWO-SIDED CONCLUSION (not contradictory): Section 10 (spike capture) says FRO wins if rates stay extreme (86% vs 52% spot); Section 11 (valuation) says DHT has more margin of safety because FRO already discounts ~2 quarters. Preference depends entirely on how many more extreme quarters you expect - a Hormuz question nobody can forecast.
+
+CORRECTED MULTIPLE GUIDANCE: normalized/mid-cycle 6-8x; peak-annualized ~4.5x today / 1.7-2.6x at a true top; windfall cash ~1.0x; a full year at spike rates - don't, use sum-of-parts.
+
+**Files Updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
