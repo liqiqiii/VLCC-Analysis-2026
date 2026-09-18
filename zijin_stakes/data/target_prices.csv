@@ -1,0 +1,10 @@
+name,scenario,gold,aisc,prod_koz,margin_usd_m,raw_net_usd_m,calibrated_net_usd_m,eps,pe,target,upside_pct,spot,ccy,assumptions
+赤峰黄金 Chifeng,🐻 Conservative,3400,2190,473,572,429,452,1.82,12,21.82,-51,44.26,CNY,"gold -23%, cost at the HIGH end, 2026 volumes. P/E 12 -- depressed earnings earn a HIGHER multiple."
+赤峰黄金 Chifeng,⚖️ Base,4400,1800,473,1229,922,944,3.8,10,38.01,-14,44.26,CNY,"gold ~spot, mid-range cost, 2026 volumes, P/E 10."
+赤峰黄金 Chifeng,🐂 Bull,5200,1800,643,2186,1640,1663,6.69,7,46.84,6,44.26,CNY,"gold +18% AND 2027 volumes -- but cost held at BASE (not the low end) and P/E cut to 7, because peak earnings deserve a trough multiple."
+招金矿业 Zhaojin,🐻 Conservative,3400,2000,563,788,591,486,1.32,12,15.88,-21,20.16,HKD,"gold -23%, cost at the HIGH end, 2026 volumes. P/E 12 -- depressed earnings earn a HIGHER multiple."
+招金矿业 Zhaojin,⚖️ Base,4400,1700,563,1519,1139,1035,2.82,10,28.16,40,20.16,HKD,"gold ~spot, mid-range cost, 2026 volumes, P/E 10."
+招金矿业 Zhaojin,🐂 Bull,5200,1700,965,3376,2532,2427,6.61,7,46.25,129,20.16,HKD,"gold +18% AND 2027 volumes -- but cost held at BASE (not the low end) and P/E cut to 7, because peak earnings deserve a trough multiple."
+Allied Gold,🐻 Conservative,3400,2264,505,574,430,98,0.98,12,11.78,-64,32.3,CAD,"gold -23%, cost at the HIGH end, 2026 volumes. P/E 12 -- depressed earnings earn a HIGHER multiple."
+Allied Gold,⚖️ Base,4400,2100,505,1162,871,538,5.42,10,54.16,68,32.3,CAD,"gold ~spot, mid-range cost, 2026 volumes, P/E 10."
+Allied Gold,🐂 Bull,5200,2100,650,2015,1511,1179,11.86,7,82.99,157,32.3,CAD,"gold +18% AND 2027 volumes -- but cost held at BASE (not the low end) and P/E cut to 7, because peak earnings deserve a trough multiple."

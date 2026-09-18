@@ -1385,3 +1385,35 @@ DOWNSIDE: max drawdowns since 2014 - Zangge -90%, Ivanhoe -73%, Longking -72%, C
 
 **Files created**: zijin_stakes/report_en.md, report_cn.md, run_follow_zijin.py, run_company_deep.py, run_gold_leverage.py, data/*.csv (10), charts/*.png (3)
 **Files updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 66: Part II — full fundamental chapters on Chifeng / Zhaojin / Allied Gold, with calibrated target prices
+**Date**: September 18, 2026
+
+User: asked for a detailed fundamental analysis of each of the three companies, one chapter each, as detailed as possible, built on existing knowledge, followed by advantages / disadvantages / potential return / problems.
+
+Added: zijin_stakes/run_fundamentals.py + Part II (sections 13-17) in BOTH report_en.md and report_cn.md + 4 new CSVs + charts/fundamentals.png. Renumbered the trailing sections 10/11/12 -> 18/19/20 so the document reads in order.
+
+TWO METHOD FIXES, BOTH CAUGHT BY MY OWN FIRST RUN:
+  1. The first run produced Allied Gold +697% in the bull case - nonsense. Cause: applying a BULL multiple to BULL earnings counts the same optimism twice, the identical error caught in this repo's VLCC capstone. Fixed by CUTTING the multiple as gold rises: 12x conservative -> 10x base -> 7x bull (CRule 2 - cyclical miners trade at high P/Es on depressed earnings and LOW P/Es on peak earnings).
+  2. Model validation against FY2025 actuals at the ~US$3,050/oz 2025 average gold price. Chifeng fits to -5% (trustworthy). Zhaojin +19% (acceptable - the model ignores low-margin smelting). ALLIED IS A POOR FIT: modelled +US$270m vs an ACTUAL LOSS of US$63m - a US$333m gap of D&A, interest and growth capex that AISC does not capture. Every scenario now subtracts each company's OWN validation gap. Without that calibration Allied's targets are fantasy. The lesson: AISC IS NOT PROFIT.
+
+THREE VALUATION METHODS used deliberately, because for a gold miner any single method lies: earnings bridge (gold -> cash margin -> net income -> P/E), EV per ounce (annual production and reserves), and FCF yield (Day1Global Module C).
+
+CALIBRATED TARGET PRICES (Rule 7):
+  Chifeng   bear -51% (CNY21.82) / base -14% (CNY38.01) / bull +6% (CNY46.84)
+  Zhaojin   bear -21% (HK$15.88) / base +40% (HK$28.16) / bull +129% (HK$46.25)
+  Allied    bear -64% (C$11.78)  / base +68% (C$54.16)  / bull +157% (C$82.99)
+
+THE HEADLINE FINDING: business quality and investment attractiveness are INVERTED.
+  - Chifeng has the BEST business - net cash US$0.85bn, ROE 27.1%, operating margin 41%, OCF/NI 1.80x, FY2023 AISC US$1,179/oz (below Agnico), resources 582.7t +49.41% - AND THE WORST RISK/REWARD. Base case -14%. It is the most expensive on every asset metric (EV/production oz US$21,746, 2.6x Allied) while volumes FALL: FY2025 14.51t -4.3%, H1-26 own-gold volume -9.45% with ASP +44.08%. Profit rose 56.5% while volumes fell - 100% of growth is the gold price. And AISC disclosure STOPPED exactly as costs rose +20.18%.
+  - Zhaojin has the BEST SKEW - roughly 2:1 base-to-downside - on the best orebody (Haiyu 4.2 g/t vs Allied's 1.13-1.49 g/t) and the cheapest reserve ounces (EV/reserve oz US$566). Already -50.3% from its 52-week high. But H1-26 attributable profit grew only +9.61% vs group +18.50% (NCI +56.5%, other income -87%), mined gold -21.87%, NO interim dividend, net debt RMB13.93bn PLUS RMB5.39bn of perpetuals booked inside EQUITY (a governance flag that distorts its P/B).
+  - Allied has the biggest upside AND the biggest hole. Cheapest assets (EV/production oz US$8,479, EV/EBITDA 7.27x, FCF yield 4.7% - the highest of the three, so the cash is real despite the accounting loss). But Q1-2026 AISC US$2,264/oz = +69% vs Agnico, on STRUCTURALLY low grades of 1.13-1.49 g/t that cannot be fixed. Loss-making FY2024 AND FY2025. Kurmuk fed first ore early Sep 2026 targeting <US$1,200/oz; my arithmetic (not guidance) blends ~650koz to roughly US$1,700/oz - still above Barrick. FY2026 guidance of 485-575koz should be treated as bottom-half on timing.
+
+RISK-ADJUSTED RANKING (interpretation, not fact): 1st Zhaojin (decided by whether Haiyu pours gold in Q4-2026), 2nd Allied (decided by whether Kurmuk actually delivers <US$1,200/oz), 3rd Chifeng - and if bought at all, buy the H-share at its 25.6% discount, never the A-share.
+
+Also added: Day1Global Modules C/L/O grades, a 6-scenario pre-mortem with subjective probabilities, and an anti-bias check that explicitly lists the narrative bias in "follow Zijin" (section 6's Western Mining counterexample), the recency bias in treating US$4,416 gold as permanent (hence the US$3,400 conservative case), and the simplification bias of "AISC = cost" (disproved by Allied's US$333m gap).
+
+**Files created**: zijin_stakes/run_fundamentals.py, data/fundamental_snapshot.csv, data/ev_per_ounce.csv, data/model_validation.csv, data/target_prices.csv, charts/fundamentals.png
+**Files updated**: zijin_stakes/report_en.md, report_cn.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
