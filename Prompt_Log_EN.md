@@ -1347,3 +1347,41 @@ Rule 4 flags: F1 CPI conflict (FRED 3.71/3.69% vs a press aggregator's 3.35%; co
 
 **Files created**: volcker_warsh/report_en.md, volcker_warsh/report_cn.md, volcker_warsh/run_volcker_warsh.py, volcker_warsh/data/*.csv (7), volcker_warsh/charts/*.png (2)
 **Files updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 65: Following Zijin — backtesting the co-investment pattern + deep dives on Chifeng / Zhaojin / Allied Gold
+**Date**: September 18, 2026
+
+User: researched Zangge Mining's ~16x since Zijin's involvement; proposed that watching Zijin's investees is a good idea because a mining leader has integration ability and better judgement. Asked for a 10-year review of Zijin's stakes and returns, the recent deals and their potential. Then clarified the key point: it was about 藏格 CO-INVESTING IN JULONG alongside Zijin — becoming a 利益共同体 — and asked that this kind of behaviour be included. Then asked additionally for the failures in overseas and domestic M&A, the downside and risks, and a deep analysis of Chifeng, Zhaojin and Allied Gold, with thoroughly sourced data.
+
+New report: zijin_stakes/ (report_en.md, report_cn.md, 3 scripts, 10 CSVs, 3 charts) + index.md entry.
+
+THREE CORRECTIONS TO MY OWN WORK, KEPT VISIBLE IN THE REPORT:
+  C1 - I anchored on the wrong event. I first measured Zangge from Zijin's Jan-2025 purchase and concluded "Zijin bought at the top." WRONG. The co-investment formed on 8 Jun 2020 when Zijin bought 50.1% of Julong Copper for RMB 3.883bn and Zangge kept 30.78%. From that public date Zangge went 4.81 -> 72.16 = 15.02x (+54%/yr) - essentially the 16x the user recalled. 84% of the move from the 2020 low came AFTER the announcement. The user's framing was right and mine was not.
+  C2 - a 3.5x data conflict I REFUSED to publish turned out to be a share split. Wanguo Gold's HK$8.33 subscription vs HK$2.27-2.43 traded price reconciled via a 1-for-4 subdivision effective 25 Nov 2025 (HK$9.25/4 = HK$2.3125, matching the observed range). Corrected entry HK$2.0825; corrected return 7.62x NOT 1.90x. Refusing to publish the unverified number was the right call.
+  C3 - ticker recycling: CNL.TO is today Collective Mining, not the Continental Gold Zijin took over in 2020 - same trap as Barrick GOLD->B.
+  C4 (user's premise) - Chifeng's Ghana mine is Wassa, not Bibiani (Bibiani belongs to Asante Gold).
+
+THE SCORECARD (announcement-anchored, never the low): Ivanhoe 11.02x (1.10x Zijin) - Zangge/Julong 15.02x (1.67x) - Longking 1.62x (0.44x) - Zhaojin 3.00x (0.73x) - Montage Gold 11.38x (5.68x) - Wanguo 7.62x (3.65x) - Zangge deepening 2.06x (1.02x) - Chifeng 1.07x - Allied 0.92x. Seven seasoned: median 7.62x, 5/7 beat Zijin, 0/7 lost money. n=7, stated beside the number.
+
+THE ATTRIBUTION PROBLEM (section 6, added because the peer review demanded it): Western Mining rose ~6.5x holding Yulong copper with Zijin as a PASSIVE, NON-OPERATING ~22% minority - a near-control experiment. The biggest winners are gold names measured through gold's run from ~US$1,900 to US$4,432. Honest formulation: "follow Zijin" is a SCREEN for small, asset-concentrated, high-torque miners, not a proven alpha engine.
+
+THE REFINEMENT THAT MAKES THE THESIS USABLE: Zhaojin is the second true instance of the pattern (Zijin owns 30% of the Haiyu mine directly PLUS 18.20% of Zhaojin) yet returned only 0.73x Zijin. Difference: Julong Phase II commissioned Jan-2026; Haiyu has not. THE CATALYST IS COMMISSIONING, NOT THE ANNOUNCEMENT. Verified from the primary filing: the word Haiyu appears ZERO times in Zhaojin's 32-page 23-Aug-2026 HKEX interim - strong negative evidence. Reported cause of delay is a Feb-2026 safety incident (SECONDARY ONLY, attributed not asserted).
+
+THE MOST DECISION-RELEVANT NEW FACT: Zijin's binding constraint has moved from the host country to CHINA. Solaris (2024) was killed by Canada's Investment Canada Act - a review that never concluded and never formally denied. But Allied Gold (2026), Zijin's largest-ever deal at C$44.00/sh ~C$5.5bn, was killed on 29 Jul 2026 by China's own NDRC AFTER the Canadian side had cleared. No break fee. Shares -18% in a session. And the market saw it: AAUC traded at C$29.50 the day before, a 33% discount to the offer. Also note the offer was only +5.4% to the last close but +18.95% to the 20-day VWAP - the stock moved before the news.
+
+XANADU TIGHTENS THE DEFINITION: Zijin held 15.7% of the listco but ACCEPTED Bastion's A$0.08 takeover and kept only its 50% of the Kharmagtai JV vehicle. The listco was a financing shell; the ore sat below it. "Followable" therefore requires the shared asset to be INSIDE the listed company.
+
+COMPANY DEEP DIVES: Chifeng - FY2025 revenue 12.64bn (+40.0%), net profit 3.08bn (+74.7%), OCF 5.56bn (+70.0%), debt/equity 8.3%, NET CASH 5.7bn, ROE 27.1%, operating margin 41%, resources 582.7t (+49.41%). BUT FY2025 production 14.51t (-4.3%, MISSED), FY2026 plan only 14.7t, H1-26 own-gold VOLUMES -9.45% with ASP +44.08% - growth is 100% price. H-share trades 25.6% below A. Zhaojin - H1-26 revenue +29.38% but attributable profit only +9.61% (NCI +56.5%, other income -87%), NO interim dividend, mined gold -21.87%, net debt 13.93bn, and 5.39bn of perpetual capital instruments sitting inside EQUITY. Allied Gold - Q1-2026 AISC US$2,264/oz, +69% vs Agnico, grades only 1.13-1.49 g/t, loss-making FY2024 AND FY2025, Kurmuk fed first ore Sep-2026 targeting <US$1,200/oz.
+
+AISC DISCIPLINE: only Allied discloses AISC currently. Chifeng disclosed US$1,179.1/oz for FY2023 in its H-share prospectus (vs a US$1,348.5 global average - a genuine cost advantage) but stopped disclosing as costs rose; FY2026 is undisclosed with brokers at US$1,750-2,190. Zhaojin has never disclosed AISC. The cost-curve table shows all three bases explicitly.
+
+A FINDING THAT FAVOURS ZIJIN: I expected the acquisition pace to strain the balance sheet. The AUDITED filing disproves it - debt-to-assets IMPROVED from 55.19% (FY2024) to 51.56% (FY2025) during the most acquisitive year in its history (assets +29.1% vs liabilities +20.6%).
+
+BASE RATE: 24 announced deals 2015-2026, 21 completed, 2 terminated, 1 pending = 91.3% completion - but by VALUE the failures were ~C$5.6bn including the largest deal ever attempted. Self-compiled; upper bound.
+
+DOWNSIDE: max drawdowns since 2014 - Zangge -90%, Ivanhoe -73%, Longking -72%, Chifeng-A -70%, Zijin Gold Intl -65%, Zijin -61%, Zhaojin -60%. Annualised vol Chifeng-H 81%, Zijin Gold Intl 70%. Zhaojin is -50.3% from its 52-week high right now.
+
+**Files created**: zijin_stakes/report_en.md, report_cn.md, run_follow_zijin.py, run_company_deep.py, run_gold_leverage.py, data/*.csv (10), charts/*.png (3)
+**Files updated**: index.md, Prompt_Log_EN.md, Prompt_Log_CN.md

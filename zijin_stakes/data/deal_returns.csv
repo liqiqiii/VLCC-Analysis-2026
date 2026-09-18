@@ -1,0 +1,11 @@
+kind,date,target,ticker,ccy,basis,entry,close_on_announce,px_now,years,multiple,cagr_pct,zijin_multiple,vs_zijin,copper_multiple,gold_multiple,asset
+FOLLOWABLE,2015-03-23,Ivanhoe Mines,IVN.TO,CAD,close on announcement,1.09,1.09,12.01,11.5,11.02,23.2,10.05,1.1,2.37,3.73,Kamoa-Kakula copper (DRC)
+FOLLOWABLE,2020-06-08,Zangge Mining 藏格矿业,000408.SZ,CNY,close on announcement,4.81,4.81,72.16,6.3,15.02,54.0,9.0,1.67,2.59,2.6,Julong copper 巨龙铜业 (Tibet)
+FOLLOWABLE,2022-06-30,Longking 龙净环保,600388.SS,CNY,subscription price,10.8,11.85,17.45,4.2,1.62,12.0,3.68,0.44,1.79,2.45,environmental equipment -> energy storage
+FOLLOWABLE,2022-11-06,Zhaojin Mining 招金矿业,1818.HK,HKD,subscription price,6.72,6.74,20.16,3.9,3.0,32.9,4.1,0.73,1.79,2.64,Haiyu 海域金矿 (Shandong)
+FOLLOWABLE,2024-07-31,Montage Gold,MAU.TO,CAD,subscription price,1.75,1.77,19.91,2.1,11.38,212.7,2.0,5.68,1.6,1.82,Kone gold project (Cote d'Ivoire)
+FOLLOWABLE,2024-09-23,Wanguo Gold 万国黄金集团,3939.HK,HKD,subscription price,2.08,2.37,15.86,2.0,7.62,178.1,2.09,3.65,1.55,1.67,"Jinling mine, Solomon Is."
+DEEPENING,2025-01-17,Zangge Mining 藏格矿业,000408.SZ,CNY,subscription price,35.0,30.89,72.16,1.7,2.06,54.3,2.03,1.02,1.54,1.61,control of the partner itself
+SPINOFF,2025-09-30,Zijin Gold International 紫金黄金国际,2259.HK,HKD,subscription price,71.59,118.06,159.1,1.0,2.22,128.5,1.1,2.03,1.39,1.14,Zijin's overseas gold mines
+DEEPENING,2026-03-22,Chifeng Gold 赤峰黄金,600988.SS,CNY,subscription price,41.36,40.48,44.26,0.5,1.07,14.7,1.02,1.05,1.25,0.97,"gold, China/Laos/Ghana (14.5t in 2025)"
+FOLLOWABLE,2026-08-10,Allied Gold,AAUC.TO,CAD,subscription price,32.55,30.98,30.07,0.1,0.92,,0.9,1.03,1.01,1.0,gold (Africa)
