@@ -1393,3 +1393,33 @@ AISC 纪律：目前只有 Allied 披露 AISC。赤峰曾在 H 股招股书披�
 
 **创建文件**: zijin_stakes/run_fundamentals.py, data/fundamental_snapshot.csv, data/ev_per_ounce.csv, data/model_validation.csv, data/target_prices.csv, charts/fundamentals.png
 **更新文件**: zijin_stakes/report_en.md, report_cn.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 67：VLCC 周期顶部估值 —— 以期租价格为中枢、2倍PB为天花板、股息率压缩为触发器
+**日期**: 2026年9月18日
+
+用户：回到 VLCC 的讨论 —— 在考虑周期顶部时，当股息率被压缩（股票贵的时候），吃息的人会离场；由此按 2 倍 PB 计算估值；并以 VLCC 的期租价格为指引、作为价格中枢。
+
+新增 vlcc_cycles/run_cycle_top.py + 中英文报告 §13 + 6 个 CSV + charts/cycle_top_valuation.png。
+
+价格为 2026年9月17日：DHT US$22.82、FRO US$54.03。已核实 1 年期 VLCC 期租 US$93,000–105,000/天（DHT 刚以 US$105,000/天 将一艘 2011 年造 VLCC 固定 12 个月）。
+
+框架需要的那处修正 —— 账面价值陷阱：DHT 按会计账面已是 2.77 倍、FRO 3.81 倍，因此字面执行"2 倍 PB"规则，早就该卖出了。但会计账面是历史成本减折旧，而 2026 年一艘 5 年船龄的 VLCC（US$1.745亿）比新造船（US$1.295亿）还贵。按船舶市场价值计算，DHT 为 1.11 倍 P/NAV、FRO 为 1.41 倍。所以 2 倍规则应当用在 NAV 上而非会计账面上 —— 直觉是对的，分母用错了。并做了船价敏感性：在 US$1.1–2.0亿/艘 的区间内，DHT 的绝对 P/NAV 在 0.81x 到 1.55x 之间大幅摆动，但在任何船价下 FRO 都比 DHT 贵约 27%。相对判断可信，绝对值不可。另外：账面值在快速复利（DHT 每股净资产同比 +22% 至 US$8.25，FRO +33% 至 US$14.17），因此固定的 2 倍线是一个每年上移 20–30% 的移动靶。
+
+期租中枢：在 US$100,000/天 全船队口径下，DHT 每股收益 US$3.65、每股派息 US$1.82（对现价 8.0%）；FRO 每股收益 US$5.59、每股派息 US$2.62（4.9%）。
+
+股息率压缩信号只在 FRO 身上触发：DHT 期租口径 8.0% 的股息率仍高于其 5 年平均实际股息率 6.42%。FRO 的 4.9% 则不到其历史 11.48% 的一半。用户指出的那个机械性卖方，正在 FRO 身上被制造出来，而不是 DHT。
+
+决定性检验（反过来问）：求解在 8% 门槛股息率下支撑现价所需的期租价。DHT 需要 US$100,086/天，而实际期租市场就是 US$93,000–105,000/天 —— DHT 几乎精确地被定价在中枢上（其 8% 门槛价 US$22.79 对市价 US$22.82，相差 0.1%，说明吃息者就是边际定价方）。FRO 需要 US$139,783/天 —— 比任何交易对手真正愿意锁定一年的价格高约 40%。FRO 是按现货尖峰（US$53–60万 物理成交、US$103.5万 指数）在定价，而 §6 已证明市场在历史上拒绝资本化这类尖峰。
+
+四个天花板：DHT 区间 US$16.50–30.96（−28% 到 +36%）跨骑在现价两侧；FRO 区间 US$26.23–57.32（−51% 到 +6%）几乎全部落在现价之下，只有最宽松的 1.5x P/NAV 高出 6%。
+
+与既有工作的收敛：本节通过完全不同的路径得到了与 §10–12 相同的结论。§10 发现 FRO 86% 的现货敞口使它在"运价维持极端"时是更好的载体；§12 发现 FRO 已为最可能的结果定价。期租锚定的股息率框架现在给出了具体数字：FRO 需要 US$14万/天 的持续运价，而没有人会签高于 US$10.5万 的 12 个月期租。
+
+CRule 8 的新退出绊线：盯 1 年期租价，不要盯现货报价。期租高于 US$12万 → DHT 股息率 >10%，仍便宜。期租在 US$9.3–10.5万（今天）→ DHT 合理，FRO 超出中枢约 40%。期租跌破 US$7.5万 → DHT 5.1%、FRO 2.9%，双双跌破任何收益门槛，吃息者离场。
+
+Rule 4 标记：船队价值为假设值（VLCC US$1.5亿、苏伊士型 US$1.2亿、LR2 US$1.0亿）；派息率取自 Yahoo 滚动数据（DHT 50%、FRO 46.9%）；模型把整支船队按期租价计价，而今天 DHT 约 52% 现货、FRO 约 86% 现货（这是刻意的，因为问题本身就是"可持续运价值多少钱"）；当前市场没有可靠的 3 年期租报价，故以 1 年期租为中枢。
+
+**创建文件**: vlcc_cycles/run_cycle_top.py, data/pb_vs_pnav.csv, data/tc_anchor_earnings.csv, data/yield_ceilings.csv, data/ceilings.csv, data/implied_tc.csv, data/nav_sensitivity.csv, charts/cycle_top_valuation.png
+**更新文件**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

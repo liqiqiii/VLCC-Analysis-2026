@@ -1417,3 +1417,33 @@ Also added: Day1Global Modules C/L/O grades, a 6-scenario pre-mortem with subjec
 
 **Files created**: zijin_stakes/run_fundamentals.py, data/fundamental_snapshot.csv, data/ev_per_ounce.csv, data/model_validation.csv, data/target_prices.csv, charts/fundamentals.png
 **Files updated**: zijin_stakes/report_en.md, report_cn.md, index.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 67: VLCC cycle-top valuation — TC rate as the anchor, 2x P/B as the ceiling, dividend-yield compression as the trigger
+**Date**: September 18, 2026
+
+User: returning to the VLCC discussion — when thinking about the cycle top, as dividend yield gets compressed (the stock gets expensive) the income holders leave; so value it at 2x P/B; and use the VLCC time-charter rate as the guide / central anchor.
+
+Added vlcc_cycles/run_cycle_top.py + section 13 in both reports + 6 CSVs + charts/cycle_top_valuation.png.
+
+Prices 17-Sep-2026: DHT US$22.82, FRO US$54.03. Sourced 1-yr VLCC TC US$93,000-105,000/day (DHT fixed a 2011-built VLCC at US$105,000/day for 12 months).
+
+THE CORRECTION THE FRAMEWORK NEEDED — the book-value trap: DHT trades at 2.77x accounting book and FRO at 3.81x, so a literal "2x P/B" rule would have said sell a long time ago. But accounting book is historical cost less depreciation, and in 2026 a 5-year-old VLCC (US$174.5m) is worth MORE than a newbuild (US$129.5m). On vessel market values DHT is 1.11x P/NAV and FRO 1.41x. So the 2x rule must be applied to NAV, not to accounting book - the intuition was right, the denominator was wrong. Added a vessel-value sensitivity: absolute P/NAV swings from 0.81x to 1.55x for DHT across US$110-200m/VLCC, but FRO is ~27% richer than DHT at EVERY value. Trust the relative call, not the absolute. Also: book is compounding fast (DHT BVPS +22% YoY to US$8.25, FRO +33% to US$14.17), so a fixed 2x line is a MOVING target rising 20-30%/yr.
+
+THE TC ANCHOR: at US$100,000/day full-fleet, DHT earns EPS US$3.65 and pays DPS US$1.82 (8.0% on today's price); FRO earns EPS US$5.59 and pays DPS US$2.62 (4.9%).
+
+THE YIELD-COMPRESSION SIGNAL FIRES ON FRO ONLY: DHT's TC-based yield of 8.0% is still ABOVE its 5-yr average actual yield of 6.42%. FRO's 4.9% is LESS THAN HALF its 11.48% history. The mechanical seller the user identified is already being created in FRO, not DHT.
+
+THE DECISIVE TEST (the inverse question): solve for the TC rate that justifies today's price at an 8% hurdle yield. DHT needs US$100,086/day and the actual TC market is US$93,000-105,000/day - DHT is priced almost exactly ON the anchor (its 8%-hurdle price is US$22.79 vs a market price of US$22.82, a 0.1% difference, which suggests the income buyer is the marginal price-setter). FRO needs US$139,783/day - roughly 40% ABOVE what any counterparty will commit to for a year. FRO is being valued on the spot spike (US$530-600k physical, US$1.035M index) that section 6 showed the market historically refuses to capitalise.
+
+FOUR CEILINGS: DHT range US$16.50-30.96 (-28% to +36%) straddles the current price; FRO range US$26.23-57.32 (-51% to +6%) sits almost entirely BELOW it, with only the most generous ceiling (1.5x P/NAV) clearing by 6%.
+
+CONVERGENCE WITH PRIOR WORK: this reaches the same conclusion as sections 10-12 by a completely different route. Section 10 found FRO's 86% spot exposure made it the better vehicle IF rates stayed extreme; section 12 found FRO already priced for the modal outcome. The TC-anchored yield framework now attaches a specific number: FRO needs US$140k/day sustained and nobody signs a 12-month charter above US$105k.
+
+NEW EXIT TRIPWIRE for CRule 8: watch the 1-YEAR TC RATE, not the spot print. TC above US$120k -> DHT yield >10%, still cheap. TC at US$93-105k (today) -> DHT fair, FRO ~40% over-anchored. TC below US$75k -> DHT 5.1%, FRO 2.9%, both breach any income hurdle and the yield buyer leaves.
+
+Rule 4 flags: fleet values are an assumption (US$150m/VLCC, US$120m/Suezmax, US$100m/LR2); payout ratios are Yahoo trailing (DHT 50%, FRO 46.9%); the model charters the WHOLE fleet at the TC rate whereas DHT is ~52% spot and FRO ~86% spot today (deliberate - the question is what a sustainable rate is worth); no reliable 3-year TC quote exists in the current market so the 1-year rate is the anchor.
+
+**Files created**: vlcc_cycles/run_cycle_top.py, data/pb_vs_pnav.csv, data/tc_anchor_earnings.csv, data/yield_ceilings.csv, data/ceilings.csv, data/implied_tc.csv, data/nav_sensitivity.csv, charts/cycle_top_valuation.png
+**Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

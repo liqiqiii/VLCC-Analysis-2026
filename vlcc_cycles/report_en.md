@@ -719,6 +719,7 @@ python run_rate_valuation.py    # §7: rate-to-valuation bridge, implied rate, t
 python run_quarterly_deep.py    # §8: QUARTERLY rebuild, P/NAV, lead/lag, exit dashboard
 python run_spot_adjusted.py     # §10: spot-vs-time-charter corrected model
 python run_capstone_matrix.py   # §12: 15-combination rate x durability matrix
+python run_cycle_top.py         # §13: TC anchor, 2x P/B ceiling, yield compression
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -728,3 +729,139 @@ Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_mo
 ---
 
 *Two-Step Research Protocol applied (Module 1 §2–3; Module 2 embeds draft+review). Cyclical CRules 1/3/4/6/8 applied. Stock data exact; rate levels and policy-impact magnitudes are approximate/estimated and flagged. Education/analysis only — not investment advice.*
+
+---
+
+## §13 — Cycle-top valuation: TC rate as the anchor, 2x P/B as the ceiling, yield compression as the trigger
+
+> **The user's framework (18 Sep 2026):** *"当股息率被压缩（股票贵的时候），吃息的人会离场；我们由此可以按照 2 倍 PB 来计算一下估值；并且以 vlcc 的期租价格为指引，作为价格中枢。"*
+
+**Three ideas that interlock, and they are the right three.** The TC rate strips the spot spike out and gives a **sustainable** rate; 2x P/B gives an **asset** ceiling; yield compression identifies a **mechanical seller**. Applied together they produce a decisive answer — but **one of the three needs a correction before it can be used at all.**
+
+*(Reproduce: `python run_cycle_top.py` → `data/{pb_vs_pnav,tc_anchor_earnings,yield_ceilings,ceilings,implied_tc,nav_sensitivity}.csv`. Prices 17-Sep-2026: **DHT US$22.82 · FRO US$54.03**. 1-yr VLCC TC sourced at **US$93,000–105,000/day**; DHT fixed a 2011-built VLCC at **US$105,000/day** for 12 months.)*
+
+![Cycle-top valuation](charts/cycle_top_valuation.png)
+
+*Panel A: yield on sustainable earnings vs the TC rate. Panel B: four ceilings vs today's price. Panel C: P/B against today's book. Panel D: book value is compounding, so the 2x ceiling rises.*
+
+### 13.1 ⚠️ First, the correction: the book-value trap
+
+| | Price | BVPS | **P/B** | NAVPS | **P/NAV** |
+|---|---|---|---|---|---|
+| **DHT** | $22.82 | $8.25 | **2.77x** | $20.64 | **1.11x** |
+| **FRO** | $54.03 | $14.17 | **3.81x** | $38.21 | **1.41x** |
+
+> **Both are ALREADY far above 2x P/B on accounting book — DHT 2.77x, FRO 3.81x.** Taken literally, the 2x P/B rule would have told you to sell a long way back, and it would have been wrong.
+
+**Why:** accounting book is **historical cost less depreciation**. In 2026 second-hand VLCC values are at multi-decade highs — a **5-year-old VLCC is worth ~US$174.5m against a US$129.5m newbuild**. Depreciated book therefore **massively understates** the fleet. The same company is at **2.77x book but only 1.11x NAV**.
+
+> **Correction: apply the 2x rule to NAV, not to accounting book.** On that basis DHT at 1.11x and FRO at 1.41x are **nowhere near** an asset-value ceiling. The "2x" intuition is sound; the denominator was wrong.
+
+**How much does that depend on my vessel-value assumption?**
+
+| VLCC value | DHT NAVPS | DHT P/NAV | FRO NAVPS | FRO P/NAV |
+|---|---|---|---|---|
+| US$110m | $14.69 | 1.55x | $25.49 | 2.12x |
+| US$125m | $16.92 | 1.35x | $30.26 | 1.79x |
+| **US$150m (used)** | **$20.64** | **1.11x** | **$38.21** | **1.41x** |
+| US$175m | $24.36 | 0.94x | $46.16 | 1.17x |
+| US$200m | $28.08 | 0.81x | $54.11 | 1.00x |
+
+> ⚠️ **The ABSOLUTE P/NAV swings a lot with the assumption — from 0.81x to 1.55x for DHT. The RELATIVE conclusion does not: FRO trades ~27% richer than DHT at every vessel value.** Trust the relative call; treat the absolute as an estimate.
+
+**And there is a second problem with a fixed 2x line: book is compounding fast.**
+
+| BVPS | Jun-25 | Sep-25 | Dec-25 | Mar-26 | **Jun-26** | YoY |
+|---|---|---|---|---|---|---|
+| **DHT** | $6.75 | $6.80 | $7.03 | $7.65 | **$8.25** | **+22%** |
+| **FRO** | $10.63 | $10.45 | $11.28 | $12.76 | **$14.17** | **+33%** |
+
+> **A "2x book" price target is a MOVING target that rises ~20–30% a year while rates stay high.** Retained earnings are rebuilding the denominator faster than most cycle-top rules assume.
+
+### 13.2 The TC rate as the central anchor (价格中枢)
+
+This is the strongest part of the framework, and it connects directly to §6's finding that **stocks capitalise SUSTAINED rates ~1:1 and ignore transient spikes**. The TC rate is the purest available measure of "sustained": it is what a counterparty will actually **commit to for 12 months**.
+
+**Earnings at the TC anchor (full fleet at the TC rate, D&A deducted, no tax):**
+
+| TC rate | DHT EPS | DHT DPS | DHT yield @ $22.82 | FRO EPS | FRO DPS | FRO yield @ $54.03 |
+|---|---|---|---|---|---|---|
+| $60,000 | $1.56 | $0.78 | 3.4% | $1.95 | $0.91 | 1.7% |
+| $75,000 | $2.34 | $1.17 | 5.1% | $3.31 | $1.55 | 2.9% |
+| **$93,000** | $3.28 | $1.64 | **7.2%** | $4.95 | $2.32 | **4.3%** |
+| **$100,000 ⚓** | **$3.65** | **$1.82** | **8.0%** | **$5.59** | **$2.62** | **4.9%** |
+| **$105,000** | $3.91 | $1.95 | **8.6%** | $6.04 | $2.84 | **5.2%** |
+| $120,000 | $4.69 | $2.34 | 10.3% | $7.41 | $3.48 | 6.4% |
+| $150,000 | $6.25 | $3.13 | 13.7% | $10.14 | $4.76 | 8.8% |
+
+*DHT: 24 VLCC × 350 days, breakeven $17,500/day, D&A $105m, 161.24m shares, 50% payout. FRO: 57.9 VLCC-equiv × 350 days, breakeven $23,800/day, D&A $300m, 222.62m shares, 46.9% payout.*
+
+### 13.3 The income holder's exit — and this is where the two names separate
+
+| | TC-based yield at today's price | **5-yr average ACTUAL yield** | Verdict |
+|---|---|---|---|
+| **DHT** | **8.0%** | **6.42%** | ✅ **Still ABOVE its own history — not yet compressed** |
+| **FRO** | **4.9%** | **11.48%** | 🔴 **LESS THAN HALF its history — severely compressed** |
+
+> **The yield-compression signal the user is looking for is already firing — but only on FRO.**
+
+**Price implied by each hurdle yield on TC-anchored earnings:**
+
+| Hurdle | DHT price | vs today | FRO price | vs today |
+|---|---|---|---|---|
+| 6% | $30.39 | +33% | $43.71 | −19% |
+| **8%** | **$22.79** | **−0%** | $32.79 | **−39%** |
+| 10% | $18.23 | −20% | $26.23 | −51% |
+| 12% | $15.19 | −33% | $21.86 | −60% |
+
+> **DHT's 8%-hurdle price is US$22.79 against a market price of US$22.82 — a 0.1% difference.** The market is pricing DHT at almost exactly an 8% sustainable yield on the prevailing TC rate. That is a remarkably tight fit and suggests the income buyer is the marginal price-setter in DHT.
+
+### 13.4 ⭐ The inverse question — the decisive test
+
+**Solve for the TC rate that would justify today's price at each hurdle yield:**
+
+| | 8% yield | 10% yield | 12% yield | **Actual 1-yr TC market** |
+|---|---|---|---|---|
+| **DHT** | **$100,086/day** | $117,607 | $135,128 | **$93,000–105,000** |
+| **FRO** | **🔴 $139,783/day** | $165,078 | $190,373 | **$93,000–105,000** |
+
+> **This is the whole answer in one table.**
+> - **DHT requires US$100,086/day to justify its price at an 8% yield. The TC market is US$93,000–105,000/day. DHT is priced almost exactly ON the anchor.**
+> - **FRO requires US$139,783/day — roughly 40% ABOVE what any counterparty will actually commit to for a year.**
+
+**FRO is not being valued on the rate the market will underwrite. It is being valued on the spot spike** — the US$530–600k physical / US$1.035M index prints of mid-September — **which §6 showed the market historically refuses to capitalise.**
+
+### 13.5 Four ceilings, side by side
+
+| Ceiling | DHT | vs today | FRO | vs today |
+|---|---|---|---|---|
+| 2.0x accounting book | $16.50 | −28% | $28.34 | −48% |
+| 1.5x P/NAV | $30.96 | **+36%** | $57.32 | **+6%** |
+| 8% yield on TC earnings | $22.79 | **−0%** | $32.79 | −39% |
+| 10% yield on TC earnings | $18.23 | −20% | $26.23 | −51% |
+| **Range** | **$16.50–30.96** | **−28% / +36%** | **$26.23–57.32** | **−51% / +6%** |
+
+> **Read the asymmetry.** DHT's ceilings straddle the current price — it sits mid-range with room in both directions. **FRO's ceilings sit almost entirely BELOW the current price**; only the most generous one (1.5x P/NAV) clears it, and only by 6%.
+
+### 13.6 Verdict, and what it changes
+
+**The user's framework works, and it delivers a cleaner verdict than the P/E work in §11–12 did:**
+
+| | **DHT** | **FRO** |
+|---|---|---|
+| Priced against the TC anchor | **≈ fair (needs $100k, market is $93–105k)** | **🔴 needs $140k — a ~40% gap** |
+| Yield on sustainable earnings | 8.0% vs 6.42% history — **not yet compressed** | 4.9% vs 11.48% history — **severely compressed** |
+| P/NAV | 1.11x | 1.41x (**~27% richer at any vessel value**) |
+| Position in its own ceiling range | **mid-range** | **at the very top** |
+
+> **This is the same conclusion §10–12 reached by a completely different route — and that convergence is the point.** §10 found that FRO's 86% spot exposure made it the better vehicle *if* rates stayed extreme; §12 found FRO was already priced for the modal outcome while DHT was not. **The TC-anchored yield framework now says the same thing with a specific number attached: FRO needs US$140k/day sustained, and nobody will sign a 12-month charter above US$105k.**
+
+**What it changes about the exit discipline (CRule 8):** the cleanest single tripwire is now available. **Watch the 1-year TC rate, not the spot print.**
+
+| Trigger | Reading | Action |
+|---|---|---|
+| 1-yr TC **holds above US$120k** | DHT yield >10%, FRO ~6.4% | DHT still cheap on yield; FRO still needs more |
+| 1-yr TC **settles US$93–105k** (today) | DHT ~8%, FRO ~4.9% | **DHT fair · FRO ~40% over-anchored** |
+| 1-yr TC **falls below US$75k** | DHT 5.1%, FRO 2.9% | **Both breach any income hurdle — the yield buyer leaves** |
+
+⚠️ **Rule 4 flags for this section:** (a) fleet values are an **assumption** (US$150m/VLCC, US$120m/Suezmax, US$100m/LR2) — see the 13.1 sensitivity; (b) the payout ratios are **Yahoo-reported trailing** (DHT 50%, FRO 46.9%) and both firms have varied policy; (c) the model charters the **whole fleet** at the TC rate, whereas DHT is ~52% spot and FRO ~86% spot today — this is deliberate, since the question is what a *sustainable* rate is worth; (d) the 3-year TC rate is **not reliably quoted** in the current market, so the 1-year rate is used as the anchor.

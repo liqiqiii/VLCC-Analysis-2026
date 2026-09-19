@@ -1,0 +1,9 @@
+ticker,ceiling,price,vs_today_pct
+DHT,2.0x accounting book,16.5,-28
+DHT,1.5x P/NAV (vessel market values),30.96,36
+DHT,8% yield on TC-rate earnings,22.79,0
+DHT,10% yield on TC-rate earnings,18.23,-20
+FRO,2.0x accounting book,28.34,-48
+FRO,1.5x P/NAV (vessel market values),57.32,6
+FRO,8% yield on TC-rate earnings,32.79,-39
+FRO,10% yield on TC-rate earnings,26.23,-51
