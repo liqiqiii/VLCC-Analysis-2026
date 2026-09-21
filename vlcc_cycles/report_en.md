@@ -2142,6 +2142,77 @@ Two claims that sound like one, need different evidence, and come out differentl
 
 **The precise statement that survives:** *forward freight is impounded into the tanker equities promptly and contemporaneously — but it accounts for only about a tenth to a seventh of their daily variation. The equities are not a freight instrument.*
 
+### 22.5d ⭐ "One tenth to one seventh" — where it came from, and what the other ~85% actually is
+
+*Everything below is BWET~DHT and BWET~FRO measured separately. No DHT-vs-FRO comparison is used.*
+
+![Amplifier test](charts/s22_amplifier.png)
+
+**Where the fraction came from.** It was **R² and nothing else**:
+
+| | corr | R² | as a fraction | period |
+|---|---|---|---|---|
+| **DHT** | 0.317 | 0.100 | **1/10.0** | full sample |
+| **DHT** | 0.368 | 0.135 | **1/7.4** | 2026 only |
+| **FRO** | 0.324 | 0.105 | 1/9.5 | full sample |
+| **FRO** | 0.420 | **0.177** | **1/5.7** | 2026 only |
+
+*(The "1/10 to 1/7" phrasing came from DHT's two numbers. FRO in 2026 is stronger at 1/5.7 — the earlier wording under-reported FRO.)*
+
+**But R² assumes a CONSTANT beta — and that assumption is what fails here.** A relationship with a *stable direction* but an *unstable magnitude* produces a low R² while still being economically tight. That is exactly the amplifier/attenuator hypothesis, and it is testable.
+
+#### Is the direction stable? Largely yes.
+
+| | same-sign, all days | same-sign, **largest 25% of freight moves** |
+|---|---|---|
+| **DHT** | 59.4% (z=5.5, p=3.9e−08) | **72.6%** |
+| **FRO** | 58.6% (z=5.0, p=5.3e−07) | **71.7%** |
+
+And the **60-day rolling beta is positive on 100% of windows** for both names (DHT range 0.013–0.591; FRO −0.019–0.694). **The sign of the relationship essentially never inverts.**
+
+#### Amplifier or attenuator? Decisively an ATTENUATOR — and a filter.
+
+Beta conditional on the size of the freight move:
+
+**DHT**
+
+| \|BWET\| bucket | mean \|BWET\| | beta | R² | same-sign |
+|---|---|---|---|---|
+| Q1 smallest | 0.39% | 0.615 | 0.023 | 54.2% |
+| Q2 | 1.37% | 0.302 | 0.037 | 54.7% |
+| Q3 | 2.86% | 0.137 | 0.036 | 56.1% |
+| **Q4 largest** | **8.04%** | **0.142** | **0.229** | **72.6%** |
+
+**FRO**
+
+| \|BWET\| bucket | mean \|BWET\| | beta | R² | same-sign |
+|---|---|---|---|---|
+| Q1 smallest | 0.39% | 0.717 | 0.018 | 50.0% |
+| Q2 | 1.37% | 0.398 | 0.041 | 56.6% |
+| Q3 | 2.86% | 0.133 | 0.021 | 56.1% |
+| **Q4 largest** | **8.04%** | **0.192** | **0.280** | **71.7%** |
+
+> **⭐ Two things happen at once as freight moves get bigger:**
+> - **Beta FALLS** (DHT 0.615 → 0.142). Per 1% of freight the equity moves *less*, not more. It is an **attenuator**, not an amplifier. *(The high Q1 betas are noise-fitting on a 0.39% denominator — note their R² of 0.02.)*
+> - **But reliability RISES sharply** — R² goes **0.023 → 0.229** and same-sign **54% → 73%**.
+>
+> **Reading: the equity ignores small freight wiggles as noise, and reliably follows large freight moves — but only partially, damping them by roughly 85%.** On the biggest freight days, freight explains ~23% (DHT) and ~28% (FRO) of the move, versus ~2% on quiet days.
+
+**In risk terms it is a damper too.** BWET's daily volatility is **4.84%** against DHT **2.20%** (BWET 2.20× as volatile) and FRO **2.78%** (1.74×). The identity checks exactly: beta 0.144 = corr 0.317 × (2.20/4.84).
+
+**And the gain is never constant** — 60-day rolling beta has mean 0.185 / std 0.113 for DHT and mean 0.247 / std 0.128 for FRO, ranging roughly **40×** from trough to peak. So a single beta is an average of a moving quantity, which is itself a reason the constant-beta R² *understates* the link.
+
+#### So what IS the other ~85%? Not the obvious candidates.
+
+| | BWET | +SPY | +XLE | +BNO | +VIX | **unexplained** |
+|---|---|---|---|---|---|---|
+| **DHT** | 0.100 | 0.132 | 0.155 | 0.155 | 0.155 | **84.5%** |
+| **FRO** | 0.105 | 0.146 | 0.180 | 0.181 | 0.182 | **81.8%** |
+
+**Adding the equity market, the energy sector, Brent crude and volatility moves R² by only ~5–8pp.** The residual is **not** a macro factor at all — it is idiosyncratic to these shipping names: fleet and charter news, dividend declarations, vessel sales, buybacks, index/ETF flows, analyst actions and plain liquidity.
+
+> **The corrected statement.** BWET and the tanker equities share a **directionally reliable but heavily damped and time-varying** relationship. Freight is **not** the main driver of a given day's move — even on the biggest freight days it explains under a third — and the bulk of daily variance is company-specific, not freight, market, oil or sector.
+
 ### 22.6 Regimes — now reconciled, and not significant
 
 | Regime | n | BWET | DHT | FRO | B~DHT | B~FRO |
