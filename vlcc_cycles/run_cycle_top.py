@@ -68,8 +68,11 @@ CO = {
         shares_m=161.24,
         equity_m=1330,              # 30-Jun-2026 stockholders' equity
         debt_m=435, cash_m=163,
-        payout=0.50,                # disclosed policy ~100% of net income has
-                                    # varied; Yahoo payoutRatio 0.50 used
+        payout=0.77,                # CORRECTED: DHT's stated policy is 100% of
+                                    # net income (from Q3-2022). ACTUAL TTM payout
+                                    # = $2.27 div / $2.94 EPS = 77%. The 0.50
+                                    # previously used came from a stale Yahoo
+                                    # field and understated the yield by ~35%.
         spot_pct=0.52,
         five_yr_avg_yield=6.42,     # Yahoo fiveYearAvgDividendYield
         ttm_div=2.45,
@@ -83,7 +86,10 @@ CO = {
         shares_m=222.62,
         equity_m=3155,
         debt_m=2435, cash_m=322,
-        payout=0.4693,
+        payout=0.90,                # CORRECTED: FRO targets dividends at/near
+                                    # adjusted profit. ACTUAL TTM payout =
+                                    # $5.99 div / $6.67 EPS = 90%. The 0.4693
+                                    # from Yahoo understated the yield by ~48%.
         spot_pct=0.86,
         five_yr_avg_yield=11.48,
         ttm_div=5.38,
@@ -103,7 +109,7 @@ print("=" * 92)
 
 px = {}
 for t in CO:
-    s = yf.download(t, period="5y", progress=False, auto_adjust=True)["Close"]
+    s = yf.download(t, period="5y", progress=False, auto_adjust=False)["Close"]  # RAW: valuation basis
     px[t] = (s.iloc[:, 0] if hasattr(s, "columns") else s).dropna()
     CO[t]["price"] = float(px[t].iloc[-1])
 

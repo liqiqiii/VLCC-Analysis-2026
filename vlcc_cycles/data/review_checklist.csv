@@ -1,0 +1,12 @@
+section,claim,basis_used,correct_basis,verdict,note
+§5/§6,cycle trough->peak multiples,TOTAL,TOTAL,OK,
+§7,cross-era average price comparison,TOTAL,ACTUAL,WRONG,"understated the gap; direction survives, number does not"
+§7,implied rate from TODAY's price,TOTAL(latest),RAW(latest),OK,at the present the two coincide
+§8,P/NAV cross-check,TOTAL(latest),RAW(latest),OK,current only
+§11/§12,"peak P/E, capstone matrix",current price,RAW(latest),OK,all current-price; no historical multiples
+§13,"P/B, P/NAV, dividend yield",TOTAL(latest),RAW(latest),OK,current only; panel C was labelled illustrative
+§14,historical P/B series,ADJ / unadjusted book,RAW / book,WRONG,superseded by §15/§17
+§14.6,forward returns from P/B peaks,TOTAL,TOTAL,OK,"basis right, but ANCHOR DATES were wrong -- fixed in §18.5"
+§15/§17,P/NAV at cycle tops,RAW / reported book,same,OK,
+§16,2005-08 super-cycle multiples,ACTUAL (split-undone),same,OK,the only section that needed the ACTUAL basis
+§18,the audit itself,"both, explicitly",same,OK,

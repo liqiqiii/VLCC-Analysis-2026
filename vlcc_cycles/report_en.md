@@ -739,6 +739,8 @@ Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_mo
 
 ## §13 — Cycle-top valuation: TC rate as the anchor, 2x P/B as the ceiling, yield compression as the trigger
 
+> **🔴 THE HEADLINE OF THIS SECTION IS WITHDRAWN — see §19.1.** It used a payout ratio of 50% (DHT) and 47% (FRO) taken from a stale data field. The ACTUAL trailing payouts are **77%** and **90%**. Corrected, FRO requires a sustained TC of **US$88,815/day — below** the US$93–105k market, not 40% above it. **The conclusion that FRO is over-anchored does not survive.**
+
 > **The user's framework (18 Sep 2026):** *"当股息率被压缩（股票贵的时候），吃息的人会离场；我们由此可以按照 2 倍 PB 来计算一下估值；并且以 vlcc 的期租价格为指引，作为价格中枢。"*
 
 **Three ideas that interlock, and they are the right three.** The TC rate strips the spot spike out and gives a **sustainable** rate; 2x P/B gives an **asset** ceiling; yield compression identifies a **mechanical seller**. Applied together they produce a decisive answer — but **one of the three needs a correction before it can be used at all.**
@@ -1449,3 +1451,79 @@ Four sections, five corrections, three data traps cleared (dividend-adjustment, 
 | Does any headline conclusion move? | **No.** Every conclusion survived: P/B peaks are warnings not signals (5 of 6); DHT yields above its history and FRO below; DHT ≈ fairly priced on the TC anchor and FRO ~40% above it |
 
 > **The honest summary: adjustment did not change what this report concludes — but it changed almost every number on the way there, and finding that required actively testing for it rather than assuming the data source had it right.**
+
+---
+
+## §19 — 🔴 External review (GPT-6-Astra) and the corrections it forced
+
+At the user's instruction, the §18 audit and a draft §7 replacement were submitted to **GPT-6-Astra** for adversarial review before publication. **The review found blocking errors. Several claims are withdrawn below, including the report's main bearish argument.**
+
+### 19.1 🔴 THE BIG ONE: the payout ratio was wrong, and it invalidates §13's headline
+
+**Astra flagged that "both pay out roughly half of earnings" was not an adequate description** — DHT announced a **100%-of-net-income** dividend policy from Q3-2022, and Frontline targets dividends at or near adjusted profit. Checked against actual dividends:
+
+| | Modelled payout (Yahoo field) | **ACTUAL TTM payout** | Understated by |
+|---|---|---|---|
+| **DHT** | 50% | **77%** ($2.27 div ÷ $2.94 EPS) | **−35%** |
+| **FRO** | 47% | **90%** ($5.99 div ÷ $6.67 EPS) | **−48%** |
+
+**Rebuilding §13 with the correct payouts:**
+
+| At the US$100,000/day TC anchor | Old (wrong payout) | **CORRECTED** |
+|---|---|---|
+| DHT DPS / yield at $23.27 | $1.82 / **8.0%** | **$2.81 / 12.1%** |
+| FRO DPS / yield at $51.42 | $2.62 / **4.9%** | **$5.03 / 9.8%** |
+
+**And the inverse question — the TC rate today's price requires at an 8% hurdle:**
+
+| | Old (wrong payout) | **CORRECTED** | Actual 1-yr TC market |
+|---|---|---|---|
+| **DHT** | $100,086/day | **$76,408/day** | **$93,000–105,000** |
+| **FRO** | **$139,783/day** | **$88,815/day** | **$93,000–105,000** |
+
+> # 🔴 §13's HEADLINE IS WITHDRAWN.
+>
+> §13 concluded: *"FRO requires US$139,783/day — roughly 40% ABOVE what any counterparty will commit to."* **That was driven by a stale payout field. With the actual 90% payout, FRO requires US$88,815/day — which is BELOW the US$93–105k the market is actually signing.**
+>
+> **Both names now clear an 8% hurdle at the prevailing TC rate. Neither is priced beyond what the charter market will underwrite.** The report's only remaining bearish argument has been invalidated by its own input error.
+
+**What the market is actually pricing (corrected):** DHT at a **~12% sustainable yield**, FRO at a **~10%** — both **above** their own historical averages (DHT 5.5–6.4%, FRO 7.2–11.5%). On this measure both look **cheap**, not stretched.
+
+### 19.2 🔴 The §7 replacement is withdrawn — Astra was right and I was wrong
+
+I had intended to publish: *"§7's '12× lower' becomes 1.97× (DHT) and 3.82× (FRO) on the actual price paid."*
+
+**Astra's objection is decisive:** *"Undoing reverse splits is not a valid way to compare per-share values across eras. Split-adjusted prices are the correct common unit. Your DHT reduction from 23.64× to 1.97× is exactly 23.64/12 — that is not an economic correction, it compares differently sized share units."*
+
+**This is correct.** A reverse split changes the size of a share, not shareholder wealth. The "actual price paid" basis is right **only** when pairing a price with a per-share accounting figure **from that same era** (which is what §16 does, correctly). It is **wrong** for comparing prices across eras.
+
+**Astra also caught a real bug:** my FRO era-average applied the split conversion to the 2005-08 window but not to 2015-16 — yet the 2015-16 window straddles the Feb-2016 split, so part of it needed conversion. The 3.82× figure was internally inconsistent.
+
+**And a third:** average price × a single share count is **not** average market cap; it must be Σ(Pₜ × Nₜ) per observation.
+
+> **Therefore: the "0.64× / 2.38× market cap" replacement is NOT published.** What survives is only the narrower, defensible statement: **§7's ~12× was computed on dividend-adjusted price levels, which are not a valid measure of historical valuation. The original claim is withdrawn; no replacement number is asserted.**
+
+### 19.3 Other findings, and what I did with each
+
+| # | Astra's finding | Verdict | Action |
+|---|---|---|---|
+| 1 | The dividend rationale for P/B is wrong — a $1 dividend on a $20/$10 stock gives 19/9 = 2.11, not 2.00. Book falls at **declaration**, price on the **ex-date**, and quarterly book does not track daily price | **Correct** | Rationale restated: price and book must measure the equity claim on **consistent bases**, not that dividends preserve the ratio |
+| 2 | The 0.05×–8× market-cap plausibility band "spans a factor of 160" and cannot validate anything | **Correct** | Demoted to an **outlier screen**, not a validation. It did catch a real 12× direction error |
+| 3 | **FRO's Dec-2015 share count of 120m conflicts with Frontline's own filing** (781.9m → 156.3m at the Feb-2016 split) | **Correct** | Verified: at 781.9m shares BVPS = **$1.85**, which matches the aggregator exactly. My 120m was wrong. FRO 2015 P/B is **1.62×** on matched bases, not the 1.24× I had |
+| 4 | The "fingerprint" is **consistent with** dividend contamination but does not **confirm** it — the algebraic identity fails (DHT 2020: 0.52/0.81 = 0.642 vs an adjusted/raw of 0.67) | **Correct** | Language downgraded from "confirmed" to "**consistent with**" |
+| 5 | "5 of 6 negative" — binomial p ≈ 10.9% one-sided, with correlated observations and hindsight-selected peaks | **Correct** | Relabelled **exploratory and in-sample**; no predictive claim |
+| 6 | Averaging over unequal, arbitrary era windows; 2005-08 mixes boom and the Lehman crash | **Correct** | Conceded — and it is part of why the §7 replacement is withdrawn |
+| 7 | "Same VLCC rate" ≠ "same earnings opportunity" — fleet mix, chartered-in tonnage, spot/fixed split, costs and nominal-vs-real all uncontrolled | **Correct** | Stated as a limitation on any cross-era rate-to-price inference |
+| 8 | The five-year average yield construction (Σ annual div ÷ annual avg price) is not comparable to a trailing yield | **Correct** | Both constructions now shown; the comparison is labelled as definitionally uncertain |
+
+### 19.4 What this whole sequence demonstrates
+
+**Six sections, six corrections, and the last one killed the conclusion.** In order: the dividend-adjustment contamination (§15), the reverse-split trap (§16), the resale-vs-5-year-old mislabel (§17), two mis-dated cycle peaks (§18), my own inverted split direction (§19), and finally **a stale payout field that had made FRO look ~40% over-priced when it is not**.
+
+> **The honest position now:**
+>
+> - **No valuation measure in this report currently identifies either name as expensive.** P/NAV is a modest premium to prior cycle tops (§17); P/B is roughly half the 2007 super-cycle level (§16); and the TC-anchored yield — corrected — says **both clear an 8% hurdle at rates below what the market is signing** (§19.1).
+> - **The bear case now rests entirely on the DURABILITY of the rate**, not on any multiple. If the 1-year TC settles back to US$75k, DHT yields 7.8% and FRO 5.8% — and only then does the income holder leave.
+> - **Everything quantitative in §7 and §13's headline is withdrawn.** §16 and §17 stand, because they were built on filing-sourced data with matched bases.
+
+⚠️ **Still unresolved and stated as such:** the exact reconciliation of the aggregator's P/B against its own inputs (Astra's point 4 residual); FRO's entity discontinuity across the 2015 merger; and whether market cap, EV, market-cap-per-DWT or P/NAV is the right cross-era comparator — Astra argues for **market cap ÷ equity NAV** or **EV ÷ normalised earnings**, and that work is **not** done here.
