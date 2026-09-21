@@ -41,14 +41,26 @@ print("=" * 98)
 print("IS THE NEXT-DAY EFFECT REAL, OR AN ARTEFACT?")
 print("=" * 98)
 
-# ---------- 0. liquidity: is BWET thin enough to have stale prices? ----------
-print("\n0) LIQUIDITY — stale pricing is the classic source of a fake lead")
-dollar = (vol * tr.reindex(vol.index)).dropna()
-print(f"  {'':<6}{'median shares/day':>20}{'median US$/day':>18}")
-for t in ["BWET", "DHT", "FRO"]:
-    print(f"  {t:<6}{vol[t].median():>20,.0f}{dollar[t].median():>18,.0f}")
-print("  >> If BWET is thin relative to the equities, its close can lag or lead")
-print("     mechanically. Judge the tests below with that in mind.")
+# ---------- 0. liquidity: BY PERIOD, not a full-history median ---------------
+print("\n0) LIQUIDITY — ⚠️ MUST be measured BY PERIOD.")
+print("   An earlier version took the median over BWET's whole history and")
+print("   reported US$59k/day. That was WRONG and badly misleading: it is")
+print("   dominated by 2023-25, when the fund was tiny and priced at $14-19.")
+px_ = pd.concat([col(raw[t], "Close").rename(t) for t in raw], axis=1)
+dollar = (px_ * vol).dropna()
+PERIODS = [("2023-05..2024-12", dollar.loc["2023-05-03":"2024-12-31"]),
+           ("2025", dollar.loc["2025-01-01":"2025-12-31"]),
+           ("2026 YTD", dollar.loc["2026-01-01":]),
+           ("last 30 days", dollar.tail(30)),
+           ("last 10 days", dollar.tail(10))]
+print(f"\n  {'period':<20}{'BWET US$/day':>16}{'DHT':>16}{'FRO':>16}{'BWET/DHT':>11}")
+for lbl, seg in PERIODS:
+    m = seg.median()
+    print(f"  {lbl:<20}{m['BWET']:>16,.0f}{m['DHT']:>16,.0f}{m['FRO']:>16,.0f}"
+          f"{m['BWET']/m['DHT']:>10.3f}x")
+print("\n  >> BWET went from ~0.2% of DHT's dollar volume to roughly 2x it.")
+print("     It is NOT an untradeable fund today. Whether the next-day effect")
+print("     tracks that change is the decisive test -- see section 3.")
 
 # ---------- 1. does BWET survive controlling for the equity's OWN lag? -------
 print("\n" + "-" * 98)
@@ -116,15 +128,19 @@ for t in ["DHT", "FRO"]:
 
 # ---------- 3. subperiod stability -------------------------------------------
 print("-" * 98)
-print("3) SUBPERIOD — does it exist outside the 2026 crisis?")
+print("3) ⭐ SUBPERIOD — and the DECISIVE liquidity linkage")
 print("-" * 98)
 SEG = [("2023-05-04", "2024-12-31", "pre-crisis"),
        ("2025-01-01", "2025-12-31", "2025"),
        ("2026-01-01", "2026-12-31", "2026 crisis")]
-print(f"  {'':<6}{'period':<14}{'n':>5}{'diff (next-day)':>18}{'t':>8}{'p':>9}")
+print(f"  {'':<6}{'period':<14}{'BWET US$/day':>15}{'same-day r':>12}"
+      f"{'1-day lead r':>14}{'next-day diff':>15}{'p':>8}")
 for t in ["DHT", "FRO"]:
     for a_, b_, lbl in SEG:
         seg = ret.loc[a_:b_]
+        liq = dollar.loc[a_:b_].median()["BWET"]
+        same = seg["BWET"].corr(seg[t])
+        lead = seg["BWET"].shift(1).corr(seg[t])
         up = seg["BWET"].shift(1) > 0
         x, y = seg[t][up].dropna(), seg[t][~up].dropna()
         if len(x) < 30 or len(y) < 30:
@@ -133,9 +149,14 @@ for t in ["DHT", "FRO"]:
         se = np.sqrt(x.var(ddof=1) / len(x) + y.var(ddof=1) / len(y))
         ts = diff / se
         p = erfc(abs(ts) / np.sqrt(2))
-        print(f"  {t:<6}{lbl:<14}{len(seg):>5}{diff*100:>17.3f}%{ts:>8.2f}{p:>9.3f}"
-              f"  {'sig' if p < 0.05 else '-'}")
+        print(f"  {t:<6}{lbl:<14}{liq:>15,.0f}{same:>12.3f}{lead:>14.3f}"
+              f"{diff*100:>14.3f}%{p:>8.3f}  {'sig' if p < 0.05 else '-'}")
     print()
+print("  >> AS BWET BECAME LIQUID, THE SAME-DAY CORRELATION ROSE AND THE")
+print("     ONE-DAY LEAD COLLAPSED TOWARD ZERO. That is the signature of a")
+print("     stale-price artefact, not of information. A genuine lead would")
+print("     persist or strengthen as the leading instrument is priced more")
+print("     actively. This one died exactly when BWET became tradeable.")
 
 # ---------- 4. transaction costs ---------------------------------------------
 print("-" * 98)

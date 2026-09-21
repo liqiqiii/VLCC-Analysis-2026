@@ -2059,15 +2059,29 @@ A naive long-only rule ("hold only after BWET rose") would have returned **71.5%
 
 **1. It is not equity momentum — but it explains almost nothing.** Controlling for the equity's own lagged return, BWET(t−1) *survives* (DHT t=2.63, p=0.0085; FRO t=2.70, p=0.0070). But the regression **R² is 0.0093 and 0.0102** — the signal explains **under 1%** of next-day variance.
 
-**2. 🔴 BWET is barely traded — this is the decisive finding.**
+**2. 🔴 CORRECTED — and the correction makes the case STRONGER.**
 
-| | Median shares/day | **Median US$/day** |
-|---|---|---|
-| **BWET** | 3,800 | **$58,707** |
-| DHT | 1,995,600 | $18,009,752 |
-| FRO | 2,362,400 | $40,585,698 |
+> ⚠️ **An earlier version of this subsection claimed BWET trades ~US$59k a day and is "300–700× thinner" than the equities, and therefore untradeable. THAT WAS WRONG.** It was a median over BWET's *entire* history, dominated by 2023–25 when the fund was tiny and priced at $14–19. **Today BWET trades MORE than DHT.** The error was caught by the user.
 
-**BWET turns over about US$59k a day against DHT's US$18m and FRO's US$41m — roughly 300–700× thinner.** A near-untraded ETF's close is a stale, noisy print. Any apparent "lead" it shows over two liquid large-caps is mechanical, not informational — and the instrument could not absorb a position of any size regardless.
+| Period | **BWET US$/day** | DHT | FRO | BWET / DHT |
+|---|---|---|---|---|
+| 2023-05 → 2024-12 | **$33,374** | $19.6m | $42.7m | 0.002× |
+| 2025 | **$25,706** | $18.6m | $47.6m | 0.001× |
+| 2026 YTD | **$18.6m** | $57.9m | $105.4m | 0.32× |
+| **Last 30 days** | **$137.8m** | $72.0m | $111.0m | **1.91×** |
+| Last 10 days | $163.8m | $101.4m | $230.0m | 1.62× |
+
+**Now link liquidity to the effect — this is the decisive test:**
+
+| Period | BWET US$/day | Same-day corr | **1-day lead corr** | Next-day effect (DHT) |
+|---|---|---|---|---|
+| pre-crisis | $33,308 | 0.295 | **0.146** | +0.656%, p=**0.001** ✅ |
+| 2025 | $25,706 | 0.304 | 0.109 | +0.457%, p=0.089 |
+| 2026 crisis | **$18.6m** | **0.368** | **−0.007** | +0.537%, p=0.166 |
+
+> **As BWET became liquid, the same-day correlation ROSE (0.295 → 0.368) while the one-day lead COLLAPSED to −0.007.** That is the textbook signature of a stale-price artefact: when the instrument was barely traded, its close was a day behind, which *looked* like prediction. Once it became actively priced, everything prices same-day and the "edge" vanished.
+>
+> **A genuine information lead would do the opposite** — it should persist or strengthen as the leading instrument becomes more actively traded. This one died exactly when BWET became tradeable.
 
 **3. The effect dies one day later — the stale-price signature.**
 
@@ -2087,7 +2101,7 @@ A genuine information lead should persist. A one-day overlap from non-synchronou
 
 **At 25 bps both lose to simply holding** — and 25 bps is unrealistically generous for an ETF trading US$59k a day.
 
-> **⭐ VERDICT: BWET and the equities are genuinely correlated, but BWET is NOT a usable timing tool.** The correlation is real (daily 0.32, weekly 0.47–0.51, beta 0.14–0.19, all highly significant). The timing signal is not: it explains under 1% of next-day variance, vanishes at t−2, is absent in both recent regimes, dies at realistic transaction costs, and originates in an ETF roughly 300× less liquid than the shares it supposedly leads.
+> **⭐ VERDICT: BWET and the equities are genuinely correlated, but BWET is NOT a usable timing tool.** The correlation is real (daily 0.32, weekly 0.47–0.51, beta 0.14–0.19, all highly significant). The timing signal is not: it explains under 1% of next-day variance, vanishes at t−2, is absent in both recent regimes, dies at realistic transaction costs, and — decisively — exists only while BWET was barely traded, collapsing to −0.007 once BWET became more liquid than DHT itself.
 >
 > **Correlation here is a description of co-movement, not a tradeable edge.**
 
