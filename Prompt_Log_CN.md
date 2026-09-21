@@ -1458,3 +1458,44 @@ FRO 陷阱（已识别并标记）：FRO 2012-16 年的读数被其濒临破产�
 
 **创建文件**: vlcc_cycles/run_historical_pb.py, data/pb_history_DHT.csv, data/pb_history_FRO.csv, data/cycle_peak_pb.csv, data/pb_distribution.csv, data/pb_peak_forward_returns.csv, charts/historical_pb.png
 **更新文件**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 69：按船队重置成本估值 —— 历次周期顶部的 P/NAV，以及对 Prompt 68 的更正
+**日期**: 2026年9月20日
+
+用户："那帮我按照船队重置成本进行估值；就按照每个周期顶峰的卖相似年份二手船价格。"
+
+新增 vlcc_cycles/run_pnav_corrected.py + 中英文报告 §15 + §14 顶部的醒目更正声明 + 3 个 CSV + charts/pnav_corrected.png。
+
+🔴 我必须更正自己此前的章节。在搭建 NAV 模型时发现，§14 所用的 macrotrends 数据源是用**除息复权价**除以**未复权的每股净资产**。对把大部分盈利派发出去的油轮公司，这个失真严重且系统性 —— 而且误差始终朝着美化"今天史无前例"这个结论的方向：
+   DHT 2015-12  发布 0.42x  真实 1.23x（−66%）
+   DHT 2020-12  发布 0.52x  真实 0.80x（−35%）
+   DHT 2023-12  发布 1.16x  真实 1.54x（−25%）
+   FRO 2020-12  发布 0.49x  真实 0.76x（−36%）
+   FRO 2023-12  发布 1.51x  真实 1.96x（−23%）
+发现方式：比对 Yahoo 的原始价与复权价（DHT 2015-12-31 原始 $8.09 vs 复权 $3.42），并用资产负债表重算每股净资产。§15 全部改用**原始股价**与**（总资产−总负债）÷ 总股本**重建。
+
+另发现并修正两处输入错误：(1) FRO 2023 年底实际为 33 艘 VLCC，而非我最初使用的 22 艘 —— 11 艘 Euronav 的 VLCC 已于 2023Q4 交付，另 13 艘于 2024 年交付；这使 FRO 的 2023 年 P/NAV 从错误的 2.03 倍修正为 1.36 倍。(2) FRO 2015 年数据因 Frontline / Frontline 2012 合并与并股而不可用（2015年6月 11.58 亿股、每股净资产 US$0.70；12月 1.20 亿股、US$12.05），故 FRO 序列自 2020 年起算。
+
+答案 —— 它推翻了 §14：
+  DHT  2015年12月  P/B 1.23x  P/NAV 1.92x
+       2020年12月  P/B 0.80x  P/NAV 0.74x
+       2023年12月  P/B 1.54x  P/NAV 1.05x
+       今天        P/B 2.82x  P/NAV 1.45x
+  FRO  2020年12月  P/B 0.76x  P/NAV 0.82x
+       2023年12月  P/B 1.96x  P/NAV 1.36x
+       今天        P/B 3.63x  P/NAV 1.35x
+
+按 P/B，今天是自身前高的 1.83 倍（DHT）与 1.85 倍（FRO），看起来极端。按 P/NAV，今天只有前高的 0.76 倍（DHT）与 0.99 倍（FRO）。DHT 明显**便宜于** 2015年12月的顶部；FRO 则**恰好回到** 2023年12月顶部的位置。账面值看不见船队已重新定价：二手 VLCC 从 2023年12月的约 US$1.05亿 升到今天的约 US$1.74亿（+66%），NAV 的增速与股价大致相当 —— 这正是 P/NAV 几乎没动而 P/B 近乎翻倍的原因。
+
+稳健性：在统一的 8 年船龄假设下，今天（DHT 1.15、FRO 1.46）仍远低于 2015年12月（DHT 2.19）与 2023年12月（FRO 2.78），排序不会反转。已标记：对高杠杆船东，过大的船龄折价会使 NAV 转负、P/NAV 失去意义（FRO 在假设 14 年船龄时）。
+
+已从 §14 撤回：「99 百分位 / 二十年最贵」、「约为 2008 峰值的 2.5 倍」、「2.0 倍 P/B 是历史天花板」。§14 中仍然成立：账面价值陷阱（现已量化 —— DHT 每股账面 US$8.26 vs 每股 NAV US$16.02）、FRO 2012-16 断点、以及「P/B 见顶是警告而非择时信号」（该结论用的是股价，不是被污染的比率）。
+
+§13 与 §15 现在相互印证且彼此独立推导：「资产泡沫」的读法经不起重置成本检验。真正站得住的是 §13 更窄的那个点 —— DHT 的定价大致等于市场真正愿意承保的运价（需 US$10万，而期租市场为 US$9.3–10.5万），而 FRO 需要约 US$14万，高出约 40%。风险集中在 FRO 的**盈利**假设上，而非任何一家的**资产**倍数上。
+
+如实列出的剩余缺口：2008 年无法在干净口径下计算（资产负债表历史始于 2011），故本报告不应被引用任何 2008 年数字；船价为券商/媒体区间而非 Clarksons 付费数据；FRO 2020 年底船队被来源标记为「指示性」；平均船龄为估计值并已在 §15.5 做压力测试；船舶按单一基准船龄估值而非逐船估值。
+
+**创建文件**: vlcc_cycles/run_pnav_corrected.py, data/pb_correction.csv, data/corrected_pb_pnav.csv, data/pnav_age_sensitivity.csv, charts/pnav_corrected.png
+**更新文件**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

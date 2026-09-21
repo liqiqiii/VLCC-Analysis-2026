@@ -720,7 +720,8 @@ python run_quarterly_deep.py    # §8: QUARTERLY rebuild, P/NAV, lead/lag, exit 
 python run_spot_adjusted.py     # §10: spot-vs-time-charter corrected model
 python run_capstone_matrix.py   # §12: 15-combination rate x durability matrix
 python run_cycle_top.py         # §13: TC anchor, 2x P/B ceiling, yield compression
-python run_historical_pb.py     # §14: REAL historical P/B at every cycle top
+python run_historical_pb.py     # §14: historical P/B (SUPERSEDED - see the correction notice)
+python run_pnav_corrected.py    # §15: CORRECTED P/B + P/NAV at replacement cost
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -871,6 +872,26 @@ This is the strongest part of the framework, and it connects directly to §6's f
 
 ## §14 — What P/B did the market ACTUALLY pay at each cycle top? The historical record
 
+> # 🔴 CORRECTION NOTICE — READ BEFORE USING §14
+>
+> **The P/B numbers in §14 are WRONG and are superseded by §15.**
+>
+> The source used in §14 divides a **dividend-ADJUSTED price** by an **UNADJUSTED book value per share**. For an ordinary stock the distortion is small. For tanker companies, which pay out most of their earnings, it is severe and **systematically makes every historical period look cheaper than it was**:
+>
+> | | §14 published | **ACTUAL** | understated by |
+> |---|---|---|---|
+> | DHT 2015-12 | 0.42x | **1.23x** | −66% |
+> | DHT 2020-12 | 0.52x | **0.80x** | −35% |
+> | DHT 2023-12 | 1.16x | **1.54x** | −25% |
+> | FRO 2020-12 | 0.49x | **0.76x** | −36% |
+> | FRO 2023-12 | 1.51x | **1.96x** | −23% |
+>
+> **The error ran in one direction only — it flattered the "today is unprecedented" conclusion.** §14's headline ("99th percentile", "2.5x the 2008 peak", "median 0.40x") is therefore **not reliable**. §15 rebuilds everything from raw prices and reported book value, and also answers the user's replacement-cost question — **and the conclusion changes materially.**
+>
+> §14's *structural* points survive: the FRO 2012-16 discontinuity is real, forward returns after P/B peaks were mostly negative, and the book-value trap is real. **The specific multiples are not.**
+
+
+
 > **The user, 20 Sep 2026:** *"你这个不够详细；像其他例子一样，对几次周期顶部的 pb 进行比较，做一张图；看看实际情况如何。"*
 
 **Fair criticism.** §13's P/B panel divided the whole price history by **today's** book value — an illustrative placeholder, not a real series. This section rebuilds it properly: **every point uses the book value per share ACTUALLY REPORTED for that period.**
@@ -983,3 +1004,120 @@ This is the strongest part of the framework, and it connects directly to §6's f
 | Does this contradict §13? | **No — it sharpens it.** §13 found DHT fairly priced *against the TC anchor* and FRO ~40% over. §14 says **both are at unprecedented asset multiples**, with FRO worse on both tests |
 
 > **Combined verdict across §13 and §14:** DHT is *fairly priced on sustainable earnings* but *historically extreme on book*; **FRO is stretched on BOTH.** The asset multiple says late-cycle for both names; the yield anchor says the risk is concentrated in FRO.
+
+---
+
+## §15 — Valuing the fleet at REPLACEMENT COST: P/NAV at every cycle top *(supersedes §14)*
+
+> **The user, 20 Sep 2026:** *"那帮我按照船队重置成本进行估值；就按照每个周期顶峰的卖相似年份二手船价格。"*
+
+This closes the gap §14 left open — and in doing so it **overturns §14's conclusion**.
+
+![Corrected P/NAV](charts/pnav_corrected.png)
+
+*(Reproduce: `python run_pnav_corrected.py` → `data/{pb_correction,corrected_pb_pnav,pnav_age_sensitivity}.csv`.)*
+
+### 15.1 First, the correction
+
+**Price basis:** §14 used dividend-adjusted prices against unadjusted book. §15 uses the **raw closing price** on the date, divided by **(total assets − total liabilities) ÷ shares outstanding** from that quarter's balance sheet. Both inputs are now on the same basis.
+
+**Two input errors also found and fixed:**
+1. **FRO's end-2023 fleet was 33 VLCCs, not 22.** Eleven of the Euronav VLCCs had already been delivered in Q4-2023 (13 more followed in 2024). Using 22 materially overstated FRO's 2023 P/NAV — it moved from a wrong 2.03x to **1.36x**.
+2. **FRO's 2015 figures are unusable** — the Frontline / Frontline 2012 merger and share consolidation completed in late 2015 (1,158m shares and US$0.70 BVPS in Jun-2015 versus 120m and US$12.05 in Dec-2015). FRO's series starts at 2020.
+
+### 15.2 The method
+
+```
+NAV        = (vessels × second-hand value of a SIMILAR-AGE ship) − net debt
+NAV/share  = NAV ÷ shares outstanding
+P/NAV      = raw share price ÷ NAV per share
+```
+
+**Second-hand values used (US$m, 5-year-old benchmark, broker/press ranges):**
+
+| Date | VLCC | Suezmax | LR2 |
+|---|---|---|---|
+| Dec-2015 | 70–80 | — | — |
+| Dec-2020 | 68–72 | 45–50 | 38–43 |
+| Dec-2023 | 98–113 | 72–80 | 60–68 |
+| **Sep-2026** | **170–179** | 115–125 | 95–105 |
+
+Each fleet is then **haircut for age** at ~5.5% of value per year beyond the 5-year benchmark (DHT ~7/8/10/11 years; FRO ~5/6/7).
+
+### 15.3 ⭐ The answer
+
+**DHT**
+
+| Cycle top | Price | BVPS | **P/B** | Ships | Fleet US$m | Net debt | NAVPS | **P/NAV** |
+|---|---|---|---|---|---|---|---|---|
+| Dec-2015 | $8.09 | $6.59 | 1.23x | 14 | 934 | 463 | $4.21 | **🔴 1.92x** |
+| Dec-2020 | $5.23 | $6.52 | 0.80x | 27 | 1,578 | 378 | $7.06 | 0.74x |
+| Dec-2023 | $9.81 | $6.36 | 1.54x | 24 | 1,836 | 323 | $9.34 | 1.05x |
+| **Today** | **$23.27** | **$8.26** | **2.82x** | 24 | 2,806 | 226 | **$16.02** | **1.45x** |
+
+**FRO**
+
+| Cycle top | Price | BVPS | **P/B** | Ships | Fleet US$m | Net debt | NAVPS | **P/NAV** |
+|---|---|---|---|---|---|---|---|---|
+| Dec-2020 | $6.22 | $8.14 | 0.76x | 62 | 3,328 | 1,819 | $7.62 | 0.82x |
+| Dec-2023 | $20.05 | $10.22 | 1.96x | 76 | 6,174 | 2,880 | $14.77 | **1.36x** |
+| **Today** | **$51.42** | **$14.15** | **3.63x** | 81 | 10,368 | 1,847 | **$38.21** | **1.35x** |
+
+### 15.4 🔴 The verdict — the two measures give OPPOSITE answers
+
+| | **On P/B** | **On P/NAV** |
+|---|---|---|
+| **DHT today vs its prior peak** | **1.83× the prior peak** — looks extreme | **0.76× the prior peak** — *below* Dec-2015's 1.92x |
+| **FRO today vs its prior peak** | **1.85× the prior peak** — looks extreme | **0.99× the prior peak** — *identical* to Dec-2023's 1.36x |
+
+> **This is the decisive result, and it reverses §14.**
+>
+> **On depreciated book, today looks like the most expensive moment in the series. On replacement cost — the measure the user asked for — today is NOT unprecedented at all.** DHT is meaningfully **cheaper** than at the December-2015 top (1.45x vs 1.92x), and FRO is **exactly where it was** at the December-2023 top (1.35x vs 1.36x).
+
+**Why the two disagree:** book value is frozen at historical cost less depreciation, so it cannot see that the fleet has re-priced. Between Dec-2023 and today the second-hand VLCC value went from ~US$105m to ~US$174m (**+66%**). **NAV grew roughly as fast as the share price did** — which is precisely why P/NAV barely moved while P/B nearly doubled.
+
+### 15.5 Sensitivity — how much does the age haircut matter?
+
+| | Dec-2015 | Dec-2020 | Dec-2023 | **Today** |
+|---|---|---|---|---|
+| **DHT** at assumed age 5y | 1.54 | 0.59 | 0.72 | **0.95** |
+| **DHT** at age 8y | 2.19 | 0.74 | 0.89 | **1.15** |
+| **DHT** at age 11y *(used)* | 3.77 | 1.00 | 1.16 | **1.45** |
+| **FRO** at age 5y | — | 0.71 | 1.79 | **1.17** |
+| **FRO** at age 8y | — | 1.07 | 2.78 | **1.46** |
+
+> **The conclusion is robust to the assumption.** At a *common* 8-year age, today (DHT 1.15x, FRO 1.46x) is still **well below** Dec-2015 (DHT 2.19x) and Dec-2023 (FRO 2.78x). Older assumed fleets make today look *more* expensive but make the past look more expensive too — the ranking does not flip.
+>
+> ⚠️ **Where the model breaks:** for a leveraged owner, a large age haircut can drive NAV negative and P/NAV meaningless (FRO at an assumed 14-year age produces a negative NAV). Treat FRO's high-age columns as non-meaningful rather than as a valuation.
+
+### 15.6 What this changes, and what it does not
+
+| Claim | Status after §15 |
+|---|---|
+| "Today is the 99th percentile / most expensive in 20 years" | **🔴 WITHDRAWN** — an artefact of the dividend-adjustment error and of using book rather than asset value |
+| "Today is ~2.5× the 2008 peak multiple" | **🔴 WITHDRAWN** — the 2008 figure came from the same contaminated source and cannot be recomputed (balance-sheet history starts 2011) |
+| "2.0x P/B is approximately the historical ceiling" | **🔴 WITHDRAWN** — on corrected data DHT reached 1.54x in 2023 and 1.23x in 2015; today's 2.82x is still the highest but the gap is far smaller |
+| "P/B rises because book is stale" | ✅ **CONFIRMED and now quantified** — DHT's book is US$8.26/share against NAV of US$16.02 |
+| "A P/B peak is a warning, not a timing signal" | ✅ Unchanged (the forward-return finding used prices, not the contaminated ratio) |
+| "FRO 2012-16 is a discontinuity" | ✅ Unchanged and reinforced |
+| **NEW:** on replacement cost, today is **not** an outlier | **The central finding of §15** |
+
+### 15.7 How this sits with §13
+
+**§13 and §15 now agree, and they were derived independently.**
+
+| | DHT | FRO |
+|---|---|---|
+| §13 — priced against the 1-yr TC anchor | **≈ fair** (needs US$100k; market is US$93–105k) | **🔴 needs US$140k — a ~40% gap** |
+| §15 — P/NAV vs its own prior cycle tops | **1.45x vs 1.92x peak — below** | **1.35x vs 1.36x peak — at it** |
+| §15 — P/B vs its own prior tops | 2.82x vs 1.54x — **above** | 3.63x vs 1.96x — **above** |
+
+> **Combined and final: the "asset bubble" reading of §14 does not survive contact with replacement cost.** What survives is §13's narrower and better-evidenced point: **DHT is priced roughly at the rate the market will actually underwrite, while FRO needs a rate ~40% above it.** The risk is concentrated in FRO's *earnings* assumption, not in either company's *asset* multiple.
+
+### 15.8 Remaining gaps, stated plainly
+
+1. **The 2008 super-cycle cannot be computed** on a clean basis — balance-sheet history begins 2011. **No P/B or P/NAV figure for 2008 should be quoted from this report.**
+2. **Vessel values are broker/press ranges**, not a Clarksons feed. The bands in §15.3 reflect that.
+3. **FRO's end-2020 fleet (22/24/16) is flagged INDICATIVE** by the source, which could not confirm it against the 20-F.
+4. **Average fleet ages are estimates**, which §15.5 stress-tests rather than hides.
+5. Vessels are valued at a **single benchmark age**, not ship by ship. A real broker NAV values each hull.
