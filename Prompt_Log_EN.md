@@ -1523,3 +1523,35 @@ REMAINING GAPS STATED PLAINLY: 2008 cannot be computed (balance-sheet history st
 
 **Files created**: vlcc_cycles/run_pnav_corrected.py, data/pb_correction.csv, data/corrected_pb_pnav.csv, data/pnav_age_sensitivity.csv, charts/pnav_corrected.png
 **Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 70: The 2005-08 super-cycle, from the original SEC 20-F filings
+**Date**: September 20, 2026
+
+User: "跟05-08年的超级大周期比呢？" — how does it compare with the 2005-08 super-cycle?
+
+§15 had listed this as an open gap because the balance-sheet source starts in 2011. This closes it by going to the primary documents: DHT's 20-F for FY2008 (accession 0000950157-09-000131) and Frontline's 20-F for FY2008 (0000919574-09-009523), both of which carry a five-year Selected Financial Data table covering FY2004-FY2008. Added vlcc_cycles/run_supercycle.py + §16 in both reports + data/supercycle_0508.csv + charts/supercycle_0508.png.
+
+⚠️ A THIRD DATA TRAP FOUND AND CLEARED — REVERSE SPLITS. DHT did 1-for-12 on 17-Jul-2012; FRO did 1-for-5 on 03-Feb-2016. Yahoo back-adjusts for splits, so its 2007 "close" is not what anyone paid: DHT's 2007-12-31 close shows as $146.88 but the ACTUAL price was $12.24; FRO shows $240.00 but actually traded at $48.00. Using the unconverted figure against 2007 book value would have overstated P/B by 12x and 5x respectively.
+
+THE SUPER-CYCLE MULTIPLES (from the filings):
+  DHT Dec-2007  price $12.24  equity $72m   30.0m shares  BVPS $2.39  P/B 5.11x  P/NAV 0.79x
+  DHT Dec-2008  price $5.54   equity $148m  36.1m shares  BVPS $4.10  P/B 1.35x  P/NAV 1.36x
+  FRO Dec-2007  price $48.00  equity $446m  74.8m shares  BVPS $5.96  P/B 8.05x  P/NAV 1.33x
+  FRO Dec-2008  price $29.61  equity $702m  77.9m shares  BVPS $9.02  P/B 3.28x  NAV near zero
+
+THE ANSWER — the third reversal in this investigation, and it settles it: today's P/B is only 0.55x (DHT) and 0.45x (FRO) of the Dec-2007 level. The actual super-cycle peak traded at 5-8x book versus 2.82x and 3.63x today. §14's "most expensive in twenty years" is now definitively dead.
+
+WHY THE TWO ERAS CANNOT BE COMPARED ON P/B: capital structure. Equity/assets was 17% (DHT) and 12% (FRO) at Dec-2007 versus 74% and 54% today. Both companies were 83-88% debt-financed and paid out nearly all cash flow, leaving almost no book equity - a small numerator over a tiny denominator. The same share price today buys four times as much book. Two further caveats on DHT: in 2005-08 it owned only NINE vessels (3 VLCC, 2 Suezmax, 4 Aframax) on long-term time charters to OSG - a high-payout charter vehicle, not a spot VLCC play - so its 0.79x P/NAV priced a charter stream, not ships. And FRO owned 28 VLCCs + 15 Suezmaxes + 8 OBOs but ALSO chartered IN 12 VLCCs and 14 Suezmaxes it did not own, plus 18 newbuildings on order.
+
+THE ONE CLEAN COMPARISON, AND IT IS STRIKING: FRO's P/NAV was 1.33x at the Dec-2007 super-cycle peak, 1.36x at Dec-2023, and is 1.35x today. On the measure that survives both the capital-structure change and the accounting distortion, today is not more extreme than 2007 - it is the SAME valuation.
+
+🔴 WHAT 2008 ACTUALLY TEACHES - LEVERAGE, NOT VALUATION. The "P/NAV 20.24x" the model prints for FRO at Dec-2008 is not a valuation, it is NAV collapsing toward zero: fleet value fell 43% (US$6,023m to US$3,439m) while net debt was unchanged (US$3,316m to US$3,326m), so NAV PER SHARE fell from US$36.18 to US$1.46, a 96% wipe-out. Stress-testing today's balance sheets with the identical 45% vessel-value crash: DHT NAVPS $16.00 -> $8.17 (-49%), FRO $38.21 -> $17.31 (-55%). Net-debt-to-fleet is ~8% and ~18% today against ~88% for FRO in 2007. Severe, but the wipe-out risk of the super-cycle capital structure is genuinely gone.
+
+FINAL POSITION AFTER FOUR SECTIONS AND THREE CORRECTIONS: the asset multiple is NOT a sell signal. What stands alone and unrefuted is §13's narrower finding - FRO's price requires a sustained TC rate of ~US$140k/day against a market that will only commit at US$93-105k. The risk is in the EARNINGS assumption, not the asset multiple.
+
+Rule 4 flags: FRO's end-2007 fleet is ASSUMED equal to end-2008 (the FY2007 20-F was not parsed; FRO was taking newbuilding deliveries, so end-2007 was probably smaller, which would make its 2007 P/NAV HIGHER not lower); 2007-08 vessel values are broker/press ranges; fleet age estimated at 7-8 years; DHT's net debt derived from current + long-term liabilities less cash (slightly overstates interest-bearing debt); FRO's net debt proxied as total liabilities less equity, which overstates it and therefore makes FRO's 2007 P/NAV look higher rather than lower.
+
+**Files created**: vlcc_cycles/run_supercycle.py, data/supercycle_0508.csv, charts/supercycle_0508.png
+**Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
