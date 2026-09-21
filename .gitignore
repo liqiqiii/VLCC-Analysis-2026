@@ -2,3 +2,4 @@ market_gauge/ie_data.xls
 market_gauge/sp500_syms.txt
 __pycache__/
 *.pyc
+vlcc_cycles/filings/

@@ -1,0 +1,5 @@
+measure,value,reflects
+Reported P/B,8.05,capital structure + 100% payout
+P/B if earnings retained,1.5632091274454734,removes the payout effect
+P/NAV (section 17),1.33,market value of fleet less net debt
+Today's FRO P/NAV,1.69,for reference
