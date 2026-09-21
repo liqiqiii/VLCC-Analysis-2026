@@ -728,6 +728,7 @@ python run_adjustment_audit.py  # §18: ex-dividend / adjusted-pricing audit
 python run_final_synthesis.py   # 20: FINAL synthesis - valuation, targets, exit triggers
 python run_backtest_cycle.py    # 21: back-test of prior forecasts + cycle position
 python run_s21_charts.py        # 21: aggregate summary charts
+python run_bwet_correlation.py  # 22: BWET freight ETF vs the equities
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -1817,7 +1818,9 @@ Two accounting corrections were required first:
 >
 > This is the number that disappears if the strait normalises, and it is **observable daily**.
 
-**And the reality check that most commentary misses:**
+**A ratio that was published here in error, and is now corrected:**
+
+> ⚠️ **CORRECTED BY §22.** The table below divides a **Q2 average achieved rate** by an **11 September assessment**. That is a period mismatch: a company could have earned 100% of the *contemporaneous Q2* benchmark and still show ~19% against a September print taken after freight had exploded. **It does not measure benchmark realisation** and must not be read as "the companies capture only a fifth of the market." The figures are retained only as a literal cross-period ratio.
 
 | | Q2 achieved | As % of the TD3C TCE print |
 |---|---|---|
@@ -1932,5 +1935,171 @@ At **7x** — the sell threshold from the repo's own framework — **DHT is pric
 5. **Freight and asset values are stressed independently** when they are in fact correlated — this understates downside.
 6. **The validation set is one high-rate quarter**, in which large revenues make intercept errors look small.
 7. **"Pure numbers" is itself a claim that does not fully hold:** conversion factors, revenue days, the mid-cycle benchmark, thresholds and payout are all modelling choices.
+
+> **Not investment advice.**
+
+
+---
+
+## §22 — ⭐ BWET vs DHT / FRO: how much of the freight move actually reaches the equity?
+
+> **Written, submitted to GPT-6-Astra under Rule 4b, and REBUILT after that review returned FOUR blocking findings — including a real arithmetic bug and a headline that was pure pattern-matching.** The draft's central claim is **withdrawn**. It also forced a **correction to §21**. Review record: §22.7.
+
+![Section 22](charts/s22_bwet.png)
+
+**BWET** — the Breakwave Tanker Shipping ETF — holds tanker **freight futures**. It is the closest thing to a tradeable, mark-to-market freight instrument, which makes it a natural test of a question no accounting model can answer: *when freight moves, how much does the equity get?*
+
+### 22.1 What BWET is — and is not
+
+| | |
+|---|---|
+| Benchmark allocation | ~**90% TD3C / 10% TD20** |
+| Target average maturity | ~**50–70 days**, allocations can drift |
+| Expense ratio | **3.50%** |
+| Historical premium/discount to NAV | up to **+6.96% / −6.38%** |
+
+> **Its return = futures P&L + roll/convergence + collateral interest − fees ± premium change.** It owns no ships and pays no dividend. **It is not the spot rate and not a claim on the same cash flows as the equities.**
+
+*Data integrity: no share splits on record; the path is organic — $13.93 (May-2023) → $9.82 (Dec-2024) → $19.26 (Dec-2025) → $826.00 (21 Sep 2026); low $9.06, high $872.14; largest daily moves +27.8% / −20.5%.*
+
+### 22.2 Three separate questions — which the draft wrongly merged into one "capture" number
+
+**(a) Investment outcome — what US$100 became** *(total return, 2023-05-03 → 2026-09-21)*
+
+| | Price only | **Total return** | of which dividends |
+|---|---|---|---|
+| **BWET** | $5,987 | **$5,987** | $0 |
+| **DHT** | $249 | **$344** | $95 |
+| **FRO** | $335 | **$481** | $147 |
+
+**Dividends are not a detail: they are ~28% and ~31% of the equity outcome.** A price-only chart badly understates the equity holder.
+
+**(b) Relative cumulative growth — two legitimate but different ratios**
+
+| | Simple-return ratio | Log-growth ratio |
+|---|---|---|
+| **DHT** | 4.1% | 30.2% |
+| **FRO** | 6.5% | 38.4% |
+
+> 🔴 **The draft called 30.2%/38.4% "the CORRECT capture." WITHDRAWN.**
+>
+> Astra's counterexample is decisive, and is now computed in the script: **randomly reorder DHT's daily returns.** The log-growth ratio is **unchanged at 30.2%** while its correlation with BWET collapses from **0.317 to 0.014**. A statistic that survives a shuffle destroying every link to BWET **carries no information about transmission.** It is a relative-growth statistic, nothing more.
+
+**(c) Sensitivity — the only concept that actually measures transmission is the regression beta (§22.4).**
+
+### 22.3 Correlation — the central finding
+
+*Complete periods only; 95% Fisher CIs in brackets.*
+
+| Frequency | n | BWET~DHT | BWET~FRO | **DHT~FRO** |
+|---|---|---|---|---|
+| daily | 848 | 0.317 [0.25, 0.38] | 0.324 [0.26, 0.38] | **0.840 [0.82, 0.86]** |
+| weekly | 176 | 0.471 [0.35, 0.58] | 0.513 [0.39, 0.61] | **0.861 [0.82, 0.89]** |
+| monthly | 39 | 0.487 [0.20, 0.70] | 0.496 [0.21, 0.70] | **0.870 [0.76, 0.93]** |
+
+**Williams test for dependent correlations** (they share a variable, so an independent Fisher comparison would be wrong):
+
+| Frequency | DHT~FRO > DHT~BWET | DHT~FRO > FRO~BWET | BWET~DHT vs BWET~FRO |
+|---|---|---|---|
+| daily | p = 3.1e−108 | p = 9.9e−104 | p = 0.68 |
+| weekly | p = 7.7e−22 | p = 1.2e−16 | p = 0.22 |
+| monthly | p = 1.3e−05 | p = 2.4e−05 | p = 0.90 |
+
+> **⭐ The two equities are far more correlated with EACH OTHER (0.84–0.87) than either is with the freight instrument (0.32–0.51), decisively at every frequency.** DHT and FRO are **not** distinguishable from one another in how they track freight.
+>
+> ⚠️ **What this does and does not establish.** It establishes a stronger mutual association. It does **not** identify the cause. Shared fleet economics, financing, sector sentiment and general equity-market exposure could all produce it. *(The draft's phrasing "they trade as an equity pair first and a freight proxy second" asserts factor ordering that this test cannot support.)*
+
+*Log-return robustness (daily): 0.318 / 0.325 / 0.838 — unchanged.*
+
+⚠️ Correlation **rises with horizon**. That is *consistent with* an Epps-type aggregation effect, but this analysis does **not** diagnose the cause — stale pricing, premium/discount noise and regime change all qualify.
+
+### 22.4 Beta — the one statistic that does measure sensitivity
+
+| | alpha/day | **beta** | SE | t | R² | 95% CI |
+|---|---|---|---|---|---|---|
+| **DHT** | 0.084% | **0.144** | 0.015 | 9.7 | 0.100 | [0.115, 0.173] |
+| **FRO** | 0.112% | **0.186** | 0.019 | 10.0 | 0.105 | [0.150, 0.223] |
+
+**Reading:** a 1% BWET move is associated with a ~0.14%/0.19% equity move **through this fitted slope**. It does **not** mean "the company gets 14% of freight." **R² ≈ 0.10 means ~90% of daily equity variance is not explained by freight at all.**
+
+**Conditional mean-return ratios, BWET-up vs BWET-down days:**
+
+| | up | down | gap | bootstrap 95% CI | verdict |
+|---|---|---|---|---|---|
+| **DHT** | 20.0% | 15.8% | +4.2pp | [−4.9, +13.4]pp | **not significant** |
+| **FRO** | 24.4% | 18.1% | +6.2pp | [−5.4, +18.3]pp | **not significant** |
+
+> 🔴 **The "favourable asymmetry" claim is WITHDRAWN** — I tested it before the review returned and both intervals span zero. It is also **not structurally identified**: with a *common* slope, `C₊ = β + α/E[x|x>0]` and `C₋ = β + α/E[x|x<0]`, so **a positive intercept alone produces C₊ > C₋** with no slope asymmetry whatsoever. Both alphas here are positive.
+
+### 22.5 Lead / lag — does freight give an early warning?
+
+| k (weeks) | −4 | −3 | −2 | −1 | **0** | +1 | +2 | +3 | +4 |
+|---|---|---|---|---|---|---|---|---|---|
+| **DHT** | 0.17 | 0.11 | −0.06 | −0.03 | **0.47** | 0.11 | −0.08 | 0.06 | 0.04 |
+| **FRO** | 0.14 | 0.09 | −0.12 | −0.02 | **0.51** | 0.11 | −0.14 | 0.07 | 0.12 |
+
+Both peak at **k = 0**. Holm correction across the 16 non-zero lags: the best candidates are DHT k=−4 (p=0.029 vs threshold 0.0031) and FRO k=+2 (p=0.060 vs 0.0033). **None survives.**
+
+> **Correct wording: "no statistically established WEEKLY LINEAR lead in this analysis."** That is narrower than the draft's "BWET gives no timing edge" — weekly bars could bury a 1–2 day lead, and a lead could be non-linear. Absence of evidence here is not evidence of absence.
+
+### 22.6 Regimes — now reconciled, and not significant
+
+| Regime | n | BWET | DHT | FRO | B~DHT | B~FRO |
+|---|---|---|---|---|---|---|
+| pre-crisis (2023-05 → 2024-12) | 418 | **−30%** | +22% | +17% | 0.29 | 0.28 |
+| 2025 build-up | 250 | +96% | +35% | +57% | 0.30 | 0.31 |
+| 2026 Hormuz crisis | 180 | **+4,229%** | +108% | +162% | 0.37 | 0.42 |
+
+> ✅ **Reconciliation check — this FAILED in the draft.** The regime multiples now compound to the full-period return with error **0.000000%** for all three. The draft computed each regime first-to-last within a calendar slice, which **dropped the return across every regime boundary** (BWET +2.16% and FRO +2.42% too high). Fixed by compounding daily returns.
+
+**Is the crisis-period correlation rise significant?** DHT 0.29 → 0.37, z = 0.91, **p = 0.360**. FRO 0.28 → 0.42, z = 1.78, **p = 0.075**. **Neither is significant.** The intuitive "transmission strengthens in a crisis" story is **not** established; these are descriptions of one episode.
+
+### 22.7 ⭐ The headline that is WITHDRAWN — and what survives
+
+2026 year-to-date: **BWET +4,229%**, DHT +108% (log-growth ratio 19.5%), FRO +162% (25.6%).
+
+The draft claimed these ratios "sit in the same range" as the companies' operational capture of the TD3C print (19%/18% from §21), proving the market correctly prices the convertible share and its duration. **Four reasons that does not survive:**
+
+1. **Period mismatch — and it propagates back into §21.** §21 divided a **Q2 average** achieved rate by an **11 September** assessment. A company could have earned **100% of the contemporaneous Q2 benchmark** and still show ~19%. **§21 has been corrected in place.**
+2. **Not the same object.** One is a ratio of investment **returns** on a rolling futures portfolio; the other a ratio of **rate levels**.
+3. **Transformation-dependent.** On simple returns the identical data give **2.6% and 3.8%** — the "match" vanishes entirely.
+4. **Not even close.** FRO's 25.6% is ~42% larger than the 18% it supposedly corroborated.
+
+> ✅ **What survives, stated narrowly:**
+>
+> **The equities and the freight-futures vehicle delivered very different returns. This is compatible with differences in exposure, earnings duration, leverage and valuation — but this return comparison does NOT identify operational pass-through, and does NOT show that the equities price the spike correctly.**
+
+**What DOES survive as useful for a holder:**
+
+- **Beta 0.14 / 0.19 with R² ≈ 0.10.** If you want freight exposure, the equities give you very little of it per unit of risk — ~90% of their daily variance is something else.
+- **The equity pair correlation of 0.84–0.87** means holding both DHT and FRO is **close to a single position**, not diversification.
+- **No weekly lead was found**, so BWET is not a timing signal on this evidence.
+
+### 22.8 The GPT-6-Astra review record (Rule 4b)
+
+| # | Finding | Severity | Verdict | Action |
+|---|---|---|---|---|
+| A1 | Regime returns do not compound to the full-period return (BWET off +2.16%, FRO +2.42%) | Blocking | **Correct — real bug** | Rebuilt by compounding daily returns; identity now asserted in code at 0.000000% error |
+| A2 | "19%/18% operational capture" divides a Q2 average by a September assessment | Blocking | **Correct** | **§21 corrected in place**; claim withdrawn from §22 |
+| A3 | The headline equates two economically unrelated ratios, then asserts a valuation mechanism | Blocking | **Correct** | **Headline WITHDRAWN**; narrow replacement published |
+| A4 | "30.3%/38.5% is the correct capture" overstates a relative-growth statistic | Blocking | **Correct** | Withdrawn; the shuffle counterexample is now computed and published |
+| B1 | Stronger mutual correlation does not identify factor dominance | Material | **Correct** | "Equity pair first" phrasing removed; Williams tests published |
+| B2 | Rising correlation with horizon is consistent with — not diagnostic of — Epps | Material | **Correct** | Language softened; log-return robustness added |
+| B3 | Low R² and precise beta coexist; beta ≠ operational pass-through | Material | **Correct** | SEs, CIs, t-stats and intercepts published with explicit reading |
+| B4 | Up/down gap can be produced by a positive intercept alone | Material | **Correct** | Withdrawn; algebra published |
+| B5 | "No timing edge" is broader than the evidence | Material | **Correct** | Narrowed to "no statistically established weekly linear lead" |
+| B6 | Weekly/monthly samples contained incomplete trailing periods | Material | **Correct** | Complete periods only: 176 weekly, 39 monthly |
+| B7 | The crisis correlation rise is not statistically established | Material | **Correct** | Fisher z tests published: p = 0.360 / 0.075 |
+| B8 | "No splits" does not validate BWET as a clean freight benchmark | Material | **Correct** | Prospectus structure published (§22.1) |
+
+### 22.9 What this section does NOT establish
+
+1. **No causal identification.** Nothing here shows freight *causes* the equity moves, nor the reverse.
+2. **No valuation bridge.** "The market prices duration correctly" would require freight → achieved TCE and open days → incremental cash flow → discounted equity value. That is not built.
+3. **No BWET decomposition.** Futures P&L, roll/convergence, collateral income, fees and premium/discount are not separated, so the divergence cannot be attributed to freight economics alone.
+4. **One episode, not a sample of cycles.** 848 daily observations are not 848 independent freight cycles; one extreme regime dominates the covariance.
+5. **Not robust inference.** Intervals are classical/bootstrap, not HAC; volatility clustering and structural breaks are untreated.
+6. **FRO is not a pure VLCC claim** (Suezmax and LR2 too), and **DHT is ~50% time-chartered**, so neither is a clean freight proxy.
+7. **Market-price basis only** — NAV-based returns were not tested, and BWET's premium/discount has reached ±7%.
 
 > **Not investment advice.**

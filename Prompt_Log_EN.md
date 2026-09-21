@@ -1714,3 +1714,28 @@ Six aggregate summary charts were built as the final step, per the user's follow
 
 **Files created**: vlcc_cycles/run_backtest_cycle.py, run_s21_charts.py, write_s21.py, data/s21_*.csv (6), charts/s21_summary.png
 **Files updated**: vlcc_cycles/report_en.md, report_cn.md (§21), Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 75: BWET (tanker freight ETF) vs DHT/FRO correlation — FOUR more blocking findings, headline WITHDRAWN, and a correction forced back into Section 21
+
+**User prompt (verbatim):** "我又发现一个有意思的东西。对bwet和dht/fro的股价走势做分析，看一看相关性有多少；把这些做进同一张表。"
+
+BWET is the Breakwave Tanker Shipping ETF, which holds tanker FREIGHT FUTURES — so it is the closest tradeable proxy for the freight rate itself, and a natural test of how much of a freight move reaches the equity.
+
+**I CAUGHT TWO ERRORS MYSELF BEFORE THE REVIEW RETURNED.** First, the "capture ratio" as a ratio of simple cumulative returns gave DHT 4.2% — meaningless when BWET is up 59x, because compounding dominates; I switched to log returns (30.2%/38.4%). Second, I tested the up/down capture asymmetry with a 4,000-draw bootstrap and found both intervals straddle zero, so I withdrew my own "favourable asymmetry" claim before publishing it.
+
+**🔴 ASTRA THEN RETURNED FOUR BLOCKING FINDINGS.**
+
+1. **[A1] A REAL ARITHMETIC BUG.** Regime returns were computed first-to-last inside each calendar slice, which DROPS the return across every regime boundary. The regime multiples failed to compound to the full-period return — BWET off by +2.16%, FRO by +2.42%. Verified independently, then rebuilt by compounding daily returns; the identity now reconciles at 0.000000% error. Corrected 2026 YTD: BWET +4,229% (not +4,310%), DHT +108% (not +117%), FRO +162% (not +178%).
+2. **[A2] THE ERROR PROPAGATED BACK INTO SECTION 21.** My "DHT and FRO achieved only 19%/18% of the TD3C print" divided a Q2 AVERAGE achieved rate by an 11 SEPTEMBER assessment. A company could have earned 100% of the contemporaneous Q2 benchmark and still show ~19%. **Section 21 was corrected in place.**
+3. **[A3] THE HEADLINE WAS PATTERN-MATCHING.** I had claimed the equities' log capture "sits in the same range" as their operational capture, proving the market prices the convertible share and its duration. Withdrawn: the two are different objects (investment returns on a rolling futures portfolio vs a ratio of rate levels), over different periods, and the "match" vanishes entirely on simple returns (2.6%/3.8%). FRO's 25.6% is also ~42% larger than the 18% it supposedly corroborated.
+4. **[A4] "30.3%/38.5% IS THE CORRECT CAPTURE" — WITHDRAWN.** Astra's counterexample is decisive and is now computed in the script: randomly reorder DHT's daily returns and the log-growth ratio is UNCHANGED at 30.2% while its correlation with BWET collapses from 0.317 to 0.014. A statistic that survives a shuffle destroying every link to BWET carries no information about transmission.
+
+Eight further material findings were all accepted: correlation strength does not identify factor dominance; rising correlation with horizon is consistent with but not diagnostic of an Epps effect; low R-squared and a precise beta coexist and beta is not operational pass-through; the up/down gap can be produced by a positive intercept alone (both alphas here ARE positive); "no timing edge" was narrowed to "no statistically established weekly linear lead"; weekly/monthly samples contained incomplete trailing periods (now 176 and 39); the crisis-period correlation rise is NOT significant (p=0.360 and p=0.075); and "no splits" does not validate BWET as a clean benchmark — its prospectus shows ~90% TD3C/10% TD20, 50-70 day target maturity, a 3.50% expense ratio and premium/discount reaching plus-or-minus 7%.
+
+**WHAT SURVIVES.** The equity pair correlates 0.84-0.87 with each other but only 0.32-0.51 with the freight instrument, decisively at every frequency on Williams tests for dependent correlations (daily p=3.1e-108). Beta to BWET is only 0.144/0.186 with R-squared around 0.10 — about 90% of daily equity variance is not freight-driven. Both lead/lag profiles peak at k=0 and no off-zero lag survives Holm correction. Practical reading: holding both DHT and FRO is close to a single position, not diversification; and if freight exposure is what you want, the equities deliver very little of it per unit of risk.
+
+**Files created**: vlcc_cycles/run_bwet_correlation.py, data/s22_*.csv (7), charts/s22_bwet.png
+**Files updated**: vlcc_cycles/report_en.md, report_cn.md (§22 added, §21 corrected), Prompt_Log_EN.md, Prompt_Log_CN.md
