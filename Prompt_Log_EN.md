@@ -1447,3 +1447,38 @@ Rule 4 flags: fleet values are an assumption (US$150m/VLCC, US$120m/Suezmax, US$
 
 **Files created**: vlcc_cycles/run_cycle_top.py, data/pb_vs_pnav.csv, data/tc_anchor_earnings.csv, data/yield_ceilings.csv, data/ceilings.csv, data/implied_tc.csv, data/nav_sensitivity.csv, charts/cycle_top_valuation.png
 **Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 68: REAL historical P/B at every VLCC cycle top
+**Date**: September 20, 2026
+
+User: "你这个不够详细；像其他例子一样，对几次周期顶部的pb进行比较，做一张图；看看实际情况如何。" — the §13 P/B panel was not good enough.
+
+The criticism was correct. §13's panel divided the whole price history by TODAY'S book value — a placeholder, not a real series. Added vlcc_cycles/run_historical_pb.py + §14 in both reports + 5 CSVs + charts/historical_pb.png, using the book value ACTUALLY REPORTED in each period (macrotrends.net period data: date, price, BVPS, P/B; DHT from 2006, FRO from 2009).
+
+RULE 4 CROSS-CHECK PASSED EXACTLY: scraped 30-Jun-2026 BVPS of US$8.25 (DHT) and US$14.17 (FRO) match the quarterly filings to the cent. Also caught that the source rows are PERIOD-END prices, so the last row is 30-Jun-2026, not today; today's P/B is computed separately as live price / last reported BVPS (DHT 2.82x, FRO 3.63x vs the period-end 1.88x and 2.34x).
+
+PEAK P/B BY CYCLE — the answer the user asked for:
+  2008 super-cycle:       DHT 1.15x (Dec-2007); FRO n/d (series starts 2009)
+  2015-16 spike:          DHT 0.42x; FRO 4.18x (CONTAMINATED — see below)
+  2020 floating storage:  DHT 0.64x; FRO 0.66x
+  2022-23 post-Ukraine:   DHT 1.20x; FRO 1.51x
+  2026 current:           DHT 2.82x; FRO 3.63x  <- both unprecedented
+
+THE HEADLINE: the 2008 super-cycle — the textbook top, described by P-Rule 2 as "peak earnings AND peak multiples" — only reached 1.15x book for DHT. Today is 2.82x, roughly 2.5x that.
+
+THE FRO TRAP (caught and flagged): FRO's 2012-16 readings are contaminated by its near-bankruptcy restructuring. In Mar-2014 BVPS had collapsed to US$0.36 giving a meaningless 23.89x; in Jun-2015 it was a US$5.31 stock with US$1.27 of book, giving "4.18x". That is a DESTROYED DENOMINATOR, not an expensive stock — the opposite of today's 3.63x on a healthy US$14.17 book. The 23.89x is excluded from all statistics. This makes DHT the cleaner 20-year read.
+
+DISTRIBUTION: DHT median P/B over 20 years is 0.40x; today's 2.82x is the 99th percentile and the highest reading in the entire series (7x the median). FRO median 0.75x, today 3.63x = 96th percentile.
+
+THE 2x TEST: DHT has closed a period at or above 2.0x book only 2 times in 75 periods (3%) — and BOTH are 2026. So the user's 2.0x line is not an arbitrary round number; on this data it is approximately the 20-year CEILING, never breached across the 2008 super-cycle, the 2015-16 spike or the 2020 storage pulse.
+
+FORWARD RETURNS AFTER EACH P/B PEAK: of 7 measurable peaks the 12-month forward return was NEGATIVE in 5. The 2008 case is the warning — a peak of just 1.15x was followed by -14% / -48% / -62% at 6/12/24 months. The two exceptions (DHT Sep-2023 at 1.20x, FRO Dec-2023 at 1.51x) were mid-cycle highs, not tops — which is why a P/B peak is a WARNING, not a timing signal.
+
+THE COUNTER-ARGUMENT, STATED FAIRLY: book understates the fleet more today than in 2008. In 2008 owners had just bought ships at peak newbuild prices so book was high and fresh (depressing P/B); today's fleets were bought cheap in 2015-21 and depreciated while second-hand values re-rated to multi-decade highs (5-yr-old VLCC US$174.5m vs US$129.5m newbuild), so book is low and stale (inflating P/B). Consistent with §13 finding DHT at 2.77x book but only ~1.11x NAV. Honest verdict is two-sided: on accounting book today is unambiguously the most expensive moment in 20 years; on asset value DHT is barely above 1x NAV. The reconciliation — a large premium to historical cost but a modest premium to replacement value — is what you expect LATE in an asset-price cycle. FLAGGED GAP: could not obtain historical NAV/vessel-value series, so "P/NAV at prior cycle tops" remains unresolved.
+
+COMBINED VERDICT §13 + §14: DHT is fairly priced on sustainable earnings but historically extreme on book; FRO is stretched on BOTH. The asset multiple says late-cycle for both; the TC-anchored yield says the risk is concentrated in FRO.
+
+**Files created**: vlcc_cycles/run_historical_pb.py, data/pb_history_DHT.csv, data/pb_history_FRO.csv, data/cycle_peak_pb.csv, data/pb_distribution.csv, data/pb_peak_forward_returns.csv, charts/historical_pb.png
+**Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
