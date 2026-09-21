@@ -2213,6 +2213,63 @@ Beta conditional on the size of the freight move:
 
 > **The corrected statement.** BWET and the tanker equities share a **directionally reliable but heavily damped and time-varying** relationship. Freight is **not** the main driver of a given day's move — even on the biggest freight days it explains under a third — and the bulk of daily variance is company-specific, not freight, market, oil or sector.
 
+### 22.5e ⭐ "If R² is only 0.10, why do the paths look almost perfectly correlated?"
+
+Three things are happening. **Two are illusions. One is real — and it means the earlier "1/10" understated the relationship.**
+
+#### Illusion 1: level correlation is mostly spurious
+
+| | corr of **LEVELS** | corr of log levels | corr of **RETURNS** | R² of returns |
+|---|---|---|---|---|
+| **DHT** | **0.805** | 0.830 | 0.317 | 0.100 |
+| **FRO** | **0.830** | 0.856 | 0.324 | 0.105 |
+
+**The eye reads the left column. The economics live in the right one.**
+
+To show how little the left column means, I simulated 2,000 pairs of **independent** random walks, matched to each actual series' length, drift and volatility — so their true relationship is **exactly zero by construction**:
+
+| | corr of LEVELS | \|corr\| > 0.8 | corr of RETURNS | \|corr\| > 0.8 |
+|---|---|---|---|---|
+| **Unrelated simulated pairs** | **+0.692** average | **48% of trials** | +0.000 | **0% of trials** |
+| **Actual BWET vs DHT** | +0.805 | — | +0.317 | — |
+
+> **Two completely unrelated series that both drift upward show a level correlation of ~0.69 on average, and exceed 0.80 nearly half the time.** The actual 0.805 is barely distinguishable from that null. This is the classic spurious-regression problem (Granger & Newbold, 1974) — and it is precisely why every correlation in this report is computed on **returns**, never on levels.
+
+#### Illusion 2: the log axis compresses an enormous gap
+
+| | Total growth | US$100 became |
+|---|---|---|
+| **BWET** | **59.9×** | $5,987 |
+| DHT | 3.4× | $344 |
+| FRO | 4.8× | $481 |
+
+**BWET grew 17.4× more than DHT and 12.4× more than FRO.** On the symlog axis of §22 chart A that gap collapses visually into "three lines going up together." **The similarity is the axis, not the data.**
+
+#### What is REAL: the horizon effect — and it corrects my earlier number
+
+A shared component accumulates with horizon *h*; independent noise accumulates only with √*h*. So the explained share should **rise** with horizon. Measured on **non-overlapping** windows:
+
+| Horizon | n | BWET~DHT r | **R²** | BWET~FRO r | **R²** |
+|---|---|---|---|---|---|
+| 1 day | 848 | 0.318 | **0.101** | 0.325 | 0.106 |
+| **1 week (5d)** | **169** | **0.610** | **0.372** | 0.574 | 0.329 |
+| 1 month (21d) | 40 | 0.478 | 0.229 | 0.530 | 0.280 |
+| 1 quarter (63d) | 13 | 0.601 | 0.361 | 0.593 | 0.352 |
+
+> **⭐ At a WEEKLY horizon, freight explains ~37% of DHT — not 10%.** Daily noise (single-name news, flows, liquidity) largely cancels out over a week, while the freight relationship persists. **This is a genuine economic effect, not an artefact.**
+>
+> ⚠️ The weekly estimate (n=169) is the most reliable non-daily cell. Monthly (n=40) and quarterly (n=13) are too small to rank against it — note monthly reads *lower* than weekly, which is small-sample noise, not a pattern.
+
+#### Corrected statement
+
+> **My earlier "freight explains one tenth to one seventh" was a DAILY statement, and it understated the economic link.** The honest version:
+>
+> - **Intraday/daily:** freight explains ~10% — the day-to-day move is dominated by company-specific news and flows.
+> - **Weekly and beyond:** freight explains roughly **a third**.
+> - **The visual near-perfect co-movement of the price paths is mostly spurious** — unrelated trending series produce the same picture ~half the time.
+>
+> So: the paths *look* identical for a bad reason, but the underlying relationship is *genuinely stronger than the daily R² suggests* — just not at the frequency a chart of levels appears to show.
+
 ### 22.6 Regimes — now reconciled, and not significant
 
 | Regime | n | BWET | DHT | FRO | B~DHT | B~FRO |

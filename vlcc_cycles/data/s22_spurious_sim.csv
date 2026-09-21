@@ -1,0 +1,3 @@
+ticker,sim_level_corr_mean,sim_level_gt08_pct,sim_return_corr_mean,actual_level_corr
+DHT,0.692,48,0.0,0.805
+FRO,0.69,48,-0.0,0.83
