@@ -1,0 +1,11 @@
+ticker,rule,days_in_pct,total_pct,ann_pct,sharpe,vs_bh_pp
+DHT,BWET up yesterday,49,514,71.5,2.27,27.1
+DHT,BWET 5d momentum > 0,55,341,55.4,1.85,11.0
+DHT,BWET 20d momentum > 0,62,142,30.1,1.1,-14.3
+DHT,BWET 20d mom > 0 (inverse),36,55,13.9,0.74,-30.5
+DHT,BUY & HOLD,100,244,44.4,1.23,0.0
+FRO,BWET up yesterday,49,652,82.1,2.08,22.6
+FRO,BWET 5d momentum > 0,55,461,67.0,1.82,7.5
+FRO,BWET 20d momentum > 0,62,280,48.6,1.34,-10.9
+FRO,BWET 20d mom > 0 (inverse),36,30,8.0,0.41,-51.5
+FRO,BUY & HOLD,100,381,59.5,1.28,0.0

@@ -1,0 +1,3 @@
+ticker,coef_uni,t_uni,p_uni,coef_bi,t_bi,p_bi,own_lag_coef,own_lag_p,verdict,n
+DHT,0.0336,2.18,0.0294,0.0428,2.63,0.0085,-0.0639,0.0746,SURVIVES,847
+FRO,0.0427,2.17,0.0304,0.0561,2.7,0.007,-0.0721,0.0464,SURVIVES,847

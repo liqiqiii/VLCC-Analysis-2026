@@ -2042,6 +2042,55 @@ Both peak at **k = 0**. Holm correction across the 16 non-zero lags: the best ca
 
 > **Correct wording: "no statistically established WEEKLY LINEAR lead in this analysis."** That is narrower than the draft's "BWET gives no timing edge" — weekly bars could bury a 1–2 day lead, and a lead could be non-linear. Absence of evidence here is not evidence of absence.
 
+### 22.5b ⭐ Is BWET usable as a TIMING tool? A direct test — and the answer is NO, but not for the reason §22.5 gave
+
+§22.5 found no weekly linear lead. The review warned that **weekly bars can bury a one- or two-day lead**, so the daily case was tested directly. It turns out there IS one — and it is an artefact.
+
+**The raw result looks compelling.** Equity return on day *t*, split by BWET's direction on day *t−1*:
+
+| | after BWET up | after BWET down | difference | t | p |
+|---|---|---|---|---|---|
+| **DHT** | +0.462% | −0.112% | **+0.574%** | 3.83 | **0.000** |
+| **FRO** | +0.524% | −0.065% | **+0.590%** | 3.10 | **0.002** |
+
+A naive long-only rule ("hold only after BWET rose") would have returned **71.5%/yr for DHT vs 44.4% buy-and-hold** (Sharpe 2.27 vs 1.23) and **82.1% vs 59.5% for FRO**.
+
+**Four tests destroy it.**
+
+**1. It is not equity momentum — but it explains almost nothing.** Controlling for the equity's own lagged return, BWET(t−1) *survives* (DHT t=2.63, p=0.0085; FRO t=2.70, p=0.0070). But the regression **R² is 0.0093 and 0.0102** — the signal explains **under 1%** of next-day variance.
+
+**2. 🔴 BWET is barely traded — this is the decisive finding.**
+
+| | Median shares/day | **Median US$/day** |
+|---|---|---|
+| **BWET** | 3,800 | **$58,707** |
+| DHT | 1,995,600 | $18,009,752 |
+| FRO | 2,362,400 | $40,585,698 |
+
+**BWET turns over about US$59k a day against DHT's US$18m and FRO's US$41m — roughly 300–700× thinner.** A near-untraded ETF's close is a stale, noisy print. Any apparent "lead" it shows over two liquid large-caps is mechanical, not informational — and the instrument could not absorb a position of any size regardless.
+
+**3. The effect dies one day later — the stale-price signature.**
+
+| | t−1 | t−2 | t−3 |
+|---|---|---|---|
+| **DHT** | +0.574% (p=**0.000**) | +0.222% (p=0.141) | +0.215% (p=0.153) |
+| **FRO** | +0.590% (p=**0.002**) | +0.376% (p=0.048) | +0.194% (p=0.309) |
+
+A genuine information lead should persist. A one-day overlap from non-synchronous closes should vanish immediately — which is what happens.
+
+**4. It is not present when it matters, and costs kill it.** The effect is significant **only pre-crisis** (DHT p=0.001, FRO p=0.002); it is **absent in 2025** (p=0.089 / 0.468) and **absent in the 2026 crisis** (p=0.166 / 0.178). And the rule demands **114 round-trips a year**:
+
+| | 0 bps | 10 bps | 25 bps | 50 bps | **buy & hold** |
+|---|---|---|---|---|---|
+| **DHT** | 71.5% | 53.1% | 29.0% | −3.0% | **44.4%** |
+| **FRO** | 82.1% | 62.5% | 37.0% | +3.0% | **59.5%** |
+
+**At 25 bps both lose to simply holding** — and 25 bps is unrealistically generous for an ETF trading US$59k a day.
+
+> **⭐ VERDICT: BWET and the equities are genuinely correlated, but BWET is NOT a usable timing tool.** The correlation is real (daily 0.32, weekly 0.47–0.51, beta 0.14–0.19, all highly significant). The timing signal is not: it explains under 1% of next-day variance, vanishes at t−2, is absent in both recent regimes, dies at realistic transaction costs, and originates in an ETF roughly 300× less liquid than the shares it supposedly leads.
+>
+> **Correlation here is a description of co-movement, not a tradeable edge.**
+
 ### 22.6 Regimes — now reconciled, and not significant
 
 | Regime | n | BWET | DHT | FRO | B~DHT | B~FRO |
