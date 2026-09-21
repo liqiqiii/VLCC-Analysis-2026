@@ -1,0 +1,10 @@
+model,r2
+BWET alone,0.1
+SPY alone (equity market),0.03
+XLE alone (energy sector),0.051
+BNO alone (Brent oil),0.016
+FRO alone (the other tanker),0.705
+BWET + SPY,0.132
+BWET + SPY + XLE + BNO,0.155
+FRO + BWET,0.707
+everything,0.709

@@ -2105,6 +2105,43 @@ A genuine information lead should persist. A one-day overlap from non-synchronou
 >
 > **Correlation here is a description of co-movement, not a tradeable edge.**
 
+### 22.5c Does BWET *explain* DHT's daily moves — and is forward freight efficiently priced?
+
+Two claims that sound like one, need different evidence, and come out differently.
+
+**(1) "BWET explains DHT's daily moves well" — NOT supported.** Nested single-day regressions, close-to-close, n=848:
+
+| Model | R² |
+|---|---|
+| **BWET alone** | **0.100** |
+| SPY alone (equity market) | 0.030 |
+| XLE alone (energy sector) | 0.051 |
+| BNO alone (Brent oil) | 0.016 |
+| **FRO alone (the other tanker)** | **0.705** |
+| BWET + SPY | 0.132 |
+| BWET + SPY + XLE + BNO | 0.155 |
+| FRO + BWET | 0.707 |
+
+**Freight explains ~10% of DHT's daily variance (13.5% in 2026). The other tanker explains 70.5%.** Adding BWET to FRO raises R² by **0.2pp** — essentially nothing.
+
+**And the common tanker factor is not mainly a freight factor:** DHT and FRO share 71% of their variance, but **BWET explains only 11.2% of that shared move.** Whatever moves both tankers together on a given day, it is mostly not the freight index.
+
+⚠️ *One honest caveat in the other direction:* BWET carries roll, fee and premium/discount noise, so **measurement error attenuates its measured R².** The true freight sensitivity is probably somewhat higher than 0.10 — but not plausibly enough to overturn a 0.10-vs-0.705 gap.
+
+**(2) "Forward freight is efficiently traded" — SUPPORTED, but R² is the wrong evidence.** Efficiency is about *when* information is impounded, not *how much* variance it explains:
+
+| Period | same-day r | R² | 1-day lead r | **share arriving LATE** |
+|---|---|---|---|---|
+| pre-crisis | 0.295 | 0.087 | 0.146 | **33%** |
+| 2025 | 0.304 | 0.093 | 0.109 | 26% |
+| **2026** | **0.368** | 0.135 | **−0.007** | **2%** |
+
+> **⭐ The share of the BWET–DHT relationship that arrives a day LATE collapsed from ~33% to ~2%, while same-day correlation rose.** That is the efficiency result: freight information now reaches the equity the *same day*. It is also why §22.5b's apparent timing signal died.
+>
+> **But R² barely moved (0.087 → 0.135).** Pricing efficiency and explanatory power are different things. **The market prices freight news quickly; freight news is simply not most of what moves the stock.**
+
+**The precise statement that survives:** *forward freight is impounded into the tanker equities promptly and contemporaneously — but it accounts for only about a tenth to a seventh of their daily variation. The equities are not a freight instrument.*
+
 ### 22.6 Regimes — now reconciled, and not significant
 
 | Regime | n | BWET | DHT | FRO | B~DHT | B~FRO |
