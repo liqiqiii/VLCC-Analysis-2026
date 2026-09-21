@@ -1,0 +1,13 @@
+kind,pair,label,n_weeks,r,r2
+commodity,GLD -> AEM,Gold bullion -> Agnico Eagle,169,0.817,0.667
+commodity,GLD -> NEM,Gold bullion -> Newmont,169,0.721,0.52
+commodity,BNO -> OXY,Brent -> Occidental,169,0.708,0.501
+commodity,BNO -> XOP,Brent -> US E&P (XOP),169,0.693,0.48
+commodity,CPER -> FCX,Copper -> Freeport,169,0.62,0.385
+freight,BWET -> DHT,VLCC freight -> DHT,169,0.603,0.363
+freight,BWET -> FRO,VLCC freight -> Frontline,169,0.585,0.342
+freight,BDRY -> SBLK,Dry-bulk freight -> Star Bulk,169,0.543,0.295
+market,SPY -> AAPL,Equity market -> Apple  (reference),169,0.507,0.257
+commodity,UNG -> EQT,Nat gas -> EQT,169,0.448,0.201
+market,SPY -> XLE,Equity market -> energy sector (reference),169,0.179,0.032
+market,SPY -> DHT,Equity market -> DHT  (reference),169,0.013,0.0

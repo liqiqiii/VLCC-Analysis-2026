@@ -2270,6 +2270,51 @@ A shared component accumulates with horizon *h*; independent noise accumulates o
 >
 > So: the paths *look* identical for a bad reason, but the underlying relationship is *genuinely stronger than the daily R² suggests* — just not at the frequency a chart of levels appears to show.
 
+### 22.5f Is a weekly R² of ~0.37 high? Benchmarked against comparable pairs
+
+The only honest way to judge it is to run the **identical** test — same window (from 2023-05-04), same frequency (non-overlapping weekly log returns), same method — on other commodity-price → producer-equity pairs.
+
+| Rank | Relationship | corr | **R²** | Type |
+|---|---|---|---|---|
+| 1 | Gold bullion → Agnico Eagle | 0.817 | **0.667** | commodity |
+| 2 | Gold bullion → Newmont | 0.721 | **0.520** | commodity |
+| 3 | Brent → Occidental | 0.708 | **0.501** | commodity |
+| 4 | Brent → US E&P (XOP) | 0.693 | **0.480** | commodity |
+| 5 | Copper → Freeport | 0.620 | **0.385** | commodity |
+| **6** | **VLCC freight → DHT** | **0.603** | **0.363** | **freight** |
+| **7** | **VLCC freight → Frontline** | **0.585** | **0.342** | **freight** |
+| 8 | Dry-bulk freight → Star Bulk | 0.543 | 0.295 | freight |
+| 9 | *Equity market → Apple (reference)* | 0.507 | 0.257 | market |
+| 10 | Nat gas → EQT | 0.448 | 0.201 | commodity |
+| 11 | *Equity market → energy sector (reference)* | 0.179 | 0.032 | market |
+| 12 | **Equity market → DHT (reference)** | **0.013** | **0.000** | market |
+
+| Category | median R² | range |
+|---|---|---|
+| Commodity → producer | **0.490** | 0.201 – 0.667 |
+| **Freight → shipowner** | **0.342** | 0.295 – 0.363 |
+| Equity market → stock | 0.032 | 0.000 – 0.257 |
+
+> ⚠️ **A self-check removed two rows that would have flattered this table.** The first version included *Uranium (URA) → Cameco* (R² 0.822) and *Gold (GDX) → Newmont* (0.742). **URA and GDX are ETFs of mining EQUITIES, and CCJ and NEM are among their largest holdings** — those rows were equities explaining themselves, not commodities explaining producers. Both were deleted.
+
+#### The verdict
+
+**~0.36 is normal-to-good for this asset class — mid-pack, and the best of the freight pairs.** It is:
+
+- **Below** gold→miners (0.52–0.67) and oil→E&P (0.48–0.50), which are the strongest commodity pass-throughs available;
+- **About the same as** copper→Freeport (0.385);
+- **Above** dry-bulk freight→Star Bulk (0.295) and nat gas→EQT (0.201).
+
+**Why is freight weaker than gold or oil?** Structural, and all verifiable in this report: DHT is **~50% time-chartered** (§21), so half the fleet is contractually insulated from spot; **BWET is a futures vehicle** carrying roll, fee and premium/discount noise, whereas GLD is physical bullion with no basis noise; and a tanker equity is also a claim on **vessel asset values** (§20), not only on current freight.
+
+#### But the most striking number in the table is not 0.363
+
+> **The equity market explains 0.000 of DHT's weekly returns.** SPY→DHT has a correlation of 0.013 — literally nothing. SPY→XLE, the whole energy sector, is only 0.032.
+>
+> So freight is not merely *the best available* explanation of these shares. **It is essentially the only systematic one.** For context, **BWET explains more of DHT (0.363) than the entire US equity market explains of Apple (0.257).**
+
+**How to hold both facts together:** on any given *day* freight explains ~10% and company-specific news dominates (§22.5d); over a *week* freight explains ~36%, which is respectable for a commodity-producer pair; and no broad market factor explains these shares at all. **They are a freight instrument at weekly horizon and an idiosyncratic single-stock bet intraday — but they are never a market bet.**
+
 ### 22.6 Regimes — now reconciled, and not significant
 
 | Regime | n | BWET | DHT | FRO | B~DHT | B~FRO |
