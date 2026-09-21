@@ -1,0 +1,11 @@
+trigger,reading,action,rationale
+P/NAV falls back below 1.2x on a rising fleet value,the premium is being given back,the thesis is over — EXIT,model-free; uses only broker values and the share price
+P/NAV rises above 2.0x (DHT) / 2.2x (FRO),beyond EVERY observation in the filing record,TRIM 25%,today 1.62x / 1.69x — already above every prior cycle top
+"1-yr TC below US$85,000 for 4 consecutive weeks",DHT yld 9.5% / FRO 7.4%,TRIM 25%,FRO loses its 8% cushion first
+"1-yr TC below US$75,000",DHT 7.8% / FRO 5.8%,TRIM to half,both breach 8%; the income bid leaves
+"1-yr TC below US$60,000",DHT 5.2% / FRO 3.4%,EXIT,at/below DHT's own historical average yield
+Hormuz transit normalises toward ~15+ mb/d,the premium's CAUSE is removed,TRIM 25% on the news,do not wait for the rate; the equity leads it
+Second-hand 5-yr-old VLCC values fall two consecutive months,NAV itself is falling — the denominator moves,REDUCE,a P/NAV premium on a FALLING NAV is the worst configuration
+FRO net-debt-to-fleet rises above 35% (today 23.8%),leverage re-amplifies asset moves,REDUCE,2008 showed ~55% leverage turned a -43% asset move into -96% NAV
+A dividend cut while the TC rate is UNCHANGED,"policy break, not a rate signal",EXIT the name,the payout IS the thesis for a yield-anchored holder
+2028 deliveries confirmed above ~125 VLCCs,supply wall arrives early,begin scaling out,the cycle's known expiry date

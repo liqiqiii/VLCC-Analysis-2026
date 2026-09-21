@@ -1,0 +1,3 @@
+ticker,price,navps,pnav,prior_low,prior_high,above_prior_high
+DHT,23.27,14.33,1.62,0.87,1.36,True
+FRO,51.42,30.37,1.69,1.14,1.5,True

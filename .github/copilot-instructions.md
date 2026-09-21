@@ -98,6 +98,32 @@ Before publishing any number:
 
 ## 🟡 ANALYTICAL STANDARDS
 
+### Rule 4b: MANDATORY GPT-6-Astra Adversarial Review ⭐
+
+> **Added 20 September 2026 at the user's instruction. This is a standing rule, not a one-off.**
+
+**Before publishing ANY research output — a new section, a correction, a target price, or a conclusion — you MUST submit it to `gpt-6-astra` for adversarial review, and you MUST act on the findings.**
+
+How:
+```
+task(agent_type="rubber-duck", model="gpt-6-astra", ...)
+```
+
+The review prompt must:
+1. **Give the full numerical context** — tables, inputs, sources, and the exact claim you intend to publish.
+2. **Ask for an adversarial read**, explicitly: "find errors, not encouragement."
+3. **Enumerate specific questions** with the reasoning you want checked, one per methodological decision.
+4. **Ask what has been MISSED**, what is still **overstated**, and whether it is **safe to publish**.
+
+Then, in the report itself:
+- **Record the review and its findings in a dedicated section.** Do not silently absorb them.
+- For each finding: state the **verdict (correct / wrong / unsupported)** and the **action taken**.
+- **Withdraw anything the review blocks.** Do not publish a number the review shows to be unsupported, even if a replacement is not yet available. "No number" is an acceptable answer; a wrong number is not.
+
+**Why this rule exists:** on 20 Sep 2026 an Astra review found that a stale payout-ratio field (50%/47% instead of the actual 77%/90%) had made Frontline appear ~40% over-priced when it was not — invalidating the entire bearish conclusion of a multi-section report. It also blocked a proposed correction that was itself wrong (undoing reverse splits to compare per-share values across eras). **Both errors would have been published without the review.**
+
+---
+
 ### Rule 5: Multi-Model Consensus Approach
 Run analysis across 3–5 models when doing new research:
 - Use identical, self-contained prompts across all models.

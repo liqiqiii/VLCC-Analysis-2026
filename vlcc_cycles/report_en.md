@@ -725,6 +725,7 @@ python run_pnav_corrected.py    # §15: CORRECTED P/B + P/NAV at replacement cos
 python run_supercycle.py        # §16: the 2005-08 super-cycle, from the 20-F filings
 python run_pnav_final.py        # §17: FINAL - NAV from DHT's own 20-F broker valuations
 python run_adjustment_audit.py  # §18: ex-dividend / adjusted-pricing audit
+python run_final_synthesis.py   # 20: FINAL synthesis - valuation, targets, exit triggers
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -1522,8 +1523,183 @@ I had intended to publish: *"§7's '12× lower' becomes 1.97× (DHT) and 3.82× 
 
 > **The honest position now:**
 >
-> - **No valuation measure in this report currently identifies either name as expensive.** P/NAV is a modest premium to prior cycle tops (§17); P/B is roughly half the 2007 super-cycle level (§16); and the TC-anchored yield — corrected — says **both clear an 8% hurdle at rates below what the market is signing** (§19.1).
+> - **No valuation measure in this report currently identifies either name as expensive.** ~~P/NAV is a modest premium to prior cycle tops (§17);~~ ⚠️ **AMENDED BY §20.1** — measured against the §17 filing-sourced series, today's P/NAV is **above every prior observation for both names** (DHT 1.62x vs a 1.36x prior high; FRO 1.69x vs 1.50x). "Modest premium" was too soft.
+> - P/B is roughly half the 2007 super-cycle level (§16); and the TC-anchored yield — corrected — says **both clear an 8% hurdle at rates below what the market is signing** (§19.1).
 > - **The bear case now rests entirely on the DURABILITY of the rate**, not on any multiple. If the 1-year TC settles back to US$75k, DHT yields 7.8% and FRO 5.8% — and only then does the income holder leave.
 > - **Everything quantitative in §7 and §13's headline is withdrawn.** §16 and §17 stand, because they were built on filing-sourced data with matched bases.
 
 ⚠️ **Still unresolved and stated as such:** the exact reconciliation of the aggregator's P/B against its own inputs (Astra's point 4 residual); FRO's entity discontinuity across the 2015 merger; and whether market cap, EV, market-cap-per-DWT or P/NAV is the right cross-era comparator — Astra argues for **market cap ÷ equity NAV** or **EV ÷ normalised earnings**, and that work is **not** done here.
+
+
+---
+
+## §20 — ⭐ FINAL SYNTHESIS: what these two are actually worth, and when to leave
+
+> **This section was written, submitted to GPT-6-Astra for adversarial review under Rule 4b, rebuilt after that review found four BLOCKING errors, and only then published.** The review record is §20.7. Three numbers used earlier in this report are **withdrawn here**, including one of my own from §19.
+
+![Final synthesis](charts/final_synthesis.png)
+
+### 20.1 The one finding that survives with no model at all
+
+Every target price below depends on assumptions. **This does not.**
+
+| | Price | NAV/share | **P/NAV today** | Prior range (filings) | **vs its own record** |
+|---|---|---|---|---|---|
+| **DHT** | $23.27 | $14.33 | **1.62x** | 0.87x – 1.36x | **+19% above its highest ever** |
+| **FRO** | $51.42 | $30.37 | **1.69x** | 1.14x – 1.50x | **+13% above its highest ever** |
+
+**Both ships-owners trade above the highest price-to-asset-value either has ever recorded in the filing record — including the 2007-08 super-cycle** (DHT 0.79x, FRO 1.33x modelled). No forecast, no discount rate, no payout assumption is involved: it is the share price divided by broker valuations of the steel.
+
+> ⚠️ **This corrects §19.** §19 described P/NAV as "**a modest premium to prior cycle tops**." That was too soft. Measured against the §17 filing-sourced series, today is **above every prior observation for both names.** §19's sentence is amended.
+
+**What it does and does not mean.** A premium to NAV is not automatically wrong — a company that can earn above its cost of capital *should* trade above asset value. It means the premium **must be earned by excess future earnings**, and that is exactly where the evidence stops being clean.
+
+### 20.2 The honest ledger — what you are actually buying
+
+**DHT Holdings — the defensive way to hold the cycle**
+
+| Advantages | Evidence |
+|---|---|
+| **Lowest breakeven of the pair — $17,500/day** | At a US$60,000 TC, DHT still yields **5.2%**; FRO yields 3.4% |
+| **Least leveraged — net debt is 10.6% of fleet value** | $273.1m against a $2,583m fleet |
+| **NAV is filing-sourced, not modelled** | DHT discloses per-vessel broker valuations in its 20-F; §17 reconciles them to DHT's own prose |
+| **Explicit distribution policy — 100% of ordinary net income** | Stated from Q3-2022; the trailing 77% reflects reported, not ordinary, income |
+| **~52% time-chartered** | Cushions a rate collapse |
+
+| Disadvantages | Evidence |
+|---|---|
+| **The most stretched of the two against its own history** | 1.62x P/NAV vs a 1.36x prior high — **+19%**, worse than FRO's +13% |
+| **Charter coverage cuts both ways** | §9: it captures only about half of a spot spike; the crossover vs FRO is ~$200–300k/day |
+| **Smallest fleet — 24 VLCC-equivalents** | Least operating leverage to an upside surprise |
+
+**Frontline — the high-torque way to play a spike**
+
+| Advantages | Evidence |
+|---|---|
+| **Largest fleet and highest spot exposure — 57.9 VLCC-eq, ~86% spot** | §9: at 3x rates FRO gains **+341% vs DHT's +274%** |
+| **Highest distribution rate — 90% trailing** | $5.99 paid against $6.67 earned |
+| **Leverage is a fraction of its own history** | 23.8% of fleet value today |
+
+| Disadvantages | Evidence |
+|---|---|
+| **Twice DHT's leverage** | 23.8% vs 10.6% of fleet value |
+| **Highest breakeven — $23,800/day** | **Loses an 8% dividend cushion first**: at US$85k it yields 7.4% while DHT still yields 9.5% |
+| **⚠️ Its NAV is MODELLED, not disclosed** | Frontline publishes **no aggregate fleet value in any year examined** (§17). FRO's 1.69x is the least reliable number in §20.1 |
+| **Entity discontinuity across the 2015 merger** | Unreconciled — flagged in §19 and still open |
+
+### 20.3 Valuation level — and a calibration test of my own earnings model
+
+Before quoting targets, the earnings engine is tested against **reported** results. Astra's blocking objection [B1] was that the disclosed cash breakeven may already contain loan principal, so subtracting it *and* D&A would not produce accounting EPS. The test back-solves the TC rate needed to reproduce actual trailing EPS:
+
+| | Actual TTM EPS | **Implied TC rate** | Actual DPS | Implied payout | Verdict |
+|---|---|---|---|---|---|
+| **DHT** | $2.94 | **$86,433/day** | $2.27 | 77% | Plausible |
+| **FRO** | $6.67 | **$111,878/day** | $5.99 | 90% | Plausible |
+
+Both implied rates sit inside the band these fleets actually earned over the trailing year, and the implied payouts reproduce the corrected ratios exactly. **The specification is not obviously double-counting debt service.** It is *not* proof — a compensating error inside the breakeven would be invisible to this test — so it is logged in §20.8 as an open limitation, not a resolved one.
+
+### 20.4 Target prices — conditional, and labelled as such
+
+Fleet value and net debt are now modelled **separately**, fixing Astra's [B2]: the previous draft charged 5% annual ageing against *equity* NAV instead of against fleet value, and aged accumulated cash as though cash were a ship. Vessel values are also **repriced with the rate scenario**, so the model is no longer conservative on the multiple while generous on the asset.
+
+**DHT** (spot $23.27) — maintenance capex assumed equal to D&A; 10% cost of equity; 1.0x exit P/NAV
+
+| Scenario | TC rate | Years | Vessel repricing | EPS | DPS | **Target** | Upside |
+|---|---|---|---|---|---|---|---|
+| 🐻 Bear | $70,000 | 1 | −25% | $2.08 | $1.60 | **$10.73** | −54% |
+| ⚖️ Base | $95,000 | 2 | −15% | $3.39 | $2.61 | **$14.57** | −37% |
+| 🐂 Bull | $120,000 | 3 | 0% | $4.69 | $3.61 | **$20.46** | −12% |
+
+*On DHT's stated 100%-of-ordinary-income policy instead of the trailing 77%, the targets barely move ($10.73 / $14.64 / $20.71) — because retained earnings were already inside the exit NAV. The payout choice moves the yield, not the value.*
+
+**FRO** (spot $51.42)
+
+| Scenario | TC rate | Years | Vessel repricing | EPS | DPS | **Target** | Upside |
+|---|---|---|---|---|---|---|---|
+| 🐻 Bear | $70,000 | 1 | −25% | $2.86 | $2.57 | **$19.79** | −62% |
+| ⚖️ Base | $95,000 | 2 | −15% | $5.13 | $4.62 | **$26.29** | −49% |
+| 🐂 Bull | $120,000 | 3 | 0% | $7.41 | $6.67 | **$36.80** | −28% |
+
+⚠️ **Read these as conditional statements, not price forecasts.** They say: *if* the rate reverts to mid-cycle after N years, *and* vessel values reprice as shown, *and* the market pays 1.0x NAV at that point, *then* the value is X. **The third condition does most of the work** — see the next table.
+
+### 20.5 Why "the market is implying N years of high rates" is WITHDRAWN
+
+The earlier draft concluded that DHT required ~15 years of $95,000/day to justify its price and that **FRO could not be justified at any horizon**. Astra's [M5] showed this attributes every disagreement — payout, capex, vessel values, discount rate, equity premium — to a single variable. **Duration is not identified from price alone.** The joint grid proves it: at US$95,000/day, targets by years held *and* exit multiple.
+
+**DHT — spot $23.27** (bold = today's price justified)
+
+| Years \ Exit P/NAV | 0.80x | 1.00x | 1.20x | 1.40x | 1.60x |
+|---|---|---|---|---|---|
+| 1 yr | $11.12 | $13.30 | $15.49 | $17.67 | $19.86 |
+| 2 yr | $12.56 | $14.57 | $16.58 | $18.59 | $20.60 |
+| 3 yr | $13.89 | $15.74 | $17.59 | $19.44 | $21.29 |
+| 5 yr | $16.21 | $17.79 | $19.38 | $20.96 | $22.54 |
+| 8 yr | $18.98 | $20.24 | $21.51 | $22.78 | **$24.04** |
+
+**FRO — spot $51.42**
+
+| Years \ Exit P/NAV | 0.80x | 1.00x | 1.20x | 1.40x | 1.60x |
+|---|---|---|---|---|---|
+| 1 yr | $21.08 | $25.30 | $29.52 | $33.74 | $37.96 |
+| 2 yr | $22.64 | $26.29 | $29.95 | $33.60 | $37.26 |
+| 3 yr | $24.17 | $27.34 | $30.51 | $33.68 | $36.85 |
+| 5 yr | $27.10 | $29.49 | $31.89 | $34.29 | $36.68 |
+| 8 yr | $31.03 | $32.62 | $34.22 | $35.81 | $37.41 |
+
+**Moving right is as powerful as moving down.** You reach today's price by believing in a higher exit multiple just as easily as by believing in a longer boom — so no single implied duration can be read off the share price. The "15 years / never" claim is **withdrawn**.
+
+> ⚠️ **And note the thumb on the scale in the 1.00x column.** FRO's lowest recorded P/NAV is **1.14x**, never 1.00x. Holding FRO's exit at 1.0x is below anything it has ever traded at. This is disclosed rather than hidden, which is why the multiple is shown as a free variable.
+
+### 20.6 ⭐ The verdict, in wording that survived review
+
+> **DHT and Frontline trade roughly 62% and 69% above their estimated fleet NAV, and above every price-to-asset-value either has recorded in the filing record. Their valuations are therefore exposed both to weaker freight earnings and to compression of that premium. Frontline shows the larger shortfall in every 1.0x-NAV exit scenario and loses its dividend cushion at a higher freight rate; DHT is the more defensive holding on breakeven, leverage and disclosure quality, but is the more stretched of the two against its own history. This work does NOT establish a reliable market-implied freight duration, and does not support any claim that Frontline cannot be justified at $95,000/day.**
+
+**If you hold only one, hold DHT** — lower breakeven, half the leverage, filing-sourced NAV. **If you are playing a spike, FRO has the torque** — and you must accept that it breaks first on the way down.
+
+### 20.7 Exit indicators — anchored on observables, not on model output
+
+| # | Trigger | What it reads | Action |
+|---|---|---|---|
+| 1 | **P/NAV above 2.0x (DHT) / 2.2x (FRO)** | Beyond every observation in the record | **TRIM 25%** |
+| 2 | **1-yr TC below $85,000 for 4 consecutive weeks** | DHT 9.5% / **FRO 7.4%** | **TRIM 25%** — FRO loses its 8% cushion first |
+| 3 | **1-yr TC below $75,000** | DHT 7.8% / FRO 5.8% | **TRIM to half** — both breach 8% |
+| 4 | **1-yr TC below $60,000** | DHT 5.2% / FRO 3.4% | **EXIT** |
+| 5 | **Second-hand 5-yr-old VLCC values fall 2 months running** | **NAV itself is falling** | **REDUCE** — a premium on a *falling* NAV is the worst configuration |
+| 6 | **Hormuz transit normalises toward ~15+ mb/d** | The premium's *cause* is removed | **TRIM 25% on the news** — the equity leads the rate |
+| 7 | **FRO net-debt-to-fleet rises above 35%** (today **23.8%**) | Leverage re-amplifies asset moves | **REDUCE** |
+| 8 | **A dividend cut while the TC rate is unchanged** | A policy break, not a rate signal | **EXIT the name** |
+| 9 | **2028 deliveries confirmed above ~125 VLCCs** | The supply wall arrives early | **Begin scaling out** |
+| 10 | **P/NAV back below 1.2x on a rising fleet value** | The premium is being given back | **The thesis is over** |
+
+**Trigger 5 is the one most people miss.** P/NAV can fall because the price drops *or* because NAV rises. Only the first is a sell. Watch the denominator.
+
+### 20.8 The GPT-6-Astra review record (Rule 4b)
+
+| # | Finding | Severity | Verdict | Action taken |
+|---|---|---|---|---|
+| B1 | Cash breakeven may already include loan principal, so subtracting it **and** D&A does not give accounting EPS | Blocking | **Not disproved** | Calibration test added (§20.3); both implied rates are plausible. **Logged as an open limitation, not resolved** |
+| B2 | The NAV roll-forward charged 5% ageing against **equity NAV**, not fleet value, and aged accumulated cash | Blocking | **Correct — a real bug** | Fleet value and net debt now modelled separately; cash is not aged. Base targets fell 12% (DHT) and 17% (FRO) |
+| B2b | Adding retained accounting earnings while ageing the fleet double-counts unless capex = D&A | Blocking | **Correct** | Now an **explicit stated assumption**, not a silent one |
+| B3 | A trailing 77% payout is not a forward policy; DHT states 100% of ordinary income | Blocking | **Correct** | Both bases now run side by side; the targets barely move, the yield does |
+| B4 | "Net debt/fleet ~8%/18%" does not reconcile to my own inputs | Blocking | **Correct** | Recomputed: **10.6% / 23.8%** |
+| B4b | The 2008 "88% leverage" is arithmetically impossible | Blocking | **Correct** | The identity implies **55.2%**; at 88% a −43% asset move makes NAV *negative*, not −96%. **The 88% figure is withdrawn** |
+| M5 | The implied-duration claim is not identified; the exit multiple does equal work | Material | **Correct** | "15 years / never" **withdrawn**; replaced by the joint grid (§20.5) |
+| M6 | The equity multiple is normalised but vessel prices are not — not uniformly conservative | Material | **Correct** | Vessel values now reprice with the scenario (−25% / −15% / 0%) |
+| M7 | A 90% payout is not unsustainable merely because FRO carries debt | Material | **Correct** | The unsupported objection was dropped; FRO retains ~$414m after dividends before capex |
+| M8 | The 2-year sensitivity conceals the fragility of a long-duration claim | Material | **Correct** | Moot — the duration claim is withdrawn |
+| C9 | "The two methods differ in exactly ONE assumption" is **false** — both use 10%; the difference is the **terminal treatment** | Blocking | **Correct; I was wrong** | Claim reworded. The gap is the discounted difference between a perpetuity and an NAV exit, *not* a discount-rate mismatch |
+| C9b | "Silently capitalises a war premium" is unfair — §13 openly presented a perpetuity, and "war premium" is not separated from supply, distance and sanctions | Material | **Correct** | Rhetoric removed |
+| E | Tanker specifics: 57.9 VLCC-equivalents are not 57.9 identical ships; existing charter coverage is ignored; a 1-yr TC quote is not a forward curve; 350 revenue days ≠ 350 cost days | Material | **Correct** | Carried in full into §20.9 |
+
+### 20.9 Known limitations — what this section does NOT establish
+
+1. **The breakeven bridge is unbuilt.** Opex, G&A, cash interest, scheduled principal, drydock cash vs amortisation, and charter-in costs are not separated. Until they are, EPS and DPS are *validated by calibration only*.
+2. **FRO's 57.9 "VLCC-equivalents" are not 57.9 identical ships.** Suezmax and LR2 earnings do not hold a fixed ratio to VLCC earnings across all markets.
+3. **Existing charter coverage is ignored in the scenarios.** DHT has a five-year Harrier charter at $47,500/day; applying $95,000 to every vessel overstates its rate sensitivity by roughly **$0.10/share** per such vessel.
+4. **A 1-year TC quote is neither a spot print nor a forward curve.** Years two and three cannot be inferred from a twelve-month fixture.
+5. **350 revenue days does not mean 350 cost days.** If the breakevens are calendar-day costs, using 350 understates annual expense by ~$6.3m (DHT) and ~$20.7m (FRO).
+6. **The 5–8 year columns of the grid assume constant earning capacity** with no fleet renewal, and extend beyond the remaining commercial life of many current vessels. They are valuation diagnostics, **not operating plans**.
+7. **FRO's NAV is modelled**, because Frontline discloses no aggregate fleet value.
+8. **Still open from §19:** FRO's entity discontinuity across the 2015 merger, and whether market cap ÷ equity NAV or EV ÷ normalised earnings is the correct cross-era comparator.
+
+> **Not investment advice.** Every number here is a conditional output of a stated model with stated, contestable assumptions.
