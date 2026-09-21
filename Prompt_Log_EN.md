@@ -1589,3 +1589,29 @@ FLAGGED: DHT's "today" fleet value is an ESTIMATE (Dec-2025 aggregate scaled +26
 
 **Files created**: vlcc_cycles/run_pnav_final.py, data/pnav_final.csv, charts/pnav_final.png
 **Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 71: Ex-dividend / adjusted-pricing audit — the user's methodology question
+**Date**: September 20, 2026
+
+User: "你觉得需要考虑除权/复权吗？或者说你在这份报告里考虑了吗？因为除权复权既会影响价格和点位的计算；股息率本身也影响估值。"
+
+Both halves of the question are correct and need different answers. Added vlcc_cycles/run_adjustment_audit.py + §18 in both reports + 4 CSVs + charts/adjustment_audit.png, and softened §13's wording.
+
+THE GOVERNING PRINCIPLE ESTABLISHED: match numerator to denominator, never mix bases inside one calculation. A VALUATION MULTIPLE needs RAW price over contemporaneous book (when a dividend is paid, BOTH price and book equity fall, so raw-over-contemporaneous is self-consistent). A RETURN needs TOTAL return, because the holder actually received the dividends. A YIELD needs DPS over raw price, both current.
+
+HOW BIG IS THE EFFECT: for FRO since Dec-2020, price-only +727% versus total return +1,180% - dividends contributed 453 percentage points, about 40% of the entire outcome. For DHT since Dec-2015, +188% price-only versus +580% total return. Any return quoted price-only would be badly wrong. The report used total return throughout, which is correct.
+
+THE ERROR'S FINGERPRINT CONFIRMED: the "adjusted / raw" ratio IS the §14 error, and it climbs monotonically toward 1.0 as you approach today (DHT 0.42 in 2015, 0.67 in 2020, 0.78 in 2023) because fewer dividends remain to be stripped out. That monotonic signature is the fingerprint of cumulative dividend adjustment and makes the diagnosis certain rather than merely plausible.
+
+🔴 A RESIDUAL ERROR THIS AUDIT UNCOVERED: §14 identified each cycle's P/B peak DATE using the contaminated series. Testing whether the contamination moved those dates showed it moved TWO OF SIX - DHT 2015-16 (2015-12-31 should be 2015-06-30) and DHT 2022-23 (2023-09-30 should be 2023-03-31). Forward returns recomputed from the corrected anchors: DHT 2015-06-30 gives +10%/-26%/-34% (versus the published -32%/-42%/-47%), DHT 2023-03-31 gives +2%/+18%/+17% (versus +16%/+17%/+33%). THE CONCLUSION SURVIVES: 12-month forward return was negative in 5 of 6 corrected peaks versus the published "5 of 7". The finding - a P/B peak is a warning not a timing signal - is unchanged.
+
+🔴 THE USER'S SECOND POINT, AND IT BITES TWICE:
+(a) Payout policy distorts P/B comparisons. A 100%-payout company has flat book by construction; a full-retainer compounds book so its P/B FALLS for identical performance. DHT's book CAGR is 10.7% and FRO's 13.9% (implied ROE 21.4% and 26.1% at ~50% payout). Both pay out roughly half so the distortion BETWEEN them is small - but this is exactly why §13 flagged that "2x book is a MOVING target".
+(b) The historical-yield hurdle needed softening. Rebuilding the five-year average from actual dividends over average raw prices gives DHT 5.5% (Yahoo says 6.42%) and FRO 7.2% (Yahoo says 11.48%). FRO's gap is material. §13's phrase "FRO's 4.9% is less than half its history" was too strong - on the rebuilt basis it is 68% of history. DIRECTION AND RANKING UNCHANGED: DHT's 8.0% is above its own history on either basis, FRO's 4.9% is below on either basis. §13's conclusion holds; the adjective was softened from "severely compressed" to "compressed", and both bases are now shown.
+
+VERDICT: adjustment did NOT change what the report concludes, but it changed almost every number on the way there - and finding that required actively testing for it rather than trusting the data source.
+
+**Files created**: vlcc_cycles/run_adjustment_audit.py, data/adj_dividend_drag.csv, data/adj_error_signature.csv, data/adj_peak_dates.csv, data/adj_payout_effect.csv, charts/adjustment_audit.png
+**Files updated**: vlcc_cycles/report_en.md, vlcc_cycles/report_cn.md, Prompt_Log_EN.md, Prompt_Log_CN.md

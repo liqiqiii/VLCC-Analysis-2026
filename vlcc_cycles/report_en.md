@@ -724,6 +724,7 @@ python run_historical_pb.py     # §14: historical P/B (SUPERSEDED - see the cor
 python run_pnav_corrected.py    # §15: CORRECTED P/B + P/NAV at replacement cost
 python run_supercycle.py        # §16: the 2005-08 super-cycle, from the 20-F filings
 python run_pnav_final.py        # §17: FINAL - NAV from DHT's own 20-F broker valuations
+python run_adjustment_audit.py  # §18: ex-dividend / adjusted-pricing audit
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -805,7 +806,7 @@ This is the strongest part of the framework, and it connects directly to §6's f
 | | TC-based yield at today's price | **5-yr average ACTUAL yield** | Verdict |
 |---|---|---|---|
 | **DHT** | **8.0%** | **6.42%** | ✅ **Still ABOVE its own history — not yet compressed** |
-| **FRO** | **4.9%** | **11.48%** | 🔴 **LESS THAN HALF its history — severely compressed** |
+| **FRO** | **4.9%** | **11.48%** *(Yahoo)* / **7.2%** *(rebuilt — see §18.6)* | 🔴 **BELOW its history on either basis — compressed** |
 
 > **The yield-compression signal the user is looking for is already firing — but only on FRO.**
 
@@ -1324,3 +1325,127 @@ Four sections, five corrections, three data traps cleared (dividend-adjustment, 
 > **After all of it, the case for caution rests on ONE thing — and it is not the asset multiple. It is that FRO's share price embeds a charter rate that no counterparty will actually sign.**
 
 ⚠️ **Remaining flags:** DHT's "today" fleet value is an **estimate** (Dec-2025 aggregate scaled +26% for the move in 5-yr-old values and pro-rated 22→23 hulls) — DHT has not yet published a 2026 figure. **FRO's entire NAV series is modelled**, because Frontline discloses no aggregate fleet market value in any year examined; that is the single largest unfillable gap in this study.
+
+---
+
+## §18 — Ex-dividend / adjusted pricing: a full audit *(answering the user's methodology question)*
+
+> **The user, 20 Sep 2026:** *"你觉得需要考虑除权/复权吗？或者说你在这份报告里考虑了吗？因为除权复权既会影响价格和点位的计算；股息率本身也影响估值。"*
+
+**Both halves of the question are right, and they need different answers.** This section audits every place adjustment matters, and tests whether any conclusion actually moves.
+
+![Adjustment audit](charts/adjustment_audit.png)
+
+*(Reproduce: `python run_adjustment_audit.py` → `data/adj_*.csv`.)*
+
+### 18.1 The governing principle
+
+> **Match the numerator to the denominator. Never mix bases inside one calculation.**
+
+| Calculation type | Correct basis | Why |
+|---|---|---|
+| **Valuation multiple** (P/B, P/NAV, P/E) | **RAW price ÷ contemporaneous book** | When a dividend is paid, **both** the price and book equity fall by roughly the same amount. Raw-over-contemporaneous is internally consistent |
+| **Return** (holding-period outcome) | **TOTAL return (adjusted)** | The holder actually received the dividends |
+| **Dividend yield** | **DPS ÷ raw price**, both current | No time mismatch to create |
+
+### 18.2 How big is the effect? Enormous — which is why this matters
+
+| | Period | Price only | **Total return** | **Dividend contribution** |
+|---|---|---|---|---|
+| **DHT** | since Dec-2015 | +188% | **+580%** | **+393pp** |
+| DHT | since Dec-2020 | +345% | +562% | +217pp |
+| DHT | since Dec-2023 | +137% | +202% | +65pp |
+| **FRO** | since Dec-2015 | +244% | **+670%** | **+426pp** |
+| FRO | since Dec-2020 | +727% | **+1,180%** | **+453pp** |
+| FRO | since Dec-2023 | +156% | +230% | +74pp |
+
+> **For FRO since Dec-2020, dividends contributed 453 percentage points of a 1,180% total return — roughly 40% of the entire outcome.** Any return quoted price-only would be badly wrong. **This report used total return for every return figure.** ✓
+
+### 18.3 ✅ What the report got right
+
+| Where | Basis used | Verdict |
+|---|---|---|
+| §5–§6 cycle returns, §14.6 forward returns | **Total return** (`auto_adjust=True`) | ✅ Correct |
+| §15/§16/§17 P/B and P/NAV | **Raw price ÷ reported book** | ✅ Correct (after the §15 fix) |
+| §13 dividend yield = DPS ÷ current price | Both current, unadjusted | ✅ No mismatch |
+| §16 super-cycle prices | Raw, **converted back through the reverse splits** | ✅ Correct |
+
+### 18.4 🔴 What it got wrong — and the error's fingerprint
+
+§14's source divided an **adjusted** price by an **unadjusted** book. The audit confirms the diagnosis rather than merely asserting it:
+
+| | Date | Raw price | Adjusted | **adj ÷ raw** | Published P/B | Actual P/B | Error |
+|---|---|---|---|---|---|---|---|
+| DHT | Dec-2015 | $8.09 | $3.42 | **0.42** | 0.42x | 1.02x | **−59%** |
+| DHT | Dec-2020 | $5.23 | $3.52 | **0.67** | 0.52x | 0.81x | −36% |
+| DHT | Dec-2023 | $9.81 | $7.70 | **0.78** | 1.16x | 1.53x | −24% |
+| FRO | Dec-2020 | $6.22 | $4.02 | **0.65** | 0.49x | 0.76x | −36% |
+| FRO | Dec-2023 | $20.05 | $15.57 | **0.78** | 1.51x | 1.96x | −23% |
+
+> **The "adjusted ÷ raw" ratio IS the error, and it climbs monotonically toward 1.0 as you approach today** — because fewer dividends remain to be stripped out. **That monotonic signature is the fingerprint of cumulative dividend adjustment**, and it is what makes the diagnosis certain rather than merely plausible.
+
+### 18.5 🔴 A residual error this audit uncovered
+
+**§14 identified each cycle's P/B peak DATE using the contaminated series. Did the contamination move those dates?** It did — for two of six:
+
+| | Cycle | Peak on contaminated | **Peak on corrected** | Moved? |
+|---|---|---|---|---|
+| DHT | 2015-16 | 2015-12-31 | **2015-06-30** | 🔴 **YES** |
+| DHT | 2020 | 2020-03-31 | 2020-03-31 | No |
+| DHT | 2022-23 | 2023-09-30 | **2023-03-31** | 🔴 **YES** |
+| FRO | 2015-16 | 2015-06-30 | 2015-06-30 | No |
+| FRO | 2020 | 2020-03-31 | 2020-03-31 | No |
+| FRO | 2022-23 | 2023-12-31 | 2023-12-31 | No |
+
+**Forward total returns recomputed from the CORRECTED peaks:**
+
+| | Peak | +6m | +12m | +24m |
+|---|---|---|---|---|
+| DHT | **2015-06-30** | +10% | **−26%** | **−34%** |
+| DHT | 2020-03-31 | −23% | **−7%** | −8% |
+| DHT | **2023-03-31** | +2% | +18% | +17% |
+| FRO | 2015-06-30 | +23% | **−29%** | −43% |
+| FRO | 2020-03-31 | −22% | **−14%** | +6% |
+| FRO | 2023-12-31 | +34% | **−22%** | +22% |
+
+> **The conclusion survives.** §14.6 said "12-month forward return was negative in 5 of 7 peaks". On the corrected anchors it is **negative in 5 of 6**. The specific numbers changed; the finding — **a P/B peak is a warning, not a timing signal** — did not.
+
+### 18.6 🔴 The user's second point: dividend yield itself affects valuation
+
+**This is the subtler half, and it bites in two ways.**
+
+**(a) Payout policy distorts P/B comparisons.** A company paying out 100% has flat book and flat price — its P/B is stable by construction. One retaining everything compounds book, so its P/B **falls** for identical business performance.
+
+| | BVPS Dec-2023 | BVPS Jun-2026 | Book CAGR | TTM payout | **Implied ROE** |
+|---|---|---|---|---|---|
+| **DHT** | $6.40 | $8.25 | **10.7%** | 50% | **21.4%** |
+| **FRO** | $10.23 | $14.15 | **13.9%** | 47% | **26.1%** |
+
+> Both pay out roughly half, so the distortion **between these two** is small. But it is precisely why §13 flagged that **"2x book is a MOVING target"** — retained earnings lift the denominator every quarter, at ~11–14% a year.
+
+**(b) 🔴 The historical-yield hurdle in §13 needs softening.** §13 used Yahoo's five-year average yield as the income holder's hurdle. Rebuilt from **actual dividends paid ÷ average raw price** each year:
+
+| Year | DHT dividends | DHT avg price | DHT yield | FRO dividends | FRO avg price | FRO yield |
+|---|---|---|---|---|---|---|
+| 2021 | $0.13 | $5.93 | 2.2% | — | — | — |
+| 2022 | $0.12 | $7.00 | 1.7% | $0.15 | $10.21 | 1.5% |
+| 2023 | $1.15 | $9.62 | **12.0%** | $2.87 | $17.06 | **16.8%** |
+| 2024 | $1.00 | $11.00 | 9.1% | $1.95 | $22.57 | 8.6% |
+| 2025 | $0.32 | $11.51 | 2.8% | $0.38 | $19.34 | 2.0% |
+| **Mean** | | | **5.5%** | | | **7.2%** |
+| *Yahoo's figure* | | | *6.42%* | | | *11.48%* |
+
+> **FRO's gap is material: 7.2% rebuilt versus 11.48% from Yahoo.** The difference is definitional (window and annualisation), not an adjustment error — but **§13's phrasing "FRO's 4.9% is less than half its history" was too strong.** On the rebuilt basis it is **4.9% vs 7.2% = 68% of history.**
+>
+> **The direction is unchanged and the ranking is unchanged:** DHT's TC-based 8.0% is **above** its own history (5.5% or 6.42%, either way); FRO's 4.9% is **below** its own history (7.2% or 11.48%, either way). **§13's conclusion holds; only the adjective should be "compressed" rather than "severely compressed".**
+
+### 18.7 Verdict on the methodology question
+
+| Question | Answer |
+|---|---|
+| Does adjustment need considering? | **Yes — and it is the single biggest source of error in this entire study.** It caused the §15 correction and a residual peak-date error found only here |
+| Did the report consider it? | **Partly. Returns were always on a total-return basis (correct). Multiples were wrong in §14 and fixed in §15/§17. Two peak dates were still wrong until this audit.** |
+| Does dividend yield affect valuation? | **Yes, twice over** — payout policy makes P/B comparisons non-like-for-like and makes any fixed "2x book" line a moving target; and the historical-yield hurdle is definition-sensitive |
+| Does any headline conclusion move? | **No.** Every conclusion survived: P/B peaks are warnings not signals (5 of 6); DHT yields above its history and FRO below; DHT ≈ fairly priced on the TC anchor and FRO ~40% above it |
+
+> **The honest summary: adjustment did not change what this report concludes — but it changed almost every number on the way there, and finding that required actively testing for it rather than assuming the data source had it right.**
