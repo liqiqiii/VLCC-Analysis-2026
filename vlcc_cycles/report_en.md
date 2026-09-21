@@ -726,6 +726,8 @@ python run_supercycle.py        # §16: the 2005-08 super-cycle, from the 20-F f
 python run_pnav_final.py        # §17: FINAL - NAV from DHT's own 20-F broker valuations
 python run_adjustment_audit.py  # §18: ex-dividend / adjusted-pricing audit
 python run_final_synthesis.py   # 20: FINAL synthesis - valuation, targets, exit triggers
+python run_backtest_cycle.py    # 21: back-test of prior forecasts + cycle position
+python run_s21_charts.py        # 21: aggregate summary charts
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -1703,3 +1705,232 @@ The earlier draft concluded that DHT required ~15 years of $95,000/day to justif
 8. **Still open from §19:** FRO's entity discontinuity across the 2015 merger, and whether market cap ÷ equity NAV or EV ÷ normalised earnings is the correct cross-era comparator.
 
 > **Not investment advice.** Every number here is a conditional output of a stated model with stated, contestable assumptions.
+
+
+---
+
+## §21 — ⭐ BACK-TEST OF EVERY PRIOR FORECAST, AND THE CYCLE POSITION IN NUMBERS
+
+> **Written, submitted to GPT-6-Astra under Rule 4b, and REBUILT after that review returned EIGHT blocking findings.** The first draft's two headline claims — that the earnings engine was "validated" and that prior forecasts were "exceeded" — are **both withdrawn**. The corrected reading is the opposite of the draft's. Review record: §21.8.
+
+![Section 21 summary](charts/s21_summary.png)
+
+### 21.1 The engine reconciles with reported Q2-2026 — but that is NOT validation
+
+Feeding the §20 earnings engine each company's **actually achieved** rate:
+
+| | Input TCE | Model quarterly NI | **Reported** | Error |
+|---|---|---|---|---|
+| **DHT** | $126,700/day (fleet avg) | $203.1m | **$198.3m** | **+2.4%** |
+| **FRO** | $152,700/day (VLCC) | $578.0m | **$580.2m** (adjusted) | **−0.4%** |
+
+The first draft called this a validation. **It is not, and the claim is withdrawn.**
+
+**Frontline's own filing defines cash breakeven as covering** *"operating expenses, including dry docks, **repayments of loans**, net interest expense, bareboat hire, time charter hire and net general and administrative expenses."* Loan principal is **not** a P&L expense. Subtracting that breakeven and then subtracting D&A cannot produce accounting earnings. **The objection is confirmed by the filing, not answered by the fit.**
+
+**The close fit is produced by two larger errors cancelling:**
+
+| Q2-2026, US$m | Model | Actual | Overstated by |
+|---|---|---|---|
+| FRO TCE revenue | 773.6 | 753.3 | **+20.3** |
+| FRO deductions to profit | 195.6 | 173.1 | **+22.5** |
+| **FRO net earnings error** | | | **just 2.2** |
+| DHT TCE revenue | 266.1 | 255.0 | **+11.1** |
+| DHT deductions to profit | 63.0 | 57.9 | **+5.1** |
+
+**And the parameters are not separately identified.** Since `NI = A×TCE − (A×breakeven + D&A)`, earnings identify only the **combined intercept**. For DHT, raising breakeven by $1,000/day and cutting D&A by $8.4m leaves every output unchanged; for FRO the offset is $20.3m. **A close fit cannot confirm that either parameter is correct.**
+
+> **Status: an in-sample reconciliation check on one high-rate quarter.** Not an out-of-sample test, not an accounting validation.
+
+**⚠️ FRO's "57.9 VLCC-equivalents" is a modelling choice, not a disclosure.** It was built as `42 + 21×0.5 + 18×0.3` on an older 81-vessel configuration. Frontline's **actual** Q2 ratios were **Suezmax/VLCC 0.730** (assumed 0.500) and **LR2/VLCC 0.605** (assumed 0.300). On the stated 40/19/18 fleet those imply **64.77** equivalents. At $105,000/day that moves FRO's EPS from **$6.04 to $6.92 (+15%)**. Every FRO figure in §20 and §21 uses 57.9 and is therefore **conservative on earnings**.
+
+### 21.2 DHT's spot exposure — three measures, roughly half, not 75%
+
+| Measure | Reading |
+|---|---|
+| Implied by the rounded TCE disclosures | **~50%** of revenue days |
+| DHT-reported spot share of operating days | **48.4%** |
+| Vessels on spot at quarter-end | **11 of 23 = 47.8%** |
+
+All three say **roughly half**. **None supports the 75–79% spot the April model assumed** — and that single assumption is a large part of why the April earnings curve was too high. *(The draft's claim of an "exact 50.0% solve" is withdrawn: the inputs are rounded and the three bases are not interchangeable.)*
+
+### 21.3 The back-test
+
+**A. Price targets — ⚠️ every horizon is still open.** All were 12-month targets; the earliest matures March 2027. These are **interim marks, not completed forecasts**, and no forecasting skill can be claimed from them.
+
+| Set on | Target | Forecast | Now | Gap | Matures |
+|---|---|---|---|---|---|
+| 2026-03-02 | DHT @ $100k, 7x PE | $23.70 | $23.27 | −2% | 2027-03 |
+| 2026-03-02 | FRO @ $100k, 7x PE | $52.60 | $51.42 | −2% | 2027-03 |
+| 2026-04-08 | DHT @ $100k, 7x | $21.69 | $23.27 | +7% | 2027-04 |
+| 2026-04-08 | FRO @ $100k, 7x | $47.47 | $51.42 | +8% | 2027-04 |
+| 2026-04-08 | DHT probability-weighted | $29.05 | $23.27 | **−20%** | 2027-04 |
+| 2026-04-08 | FRO probability-weighted | $64.54 | $51.42 | **−20%** | 2027-04 |
+| 2026-06-26 | DHT base ($95k, 6x) | $17.00 | $23.27 | **+37%** | 2027-06 |
+| 2026-06-26 | FRO base ($95k, 6x) | $38.00 | $51.42 | **+35%** | 2027-06 |
+| 2026-06-26 | DHT bull ($120k, 6.5x) | $25.00 | $23.27 | −7% | 2027-06 |
+| 2026-06-26 | FRO bull ($120k, 6.5x) | $55.00 | $51.42 | −7% | 2027-06 |
+
+**6 of 10 are currently within 10%** — reported as a *status*, not a score.
+
+*Four rows in the first draft were **deleted**: the April "prices" $18.57/$35.08 were the **then-current market prices**, not targets, and the March P/B figures 2.75x/3.65x were labelled **"P/B (trailing)"** — contemporaneous observations. Scoring them manufactured four false successes.*
+
+**B. Conditional earnings error — the only part that can be scored today.** This asks one question: *given the rate that actually occurred, did the published curve give the right profit?* It does **not** test rate forecasting.
+
+Two accounting corrections were required first:
+- **DHT's Q1 reported profit of $164.5m included a $60.0m vessel-sale gain** plus a $1.1m derivative gain. Ordinary Q1 EPS is **~$0.64, not $1.02**. Using the reported figure credits a one-off asset disposal to the freight model.
+- **DHT's Q1 $106,000 is *adjusted* spot TCE (IFRS 15); Q2's $162,600 is *unadjusted*.** The draft averaged two different bases. Both legs are now taken on the adjusted basis → **$130,050/day**.
+
+| Curve | Co | Realised rate | Curve EPS | Actual EPS | Error | Domain |
+|---|---|---|---|---|---|---|
+| April | DHT | $130,050 | 4.21 | **3.72** | **−12%** | in-sample |
+| April | FRO | $152,700 | 11.22 | **10.44** | **−7%** | in-sample |
+| June | DHT | $130,050 | 4.21 | 3.72 | −12% | extrapolated — weak |
+| June | FRO | $152,700 | 11.21 | 10.44 | −7% | extrapolated — weak |
+| March | DHT | $130,050 | 4.62 | 3.72 | **−19%** | in-sample |
+| March | FRO | $152,700 | 12.40 | 10.44 | **−16%** | extrapolated — weak |
+
+> **⭐ ALL SIX POINT THE SAME WAY: every published earnings curve OVERSTATED profit by 7–19% at the rate that actually occurred.**
+>
+> The first draft reported the **opposite** ("EXCEEDED") because it (a) counted a one-off vessel-sale gain as freight earnings and (b) used `np.interp`, which **clamps at the curve endpoint instead of extrapolating**. Both faults were found in external review.
+>
+> **Corrected reading: the rate calls were roughly right; the cost assumptions behind the curves were too generous.**
+
+### 21.4 The freight ladder — the headline is not what anyone earns
+
+| Measure | Level | What it is |
+|---|---|---|
+| Baltic TD3C **assessment**, 14 Sep | **$1,035,000/day** | ⚠️ a **panel assessment**, not a trade |
+| Baltic TD3C round-voyage TCE, 11 Sep | $862,150/day | assessment-derived |
+| **Reported physical fixtures**, w/c 8 Sep | **$530,000–603,000/day** | actual business |
+| **TD34** (loads *outside* Hormuz), 11 Sep | **$465,764/day** | actual index |
+| **1-year time charter** | **$93,000–105,000/day** | the term market |
+| **DHT achieved spot leg**, Q2 | **$162,600/day** | reported |
+| **FRO achieved VLCC TCE**, Q2 | **$152,700/day** | reported |
+| Mid-cycle broker benchmark | ~$30,000/day (range $25–35k) | convention |
+
+**⚠️ TD3C is a panel assessment of "best achievable market value," not an average of fixtures.** The Baltic instructed panellists (Circular 12/26) to use professional judgement where direct fixtures are absent. Physical business is running at roughly **51–58% of the printed benchmark**, because the Hormuz-transit voyage has lost liquidity and cargo is moving by ship-to-ship transfer outside the strait instead. **Do not value a fleet off TD3C.**
+
+**The cleanest observable risk price — same day, same destination:**
+
+> TD3C (inside Hormuz) **$862,150** − TD34 (outside Hormuz) **$465,764** = **a $396,386/day Hormuz transit premium**, or **85% of the non-transit rate.**
+>
+> This is the number that disappears if the strait normalises, and it is **observable daily**.
+
+**And the reality check that most commentary misses:**
+
+| | Q2 achieved | As % of the TD3C TCE print |
+|---|---|---|
+| DHT | $162,600/day | **19%** |
+| FRO | $152,700/day | **18%** |
+
+*(The draft's line "the term market is pricing ~10% of the spot print — that IS the market's own probability that this lasts" is **withdrawn**. A ratio of two rates is not a probability; route, vessel spec, fixture date, optionality, credit and benchmark liquidity all differ.)*
+
+### 21.5 Valuation across the rate range — and the number that matters most
+
+At a **hypothetical 100% payout of modelled recurring EPS**:
+
+| Sustained TCE | DHT NI | DHT EPS | DHT P/E | DHT yield | FRO NI | FRO EPS | FRO P/E | FRO yield |
+|---|---|---|---|---|---|---|---|---|
+| **$30,000** *(mid-cycle)* | **$0m** | **$0.00** | n/m | **0.0%** | **−$174m** | **−$0.78** | n/m | **0.0%** |
+| $45,000 | $126m | 0.78 | 29.8x | 3.4% | $130m | 0.58 | 88.3x | 1.1% |
+| $60,000 | $252m | 1.56 | 14.9x | 6.7% | $434m | 1.95 | 26.4x | 3.8% |
+| $75,000 | $378m | 2.34 | 9.9x | 10.1% | $738m | 3.31 | 15.5x | 6.4% |
+| **$93,000** *(1-yr TC low)* | $529m | 3.28 | **7.1x** | **14.1%** | $1,102m | 4.95 | **10.4x** | **9.6%** |
+| **$105,000** *(1-yr TC high)* | $630m | 3.91 | **6.0x** | **16.8%** | $1,346m | 6.04 | **8.5x** | **11.8%** |
+| $126,700 *(DHT Q2 actual)* | $812m | 5.04 | 4.6x | 21.6% | $1,785m | 8.02 | 6.4x | 15.6% |
+| $152,700 *(FRO Q2 actual)* | $1,031m | 6.39 | 3.6x | 27.5% | $2,312m | 10.39 | 5.0x | 20.2% |
+
+> **⭐ THE SINGLE MOST IMPORTANT ROW IS THE FIRST ONE.** At the industry's own mid-cycle benchmark of **$30,000/day**, on this model **DHT earns exactly zero and Frontline loses $174m a year.** Not "a low yield" — zero and negative. Everything these shares are worth depends on the rate staying far above normal.
+
+**Reverse test — what sustained rate does today's price require?**
+
+| | 3x PE | 5x PE | **7x PE** | 9x PE |
+|---|---|---|---|---|
+| **DHT** | $178,887 | $119,332 | **$93,809** | $79,629 |
+| **FRO** | $226,897 | $151,580 | **$119,301** | $101,368 |
+
+At **7x** — the sell threshold from the repo's own framework — **DHT is priced almost exactly at the 1-year TC market ($93,809 vs $93,000)**, while **FRO requires $119,301, about 14% above the top of it.**
+
+### 21.6 Cycle indicators — a dashboard, NOT a vote
+
+| Indicator | Reading | Reference |
+|---|---|---|
+| Achieved VLCC TCE vs mid-cycle | $152,700 | 4.4–6.1x |
+| 1-yr TC vs mid-cycle | $105,000 | 3.0–4.2x |
+| Achieved TCE / 1-yr TC | 1.5x | term market lags |
+| Hormuz premium (TD3C−TD34) | $396,386/day | zero if strait normalises |
+| 5-yr-old vs newbuild | **1.16x** | >1.0x is unusual |
+| 20-yr-old vs scrap | **3.4x** | |
+| VLCCs ordered in 2026 | **217** | vs ~2/yr scrapped in 2025 |
+| Orderbook, % of fleet by capacity | **25%** | was 2% in 2023 |
+| P/NAV vs own record high | 1.62x / 1.69x | prior max 1.36x / 1.50x |
+| P/E on Q2-annualised earnings | 4.8x / 4.9x | |
+| Deliveries 2027 / 2028 | ~41–68 / ~125–127 | the supply wall |
+
+> **⚠️ DO NOT read this as "8 of 12 say late-cycle."** These indicators are **not independent** — they are largely the same freight shock measured repeatedly. Achieved-TCE/mid-cycle and achieved-TCE/1-yr-TC share a numerator; the three asset ratios describe one repricing; 2026 orders and the orderbook percentage are the same fact twice. **A tally of correlated measures is not a probability and cannot date a turn.**
+
+**One indicator was over-interpreted and is downgraded.** The draft called rising appreciation with age an "inversion" proving vintage-asset speculation. In absolute dollars:
+
+| Age | Value now | A year earlier | Gain |
+|---|---|---|---|
+| 5-yr | $151.1m | $116.2m | **+$34.9m** |
+| 20-yr | $71.1m | $37.4m | **+$33.7m** |
+
+**+90% and +30% are almost the same absolute dollar gain on different bases.** That is not independent proof of irrationality.
+
+**The honest summary: freight, asset prices, supply and equity multiples are all elevated together, which is consistent with a late-cycle state. Nothing here estimates when it turns.**
+
+### 21.7 ⭐ The decision — not "cheap on P/E vs dear on NAV"
+
+§20 said expensive (asset-based). §21's grid looks cheap (earnings-based). **Neither settles it.** Only total return does.
+
+**One-year total return at $105,000/day, exiting at today's NAV** *(illustrative — holds NAV flat, ignores ageing, capex and debt change)*:
+
+| | Dividend | Exit NAV | Total | Price | **Return** |
+|---|---|---|---|---|---|
+| **DHT** | $3.91 | $14.33 | $18.24 | $23.27 | **−21.6%** |
+| **FRO** | $6.04 | $30.37 | $36.41 | $51.42 | **−29.2%** |
+
+**How long to earn back the premium over NAV (undiscounted):**
+
+| | Premium/share | Annual DPS | **Years** |
+|---|---|---|---|
+| **DHT** | $8.94 | $3.91 | **2.29** |
+| **FRO** | $21.05 | $6.04 | **3.48** |
+
+> **THAT is the decision.** At the current 1-year TC rate, DHT needs ~2.3 years of dividends and FRO ~3.5 years **just to recover today's premium to asset value** — before discounting, and before NAV erodes with ageing. The question is not which multiple to prefer. It is **whether the rate holds long enough to earn back the premium.**
+
+**⚠️ Payout — precise wording matters.** DHT paid $1.22 against **ordinary** EPS $1.22 (reported EPS was $1.23). FRO's $2.61 is 100% of **adjusted** EPS but only **88.2% of reported** EPS, and its additional $0.80 was announced **subject to completion of vessel sales**. The yield grid is a **hypothetical** 100% payout of **modelled recurring** EPS — not an assured forward yield.
+
+### 21.8 The GPT-6-Astra review record (Rule 4b)
+
+| # | Finding | Severity | Verdict | Action |
+|---|---|---|---|---|
+| A1 | FRO's filing confirms cash breakeven **includes loan repayments**; the close fit contains offsetting revenue/cost errors | Blocking | **Correct** | **"Validated" WITHDRAWN**; offsetting errors published (§21.1) |
+| A2 | "57.9 VLCC-equivalents" is a modelling choice on an old 81-vessel config; actual ratios are 0.730/0.605, implying 64.77 | Blocking | **Correct** | Construction and +15% EPS sensitivity disclosed |
+| A3 | The "$30,000/day" valuation row actually showed the $45,000 values | Blocking | **My review prompt was wrong; the script was right** | Verified: at $30k **DHT $0.00 and FRO −$0.78**. Now the section's headline number |
+| A4 | DHT's realised rate mixed adjusted Q1 with unadjusted Q2; EPS comparator included a $60.0m vessel-sale gain | Blocking | **Correct** | Rebuilt on matched bases → $130,050/day and **$3.72** ordinary EPS |
+| A5 | `np.interp` **clamps**, it does not extrapolate — three verdicts were wrong | Blocking | **Correct — a real code bug** | True linear extrapolation implemented; out-of-domain rows flagged weak |
+| A6 | Four "forecasts" were then-current prices and trailing multiples | Blocking | **Correct** | All four rows **deleted** |
+| A7 | The headline score did not reconcile to the displayed rows | Blocking | **Correct** | Aggregate score **abandoned**; status reported instead |
+| A8 | "TC/spot is the market's own probability" is mathematically unjustified | Blocking | **Correct** | **Withdrawn** (independently caught before the review returned) |
+| B1 | Parameters are not separately identified; not an out-of-sample test | Material | **Correct** | Identification algebra published; relabelled in-sample |
+| B2 | The 50% algebra estimates revenue-day exposure, not vessel share | Material | **Correct** | Three measures now shown separately |
+| B3 | Horizons have not matured; observations are correlated; "exceeded" ≠ accuracy | Material | **Correct** | Maturity dates shown; no hit-rate claimed |
+| B4 | Reported / adjusted / declared / paid were conflated | Material | **Correct** | Bridges and conditions spelled out |
+| B5 | Market data measure different things (orderbook is tanker-wide; 21 recycled ≠ 21 VLCCs) | Material | **Correct** | Scope qualifiers added throughout |
+| B6 | "8 of 11" overcounts correlated evidence; age appreciation over-interpreted | Material | **Correct** | Tally **withdrawn**; absolute-dollar table added |
+| B7 | The cheap/expensive reconciliation needs total-return arithmetic | Material | **Correct** | §21.7 rebuilt around total return and premium payback |
+
+### 21.9 What this section does NOT establish
+
+1. **The earnings engine is still not accounting-validated.** A proper bridge (opex, G&A, cash interest, scheduled principal, drydock cash vs amortisation, charter hire) remains unbuilt.
+2. **No dividend-capacity waterfall.** EPS is not distributable cash; principal repayment and capex compete for it.
+3. **No fleet/charter schedule by quarter.** Delivery dates, disposals, charter expiries and revenue days drive earnings duration and are not modelled.
+4. **One perpetual rate, not a path.** How fast rates normalise, and how contracted charters delay transmission, is not modelled.
+5. **Freight and asset values are stressed independently** when they are in fact correlated — this understates downside.
+6. **The validation set is one high-rate quarter**, in which large revenues make intercept errors look small.
+7. **"Pure numbers" is itself a claim that does not fully hold:** conversion factors, revenue days, the mid-cycle benchmark, thresholds and payout are all modelling choices.
+
+> **Not investment advice.**

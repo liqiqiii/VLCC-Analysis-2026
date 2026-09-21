@@ -1679,3 +1679,38 @@ Ten exit triggers are given, all anchored on observables rather than model outpu
 
 **Files created**: vlcc_cycles/run_final_synthesis.py, run_final_synthesis_v3.py, write_s20.py, patch_s19.py, data/final_*.csv (7), charts/final_synthesis.png
 **Files updated**: .github/copilot-instructions.md (Rule 4b), vlcc_cycles/report_en.md, report_cn.md (§20 added, §19 amended), Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 74: Back-test of every prior forecast + cycle position in numbers — EIGHT more blocking errors, and the conclusion REVERSED
+
+**User prompt (verbatim):** "继续做一个部分。用我们在三月和四月/九月做的模型为基础，验证那些关于pe/关于tce和总利润的想法-看看哪些实现了，然后哪些超出预期；然后根据那个估值框架，再单独开一期总结，就用纯数字，来验证这个周期的位置；简单来说我不希望有太多的推论和逻辑推导；我们已经在这里研究了很久，我们就研究tce，二手船价格，期租价格，实际的spot/charter比例，来计算年度利润；潜在pe；股息率；pb和任何你觉得根据我们已有的谈话必要的东西；来做一个最后的总结，我希望获得详实的预测；关于现在的估值水平和什么时候应该退出。全用数字说话。做完自己double check，确保数字来源的可信度，并交由astra review然后push." — followed by: "如果可以的话；再做一些聚合的图来方便展示结果。这当然是最后一步；不要影响现在的工作流。"
+
+**Three explore agents mined 40 prior reports** for every dated forecast in the March / April-June / cycle-position rounds, with verbatim provenance. Actuals were gathered from DHT's and Frontline's Q2-2026 releases and from Baltic / Signal Group / Allied market data.
+
+**🔴 I CAUGHT ONE FATAL ERROR MYSELF, BEFORE ASTRA REPORTED.** I had built the analysis on Baltic TD3C at ~$1.1m/day. The primary source shows **TD3C is a PANEL ASSESSMENT of "best achievable market value," not a transaction price** — the Baltic instructed panellists (Circular 12/26) to use judgement where fixtures are absent, because the Hormuz-transit voyage has lost liquidity. **Reported physical fixtures were $530,000-603,000/day, roughly half the print.** I deleted the claim "the term market is pricing ~10% of the spot print — that IS the market's own probability that this lasts" and replaced the whole freight section with a transactable ladder, plus the cleanest observable risk price in the market: **TD3C $862,150 − TD34 $465,764 = a $396,386/day Hormuz transit premium**, same day, same destination. And the reality check: **DHT and FRO actually earn 19% and 18% of the TD3C print.**
+
+**🔴 ASTRA THEN RETURNED EIGHT BLOCKING FINDINGS. The two headline claims of my draft are both WITHDRAWN, and the corrected conclusion is the OPPOSITE of what I first wrote.**
+
+1. **[A1] "The engine is validated" — WITHDRAWN.** Frontline's filing explicitly defines cash breakeven as including **"repayments of loans."** Principal is not a P&L expense, so the spec cannot produce accounting earnings. Worse, Astra showed the close fit is **two larger errors cancelling**: FRO revenue overstated $20.3m, deductions overstated $22.5m, leaving a deceptively small $2.2m error. And the parameters are **not separately identified** — for DHT, breakeven +$1,000/day with D&A −$8.4m leaves every output unchanged. Relabelled an **in-sample reconciliation check**.
+2. **[A5] A REAL CODE BUG.** I used `np.interp` to score published earnings curves at the realised rate, labelling out-of-domain rows "extrapolated." **`np.interp` CLAMPS to the endpoint; it does not extrapolate.** Three verdicts were wrong.
+3. **[A4] DHT's Q1 reported profit of $164.5m included a $60.0m VESSEL-SALE GAIN.** Counting it credited a one-off asset disposal to a freight model. Ordinary Q1 EPS is **$0.64, not $1.02** → annualised **$3.72, not $4.48**. I had also averaged Q1 **adjusted** TCE with Q2 **unadjusted** TCE; corrected to $130,050/day on a matched basis.
+4. **[A6] Four "forecasts" were not forecasts.** April's $18.57/$35.08 were the **then-current prices**; March's 2.75x/3.65x were labelled **"P/B (trailing)"**. Scoring them manufactured four false successes. All four deleted.
+5. **[A2] FRO's "57.9 VLCC-equivalents" is a modelling choice, not a disclosure** — `42 + 21×0.5 + 18×0.3` on an old 81-vessel config. Actual Q2 ratios are **0.730 and 0.605**, implying **64.77**. Disclosed, with the +15% EPS sensitivity.
+6. **[A7]** the headline score did not reconcile to the displayed rows → **aggregate score abandoned**.
+7. **[B6]** "8 of 11 say late-cycle" overcounts correlated evidence; and the age-appreciation "inversion" is **+$34.9m vs +$33.7m — nearly the same absolute gain on different bases**. Downgraded.
+8. **[B7]** the cheap/dear reconciliation needed total-return arithmetic, not rhetoric.
+
+**THE REVERSAL.** After stripping the vessel-sale gain and fixing the extrapolation, **all six earnings comparisons point the same way: every published curve OVERSTATED profit by 7-19% at the rate that actually occurred.** My draft had reported the opposite ("EXCEEDED"). The corrected reading: **the rate calls were roughly right; the cost assumptions behind them were too generous** — above all the April model's 75-79% spot assumption, when DHT's actual Q2 exposure was ~50% on all three measures (50% of revenue days, 48.4% of operating days, 11 of 23 vessels).
+
+**[A3] — and one where Astra was right about the number but the fault was MINE, in the review prompt.** I told Astra the $30,000/day row showed DHT EPS $0.78 and FRO $0.58; those are the **$45,000** values. The script was correct all along. The true figures are now the section's headline: **at the industry's own mid-cycle benchmark of $30,000/day, DHT earns exactly ZERO and Frontline LOSES $174m a year.**
+
+**WHAT SURVIVES AS THE ANSWER TO "WHERE ARE WE AND WHEN TO EXIT":** not a multiple, but **total return**. At $105,000/day with a one-year hold exiting at today's NAV, DHT returns **−21.6%** and FRO **−29.2%**. And the decisive arithmetic: **DHT needs ~2.3 years of dividends and FRO ~3.5 years just to earn back today's premium to asset value** ($8.94 and $21.05 per share), before discounting and before NAV erodes with ageing. At 7x PE — the repo's own sell threshold — **DHT is priced almost exactly at the 1-year TC market ($93,809 vs $93,000) while FRO requires $119,301, ~14% above the top of it.**
+
+**One supply fact moved hard against the thesis: 217 VLCCs were ordered in 2026 alone**, against a May estimate that the *entire* orderbook was ~142 vessels. Orderbook is now ~25% of fleet capacity versus 2% in 2023, while only 21 tankers were recycled in 1H-2026.
+
+Six aggregate summary charts were built as the final step, per the user's follow-up request.
+
+**Files created**: vlcc_cycles/run_backtest_cycle.py, run_s21_charts.py, write_s21.py, data/s21_*.csv (6), charts/s21_summary.png
+**Files updated**: vlcc_cycles/report_en.md, report_cn.md (§21), Prompt_Log_EN.md, Prompt_Log_CN.md

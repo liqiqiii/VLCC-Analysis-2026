@@ -1,0 +1,17 @@
+date,source,metric,forecast,actual,diff_pct,matures,status
+2026-03-02,Deep Dive,"DHT target @ $100k, 7x PE",23.7,23.27,-2,2027-03,OPEN
+2026-03-02,Deep Dive,"FRO target @ $100k, 7x PE",52.6,51.42,-2,2027-03,OPEN
+2026-04-08,April Update,"DHT target @ $100k, 7x",21.69,23.27,7,2027-04,OPEN
+2026-04-08,April Update,"FRO target @ $100k, 7x",47.47,51.42,8,2027-04,OPEN
+2026-04-08,April Update,DHT prob-weighted target,29.05,23.27,-20,2027-04,OPEN
+2026-04-08,April Update,FRO prob-weighted target,64.54,51.42,-20,2027-04,OPEN
+2026-06-26,Cycle Jun26,"DHT base target ($95k, 6x)",17.0,23.27,37,2027-06,OPEN
+2026-06-26,Cycle Jun26,"FRO base target ($95k, 6x)",38.0,51.42,35,2027-06,OPEN
+2026-06-26,Cycle Jun26,"DHT bull target ($120k, 6.5x)",25.0,23.27,-7,2027-06,OPEN
+2026-06-26,Cycle Jun26,"FRO bull target ($120k, 6.5x)",55.0,51.42,-7,2027-06,OPEN
+April Update,April Update,DHT EPS | realised rate,4.21,3.72,-12,n/a,in-sample
+April Update,April Update,FRO EPS | realised rate,11.22,10.44,-7,n/a,in-sample
+Cycle Jun26,Cycle Jun26,DHT EPS | realised rate,4.21,3.72,-12,n/a,extrapolated
+Cycle Jun26,Cycle Jun26,FRO EPS | realised rate,11.21,10.44,-7,n/a,extrapolated
+Deep Dive,Deep Dive,DHT EPS | realised rate,4.62,3.72,-19,n/a,in-sample
+Deep Dive,Deep Dive,FRO EPS | realised rate,12.4,10.44,-16,n/a,extrapolated
