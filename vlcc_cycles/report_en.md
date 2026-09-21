@@ -723,6 +723,7 @@ python run_cycle_top.py         # §13: TC anchor, 2x P/B ceiling, yield compres
 python run_historical_pb.py     # §14: historical P/B (SUPERSEDED - see the correction notice)
 python run_pnav_corrected.py    # §15: CORRECTED P/B + P/NAV at replacement cost
 python run_supercycle.py        # §16: the 2005-08 super-cycle, from the 20-F filings
+python run_pnav_final.py        # §17: FINAL - NAV from DHT's own 20-F broker valuations
 ```
 
 Cycle windows and rate anchors are explicit/editable at the top of `run_cycle_model.py`. **Data:** `vlcc_cycles/data/cycle_multiples.csv`. **Chart:** `vlcc_cycles/charts/fro_dht_history.png`.
@@ -1010,6 +1011,8 @@ This is the strongest part of the framework, and it connects directly to §6's f
 
 ## §15 — Valuing the fleet at REPLACEMENT COST: P/NAV at every cycle top *(supersedes §14)*
 
+> **⚠️ The P/NAV figures in this section are themselves superseded by §17**, which replaces the modelled fleet values with DHT's own 20-F broker valuations and corrects a mislabelled vessel price (US$174.5m is a *resale*, not a 5-year-old). The method here is sound; the inputs were improved. **Use §17's numbers.**
+
 > **The user, 20 Sep 2026:** *"那帮我按照船队重置成本进行估值；就按照每个周期顶峰的卖相似年份二手船价格。"*
 
 This closes the gap §14 left open — and in doing so it **overturns §14's conclusion**.
@@ -1241,3 +1244,83 @@ The "P/NAV 20.24x" the model prints for FRO at Dec-2008 is **not a valuation**. 
 | What is the real 2008 lesson? | **Leverage, not valuation.** NAV fell 96% because debt did not fall with ship values. Today's balance sheets would lose ~50% in the same crash |
 
 ⚠️ **Rule 4 flags for §16:** (a) FRO's end-2007 fleet is **assumed equal to end-2008** — the FY2007 20-F was not parsed, and FRO was taking newbuilding deliveries, so end-2007 was probably slightly smaller, which would make its 2007 NAV *lower* and P/NAV *higher*; (b) 2007-08 vessel values are broker/press ranges (5-yr-old VLCC US$150–165m at end-2007, US$80–95m at end-2008); (c) average fleet age in 2007-08 is estimated at 7–8 years; (d) DHT's net debt for 2007-08 is derived from current + long-term liabilities less cash, which slightly overstates interest-bearing debt; (e) FRO's net debt is proxied as total liabilities less equity, which **overstates** it and therefore makes FRO's 2007 P/NAV look *higher*, not lower.
+
+---
+
+## §17 — FINAL: NAV from the filings themselves *(supersedes the P/NAV numbers in §15)*
+
+Research into the 20-F filings produced something better than any broker range:
+
+> **DHT publishes a per-vessel third-party broker valuation table in EVERY 20-F, next to carrying value.** The aggregates reconcile *exactly* to the prose in the same filing — e.g. FY2020 carrying US$1,476.4m − market US$1,414.0m = the **US$62.4m shortfall DHT itself discloses**. DHT's NAV is therefore **company-reported, not modelled**.
+
+![Final P/NAV](charts/pnav_final.png)
+
+*(Reproduce: `python run_pnav_final.py` → `data/pnav_final.csv`.)*
+
+### 17.1 🔴 Two more corrections this forced
+
+**① The US$174.5m I used as "5-year-old VLCC" is a RESALE price, not a 5-year-old.**
+
+| Source | 5-yr-old | Newbuild | Resale |
+|---|---|---|---|
+| Signal Ocean, 7-May-2026 | **US$138m** | US$129m | **US$174.5m** ← what I was using |
+| Allied, 2-Sep-2026 | **~US$151m** | ~US$130m | ~US$178m |
+
+Using the resale price inflated NAV and therefore **understated** today's P/NAV. Corrected to **US$151m**.
+
+**② DHT's end-2015 fleet was 18 vessels (15 VLCC + 1 Suezmax + 2 Aframax), not 14 VLCCs**, and the share count was **92.910m**, not the 112m the aggregator reported. Both of my 2015 figures were wrong.
+
+### 17.2 The final table
+
+**DHT — NAV from its own disclosed broker valuations**
+
+| Date | Ships | Fleet MV US$m | Net debt | Shares m | NAVPS | Price | **P/NAV** | **P/B** | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| Dec-2015 | 18 | **1,050.0** | 495.7 | 92.9 | $5.97 | $8.09 | **1.36x** | 1.02x | 20-F |
+| Dec-2020 | 27 | **1,414.0** | 381.4 | 170.8 | $6.05 | $5.23 | **0.87x** | 0.81x | 20-F |
+| Dec-2023 | 24 | **1,965.5** | 354.0 | 161.0 | $10.01 | $9.81 | **0.98x** | 1.53x | 20-F |
+| Dec-2025 | 22 | **1,961.0** | 349.7 | 160.8 | $10.02 | $12.21 | **1.22x** | 1.73x | 20-F |
+| **Today** | 23 | *2,583* | 273.1 | 161.2 | *$14.33* | $23.27 | **1.62x** | **2.82x** | *est.* |
+
+**FRO — modelled (Frontline discloses no aggregate fleet value in any year examined)**
+
+| Date | Ships | Fleet MV US$m | Net debt | Shares m | NAVPS | Price | **P/NAV** | **P/B** |
+|---|---|---|---|---|---|---|---|---|
+| Dec-2020 | 62 | 3,150 | 2,073.9 | 197.7 | $5.44 | $6.22 | **1.14x** | 0.76x |
+| Dec-2023 | 76 | 6,132 | 3,150.7 | 222.6 | $13.39 | $20.05 | **1.50x** | 1.96x |
+| **Today** | 81 | 8,875 | 2,113.4 | 222.6 | $30.37 | $51.42 | **1.69x** | **3.63x** |
+
+### 17.3 ⭐ The final answer to "how does it compare to 2005-08?"
+
+| | **2007 super-cycle** | **Best of 2015-2025** | **TODAY** |
+|---|---|---|---|
+| **DHT P/B** | **5.11x** | 1.73x | 2.82x |
+| **DHT P/NAV** | 0.79x* | 1.36x | **1.62x** |
+| **FRO P/B** | **8.05x** | 1.96x | 3.63x |
+| **FRO P/NAV** | 1.33x* | 1.50x | **1.69x** |
+
+\* *2007 P/NAV is modelled, and DHT's is distorted by its charter-vehicle business model — see §16.4.*
+
+**Two answers, and both are true:**
+
+1. **Against the 2005-08 super-cycle, today is far cheaper on book.** 2.82x and 3.63x versus **5.11x and 8.05x**. The super-cycle companies were financed with 83–88% debt, so book equity was tiny. **Today's P/B is roughly half the super-cycle level.**
+
+2. **Against the 2015–2025 cycle tops, today IS the most expensive on NAV — but only modestly.** DHT 1.62x is **1.19×** its prior peak (1.36x, Dec-2015); FRO 1.69x is **1.13×** its prior peak (1.50x, Dec-2023). **That is a premium, not a bubble.**
+
+> **The honest synthesis: today is the richest asset multiple of the modern era by ~15–20%, but nowhere near the leverage-inflated multiples of 2007. And the 2007 comparison is the wrong one anyway, because the capital structures are unrecognisably different.**
+
+### 17.4 What has survived every correction
+
+Four sections, five corrections, three data traps cleared (dividend-adjustment, reverse splits, resale-vs-5-year-old mislabel). **What still stands:**
+
+| Finding | Status |
+|---|---|
+| Today is unprecedented / a bubble on asset value | **🔴 DEAD** — 1.13–1.19× the prior peak is a premium, not a bubble |
+| 2.0x P/B is a meaningful ceiling | **🔴 DEAD** — DHT was 5.11x in 2007 |
+| **Leverage, not valuation, is what destroyed capital in 2008** | ✅ **STANDS** — FRO's NAV/share fell 96% (US$36.18 → US$1.46) while net debt was unchanged. Today's ~8%/18% net-debt-to-fleet would lose ~50% in the same crash |
+| **§13: FRO needs a sustained TC of ~US$140k/day against a US$93–105k market** | ✅ **STANDS, UNREFUTED, and is now the only live sell-side argument** |
+| DHT is priced ≈ on the TC anchor (needs US$100,086/day) | ✅ **STANDS** |
+
+> **After all of it, the case for caution rests on ONE thing — and it is not the asset multiple. It is that FRO's share price embeds a charter rate that no counterparty will actually sign.**
+
+⚠️ **Remaining flags:** DHT's "today" fleet value is an **estimate** (Dec-2025 aggregate scaled +26% for the move in 5-yr-old values and pro-rated 22→23 hulls) — DHT has not yet published a 2026 figure. **FRO's entire NAV series is modelled**, because Frontline discloses no aggregate fleet market value in any year examined; that is the single largest unfillable gap in this study.
