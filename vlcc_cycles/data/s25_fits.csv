@@ -1,0 +1,4 @@
+spec,r2,pred,mult_vs_2025
+price ~ rate (linear),0.848,35.43,1.87
+log price ~ log rate (elasticity),0.917,34.78,1.83
+price ~ modelled EPS (constant P/E),,135.61,7.14

@@ -2644,3 +2644,83 @@ Frontline's own next-12-month VLCC **cash breakeven: $25,000/day.**
 **2024's rate fell 12% ($49,200 → $43,400) and the shares fell 22% on total return.** When the rate fell, the equity fell.
 
 > **So the 2022–25 rise was not a detached re-rating or a bubble.** It was a company crossing from **loss-making to highly profitable** on a rate that never needed to reach $100k — amplified by fleet growth, asset appreciation and a payout that a price chart does not show. **The $100k+ rates only arrived in 2026, and are a separate event on top of all of this.**
+
+
+---
+
+## §25 — ⭐ "On the 4-year fit, does a $100k rate imply the stock goes up 4x?" — No, and it has mostly happened already
+
+### 25.1 What the fit actually says — and why the answer is unidentified
+
+Fitting the same four annual observations three defensible ways:
+
+| Specification | R² | Predicted at $100k | **vs end-2025** |
+|---|---|---|---|
+| price ~ rate (linear) | 0.848 | $35.43 | **1.87×** |
+| *[price ~ margin over breakeven — **identical by construction**, since margin = rate − constant]* | — | — | — |
+| log price ~ log rate (constant elasticity) | 0.917 | $34.78 | **1.83×** |
+| price ~ modelled EPS (**constant P/E**) | n/a | $135.61 | **7.14×** |
+
+> **The same four points give anything from 1.83× to 7.14×.** That spread *is* the answer: **with n = 4 the functional form is unidentified**, so the multiple is essentially whatever you assume.
+>
+> Note that **only the constant-P/E case gets near 4×** — and a constant P/E at a cycle peak is precisely what this report's own framework says does not happen (peak zone 2.5–3.5×, §21).
+
+⚠️ **And $100,000 is far outside the fitted range.** The sample spans **$15,300 to $49,200**; $100,000 is **2.0× the top of it**. Extrapolating a four-point fit past double its own range is not a forecast — it is an assumption wearing a regression's clothes.
+
+### 25.2 ⭐ The decisive point: most of the move has already happened
+
+| | |
+|---|---|
+| FRO end-2025 | **$21.82** |
+| FRO now | **$51.42** = **2.36× on price**, **2.71× on total return** |
+
+**And the rate has already exceeded $100k:**
+
+- FRO **achieved** VLCC TCE, Q2-2026: **$152,700/day** (reported, §21)
+- FRO **contracted** Q1-2026: **$107,100/day at 92% covered** (§24)
+- FRO FY2025 average: $47,200/day
+
+> **The "$100k scenario" is not a future case waiting to be priced — it is the current state, and the shares have already re-rated 2.4× this year.** The question treats an event that has largely occurred as if it were still ahead. Note too that **2.36× already exceeds what the linear fit (1.87×) would have predicted.**
+
+### 25.3 Four reasons the extrapolation breaks — each quantified
+
+**(a) The 2021–25 move crossed zero. That cannot repeat.**
+
+| | |
+|---|---|
+| 2021 margin over breakeven | **−$9,700/day (loss-making)** |
+| 2025 margin | **+$22,200/day** |
+
+Going from a loss to a profit is an *infinite* percentage change in earnings. Going from a profit to a bigger profit is not. **The next leg cannot borrow that arithmetic.**
+
+**(b) P/E compresses at peaks.** At a *sustained* rate, the model gives:
+
+| Sustained rate | Model EPS | P/E at today's $51.42 | Price at 3× | at 5× | at 7× |
+|---|---|---|---|---|---|
+| $47,200 | $0.78 | 65.7× | $2.35 | $3.91 | $5.48 |
+| $75,000 | $3.31 | 15.5× | $9.94 | $16.57 | $23.19 |
+| **$100,000** | **$5.59** | **9.2×** | **$16.77** | **$27.94** | **$39.12** |
+| $152,700 | $10.39 | 5.0× | $31.16 | $51.93 | $72.70 |
+
+> At a sustained $100,000/day, **today's $51.42 is already 9.2× the modelled earnings.** For the shares to reach 4× end-2025 (**$87.28**) on $100k earnings would require a **P/E of 15.6×** — roughly **five times** the historical peak-zone multiple.
+
+**(c) Fleet growth is not repeatable.** The 24 Euronav VLCCs lifted earning capacity independently of the rate (§24). There is no comparable acquisition in the 2026 numbers.
+
+**(d) NAV is now a ceiling that the 2021 base did not have.**
+
+| | |
+|---|---|
+| FRO NAV/share today | $30.37 |
+| Price / NAV today | **1.69×** |
+| A 4× from end-2025 ($87.28) would be | **2.87× NAV** |
+| Filing-sourced historical maximum (§17) | **1.50×** |
+
+**In 2021 the shares traded below NAV, so a re-rating had room. They no longer do.**
+
+### 25.4 What the fit can and cannot support
+
+> **CAN say:** over 2022–25 the rate direction and the equity direction agreed in **4 of 4 years**, and the annual relationship was tight (§24).
+>
+> **CANNOT say:** that an elasticity measured between $15,300 and $49,200 carries to $100,000. The sample contains **no observation above $49,200**, it contains a **sign change in profitability that cannot recur**, and the dependent variable is now **bounded by asset value** in a way it was not in 2021.
+
+**The better question is the one §21 already asks:** forget elasticity, and ask *how many years of a given rate the price already embeds.* At a 7× P/E, today's price implies about **$119,300/day sustained — above $100k, not below it.** On that framing the shares are not waiting for a $100k rate to arrive; **they are already discounting one better than $100k, indefinitely.**
