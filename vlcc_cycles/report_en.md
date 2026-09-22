@@ -2572,3 +2572,75 @@ A log decomposition splits it almost exactly in half: **51% from the price rise,
 ### 23.7 The general lesson
 
 **P/B is not comparable across eras when the capital structure changes.** Three things break it, and Frontline had all three at once: a payout ratio at or above 100% (book cannot accumulate), off-own-balance-sheet or leased tonnage (assets sit elsewhere), and extreme gearing (a small denominator). **For asset-heavy cyclicals, compare price to the market value of the assets, not to accounting book.**
+
+
+---
+
+## §24 — ⭐ FRO 2022 to end-2025: the shares tripled while rates never reached $100k/day
+
+> **Every rate below is Frontline's OWN reported VLCC spot TCE**, from its SEC 6-K results releases — not a benchmark and not an estimate: FY2022 `0000919574-23-001981`, FY2023 `0000919574-24-001843`, FY2025 `0000919574-26-001430` (which also carries the FY2024 column).
+
+### 24.1 ⚠️ First, the premise — rates did NOT reach $100k/day in 2025
+
+| Year | **Annual average** | Quarterly detail |
+|---|---|---|
+| 2021 | **$15,300** | — |
+| 2022 | **$31,300** | Q1 $15,700 · Q2 $16,400 · Q3 $25,000 · **Q4 $63,200** |
+| 2023 | **$49,200** | Q1 $52,500 · **Q2 $64,000** · Q3 $42,500 · Q4 $39,200 |
+| 2024 | **$43,400** | — |
+| 2025 | **$47,200** | Q1 $37,200 · Q2 $43,100 · Q3 $34,300 · **Q4 $74,200** |
+| **Q1-2026** | **$107,100 contracted, 92% covered** | — |
+
+Frontline's own next-12-month VLCC **cash breakeven: $25,000/day.**
+
+> **The highest single quarter in the whole 2022–25 window was Q4-2025 at $74,200. The highest annual average was 2023 at $49,200.** US$100k/day is a **2026** phenomenon — it first appears in the Q1-2026 *contracted* figure of $107,100.
+>
+> **So the shares did not rise on a $100k rate.** They rose on a market that went from **$15,300 to ~$47,200 against a $25,000 breakeven.**
+
+### 24.2 What the shares actually did — and the rate alongside
+
+| Year | VLCC TCE | Rate change | FRO price | Price ret | **Total ret** | Same direction? |
+|---|---|---|---|---|---|---|
+| 2022 | $31,300 | **+105%** | $7.07 → $12.14 | +72% | **+74%** | ✅ |
+| 2023 | $49,200 | **+57%** | $12.14 → $20.05 | +65% | **+96%** | ✅ |
+| **2024** | **$43,400** | **−12%** | $20.05 → $14.19 | −29% | **−22%** | ✅ |
+| 2025 | $47,200 | **+9%** | $14.19 → $21.82 | +54% | **+57%** | ✅ |
+
+> **The rate direction and the equity direction agree in 4 of 4 years.** That is exactly what §22.5e predicted: daily R² ~0.10, weekly ~0.37, and the relationship keeps tightening as the horizon lengthens and idiosyncratic noise cancels. **At annual frequency these shares track the rate closely.**
+
+### 24.3 How big was the move, really?
+
+| | |
+|---|---|
+| Price, 2022 start → end-2025 | $7.07 → $21.82 = **3.09×** (+209%) |
+| **Total return** | **4.16×** (+316%) |
+| Dividends added | **107 percentage points** |
+| From the 2021-22 low of $5.81 (28 Jan 2021) | **3.8×** |
+
+**"Many-fold" is ~3× on price and ~4× on total return — not 10×.** And note that a price chart shows barely two-thirds of what a holder actually earned.
+
+### 24.4 ⭐ So why so strong, without a $100k rate? Four drivers
+
+**(a) Operating leverage — the decisive one.** Profit is the rate *minus* breakeven, and 2021 was **below cost**:
+
+| Year | Rate | − breakeven | **= margin/day** | vs 2021 |
+|---|---|---|---|---|
+| 2021 | $15,300 | $25,000 | **−$9,700** | — |
+| 2022 | $31,300 | $25,000 | +$6,300 | +$16,000/day |
+| 2023 | $49,200 | $25,000 | **+$24,200** | +$33,900/day |
+| 2024 | $43,400 | $25,000 | +$18,400 | +$28,100/day |
+| 2025 | $47,200 | $25,000 | **+$22,200** | **+$31,900/day** |
+
+> **The rate roughly tripled, but the margin over breakeven swung from MINUS $9,700 to PLUS $22,200 — a $31,900/day swing per vessel.** It cannot be expressed as a multiple because it crosses zero: the company went from **losing money on every voyage** to earning $22,200 a day on each of ~80 ships. **That is what re-rated, not the headline rate.**
+
+**(b) Dividends** — roughly a quarter of the total return, invisible on a price chart.
+
+**(c) The fleet grew.** Frontline bought 24 VLCCs from Euronav; 11 delivered in Q4-2023 and 13 during 2024 (§15). The FY2023 release shows those ships earning only **$5,700/day in 2023** because they had just arrived — they *diluted* the reported 2023 rate from $50,300 to $49,200 **while adding earning capacity for later years**. Fleet growth raises EPS at a constant rate; that is not a freight effect at all.
+
+**(d) Asset values re-rated.** A 5-year-old VLCC went from ~$105m at end-2023 to **$151.1m** by end-Aug 2026 (§15, §21). On a leveraged balance sheet, NAV per share rises far faster than the asset itself.
+
+### 24.5 And 2024 is the control case
+
+**2024's rate fell 12% ($49,200 → $43,400) and the shares fell 22% on total return.** When the rate fell, the equity fell.
+
+> **So the 2022–25 rise was not a detached re-rating or a bubble.** It was a company crossing from **loss-making to highly profitable** on a rate that never needed to reach $100k — amplified by fleet growth, asset appreciation and a payout that a price chart does not show. **The $100k+ rates only arrived in 2026, and are a separate event on top of all of this.**
