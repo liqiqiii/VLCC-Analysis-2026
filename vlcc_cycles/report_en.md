@@ -2730,6 +2730,8 @@ Going from a loss to a profit is an *infinite* percentage change in earnings. Go
 
 ## §26 — ⭐ P/NAV history: where today sits against the record
 
+> 🔴 **SUPERSEDED IN PART BY §27.** The "today" figures in this section (DHT 1.62×, FRO 1.69×) were built on a 5-year-old VLCC at **$151.1m**, Signal Group's **end-August** mark. By **18 September** the same benchmark was **$172m** and 15-year-old tonnage had risen **61% since July** to $135m. Rebuilt on current values, **DHT is ~1.29× and FRO ~1.39×** — and the conclusion that today is "above every observation in the record" is **WITHDRAWN**. The historical series below still stands; only the comparison point changes. **The error was caught by the user.**
+
 > **DHT's fleet values are FILING-SOURCED** — summed from the per-vessel broker-valuation table that DHT publishes in every 20-F ("*estimated charter-free fair market values as of December 31*"). Balance-sheet items come from SEC XBRL company facts; prices are year-end closes.
 >
 > ⚠️ **Frontline's are MODELLED.** Frontline discloses **no fleet market value in any year examined** (§23.9), so DHT's disclosed average value per vessel is applied to FRO's VLCC-equivalent fleet. The FRO series is an approximation and is labelled as such throughout.
@@ -2794,3 +2796,94 @@ Going from a loss to a profit is an *infinite* percentage change in earnings. Go
 3. **Net debt is XBRL-derived** and includes lease liabilities where tagged. It has not been reconciled line-by-line to each 20-F.
 4. **The 2025 DHT row captures 21 of 22 vessels** (§26.1), overstating that year's P/NAV by roughly 7%.
 5. **No 2005–08 data.** DHT's per-vessel disclosure format does not appear in the earlier filings, and §23 shows Frontline's structure then was not comparable in any case.
+
+
+---
+
+## §27 — 🔴 CORRECTION: the vessel values behind §20, §21 and §26 were stale
+
+> **The user challenged the per-vessel price used throughout this report, and was right.** The correction is material enough to withdraw a headline conclusion.
+
+### 27.1 What was wrong
+
+§20, §21 and §26 valued fleets using a **5-year-old VLCC at $151.1m** — Signal Group's benchmark as at **end-August 2026**. The market moved violently in the following three weeks.
+
+**Primary source — Xclusiv Shipbrokers weekly report, 21 September 2026** *(downloaded to `filings/xclusiv_2026_09_21.pdf`)*, verbatim:
+
+> *"Between 10 July and 18 September, **five-year-old VLCC values increased from around USD 145 mills to USD 172 mills**, or approximately 18.6%, while **10-year-old tonnage rose from USD 115 mills to USD 152 mills**, up around 32%. **Fifteen-year-old values increased from approximately USD 83.5 mills to USD 135 mills, a rise of almost 61%**, while **resale values moved from around USD 175 mills to USD 193 mills**."*
+
+| Age | 10 July 2026 | **18 Sept 2026** | Change |
+|---|---|---|---|
+| Resale | $175m | **$193m** | +10% |
+| 5-year | $145m | **$172m** | **+18.6%** |
+| 10-year | $115m | **$152m** | **+32%** |
+| **15-year** | **$83.5m** | **$135m** | **+61%** |
+
+**The $151.1m used in §20/§21/§26 is 12% below the current 5-year mark, and the error is far larger for older tonnage — which is what both fleets mostly consist of.**
+
+*The same report notes the Baltic VLCC TC Average reached ~$722,946/day by 18 September, against ~$79,700/day in mid-September 2025.*
+
+### 27.2 DHT, revalued vessel by vessel
+
+Every DHT vessel in its FY2025 20-F table, repriced on the 18-September age curve:
+
+| Built | Age | Ships | Dec-2025 FMV each | **Now each** | Change |
+|---|---|---|---|---|---|
+| 2016 | 10.7 | 6 | $96.0m | **$149.6m** | **+56%** |
+| 2015 | 11.7 | 1 | $91.0m | **$146.2m** | **+61%** |
+| 2012 | 14.7 | 3 | $76.0m | **$136.0m** | **+79%** |
+| 2011 | 15.7 | 2 | $71.0m | **$127.8m** | **+80%** |
+| 2007 | 19.7 | 3 | $54.0m | **$87.8m** | **+63%** |
+| *…plus younger tonnage* | | | | | |
+
+> **DHT's parsed 21-vessel fleet goes from $1,851m at Dec-2025 to $2,909m now — up 57%.** Average fleet age is **12.6 years**, which is precisely why the 15-year segment's +61% matters so much here.
+
+### 27.3 The corrected P/NAV
+
+| | Fleet, as used before | **Fleet, current values** | NAVPS before | **NAVPS now** | P/NAV before | **P/NAV now** |
+|---|---|---|---|---|---|---|
+| **DHT** | $2,583m | **$3,186m** | $14.33 | **$18.07** | 1.62× | **≈1.29×** |
+| **FRO** | $8,875m | **$10,344m** | $30.37 | **$36.97** | 1.69× | **≈1.39×** |
+
+*DHT is shown on §17's count of 23 vessels in the water; the parsed table covers 21. FRO is 40 VLCC at $165.6m (age 6.6 on the curve), 19 Suezmax at $120m and 18 LR2 at $80m.*
+
+**Sensitivity — and both open items push the multiple DOWN, not up:**
+
+| DHT vessel count | Fleet $m | NAVPS | **P/NAV** |
+|---|---|---|---|
+| 21 (parsed) | 2,909 | $16.35 | 1.42× |
+| 22 | 3,048 | $17.21 | 1.35× |
+| **23 (§17's count)** | **3,186** | **$18.07** | **1.29×** |
+| 24 | 3,325 | $18.93 | 1.23× |
+
+| FRO Suezmax / LR2 | Fleet $m | NAVPS | **P/NAV** |
+|---|---|---|---|
+| $103.8m / $70m *(Signal end-Aug, stale)* | 9,856 | $34.78 | 1.48× |
+| **$120m / $80m** | **10,344** | **$36.97** | **1.39×** |
+| $135m / $90m | 10,809 | $39.06 | 1.32× |
+
+### 27.4 🔴 What this withdraws
+
+| | Historical mean | Historical max | Today, **OLD** | Today, **CORRECTED** | vs mean | vs max |
+|---|---|---|---|---|---|---|
+| **DHT** | 1.04× | 1.45× | 1.62× | **1.29×** | +24% | **−11%** |
+| **FRO** | 0.99× | 1.45× | 1.69× | **1.39×** | +40% | **−4%** |
+
+> **§26 concluded that today was "above every observation in the record" for both names. ON THE CORRECTED VESSEL VALUES THAT IS FALSE.**
+>
+> **Both are now BELOW their historical maximum of 1.45×.** DHT at ~1.29× sits between its 2019 reading (1.45×) and its 2025 reading (1.31×) — inside the historical range, not beyond it. FRO at ~1.39× is likewise below its 2023 peak of 1.45×.
+
+**What survives from §26:** the historical series itself, and the observation that both names **mean-revert to roughly 1× NAV** (DHT mean 1.04×, FRO 0.99×). Today is still a **24–40% premium to that mean** — but it is no longer unprecedented, and the phrase "no precedent in the available record" is **withdrawn**.
+
+### 27.5 Why this happened, and what it changes about the thesis
+
+**Why:** asset values are re-rating *faster than freight benchmarks are being updated in this report*. The 15-year-old VLCC rose **61% in ten weeks**. Any NAV computed off a month-old vessel mark is stale by construction in a market moving at this speed.
+
+**What it changes:** the asset-based case against these shares is **materially weaker than §20, §21 and §26 presented it.**
+
+- §20's central argument was that the shares trade far above asset value and need years of dividends to earn back the premium. **On corrected values DHT's premium falls from $8.94 to $5.20 per share and FRO's from $21.05 to $14.45** — cutting the payback period roughly in half.
+- §26's "unprecedented" framing is gone.
+
+**What it does NOT change:** the shares still trade at a premium to NAV, and that premium still has to be earned by future cash flows. The durability question from §20/§21 is untouched. **But the starting point is a good deal less stretched than this report has been saying.**
+
+> ⚠️ **Standing lesson.** In a market where second-hand values can move 61% in ten weeks, **a vessel benchmark more than a few weeks old is not usable for a NAV calculation.** Every future P/NAV figure in this report must carry the *date* of the vessel mark it was built on.
