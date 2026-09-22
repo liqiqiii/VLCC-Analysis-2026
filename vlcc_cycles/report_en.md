@@ -2887,3 +2887,127 @@ Every DHT vessel in its FY2025 20-F table, repriced on the 18-September age curv
 **What it does NOT change:** the shares still trade at a premium to NAV, and that premium still has to be earned by future cash flows. The durability question from §20/§21 is untouched. **But the starting point is a good deal less stretched than this report has been saying.**
 
 > ⚠️ **Standing lesson.** In a market where second-hand values can move 61% in ten weeks, **a vessel benchmark more than a few weeks old is not usable for a NAV calculation.** Every future P/NAV figure in this report must carry the *date* of the vessel mark it was built on.
+
+
+---
+
+## §28 — ⭐ THE CONSOLIDATED DASHBOARD: every metric, and where the cycle actually is
+
+> **Submitted to GPT-6-Astra under Rule 4b and rebuilt after the review returned FIVE required withdrawals** — including one I had missed entirely and which invalidated the fleet value: **DHT's "current" NAV was priced off a December-2025 roster containing three vessels the company has since sold.** Review record: §28.5. All vessel marks dated **18–21 September 2026 (Xclusiv)**.
+
+### 28.1 🔴 Two corrections made before anything else could be published
+
+**(a) DHT's roster was stale.** From DHT's own FY2025 20-F, verbatim:
+
+> *"in December 2025 and January 2026, we agreed to sell our three 2007-built VLCCs, the **DHT China, DHT Europe and DHT Bauhinia**. In January 2026, we took delivery of a newbuild vessel, the **DHT Antelope**, and in March 2026 we took delivery of the **DHT Addax**. We expect two additional newbuilds to be delivered in 2026."*
+> *"…sell the DHT China and DHT Europe for a combined price of **$101.6 million**"* · *"…sell the DHT Bauhinia… for a price of **$51.5 million**"*
+
+| Vessel | My value | **Actual sale price** | Error |
+|---|---|---|---|
+| DHT China (2007) | $87.8m | **$50.8m** | **+$37.0m** |
+| DHT Europe (2007) | $87.8m | **$50.8m** | **+$37.0m** |
+| DHT Bauhinia (2007) | $87.8m | **$51.5m** | **+$36.3m** |
+| **Total** | **$263.4m** | **$153.1m** | **+$110.3m** |
+
+**I carried three sold ships at 72% above their actual transaction prices, and counted them as still owned.** DHT Europe was delivered to its new owner on **30 January 2026**. Corrected roster: 21 parsed − 3 sold + 2 delivered newbuilds = **20 vessels**, average age **10.3 years** (not 12.6).
+
+**(b) The broker report *did* carry Suezmax and Aframax marks — I used assumptions instead.** The full Xclusiv table, September 2026 vs September 2025:
+
+| | Resale | 5 Year | 10 Year | 15 Year |
+|---|---|---|---|---|
+| **VLCC** | 193.0 *(+32%)* | 172.0 *(+47%)* | 152.0 *(+76%)* | **135.0 *(+132%)*** |
+| **Suezmax** | 136.0 *(+45%)* | **116.0** *(+53%)* | 95.0 *(+57%)* | 72.0 *(+80%)* |
+| **Aframax/LR2** | 95.0 *(+27%)* | **85.0** *(+37%)* | 72.5 *(+44%)* | 55.0 *(+55%)* |
+
+My assumed $120m Suezmax was **above the actual 5-year mark of $116m**. Corrected to $109.3m at FRO's 6.6-year fleet age.
+
+### 28.2 The dashboard
+
+| | **DHT** | **FRO** |
+|---|---|---|
+| Price | $22.45 | $49.81 |
+| Fleet market value | $3,026m | $10,158m |
+| **NAV/share** | **$17.08** | **$36.14** |
+| **P/NAV** | **1.31×** | **1.38×** |
+| P/NAV historical mean / sample max | 1.04× / 1.45× | 0.99× / 1.45× |
+| P/B | 2.72× | 3.52× |
+| **P/E, Q2-2026 annualised** | **4.60×** | **4.77×** |
+| P/E, trailing 12m | 7.64× | 7.47× |
+| **Yield, Q2 annualised** | **21.7%** | **21.0%** |
+| Yield, trailing 12m | 10.1% | 12.0% |
+| Premium over NAV/share | $5.37 | $13.67 |
+| Net debt / fleet value | 9.0% | 20.8% |
+| Cash breakeven | $17,500/day | $23,800/day |
+| Spot exposure | ~50% | ~86% |
+| Average fleet age | 10.3 yrs | 6.6 yrs |
+| Q2-2026 achieved TCE | $126,700/day | $152,700/day |
+
+### 28.3 🔴 The metric the draft got wrong: premium ÷ dividend
+
+The draft published *"under a year of dividends covers the premium for BOTH names."* **That is false, and the metric is far more assumption-dependent than one number suggests.**
+
+| Dividend basis | **DHT** | **FRO** |
+|---|---|---|
+| Q2-2026 annualised *(a peak quarter at $152,700/day)* | **1.10 yrs** | **1.31 yrs** |
+| Trailing 12-month **actual** dividends | 2.37 yrs | 2.28 yrs |
+| Model at the 1-yr TC, $105k | 1.38 yrs | 2.26 yrs |
+| Model at the 1-yr TC, $93k | 1.64 yrs | 2.76 yrs |
+| Model at the FY2025 rate, $47,200 | **6.00 yrs** | **17.47 yrs** |
+| Model at mid-cycle $30k | **never** | **never** |
+
+> **Neither name is under a year on any basis.** And the figure ranges from ~1.1 years to *never* depending purely on which freight rate you assume. **This is not a payback forecast — it is "current premium ÷ an assumed dividend", and it must be read with the rate assumption attached.**
+
+### 28.4 🔴 And the "not extreme" classification is fragile
+
+| Scenario | DHT P/NAV | FRO P/NAV |
+|---|---|---|
+| As computed | 1.31× | 1.38× |
+| **Fleet values −10%** | **1.48×** | **1.58×** |
+| Fleet values −20% | 1.69× | 1.84× |
+| Fleet values +10% | 1.18× | 1.22× |
+
+> **A 10% fall in vessel values puts BOTH names ABOVE the 1.45× sample maximum.** Given that 15-year-old VLCCs moved **+61% in ten weeks**, a 10% move is trivial. The classification "elevated but not extreme" therefore **survives only at today's exact vessel marks** and must not be stated as a stable finding.
+
+### 28.5 ⭐ Where the cycle is — and what this analysis genuinely cannot tell you
+
+| | Reading | Cycle read |
+|---|---|---|
+| **Freight** | Q2 achieved $152,700/day = **5.1× a $30k mid-cycle**; TD3C assessment $1,035,000 but physical fixtures only $530–603k; **1-yr TC only $93–105k = 3.1–3.5× mid-cycle** | **Extreme** |
+| **Asset values** | 5yr $172m *(+47% y/y)*, 15yr $135m *(+132% y/y)*; resale $193m vs newbuild $131m | **Extreme** |
+| **Supply** | 217 VLCCs ordered in 2026; orderbook 25% of fleet capacity vs 2% in 2023; deliveries ~41–68 in 2027 and ~125–127 in 2028 | **Late — gross delivery concentration in 2028** |
+| **Equity valuation** | P/NAV 1.31×/1.38× vs a 1.45× *sample* max; P/E 4.6×/4.8×; yield ~21% | **Elevated; classification unstable** |
+
+> 🔴 **WITHDRAWN.** The draft concluded: *"the equity has NOT yet fully capitalised the boom — not of a blow-off top."* **That inference is not identified by this evidence.** The same observations are equally consistent with **the equity market correctly refusing to capitalise a rate it believes is temporary**, in which case the *equity* is the correctly-priced leg and the *vessel market* is the stretched one. **This dashboard cannot distinguish those two readings.**
+
+**What can be said instead:**
+
+> **Freight and vessel values are at exceptional levels. Both equities trade above the report's estimated current NAV. The apparent moderation of the earnings multiples does not distinguish undervalued equities from temporarily inflated earnings and vessel values — because the multiples are low precisely BECAUSE earnings and asset values are at a peak.**
+
+**Three further cautions the review forced:**
+
+1. **A low P/E on peak earnings is not cheapness.** At 4.6×/4.8× the shares are *more expensive* than the 2.5–3.5× the framework identifies as the cycle-peak zone, **not cheaper**.
+2. **The yield and the P/E are the same statistic.** Because both companies paid out ~100% of Q2 earnings, the run-rate yield is simply the reciprocal of the run-rate P/E. **They are not two independent confirmations.**
+3. **The EPS rows are model proxies, not accounting earnings.** §21 established that Frontline's disclosed cash breakeven **includes loan repayments**, so subtracting it and then D&A does not construct net income. That limitation is unrepaired and carries into every P/E and yield figure above.
+
+### 28.6 The GPT-6-Astra review record (Rule 4b)
+
+| # | Finding | Severity | Verdict | Action |
+|---|---|---|---|---|
+| 1 | The headline mistakes an unidentified explanation for a finding | Blocking | **Correct** | **Headline WITHDRAWN**; replacement published in §28.5 |
+| 2 | "Under a year for BOTH" is false; FRO is ~14.8 months | Blocking | **Correct** | Withdrawn; five dividend bases now published |
+| 3 | §20's 2.29/3.48 years did NOT use trailing payouts — it used 100% of $105k model EPS | Material | **Correct; I mis-described my own earlier work** | Corrected |
+| 4 | **DHT's NAV reprices a roster containing three SOLD vessels** | Blocking | **Correct — and I had missed it entirely** | Roster rebuilt: −3 sold, +2 delivered newbuilds |
+| 5 | A large share of NAV rests on assumptions; "conservative" has no established direction | Material | **Correct** | Xclusiv's actual Suezmax/Aframax marks now used; two-sided sensitivity published |
+| 6 | Historical and current P/NAV are not like-for-like measurements | Blocking | **Correct** | "Historical max" relabelled **"maximum in this limited year-end sample"**; "not extreme" withdrawn as a conclusion |
+| 7 | The EPS engine was never repaired; §28 restored precise outputs without the limitation | Blocking | **Correct — a consolidation regression** | Limitation restated prominently in §28.5 |
+| 8 | Mixing 24 earnings-equivalents with a 20-vessel NAV roster is unreconciled | Material | **Correct** | Disclosed; reconciliation not yet built |
+| 9 | $30k is a stress scenario, not an established mid-cycle | Material | **Correct** | Relabelled |
+| 10 | Low P/E on peak earnings ≠ cheap; yield and P/E are the same statistic | Material | **Correct** | Both stated explicitly in §28.5 |
+| 11 | The dividend "cushion" ignores the asset repricing that accompanies normalisation | Material | **Correct** | Sensitivity in §28.4 |
+| 12 | "Hormuz premium" and "wall in 2028" carry stronger causal claims than the evidence | Material | **Correct** | Relabelled as a spread proxy and a gross-delivery concentration |
+
+### 28.7 What would actually resolve this
+
+The one number that separates the two readings is **the 1-year time-charter rate**, because it is the only rate a counterparty will *commit* to. At **$93–105k** it is just **3.1–3.5× mid-cycle** while achieved spot TCE is **5.1×**. **The term market does not believe this lasts.** If the 1-year TC climbs toward the achieved spot level, the "equity has not capitalised it" reading gains support. If it stays where it is, the equity is probably right and the vessel market is the stretched leg.
+
+**Watch, in order:** ① the 1-year TC rate · ② second-hand values, which are the NAV denominator and moved 61% in ten weeks · ③ the TD3C–TD34 spread of ~$396,386/day, which is the observable proxy for Hormuz dislocation.
