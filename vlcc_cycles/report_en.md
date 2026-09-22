@@ -2724,3 +2724,73 @@ Going from a loss to a profit is an *infinite* percentage change in earnings. Go
 > **CANNOT say:** that an elasticity measured between $15,300 and $49,200 carries to $100,000. The sample contains **no observation above $49,200**, it contains a **sign change in profitability that cannot recur**, and the dependent variable is now **bounded by asset value** in a way it was not in 2021.
 
 **The better question is the one §21 already asks:** forget elasticity, and ask *how many years of a given rate the price already embeds.* At a 7× P/E, today's price implies about **$119,300/day sustained — above $100k, not below it.** On that framing the shares are not waiting for a $100k rate to arrive; **they are already discounting one better than $100k, indefinitely.**
+
+
+---
+
+## §26 — ⭐ P/NAV history: where today sits against the record
+
+> **DHT's fleet values are FILING-SOURCED** — summed from the per-vessel broker-valuation table that DHT publishes in every 20-F ("*estimated charter-free fair market values as of December 31*"). Balance-sheet items come from SEC XBRL company facts; prices are year-end closes.
+>
+> ⚠️ **Frontline's are MODELLED.** Frontline discloses **no fleet market value in any year examined** (§23.9), so DHT's disclosed average value per vessel is applied to FRO's VLCC-equivalent fleet. The FRO series is an approximation and is labelled as such throughout.
+
+![P/NAV history](charts/s26_pnav_history.png)
+
+### 26.1 DHT — filing-sourced
+
+| Year-end | Ships | Fleet FMV $m | Net debt $m | NAVPS | Price | **P/NAV** |
+|---|---|---|---|---|---|---|
+| 2019 | 26 | 1,748 | 786 | $5.72 | $8.28 | **1.45×** |
+| 2020 | 26 | 1,379 | 381 | $5.87 | $5.23 | **0.89×** |
+| 2021 | 26 | 1,585 | 462 | $6.64 | $5.19 | **0.78×** |
+| 2022 | 23 | 1,807 | 271 | $9.32 | $8.88 | **0.95×** |
+| 2023 | 24 | 1,966 | 354 | $9.93 | $9.81 | **0.99×** |
+| 2024 | 24 | 1,992 | 331 | $10.29 | $9.29 | **0.90×** |
+| 2025 | 21 | 1,851 | 350 | $9.34 | $12.21 | **1.31×** |
+
+**Cross-check against §17's independently built figures:** 2020 0.87× vs 0.89× here (**+2%**), 2023 0.98× vs 0.99× (**+1%**), 2025 1.22× vs 1.31× (**+7%**). *(The 2025 gap is a parser shortfall — 21 of 22 vessels were captured, which understates NAV and therefore overstates P/NAV.)*
+
+*2017 and 2018 were dropped: the XBRL share-count tag returned implausible values (124,536m and 143,435m shares), a tag collision rather than a data revision.*
+
+### 26.2 FRO — modelled
+
+| Year-end | VLCC-eq | $m/ship | Fleet FMV $m | Net debt $m | NAVPS | Price | **P/NAV** |
+|---|---|---|---|---|---|---|---|
+| 2017 | 52 | 51.8 | 2,694 | 1,775 | $5.41 | $4.59 | **0.85×** |
+| 2018 | 53 | 65.3 | 3,461 | 1,764 | $9.99 | $5.53 | **0.55×** |
+| 2019 | 56 | 67.2 | 3,763 | 1,519 | $11.40 | $12.86 | **1.13×** |
+| 2020 | 62 | 53.0 | 3,286 | 2,026 | $6.37 | $6.22 | **0.98×** |
+| 2021 | 62 | 61.0 | 3,782 | 2,256 | $7.50 | $7.07 | **0.94×** |
+| 2022 | 63 | 78.6 | 4,952 | 2,139 | $12.63 | $12.14 | **0.96×** |
+| 2023 | 76 | 81.9 | 6,224 | 3,151 | $13.81 | $20.05 | **1.45×** |
+| 2024 | 81 | 83.0 | 6,723 | 3,332 | $15.23 | $14.19 | **0.93×** |
+| 2025 | 81 | 88.1 | 7,136 | 2,816 | $19.40 | $21.82 | **1.12×** |
+
+### 26.3 ⭐ The answer
+
+| | n | **Mean** | Median | Min | **Max** | **TODAY** | vs mean | vs max |
+|---|---|---|---|---|---|---|---|---|
+| **DHT** | 7 | **1.04×** | 0.95× | 0.78× | 1.45× | **1.62×** | **+56%** | **+12%** |
+| **FRO** | 9 | **0.99×** | 0.96× | 0.55× | 1.45× | **1.69×** | **+71%** | **+16%** |
+
+> **Both companies have historically traded at roughly ONE TIMES NAV.** DHT's mean is 1.04× and its median 0.95×; FRO's mean is 0.99× and its median 0.96×. **Over nine year-ends neither name averaged a premium to the steel at all.**
+>
+> **Today DHT is 1.62× and FRO 1.69× — 56% and 71% above their own means, and 12% and 16% above the highest year-end either has printed in this series.**
+
+**Three observations that follow:**
+
+1. **There is no precedent in this window for the current level.** The highest year-end reading in either series is 1.45×. Today is above that for both names, and §17's longer filing-sourced record — which reaches back to 2015 for DHT — tops out at 1.36× (DHT) and 1.50× (FRO). **Today is above every observation in both datasets.**
+
+2. **The historical distribution is tight and centred on 1.0×.** Excluding FRO's 2018 outlier of 0.55×, every one of the other 15 observations sits between **0.78× and 1.45×**. This is not a series that wanders; it mean-reverts to asset value.
+
+3. **The trough is instructive.** DHT bottomed at **0.78× in 2021** — the year the market earned $15,300/day against a $25,000 breakeven (§24). **Buying below NAV has been available in this cycle, twice, within the last five years.**
+
+> ⚠️ **What this does NOT say.** A premium to NAV is not automatically wrong — a business earning above its cost of capital *should* trade above asset value, and 2026 earnings are far above anything in this sample. What the table establishes is narrower and harder: **the current multiple has no precedent in the available record, so it cannot be justified by reference to history.** It has to be justified by the durability of the earnings — which is precisely the question §20 and §21 could not resolve.
+
+### 26.4 Method and limitations
+
+1. **FRO's fleet values are modelled**, using DHT's per-vessel average applied to a VLCC-equivalent count. FRO's fleet contains Suezmax and LR2 tonnage worth less per vessel than a VLCC, so its fleet value is likely **overstated** in years when the equivalent-count understates the mix effect — which would make FRO's historical P/NAV **understated**, and the gap to today **larger**, not smaller.
+2. **Year-end snapshots only.** Nine annual points are not a continuous series; intra-year extremes are not captured.
+3. **Net debt is XBRL-derived** and includes lease liabilities where tagged. It has not been reconciled line-by-line to each 20-F.
+4. **The 2025 DHT row captures 21 of 22 vessels** (§26.1), overstating that year's P/NAV by roughly 7%.
+5. **No 2005–08 data.** DHT's per-vessel disclosure format does not appear in the earlier filings, and §23 shows Frontline's structure then was not comparable in any case.

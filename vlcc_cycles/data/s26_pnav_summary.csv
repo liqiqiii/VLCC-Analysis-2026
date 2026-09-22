@@ -1,0 +1,3 @@
+ticker,n,mean,median,min,max,today,vs_mean_pct,vs_max_pct
+DHT,7,1.04,0.95,0.78,1.45,1.62,56,12
+FRO,9,0.99,0.96,0.55,1.45,1.69,71,16
