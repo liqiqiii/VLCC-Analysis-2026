@@ -2542,6 +2542,33 @@ At end-2007, BVPS was **$5.96**; §16's 8.05x implies a price of **$47.98** and 
 5. **Composition of the $15,684k of marketable securities at YE2007: not named.**
 6. **Year-end closing share prices: not printed** — derived from disclosed P/E ratios above.
 
+### 23.10 Was the P/B ~7x throughout 2005-07? **No — 2007 was a single-year spike**
+
+| Year-end | Price | BVPS | **Reported P/B** | Ship-only P/B | **Ex-SFL as well** |
+|---|---|---|---|---|---|
+| 2005 | $38.12 | $9.56 | **3.99×** | 4.85× | **5.33×** |
+| 2006 | $31.74 | $8.94 | **3.55×** | 3.63× | **3.72×** |
+| **2007** | **$48.01** | **$5.96** | **8.05×** | **8.41×** | **8.41×** |
+| 2008 | $29.28 | $9.02 | **3.25×** | 3.55× | **3.55×** |
+
+*Ex-SFL strips the look-through Ship Finance stake from **both** sides — its market value (~$219m in 2005, ~$188m in 2006) from market capitalisation and its book value (~$91m, ~$67m) from equity. From March 2007 the stake is 0.01%, so there is nothing left to strip.*
+
+> **Excluding 2007, the adjusted range is 3.55×–5.33×. 2007 alone is 8.41× — more than double the surrounding years on every basis.**
+
+**What made 2007 different was a double squeeze, not a re-rating:**
+
+| | 2006 → 2007 |
+|---|---|
+| Share price | $31.74 → $48.01 — **+51.3%** |
+| BVPS | $8.94 → $5.96 — **−33.3%** |
+| **P/B** | 3.55× → 8.05× — **+126.7%** |
+
+A log decomposition splits it almost exactly in half: **51% from the price rise, 49% from the book collapse.** The book collapse is the March-2007 events — the final Ship Finance spin-off charged $162.2m to equity, plus deconsolidation — on top of a payout that left retained earnings at zero.
+
+**And it reversed immediately.** In 2008 equity recovered from $446.0m to $702.2m (**+57%**) and P/B fell back to **3.25×**.
+
+> **So the correct statement is not "FRO traded at ~7-8× book through the super-cycle."** It is: **FRO traded at 3.3–5.3× on an adjusted basis, with one year-end print at 8.4× caused half by a price spike and half by a one-off equity charge that reversed the following year.** Treating that single print as "the super-cycle P/B benchmark", as §16 did, compounds the error identified in §23.8.
+
 ### 23.7 The general lesson
 
 **P/B is not comparable across eras when the capital structure changes.** Three things break it, and Frontline had all three at once: a payout ratio at or above 100% (book cannot accumulate), off-own-balance-sheet or leased tonnage (assets sit elsewhere), and extreme gearing (a small denominator). **For asset-heavy cyclicals, compare price to the market value of the assets, not to accounting book.**
