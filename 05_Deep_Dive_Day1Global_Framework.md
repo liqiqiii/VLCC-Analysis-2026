@@ -4,6 +4,8 @@
 
 > **October 12, 2026 follow-up:** [DHT Q4 bookings and the Frontline 2008 P/E fact-check](dht_q4_2026/report_en) distinguishes reported TTM, estimated full-year and annualized-quarter earnings. The new standalone note does not recalibrate this historical model.
 
+> **Historical extension:** [FRO's original prices and quarterly P/E, 2007Q1-2009Q2](dht_q4_2026/fro_2007_2009_en) separates earnings periods, reporting lags and the crisis timeline.
+
 > **The Puzzle**: Both DHT and FRO bottomed out and nearly doubled in ~2 months with almost identical stock trajectories. But our cycle-peak model shows DHT has 2.5× FRO's remaining upside. Something doesn't add up. This analysis explains what we missed.
 
 ---

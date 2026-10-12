@@ -8,6 +8,8 @@ lang: zh-CN
 
 **研究快照：2026年10月12日**
 
+> **历史扩展：** [Frontline 2007Q1-2009Q2：原始股价、逐季 TTM／全年 PE 与危机时间线](fro_2007_2009_cn) 新增季度重建、供应商日线高点日期、明确标为近似的财报滞后序列，并区分单季、剔除项目和 TTM 盈利高点。
+
 [English report](report_en) | [研究首页](../) | [周期研究](../vlcc_cycles/report_cn) | [计算脚本](https://github.com/liqiqiii/VLCC-Analysis-2026/blob/master/dht_q4_2026/run_analysis.py)
 
 > **结论：** DHT 自身的订约显著增强了近期盈利可见性。在下文假设下，**如果剩余航次仍接近 $500,000/天，Q4 约 $520 million（5.2亿美元）利润是合理的情景**。但约 **2x 是单季年化 PE，不是已报告的 TTM PE**。Frontline 原始文件不支持一个明确的“2007-2008 股价顶部就是 2x PE”先例；2009年3月、股价大跌之后，可以观察到约 2x 的价格／FY2008 盈利比。

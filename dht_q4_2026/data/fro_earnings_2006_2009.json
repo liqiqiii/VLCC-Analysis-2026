@@ -1,0 +1,43 @@
+{
+  "research_date": "2026-10-12",
+  "currency": "USD",
+  "eps_basis": "Historical original shares; basic EPS. TTM is an annual-plus-YTD EPS bridge, not a company-reported TTM measure.",
+  "annual": {
+    "2006": {"basic_eps": "6.90", "net_income_m": "516.000", "source": "AR2007"},
+    "2007": {"basic_eps": "7.62", "net_income_m": "570.418", "source": "AR2007"},
+    "2008": {"basic_eps": "9.15", "net_income_m": "698.770", "source": "AR2008"},
+    "2009": {"basic_eps": "1.32", "net_income_m": "102.701", "source": "AR2009"}
+  },
+  "quarters": [
+    {"quarter": "2007Q1", "period_end": "2007-03-31", "release_date": "2007-05-30", "release_date_status": "Company announcement indexed; full page unavailable on revisit", "net_income_m": "158.8", "basic_eps": "2.12", "ytd_eps": "2.12", "prior_ytd_eps": "2.86", "prior_annual_eps": "6.90", "lag_ttm_eps": "6.90", "lag_earnings_end": "2006Q4", "vlcc_double_hull_spot_tce": "56600", "source": "Q12007; Q22007", "note": "Prior-year Q1 EPS 2.86 reconstructed from H1 2006 EPS 3.78 less Q2 EPS 0.92; annual weighted share count was unchanged. See Q22007 comparative table."},
+    {"quarter": "2007Q2", "period_end": "2007-06-30", "release_date": "2007-08-22", "release_date_status": "Downloaded original report; date appears in report", "net_income_m": "189.1", "basic_eps": "2.53", "ytd_eps": "4.65", "prior_ytd_eps": "3.78", "prior_annual_eps": "6.90", "lag_ttm_eps": "6.16", "lag_earnings_end": "2007Q1", "vlcc_double_hull_spot_tce": "57700", "source": "Q22007", "note": "Original disclosure; Q22008 later restates Q2 2007 EPS to 2.51 and H1 EPS to 4.63."},
+    {"quarter": "2007Q3", "period_end": "2007-09-30", "release_date": "2007-11-21", "release_date_status": "SEC 6-K filing index and company announcement search; full originals unavailable on revisit", "net_income_m": "24.2", "basic_eps": "0.32", "ytd_eps": "4.97", "prior_ytd_eps": "5.10", "prior_annual_eps": "6.90", "lag_ttm_eps": "7.77", "lag_earnings_end": "2007Q2", "vlcc_double_hull_spot_tce": null, "source": "Q32007; Q32006", "note": "YTD EPS 4.97 reconstructed as originally released H1 4.65 plus Q3 0.32, on unchanged shares; rounding approximation. Later Q32008 release reports a $1.5m downward Q3 2007 restatement."},
+    {"quarter": "2007Q4", "period_end": "2007-12-31", "release_date": "2008-02-14", "release_date_status": "Company release indexed; transcript body supports results but transcript-date metadata is unreliable", "net_income_m": "202.3", "basic_eps": "2.70", "ytd_eps": "7.62", "prior_ytd_eps": null, "prior_annual_eps": null, "lag_ttm_eps": "6.77", "lag_earnings_end": "2007Q3", "vlcc_double_hull_spot_tce": "43600", "source": "Q42007; AR2007", "note": "Quarterly profit/EPS are the original release. Year-end realized-period TTM uses subsequently audited FY2007 EPS 7.62, not the preliminary FY EPS 7.68 known in March 2008."},
+    {"quarter": "2008Q1", "period_end": "2008-03-31", "release_date": "2008-05-22", "release_date_status": "Company announcement indexed and contemporaneous earnings-call reproduction", "net_income_m": "221.0", "basic_eps": "2.95", "ytd_eps": "2.95", "prior_ytd_eps": "2.12", "prior_annual_eps": "7.62", "lag_ttm_eps": "7.68", "lag_earnings_end": "2007Q4 preliminary", "vlcc_double_hull_spot_tce": "104700", "ex_identified_items_net_income_m": "183.9", "source": "Q12008; Q22008; Q42007", "note": "Reporting-lag column uses preliminary FY2007 7.68, not the later audited 7.62. Q22008 explicitly reports comparative Q1 ex-gains net income and spot TCE."},
+    {"quarter": "2008Q2", "period_end": "2008-06-30", "release_date": "2008-08-21", "release_date_status": "Public presentation/release date; original report is board-dated August 20", "net_income_m": "318.4", "basic_eps": "4.25", "ytd_eps": "7.21", "prior_ytd_eps": "4.63", "prior_annual_eps": "7.62", "lag_ttm_eps": "8.45", "lag_earnings_end": "2008Q1", "vlcc_double_hull_spot_tce": "105200", "ex_identified_items_net_income_m": "163.0", "source": "Q22008", "note": "Includes $155.4m of company-identified gains. H1 comparison uses the restated 2007 EPS printed in this release."},
+    {"quarter": "2008Q3", "period_end": "2008-09-30", "release_date": null, "release_date_range": ["2008-11-27", "2008-11-28"], "board_date": "2008-11-27", "reproduction_date": "2008-11-28", "release_date_status": "First-public date unresolved within the stated range; do not treat the board date as an exact release timestamp", "net_income_m": "107.8", "basic_eps": "1.39", "ytd_eps": "8.53", "prior_ytd_eps": "4.94", "prior_annual_eps": "7.62", "lag_ttm_eps": "10.20", "lag_earnings_end": "2008Q2", "vlcc_double_hull_spot_tce": "88600", "ex_identified_items_net_income_m": "137.1", "source": "Q32008; Q22008; AR2007", "note": "Prior nine-month EPS 4.94 reconstructed from restated H1 net income $346.715m plus original Q3 $24.2m less stated $1.5m restatement, divided by 74.825169m shares and rounded to cents. Not a newly retrieved table cell."},
+    {"quarter": "2008Q4", "period_end": "2008-12-31", "release_date": "2009-02-26", "release_date_status": "Company preliminary annual release indexed; financial values cross-checked in AR2008 and Q12009", "net_income_m": "51.6", "basic_eps": "0.66", "ytd_eps": "9.15", "prior_ytd_eps": null, "prior_annual_eps": null, "lag_ttm_eps": "11.21", "lag_earnings_end": "2008Q3", "vlcc_double_hull_spot_tce": "59800", "ex_identified_items_net_income_m": "79.9", "source": "Q42008; Q12009; AR2008", "note": "Year-end realized-period TTM equals annual EPS. Ex-items figure adds back company-identified non-operating losses, not a standardized adjusted-profit series."},
+    {"quarter": "2009Q1", "period_end": "2009-03-31", "release_date": null, "release_date_range": ["2009-05-28", "2009-05-29"], "board_date": "2009-05-27", "call_date": "2009-05-29", "release_date_status": "Exact first-public day unresolved; distinguish the board date, indexed announcement references and call date", "net_income_m": "76.6", "basic_eps": "0.98", "ytd_eps": "0.98", "prior_ytd_eps": "2.95", "prior_annual_eps": "9.15", "lag_ttm_eps": "9.15", "lag_earnings_end": "2008Q4", "vlcc_double_hull_spot_tce": "56200", "source": "Q12009", "note": "The May 28/29 date uncertainty cannot change which report was available at either March or June quarter-end."},
+    {"quarter": "2009Q2", "period_end": "2009-06-30", "release_date": "2009-08-28", "release_date_status": "Dated company newswire URL and earnings-call reproduction", "net_income_m": "27.8", "basic_eps": "0.36", "ytd_eps": "1.34", "prior_ytd_eps": "7.21", "prior_annual_eps": "9.15", "lag_ttm_eps": "7.18", "lag_earnings_end": "2009Q1", "vlcc_double_hull_spot_tce": "38700", "source": "Q22009; Q12009", "note": "Quarter profit 27.8 is reconstructed from rounded H1 $104.4m minus Q1 $76.6m; transcript rounds the quarter to $28m. EPS and YTD EPS are disclosed."}
+  ],
+  "sources": {
+    "AR2006": "https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_FRO_2006.pdf",
+    "AR2007": "https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_FRO_2007.pdf",
+    "AR2008": "https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_FRO_2008.pdf",
+    "AR2009": "https://www.annualreports.com/HostedData/AnnualReportArchive/f/NYSE_FRO_2009.pdf",
+    "Q32006": "https://www.frontlineplc.cy/frontline-ltd-third-quarter-2006-results/",
+    "Q12007": "https://www.frontlineplc.cy/frontline-ltd-first-quarter-2007-results/",
+    "Q22007": "https://hugin.info/182/R/1148282/219291.pdf",
+    "Q32007": "https://edgar.secdatabase.com/1518/91957407005620/filing-main.htm",
+    "Q42007": "https://www.roic.ai/quote/FRO:NO/transcripts/2007-year/4-quarter",
+    "Q12008": "https://www.roic.ai/quote/FRO:NO/transcripts/2008-year/1-quarter",
+    "Q22008": "https://hugin.info/182/R/1245151/268811.pdf",
+    "Q32008": "https://www.shipid.com/news/40267/Frontline_announces_third.html",
+    "Q42008": "https://www.frontlineplc.cy/fro-preliminary-fourth-quarter-and-financial-year-2008-results/",
+    "Q12009": "https://hugin.info/182/R/1318078/307659.pdf",
+    "Q22009": "https://www.roic.ai/quote/FRO:NO/transcripts/2009-year/2-quarter",
+    "Q22009_release": "https://www.globenewswire.com/news-release/2009/08/28/1862345/0/en/FRO-Second-Quarter-and-Six-Months-2009-Results.html",
+    "split": "https://www.frontlineplc.cy/fro-results-from-special-general-meeting/",
+    "crisis": "https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath"
+  }
+}

@@ -7,6 +7,18 @@
 
 ## October 12, 2026 — DHT Q4 bookings, earnings-period correction and bilingual publication
 
+### Follow-up: FRO original prices and quarterly P/E, 2007Q1-2009Q2
+
+**Request:** Reconstruct FRO's actual historical price basis despite dividends/splits; compare quarterly TTM and full-year P/E through H1 2009; explain why P/E fell after the cycle peak, whether the financial crisis ended the cycle, and the timing of share-price versus earnings peaks.
+
+**Research and publication:**
+- Recovered daily original-share prices from Yahoo split-only `Close / 5`, verified the recorded reverse split, and reconciled all ten quarterly high/low ranges against original annual filings. Highest close: $71.76 on 2008-06-23; intraday high: $72.36 on 2008-06-24.
+- Published separate period-TTM, approximate reporting-lag and final-same-year P/E. 2008Q2-end: $69.78, period TTM 6.84x; 2009Q1-end: $17.39, period TTM 2.42x, reporting-lag 1.90x. The as-of approximation is not a fully versioned backtest; reconstruction and restatement limits are explicit.
+- Reported quarterly profit peaks in 2008Q2, ex-identified-items profit in 2008Q1 within the available comparison, and the TTM EPS bridge in 2008Q3. Publication lag is not the same as an economic earnings lag.
+- The August 2008 report described a late-July market deterioration before Lehman; broader financial stress already existed. Demand, OPEC, ton-miles, fleet supply and storage all matter. No causal percentage or crisis-free counterfactual is claimed.
+- Astra review found no blocking issue for an approximate fact-check. Corrected ambiguous structured release dates, removed an unsupported crisis-to-storage causal assertion, and separated artifact generation from read-only validation.
+- Added bilingual standalone extension pages, source/price/earnings data, calculator, regression checks and an SVG chart; updated navigation and both logs.
+
 **Research request:** Check whether DHT's approximately $500,000/day Q4 spot bookings and an assumed 12 term-chartered ships at $80,000/day imply approximately $520m quarterly profit and 2x TTM P/E; compare with Frontline's 2007-2008 peak.
 
 **Publication request (verbatim):** "帮我在wsl里clone一个这个repo，然后把你的分析按照repo内的.md要求写成中英文两份加成一个单独的github page" and "并且push到remote".

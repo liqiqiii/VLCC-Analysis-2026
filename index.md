@@ -10,6 +10,16 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### Frontline 2007Q1-2009Q2 — Original Prices, Quarterly P/E and Crisis Timing (Oct 12, 2026)
+
+**原始股价不能与分红复权图混用。** 还原并核对十个季度的 NYSE 价格区间，分别列出本期 TTM、财报发布滞后近似及事后全年 PE。2008Q2末原价 **$69.78**，本期 TTM **6.84x**；2009Q1末原价 **$17.39**，本期 TTM **2.42x**、此前全年盈利口径 **1.90x**。报表单季利润、剔除项目利润与 TTM 高点并不同步；8月公司报告已记录7月底转弱，不能把起点全部归因于9月雷曼。
+
+**A historical reconstruction, not a perfect as-of backtest.** Includes the original-price snapshot, source/vintage register, ten-quarter tables, a three-panel chart, reproducible calculations and an adversarial-review record.
+
+**[English →](dht_q4_2026/fro_2007_2009_en)** | **[中文 →](dht_q4_2026/fro_2007_2009_cn)** | **[Quarterly data →](https://github.com/liqiqiii/VLCC-Analysis-2026/blob/master/dht_q4_2026/data/fro_quarterly_pe_2007_2009.csv)**
+
+---
+
 ### DHT Q4 Bookings — $520m Profit Scenario & Annualized-Quarter P/E vs Frontline 2008 (Oct 12, 2026)
 
 **DHT 已订约的 Q4 现货天数约 50%，运价 $509,100/天；并非全季都已锁定。** 公司全部营收天数约 78% 已覆盖，综合运价 $225,200/天。在明确的天数和成本假设下，$520m 单季利润是高运价延续情景；**约 2.0x 是单季年化 PE，不是 TTM**。以带日期的 $26.22 参考价，已报告滚动比较约 8.9x，包含该 Q4 假设的 FY2026 估计约 3.7x。Frontline 原始年报列示年末 PE 为 **2007年 6.3x、2008年 3.2x**；接近 2x 的价格／FY2008 EPS 可见于暴跌后的 2009年3月，不能当作已验证的顶部卖点。

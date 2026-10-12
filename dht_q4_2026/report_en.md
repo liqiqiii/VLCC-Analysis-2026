@@ -8,6 +8,8 @@ lang: en
 
 **Research snapshot: October 12, 2026**
 
+> **Historical extension:** [Frontline 2007Q1-2009Q2: original prices, quarterly TTM/full-year P/E and crisis timing](fro_2007_2009_en) adds the quarterly reconstruction, exact vendor peak dates, an explicitly approximate reporting-lag series, and the distinction between quarterly, ex-items and TTM earnings peaks.
+
 [中文报告](report_cn) | [Research hub](../) | [Cycle research](../vlcc_cycles/report_en) | [Calculation script](https://github.com/liqiqiii/VLCC-Analysis-2026/blob/master/dht_q4_2026/run_analysis.py)
 
 > **Conclusion:** DHT's own bookings materially strengthen near-term earnings visibility. Approximately **$520 million of Q4 profit is plausible if the remaining fixtures stay near $500,000/day**, under the assumptions below. But approximately **2x is an annualized-quarter P/E, not reported TTM P/E**. Frontline's original filings do not establish a clean "2x P/E at the 2007-2008 share-price peak" precedent; prices around 2x FY2008 earnings are visible in March 2009, after the crash.

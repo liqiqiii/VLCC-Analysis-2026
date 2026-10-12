@@ -9,6 +9,8 @@ title: VLCC Deep-Dive — US Product-Export Limits & the Rate-vs-Stock Cycle Pla
 
 > **October 12, 2026 standalone follow-up:** [DHT Q4 bookings, the $520m profit scenario and Frontline's historical P/E](../dht_q4_2026/report_en). This dated fact-check separates TTM from annualized-quarter earnings and checks original FRO filings; it does not recalibrate the historical scenarios below.
 
+> **Quarterly historical extension:** [FRO 2007Q1-2009Q2](../dht_q4_2026/fro_2007_2009_en) reconstructs original prices, compares three P/E denominators and distinguishes profit peaks from publication timing.
+
 > **Context (the user's framing):** After 6+ months, DHT/FRO have delivered big gains and the big cycle has partly paid off. Because these are *cyclical* stocks, we must know **which phase we're in** — external bullish news is abundant, but stay vigilant. Two research modules requested.
 
 > **TL;DR**

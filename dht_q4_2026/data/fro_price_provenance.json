@@ -1,0 +1,18 @@
+{
+  "retrieved_utc": "2026-10-12T19:14:09.294397+00:00",
+  "provider": "Yahoo Finance chart API, NYSE FRO, USD",
+  "price_url": "https://query1.finance.yahoo.com/v8/finance/chart/FRO?period1=1167609600&period2=1246406400&interval=1d&events=div%2Csplits",
+  "split_url": "https://query1.finance.yahoo.com/v8/finance/chart/FRO?period1=1451606400&period2=1767225600&interval=1mo&events=splits",
+  "split_events": [
+    {
+      "date": 1454509800,
+      "numerator": 1.0,
+      "denominator": 5.0,
+      "splitRatio": "1:5"
+    }
+  ],
+  "transformation": "Original price = split-only Close / 5. AdjClose is never used.",
+  "rows": 628,
+  "primary_check": "FY2008 annual-report NYSE quarterly high/low table; FY2009 H1 ranges.",
+  "limitations": "Reconstructed cents-rounded prices; no trade-tape audit. Dividends and spin-off distributions are not added back."
+}
