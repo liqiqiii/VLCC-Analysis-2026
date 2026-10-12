@@ -6,6 +6,13 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### DHT Q4 2026 Bookings & Frontline 2008 P/E Fact-Check (October 12, 2026)
+- **[Report EN](dht_q4_2026/report_en.md) | [中文报告](dht_q4_2026/report_cn.md)**
+- **[GitHub Pages EN](https://liqiqiii.github.io/VLCC-Analysis-2026/dht_q4_2026/report_en) | [GitHub Pages 中文](https://liqiqiii.github.io/VLCC-Analysis-2026/dht_q4_2026/report_cn)**
+- $509,100/day applies to approximately 50% of Q4 spot days already booked; $520m profit remains conditional on subsequent fixtures and modeled days/costs.
+- Approximately 2.0x annualized-quarter P/E is not reported TTM (approximately 8.9x at the dated reference price); original FRO filings do not establish 2x as a peak-timing rule.
+- Reproduce the five-rate scenarios and historical calculations: `python3 dht_q4_2026/run_analysis.py`.
+
 ### 🏡 Bellevue Buy vs Rent (NEW — August 16, 2026)
 - **[Buy vs Rent EN](housing/report_en.md) | [Bellevue 买房还是租房 CN](housing/report_cn.md)**
 - Seven-year terminal-wealth model: $1.8M home, $900K down, $4,300–$8,000 rent scenarios

@@ -1,7 +1,26 @@
 # Prompt Tracking Log — VLCC Analysis Project
 
 > This file tracks every analytical prompt/directive from the user throughout the project.
-> Updated after each conversation turn. Last updated: **August 16, 2026**.
+> Updated after each conversation turn. Last updated: **October 12, 2026**.
+
+---
+
+## October 12, 2026 — DHT Q4 bookings, earnings-period correction and bilingual publication
+
+**Research request:** Check whether DHT's approximately $500,000/day Q4 spot bookings and an assumed 12 term-chartered ships at $80,000/day imply approximately $520m quarterly profit and 2x TTM P/E; compare with Frontline's 2007-2008 peak.
+
+**Publication request (verbatim):** "帮我在wsl里clone一个这个repo，然后把你的分析按照repo内的.md要求写成中英文两份加成一个单独的github page" and "并且push到remote".
+
+**Findings and decisions:**
+- DHT's October 12 company update reports approximately 50% of Q4 spot days booked at $509,100/day; approximately 78% of all revenue days are covered at $225,200/day. Use that company blend rather than an unverified ship-count allocation.
+- With 2,055 revenue days as a Q3 proxy and $60.0m post-TCE accounting costs, remaining-day TCE of $100,000/$250,000/$500,000 gives illustrative Q4 profit of $346.2m/$414.0m/$527.0m. These are scenarios, not guidance or locked profit.
+- At the dated $26.22 reference price and last-reported 161,235,573 shares, reported trailing comparison is approximately 8.9x; illustrative FY2026 with a $520m Q4 is 3.7x; only annualizing that hypothetical quarter gives 2.0x.
+- Frontline's FY2008 annual report gives year-end P/E of 6.3x for 2007 and 3.2x for 2008, original 2008 high of $72.36, and March 2009 prices equivalent to 1.72x-2.27x FY2008 EPS. Peak-quarter annualizations are explicitly retrospective; the old 2.66x peak benchmark remains unreconciled.
+- Adopted the prior GPT-6-Astra adversarial findings: no exit-plan endorsement, no hypothetical earnings described as earned cash/dividends, no guaranteed profit floor, no look-ahead disguised as contemporaneous valuation.
+- A publication-specific GPT-6-Astra review found no blocking issues. Applied both presentation findings: qualify page titles as a profit scenario/annualized-quarter P/E, and explicitly model exceptional Q4 items as zero with actual outcomes unknown.
+- Publish a separate bilingual Jekyll topic with a dependency-free decimal calculator, source references and two-step review; add navigation and a narrow warning to the old benchmark. Do not overwrite historical valuation scenarios or fabricate unsupported 12-/24-month targets.
+
+**Files:** `dht_q4_2026/report_en.md`, `dht_q4_2026/report_cn.md`, `dht_q4_2026/run_analysis.py`; hub/README, DHT/FRO entry points, cycle-report entry points, `modeling_stash.md`, and both prompt logs.
 
 ---
 

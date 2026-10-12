@@ -9,6 +9,8 @@ title: Modeling Stash — Cyclical Valuation & Sell Signal Framework
 
 *Last updated: April 13, 2026*
 
+> **October 12, 2026 benchmark warning / 历史基准提示:** The historical FRO **2.66x** peak P/E below remains unreconciled with original-basis prices and EPS; do not treat it as a verified exit threshold. 下文 FRO **2.66x** 峰值 PE 尚未与原始股价及 EPS 对账，不应作为已验证的退出阈值。See the standalone fact-check: [English](dht_q4_2026/report_en) | [中文](dht_q4_2026/report_cn). Other historical model outputs are not recalibrated here.
+
 > ⚠️ **Disclaimer:** These are analytical frameworks under development, not investment advice. All models have limitations. Past performance does not predict future results. Always consult a qualified financial advisor.
 
 ---
