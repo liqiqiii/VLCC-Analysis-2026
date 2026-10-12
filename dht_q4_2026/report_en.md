@@ -8,6 +8,8 @@ lang: en
 
 **Research snapshot: October 12, 2026**
 
+> **Charter-anchor extension:** [Static/dynamic P/E, 2006-2008 period fixtures and what a term charter actually locks](charter_anchor_en) adds the $230,000/day broker assessment, recent owner-disclosed contracts and conditional single-ship profit/calendar-year calculations.
+
 > **Historical extension:** [Frontline 2007Q1-2009Q2: original prices, quarterly TTM/full-year P/E and crisis timing](fro_2007_2009_en) adds the quarterly reconstruction, exact vendor peak dates, an explicitly approximate reporting-lag series, and the distinction between quarterly, ex-items and TTM earnings peaks.
 
 [中文报告](report_cn) | [Research hub](../) | [Cycle research](../vlcc_cycles/report_en) | [Calculation script](https://github.com/liqiqiii/VLCC-Analysis-2026/blob/master/dht_q4_2026/run_analysis.py)

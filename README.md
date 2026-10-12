@@ -7,6 +7,7 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 ## Reports
 
 ### DHT Q4 2026 Bookings & Frontline 2008 P/E Fact-Check (October 12, 2026)
+- **Charter anchor: [EN](dht_q4_2026/charter_anchor_en.md) | [期租锚点中文](dht_q4_2026/charter_anchor_cn.md)** — static/dynamic P/E, historical and recent 1/2/3-year fixtures, $230k one-year broker assessment versus signed contracts, and the conditional $80m single-vessel profit example.
 - **Historical extension: [FRO 2007Q1-2009Q2 EN](dht_q4_2026/fro_2007_2009_en.md) | [FRO 原始股价与逐季 PE 中文](dht_q4_2026/fro_2007_2009_cn.md)** — original-share prices, period-TTM versus reporting-lag versus final-year P/E, distinct earnings peaks, and the financial-crisis timeline.
 - **[Report EN](dht_q4_2026/report_en.md) | [中文报告](dht_q4_2026/report_cn.md)**
 - **[GitHub Pages EN](https://liqiqiii.github.io/VLCC-Analysis-2026/dht_q4_2026/report_en) | [GitHub Pages 中文](https://liqiqiii.github.io/VLCC-Analysis-2026/dht_q4_2026/report_cn)**

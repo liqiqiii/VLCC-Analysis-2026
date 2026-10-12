@@ -7,6 +7,18 @@
 
 ## October 12, 2026 — DHT Q4 bookings, earnings-period correction and bilingual publication
 
+### Further follow-up: static/dynamic P/E and the period-charter anchor
+
+**Request:** Add static/dynamic P/E, investigate useful indicators, collect 2006-2008 one-/two-/three-year VLCC charters and recent deals, and examine whether $250,000/day for one year secures approximately $80m next-year profit.
+
+**Findings and decisions:**
+- Verified an archived original Fearnleys Week 41 PDF: report date October 7, one-year modern eco/scrubber VLCC assessment $230,000/day, up $45,000. Do not turn this into a named $250,000/day contract.
+- Collected dated named market fixtures from Euronav 2006-2008 annual reports, preserving exact 11-/16-month terms and leaving the 2006 exact two-year gap open. Recent DHT/FRO company releases confirm terms including FRO's two-year $90,000 contract.
+- Added static/latest-quarter-annualized P/E alongside the prior approximate historical TTM. The spread is partly an earnings identity, not independent evidence of valuation or predictive alpha.
+- Under stated single-ship cost assumptions, $250,000/day produces $78.96m profit at 365 paid days or $75.26m at 350. An illustrative October-to-October year contributes only 273 days/$68.25m gross hire to the following calendar year.
+- Proposed paid-day coverage, cash-cost coverage, expiry/renewal exposure and contract-supported forward EPS; no whole-company profit floor or validated signal claimed.
+- Astra review found no blocking issue and led to explicit matched-day coverage definitions, no modeled revenue on off-hire, net-revenue scope and per-share EPS conversion. Both languages, data, calculator and read-only tests updated.
+
 ### Follow-up: FRO original prices and quarterly P/E, 2007Q1-2009Q2
 
 **Request:** Reconstruct FRO's actual historical price basis despite dividends/splits; compare quarterly TTM and full-year P/E through H1 2009; explain why P/E fell after the cycle peak, whether the financial crisis ended the cycle, and the timing of share-price versus earnings peaks.

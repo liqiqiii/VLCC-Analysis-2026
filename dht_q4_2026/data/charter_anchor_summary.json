@@ -1,0 +1,28 @@
+{
+  "reference_price": "26.22",
+  "dht_static_pe_at_reference": "20.0153",
+  "dht_ttm_pe_at_reference": "8.9246",
+  "dht_latest_reported_quarter_annualized_pe": "5.3293",
+  "dht_hypothetical_q4_annualized_pe": "2.0325",
+  "dht_fy2026_scenario_pe": "3.6846",
+  "dht_actual_ntm_charter_supported_pe": null,
+  "hypothetical_250k_calendar_split": [
+    {
+      "year": 2026,
+      "days": 92,
+      "gross_hire_m": "23.00"
+    },
+    {
+      "year": 2027,
+      "days": 273,
+      "gross_hire_m": "68.25"
+    }
+  ],
+  "daily_hire_required_for_80m_at_365_paid_days": "252887.12",
+  "three_year_100k_gross_hire_m": "109.5000",
+  "fearnleys_1year_assessment": "230000",
+  "fearnleys_weekly_change": "45000",
+  "fearnleys_prior_assessment_implied": "185000",
+  "hypothetical_matched_250k_1year_100k_3year_later_average": "25000",
+  "term_curve_warning": "The later-average illustration is undiscounted and requires identical vessel, date, terms and immediate start. The actual observations are not matched; do not infer this forward rate from them."
+}

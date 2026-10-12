@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-10-12",
+  "unit": "USD per day; tenor in months",
+  "profit_example": {
+    "commission_fraction": "0.0125",
+    "opex_per_calendar_day": "10000",
+    "calendar_days": 365,
+    "annual_depreciation": "5000000",
+    "annual_interest": "2000000",
+    "annual_allocated_ga": "500000",
+    "annual_tax": "0",
+    "note": "Illustrative single owned vessel, not disclosed DHT or FRO vessel costs. No separate cash capex deducted in accounting profit; drydock amortization assumed within depreciation. Counterparty default, extraordinary costs and profit share are not modeled."
+  },
+  "sources": {
+    "E06": "https://bib.kuleuven.be/files/ebib/jaarverslagen/Euronav_2006.pdf",
+    "E07": "https://bib.kuleuven.be/files/ebib/jaarverslagen/Euronav_2007.pdf",
+    "E08": "https://bib.kuleuven.be/files/ebib/jaarverslagen/Euronav_2008.pdf",
+    "OGJ08": "https://www.ogj.com/refining-processing/refining/article/17218437/volatile-vlcc-rates-lead-tanker-rebound",
+    "Fearnleys41": "https://raw.githubusercontent.com/yieldchaser/Shipping/main/corpus/01-brokers/fearnleys/2026/fearnleys_08_10_2026_fearnleys_week_41_2026.pdf",
+    "Fearnleys_origin": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/10/Fearnleys-Weekly-Report-_-Fearnpulse.pdf",
+    "FRO_Jan26": "https://www.financialcontent.com/article/gnwcq-2026-1-23-fro-time-charter-out-contracts-for-seven-vlccs",
+    "FRO_Q226": "https://www.financialcontent.com/article/gnwcq-2026-8-28-fro-second-quarter-and-six-months-2026-results",
+    "DHT_Redwood": "https://www.financialcontent.com/article/gnwcq-2026-2-23-dht-holdings-inc-secures-one-year-time-charter-for-dht-redwood",
+    "DHT_Q226": "https://www.stocktitan.net/sec-filings/DHT/6-k-dht-holdings-inc-current-report-foreign-issuer-ad17bec30560.html",
+    "DHT_Panther": "https://www.financialcontent.com/article/gnwcq-2026-9-14-dht-holdings-inc-secures-three-year-time-charter-for-dht-panther",
+    "FRO_May08": "https://www.roic.ai/quote/FRO:NO/transcripts/2008-year/1-quarter"
+  },
+  "historical_fixtures": [
+    {"month": "2006-08", "vessel": "Atlantic Liberty", "built": 1995, "charterer": "Petrobras", "tenor_months": 36, "daily_hire": "44000", "source": "E06", "pdf_page": 35},
+    {"month": "2007-01", "vessel": "Universal Queen", "built": 2005, "charterer": "Mercuria", "tenor_months": 36, "daily_hire": "45000", "source": "E07", "pdf_page": 10},
+    {"month": "2007-02", "vessel": "Desh Vaibhav", "built": 2005, "charterer": "Koch", "tenor_months": 12, "daily_hire": "50000", "source": "E07", "pdf_page": 10},
+    {"month": "2007-06", "vessel": "Shinyo Navigator", "built": 1996, "charterer": "Koch", "tenor_months": 12, "daily_hire": "45500", "source": "E07", "pdf_page": 11},
+    {"month": "2007-08", "vessel": "Eagle Valencia", "built": 2005, "charterer": "TMT", "tenor_months": 24, "daily_hire": "45500", "source": "E07", "pdf_page": 12},
+    {"month": "2007-10", "vessel": "Maersk Neptune", "built": 2007, "charterer": "Daichi", "tenor_months": 12, "daily_hire": "60000", "source": "E07", "pdf_page": 12},
+    {"month": "2007-10", "vessel": "Crude Progress", "built": 2002, "charterer": "TMT", "tenor_months": 36, "daily_hire": "51500", "source": "E07", "pdf_page": 12},
+    {"month": "2007-12", "vessel": "Neptune", "built": 2002, "charterer": "TMT", "tenor_months": 36, "daily_hire": "52500", "source": "E07", "pdf_page": 13},
+    {"month": "2008-06", "vessel": "Golden Victory", "built": 1999, "charterer": "TMT", "tenor_months": 16, "daily_hire": "81000", "source": "E08", "pdf_page": 14},
+    {"month": "2008-10", "vessel": "BW Stadt", "built": 1994, "charterer": "Reliance", "tenor_months": 36, "daily_hire": "52500", "source": "E08", "pdf_page": 15},
+    {"month": "2008-10", "vessel": "Ioanna", "built": 2008, "charterer": "PDVSA", "tenor_months": 36, "daily_hire": "62000", "source": "E08", "pdf_page": 15},
+    {"month": "2008-11", "vessel": "Front Champion", "built": 1998, "charterer": "Koch", "tenor_months": 11, "daily_hire": "59750", "source": "E08", "pdf_page": 15},
+    {"month": "2008-11", "vessel": "Front Energy", "built": 2004, "charterer": "CV Marine", "tenor_months": 36, "daily_hire": "60550", "source": "E08", "pdf_page": 15},
+    {"month": "2008-12", "vessel": "Bunga Kasturi Dua", "built": 2005, "charterer": "ConocoPhillips", "tenor_months": 24, "daily_hire": "52500", "source": "E08", "pdf_page": 15}
+  ],
+  "historical_evidence_note": "Reported market fixtures in Euronav annual-report chronologies, not all Euronav-owned ships and not underlying charterparty documents. Do not treat different dates/specifications as a matched yield curve or annual market averages.",
+  "assessments": [
+    {"date": "2006-09/2007-03", "tenor_months": 12, "daily_hire": "49563", "source": "OGJ08", "type": "Reported six-month modern-VLCC average, not a single fixture or calendar-2006 average"},
+    {"date": "2007-09/2008-03", "tenor_months": 12, "daily_hire": "43317", "source": "OGJ08", "type": "Reported six-month modern-VLCC average, not a single fixture or calendar-2008 average"},
+    {"date": "2008-05-22", "tenor_months": 36, "daily_hire": "60000", "source": "FRO_May08", "type": "Management market indication, via earnings-call reproduction; approximate"},
+    {"date": "2026-10-07", "tenor_months": 12, "daily_hire": "230000", "weekly_change": "45000", "source": "Fearnleys41", "pdf_page": 4, "type": "Broker assessment, modern eco/scrubber VLCC; archived copy of broker PDF, not a named concluded contract"}
+  ],
+  "recent_contracts": [
+    {"announced": "2026-01-23", "owner": "FRO", "vessels": "Seven VLCCs; names not disclosed in release", "count": 7, "tenor_months": 12, "daily_hire": "76900", "start": "Late January-April 2026", "source": "FRO_Jan26", "status": "Company announcement; do not invent charterer identity"},
+    {"announced": "2026-02-23", "owner": "DHT", "vessels": "DHT Redwood (2011)", "count": 1, "tenor_months": 12, "daily_hire": "105000", "start": "Expected March 2026", "source": "DHT_Redwood", "status": "Company announcement; unnamed global energy company"},
+    {"announced": "2026-08-05", "owner": "DHT", "vessels": "DHT Sundarbans (2012), DHT Amazon (2011)", "count": 2, "tenor_months": 12, "daily_hire": "109000", "start": "Agreed May 2026; exact start dates not provided in cited paragraph", "source": "DHT_Q226", "status": "Average across two contracts, not a separately disclosed rate for each ship"},
+    {"announced": "2026-08-05", "owner": "DHT", "vessels": "DHT Jaguar (2015)", "count": 1, "tenor_months": 36, "daily_hire": "75000", "start": "Agreed July; expected September 2026", "source": "DHT_Q226", "status": "Company announcement; unnamed global energy company"},
+    {"announced": "2026-08-28", "owner": "FRO", "vessels": "Two VLCC newbuildings", "count": 2, "tenor_months": 12, "daily_hire": "120000", "start": "Vessels delivered June 22 and July 3, 2026; precise hire start not separately specified", "source": "FRO_Q226", "status": "Company release, board-dated August 27"},
+    {"announced": "2026-08-28", "owner": "FRO", "vessels": "One 2016-built VLCC; name not disclosed", "count": 1, "tenor_months": 24, "daily_hire": "90000", "start": "August 2026", "source": "FRO_Q226", "status": "Company-disclosed average rate over the term; payment schedule not provided"},
+    {"announced": "2026-08-28", "owner": "FRO", "vessels": "One 2016-built VLCC; name not disclosed", "count": 1, "tenor_months": 36, "daily_hire": "75000", "start": "August 2026", "source": "FRO_Q226", "status": "Company-disclosed average rate over the term; payment schedule not provided"},
+    {"announced": "2026-09-14", "owner": "DHT", "vessels": "DHT Panther (2016)", "count": 1, "tenor_months": 36, "daily_hire": "100000", "start": "Expected October 2026", "source": "DHT_Panther", "status": "Company announcement; unnamed global energy company"}
+  ],
+  "unverified_claims": [
+    "A named 12-month $250000/day concluded fixture as of the research date was not established; $230000/day broker assessment is not an actual DHT/FRO contract.",
+    "No exact 24-month VLCC fixture for calendar 2006 was verified in the collected sources.",
+    "No complete same-date 12/24/36-month historical or current matched-vessel curve was obtained.",
+    "Full DHT forward charter roster, minimum guaranteed hire, exact off-hire rights and complete company costs are not reconstructed; no company-wide locked net profit is claimed."
+  ]
+}

@@ -13,6 +13,8 @@ title: Modeling Stash — Cyclical Valuation & Sell Signal Framework
 
 > **Quarterly reconstruction / 逐季重建:** [2007Q1-2009Q2 EN](dht_q4_2026/fro_2007_2009_en) | [中文](dht_q4_2026/fro_2007_2009_cn). The reporting-lag comparison is explicitly approximate; neither the 2x observation nor the new historical table validates an exit rule. 财报滞后比较明确为近似值；2x 观察和新历史表均不构成退出规则验证。
 
+> **Term-charter evidence / 期租证据:** [EN](dht_q4_2026/charter_anchor_en) | [中文](dht_q4_2026/charter_anchor_cn). A broker's term assessment is not a signed company contract; contracted hire is not unconditional net profit. 经纪商期租评估不等于公司已签合同，合同租金也不等于无条件净利润。
+
 > ⚠️ **Disclaimer:** These are analytical frameworks under development, not investment advice. All models have limitations. Past performance does not predict future results. Always consult a qualified financial advisor.
 
 ---

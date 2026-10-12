@@ -1,0 +1,13 @@
+{
+  "source_date": "2026-10-07",
+  "retrieved_utc": "2026-10-12T20:26:11.203889+00:00",
+  "pdf_page": 4,
+  "sha256": "56262409974d8a70c9df9fff720ba895fc5a028bc6d63b17fb6caad792818168",
+  "archive_url": "https://raw.githubusercontent.com/yieldchaser/Shipping/main/corpus/01-brokers/fearnleys/2026/fearnleys_08_10_2026_fearnleys_week_41_2026.pdf",
+  "original_host_url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/10/Fearnleys-Weekly-Report-_-Fearnpulse.pdf",
+  "access_note": "Original host returned HTTP 403; read the archived broker PDF, not the repository summary. Archive filename Oct8 differs from report header Oct7; use the report header.",
+  "rate_type": "1 Year T/C - ECO / SCRUBBER; Modern VLCC; USD/day assessment",
+  "daily_rate": 230000,
+  "weekly_change": 45000,
+  "not_a_fixture": "No ship, charterer or signed charterparty identified by this assessment."
+}

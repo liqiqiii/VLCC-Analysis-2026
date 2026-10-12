@@ -6,6 +6,8 @@
 
 > **Historical extension:** [FRO's original prices and quarterly P/E, 2007Q1-2009Q2](dht_q4_2026/fro_2007_2009_en) separates earnings periods, reporting lags and the crisis timeline.
 
+> **Charter-anchor extension:** [Static/dynamic P/E and contract-supported earnings](dht_q4_2026/charter_anchor_en) distinguishes actual fixed cover from broker assessments and conditional profits.
+
 > **The Puzzle**: Both DHT and FRO bottomed out and nearly doubled in ~2 months with almost identical stock trajectories. But our cycle-peak model shows DHT has 2.5× FRO's remaining upside. Something doesn't add up. This analysis explains what we missed.
 
 ---

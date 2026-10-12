@@ -10,6 +10,16 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### VLCC Charter Anchors — Static/Dynamic P/E, Historical Fixtures & Conditional Profit (Oct 12, 2026)
+
+**期租比现货尖峰更适合作为盈利锚点，但锁定的是合同租金安排，不是无条件净利润。** Fearnleys 10月7日原始报告的现代节能／脱硫塔 VLCC **1年评估为 $230,000/天**，不是具名 $250,000 成交。另列 DHT/FRO 公司披露的1／2／3年合同，以及 Euronav 年报记录的2006-2008具名交易。示意 $250,000/天、365个付租日对应 **$91.25m 毛租金、$78.96m 利润**；起租日、停租和成本决定下一财年实际能确认多少。
+
+**New diagnostics:** fixed paid-day coverage, cash-cost coverage, expiry/renewal exposure and contract-supported forward EPS. Static, TTM and annualized-quarter P/E are separated; no predictive signal or guaranteed company-profit floor is claimed.
+
+**[English →](dht_q4_2026/charter_anchor_en)** | **[中文 →](dht_q4_2026/charter_anchor_cn)** | **[Source register →](https://github.com/liqiqiii/VLCC-Analysis-2026/blob/master/dht_q4_2026/data/charter_anchor_inputs.json)**
+
+---
+
 ### Frontline 2007Q1-2009Q2 — Original Prices, Quarterly P/E and Crisis Timing (Oct 12, 2026)
 
 **原始股价不能与分红复权图混用。** 还原并核对十个季度的 NYSE 价格区间，分别列出本期 TTM、财报发布滞后近似及事后全年 PE。2008Q2末原价 **$69.78**，本期 TTM **6.84x**；2009Q1末原价 **$17.39**，本期 TTM **2.42x**、此前全年盈利口径 **1.90x**。报表单季利润、剔除项目利润与 TTM 高点并不同步；8月公司报告已记录7月底转弱，不能把起点全部归因于9月雷曼。

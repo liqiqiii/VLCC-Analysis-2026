@@ -11,6 +11,8 @@ title: VLCC Deep-Dive — US Product-Export Limits & the Rate-vs-Stock Cycle Pla
 
 > **Quarterly historical extension:** [FRO 2007Q1-2009Q2](../dht_q4_2026/fro_2007_2009_en) reconstructs original prices, compares three P/E denominators and distinguishes profit peaks from publication timing.
 
+> **Charter-anchor extension:** [Static/dynamic P/E and period-contract economics](../dht_q4_2026/charter_anchor_en) adds dated historical fixtures, current company contracts and conditional cash/profit indicators; no old threshold is newly validated.
+
 > **Context (the user's framing):** After 6+ months, DHT/FRO have delivered big gains and the big cycle has partly paid off. Because these are *cyclical* stocks, we must know **which phase we're in** — external bullish news is abundant, but stay vigilant. Two research modules requested.
 
 > **TL;DR**
