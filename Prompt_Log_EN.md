@@ -1801,3 +1801,27 @@ Eight further material findings were all accepted: correlation strength does not
 
 **Files created**: 41_ZIM_Peak_Day_Marker_EN.md, 42_ZIM_Peak_Day_Marker_CN.md
 **Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 77: ZIM peak v2 — fill every unverified/untested part with data, with volume analysis
+**Date**: October 13, 2026
+
+**User request** (CN): complete the incomplete parts of the ZIM report, ideally with volume analysis; support every "unverified/untested" item with data.
+
+**Work**: new `zim_peak/run_zim_peak_volume.py` (yfinance OHLCV for 14 shipping names + SPY; FINRA short-interest API; two SCFI copies; yfinance earnings dates). Gross total-return index built from prices + dividends (Yahoo Adj Close overstates ex-date returns). Volume anatomy (RVOL, OBV price- and gross-signed, A/D, distribution days, turnover, anchored VWAP). Ex-dividend event study (465 events). Objective tops (complete ±252 horizons). Back-test of 8 flags with state-matched comparisons, incremental-volume pairs, synchronized moving-block bootstrap, hold-out splits.
+
+**Findings**:
+- Verified: FY20 adj EBITDA $1,036M (+537%); FY22 guide +7.6–13.6%; $17 = final dividend bringing 2021 payout to ~50% of NI; Israeli withholding 25%/30%. Consensus remains UNKNOWN.
+- Gross-TR high = 3/22 ex-date (gross +7.12%; Yahoo-adj +8.83%; price −12.19%) — a plausible match for the user's "+8% day"; gross-TR max drawdown −85.0%.
+- FINRA: short interest 4.6% of shares out on 3/15 (DTC 1.0) → "heavily shorted / squeeze" withdrawn; shorts built after the top (14.8% by 12/2022).
+- Volume: RVOL ≥1.5 on 9 of 10 sessions 3/9–3/22, turnover 44.4% in 6 sessions; up/down volume 2.14 → 0.40; OBV made its high WITH price (no divergence); 10 largest-volume days all came later.
+- SCFI peaked 1/7/2022 and fell 9/9 weeks; 6 of 9 container names peaked 9–19 weeks later; Asian carriers peaked Jul-2021 → heterogeneous timing.
+- Tankers (yield ≥2%): +2.78% vs peers in 10 sessions pre-ex [CI +1.40, +4.42]; post-ex −1.42% not reproduced in the earnings-clean subset; yield slope not established.
+- 8 of 26 gross-TR tops on/after an ex-date vs 4 of 27 price tops (descriptive; placebo p-values withdrawn).
+- No flag (incl. volume) beat state-matched comparisons; MOM20 −0.2 pp vs depth-matched → qualifies modeling_stash.md "4/4 correct".
+- gpt-6-astra: two rounds ("not safe" ×2); all blocking findings actioned and recorded in §8; BWET quarantined; no exit recommendation.
+
+**Files created**: zim_peak/run_zim_peak_volume.py, zim_peak/data/*, zim_peak/charts/* (3)
+**Files updated**: 41_ZIM_Peak_Day_Marker_EN.md, 42_ZIM_Peak_Day_Marker_CN.md (rewritten v2), modeling_stash.md (MOM20 qualification), index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

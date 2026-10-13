@@ -229,6 +229,8 @@ SELL when BOTH conditions are met simultaneously:
 
 **4/4 correct across all cycle types, including the current one.**
 
+> ⚠️ **Qualification (13-Oct-2026, Report #41 §6):** the momentum leg alone ("close < 80% of 90-day high", MOM20) was back-tested across 14 shipping names, 2004–2026, against days at the *same* drawdown depth. It showed **no forecasting advantage**: a 21.2% hit rate vs 21.4%, difference −0.2 pp [95% CI −2.4, +1.9]. It works as a drawdown-triggered exit heuristic, not a predictor. The rate-confirmation leg was not tested there because daily TD3C/BDTI history is not in the repo, and the 4-case table above is too small to validate it.
+
 ### Optional Tier 1: Early Warning (PE-based trim)
 
 For moderate cycles where PE data is available:

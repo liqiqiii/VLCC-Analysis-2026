@@ -6,10 +6,11 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
-### ZIM March 2022 Peak — Marker for the VLCC Top (October 13, 2026)
-- **[ZIM Peak-Day Marker EN](41_ZIM_Peak_Day_Marker_EN.md) | [ZIM见顶标记 CN](42_ZIM_Peak_Day_Marker_CN.md)**
-- Real peak: $91.23 intraday 2022-03-17 / $88.62 close 3/16, ending in the $17 ex-dividend on 3/22 (not 3/31)
-- 9 exploratory, unvalidated hypotheses for a VLCC equity top; includes the gpt-6-astra adversarial review record
+### ZIM March 2022 Peak — Volume, Dividends, Rates & Top-Flag Back-Test (v2, October 13, 2026)
+- **[ZIM Peak Study EN](41_ZIM_Peak_Day_Marker_EN.md) | [ZIM见顶研究 CN](42_ZIM_Peak_Day_Marker_CN.md)** — code and data in [`zim_peak/`](zim_peak/)
+- Price high 3/16 ($88.62), intraday 3/17 ($91.23), gross total-return high on the $17 ex-date 3/22 (not 3/31); SCFI had already fallen 9 straight weeks
+- Volume elevated (RVOL ≥1.5 on 9 of 10 sessions 3/9–3/22) but OBV confirmed the high. None of 8 volume/price top flags beat state-matched comparisons across 14 shipping names, 2004–2026
+- Qualifies `modeling_stash.md`: MOM20 shows no forecasting advantage vs a depth-matched comparison
 
 ### DHT Q4 2026 Bookings & Frontline 2008 P/E Fact-Check (October 12, 2026)
 - **Charter anchor: [EN](dht_q4_2026/charter_anchor_en.md) | [期租锚点中文](dht_q4_2026/charter_anchor_cn.md)** — static/dynamic P/E, historical and recent 1/2/3-year fixtures, $230k one-year broker assessment versus signed contracts, and the conditional $80m single-vessel profit example.

@@ -10,17 +10,19 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
-### 🔎 ZIM March 2022 Peak — Marker for the VLCC Top (October 13, 2026)
+### 🔎 ZIM March 2022 Peak — Volume, Dividends, Rates & a Top-Flag Back-Test (v2, October 13, 2026)
 
-What actually happened at ZIM's peak (intraday $91.23 on 2022-03-17, close high $88.62 on 3/16 — *not* 3/31) and a 9-flag checklist for calling the VLCC equity top.
+What actually happened at ZIM's peak (price close high $88.62 on 3/16, intraday $91.23 on 3/17, **gross total-return high on the $17 ex-date 3/22** — *not* 3/31), plus volume anatomy and a back-test of 8 volume/price "top flags" across 14 shipping names, 2004–2026.
 
-**[📄 ZIM Peak-Day Marker (EN) →](41_ZIM_Peak_Day_Marker_EN)** | **[中文版 →](42_ZIM_Peak_Day_Marker_CN)**
+**[📄 ZIM Peak Study (EN) →](41_ZIM_Peak_Day_Marker_EN)** | **[中文版 →](42_ZIM_Peak_Day_Marker_CN)**
 
 Key findings:
-- Peak was a six-session window (Mar 14–21) ending at the **$17 ex-dividend (3/22, −12.2% unadjusted)**; no +8% day at the top
-- In this one case equities topped ~2 months after SCFI and ~6 months after WCI (retrospective, unverified rate data); Maersk (Jan) → ZIM (Mar) → Hapag (May)
-- FY22 guidance implied only +7.6–13.6% EBITDA growth after +537%
-- Gross holding-period return from the peak close was ≈ −54% (not −93%) once $33.95 of dividends is counted; the 9-flag VLCC list is exploratory, not validated (Astra review in §7)
+- The "+8% day" plausibly matches 3/22 on a Yahoo-adjusted chart (+8.83%; gross TR +7.12%; price −12.2%). That is also where the gross-TR high is recorded
+- Volume: 9 of 10 sessions from 3/9 to 3/22 had RVOL ≥1.5 and turnover was 44% of shares in 6 sessions. But OBV **confirmed** the price high (no divergence), and the 10 largest-volume days came later, on down days
+- SCFI peaked 1/7/2022 and fell 9 straight weeks; 6 of 9 container equities peaked 9–19 weeks later. Timing was heterogeneous (Asian carriers peaked Jul-2021)
+- Not heavily shorted: FINRA short interest was 4.6% of shares out (DTC 1.0) on 3/15. Shorts built *after* the top
+- **None of the 8 flags (volume reversal, distribution days, OBV divergence, MA break, gap-down, −8% day, MOM20) showed lift vs state-matched comparisons.** Adding volume did not change hit rates
+- Tankers: +2.8% outperformance vs peers in the 10 sessions before ex-dates with yield ≥2%; the post-ex giveback is not robust to earnings windows. Two gpt-6-astra review rounds recorded
 
 ---
 
