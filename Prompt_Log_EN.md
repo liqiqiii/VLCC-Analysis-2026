@@ -1825,3 +1825,41 @@ Eight further material findings were all accepted: correlation strength does not
 
 **Files created**: zim_peak/run_zim_peak_volume.py, zim_peak/data/*, zim_peak/charts/* (3)
 **Files updated**: 41_ZIM_Peak_Day_Marker_EN.md, 42_ZIM_Peak_Day_Marker_CN.md (rewritten v2), modeling_stash.md (MOM20 qualification), index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 78: Did the ZIM report follow the repo rules / Day1Global? Review against them + gpt-6-astra review
+**Date**: October 13, 2026
+
+**User request** (CN): did you follow this repo's .md and use the Day1 framework? Review the report against it and have gpt-6-astra review again.
+
+**Answer**: No. The v2 report followed Rules 1–4b and the two-step protocol, but did NOT apply Rule 12 (Day1Global), Rule 5 (multi-model), Rule 6/CRule 4 (operating leverage), CRule 1 (two cycles with R²), CRule 2, CRule 9 or Rule 8B.
+
+**Work**:
+- New §7 in #41/#42: a retrospective framework application to ZIM with a reconstructed as-of-16-Mar-2022 input set (tagged [as-of]/[later]). It covers Day1 modules A–E/K/L/O, six perspectives (as judgments), CRule 5 checklist, CRule 4 leverage, CRule 7 sensitivity + error bridge, CRule 2 PE snapshots, CRule 1 two cycles (ZIM vs SCFI 2021–23, 2023–25), CRules 3/9/10, Rule 5 three-model replay, anti-bias and pre-mortems.
+- §8: CRule 8 verbatim mapping to the repo exit dashboard. §9: compliance table.
+- New `zim_peak/run_zim_day1_replay.py`; FRED CPI file; multi-model prompt and verbatim responses archived in `zim_peak/data/multimodel/`.
+
+**Key findings**:
+- At the peak: PE 2.27×, P/B 2.31×, EV/EBITDA 1.53×, reported FCF 46% of market cap (pre-financing; ~$3.51B / 33% residual after displayed principal repayments and interest).
+- EBIT breakeven ~$1,276/TEU (pretax $1,317); assumption-sensitive.
+- ZIM beat its FY22 EBITDA guidance ($7.54B), yet the price fell 80.6% from the peak to year-end. PE was 0.64× a year later.
+- ZIM peaked ~10 and ~20 weeks after the SCFI peak in two selected cycles; monthly moves coincident. Descriptive only.
+- The highest month-end close is 3/31/2022 ($72.71), a plausible source of the user's "3/31".
+- All three models (Opus 4.8, GPT-5.5, Gemini 3.7 Flash) recognized ZIM despite anonymization → outputs are hindsight-contaminated; not used as validation.
+
+**gpt-6-astra round 3**: "not safe unchanged" — 12 findings. Main ones:
+- as-of leakage (9th SCFI week, April orderbook, Kenon 20.7%, March CPI)
+- false FCF equation
+- cash vs EBIT breakeven
+- offsetting model errors
+- invalid "3× breakeven" check
+- consensus-as-validation
+- overstated compliance table
+
+All actioned (§10). Alphaliner Feb-2022 orderbook (24.6%) verified from the PDF.
+
+**User decision**: Rule 8B scope exception for this report.
+
+**Files updated**: 41_ZIM_Peak_Day_Marker_EN.md, 42_ZIM_Peak_Day_Marker_CN.md, zim_peak/run_zim_day1_replay.py, zim_peak/data/(day1_replay.json, crule1_two_cycles.csv, fred_cpiaucsl.csv, multimodel/*), index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

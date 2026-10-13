@@ -1,0 +1,371 @@
+{
+ "crule4": {
+  "other_revenue_ratio_fy21": 0.106,
+  "all_in_cost_per_teu_fy21": 1411,
+  "breakeven_freight_rate_fy21_cost_base": 1276,
+  "q4_21_rate_vs_breakeven": 2.85,
+  "fy21_rate_vs_breakeven": 2.18,
+  "all_in_cost_per_teu_fy20": 1151,
+  "breakeven_fy20": 1007,
+  "all_in_cost_per_teu_fy22": 1899,
+  "breakeven_fy22": 1655,
+  "all_in_cost_per_teu_fy23": 1702,
+  "breakeven_fy23": 1301,
+  "table": [
+   {
+    "x_breakeven": 1.0,
+    "rate": 1276,
+    "ebit_$M": 0,
+    "net_income_$M": -157,
+    "eps": -1.31,
+    "ebit_margin": 0.0
+   },
+   {
+    "x_breakeven": 1.5,
+    "rate": 1914,
+    "ebit_$M": 2399,
+    "net_income_$M": 1841,
+    "eps": 15.37,
+    "ebit_margin": 0.333
+   },
+   {
+    "x_breakeven": 2.0,
+    "rate": 2552,
+    "ebit_$M": 4799,
+    "net_income_$M": 3811,
+    "eps": 31.82,
+    "ebit_margin": 0.5
+   },
+   {
+    "x_breakeven": 2.5,
+    "rate": 3189,
+    "ebit_$M": 7198,
+    "net_income_$M": 5781,
+    "eps": 48.28,
+    "ebit_margin": 0.6
+   },
+   {
+    "x_breakeven": 3.0,
+    "rate": 3827,
+    "ebit_$M": 9597,
+    "net_income_$M": 7751,
+    "eps": 64.73,
+    "ebit_margin": 0.667
+   }
+  ]
+ },
+ "crule7_asof_sensitivity": [
+  {
+   "rate": 1200,
+   "ebit_$M": -285,
+   "eps": -3.69,
+   "pe_at_88.62": null
+  },
+  {
+   "rate": 1800,
+   "ebit_$M": 1972,
+   "eps": 12.44,
+   "pe_at_88.62": 7.1
+  },
+  {
+   "rate": 2400,
+   "ebit_$M": 4229,
+   "eps": 27.92,
+   "pe_at_88.62": 3.2
+  },
+  {
+   "rate": 3000,
+   "ebit_$M": 6486,
+   "eps": 43.39,
+   "pe_at_88.62": 2.0
+  },
+  {
+   "rate": 3630,
+   "ebit_$M": 8855,
+   "eps": 59.64,
+   "pe_at_88.62": 1.5
+  }
+ ],
+ "crule7_realized": {
+  "FY22": {
+   "rate": 3240,
+   "model_ebit": 7345,
+   "actual_adj_ebit": 6145,
+   "actual_eps": 38.35
+  },
+  "FY23": {
+   "rate": 1203,
+   "model_ebit": -264,
+   "actual_adj_ebit": -422,
+   "actual_eps": -22.42,
+   "impairment_$M": 2060
+  }
+ },
+ "moduleK_C_at_peak": {
+  "market_cap_$M": 10612,
+  "ev_$M": 10103,
+  "pe_trailing_fy21": 2.27,
+  "pe_on_realized_fy22": 2.31,
+  "bv_per_share_dec21": 38.35,
+  "pb": 2.31,
+  "pb_pro_forma_after_17_div": 3.35,
+  "ev_ebitda_fy21": 1.53,
+  "ev_ebitda_fy22_guide_mid": 1.38,
+  "fcf_yield_fy21": 0.46,
+  "dividends_last_12m_incl_declared": 21.5,
+  "dividend_yield_incl_declared": 0.243,
+  "lease_liabilities_$M": 3072
+ },
+ "crule2_pe_path": [
+  {
+   "date": "2021-03-31",
+   "price": 24.34,
+   "trailing_eps": 4.96,
+   "basis": "FY20 EPS",
+   "pe": 4.91
+  },
+  {
+   "date": "2022-03-16",
+   "price": 88.62,
+   "trailing_eps": 39.02,
+   "basis": "FY21 EPS",
+   "pe": 2.27
+  },
+  {
+   "date": "2023-03-16",
+   "price": 24.53,
+   "trailing_eps": 38.35,
+   "basis": "FY22 EPS",
+   "pe": 0.64
+  },
+  {
+   "date": "2024-03-15",
+   "price": 9.45,
+   "trailing_eps": -22.42,
+   "basis": "FY23 EPS",
+   "pe": "n.m. (loss)"
+  }
+ ],
+ "realized_after_peak": {
+  "12m": {
+   "date": "2023-03-16",
+   "price": 24.53,
+   "dividends_received": 27.55,
+   "price_return": -0.723,
+   "total_return_cash_divs": -0.412,
+   "gross_tr_return": -0.553
+  },
+  "24m": {
+   "date": "2024-03-15",
+   "price": 9.45,
+   "dividends_received": 33.95,
+   "price_return": -0.893,
+   "total_return_cash_divs": -0.51,
+   "gross_tr_return": -0.771
+  }
+ },
+ "crule9": {
+  "cpi_mar22": 287.674,
+  "cpi_latest": [
+   "2026-08-01",
+   334.131
+  ],
+  "factor": 1.1615,
+  "peak_close_real": 102.93,
+  "intraday_peak_real": 105.96,
+  "mcap_real_$M": 12325,
+  "fy21_ni_real_$M": 5400
+ },
+ "crule1": {
+  "stats": [
+   {
+    "cycle": "cycle1_2021_02_to_2023_12",
+    "convention": "px",
+    "months": 35,
+    "r2_log_levels": 0.8,
+    "corr_monthly_changes_k0": 0.499,
+    "best_lag_k": 0,
+    "corr_at_best": 0.499,
+    "lead_lag_profile": {
+     "-3": 0.024,
+     "-2": 0.138,
+     "-1": 0.188,
+     "0": 0.499,
+     "1": 0.274,
+     "2": 0.039,
+     "3": 0.274
+    }
+   },
+   {
+    "cycle": "cycle1_2021_02_to_2023_12",
+    "convention": "tr",
+    "months": 35,
+    "r2_log_levels": 0.511,
+    "corr_monthly_changes_k0": 0.474,
+    "best_lag_k": 0,
+    "corr_at_best": 0.474,
+    "lead_lag_profile": {
+     "-3": 0.034,
+     "-2": 0.062,
+     "-1": 0.178,
+     "0": 0.474,
+     "1": 0.212,
+     "2": 0.018,
+     "3": 0.265
+    }
+   },
+   {
+    "cycle": "cycle2_2023_10_to_2025_02",
+    "convention": "px",
+    "months": 17,
+    "r2_log_levels": 0.566,
+    "corr_monthly_changes_k0": 0.519,
+    "best_lag_k": 0,
+    "corr_at_best": 0.519,
+    "lead_lag_profile": {
+     "-3": -0.027,
+     "-2": -0.504,
+     "-1": 0.06,
+     "0": 0.519,
+     "1": 0.374,
+     "2": -0.183,
+     "3": -0.23
+    }
+   },
+   {
+    "cycle": "cycle2_2023_10_to_2025_02",
+    "convention": "tr",
+    "months": 17,
+    "r2_log_levels": 0.465,
+    "corr_monthly_changes_k0": 0.53,
+    "best_lag_k": 0,
+    "corr_at_best": 0.53,
+    "lead_lag_profile": {
+     "-3": -0.099,
+     "-2": -0.507,
+     "-1": 0.054,
+     "0": 0.53,
+     "1": 0.316,
+     "2": -0.256,
+     "3": -0.234
+    }
+   }
+  ],
+  "anatomy": {
+   "cycle1_2021_02_to_2023_12": {
+    "scfi_peak": [
+     "2021-12-31",
+     5046.66
+    ],
+    "scfi_trough": [
+     "2023-09-30",
+     886.85
+    ],
+    "zim_monthly_close_peak": [
+     "2022-03-31",
+     72.71
+    ],
+    "zim_monthly_close_trough": [
+     "2023-11-30",
+     7.0
+    ],
+    "zim_peak_minus_scfi_peak_months": 3.0
+   },
+   "cycle2_2023_10_to_2025_02": {
+    "scfi_peak": [
+     "2024-06-30",
+     3714.32
+    ],
+    "scfi_trough": [
+     "2023-11-30",
+     993.21
+    ],
+    "zim_monthly_close_peak": [
+     "2024-09-30",
+     25.66
+    ],
+    "zim_monthly_close_trough": [
+     "2023-11-30",
+     7.0
+    ],
+    "zim_peak_minus_scfi_peak_months": 3.0
+   }
+  },
+  "cycle2_daily": {
+   "zim_price_peak": [
+    "2024-11-20",
+    27.01
+   ],
+   "zim_tr_peak": "2025-01-02",
+   "scfi_weekly_peak": [
+    "2024-07-05",
+    3733.8
+   ]
+  }
+ },
+ "review_round3": {
+  "other_revenue_share": {
+   "2021": {
+    "of_freight": 0.1063,
+    "of_total": 0.0961
+   },
+   "2022": {
+    "of_freight": 0.1471,
+    "of_total": 0.1282
+   },
+   "2023": {
+    "of_freight": 0.3078,
+    "of_total": 0.2354
+   }
+  },
+  "pretax_breakeven_fy21": 1317,
+  "ebit_breakeven_residual_const_per_teu": {
+   "2021": 1115,
+   "2022": 1422,
+   "2023": 1332
+  },
+  "error_bridge": {
+   "2022": {
+    "extra_residual_revenue": 447,
+    "extra_net_operating_cost": -1647,
+    "net_ebit_difference": -1200
+   },
+   "2023": {
+    "extra_residual_revenue": 795,
+    "extra_net_operating_cost": -953,
+    "net_ebit_difference": -158
+   }
+  },
+  "fcf_bridge_fy21_$M": {
+   "ocf": 5971,
+   "capex_net_per_reconciliation": -1094,
+   "fcf_reported": 4877,
+   "repayment_borrowings_and_leases_combined": -1191.3,
+   "change_short_term_loans": -16.0,
+   "interest_paid": -160.0,
+   "residual_after_displayed_principal_and_interest": 3509.7,
+   "residual_yield": 0.331
+  },
+  "pe_on_2022_03_09": 1.93,
+  "price_2022_calendar": -0.708,
+  "price_peak_to_2022_end": -0.806,
+  "scfi_at_cutoff": {
+   "last_print": [
+    "2022-03-11",
+    4625.06
+   ],
+   "vs_peak": -0.0948,
+   "consecutive_declines": 8
+  },
+  "peak_lag_weeks": {
+   "cycle1_price": 9.71,
+   "cycle1_tr": 10.57,
+   "cycle2_price": 19.71,
+   "cycle2_tr": 25.86
+  },
+  "crule9_cycle2": {
+   "factor_nov24": 1.0556,
+   "peak_27.01_real": 28.51
+  }
+ }
+}

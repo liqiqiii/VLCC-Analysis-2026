@@ -22,7 +22,8 @@ Key findings:
 - SCFI peaked 1/7/2022 and fell 9 straight weeks; 6 of 9 container equities peaked 9–19 weeks later. Timing was heterogeneous (Asian carriers peaked Jul-2021)
 - Not heavily shorted: FINRA short interest was 4.6% of shares out (DTC 1.0) on 3/15. Shorts built *after* the top
 - **None of the 8 flags (volume reversal, distribution days, OBV divergence, MA break, gap-down, −8% day, MOM20) showed lift vs state-matched comparisons.** Adding volume did not change hit rates
-- Tankers: +2.8% outperformance vs peers in the 10 sessions before ex-dates with yield ≥2%; the post-ex giveback is not robust to earnings windows. Two gpt-6-astra review rounds recorded
+- Tankers: +2.8% outperformance vs peers in the 10 sessions before ex-dates with yield ≥2%; the post-ex giveback is not robust to earnings windows
+- **Day1Global / cyclical-rule replay (§7):** at the peak PE was 2.27× and the orderbook 24.6%. ZIM *beat* FY22 guidance yet fell 80.6% from the peak to year-end. It peaked ~10 and ~20 weeks after SCFI in two cycles. Three-model replay contaminated (all recognized ZIM). Four gpt-6-astra review rounds recorded
 
 ---
 

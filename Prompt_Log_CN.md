@@ -1801,3 +1801,41 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 
 **文件创建**：zim_peak/run_zim_peak_volume.py、zim_peak/data/*、zim_peak/charts/*（3张）
 **文件更新**：41_ZIM_Peak_Day_Marker_EN.md、42_ZIM_Peak_Day_Marker_CN.md（重写为v2）、modeling_stash.md（MOM20限定）、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+
+---
+
+## Prompt 78：ZIM报告是否遵循仓库规则/Day1框架？据此评审并由gpt-6-astra再评审
+**日期**：2026年10月13日
+
+**用户请求**：你有没有遵循这个repo的.md？要使用day1那个框架？根据那个review一下你的report，并且用gpt6astra再review一次。
+
+**回答**：没有。v2报告遵循了规则1–4b和两步协议，但**没有**应用规则12（Day1Global）、规则5（多模型）、规则6/CRule 4（经营杠杆）、CRule 1（含R²的两周期）、CRule 2、CRule 9及规则8B。
+
+**工作**：
+- #41/#42新增§7：用重建的截至2022-03-16输入集（标注[当时可得]/[事后]）对ZIM做回溯式框架应用。内容涵盖Day1模块A–E/K/L/O、六大视角（作为判断）、CRule 5清单、CRule 4杠杆、CRule 7敏感性＋误差分解、CRule 2 PE快照、CRule 1两周期（ZIM vs SCFI，2021–23与2023–25）、CRule 3/9/10、规则5三模型回放、反偏差与事前验尸。
+- §8：CRule 8逐字映射到仓库离场仪表盘。§9：合规表。
+- 新建`zim_peak/run_zim_day1_replay.py`；FRED CPI数据；多模型提示词与逐字回复存档于`zim_peak/data/multimodel/`。
+
+**关键发现**：
+- 顶部时：PE 2.27倍、P/B 2.31倍、EV/EBITDA 1.53倍；公告自由现金流为市值46%（融资前；扣除列示的本金偿还与利息后约$35.1亿，33%）。
+- EBIT平衡点约$1,276/TEU（税前$1,317），对假设敏感。
+- ZIM FY22 EBITDA超出指引（$75.4亿），但股价从顶部至年底跌80.6%；一年后PE仅0.64倍。
+- 两个选定周期中，ZIM分别在SCFI见顶后约10周和约20周见顶；月度变动同步。仅作描述。
+- 最高月末收盘为2022-03-31（$72.71），可能是用户记忆中"3/31"的来源。
+- 尽管匿名化，三个模型（Opus 4.8、GPT-5.5、Gemini 3.7 Flash）都认出了ZIM→输出受事后污染，不作为验证。
+
+**gpt-6-astra第3轮**："不可原样发布"，共12项发现。主要有：
+- 当时数据泄漏（第9周SCFI、4月订单数据、Kenon 20.7%、3月CPI）
+- 自由现金流等式错误
+- 现金与EBIT平衡点混淆
+- 模型误差相互抵消
+- "3倍平衡点"检查无效
+- 把共识当作验证
+- 合规表夸大
+
+均已处理（§10）。Alphaliner 2022年2月订单量（24.6%）已从PDF核实。
+
+**用户决定**：本报告豁免规则8B。
+
+**文件更新**：41_ZIM_Peak_Day_Marker_EN.md、42_ZIM_Peak_Day_Marker_CN.md、zim_peak/run_zim_day1_replay.py、zim_peak/data/（day1_replay.json、crule1_two_cycles.csv、fred_cpiaucsl.csv、multimodel/*）、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md

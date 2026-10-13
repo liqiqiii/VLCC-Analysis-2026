@@ -11,6 +11,7 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 - Price high 3/16 ($88.62), intraday 3/17 ($91.23), gross total-return high on the $17 ex-date 3/22 (not 3/31); SCFI had already fallen 9 straight weeks
 - Volume elevated (RVOL ≥1.5 on 9 of 10 sessions 3/9–3/22) but OBV confirmed the high. None of 8 volume/price top flags beat state-matched comparisons across 14 shipping names, 2004–2026
 - Qualifies `modeling_stash.md`: MOM20 shows no forecasting advantage vs a depth-matched comparison
+- §7 Day1Global and cyclical-rule retrospective replay (as-of 16-Mar-2022 inputs), with a rule-compliance table
 
 ### DHT Q4 2026 Bookings & Frontline 2008 P/E Fact-Check (October 12, 2026)
 - **Charter anchor: [EN](dht_q4_2026/charter_anchor_en.md) | [期租锚点中文](dht_q4_2026/charter_anchor_cn.md)** — static/dynamic P/E, historical and recent 1/2/3-year fixtures, $230k one-year broker assessment versus signed contracts, and the conditional $80m single-vessel profit example.
