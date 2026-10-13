@@ -1782,3 +1782,22 @@ Eight further material findings were all accepted: correlation strength does not
 
 **Files created**: vlcc_cycles/run_bwet_correlation.py, data/s22_*.csv (7), charts/s22_bwet.png
 **Files updated**: vlcc_cycles/report_en.md, report_cn.md (§22 added, §21 corrected), Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 76: ZIM March 2022 peak — marker for the VLCC top
+**Date**: October 13, 2026
+
+**User request**: Find what happened to ZIM at its 2022/03/31 peak ("+8% hike, then ~$100 → ~$6"), research online, use it as a marker for the VLCC peak, add a section and push.
+
+**Findings**:
+- Premise corrected: peak was $91.23 intraday on 2022-03-17 (close high $88.62 on 3/16), not 3/31; 3/31 closed $72.71 (-0.2%); no +8% day at the top; low $6.59 on 2023-11-28 (-93%)
+- Six-session top window (Mar 14-21) ending at the $17 ex-dividend on 3/22 (-12.2% unadjusted, ~+7.1% incl. dividend); FY22 EBITDA guide +7.6-13.6% after +537%
+- Equity closing highs: Maersk 2022-01-13, ZIM 03-16, Hapag 05-17 (selected-sample span, not a law)
+- Gross non-reinvested holding-period return -54.3% once $33.95 of dividends is counted
+- 9 exploratory VLCC hypotheses; SCFI/WCI levels secondary-sourced
+- gpt-6-astra adversarial review (Rule 4b) found 10 issues (blow-off wording, dividend-magnet causality, flags 1-6 hindsight, -54% label, overfit trade rules); all actioned, recorded in report §7
+
+**Files created**: 41_ZIM_Peak_Day_Marker_EN.md, 42_ZIM_Peak_Day_Marker_CN.md
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

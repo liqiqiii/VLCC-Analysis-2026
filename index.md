@@ -10,6 +10,20 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🔎 ZIM March 2022 Peak — Marker for the VLCC Top (October 13, 2026)
+
+What actually happened at ZIM's peak (intraday $91.23 on 2022-03-17, close high $88.62 on 3/16 — *not* 3/31) and a 9-flag checklist for calling the VLCC equity top.
+
+**[📄 ZIM Peak-Day Marker (EN) →](41_ZIM_Peak_Day_Marker_EN)** | **[中文版 →](42_ZIM_Peak_Day_Marker_CN)**
+
+Key findings:
+- Peak was a six-session window (Mar 14–21) ending at the **$17 ex-dividend (3/22, −12.2% unadjusted)**; no +8% day at the top
+- In this one case equities topped ~2 months after SCFI and ~6 months after WCI (retrospective, unverified rate data); Maersk (Jan) → ZIM (Mar) → Hapag (May)
+- FY22 guidance implied only +7.6–13.6% EBITDA growth after +537%
+- Gross holding-period return from the peak close was ≈ −54% (not −93%) once $33.95 of dividends is counted; the 9-flag VLCC list is exploratory, not validated (Astra review in §7)
+
+---
+
 ### VLCC Charter Anchors — Static/Dynamic P/E, Historical Fixtures & Conditional Profit (Oct 12, 2026)
 
 **期租比现货尖峰更适合作为盈利锚点，但锁定的是合同租金安排，不是无条件净利润。** Fearnleys 10月7日原始报告的现代节能／脱硫塔 VLCC **1年评估为 $230,000/天**，不是具名 $250,000 成交。另列 DHT/FRO 公司披露的1／2／3年合同，以及 Euronav 年报记录的2006-2008具名交易。示意 $250,000/天、365个付租日对应 **$91.25m 毛租金、$78.96m 利润**；起租日、停租和成本决定下一财年实际能确认多少。
