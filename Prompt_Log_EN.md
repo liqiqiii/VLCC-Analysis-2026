@@ -1915,3 +1915,27 @@ No tanker-specific negative headline was found today, and freight futures were f
 - From the ZIM study: price action cannot distinguish a correction from a top, and the ZIM top formed while fundamentals looked strongest. The key risk is binary gap risk (a Hormuz deal; the post-3-Nov window), which stop-losses cannot manage → position sizing.
 
 **Files**: Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 81: Why didn't refiners (VLO) fall on 14-Oct when tankers did?
+**Date**: October 14, 2026 (close)
+
+**User argument**: refiners did not fall, so the drop is not about Hormuz reopening; if rate hikes hit oil demand, refiners should fall like DHT.
+
+**Close data (yfinance)**:
+- Crude tankers −4.5% to −8% (basket −5.4%); product tankers −2.3% to −3.1%; LNG shipping −2.5% to −4.1%; dry bulk −3% to −3.4% (BDI −4.8% per secondary source); container −1.8% to −1.9%.
+- Refiners: VLO +0.7%, MPC +1.7%, PSX +1.6%; smaller PBF/DK −1.8%/−2.2%. Majors XOM +1.7%, CVX +2.0%. WTI +1.1%. LMT +3.6%, NOC +3.0%. RBOB −3.4%; 3-2-1 crack $65.9 → $61.7.
+- 120-day beta to the tanker basket: refiners/majors 0.02–0.15 (≈0); other shipping 0.2–1.0. Shipping names fell roughly in proportion to their tanker beta → a **shipping-equity factor day**.
+- BWET: implied −7.7% from beta, actual −0.1% → equities moved without freight futures (BWET data still quarantined).
+- History (2 years, 31 days with tanker basket ≤ −3%): VLO up on 45% of them (most 2026 cases); BWET ≥ −1% on only 32%. Next 20 days: tanker basket median +4.5%, 70% positive (n = 30; in-sample, bull-regime biased).
+- In March 2026, tankers fell ≥3% on days crude spiked +4.7% to +9.7% (escalation days).
+
+**Assessment**:
+- Agree the drop was not caused by de-escalation pricing (oil up, defense up, IRGC "complete closure" threat, BWET flat).
+- But "refiners didn't fall" is weak evidence by itself: refiners have ≈0 beta to tankers and often diverge.
+- The rate→oil-demand channel also does not explain it (beta ≈ 0).
+- Best explanation: shipping-factor de-risking on a risk-off day, without a freight repricing.
+
+**Files**: Prompt_Log_EN.md, Prompt_Log_CN.md
