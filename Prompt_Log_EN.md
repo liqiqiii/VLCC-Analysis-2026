@@ -1863,3 +1863,31 @@ All actioned (§10). Alphaliner Feb-2022 orderbook (24.6%) verified from the PDF
 **User decision**: Rule 8B scope exception for this report.
 
 **Files updated**: 41_ZIM_Peak_Day_Marker_EN.md, 42_ZIM_Peak_Day_Marker_CN.md, zim_peak/run_zim_day1_replay.py, zim_peak/data/(day1_replay.json, crule1_two_cycles.csv, fred_cpiaucsl.csv, multimodel/*), index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 79: Why did tanker stocks fall so much on 14-Oct-2026? (bearish-factor scan)
+**Date**: October 14, 2026 (intraday, ~13:35 ET)
+
+**User request** (CN): what happened in the tanker market; why the big drop today; collect the most likely bearish factors.
+
+**Data (yfinance, intraday)**:
+- Tankers: FRO −4.9%, DHT −5.6%, INSW −5.1%, NAT −6.3%, TNK −4.3%, Okeanis (Oslo) −6.5%; product tankers STNG −3.5%, TRMD −3.2%.
+- Rates/oil did not fall: BWET −0.4%, WTI +1.6%, Brent +0.8%.
+- Broad risk-off: SPY −1.3%, VIX +9.6%, MTUM −2.6%, IWM −2.1%, XME −4.2%, URA −4.9%, SBLK −4.1%.
+- Timing: Okeanis was flat in Oslo through the 08:30 ET CPI release, then fell ~7% at the 09:30 ET US open; FRO/DHT were −4.6%/−5.0% by 09:45.
+- No ex-dividend dates today.
+
+**Most likely drivers (ranked)**:
+1. Hot US September CPI (secondary reports: 3.7% vs 3.6% expected) → rate-hike odds → selling of high-beta and momentum winners.
+2. Positioning: tankers had just made 52-week highs on 12–13 Oct.
+3. A lingering de-escalation overhang:
+   - Trump: no strikes before the 3-Nov midterms; "productive" talks (8-Oct).
+   - Iran–Oman corridor coordinates agreed (7-Oct).
+   - A US counter-proposal under review.
+4. Valuation narrative: forward P/E far above trailing implies the market expects war rents to fade.
+
+No tanker-specific negative headline was found today, and freight futures were flat.
+
+**Files**: Prompt_Log_EN.md, Prompt_Log_CN.md

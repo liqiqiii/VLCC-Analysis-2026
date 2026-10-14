@@ -1839,3 +1839,31 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 **用户决定**：本报告豁免规则8B。
 
 **文件更新**：41_ZIM_Peak_Day_Marker_EN.md、42_ZIM_Peak_Day_Marker_CN.md、zim_peak/run_zim_day1_replay.py、zim_peak/data/（day1_replay.json、crule1_two_cycles.csv、fred_cpiaucsl.csv、multimodel/*）、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+
+---
+
+## Prompt 79：2026-10-14油轮股为何大跌？（利空梳理）
+**日期**：2026年10月14日（盘中约美东13:35）
+
+**用户请求**：油轮市场发生了什么？今天为什么跌这么多，帮我搜集最可能的相关利空。
+
+**数据（yfinance盘中）**：
+- 油轮股：FRO −4.9%、DHT −5.6%、INSW −5.1%、NAT −6.3%、TNK −4.3%、Okeanis（奥斯陆）−6.5%；成品油轮STNG −3.5%、TRMD −3.2%。
+- 运价与油价未跌：BWET −0.4%，WTI +1.6%，布伦特+0.8%。
+- 大盘风险偏好下降：SPY −1.3%、VIX +9.6%、MTUM −2.6%、IWM −2.1%、XME −4.2%、URA −4.9%、SBLK −4.1%。
+- 时点：Okeanis在美东08:30 CPI公布时于奥斯陆持平，美股09:30开盘后约下跌7%；FRO/DHT到09:45已分别跌4.6%/5.0%。
+- 今天无除息。
+
+**最可能的原因（排序）**：
+1. 美国9月CPI偏热（二手报道：3.7%，预期3.6%）→ 加息预期上升 → 高贝塔、动量股被抛售。
+2. 持仓拥挤：油轮股10/12–13刚创52周新高。
+3. 缓和预期持续压制：
+   - 特朗普：中期选举（11/3）前不打击伊朗，谈判"有成效"（10/8）。
+   - 伊朗与阿曼商定航道坐标（10/7）。
+   - 美方反提案正在审议中。
+4. 估值叙事：远期PE远高于滚动PE，说明市场预期战争溢价会消退。
+
+今天未发现油轮专属的利空新闻，运价期货也持平。
+
+**文件**：Prompt_Log_EN.md、Prompt_Log_CN.md
