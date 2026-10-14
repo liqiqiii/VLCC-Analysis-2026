@@ -1891,3 +1891,27 @@ All actioned (§10). Alphaliner Feb-2022 orderbook (24.6%) verified from the PDF
 No tanker-specific negative headline was found today, and freight futures were flat.
 
 **Files**: Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 80: Is 14-Oct just a healthy pullback on CPI/rates with fundamentals intact — hold?
+**Date**: October 14, 2026
+
+**User thesis**: the drop is a normal pullback after a big run, driven purely by hot CPI and hike risk; supply/demand and rates are unchanged; Iran attacks remove capacity; global crude/product inventories are at record lows; the real risks are a full Hormuz reopening and overcapacity; hold.
+
+**Checks (yfinance, 1y daily)**:
+- Size of the move: FRO −4.1% / DHT −5.3% on the day = −1.8σ / −2.3σ vs 60-day volatility (2.3% daily). Similar days occurred 5 and 3 times in the prior 6 months → within normal range.
+- **Beta to SPY and to MTUM over the last 120 days ≈ 0** (FRO 0.00/−0.03; DHT −0.01/−0.04). So "pure CPI/market" does not explain a −5% move by beta; it was a sector-specific flow on a risk-off day. This corrects Prompt 79's emphasis on CPI.
+- FRO vs BWET daily correlation 0.44 (120 days).
+- Repo exit dashboard: no trigger fired.
+  - P/NAV ≈ 1.55× (FRO) / 1.47× (DHT) at today's prices on s28 NAV, vs trim at 2.2×/2.0×.
+  - The 1-yr TC trigger is not near $85k.
+  - MOM20 trigger price: FRO $47.35, DHT $21.27.
+
+**Assessment**:
+- Agree: today was not a fundamental break (BWET flat, TD3C record on 9-Oct).
+- Overstated: "purely rates" (beta ≈ 0); "Iran bombing = de-capacity" (a dozen ships attacked; the main effect is reversible effective-capacity loss); "inventories at record lows" (unverified; IEA says inventories drew down sharply).
+- From the ZIM study: price action cannot distinguish a correction from a top, and the ZIM top formed while fundamentals looked strongest. The key risk is binary gap risk (a Hormuz deal; the post-3-Nov window), which stop-losses cannot manage → position sizing.
+
+**Files**: Prompt_Log_EN.md, Prompt_Log_CN.md
