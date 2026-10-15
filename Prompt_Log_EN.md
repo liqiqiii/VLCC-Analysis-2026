@@ -1958,3 +1958,22 @@ No tanker-specific negative headline was found today, and freight futures were f
 
 **Files created**: 43_Shadow_Fleet_Landscape_EN.md, 44_Shadow_Fleet_Landscape_CN.md, shadow_fleet/data/(sources.csv, kse_russia_shadow_fleet_may2026.csv)
 **Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 83: Wargame — what can Trump still do to lower oil before the midterms?
+**Date**: October 15, 2026
+
+**User request** (CN): given constraints (the US–Iran war won't end soon; Trump wants lower oil before 3-Nov), black-to-white is infeasible and Russian diesel failed for lack of ships. Does Trump have any other trick? Is the tanker pullback just short-term noise?
+
+**Findings** (Reports #45/#46):
+- Used levers: SPR 283 mb (172 mb released, delivered amount unverified; 40 mb loan only solicited); IEA 400 mb (the G7 100 mb is the March remainder); ~200 Jones Act waivers; diesel export ban ruled out; gas-tax holiday and E15 stalled; GL 135 Russian diesel.
+- Remaining (A–J4): extra IEA ≥100 mb (lobbying 15-Oct), SPR, OPEC+, a Hormuz navigation deal (rejected), Russia crude relief, export curbs, tax/EPA, China export quotas. None is shown to cut pump prices ≥10¢ before 3-Nov; this is not proof that none can.
+- Russian diesel: 1.8 Mt ≈ 13.4 mb ≈ 150–220 kb/d over 60–90 days; ~2.2 mb scheduled immediately. The binding constraint (ships vs other) is not established.
+- Hormuz: crude back to the 13.5 mb/d baseline; products 0.68 vs 3.6 mb/d (Kpler via CNBC, 30-Sep).
+- Tankers: correction vs normalization undetermined. BWET share price −9.6% intraday, FFA unverified; MOM20 exits not hit.
+- End-November states: strikes/no deal 30–40%, no strikes/no deal 40–55%, deal 10–20%.
+- gpt-6-astra: "not publication-ready" (7 findings) → confirmation (2 blockers + 3 minor) → second confirmation: safe to publish as a qualified wargame.
+
+**Files created**: 45_Trump_Oil_Levers_Wargame_EN.md, 46_Trump_Oil_Levers_Wargame_CN.md
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

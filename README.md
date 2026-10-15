@@ -7,6 +7,7 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 ## Reports
 
 ### Global Shadow Tanker Fleet — Iran vs Russia vs Others (October 14, 2026)
+- **[Trump Oil Levers Wargame EN](45_Trump_Oil_Levers_Wargame_EN.md) | [川普油价杠杆推演 CN](46_Trump_Oil_Levers_Wargame_CN.md)** — pre-midterm levers and the tanker read-through
 - **[Shadow Fleet EN](43_Shadow_Fleet_Landscape_EN.md) | [影子船队格局 CN](44_Shadow_Fleet_Landscape_CN.md)** — data in [`shadow_fleet/`](shadow_fleet/)
 - Russia: mid-size and product-heavy and >90% older than 15 years (KSE). Iran: blockaded, with zero crude exports. Venezuela: exited the shadow trade. No relief news on 14-Oct
 

@@ -10,6 +10,17 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### ♟️ Wargame: Trump's Remaining Oil-Price Levers Before the Midterms (October 15, 2026)
+
+Given that the US–Iran war continues and Trump wants lower oil before 3-Nov: what levers are left, and what does that mean for tankers?
+
+**[📄 Wargame (EN) →](45_Trump_Oil_Levers_Wargame_EN)** | **[中文版 →](46_Trump_Oil_Levers_Wargame_CN)**
+
+Key findings:
+- Most fast levers are already used (SPR at 283 mb, IEA 400 mb, Jones Act waivers, Russian diesel GL 135). Remaining options (extra IEA ≥100 mb, more SPR, OPEC+ pressure, China export quotas) are not shown to cut pump prices ≥10¢ before 3-Nov
+- A Hormuz navigation arrangement is the option most likely to move prices materially, and it has been rejected so far. Crude through Hormuz is back at baseline; the shortfall is now in products (0.68 vs 3.6 mb/d)
+- For tankers, correction vs freight normalization is undetermined; TD3C/FFA confirmation is needed. Exclusive end-November states (subjective): strikes/no deal 30–40%, no strikes/no deal 40–55%, deal 10–20%
+
 ### 🛢️ Global Shadow Tanker Fleet — Iran vs Russia vs Others (October 14, 2026)
 
 Size, vessel mix and age of the shadow fleet by country, and whether shadow-fleet relief explains the 14-Oct tanker selloff.

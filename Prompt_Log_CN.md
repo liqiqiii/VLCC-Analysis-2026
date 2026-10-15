@@ -1934,3 +1934,22 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 
 **文件创建**：43_Shadow_Fleet_Landscape_EN.md、44_Shadow_Fleet_Landscape_CN.md、shadow_fleet/data/（sources.csv、kse_russia_shadow_fleet_may2026.csv）
 **文件更新**：index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+---
+
+## Prompt 83：兵棋推演——中期选举前川普还能做什么压油价？
+**日期**：2026年10月15日
+
+**用户请求**：约束条件为美伊战争短期不会结束、川普希望在11/3前压低油价；黑油转白不可行，俄罗斯柴油因没船被证明无效；川普还有什么奇招？油运回调是否只是短期波动？
+
+**发现**（报告#45/#46）：
+- 已用杠杆：SPR 2.83亿桶（释放1.72亿桶，实际交付未验证；4000万桶借油仅为征询）；IEA 4亿桶（G7的1亿桶是3月余额）；约200份Jones Act豁免；柴油出口禁令已排除；燃油税假期和E15停滞；GL 135俄罗斯柴油。
+- 剩余选项（A–J4）：IEA追加≥1亿桶（10/15游说中）、SPR、OPEC+、霍尔木兹通航协议（被拒）、俄罗斯原油放松、出口限制、税收/EPA、中国出口配额。没有任何一项被证明能在11/3前让油价下降≥10美分；但这不证明一项都不行。
+- 俄罗斯柴油：1.8 Mt ≈ 13.4百万桶 ≈ 60–90天内150–220 kb/d；约2.2百万桶立即排期；约束是船还是其他因素未确立。
+- 霍尔木兹：原油回到13.5 mb/d基线；成品油0.68 vs 3.6 mb/d（Kpler经CNBC，9/30）。
+- 油轮：回调vs正常化未定；BWET股价盘中−9.6%，FFA未验证；MOM20退出触发价未触及。
+- 11月底状态：有打击/无协议30–40%，无打击/无协议40–55%，达成协议10–20%。
+- gpt-6-astra："不可发布"（7项）→确认轮（2项阻断＋3项次要）→第二次确认：可作为有限定的推演发布。
+
+**文件创建**：45_Trump_Oil_Levers_Wargame_EN.md、46_Trump_Oil_Levers_Wargame_CN.md
+**文件更新**：index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
