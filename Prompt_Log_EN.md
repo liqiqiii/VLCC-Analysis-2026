@@ -1939,3 +1939,22 @@ No tanker-specific negative headline was found today, and freight futures were f
 - Best explanation: shipping-factor de-risking on a risk-off day, without a freight repricing.
 
 **Files**: Prompt_Log_EN.md, Prompt_Log_CN.md
+
+
+---
+
+## Prompt 82: Was 14-Oct driven by shadow-fleet relief? Global shadow-fleet landscape by country, class and age
+**Date**: October 14, 2026
+
+**User request** (CN): today seems mainly driven by possible relaxation of shadow-fleet restrictions; analyze the global shadow fleet by Iran, Russia and others: counts, age and vessel structure.
+
+**Findings** (Reports #43/#44; sources tagged [P]/[S]/[U] in `shadow_fleet/data/sources.csv`):
+- No formal easing found for 14-Oct. Iran was tightened (Treasury 8-Oct, 17 tankers [P]; UANI: zero crude crossing the blockade in August [P]). Russia's GL 135 (9-Oct) is reported as diesel-only (text not verified).
+- Russia (KSE Jun-2026 [P]): 862 shadow tankers since 2023 (695 active; 583 sanctioned). May-2026 Russian-loading: 182 ships — crude 101 (~69 Aframax / ~24 Suezmax; 93% >15y), products 81 (~74 small/Handysize; 91% >15y).
+- Iran/Venezuela: >350 MR+ vessels at peak (Kpler [P]); shadow VLCC employment "collapsed" Jan-2026; Venezuela moved to mainstream.
+- Global: 940–1,900+ depending on definition [S]; 653 unique tankers sanctioned across six jurisdictions (KSE [P]); "18% of VLCCs sanctioned" [U].
+- 14-Oct: product tankers outperformed their beta-implied moves (+0.7 to +2.9pp) → weakens a narrow diesel-led story. NAT (Suezmax) fell most → broader relief expectations not excluded. The driver remains unidentified.
+- gpt-6-astra: "not ready" (11 findings) plus a confirmation pass (1 new error: the NAT class wording). All actioned.
+
+**Files created**: 43_Shadow_Fleet_Landscape_EN.md, 44_Shadow_Fleet_Landscape_CN.md, shadow_fleet/data/(sources.csv, kse_russia_shadow_fleet_may2026.csv)
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

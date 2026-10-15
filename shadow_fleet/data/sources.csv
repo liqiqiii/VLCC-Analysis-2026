@@ -1,0 +1,21 @@
+item,value,date,source,quality
+russia_shadow_tankers_since_2023,862,2026-06,KSE "What Is Left of the Shadow Fleet to Sanction?" (Jun 2026),primary
+russia_shadow_active_since_may2025,695,2026-06,KSE (same),primary
+russia_shadow_sanctioned_any_jurisdiction,583 (68%),2026-06,KSE (same),primary
+russia_shadow_sanctioned_eu_and_uk,525 (61%; 206 also US),2026-06,KSE (same),primary
+tankers_jointly_sanctioned_6_jurisdictions,653,2026-06-17,KSE ROT Jun 2026,primary
+russia_shadow_tankers_at_russian_ports_may2026,182 (101 crude / 81 products),2026-05,KSE ROT Jun 2026,primary
+russia_shadow_older_than_15y,93% crude / 91% products,2026-05,KSE ROT Jun 2026,primary
+russia_shadow_aug2026,166 of 258 tankers used (64%),2026-08,KSE tracker via search summary,secondary
+high_risk_exports_iran_russia_venezuela,4.73 mb/d Sep-2026 vs 6.39 a year earlier; Russia ~80%,2026-09,Vortexa via shadowfleetmonitor.com,secondary
+iran_crude_exports,0 crossing blockade line since 2026-07-12; zero through 2026-10-05,2026-10,UANI Aug-2026 tracker (primary page); Vortexa via shadowfleetmonitor,primary/secondary
+iran_crude_on_water,83 mb (43 mb trapped west of Hormuz),2026-10,Vortexa via shadowfleetmonitor,secondary
+iran_laden_tankers_clustered,>50 (crude/products/LPG),2026-08,UANI Aug-2026 tracker,primary
+iran_venezuela_peak_shadow_vessels_MR_plus,>350 (excl. Russia-focused),2026-Q1,Kpler Q1-2026 blog,primary
+global_shadow_fleet_range,940 (S&P Global) to 1900+ (Windward),2026,primonautic.com summary,secondary
+global_shadow_fleet_common_estimate,~1300-1337,2026-02,Ukrainian intelligence via repo #31 / shipfinex,secondary
+shadow_avg_age,~18y vs ~10y mainstream (Gibson); uninsured 18.1y vs insured 14.4y (KSE),2026,primonautic.com summary,secondary
+russia_shadow_age_20plus,42% of shadow tankers hauling Russian oil were >=20y,2026-04,CREA via primonautic.com,secondary
+sanctioned_tankers_individually_listed,~1010; 18% of VLCC fleet sanctioned,2026-10,search summary attributing Clarksons,unverified
+ofac_iran_tankers_oct8,17 tankers designated,2026-10-08,US Treasury press release sb0653 (title) / CNBC,primary
+gl_135_russian_diesel,OFAC GL 135 authorizes Russian-origin diesel incl. US imports to 2027-04-07,2026-10-09,OFAC recent actions 20261009 (via search),secondary

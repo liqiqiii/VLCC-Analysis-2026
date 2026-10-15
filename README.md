@@ -6,6 +6,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### Global Shadow Tanker Fleet — Iran vs Russia vs Others (October 14, 2026)
+- **[Shadow Fleet EN](43_Shadow_Fleet_Landscape_EN.md) | [影子船队格局 CN](44_Shadow_Fleet_Landscape_CN.md)** — data in [`shadow_fleet/`](shadow_fleet/)
+- Russia: mid-size and product-heavy and >90% older than 15 years (KSE). Iran: blockaded, with zero crude exports. Venezuela: exited the shadow trade. No relief news on 14-Oct
+
 ### ZIM March 2022 Peak — Volume, Dividends, Rates & Top-Flag Back-Test (v2, October 13, 2026)
 - **[ZIM Peak Study EN](41_ZIM_Peak_Day_Marker_EN.md) | [ZIM见顶研究 CN](42_ZIM_Peak_Day_Marker_CN.md)** — code and data in [`zim_peak/`](zim_peak/)
 - Price high 3/16 ($88.62), intraday 3/17 ($91.23), gross total-return high on the $17 ex-date 3/22 (not 3/31); SCFI had already fallen 9 straight weeks

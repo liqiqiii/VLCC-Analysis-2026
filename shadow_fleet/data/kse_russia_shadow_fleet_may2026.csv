@@ -1,0 +1,2 @@
+month,crude_aframax,crude_suezmax,crude_total,crude_older_15y,crude_not_older_15y,products_small_handysize,products_aframax,products_total,products_older_15y,products_not_older_15y,note
+2026-05,69,24,101,94,7,74,2,81,74,7,"KSE Institute Russian Oil Tracker June 2026 (ROT_JUN26), p.17 charts; class values read from chart data labels (Aframax/Suezmax for crude; Small-Handysize/Aframax for products). Residual crude 8 = small/Panamax/VLCC/ULCC (VLCC/ULCC only via STS). KSE text: 101 crude tankers, 93% >15y; 81 product tankers, 91% >15y; 182 total."

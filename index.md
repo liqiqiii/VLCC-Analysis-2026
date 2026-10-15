@@ -10,6 +10,20 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🛢️ Global Shadow Tanker Fleet — Iran vs Russia vs Others (October 14, 2026)
+
+Size, vessel mix and age of the shadow fleet by country, and whether shadow-fleet relief explains the 14-Oct tanker selloff.
+
+**[📄 Shadow Fleet Landscape (EN) →](43_Shadow_Fleet_Landscape_EN)** | **[中文版 →](44_Shadow_Fleet_Landscape_CN)**
+
+Key findings:
+- Russian-loading shadow tankers (KSE, May-2026): 182 ships. Crude 101 (~69 Aframax, ~24 Suezmax; 93% >15 years); products 81 (~74 small/Handysize; 91% >15 years). 862 shadow tankers have carried Russian oil since 2023, 583 of them sanctioned
+- Iran: zero crude crossing the US blockade line in August (UANI); 17 more tankers sanctioned on 8-Oct. Iran is being tightened, not relaxed
+- No formal shadow-fleet easing was found for 14-Oct (GL 135 on 9-Oct is reported as diesel-only). Product tankers outperformed their beta, but the day's driver remains unidentified
+- Iranian normalization is the scenario most directly tied to VLCCs; its size is unquantified
+
+---
+
 ### 🔎 ZIM March 2022 Peak — Volume, Dividends, Rates & a Top-Flag Back-Test (v2, October 13, 2026)
 
 What actually happened at ZIM's peak (price close high $88.62 on 3/16, intraday $91.23 on 3/17, **gross total-return high on the $17 ex-date 3/22** — *not* 3/31), plus volume anatomy and a back-test of 8 volume/price "top flags" across 14 shipping names, 2004–2026.
