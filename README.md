@@ -6,6 +6,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### PAG Distressed-Asset Playbook — Wanda, Evergrande Services, Big-Four Banks, Japan (November 5, 2026)
+- **[PAG Playbook EN](47_PAG_Distressed_Playbook_EN.md) | [太盟困境资产打法 CN](48_PAG_Distressed_Playbook_CN.md)** — code and data in [`pag_distressed/`](pag_distressed/)
+- 6666.HK at 7.5x TTM profit (offer, conditional); Wanda headline proxies not like-for-like; bank and Japan template = state carve-out first, foreign capital at ~1.2x book; China 2026 exit route unproven
+
 ### Global Shadow Tanker Fleet — Iran vs Russia vs Others (October 14, 2026)
 - **[Trump Oil Levers Wargame EN](45_Trump_Oil_Levers_Wargame_EN.md) | [川普油价杠杆推演 CN](46_Trump_Oil_Levers_Wargame_CN.md)** — pre-midterm levers and the tanker read-through
 - **[Shadow Fleet EN](43_Shadow_Fleet_Landscape_EN.md) | [影子船队格局 CN](44_Shadow_Fleet_Landscape_CN.md)** — data in [`shadow_fleet/`](shadow_fleet/)

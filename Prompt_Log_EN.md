@@ -1977,3 +1977,21 @@ No tanker-specific negative headline was found today, and freight futures were f
 
 **Files created**: 45_Trump_Oil_Levers_Wargame_EN.md, 46_Trump_Oil_Levers_Wargame_CN.md
 **Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 84: PAG's bottom-fishing of Wanda and Evergrande Services; big-four bank reform and Japan analogs
+**Date**: November 5, 2026
+
+**User request** (CN): using this repo as the base, study PAG's recent bottom-fishing acquisitions of Wanda and Evergrande Property Services and the business logic of large distressed-asset deals. Also study the analogous cases: foreign strategic investors entering the big four banks before their IPOs (c.2005), low-priced M&A and restructuring, NPL carve-outs, and Japan's quality real-estate turnarounds (Mitsui Fudosan). Summarise PAG's and foreign capital's strategies in such investments.
+
+**Findings** (Reports #47/#48, `pag_distressed/`):
+- 6666.HK (30-Oct-2026): PAG buys 51.016% from Evergrande's liquidators for HK$4.026bn plus RMB 500m (deal FX 0.85621 → all-in HK$4.610bn ≈ HK$0.8359/share). Conditional on SAMR; the unconditional HK$0.8359 offer comes after completion. PAG intends to keep the listing and not squeeze out.
+- 6666 pricing: 7.84x FY2025 / 7.50x TTM at the offer; 8.42x TTM at the HK$0.945 close (above the offer). H1-2026 operating cash flow RMB 81.9m vs RMB 517m profit. Ex-cash margin of safety withdrawn.
+- Wanda: 2021 headline proxy ~RMB 179bn (34x) vs 2024 ~RMB 100bn (10.5x 2023E). Not like-for-like. 48 malls: RMB 50bn with a planned 5/15/30 stack (anonymous); a 10% NOI fall wipes out the junior at an unchanged cap rate.
+- Banks: state carve-out first (RMB 1.4tn to AMCs, Huijin US$45bn); foreign investors in at ~1.2x book (BOC 1.17x, ICBC 1.22x); Goldman/ICBC 3.9x gross proceeds/cost. KFB ~3.3x gross won; LTCB defect warranty. Mitsui Fudosan 6.65x from the Apr-2003 trough to 2007, then −73%.
+- Playbook (observed, not proven to drive returns): sellers under a clock; legacy losses carried by others (documented only for banks/KFB/LTCB); control; tranching; local/sovereign co-investors; capital-market exit. The weak link is China's exit route (C-REIT eligibility, Wanda IPO unverified).
+- gpt-6-astra: v1 "not safe to publish" (9 blockers incl. a wrong FX, ex-cash P/E and bank prices) → v2 "publish with fixes" (4 blockers) → fixed.
+
+**Files created**: 47_PAG_Distressed_Playbook_EN.md, 48_PAG_Distressed_Playbook_CN.md, pag_distressed/run_model.py, pag_distressed/data/sources.csv
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

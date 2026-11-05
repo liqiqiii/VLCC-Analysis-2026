@@ -10,6 +10,17 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🏦 PAG's Distressed-Asset Playbook: Wanda, Evergrande Services, Big-Four Banks and Japan (November 5, 2026)
+
+How PAG bought into Wanda and Evergrande Property Services, the business logic of large distressed deals, and the 2005 bank-reform and Japan analogs.
+
+**[📄 Report (EN) →](47_PAG_Distressed_Playbook_EN)** | **[中文版 →](48_PAG_Distressed_Playbook_CN)**
+
+Key findings:
+- 6666.HK: 51.016% for HK$4.026bn plus RMB 500m (≈HK$0.8359/share all-in), conditional on SAMR. Offer at 7.5x TTM profit; the market trades above the offer. The ex-cash margin of safety is not established
+- Wanda: the 2021 (~34x) vs 2024 (~10.5x 2023E) headline proxies are not like-for-like. The 48-mall junior (planned, 10x asset leverage) is wiped out by a 10% NOI fall at an unchanged cap rate
+- Analogs: the state carved out bad assets first (AMCs, Huijin, KFB/LTCB put-backs); foreign capital entered at ~1.2x book. China property 2026 lacks that backstop, and its exit route (C-REIT, Wanda IPO) is unproven
+
 ### ♟️ Wargame: Trump's Remaining Oil-Price Levers Before the Midterms (October 15, 2026)
 
 Given that the US–Iran war continues and Trump wants lower oil before 3-Nov: what levers are left, and what does that mean for tankers?
