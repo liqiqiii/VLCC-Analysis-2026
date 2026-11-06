@@ -2059,3 +2059,16 @@ No tanker-specific negative headline was found today, and freight futures were f
 - All tables in EN and CN were independently reproduced by the reviewer.
 
 **Files updated**: 51_PAG_Follow_Backtest_EN.md, 52_PAG_Follow_Backtest_CN.md, pag_distressed/run_follow_backtest.py, pag_distressed/paper_portfolio.py, pag_distressed/data/(follow_backtest_results.csv, paper_portfolio_start.csv → LF), .gitattributes, index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 88: Close out test D with the current prices
+**Date**: November 6, 2026
+
+**User request** (CN): no need to wait; treat the current prices as the closes and finish.
+
+**Decision**:
+- At 16:53 HKT, Yahoo's 6-Nov closes for all seven tickers matched the manifest exactly. They were adopted as the final inception prices; the manifest price is the definitive cost basis.
+- `paper_portfolio.py` now warns (rather than aborts) if Yahoo later revises an inception close by >0.5%, and aborts only above 5% (a likely corporate action). The manifest hash is unchanged (C77D…ACD5).
+
+**Files updated**: 51_PAG_Follow_Backtest_EN.md, 52_PAG_Follow_Backtest_CN.md, pag_distressed/paper_portfolio.py, Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -147,9 +147,9 @@ The test supports only one narrow statement: **in the 4 PAG entries with a 12-mo
 | Item | Rule |
 |---|---|
 | Hypothesis | PAG's control bid for Evergrande Services (30-Oct-2026) signals a turn for HK-listed China property-services stocks |
-| Inception | Official HK close on **6-Nov-2026**, captured from Yahoo at ~16:40 HKT, after HKEX's ~16:10 closing auction. **The formal check is still pending**: the first `mark` run after 18:00 HKT aborts if any Yahoo close differs from the manifest by more than 0.5%. If that happens, test D will be restarted as a new, separately dated test |
+| Inception | HK closes for **6-Nov-2026**, captured from Yahoo at 16:40–16:53 HKT, after HKEX's ~16:10 closing auction. All seven matched exactly at 16:53 HKT. **Adopted as final on the user's decision; the manifest price is the definitive cost basis.** If Yahoo later revises a close by more than 0.5%, `mark` prints a warning and returns stay anchored to the manifest. Above 5% it aborts, since that points to an unhandled corporate action |
 | Manifest | `pag_distressed/data/paper_portfolio_start.csv`. LF line endings, stored byte-for-byte via `.gitattributes`. SHA-256 `C77D909195282BAF661BBF9ACDF1E2F9075133AE3CB7B85BE7791A121BB5ACD5`, reproducible from a clone. The script refuses to overwrite it |
-| Return basis | **Anchored to the manifest price**. Dividends are reinvested via Yahoo's total-return factor; later splits are applied via Yahoo's split history. The script aborts if Yahoo's inception close differs from the manifest by more than 0.5% |
+| Return basis | **Anchored to the manifest price**. Dividends are reinvested via Yahoo's total-return factor; later splits are applied via Yahoo's split history |
 | Basket (HK$100k each, total return, no rebalancing) | 6666.HK @0.995, 1209.HK @41.64, 6049.HK @27.24, 2669.HK @3.365, 6098.HK @5.02, 1516.HK @0.67 |
 | Benchmark | 2800.HK @24.60, HK$600k |
 | Valuation | First completed 2800.HK close **on or after** each review date (a session counts only after 18:00 HKT): 6-Feb-2027, 6-Nov-2027, 6-Nov-2028, 6-Nov-2029 |
@@ -248,7 +248,7 @@ The review was scoped to 6 web lookups. Verdict on v1: **"not safe to publish as
 
 | # | Finding | Verdict | Action |
 |---|---|---|---|
-| R1 | The report claimed the closes were re-checked after 18:00 HKT, but it was only 16:42 HKT | Correct | Claim withdrawn. The check is marked **pending**; the first `mark` after 18:00 HKT performs it |
+| R1 | The report claimed the closes were re-checked after 18:00 HKT, but it was only 16:42 HKT | Correct | Claim withdrawn. The user then chose to adopt the 16:53 HKT prices as final closes; they matched the manifest exactly |
 | R2 | The cash-takeover calculation ignored post-inception splits (synthetic case: +20% computed as −40%) | Correct | Terminal value = cash × shares per inception share (splits × dividend reinvestment). Unit-tested: +20% |
 | R3 | A delisted ticker still caused a live fetch that aborts | Correct | Terminal records are frozen; delisted tickers are never fetched. Unit-tested with a failing fetch |
 | R4 | A late-starting benchmark could break equal weights (c6 residual) | Correct | Members and benchmark are now aligned together before normalising. Current tables unchanged (verified identical) |

@@ -2035,3 +2035,16 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 - 中英文所有表格均经审稿人独立复现。
 
 **文件更新**：51_PAG_Follow_Backtest_EN.md、52_PAG_Follow_Backtest_CN.md、pag_distressed/run_follow_backtest.py、pag_distressed/paper_portfolio.py、pag_distressed/data/（follow_backtest_results.csv、paper_portfolio_start.csv → LF）、.gitattributes、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+---
+
+## Prompt 88：按当前价格作为收盘价收尾测试D
+**日期**：2026年11月6日
+
+**用户请求**：没事，按照现在价格当作收盘价来收尾。
+
+**决定**：
+- 香港时间16:53，Yahoo上7只代码的11月6日收盘价与清单完全一致，作为最终起始价格；清单价格即为成本基准。
+- `paper_portfolio.py` 改为：若 Yahoo 之后修订起始收盘价超过0.5%只发出警告，超过5%（可能是公司行动）才中止。清单哈希不变（C77D…ACD5）。
+
+**文件更新**：51_PAG_Follow_Backtest_EN.md、52_PAG_Follow_Backtest_CN.md、pag_distressed/paper_portfolio.py、Prompt_Log_EN.md、Prompt_Log_CN.md

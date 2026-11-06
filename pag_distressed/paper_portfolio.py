@@ -5,8 +5,10 @@ signals a turn for HK-listed China property-services stocks, so a basket bought 
 should beat the Tracker Fund over 3 / 12 / 24 / 36 months.
 
 Fixed rules (do NOT change after inception; any change must be a new, separately dated test):
-- Inception = official HK close on 2026-11-06, recorded in data/paper_portfolio_start.csv (LF line
-  endings, stored byte-for-byte via .gitattributes; SHA-256 printed in report #51).
+- Inception prices = Yahoo HK closes for 2026-11-06 as captured at ~16:40-16:53 HKT (after HKEX's
+  closing auction), adopted as final by the user's decision on 6-Nov-2026 and recorded in
+  data/paper_portfolio_start.csv (LF line endings, stored byte-for-byte via .gitattributes;
+  SHA-256 printed in report #51). The manifest price is the definitive cost basis.
 - Returns are ANCHORED TO THE MANIFEST PRICE: value_t = manifest_close x shares, with
   shares = HK$100,000 / manifest_close; dividends reinvested via Yahoo's total-return factor
   (Adj Close ratio); share splits/consolidations after inception are applied via Yahoo's split
@@ -27,8 +29,9 @@ Fixed rules (do NOT change after inception; any change must be a new, separately
 - Log semantics: only the four scheduled review dates produce "review" rows (dates normalised to ISO);
   the FIRST "review" row for a scheduled date is canonical; any later row for the same date is
   "revision" and must be explained in the report. All other runs are "interim" (informational).
-- The first `mark` run after 18:00 HKT on 6-Nov-2026 also serves as the inception check: it aborts if
-  any Yahoo inception close differs from the manifest by more than 0.5%.
+- If Yahoo later revises an inception close by more than 0.5% vs the manifest, `mark` prints a warning
+  (returns stay anchored to the manifest cost basis); above 5% it aborts, as that signals an
+  unhandled corporate action rather than a price revision.
 
 Usage:
   python pag_distressed/paper_portfolio.py init                     # once; refuses to overwrite
@@ -50,7 +53,8 @@ BASKET = ["6666.HK", "1209.HK", "6049.HK", "2669.HK", "6098.HK", "1516.HK"]
 BENCH = "2800.HK"
 REVIEWS = ["2027-02-06", "2027-11-06", "2028-11-06", "2029-11-06"]
 NOTIONAL = 100_000
-TOL = 0.005
+TOL = 0.005       # warn above this inception-price gap
+TOL_ABORT = 0.05  # abort above this gap (likely an unhandled corporate action)
 HKT = timezone(timedelta(hours=8))
 # Frozen cash-takeover records:
 # {ticker: (completion_date, cash_per_share_hkd, shares_per_inception_share, source)}
@@ -138,8 +142,13 @@ def mark(review_arg=None):
             continue
         h, split = (bench_h, bench_split) if t == BENCH else fetch(t)
         y0 = h["Close"].iloc[0] * split  # Yahoo's split-adjusted history scaled back to inception shares
-        if abs(y0 / m_px - 1) > TOL:
-            raise SystemExit(f"{t}: Yahoo inception close {y0:.4f} (split-adjusted back) vs manifest {m_px} > {TOL:.1%}")
+        gap = abs(y0 / m_px - 1)
+        if gap > TOL_ABORT:
+            raise SystemExit(f"{t}: Yahoo inception close {y0:.4f} (split-adjusted back) vs manifest {m_px}: "
+                             f"{gap:.1%} > {TOL_ABORT:.0%}; check corporate actions")
+        if gap > TOL:
+            print(f"WARNING {t}: Yahoo inception close {y0:.4f} vs manifest {m_px} ({gap:.2%}); "
+                  "returns remain anchored to the manifest cost basis")
         upto = h[h.index <= asof]
         if upto.index[-1] != asof:
             stale.append(t)
