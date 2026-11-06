@@ -2035,3 +2035,27 @@ No tanker-specific negative headline was found today, and freight futures were f
 
 **Files created**: 51_PAG_Follow_Backtest_EN.md, 52_PAG_Follow_Backtest_CN.md, pag_distressed/run_follow_backtest.py, pag_distressed/paper_portfolio.py, pag_distressed/data/(follow_backtest_results.csv, paper_portfolio_start.csv, paper_portfolio_log.csv)
 **Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 87: Re-review and double-check of #51/#52
+**Date**: November 6, 2026
+
+**User request** (CN): submit the report for review again and double-check it.
+
+**Findings** (two more gpt-6-astra rounds, both "not safe to publish as written"; all findings fixed):
+- Round 2 (v2):
+  - The A4 event date should be SAMR's first disclosure (9-Apr-2025), not the 20-May clearance publication. With that date, test A averages: 3m **+5.3pp (3/5)**, 12m **−13.5pp (0/4)**, 36m −20.4pp (0/2).
+  - Paper-portfolio returns are now anchored to the manifest price, with split handling, delisting/suspension rules, a completed-session gate (18:00 HKT) and review/revision/interim log types.
+  - The "five" 12-month observations are corrected to four.
+  - The manifest hash now reproduces on clone (LF + `.gitattributes`): C77D…ACD5.
+- Round 3 (v3):
+  - The claim that closes were checked after 18:00 HKT was withdrawn; the check is pending at the first `mark`.
+  - Cash-takeover value now includes splits and dividends (unit-tested: +20%).
+  - Delisted tickers are never fetched.
+  - Members and benchmark are aligned before normalising (tables verified identical).
+  - Review dates are normalised to ISO.
+  - Titles and per-test cutoffs fixed.
+- All tables in EN and CN were independently reproduced by the reviewer.
+
+**Files updated**: 51_PAG_Follow_Backtest_EN.md, 52_PAG_Follow_Backtest_CN.md, pag_distressed/run_follow_backtest.py, pag_distressed/paper_portfolio.py, pag_distressed/data/(follow_backtest_results.csv, paper_portfolio_start.csv → LF), .gitattributes, index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

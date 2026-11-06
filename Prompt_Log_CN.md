@@ -2011,3 +2011,27 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 
 **文件创建**：51_PAG_Follow_Backtest_EN.md、52_PAG_Follow_Backtest_CN.md、pag_distressed/run_follow_backtest.py、pag_distressed/paper_portfolio.py、pag_distressed/data/（follow_backtest_results.csv、paper_portfolio_start.csv、paper_portfolio_log.csv）
 **文件更新**：index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+---
+
+## Prompt 87：#51/#52 再次送审与复核
+**日期**：2026年11月6日
+
+**用户请求**：再次送审，double check。
+
+**发现**（又进行了两轮 gpt-6-astra 审稿，均为"按现稿不可发布"；所有发现已修正）：
+- 第二轮（v2）：
+  - A4事件日应为市监总局首次披露日（2025-04-09），而非5月20日的批准公示日。改用该日期后，测试A平均：3个月 **+5.3个百分点（3/5）**，12个月 **−13.5（0/4）**，36个月 −20.4（0/2）。
+  - 纸面组合回报改为以清单价格为锚，并加入拆股处理、退市/停牌规则、交易日完成规则（香港时间18:00），以及 review/revision/interim 三类日志记录。
+  - "5个"12个月观察改为4个。
+  - 清单哈希改为克隆即可复现（LF + `.gitattributes`）：C77D…ACD5。
+- 第三轮（v3）：
+  - 撤回"已于18:00后复核收盘价"的说法，核对改由第一次 `mark` 执行（尚待完成）。
+  - 现金收购终值计入拆股和股息（单元测试：+20%）。
+  - 已退市代码不再拉取数据。
+  - 成分股与基准先对齐再归一（表格经验证完全相同）。
+  - 检视日期统一为ISO格式。
+  - 修正标题，并分别注明各测试的截止日。
+- 中英文所有表格均经审稿人独立复现。
+
+**文件更新**：51_PAG_Follow_Backtest_EN.md、52_PAG_Follow_Backtest_CN.md、pag_distressed/run_follow_backtest.py、pag_distressed/paper_portfolio.py、pag_distressed/data/（follow_backtest_results.csv、paper_portfolio_start.csv → LF）、.gitattributes、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md

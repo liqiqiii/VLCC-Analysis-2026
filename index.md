@@ -17,7 +17,7 @@ A test of whether PAG's entries signal a sector turn, what is known about holdin
 **[📄 Report (EN) →](51_PAG_Follow_Backtest_EN)** | **[中文版 →](52_PAG_Follow_Backtest_CN)**
 
 Key findings:
-- Following PAG's entries (n=5, total-return benchmarks): +8.6pp average excess at 3 months (4/5), but −9.6pp at 12 months (0/4). Too small for inference
+- Following PAG's entries (n=5, total-return benchmarks): +5.3pp average excess at 3 months (3/5), −13.5pp at 12 months (0/4 eligible). Too small for inference
 - Holding after PAG exits cannot be tested cleanly with public data; the related CWK/TME/XRX cases are descriptive only
 - 6666 trades 19% above PAG's offer. Live test D: a property-services basket vs 2800.HK from 6-Nov-2026, with reviews to Nov-2029
 

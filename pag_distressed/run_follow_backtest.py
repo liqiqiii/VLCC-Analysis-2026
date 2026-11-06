@@ -1,10 +1,11 @@
-"""Pre-registered event study: following PAG's entries (A) and holding after PAG's exits (C).
+"""Event study: following PAG's entries (A) and descriptive cases linked to PAG exits (C).
 
-Rules (fixed before looking at results):
+Rules (NOT pre-registered: results were viewed while the code was corrected; see report #51 header):
 - Entry = first trading close STRICTLY AFTER the announcement date (T+1), to avoid look-ahead.
 - Total-return prices (yfinance auto_adjust=True) for instruments AND benchmarks (HK benchmark = 2800.HK,
   not the ^HSI price index). Baskets are equal-weighted at entry, no rebalancing.
-- Event date = first public disclosure. Data cutoff END = 2026-11-06 (inclusive), fixed for reproducibility.
+- Event date = earliest public disclosure of the transaction. Data cutoffs are frozen per test:
+  A through 2026-11-06 (HK/JP/CN close), C through 2026-11-05 (last complete US session at run time).
 - Excess return = instrument return - benchmark return over the same window.
 - Horizons: 63 / 252 / 756 trading days (~3m / 12m / 36m), plus "to date". A horizon is
   reported only if enough data exists (no partial windows).
@@ -17,7 +18,8 @@ import yfinance as yf
 
 warnings.filterwarnings("ignore")
 HORIZONS = {"3m": 63, "12m": 252, "36m": 756}
-END = "2026-11-07"  # exclusive upper bound -> data through 2026-11-06
+END_A = "2026-11-07"  # exclusive -> through 2026-11-06
+END_C = "2026-11-06"  # exclusive -> through 2026-11-05
 
 ENTRY_EVENTS = [
     # id, date, PAG event, instruments, benchmark, how the instrument relates
@@ -28,7 +30,7 @@ ENTRY_EVENTS = [
     ("A3", "2023-12-12", "Wanda new agreement (Opco control bloc)",
      ["1209.HK", "6049.HK", "2669.HK", "6098.HK", "1516.HK", "6666.HK", "0169.HK"], "2800.HK",
      "HK-listed China property-services / commercial-operation basket"),
-    ("A4", "2025-05-20", "48 Wanda Plazas JV clearance published by SAMR (approved 6-May, published 20-May)",
+    ("A4", "2025-04-09", "48 Wanda Plazas JV filing first disclosed by SAMR (cleared 6-May, published 20-May)",
      ["1209.HK", "6049.HK", "2669.HK", "6098.HK", "1516.HK", "6666.HK", "0169.HK"], "2800.HK",
      "same basket as A3"),
     ("A5", "2025-12-24", "Sapporo Real Estate (with KKR, EV ¥477bn)", ["2501.T", "8801.T", "8802.T"], "1306.T",
@@ -58,37 +60,31 @@ EXCLUDED_EXITS = [
 _cache = {}
 
 
-def px(t):
-    if t not in _cache:
-        h = yf.Ticker(t).history(start="2000-01-01", end=END, auto_adjust=True)["Close"]
+def px(t, end):
+    if (t, end) not in _cache:
+        h = yf.Ticker(t).history(start="2000-01-01", end=end, auto_adjust=True)["Close"]
         if h.empty:
             raise ValueError(f"no data for {t}")
         h.index = h.index.tz_localize(None).normalize()
-        _cache[t] = h.dropna()
-    return _cache[t]
+        _cache[(t, end)] = h.dropna()
+    return _cache[(t, end)]
 
 
-def basket_path(tickers, start):
-    paths = []
-    for t in tickers:
-        s = px(t)
-        s = s[s.index > start]
-        if len(s):
-            paths.append(s / s.iloc[0])
-    df = pd.concat(paths, axis=1).ffill()
-    df = df.dropna()  # common dates after every member has started
-    return df.mean(axis=1), [t for t in tickers if len(px(t)[px(t).index > start])]
+def basket_path(tickers, start, end, bench):
+    """Align members AND benchmark on a common start, then normalise each before averaging."""
+    used = [t for t in tickers if len(px(t, end)[px(t, end).index > start])]
+    cols = {t: px(t, end)[px(t, end).index > start] for t in used}
+    cols["__bench__"] = px(bench, end)[px(bench, end).index > start]
+    df = pd.concat(cols, axis=1).ffill().dropna()
+    df = df / df.iloc[0]
+    return pd.concat([df[used].mean(axis=1), df["__bench__"]], axis=1, keys=["inst", "bench"]), used
 
 
-def run(events, label):
+def run(events, label, end):
     rows = []
     for eid, d, name, tick, bench, rel in events:
         start = pd.Timestamp(d)
-        b, used = basket_path(tick, start)
-        m = px(bench)
-        m = m[m.index > start]
-        m = m / m.iloc[0]
-        j = pd.concat([b, m], axis=1, keys=["inst", "bench"]).ffill().dropna()
+        j, used = basket_path(tick, start, end, bench)
         row = {"id": eid, "event_date": d, "entry_close": j.index[0].date(), "event": name,
                "instruments": "+".join(used), "benchmark": bench, "relation": rel}
         for k, n in HORIZONS.items():
@@ -114,8 +110,8 @@ def run(events, label):
 
 
 if __name__ == "__main__":
-    a = run(ENTRY_EVENTS, "A. Follow PAG's entry (T+1 close)")
+    a = run(ENTRY_EVENTS, "A. Follow PAG's entry (T+1 close)", END_A)
     print("Excluded entries:", "; ".join(f"{n} ({d}): {why}" for n, d, why in EXCLUDED_ENTRIES), "\n")
-    c = run(EXIT_EVENTS, "C. Descriptive: listed exit vehicles / acquirer (not PAG exit timing)")
+    c = run(EXIT_EVENTS, "C. Descriptive: listed exit vehicles / acquirer (not PAG exit timing)", END_C)
     print("Excluded exits:", "; ".join(f"{n} ({d}): {why}" for n, d, why in EXCLUDED_EXITS))
     pd.concat([a.assign(test="A"), c.assign(test="C")]).to_csv("pag_distressed/data/follow_backtest_results.csv", index=False)
