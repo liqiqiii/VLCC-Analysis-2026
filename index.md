@@ -10,6 +10,17 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🧭 PAG's Track Record and Playbook — Case Studies and the Mitsui Fudosan Question (November 6, 2026)
+
+Nine case studies of PAG's deals (Yingde/AirPower, USJ, DTZ, Tencent Music, Lexmark, Goldin tower, Sapporo Real Estate, Wanda/Evergrande), its habitual moves, and whether it resembles Mitsui Fudosan.
+
+**[📄 Report (EN) →](49_PAG_Track_Record_EN)** | **[中文版 →](50_PAG_Track_Record_CN)**
+
+Key findings:
+- Three strategies, not one: control / special situations (Yingde, Goldin, Evergrande Services, Wanda); carve-out / roll-up (Baosteel Gases, DTZ, Sapporo); minority growth (TME 19x gross reported, USJ, Lexmark — contested)
+- Aggregate performance is not established: fund figures are unverified aggregator data, and KFB/SDB are Shan's pre-PAG Newbridge deals
+- Not a Mitsui: closed-end buy-fix-sell funds vs a permanent-capital developer and REIT sponsor. The closer analog is Japan's 1998–2005 opportunity funds; China's long-term owners are possible (speculative) exit buyers
+
 ### 🏦 PAG's Distressed-Asset Playbook: Wanda, Evergrande Services, Big-Four Banks and Japan (November 5, 2026)
 
 How PAG bought into Wanda and Evergrande Property Services, the business logic of large distressed deals, and the 2005 bank-reform and Japan analogs.

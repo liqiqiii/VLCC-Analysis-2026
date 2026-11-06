@@ -1971,3 +1971,25 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 
 **文件创建**：47_PAG_Distressed_Playbook_EN.md、48_PAG_Distressed_Playbook_CN.md、pag_distressed/run_model.py、pag_distressed/data/sources.csv
 **文件更新**：index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+---
+
+## Prompt 85：太盟投资履历、案例研究、惯用打法；它像三井不动产吗？
+**日期**：2026年11月6日
+
+**用户请求**：分析太盟历史上的操作，看看他主要的投资案例有哪些、成功案例和惯用手法；做几个案例研究，再结合恒大和万达的交易，捋一捋他这么做的思路，是否类似于三井不动产？
+
+**发现**（报告#49/#50，`pag_distressed/run_track_record.py`）：
+- 太盟至少有三种策略：
+  - A：控股 / 特殊机会（盈德、高银大厦、恒大物业、万达）。
+  - B：剥离 / 整合（宝钢气体、DTZ→戴德梁行、札幌不动产）。
+  - C：少数股成长（腾讯音乐据报毛19倍、环球影城、利盟）。
+- 韩一银（毛3.3倍）和深发展是单伟建在新桥的交易，不是太盟回报。
+- 盈德/气体动力：要约价6.00港元；宝钢51%为底价的2.13倍；以68亿美元企业价值出售（部分退出；股权倍数无法复现）。
+- 利盟：施乐收购价15亿美元含净债务（2025年7月1日）。太盟持股此前已降至32.02%；仲裁索赔≥6.89亿美元；奔图提起49.5亿元侵权之诉；太盟全周期结果未知。
+- 基金数字（聚合网站，未核实）：Asia I 约17%/1.80倍；II 约9%/1.60倍；III 约9%/1.40倍。
+- 不像三井：永久资本的开发商/REIT发起人 vs 封闭式"买入—修复—卖出"基金。更接近的类比是日本1998–2005年的机会基金（包括前身 Secured Capital）。中国的长期持有人（国企平台、保险、C-REIT发起人）可能成为退出买家（推测）。
+- gpt-6-astra：两次超时；第三次（限定12次网络核查）判定 v1"不可发布"（4项阻断：利盟估值层级、基金数据、新桥归属、三井绝对化表述）→ 已修正。
+
+**文件创建**：49_PAG_Track_Record_EN.md、50_PAG_Track_Record_CN.md、pag_distressed/run_track_record.py
+**文件更新**：pag_distressed/data/sources.csv（S44–S61）、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md

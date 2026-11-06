@@ -1995,3 +1995,25 @@ No tanker-specific negative headline was found today, and freight futures were f
 
 **Files created**: 47_PAG_Distressed_Playbook_EN.md, 48_PAG_Distressed_Playbook_CN.md, pag_distressed/run_model.py, pag_distressed/data/sources.csv
 **Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 85: PAG's track record, case studies, habitual moves; is it like Mitsui Fudosan?
+**Date**: November 6, 2026
+
+**User request** (CN): analyse PAG's historical deals: main and successful cases, habitual methods. Do several case studies, combine them with the Evergrande and Wanda deals, lay out the logic, and assess whether it resembles Mitsui Fudosan.
+
+**Findings** (Reports #49/#50, `pag_distressed/run_track_record.py`):
+- At least three PAG strategies:
+  - A: control / special situations (Yingde, Goldin tower, Evergrande Services, Wanda).
+  - B: carve-out / roll-up (Baosteel Gases, DTZ → C&W, Sapporo Real Estate).
+  - C: minority growth (TME 19x gross reported, USJ, Lexmark).
+- KFB (3.3x gross) and SDB are Shan's Newbridge deals, not PAG returns.
+- Yingde/AirPower: HK$6.00 offer, Baosteel 51% at 2.13x the reserve, sold at a US$6.8bn EV (partial exit; equity multiple not reproducible).
+- Lexmark: US$1.5bn incl. net debt (Xerox, 1-Jul-2025). PAG's stake was already 32.02%; HKIAC claim ≥US$689m; Pantum's RMB 4.95bn tort suit; PAG's lifetime result unknown.
+- Fund figures (aggregator, unverified): Asia I ~17%/1.80x; II ~9%/1.60x; III ~9%/1.40x.
+- Not Mitsui: permanent-capital developer/REIT sponsor vs closed-end buy-fix-sell funds. The closer analog is Japan's 1998–2005 opportunity funds (incl. predecessor Secured Capital). China's long-term owners (SOE platforms, insurers, C-REIT sponsors) are possible, speculative, exit buyers.
+- gpt-6-astra: two runs timed out; the third (scoped to 12 web checks) rated v1 "not safe to publish" (4 blockers: Lexmark valuation layers, fund data, Newbridge attribution, Mitsui absolute) → fixed.
+
+**Files created**: 49_PAG_Track_Record_EN.md, 50_PAG_Track_Record_CN.md, pag_distressed/run_track_record.py
+**Files updated**: pag_distressed/data/sources.csv (S44–S61), index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

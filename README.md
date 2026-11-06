@@ -6,6 +6,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### PAG Track Record & Playbook — Case Studies, Is It a Mitsui? (November 6, 2026)
+- **[PAG Track Record EN](49_PAG_Track_Record_EN.md) | [太盟投资履历 CN](50_PAG_Track_Record_CN.md)** — script `pag_distressed/run_track_record.py`
+- Three strategies (control / carve-out / minority growth); aggregate performance not established; not a Mitsui: the closer analog is Japan's 1998–2005 opportunity funds
+
 ### PAG Distressed-Asset Playbook — Wanda, Evergrande Services, Big-Four Banks, Japan (November 5, 2026)
 - **[PAG Playbook EN](47_PAG_Distressed_Playbook_EN.md) | [太盟困境资产打法 CN](48_PAG_Distressed_Playbook_CN.md)** — code and data in [`pag_distressed/`](pag_distressed/)
 - 6666.HK at 7.5x TTM profit (offer, conditional); Wanda headline proxies not like-for-like; bank and Japan template = state carve-out first, foreign capital at ~1.2x book; China 2026 exit route unproven
