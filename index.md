@@ -10,6 +10,17 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🧪 Can Investors Follow PAG? Event Study and a Live Paper Portfolio (November 6, 2026)
+
+A test of whether PAG's entries signal a sector turn, what is known about holding after PAG exits, and a pre-registered out-of-sample paper portfolio.
+
+**[📄 Report (EN) →](51_PAG_Follow_Backtest_EN)** | **[中文版 →](52_PAG_Follow_Backtest_CN)**
+
+Key findings:
+- Following PAG's entries (n=5, total-return benchmarks): +8.6pp average excess at 3 months (4/5), but −9.6pp at 12 months (0/4). Too small for inference
+- Holding after PAG exits cannot be tested cleanly with public data; the related CWK/TME/XRX cases are descriptive only
+- 6666 trades 19% above PAG's offer. Live test D: a property-services basket vs 2800.HK from 6-Nov-2026, with reviews to Nov-2029
+
 ### 🧭 PAG's Track Record and Playbook — Case Studies and the Mitsui Fudosan Question (November 6, 2026)
 
 Nine case studies of PAG's deals (Yingde/AirPower, USJ, DTZ, Tencent Music, Lexmark, Goldin tower, Sapporo Real Estate, Wanda/Evergrande), its habitual moves, and whether it resembles Mitsui Fudosan.

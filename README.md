@@ -6,6 +6,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### Can Investors Follow PAG? — Event Study & Live Paper Portfolio (November 6, 2026)
+- **[Follow-PAG Backtest EN](51_PAG_Follow_Backtest_EN.md) | [跟投太盟回测 CN](52_PAG_Follow_Backtest_CN.md)** — scripts `pag_distressed/run_follow_backtest.py`, `pag_distressed/paper_portfolio.py`
+- Entry follow: +8.6pp at 3 months, −9.6pp at 12 months (0/4; n is small). Post-exit holding not cleanly testable. Live basket vs 2800.HK from 6-Nov-2026
+
 ### PAG Track Record & Playbook — Case Studies, Is It a Mitsui? (November 6, 2026)
 - **[PAG Track Record EN](49_PAG_Track_Record_EN.md) | [太盟投资履历 CN](50_PAG_Track_Record_CN.md)** — script `pag_distressed/run_track_record.py`
 - Three strategies (control / carve-out / minority growth); aggregate performance not established; not a Mitsui: the closer analog is Japan's 1998–2005 opportunity funds

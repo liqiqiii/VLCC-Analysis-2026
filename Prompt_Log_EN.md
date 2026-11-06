@@ -2017,3 +2017,21 @@ No tanker-specific negative headline was found today, and freight futures were f
 
 **Files created**: 49_PAG_Track_Record_EN.md, 50_PAG_Track_Record_CN.md, pag_distressed/run_track_record.py
 **Files updated**: pag_distressed/data/sources.csv (S44–S61), index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 86: Can investors follow PAG? Event study and an out-of-sample paper portfolio
+**Date**: November 6, 2026
+
+**User request** (CN): what can an investor learn? Is it right that PAG buys at industry lows and, because of closed-end fund terms, sells after the turnaround at a fair price rather than holding like Mitsui? Can we follow PAG's entries as a sector-turnaround signal, and can we build a verifiable project to test holding after PAG sells? The user chose A (PAG-only entry backtest), C (post-exit holding) and D (out-of-sample paper portfolio).
+
+**Findings** (Reports #51/#52, `pag_distressed/run_follow_backtest.py`, `paper_portfolio.py`):
+- Corrections: PAG buys at the seller's low, not necessarily the industry's low; exit timing is set by buyers and the fund clock.
+- Test A (n=5, total-return benchmarks, T+1 entry): average excess +8.6pp at 3m (4/5 positive), −9.6pp at 12m (0/4), −20.4pp at 36m (0/2).
+- Test C: no clean public PAG exits (CWK primary IPO, TME sale dates unknown, XRX = acquirer); descriptive only (−42pp at 12m, 0/3).
+- On 6-Nov, 6666 closed at HK$0.995, 19% above PAG's HK$0.8359 offer.
+- Test D: 6 HK property-services names (incl. 6666) vs 2800.HK from the 6-Nov-2026 close; manifest SHA-256 5FB6…97EE; reviews 2027-02-06, 2027-11-06, 2028-11-06, 2029-11-06; success = beats 2800.HK at both +12m and +36m.
+- gpt-6-astra: v1 "not safe to publish" (6 blockers: HSI price-index benchmark, A4 date, test C mislabelled, paper-portfolio inception not enforced, valuation-date mismatch, overreaching lessons) → fixed.
+
+**Files created**: 51_PAG_Follow_Backtest_EN.md, 52_PAG_Follow_Backtest_CN.md, pag_distressed/run_follow_backtest.py, pag_distressed/paper_portfolio.py, pag_distressed/data/(follow_backtest_results.csv, paper_portfolio_start.csv, paper_portfolio_log.csv)
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

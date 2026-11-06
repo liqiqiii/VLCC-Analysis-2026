@@ -1993,3 +1993,21 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 
 **文件创建**：49_PAG_Track_Record_EN.md、50_PAG_Track_Record_CN.md、pag_distressed/run_track_record.py
 **文件更新**：pag_distressed/data/sources.csv（S44–S61）、index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+---
+
+## Prompt 86：能不能跟投太盟？事件研究与样本外纸面组合
+**日期**：2026年11月6日
+
+**用户请求**：作为投资者能学到什么？太盟在行业低点出手，因封闭基金期限不会像三井那样长期持有，而是在困境反转后以合适价格卖出——这样理解对吗？能否观察太盟的行为做行业困境反转的跟投，能否做一个可验证的项目来检验太盟卖出后继续持有的收益？用户选择 A（只用太盟事件回测）、C（退出后持有回测）、D（样本外纸面组合）。
+
+**发现**（报告#51/#52，`pag_distressed/run_follow_backtest.py`、`paper_portfolio.py`）：
+- 修正：太盟买在卖方的低点，不一定是行业低点；退出时机取决于买家和基金期限。
+- 测试A（n=5，总回报基准，T+1入场）：3个月平均超额+8.6个百分点（4/5为正），12个月−9.6（0/4），36个月−20.4（0/2）。
+- 测试C：公开市场没有干净的太盟退出（CWK为新股发行、TME卖出日期未知、XRX是收购方），仅作描述（12个月−42个百分点，0/3）。
+- 11月6日6666收于0.995港元，比太盟0.8359港元的要约价高19%。
+- 测试D：6只港股物业服务股（含6666）对比2800.HK，自2026-11-06收盘起；起始清单SHA-256 5FB6…97EE；检视日2027-02-06、2027-11-06、2028-11-06、2029-11-06；成功标准为+12个月和+36个月都跑赢2800.HK。
+- gpt-6-astra：v1"不可发布"（6项阻断：HSI价格指数作基准、A4日期、测试C标签错误、纸面组合起点未强制、估值日期不一致、结论超出测试范围）→ 已修正。
+
+**文件创建**：51_PAG_Follow_Backtest_EN.md、52_PAG_Follow_Backtest_CN.md、pag_distressed/run_follow_backtest.py、pag_distressed/paper_portfolio.py、pag_distressed/data/（follow_backtest_results.csv、paper_portfolio_start.csv、paper_portfolio_log.csv）
+**文件更新**：index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
