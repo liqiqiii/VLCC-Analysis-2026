@@ -1,0 +1,22 @@
+source_id,claim,date,source,url,tag
+L01,"FY2001-FY2005 selected data (revenue, NI, EPS, equity, BPS, deliveries); FY2003-05 gross margin on home sales",2006-02-09,Lennar 10-K FY2005,https://www.sec.gov/Archives/edgar/data/920760/000119312506025438/d10k.htm,P
+L02,FY2002-FY2006 selected data; FY2006 GM 18.4% (20.3% ex valuation),2007-02-08,Lennar 10-K FY2006,https://www.sec.gov/Archives/edgar/data/920760/000119312507024341/d10k.htm,P
+L03,FY2007-FY2008 GM 6.0%/12.3% (13.9%/17.0% ex valuation); BPS 23.91/16.34,2009-01-27,Lennar 10-K FY2008,https://www.sec.gov/Archives/edgar/data/920760/000119312509011559/d10k.htm,P
+L04,FY2009-FY2010 GM 9.1%/19.7% (15.6%/21.4% ex valuation),2011-01-31,Lennar 10-K FY2010,https://www.sec.gov/Archives/edgar/data/920760/000119312511018957/d10k.htm,P
+L05,"FY2007-FY2011 selected data (revenue, NI, EPS, equity, BPS, deliveries); FY2011 GM 19.9%",2012-01-30,Lennar 10-K FY2011,https://www.sec.gov/Archives/edgar/data/920760/000119312512029792/d257946d10k.htm,P
+L06,FY2012-FY2014 GM 22.7/24.9/25.4%; BPS 17.83/20.39/23.54; cover shares Nov-2014,2015-01-23,Lennar 10-K FY2014,https://www.sec.gov/Archives/edgar/data/920760/000162828015000218/len-20141130x10k.htm,P
+L07,FY2015-FY2017 GM 24.0/23.0/22.1%; BPS 26.18/29.38/32.81,2018-01-25,Lennar 10-K FY2017,https://www.sec.gov/Archives/edgar/data/920760/000162828018000562/len-20171130x10k.htm,P
+L08,FY2018-FY2020 GM 19.6/20.6/22.8%; BPS 44.97/50.49/57.55,2020-2021,Lennar 10-K FY2019 and FY2020,https://www.sec.gov/Archives/edgar/data/920760/000162828021000722/len-20201130.htm,P
+L09,FY2021-FY2025 GM 26.8/27.5/23.3/22.3/17.7%; equity; cover-page Class A+B shares outstanding at Dec-31 (BPS calculated),2022-2026,Lennar 10-K FY2021-FY2025,https://www.sec.gov/Archives/edgar/data/920760/000162828026003870/len-20251130.htm,P
+L10,Revenue/NI/EPS FY2008-FY2025 (XBRL companyfacts),2026,SEC XBRL API,https://data.sec.gov/api/xbrl/companyfacts/CIK0000920760.json,P
+L11,"Q3 FY2026 (to 31-Aug-2026): EPS 1.19; orders -9% to 20,879; deliveries -3%; GM 15.8%; SG&A 9.2%; incentives ~12%; Q4 guide GM 15.5-16.0%, orders 19.5-20.5k; FY26 deliveries cut to 80-81k; HB debt/cap 16.6%; buyback $256m",16-Sep-2026,Lennar press release,https://investors.lennar.com/press-releases/2026/09-16-2026-213038087,P
+L12,Quarterly EPS/NI/revenue Q4 FY2025-Q3 FY2026; book value/share 90.62; dividend yield 2.25%,to 9-Nov-2026,Yahoo Finance via yfinance,https://finance.yahoo.com/quote/LEN,P
+L13,Berkshire LEN: new Q1-2025 (1.9m); 7.0m Q2-2025; 10.1m Q1-2026; 13.11m Q2-2026 (6.23% of Class A); plus 298k Class B,Aug-2026,HoldingsIntel 13F history; TheStreet via Yahoo,https://www.holdingsintel.com/filers/0001067983/positions/LEN,S
+L14,Lennar Jun-2026 investor presentation: controls 98% of home sites via land banks/developers (2018: owned 72%); owned inventory $16.6bn -> $10.5bn; fwd P/E ~10.2x avg since 2020,19-Aug-2026,TheStreet via Yahoo Finance,https://finance.yahoo.com/real-estate/articles/buffetts-berkshire-increases-exposure-blue-214700497.html,S
+L15,Mortgage rates peaked 7.40% mid-Oct-2026; new listings -7.5% YoY,4-Nov-2026,Realtor.com October 2026 housing report,https://www.realtor.com/research/October-2026-data/,S
+L16,Newly pending listings -16.8% YoY in Oct-2026; ZHVI +0.7% YoY,5-Nov-2026,Zillow October 2026 market report,https://www.zillow.com/research/october-2026-market-report/,S
+L17,"FRED: HOUST1F, PERMIT1, HSN1F, MSACSR, NHFSEPCS, NHFSEPUCS, COMPUTSA, MORTGAGE30US, CSUSHPINSA",to Sep/Nov-2026,"Census/HUD, Freddie Mac, S&P via FRED",https://fred.stlouisfed.org/,P
+L18,"LEN, DHI, PHM, NVR, TOL, SPY daily prices",to 9-Nov-2026,Yahoo Finance via yfinance,https://finance.yahoo.com/quote/LEN,P
+L19,Quarterly stockholders' equity from 10-Q/10-K XBRL with first filing dates (point-in-time book),to Aug-2026,SEC XBRL companyfacts,https://data.sec.gov/api/xbrl/companyfacts/CIK0000920760.json,P
+L20,"Millrose spin: 1 MRP share per 2 LEN shares (A or B), completed 7-Feb-2025; Lennar contributed $5.5bn land + $1.0bn cash",7-Feb-2025,Lennar press release,https://investors.lennar.com/press-releases/2025/02-07-2025,P
+L21,Q3 FY2026 release: fewer than 2.5% of homesites owned,16-Sep-2026,Lennar press release (per review),https://investors.lennar.com/press-releases/2026/09-16-2026-213038087,P

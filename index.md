@@ -10,6 +10,17 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🏠 Lennar vs Mitsui Fudosan: Is Berkshire's Homebuilder at a Cycle Turning Point? (November 9, 2026)
+
+A comparison of Lennar's homebuilding cycles with the Mitsui Fudosan case, and where LEN stands now.
+
+**[📄 Report (EN) →](55_Lennar_vs_Mitsui_Cycle_EN)** | **[中文版 →](56_Lennar_vs_Mitsui_Cycle_CN)**
+
+Key findings:
+- Not a Mitsui-type turnaround: no rent income and land-light; this downturn is margin compression (27.5% → 15.8%) with no net losses
+- The Oct-2026 low hit 0.84x point-in-time book (past non-crisis lows 0.88–0.90x); the stock is now ~1.0x after +25%
+- Supply is adjusting (completed inventory −13% from Jan; starts −32.5%), but demand is weak (orders −9%, rates 7.2–7.4%): operating trough not confirmed. Berkshire holds 13.1m Class A shares, cost proxy ~$101
+
 ### 🏙️ Mitsui Fudosan 1989–2009: Anatomy of a Quality Real-Estate Turnaround (November 6, 2026)
 
 How Japan's leading landlord went from the bubble through 13 years of bust to a 6.9x rebound and a −78% crash, with lessons and limits for China property.

@@ -2113,3 +2113,22 @@ No tanker-specific negative headline was found today, and freight futures were f
   - Minor fixes: point-in-time wording; look-ahead up to ~4 months; office data ~22 months old; Phase-2 P/E 33–80x; exact-date CAGRs 9.4% (2003) and 10.2% (2009).
 
 **Files updated**: 53_Mitsui_Fudosan_Turnaround_EN.md, 54_Mitsui_Fudosan_Turnaround_CN.md, mitsui_turnaround/run_mitsui.py, mitsui_turnaround/data/sources.csv (M21), Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 91: Lennar vs Mitsui — is Berkshire's homebuilder at a cycle turning point?
+**Date**: November 9, 2026
+
+**User request** (CN): compared with LEN? Is this Buffett-held company also at a cycle turning point?
+
+**Findings** (Reports #55/#56, `lennar_cycle/run_lennar.py`; Lennar 10-Ks FY2001–FY2025, XBRL quarterly equity, FRED housing data):
+- Not a Mitsui-type turnaround. Lennar is a homebuilder with no rent income and fewer than 2.5% of homesites owned. This downturn is margin compression (gross margin 27.5% → 15.8%) with no net losses. The 2025 equity drop (−21%) is the Millrose spin, not write-downs.
+- Valuation: the Oct-2026 low was at 0.84x point-in-time book, vs 0.88–0.90x at the 2011, 2018 and 2022 lows (2008: 0.15x). The stock is +25% since, ~1.0x book, P/E 17x on TTM EPS of $5.29.
+- Operations: completed new homes for sale peaked at 128k (Jan-2026) and fell to 111k; starts −32.5%. But orders are −9%, mortgage rates rose to 7.40% in October, and the Q4 margin guide is flat. Operating trough not confirmed.
+- LEN led starts by ~1–4 months at the 2008–09 trough and ~6 months at the 2005 peak.
+- Berkshire: Class A 13.11m at 30-Jun-2026; cost proxy ~$101. The Q3 13F (16-Nov) shows 30-Sep holdings.
+- Scenarios (P/B-based): 12m $74/$99/$125; 24m $85/$117/$163.
+- gpt-6-astra: v1 "not safe to publish" (3 blockers: inventory trend misread, trough-range claim, Berkshire 13F timeline) → fixed with point-in-time book.
+
+**Files created**: 55_Lennar_vs_Mitsui_Cycle_EN.md, 56_Lennar_vs_Mitsui_Cycle_CN.md, lennar_cycle/run_lennar.py, lennar_cycle/data/*.csv
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

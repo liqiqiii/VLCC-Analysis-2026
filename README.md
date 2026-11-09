@@ -6,6 +6,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### Lennar vs Mitsui — Homebuilder Cycle Position (November 9, 2026)
+- **[Lennar vs Mitsui EN](55_Lennar_vs_Mitsui_Cycle_EN.md) | [Lennar对比三井 CN](56_Lennar_vs_Mitsui_Cycle_CN.md)** — code and data in [`lennar_cycle/`](lennar_cycle/)
+- Oct-2026 low at 0.84x point-in-time book (past lows 0.88–0.90x); now ~1.0x. Supply adjusting, demand weak; operating trough not confirmed
+
 ### Mitsui Fudosan 1989–2009 Turnaround Case (November 6, 2026)
 - **[Mitsui Turnaround EN](53_Mitsui_Fudosan_Turnaround_EN.md) | [三井不动产困境反转 CN](54_Mitsui_Fudosan_Turnaround_CN.md)** — code and data in [`mitsui_turnaround/`](mitsui_turnaround/)
 - Losses → revaluation → Midtown site → J-REITs → occupancy turn. Low at 0.77x book (Apr-2003, before the relief signals); peak 3.7x (2007); −78% crash on flat earnings
