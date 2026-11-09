@@ -172,13 +172,19 @@ def losses_and_balance_sheet():
     print(f"Bridge FY2004 -> FY2008: revenue ¥{rv04:,.0f}bn -> ¥{rv08:,.0f}bn ({rv08/rv04-1:+.0%}); operating income "
           f"¥{oi04}bn -> ¥{oi08}bn ({oi08/oi04-1:+.0%}); net income ¥{fin.loc[2004,'net_income_m']/1e3:.1f}bn -> "
           f"¥{fin.loc[2008,'net_income_m']/1e3:.1f}bn ({fin.loc[2008,'net_income_m']/fin.loc[2004,'net_income_m']:.1f}x)")
-    print("  -> operating leverage explains +64% operating income on +23% revenue; the rest of the 6x net-income rise came from"
-          " below operating income (FY2004 net income was depressed by extraordinary items; bridge of special items,"
-          " interest and tax NOT compiled)")
+    ni04, ni08 = fin.loc[2004, "net_income_m"] / 1e3, fin.loc[2008, "net_income_m"] / 1e3
+    print(f"  additive bridge (¥bn): net income +{ni08-ni04:.1f} = operating income +{oi08-oi04:.1f} "
+          f"+ below-operating items {(ni08-oi08)-(ni04-oi04):+.1f} -> the 6x is mainly a low-base effect")
     print(f"FY2009 net income ¥83.6bn ({835.72/873.78-1:+.0%} vs FY2008) while the stock fell "
           f"{px.loc[2009,'low']/px.loc[2007,'high']-1:+.0%} (2007 high -> 2009 low): the 2008 crash was multiple compression")
     print(f"Dividend per share: FY1991 ¥{fin.loc[1991,'dps_raw']} -> FY1998-2000 ¥5.0 -> FY2008 ¥20.0 (pre-split)")
     print("FY2006 share count 823.4m -> 881.4m: mainly convertible-bond conversion (55.9m shares, non-cash) [AR2008 per review]")
+    site_m2, land_bn, share, project_bn = 78393.6, 180.0, 0.40, 370.0  # M10 (area), M21 (price, share, cost)
+    tsubo = site_m2 / 3.30579
+    eq01 = fin.loc[2001, "equity_m"] / 1e3  # latest equity before the Sep-2001 decision
+    print(f"Defense Agency site: ¥{land_bn:.0f}bn / {tsubo:,.0f} tsubo = ¥{land_bn*1e9/tsubo/1e4:,.0f} man/tsubo; "
+          f"Mitsui 40% project share; IF costs split pro rata [E]: ¥{land_bn*share:.0f}bn land "
+          f"({land_bn*share/eq01:.1%} of Mar-2001 equity), ¥{project_bn*share:.0f}bn of project cost ({project_bn*share/eq01:.1%})")
 
 
 def buy_paths():

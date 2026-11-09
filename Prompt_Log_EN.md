@@ -2097,3 +2097,19 @@ No tanker-specific negative headline was found today, and freight futures were f
 
 **Files created**: 53_Mitsui_Fudosan_Turnaround_EN.md, 54_Mitsui_Fudosan_Turnaround_CN.md, mitsui_turnaround/run_mitsui.py, mitsui_turnaround/data/*.csv
 **Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 90: Continue — close open items on #53/#54
+**Date**: November 9, 2026
+
+**User request**: continue.
+
+**Actions**:
+- Filled the open Midtown gap. The Defense Agency site was bought for ¥180bn (¥7.59m per tsubo, consistent with 78,394 m²); Mitsui's project share was 40%; total project cost ¥370bn (RBA Times, Mar-2007, secondary). If costs were split pro rata, Mitsui's part was ~¥72bn of land (17.5% of Mar-2001 equity) and ~¥148bn of project cost (36%). Labelled [E]; ownership after completion not verified.
+- gpt-6-astra confirmation round: "publish with fixes" (2 blockers).
+  - The earnings bridge was wrong: of the +¥72.9bn net-income rise (FY2004→FY2008), +¥70.1bn came from operating income and only +¥2.8bn from below it. The 6x is a low-base effect.
+  - The "permanent-capital" inference from Midtown was withdrawn.
+  - Minor fixes: point-in-time wording; look-ahead up to ~4 months; office data ~22 months old; Phase-2 P/E 33–80x; exact-date CAGRs 9.4% (2003) and 10.2% (2009).
+
+**Files updated**: 53_Mitsui_Fudosan_Turnaround_EN.md, 54_Mitsui_Fudosan_Turnaround_CN.md, mitsui_turnaround/run_mitsui.py, mitsui_turnaround/data/sources.csv (M21), Prompt_Log_EN.md, Prompt_Log_CN.md

@@ -2073,3 +2073,19 @@ BWET 是 Breakwave 油轮运价 ETF，持有油轮**运费期货**，因此是�
 
 **文件创建**：53_Mitsui_Fudosan_Turnaround_EN.md、54_Mitsui_Fudosan_Turnaround_CN.md、mitsui_turnaround/run_mitsui.py、mitsui_turnaround/data/*.csv
 **文件更新**：index.md、README.md、Prompt_Log_EN.md、Prompt_Log_CN.md
+
+---
+
+## Prompt 90：继续——补完#53/#54的遗留项
+**日期**：2026年11月9日
+
+**用户请求**：continue。
+
+**处理**：
+- 补上东京中城的缺口：防卫厅旧址成交价1,800亿日元（每坪759万日元，与78,394平方米一致）；三井项目份额40%；总事业费3,700亿日元（RBA Times，2007年3月，二手来源）。若成本按比例分摊，三井约承担720亿日元土地（占2001年3月净资产17.5%）和约1,480亿日元事业费（36%）。已标注[E]；竣工后的持股情况未核实。
+- gpt-6-astra 确认轮："修正后可发布"（2项阻断）。
+  - 盈利拆解有误：FY2004→FY2008净利润增加729亿日元，其中701亿来自营业利润，营业利润以下只贡献28亿；6倍是低基数效应。
+  - 撤回由东京中城推出的"永久资本"结论。
+  - 次要修正：时点估值的措辞；前视偏差最长约4个月；写字楼数据滞后约22个月；阶段2市盈率33–80倍；按实际日期计算的年化收益为9.4%（2003）和10.2%（2009）。
+
+**文件更新**：53_Mitsui_Fudosan_Turnaround_EN.md、54_Mitsui_Fudosan_Turnaround_CN.md、mitsui_turnaround/run_mitsui.py、mitsui_turnaround/data/sources.csv（M21）、Prompt_Log_EN.md、Prompt_Log_CN.md

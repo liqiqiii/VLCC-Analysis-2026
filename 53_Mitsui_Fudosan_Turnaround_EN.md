@@ -35,7 +35,7 @@ title: "Mitsui Fudosan 1989–2009: Anatomy of a Quality Real-Estate Turnaround"
 - **Mitsui Fudosan's 2003–2007 rebound (6.9x from the low) came at the end of a 13-year sequence.** It is not evidence that buying a quality name in a downturn works by itself. The sequence:
   1. **Recognise the losses**: four straight net losses, FY1997–FY2000, ¥169.7bn in total [P].
   2. **Reset the accounts**: a 2002 land revaluation (a +¥166.8bn accounting uplift), then FY2005 impairment of ¥33.8bn [P].
-  3. **Take part counter-cyclically in prime land**: Mitsui led the 2001 consortium for the Roppongi former Defense Agency site, which became Tokyo Midtown. Mitsui's economic share is **unknown** [P].
+  3. **Take part counter-cyclically in prime land**: Mitsui led the 2001 consortium that bought the Roppongi former Defense Agency site for **¥180bn**. Mitsui had a **40% project share** (事業比率) [S]. Assuming costs were split in proportion to that share, Mitsui's part was ~¥72bn of land, ~17.5% of its March 2001 equity [E]. The site became Tokyo Midtown, at a total project cost of ¥370bn [S].
   4. **A new exit channel**: the first J-REITs listed in 2001, with Mitsui as sponsor of Nippon Building Fund [S].
   5. **An occupancy turn**: Tokyo office vacancy went from 8.1% (end-2003) to 2.7% (end-2007) [S].
 - **The share price bottomed on 11-Apr-2003, before most of the "turn" evidence existed:**
@@ -61,7 +61,7 @@ title: "Mitsui Fudosan 1989–2009: Anatomy of a Quality Real-Estate Turnaround"
    - Serial correlation and lag selection are not treated, so this is an association, not a rule.
 3. *Earnings and valuation both drove 2003–2007* → EPS, operating income and P/B path. **Available [P]/[E]**:
    - Operating income +64% on revenue +23% (FY2004 → FY2008).
-   - Net income rose 6x, but most of the step-up came from below operating income (the bridge was not compiled).
+   - Net income rose 6x, from ¥14.5bn to ¥87.4bn. In yen, operating income added ¥70.1bn and items below operating income only ¥2.8bn. The 6x mostly reflects the low FY2004 base.
    - P/B went from 0.77x (2003 low, point-in-time) to 3.72x (2007 high).
 
 **Opposing points (claim → evidence needed)**
@@ -107,7 +107,7 @@ They are not separated here.
 |---|---|---|---|
 | FY1997–FY2000 | Four consecutive net losses (¥169.7bn total); dividend cut from ¥9 to ¥5 (pre-split) | Booked the losses instead of carrying them | [P] |
 | 1998–2004 | Shift from owning to managing (an "assets under management" model); securitisation with AIG on the Shin-Nikko building (1999) | Recycles capital and earns fees | [S] |
-| 17-Sep-2001 | Led a consortium (Zenkyoren, Yasuda Life, Fukoku Life, Sekisui House, Daido Life) that won the government tender for the Roppongi Defense Agency site (78,394 m²); paid Feb-2002 | Prime land bought near the trough. Price, Mitsui's share and funding are **unknown** here | [P] |
+| 17-Sep-2001 | Led a consortium (Zenkyoren, Yasuda Life, Fukoku Life, Sekisui House, Daido Life) that won the government tender for the Roppongi Defense Agency site (78,394 m²); paid Feb-2002 | Prime land bought near the trough: **¥180bn** (¥7.59m per tsubo; consistent with the site area). Mitsui's project share is **40%** [S]. If costs were split in proportion [E]: ~¥72bn of land, 17.5% of its Mar-2001 equity (¥411.1bn), and ~¥148bn of the ¥370bn project cost, 36%. Actual contributions and funding are **unknown** | [P] tender; [S] price, share and cost (RBA Times, Mar-2007) |
 | 10-Sep-2001 | Nippon Building Fund (Mitsui-sponsored) listed as one of the first two J-REITs | A recurring buyer for stabilised buildings | [S] |
 | Mar-2002 | Land revaluation: ¥156.4bn reserve plus ¥10.4bn retained earnings; equity rose from ¥411bn to ¥610bn | **An accounting uplift, not new capital.** The reserve was **25.8% of equity** at Mar-2003 | [P] |
 | Oct-2002 | Mitsui Fudosan Hanbai becomes a wholly owned subsidiary | Simplifies the group | [S] |
@@ -118,7 +118,7 @@ They are not separated here.
 **Correction to #49**:
 - #49 said Mitsui's 2001–03 asset purchases were "not examined".
 - They are now examined: Mitsui **did** take part in buying distressed-era prime land, as consortium leader for the Defense Agency site.
-- Whether this was funded from Mitsui's own balance sheet, and how large its share was, is unknown. A "permanent-capital" contrast with PAG is plausible but **not demonstrated** for this asset.
+- Mitsui committed to a 40% project share while its equity ratio was 14.4% (Mar-2001). In proportion, that is about a third of its equity at the time [E]. Mitsui still manages Tokyo Midtown, but whether it still holds its original ownership share is **not verified**, and the funding is **unknown**. So the case does **not** demonstrate a "permanent-capital" advantage over PAG.
 
 ---
 
@@ -161,7 +161,7 @@ They are not separated here.
 
 ## 4. CRule 2 — the valuation path
 
-**Point-in-time at the turning points** — using only the latest balance sheet and earnings already published on each date [E]:
+**Point-in-time at the turning points** — using only the latest annual accounts already published on each date [E]:
 
 | Date | Price | BPS (FY) | P/B | EPS (FY) | P/E |
 |---|---|---|---|---|---|
@@ -170,7 +170,7 @@ They are not separated here.
 | 2008 low (Oct-2008) | 328.6 | 368.4 (Mar-2008) | 0.89 | 33.1 (Mar-2008) | 9.9 |
 | 2009 low (Mar-2009) | 288.9 | 368.4 (Mar-2008) | **0.78** | 33.1 (Mar-2008) | **8.7** |
 
-**Retrospective annual table** — uses the FY ending in March of the same calendar year, so prices from January to May use a balance sheet that was not yet published:
+**Retrospective annual table** — uses the FY ending in March of the same calendar year, so prices from January to May use annual accounts that were not yet published (up to ~4 months of look-ahead):
 
 | Year | Low–high | BPS (basis) | P/B | P/E | Equity ratio |
 |---|---|---|---|---|---|
@@ -201,7 +201,7 @@ They are not separated here.
 | Phase | P/B | P/E | Earnings |
 |---|---|---|---|
 | Phase 1 (trough, Apr-2003) | ~0.8x | ~16x | Low |
-| Phase 2 (2004–05) | 1.2–3.0x | 56–80x | Earnings depressed by special items |
+| Phase 2 (2004–05) | 1.2–3.0x | 33–80x | Earnings depressed by special items |
 | Phase 3 (2006) | 2.1–3.1x | 30–45x | Rising |
 | Phase 4 (peak, Jun-2007) | 3.7x | ~47x | Rising |
 | Phase 5 (2008–09) | ~0.8–0.9x | ~9–10x | Still near the peak |
@@ -215,7 +215,7 @@ They are not separated here.
   - Vacancy peaked with the 2003 wave and fell to 2.65% by 2007 [S].
 - **CRule 4 — operating leverage**:
   - Revenue +23% produced operating income +64% (FY2004 → FY2008) [P]/[E].
-  - Net income rose 6.0x, but that larger step-up came from below operating income (extraordinary items, interest, tax). The bridge was **not compiled**.
+  - Net income rose 6.0x. In yen, the ¥72.9bn rise was ¥70.1bn from operating income and only ¥2.8bn from items below operating income (extraordinary items, interest, tax, net). So the 6x is mainly a low-base effect on top of operating leverage.
 - **CRule 5 — signals available at the 11-Apr-2003 low** (point-in-time only):
   - P/B about 0.77 on the published revalued book, and P/E about 16x.
   - Vacancy at end-2002 was 7.36% and rising, with a known 2003 supply wave.
@@ -230,7 +230,7 @@ They are not separated here.
 - **CRule 6 — cross-cycle reference**: China property 2021–2026. §7 lists where it fits and where it does not.
 - **CRule 7 — earnings sensitivity**: not modelled (historical case; no segment model).
 - **CRule 8 — exit signals visible in 2007** (descriptive):
-  - vacancy below 3%, with new supply rising (44 buildings in 2008);
+  - vacancy below 3% (2008 completions of 44 buildings were realised later; whether forecasts were visible in 2007 is not checked);
   - P/B above 3x;
   - credit stress (not quantified here).
 - **CRule 9 — inflation**: 1989 high to 2003 low −84.4% real; the 2007 high was +7.4% above the 1989 high in real terms.
@@ -240,14 +240,14 @@ They are not separated here.
 
 ## 6. Entry-point outcomes (single company, price only)
 
-| Bought at | Price | To the 2007 high | To the 6-Nov-2026 close | Price CAGR to 2026 |
+| Bought at | Price | To the 2007 high | To the 6-Nov-2026 close | Price CAGR to 2026 (≈ mid-year dating unless dated) |
 |---|---|---|---|---|
 | 1989 high | 1,129.9 | 1.18x | 1.43x | +1.0% (37 yrs) |
 | 1992 low | 239.9 | 5.56x | 6.72x | +5.7% |
 | 1998 low | 212.6 | 6.27x | 7.58x | +7.4% |
-| **2003 low** | **193.6** | **6.89x** | 8.33x | +9.5% |
+| **2003 low (11-Apr)** | **193.6** | **6.89x** | 8.33x | +9.4% |
 | 2007 high | 1,333.3 | — | 1.21x | +1.0% (19 yrs) |
-| **2009 low** | 288.9 | — | 5.58x | +10.4% |
+| **2009 low (9-Mar)** | 288.9 | — | 5.58x | +10.2% |
 
 Nominal, dividends excluded [E].
 
@@ -255,7 +255,7 @@ Nominal, dividends excluded [E].
 - Holding periods differ.
 - This is one surviving company.
 
-**What the table shows**: for this company, buying at the 1989 or 2007 high produced about 1% a year in price for 19–37 years; buying near the 2003 or 2009 low produced 9–10% a year. **What it does not show**: that valuation at entry determines outcomes in general.
+**What the table shows**: for this company, buying at the 1989 or 2007 high produced about 1% a year in price for 19–37 years; buying at the selected 2003 or 2009 lows produced 9–10% a year. **What it does not show**: that valuation at entry determines outcomes in general.
 
 ---
 
@@ -284,7 +284,7 @@ China currently shows the first two only in part, and the third is unverified.
 ```
 Current cycle position: Undetermined
 Evidence (with dates): office vacancy 4.00% at end-2024 (down from 6.47% at end-2022); rent ¥20,296 at end-2024 vs the
-          ¥22,206 peak at end-2019 — the latest office data are ~10 months old.
+          ¥22,206 peak at end-2019 — the latest office data are ~22 months old.
           Share price: 2,158 (Feb-2026 high) -> 1,400 (Oct-2026 low, −35%) -> 1,612 close on 6-Nov-2026 (−7.2% that day).
           1H results showing ordinary profit −25.3% were released at 15:30 JST, after the close, so they do not explain
           that day's fall [S]. P/B ~1.36x on BPS ¥1,188 (Mar-2026).
@@ -340,7 +340,7 @@ No 12- or 24-month targets are given (case study).
 ## Step 2 — Strict Peer Review (of the Step-1 draft)
 
 **1. Facts that need verification**
-- The Defense Agency site price, Mitsui's share and its funding.
+- The Defense Agency site price (¥180bn) and Mitsui's 40% share come from a secondary source; Mitsui's funding is still unknown.
 - NBF's listing date and Mitsui's asset sales to it.
 - The Resona date.
 - Miki Shoji figures (transcribed from an image table).
@@ -395,6 +395,22 @@ The review was scoped to 6 web lookups. Verdict on v1: **"not safe to publish"**
 | m2 | "P/E did not compress at the peak" — annual-high P/E was ~80x (2004) and ~72x (2005) | Correct | Rephrased (§4) |
 | m3 | Current positioning used stale data and implied causality; the results came after the close | Correct | Data dated; causal claim removed |
 | m4 | `sources.csv` was not valid CSV (unquoted commas) | Correct | Rewritten with proper quoting |
+
+No further review round was run after these fixes.
+
+**Confirmation round (9-Nov-2026)** — verdict **"publish with fixes"**. The reviewer confirmed:
+- every table, in both languages, matches the script;
+- B1, B3, B4, B5, m1, m2 and m4 are resolved;
+- the RBA source supports ¥180bn, the 40% project share and ¥370bn.
+
+| # | Finding | Verdict | Action |
+|---|---|---|---|
+| C1 | The B6 fix was wrong. In yen, operating income rose ¥70.1bn and net income ¥72.9bn, so items below operating income added only ¥2.8bn (3.9%). The 6x is a low-base effect | Correct | Additive bridge shown in Step 1, §5 and the script; "most from below operating income" withdrawn |
+| C2 | Midtown: the 40% project share was presented as actual spending; ongoing ownership was unverified; equity at the decision date was ¥411.1bn (Mar-2001), with a 14.4% equity ratio | Correct | Amounts relabelled [E], assuming proportional cost allocation and measured against Mar-2001 equity (17.5% / 36.0%). Ownership not verified. Permanent-capital inference withdrawn |
+| c3 | "Latest balance sheet" should read "latest published annual accounts"; look-ahead can be up to ~4 months; the 2008 completions were not visible in 2007 | Correct | Fixed |
+| c4 | The office data are ~22 months old, not ~10 | Correct | Fixed |
+| c5 | Phase-2 P/E range should be 33–80x | Correct | Fixed |
+| c6 | CAGRs used mid-year dating; exact dates give 9.4% (11-Apr-2003) and 10.2% (9-Mar-2009) | Correct | Exact figures used for these two rows; other rows labelled approximate |
 
 No further review round was run after these fixes.
 
