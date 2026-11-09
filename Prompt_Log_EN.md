@@ -2072,3 +2072,28 @@ No tanker-specific negative headline was found today, and freight futures were f
 - `paper_portfolio.py` now warns (rather than aborts) if Yahoo later revises an inception close by >0.5%, and aborts only above 5% (a likely corporate action). The manifest hash is unchanged (C77D…ACD5).
 
 **Files updated**: 51_PAG_Follow_Backtest_EN.md, 52_PAG_Follow_Backtest_CN.md, pag_distressed/paper_portfolio.py, Prompt_Log_EN.md, Prompt_Log_CN.md
+
+---
+
+## Prompt 89: Mitsui Fudosan as a real-estate distressed-turnaround case
+**Date**: November 6, 2026
+
+**User request** (CN): analyse Mitsui Fudosan as a real-estate industry distressed-turnaround case.
+
+**Findings** (Reports #53/#54, `mitsui_turnaround/run_mitsui.py`; primary data from Mitsui annual reports 1998–2008, the JREI land index and Kabutan prices):
+- Sequence:
+  - net losses FY1997–FY2000 (−¥169.7bn); equity −35% to ¥395bn; equity ratio 13.2%;
+  - 2002 land revaluation (+¥166.8bn accounting uplift; reserve 25.8% of equity);
+  - FY2005 impairment ¥33.8bn;
+  - Mitsui-led consortium won the Roppongi Defense Agency site (2001) → Tokyo Midtown (2007);
+  - NBF among the first J-REITs (2001).
+- Stock 1,129.9 (1989 high) → 193.6 (11-Apr-2003, −82.9% nominal / −84.4% real) → 1,333.3 (2007, 6.9x) → 288.9 (2009, −78%, with FY2009 net income only −4%).
+- At the 2003 low (point-in-time): P/B 0.77x, P/E 15.8x. At the 2007 high: P/B 3.72x, P/E 46.8x. The bottom came before Resona and before the vacancy peak was known.
+- Land (6-city commercial) 519.4 (1991) → 68.4 (2005, −86.8%) → 101.3 (2008). Stock changes associate with land ~15 months later (r=+0.52, n=33; weak).
+- Mitsubishi Estate did about as well (6.04x vs 6.65x): sector beta.
+- 1989-high buyer: 1.43x by Nov-2026 (~1%/yr, price only); 2003-low buyer: 6.9x by 2007.
+- China mapping (hypothesis): partial loss recognition and C-REITs exist; no bank-level backstop; rent turn unknown.
+- gpt-6-astra: "not safe to publish" (6 blockers: BPS method, look-ahead, the FY2006 CB conversion misread as an issuance, lead-time overstatement, "clean book", operating-income bridge) → all fixed.
+
+**Files created**: 53_Mitsui_Fudosan_Turnaround_EN.md, 54_Mitsui_Fudosan_Turnaround_CN.md, mitsui_turnaround/run_mitsui.py, mitsui_turnaround/data/*.csv
+**Files updated**: index.md, README.md, Prompt_Log_EN.md, Prompt_Log_CN.md

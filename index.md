@@ -10,6 +10,17 @@ title: VLCC Analysis Hub
 
 ## 📊 研究报告 | Research Reports
 
+### 🏙️ Mitsui Fudosan 1989–2009: Anatomy of a Quality Real-Estate Turnaround (November 6, 2026)
+
+How Japan's leading landlord went from the bubble through 13 years of bust to a 6.9x rebound and a −78% crash, with lessons and limits for China property.
+
+**[📄 Report (EN) →](53_Mitsui_Fudosan_Turnaround_EN)** | **[中文版 →](54_Mitsui_Fudosan_Turnaround_CN)**
+
+Key findings:
+- The sequence: losses FY1997–2000 (−¥169.7bn) → 2002 land revaluation (an accounting uplift) → the Midtown site (2001) → J-REITs (2001) → office vacancy 8.1% (2003) → 2.7% (2007)
+- The stock bottomed on 11-Apr-2003 at ~0.77x book / ~16x P/E, before Resona and two years before land bottomed. It peaked at 3.7x book / ~47x P/E in 2007, then fell −78% while earnings fell −4%
+- Mitsubishi Estate did about as well (sector beta). A 1989-high buyer made ~1%/yr for 37 years. China has partial loss recognition and C-REITs, but no bank-level backstop and no visible rent turn
+
 ### 🧪 Can Investors Follow PAG? Event Study and a Live Paper Portfolio (November 6, 2026)
 
 A test of whether PAG's entries signal a sector turn, what is known about holding after PAG exits, and a pre-registered out-of-sample paper portfolio.

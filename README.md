@@ -6,6 +6,10 @@ Multi-model AI-powered deep dive into the VLCC (Very Large Crude Carrier) super 
 
 ## Reports
 
+### Mitsui Fudosan 1989–2009 Turnaround Case (November 6, 2026)
+- **[Mitsui Turnaround EN](53_Mitsui_Fudosan_Turnaround_EN.md) | [三井不动产困境反转 CN](54_Mitsui_Fudosan_Turnaround_CN.md)** — code and data in [`mitsui_turnaround/`](mitsui_turnaround/)
+- Losses → revaluation → Midtown site → J-REITs → occupancy turn. Low at 0.77x book (Apr-2003, before the relief signals); peak 3.7x (2007); −78% crash on flat earnings
+
 ### Can Investors Follow PAG? — Event Study & Live Paper Portfolio (November 6, 2026)
 - **[Follow-PAG Backtest EN](51_PAG_Follow_Backtest_EN.md) | [跟投太盟回测 CN](52_PAG_Follow_Backtest_CN.md)** — scripts `pag_distressed/run_follow_backtest.py`, `pag_distressed/paper_portfolio.py`
 - Entry follow: +5.3pp at 3 months, −13.5pp at 12 months (0/4; n is small). Post-exit holding not cleanly testable. Live basket vs 2800.HK from 6-Nov-2026
